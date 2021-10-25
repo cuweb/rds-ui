@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "start-storybook -p 6006 & npm run test",
+    "dev": "start-storybook -p 6006",
     "start": "start-storybook -p 6006",
     "build": "npm run build-rds && build-storybook -o ./docs",
     "build-rds": "NODE_ENV=production npx tailwindcss -i ./styles/rds.css -o  ./dist/rds.css --minify",
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-docs": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/addon-postcss": "^2.0.0",

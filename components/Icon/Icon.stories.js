@@ -12,6 +12,10 @@ export const ArrowDown = Template.bind({});
 ArrowDown.args = {
   icon: 'arrowDown',
 };
+export const Github = Template.bind({});
+Github.args = {
+  icon: 'github',
+};
 export const Plus = Template.bind({});
 Plus.args = {
   icon: 'plus',
