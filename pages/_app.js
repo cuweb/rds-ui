@@ -1,4 +1,3 @@
-import 'tailwindcss/tailwind.css';
 import '../styles/rds.css';
 
 function MyApp({ Component, pageProps }) {
