@@ -1,5 +1,3 @@
-// Button.stories.js | Button.stories.jsx
-
 import React from 'react';
 import Button from './Button';
 
