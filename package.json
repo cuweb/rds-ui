@@ -7,6 +7,8 @@
     "test": "cypress open"
   },
   "dependencies": {
+    "@react-aria/button": "^3.3.4",
+    "@react-aria/link": "^3.1.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

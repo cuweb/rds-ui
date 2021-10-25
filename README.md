@@ -5,4 +5,4 @@
 - Cypress
 - Jest
 - Storybook
-- Adobe Aria
+- Adobe React Aria
