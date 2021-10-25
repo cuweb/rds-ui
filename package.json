@@ -1,16 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "dev": "start-storybook -p 6006",
+    "build": "build-storybook",
+    "build-rds": "NODE_ENV=production npx tailwindcss -i ./styles/rds.css -o ./dist/rds.css --minify",
     "test": "cypress open"
   },
   "dependencies": {
-    "@primer/octicons-react": "^16.0.0",
-    "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -19,6 +15,7 @@
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^6.3.12",
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.3",
