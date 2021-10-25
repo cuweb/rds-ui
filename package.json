@@ -1,12 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "dev": "start-storybook -p 6006",
-    "build": "build-storybook -o ./docs",
-    "build-rds": "NODE_ENV=production npx tailwindcss -i ./styles/rds.css -o ./dist/rds.css --minify",
+    "dev": "start-storybook -p 6006 & npm run test",
+    "start": "start-storybook -p 6006",
+    "build": "npm run build-rds && build-storybook -o ./docs",
+    "build-rds": "NODE_ENV=production npx tailwindcss -i ./styles/rds.css -o  ./dist/rds.css --minify",
     "test": "cypress open"
   },
   "dependencies": {
+    "@react-aria/button": "^3.3.4",
+    "@react-aria/link": "^3.1.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
