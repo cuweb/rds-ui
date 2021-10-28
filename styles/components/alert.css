@@ -1,0 +1,74 @@
+/* Container  */
+.c-alert {
+  @apply relative border rounded-md px-16 py-4;
+}
+
+.c-alert a {
+  @apply underline;
+}
+
+.c-alert__icon {
+  @apply absolute top-6 left-4 fill-current;
+}
+
+.c-alert__button {
+  @apply absolute top-4 right-4 fill-current;
+}
+
+/* Error  */
+.c-alert.c-alert--error {
+  @apply bg-soft-red border-red-600;
+}
+
+.c-alert__icon,
+.c-alert__button {
+  @apply text-red-700;
+}
+.c-alert__button {
+  @apply cursor-pointer;
+}
+
+/* Info */
+.c-alert.c-alert--info {
+  @apply bg-soft-blue border-blue-200;
+}
+
+.c-alert.c-alert--info a {
+  @apply text-blue-400;
+}
+
+.c-alert.c-alert--info .c-alert__icon,
+.c-alert.c-alert--info .c-alert__button {
+  @apply text-blue-400;
+}
+
+/* Success */
+.c-alert.c-alert--success {
+  @apply bg-soft-green border-green-400;
+}
+
+.c-alert.c-alert--success a {
+  @apply text-green-500;
+}
+
+.c-alert.c-alert--success .c-alert__icon,
+.c-alert.c-alert--success .c-alert__button {
+  @apply text-green-400;
+}
+
+/* Warning */
+.c-alert.c-alert--warning {
+  @apply bg-soft-yellow border-yellow-400;
+}
+
+.c-alert.c-alert--warning a {
+  @apply text-yellow-500;
+}
+
+.c-alert.c-alert--warning .c-alert__icon,
+.c-alert.c-alert--warning .c-alert__button {
+  @apply text-yellow-400;
+}
+.c-alert.c-alert--warning .c-alert__icon circle {
+  @apply fill-current text-yellow-400;
+}
