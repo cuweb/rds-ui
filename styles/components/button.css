@@ -1,0 +1,20 @@
+.c-buttoncta {
+  @apply no-underline inline-flex items-center font-semibold px-6 py-4 my-2 transition-colors duration-300 ease-out rounded-md bg-red-700 hover:bg-black text-white shadow-xl;
+}
+
+.c-buttoncta::before,
+.c-buttoncta::after {
+  @apply hidden;
+}
+
+.c-buttoncta svg {
+  @apply w-4 h-4 mr-2 fill-current;
+}
+
+.c-buttoncta--ghost {
+  @apply border bg-white border-red-700 hover:bg-red-700 text-red-700 hover:text-white shadow-none;
+}
+
+.c-buttoncta--full {
+  @apply flex;
+}

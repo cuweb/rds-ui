@@ -4,7 +4,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'soft-red': '#f9e6e9',
+        'soft-blue': '#e6f7ff',
+        'soft-green': '#fafff5',
+        'soft-yellow': '#fffaf1',
+      },
+    },
   },
   variants: {
     extend: {},
