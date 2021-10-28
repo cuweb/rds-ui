@@ -2,6 +2,6 @@ import { addons } from '@storybook/addons';
 import RdsTheme from './RdsTheme';
 
 addons.setConfig({
-  showPanel: false,
+  showPanel: true,
   theme: RdsTheme,
 });

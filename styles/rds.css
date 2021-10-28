@@ -2,20 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+h1 {
+  @apply text-xl  font-medium;
+}
+
+h2 {
+  @apply text-lg font-medium;
+}
+
+a {
+  @apply underline font-medium text-red-700 relative;
+}
+
 @layer components {
-  .c-buttoncta {
-    @apply inline-flex items-center font-semibold px-6 py-4 my-2 transition-colors duration-300 ease-out rounded-md bg-red-700 hover:bg-black text-white shadow-xl;
-  }
-
-  .c-buttoncta svg {
-    @apply w-4 h-4 mr-2 fill-current;
-  }
-
-  .c-buttoncta--ghost {
-    @apply border bg-white border-red-700 hover:bg-red-700 text-red-700 hover:text-white shadow-none;
-  }
-
-  .c-buttoncta--full {
-    @apply flex;
-  }
+  @import url(./components/alert.css);
+  @import url(./components/button.css);
 }
