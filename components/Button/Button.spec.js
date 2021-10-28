@@ -5,27 +5,28 @@ describe('Button', () => {
     full: `.c-buttoncta--full`,
   };
 
-  it(`Should render the default button`, () => {
-    cy.clearCookies();
-    cy.visit(
-      `${Cypress.env('baseUrl')}/iframe.html?id=components-button--default`
-    );
-    cy.get(button.default).should('exist');
-  });
+  const types = [
+    {
+      nane: 'Default',
+      tag: '',
+    },
+    {
+      nane: 'Ghost',
+      tag: '--ghost',
+    },
+    {
+      nane: 'Full Width',
+      tag: '--full',
+    },
+  ];
 
-  it(`Should render the ghost button`, () => {
-    cy.clearCookies();
-    cy.visit(
-      `${Cypress.env('baseUrl')}/iframe.html?id=components-button--ghost`
-    );
-    cy.get(button.ghost).should('exist');
-  });
-
-  it(`Should render the full width button`, () => {
-    cy.clearCookies();
-    cy.visit(
-      `${Cypress.env('baseUrl')}/iframe.html?id=components-button--full-width`
-    );
-    cy.get(button.full).should('exist');
+  types.map((type) => {
+    it(`Should render the ${type.nane} button`, () => {
+      cy.clearCookies();
+      cy.visit(
+        `${Cypress.env('baseUrl')}/iframe.html?id=components-button${type.tag}`
+      );
+      cy.get(`.c-buttoncta${type.tag}`).should('exist');
+    });
   });
 });

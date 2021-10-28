@@ -10,6 +10,7 @@ const Template = (args) => <Alert {...args} />;
 
 export const Error = Template.bind({});
 Error.args = {
+  type: 'error',
   title: 'Error Alert',
   content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
   handleClose: (e) => alert('test'),

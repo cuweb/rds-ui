@@ -20,12 +20,14 @@ const Alert = (props) => {
       />
       <h2>{title || 'Please add a title'}</h2>
       {content && <p dangerouslySetInnerHTML={{ __html: content }} />}
-      <Icon
-        icon={'x'}
-        size={12}
-        className={`c-alert__button c-alert__button--${renderType}`}
-        onClick={(e) => (handleClose ? handleClose(e) : false)}
-      />
+      {handleClose && (
+        <Icon
+          icon={'x'}
+          size={12}
+          className={`c-alert__button c-alert__button--${renderType}`}
+          onClick={(e) => handleClose(e)}
+        />
+      )}
     </div>
   );
 };
