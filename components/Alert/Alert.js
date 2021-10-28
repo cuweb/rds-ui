@@ -15,7 +15,7 @@ const Alert = (props) => {
     <div className={`c-alert c-alert--${renderType}`} role={renderType}>
       <Icon
         icon={icon[type || 'error']}
-        size={28}
+        size={30}
         className={`c-alert__icon c-alert__icon--${renderType}`}
       />
       <h2>{title || 'Please add a title'}</h2>

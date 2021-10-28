@@ -1,5 +1,5 @@
 const Icon = (props) => {
-  const { icon, size, svg, className, onClick } = props;
+  const { icon, size, svg, className = '', onClick } = props;
 
   if (svg) return svg;
 
@@ -34,13 +34,12 @@ const Icon = (props) => {
 
   return (
     <svg
-      className='c-icon'
+      className={`c-icon ${className}`}
       viewBox={`0 0 24 24`}
       width={size || 16}
       height={size || 16}
       xmlns='http://www.w3.org/2000/svg'
       aria-hidden='true'
-      className={className}
       onClick={(e) => onClick(e)}
     >
       {icons[icon] || null}
