@@ -2,7 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+h1 {
+  @apply text-xl  font-medium;
+}
+
+h2 {
+  @apply text-lg font-medium;
+}
+
+a {
+  @apply font-medium text-red-700 relative;
+}
+
+a::after {
+  content: '';
+  @apply absolute left-0 -bottom-0.5 h-px w-full bg-red-700;
+}
+
 @layer components {
+  /* Alert  */
+  .c-alert {
+    @apply relative border rounded-md px-16 py-4;
+  }
+
+  .c-alert__icon {
+    @apply absolute top-6 left-4 fill-current;
+  }
+
+  .c-alert__button {
+    @apply absolute top-4 right-4 fill-current;
+  }
+
+  /* Alert - Error  */
+  .c-alert.c-alert--error {
+    @apply bg-soft-red border-red-600;
+  }
+
+  .c-alert__icon,
+  .c-alert__button {
+    @apply text-red-700;
+  }
+  .c-alert__button {
+    @apply cursor-pointer;
+  }
+
+  /* Alert - Info */
+  .c-alert.c-alert--info {
+    @apply bg-soft-blue border-blue-200;
+  }
+
+  .c-alert.c-alert--info a {
+    @apply text-blue-400;
+  }
+  .c-alert.c-alert--info a::after {
+    @apply bg-blue-400;
+  }
+
+  .c-alert.c-alert--info .c-alert__icon,
+  .c-alert.c-alert--info .c-alert__button {
+    @apply text-blue-400;
+  }
+
+  /* Button CTA */
   .c-buttoncta {
     @apply inline-flex items-center font-semibold px-6 py-4 my-2 transition-colors duration-300 ease-out rounded-md bg-red-700 hover:bg-black text-white shadow-xl;
   }
