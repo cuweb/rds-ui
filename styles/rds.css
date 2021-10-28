@@ -63,6 +63,23 @@ a::after {
     @apply text-blue-400;
   }
 
+  /* Alert - Success */
+  .c-alert.c-alert--success {
+    @apply bg-soft-green border-green-400;
+  }
+
+  .c-alert.c-alert--success a {
+    @apply text-green-500;
+  }
+  .c-alert.c-alert--success a::after {
+    @apply bg-green-400;
+  }
+
+  .c-alert.c-alert--success .c-alert__icon,
+  .c-alert.c-alert--success .c-alert__button {
+    @apply text-green-400;
+  }
+
   /* Button CTA */
   .c-buttoncta {
     @apply inline-flex items-center font-semibold px-6 py-4 my-2 transition-colors duration-300 ease-out rounded-md bg-red-700 hover:bg-black text-white shadow-xl;

@@ -26,5 +26,5 @@ export const Success = Template.bind({});
 Success.args = {
   type: 'success',
   title: 'Upload success',
-  content: 'Your <a href="#">document<a/> was uploaded successfully.',
+  content: 'Your <a href="#">document</a> was uploaded successfully.',
 };
