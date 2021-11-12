@@ -13,4 +13,12 @@ describe(title, () => {
       cy.get(`.u-block--${variation.color}`).should('exist');
     });
   });
+
+  it(`Should not render the U-Block heading`, () => {
+    cy.visit(
+      `${Cypress.env('baseUrl')}/iframe.html?id=components-u-block--no-heading`
+    );
+    cy.get(`.u-block`).should('exist');
+    cy.get(`.c-heading`).should('not.exist');
+  });
 });

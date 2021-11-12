@@ -41,3 +41,9 @@ BlackBackground.args = {
   heading: black.heading,
   color: black.color,
 };
+
+//  No Heading Ublock
+export const NoHeading = Template.bind({});
+NoHeading.args = {
+  color: grey.color,
+};
