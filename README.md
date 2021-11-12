@@ -7,6 +7,23 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 ### Features
 
 - [Storybook](https://storybook.js.org)
-- [TailwindCSS](https://tailwindcss.com)
+- [NextJS](https://nextjs.org/)
 - [Cypress](https://www.cypress.io)
 - [Adobe React Aria](https://react-spectrum.adobe.com/react-aria/)
+
+
+## Installation 
+
+`yarn instal` or `npm install`
+
+## Development
+
+`yarn dev` or `npm run dev`
+
+## Build 
+
+`yarn build` or `npm run build`
+
+## Test 
+
+`yarn test` or `npm run test`

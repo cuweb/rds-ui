@@ -32,13 +32,3 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-#env
-.env
-
-# cypress
-/cypress/screenshots
-/cypress/videos
-
-# Mac
-.DS_Store

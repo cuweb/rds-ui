@@ -14,6 +14,7 @@ const Button = (props) => {
   } = props;
   const isGhost = ghost ? 'c-buttoncta--ghost' : '';
   const isFull = full ? 'c-buttoncta--full' : '';
+  const hasIcon = icon ? 'u-icon' : '';
 
   const ref = useRef();
   const { linkButtons } = useButton(props, ref);
@@ -22,7 +23,7 @@ const Button = (props) => {
     <a
       {...linkButtons}
       ref={ref}
-      className={`c-buttoncta ${isFull} ${isGhost}`}
+      className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost}`}
       target={`_${target}`}
       href={link}
     >

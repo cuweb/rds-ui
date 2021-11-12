@@ -21,12 +21,16 @@ const Alert = (props) => {
       <h2>{title || 'Please add a title'}</h2>
       {content && <p dangerouslySetInnerHTML={{ __html: content }} />}
       {handleClose && (
-        <Icon
-          icon={'x'}
-          size={12}
-          className={`c-alert__button c-alert__button--${renderType}`}
-          onClick={(e) => handleClose(e)}
-        />
+        <button aria-label='Close alert' type='button' data-close>
+          <span className='u-icon' aria-hidden='true'>
+            <Icon
+              icon={'x'}
+              size={12}
+              className={`c-alert__button c-alert__button--${renderType}`}
+              onClick={(e) => handleClose(e)}
+            />
+          </span>
+        </button>
       )}
     </div>
   );
