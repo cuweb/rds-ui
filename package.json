@@ -3,10 +3,9 @@
   "scripts": {
     "dev": "start-storybook -p 6006",
     "start": "start-storybook -p 6006",
-    "build": "npm run build-rds && build-storybook -o ./docs",
-    "build-rds": "NODE_ENV=production npx tailwindcss -i ./styles/rds.css -o  ./dist/rds.css --minify",
-    "test": "wait-on http://localhost:6006 && cypress run",
-    "test:ci": "wait-on http://localhost:6006 && cypress run --headless"
+    "build": "build-storybook -o ./storybook",
+    "test": "cypress open",
+    "test:ci": "cypress run --headless"
   },
   "dependencies": {
     "@react-aria/button": "^3.3.4",
@@ -26,8 +25,7 @@
     "@storybook/theming": "^6.3.12",
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.3",
-    "cypress": "^8.6.0",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "cypress": "^9.0.0",
+    "postcss": "^8.3.5"
   }
 }
