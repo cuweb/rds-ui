@@ -27,3 +27,12 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 ## Test 
 
 `yarn test` or `npm run test`
+
+
+# TODO
+
+- Add AirBnb CSS/JS ESLint
+- Add CSS bundle
+- Add Cypress Global Test file (e.g.: should render u-block)
+- Define Test Standarts (e.g.: test props, should have children)
+- Add TypeScript
