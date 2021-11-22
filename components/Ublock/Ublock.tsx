@@ -1,13 +1,13 @@
 const Ublock = (props) => {
     const { heading, children, color, full } = props
-    const backgroundColor = color ? color : 'white'
+    const backgroundColor = color || 'white'
     const width = full ? `u-block--full` : ''
 
     return (
         <div className={`u-block u-block--${backgroundColor} ${width}`}>
             {heading && (
                 <h2
-                    className={`c-heading`}
+                    className="c-heading"
                     dangerouslySetInnerHTML={{ __html: heading }}
                 />
             )}

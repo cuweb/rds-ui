@@ -1,4 +1,4 @@
-import Ublock from '../Ublock/Ublock'
+import Ublock from '@components/Ublock/Ublock'
 import BannerBreadcrumbs from './components/BannerBreadcumbs'
 
 const Banner = (props) => {

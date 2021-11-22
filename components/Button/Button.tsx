@@ -1,6 +1,6 @@
-import { useButton } from '@react-aria/button'
-import Icon from '../Icon/Icon'
+// import { useButton } from '@react-aria/button'
 import { useRef } from 'react'
+import Icon from '@components/Icon/Icon'
 
 const Button = (props) => {
     const {
@@ -17,11 +17,11 @@ const Button = (props) => {
     const hasIcon = icon ? 'u-icon' : ''
 
     const ref = useRef()
-    const { linkButtons } = useButton(props, ref)
+    // const { linkButtons } = useButton(props, ref)
 
     return (
         <a
-            {...linkButtons}
+            // {...linkButtons}
             ref={ref}
             className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost}`}
             target={`_${target}`}
