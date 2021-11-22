@@ -1,43 +1,43 @@
-import React from 'react';
-import Icon from './Icon';
+import React from 'react'
+import Icon from './Icon'
 
 export default {
-  component: Icon,
-  title: 'Components/Icon',
-};
+    component: Icon,
+    title: 'Components/Icon',
+}
 
-const Template = (args) => <Icon {...args} size={42} />;
+const Template = (args) => <Icon {...args} size={42} />
 
-export const Alert = Template.bind({});
+export const Alert = Template.bind({})
 Alert.args = {
-  icon: 'alert',
-};
+    icon: 'alert',
+}
 
-export const ArrowDown = Template.bind({});
+export const ArrowDown = Template.bind({})
 ArrowDown.args = {
-  icon: 'arrowDown',
-};
+    icon: 'arrowDown',
+}
 
-export const Github = Template.bind({});
+export const Github = Template.bind({})
 Github.args = {
-  icon: 'github',
-};
-export const Info = Template.bind({});
+    icon: 'github',
+}
+export const Info = Template.bind({})
 Info.args = {
-  icon: 'info',
-};
+    icon: 'info',
+}
 
-export const Plus = Template.bind({});
+export const Plus = Template.bind({})
 Plus.args = {
-  icon: 'plus',
-};
+    icon: 'plus',
+}
 
-export const Warning = Template.bind({});
+export const Warning = Template.bind({})
 Warning.args = {
-  icon: 'warning',
-};
+    icon: 'warning',
+}
 
-export const X = Template.bind({});
+export const X = Template.bind({})
 X.args = {
-  icon: 'x',
-};
+    icon: 'x',
+}

@@ -1,38 +1,38 @@
-import React from 'react';
-import Button from './Button';
+import React from 'react'
+import Button from './Button'
 
 export default {
-  component: Button,
-  title: 'Components/Button',
-};
+    component: Button,
+    title: 'Components/Button',
+}
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Button {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
-  text: 'Join the darkside',
-  link: 'http://www.nooooooooooooooo.com/',
-  target: 'blank',
-};
+    text: 'Join the darkside',
+    link: 'http://www.nooooooooooooooo.com/',
+    target: 'blank',
+}
 
-export const Ghost = Template.bind({});
+export const Ghost = Template.bind({})
 Ghost.args = {
-  text: 'Stay Puft',
-  link: 'https://en.wikipedia.org/wiki/Stay_Puft_Marshmallow_Man',
-  ghost: true,
-};
+    text: 'Stay Puft',
+    link: 'https://en.wikipedia.org/wiki/Stay_Puft_Marshmallow_Man',
+    ghost: true,
+}
 
-export const WithIcon = Template.bind({});
+export const WithIcon = Template.bind({})
 WithIcon.args = {
-  text: 'Download our free ebook',
-  link: '#',
-  icon: 'arrowDown',
-};
+    text: 'Download our free ebook',
+    link: '#',
+    icon: 'arrowDown',
+}
 
-export const FullWidth = Template.bind({});
+export const FullWidth = Template.bind({})
 FullWidth.args = {
-  text: 'Add to Calendar',
-  link: '#',
-  icon: 'plus',
-  full: true,
-};
+    text: 'Add to Calendar',
+    link: '#',
+    icon: 'plus',
+    full: true,
+}

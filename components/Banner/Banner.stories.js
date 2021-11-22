@@ -1,27 +1,27 @@
-import React from 'react';
-import getVariation from '../../functions/getVariation';
-import Banner from './Banner';
-import data from './BannerData.json';
+import React from 'react'
+import getVariation from '../../functions/getVariation'
+import Banner from './Banner'
+import data from './BannerData.json'
 
-const { title, variations } = data;
+const { title, variations } = data
 
 export default {
-  component: title,
-  title: `Components/${title}`,
-};
+    component: title,
+    title: `Components/${title}`,
+}
 
-const Template = (args) => <Banner {...args} />;
+const Template = (args) => <Banner {...args} />
 
 //  Base Banner
-export const Base = Template.bind({});
+export const Base = Template.bind({})
 Base.args = {
-  title: getVariation('base', variations).title,
-};
+    title: getVariation('base', variations).title,
+}
 
 //  Banner with Breadcrumbs
-const breadcrumbs = getVariation('breadcrumbs', variations);
-export const BaseWithBreadCrumbs = Template.bind({});
+const breadcrumbs = getVariation('breadcrumbs', variations)
+export const BaseWithBreadCrumbs = Template.bind({})
 BaseWithBreadCrumbs.args = {
-  title: breadcrumbs.title,
-  breadcrumbs: breadcrumbs.breadcrumbs,
-};
+    title: breadcrumbs.title,
+    breadcrumbs: breadcrumbs.breadcrumbs,
+}

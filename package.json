@@ -1,31 +1,41 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "start-storybook -p 6006",
-    "start": "start-storybook -p 6006",
-    "build": "build-storybook -o ./storybook",
-    "test": "cypress open",
-    "test:ci": "cypress run --headless"
-  },
-  "dependencies": {
-    "@react-aria/button": "^3.3.4",
-    "@react-aria/link": "^3.1.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-docs": "^6.3.12",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addons": "^6.3.12",
-    "@storybook/react": "^6.3.12",
-    "@storybook/theming": "^6.3.12",
-    "autoprefixer": "^10.2.6",
-    "babel-loader": "^8.2.3",
-    "cypress": "^9.0.0",
-    "postcss": "^8.3.5"
-  }
+    "private": true,
+    "scripts": {
+        "dev": "start-storybook -p 6006",
+        "start": "start-storybook -p 6006",
+        "build": "build-storybook -o ./storybook",
+        "test": "cypress open",
+        "test:ci": "cypress run --headless"
+    },
+    "dependencies": {
+        "@react-aria/button": "^3.3.4",
+        "@react-aria/link": "^3.1.4",
+        "eslint-config-prettier": "^8.3.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.15.8",
+        "@storybook/addon-actions": "^6.3.12",
+        "@storybook/addon-docs": "^6.3.12",
+        "@storybook/addon-essentials": "^6.3.12",
+        "@storybook/addon-links": "^6.3.12",
+        "@storybook/addon-postcss": "^2.0.0",
+        "@storybook/addons": "^6.3.12",
+        "@storybook/react": "^6.3.12",
+        "@storybook/theming": "^6.3.12",
+        "@typescript-eslint/eslint-plugin": "^5.4.0",
+        "@typescript-eslint/parser": "^5.4.0",
+        "autoprefixer": "^10.2.6",
+        "babel-loader": "^8.2.3",
+        "cypress": "^9.0.0",
+        "eslint": "^8.3.0",
+        "eslint-config-airbnb": "^19.0.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-react": "^7.27.1",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "postcss": "^8.3.5",
+        "prettier": "2.4.1"
+    }
 }
