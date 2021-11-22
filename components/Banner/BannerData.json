@@ -1,21 +1,21 @@
 {
-  "title": "Banner",
-  "classname": ".b-button",
-  "variations": [
-    {
-      "type": "base",
-      "classname": "",
-      "title": "Base Banner"
-    },
-    {
-      "type": "breadcrumbs",
-      "title": "Banner with Breadcrumbs",
-      "breadcrumbs": [
+    "title": "Banner",
+    "classname": ".b-button",
+    "variations": [
         {
-          "title": "Home",
-          "link": "/"
+            "type": "base",
+            "classname": "",
+            "title": "Base Banner"
+        },
+        {
+            "type": "breadcrumbs",
+            "title": "Banner with Breadcrumbs",
+            "breadcrumbs": [
+                {
+                    "title": "Home",
+                    "link": "/"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

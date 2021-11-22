@@ -10,6 +10,7 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 - [NextJS](https://nextjs.org/)
 - [Cypress](https://www.cypress.io)
 - [Adobe React Aria](https://react-spectrum.adobe.com/react-aria/)
+- [AirBnb ESLint/Prettier suppoer](https://dev.to/bigyank/a-quick-guide-to-setup-eslint-with-airbnb-and-prettier-3di2)
 
 
 ## Installation 
@@ -30,9 +31,5 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 
 
 # TODO
-
-- Add AirBnb CSS/JS ESLint
 - Add CSS bundle
-- Add Cypress Global Test file (e.g.: should render u-block)
-- Define Test Standarts (e.g.: test props, should have children)
 - Add TypeScript
