@@ -10,7 +10,7 @@ export default {
     title: `Components/${title}`,
 }
 
-const Template = (args) => <Banner {...args} />
+const Template: React.FC = (args: any) => <Banner {...args} />
 
 //  Base Banner
 export const Base = Template.bind({})

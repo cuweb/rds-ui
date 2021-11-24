@@ -1,6 +1,13 @@
 import Icon from '@components/Icon/Icon'
 
-const Alert = (props) => {
+interface AlertProps {
+    type: string,
+    title: string,
+    content: string,
+    handleClose: boolean,
+};
+
+const Alert: React.FC<AlertProps> = (props:any): JSX.Element => {
     const { type, title, content, handleClose } = props
     const renderType = type || 'error'
 

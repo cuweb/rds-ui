@@ -12,7 +12,6 @@
     "dependencies": {
         "@react-aria/button": "^3.3.4",
         "@react-aria/link": "^3.1.4",
-        "@types/jest": "^27.0.3",
         "@types/node": "^16.11.9",
         "@types/react": "^17.0.36",
         "@types/react-dom": "^17.0.11",
@@ -31,6 +30,7 @@
         "@storybook/addons": "^6.3.12",
         "@storybook/react": "^6.3.12",
         "@storybook/theming": "^6.3.12",
+        "@types/jest": "^27.0.3",
         "@typescript-eslint/eslint-plugin": "^5.4.0",
         "@typescript-eslint/parser": "^5.4.0",
         "autoprefixer": "^10.2.6",

@@ -1,7 +1,13 @@
 import Ublock from '@components/Ublock/Ublock'
 import BannerBreadcrumbs from './components/BannerBreadcumbs'
 
-const Banner = (props) => {
+interface BannerProps {
+    title: string,
+    breadcrumbs: string,
+    color: string,
+};
+
+const Banner: React.FC<BannerProps> = (props: any): JSX.Element => {
     const { title, breadcrumbs, color = 'grey' } = props
     return (
         <Ublock color={color}>
