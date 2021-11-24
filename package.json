@@ -2,24 +2,27 @@
     "name": "rds-test",
     "private": true,
     "scripts": {
-        "docs": "next dev",
-        "docs:build": "next build",
+        "docs": "next dev & webpack --config webpack.dev.js --watch",
+        "docs:build": "next build  & webpack --config webpack.prod.js",
         "docs:start": "next start",
         "docs:lint": "next lint",
-        "lint": "eslint components/**/*.tsx",
+        "lint": "eslint **/*.tsx",
         "lint:fix": "lint --fix",
-        "dev": "start-storybook -p 6006",
-        "build": "build-storybook  -o ./docs/storybook",
+        "dev": "start-storybook -p 6006 & webpack --config webpack.dev.js --watch",
+        "build": "build-storybook -o ./docs/storybook & webpack --config webpack.prod.js",
         "test": "cypress open",
         "test:ci": "cypress run --headless",
         "test:firefox": "cypress run --headless --browser firefox",
         "test:edge": "cypress run --headless --browser edge"
     },
     "dependencies": {
+        "compression-webpack-plugin": "^9.0.1",
+        "mini-css-extract-plugin": "^2.4.5",
         "next": "12.0.4",
         "react": "17.0.2",
         "react-dom": "17.0.2",
-        "sass": "^1.43.4"
+        "sass": "^1.43.4",
+        "webpack": "^5.64.3"
     },
     "devDependencies": {
         "@babel/core": "^7.16.0",
@@ -47,6 +50,7 @@
         "prettier": "^2.4.1",
         "sass-loader": "^12.3.0",
         "style-loader": "^3.3.1",
-        "typescript": "4.5.2"
+        "typescript": "4.5.2",
+        "webpack-cli": "^4.9.1"
     }
 }
