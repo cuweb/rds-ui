@@ -8,9 +8,10 @@
         "docs:lint": "next lint",
         "lint": "eslint **/*.tsx",
         "lint:fix": "lint --fix",
-        "dev": "start-storybook -p 6006 & webpack --config webpack.dev.js --watch",
+        "start": "yarn dev",
+        "dev": "start-storybook -p 6006 --ci & webpack --config webpack.dev.js --watch",
         "build": "webpack --config webpack.prod.js && build-storybook -o ./docs/storybook",
-        "test": "cypress open",
+        "test": "yarn run dev & cypress open",
         "test:ci": "cypress run --headless",
         "test:firefox": "cypress run --headless --browser firefox",
         "test:edge": "cypress run --headless --browser edge"
