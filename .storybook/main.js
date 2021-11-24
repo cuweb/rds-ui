@@ -2,23 +2,13 @@ const path = require('path')
 
 module.exports = {
     stories: [
+        '../components/**/*.stories.mdx',
         '../components/**/*.stories.@(js|jsx|ts|tsx)',
-        '../pages/**/*.mdx',
     ],
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
-        {
-            name: '@storybook/addon-postcss',
-            options: {
-                cssLoaderOptions: {
-                    importLoaders: 1,
-                },
-                postcssLoaderOptions: {
-                    implementation: require('postcss'),
-                },
-            },
-        },
+        '@storybook/preset-scss',
     ],
     webpackFinal: async (config) => {
         config.resolve.alias = {
