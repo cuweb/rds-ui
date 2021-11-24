@@ -1,4 +1,3 @@
-import Alert from '@components/Alert/Alert'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
@@ -12,7 +11,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-       <Alert />
+        <h1>RDS</h1>
       </main>
     </div>
   )
