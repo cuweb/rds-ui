@@ -21,6 +21,10 @@
         "@typescript-eslint",
         "prettier"
     ],
+    "ignorePatterns": [
+        "**/*.spec.js",
+        "**/*.stories.js"
+    ],
     "rules": {
         "prettier/prettier": "error",
         "import/extensions": "off",

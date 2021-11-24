@@ -5,15 +5,15 @@
         "docs": "next dev",
         "docs:build": "next build",
         "docs:start": "next start",
-        "lint:next": "next lint",
+        "docs:lint": "next lint",
         "lint": "eslint components/**/*.tsx",
         "lint:fix": "lint --fix",
         "dev": "start-storybook -p 6006",
         "build": "build-storybook",
         "test": "cypress open",
-        "ci:test": "cypress run --headless",
-        "ci:test-firefox": "cypress run --headless --browser firefox",
-        "ci:test-edge": "cypress run --headless --browser edge"
+        "test:ci": "cypress run --headless",
+        "test:firefox": "cypress run --headless --browser firefox",
+        "test:edge": "cypress run --headless --browser edge"
     },
     "dependencies": {
         "next": "12.0.4",
