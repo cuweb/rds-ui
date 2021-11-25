@@ -6,7 +6,7 @@ import LayoutWrapper from './LayoutWrapper'
 const LayoutAMA = (props: { children: any; aside: any; sidebar: any }) => {
     const { children, aside, sidebar } = props
     return (
-        <LayoutWrapper type="ama">
+        <LayoutWrapper type='ama'>
             <LayoutAside>{aside}</LayoutAside>
             <LayoutMain>{children}</LayoutMain>
             <LayoutSidebar>{sidebar}</LayoutSidebar>

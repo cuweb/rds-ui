@@ -12,7 +12,7 @@ const Template = (args) => <Layout {...args} />
 export const Single = Template.bind({})
 Single.args = {
     children: [
-        <Banner title="Single column layout" />,
+        <Banner title='Single column layout' />,
         <p>{`The single column layout only requires a <main> tag in between your <header> and <footer> tags.`}</p>,
     ],
 }
@@ -20,7 +20,7 @@ Single.args = {
 export const MulticolAM = Template.bind({})
 MulticolAM.args = {
     children: [
-        <Banner title="Multicol AM (Aside + Main)" />,
+        <Banner title='Multicol AM (Aside + Main)' />,
         <p>
             This is a two column layout consisting of an aside, immediately
             followed by the main content area. The base class name l-multicol-am
@@ -34,7 +34,7 @@ MulticolAM.args = {
 export const MulticolMA = Template.bind({})
 MulticolMA.args = {
     children: [
-        <Banner title="Multicol MA (Main + Aside)" />,
+        <Banner title='Multicol MA (Main + Aside)' />,
         <p>
             This is another two column layout, but this time it consists of a
             main content area, immediately followed by the aside. The base class
@@ -49,7 +49,7 @@ MulticolMA.args = {
 export const MulticolAMA = Template.bind({})
 MulticolAMA.args = {
     children: [
-        <Banner title="Multicol MA (Main + Aside)" />,
+        <Banner title='Multicol MA (Main + Aside)' />,
         <p>
             This is another two column layout, but this time it consists of a
             main content area, immediately followed by the aside. The base class

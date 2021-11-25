@@ -1,6 +1,11 @@
 import Icon from '@components/Icon/Icon'
 
-const Alert = (props) => {
+const Alert = (props: {
+    type: any
+    title: any
+    content: any
+    handleClose: any
+}) => {
     const { type, title, content, handleClose } = props
     const renderType = type || 'error'
 
@@ -21,13 +26,13 @@ const Alert = (props) => {
             <h2>{title || 'Please add a title'}</h2>
             {content && <p dangerouslySetInnerHTML={{ __html: content }} />}
             {handleClose && (
-                <button aria-label="Close alert" type="button" data-close>
-                    <span className="u-icon" aria-hidden="true">
+                <button aria-label='Close alert' type='button' data-close>
+                    <span className='u-icon' aria-hidden='true'>
                         <Icon
-                            icon="x"
+                            icon='x'
                             size={12}
                             className={`c-alert__button c-alert__button--${renderType}`}
-                            onClick={(e) => handleClose(e)}
+                            onClick={(e: any) => handleClose(e)}
                         />
                     </span>
                 </button>
