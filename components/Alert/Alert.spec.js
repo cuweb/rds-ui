@@ -1,4 +1,9 @@
 describe('Alert', () => {
+
+  beforeEach(() => {
+    cy.global(); // running the global state test commands before each test 
+})
+
   const types = ['error', 'info', 'success', 'warning'];
   const title = 'h2';
   const icon = '.c-alert__icon';
