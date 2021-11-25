@@ -16,7 +16,8 @@ const Alert = (props) => {
             <Icon
                 icon={icon[type || 'error']}
                 size={30}
-                className={`c-alert__icon c-alert__icon--${renderType}`} />
+                className={`c-alert__icon c-alert__icon--${renderType}`}
+            />
             <h2>{title || 'Please add a title'}</h2>
             {content && <p dangerouslySetInnerHTML={{ __html: content }} />}
             {handleClose && (
@@ -26,7 +27,8 @@ const Alert = (props) => {
                             icon="x"
                             size={12}
                             className={`c-alert__button c-alert__button--${renderType}`}
-                            onClick={(e) => handleClose(e)} />
+                            onClick={(e) => handleClose(e)}
+                        />
                     </span>
                 </button>
             )}
