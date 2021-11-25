@@ -3,7 +3,7 @@
     "private": true,
     "scripts": {
         "docs": "next dev & webpack --config webpack.dev.js --watch",
-        "docs:build": "webpack --config webpack.prod.js && next build",
+        "docs:build": "webpack --config webpack.prod.js && next build && next export",
         "docs:start": "next start",
         "docs:lint": "next lint",
         "lint": "eslint **/*.tsx",
