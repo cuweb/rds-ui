@@ -55,7 +55,7 @@ MulticolMA.args = {
 export const MulticolAMA = Template.bind({})
 MulticolAMA.args = {
     children: [
-        <h2>Multicol MA (Main + Aside)</h2>,
+        <h2>Multicol AMA (Aside + Main + Aside)</h2>,
         <p>
             This is another two column layout, but this time it consists of a
             main content area, immediately followed by the aside. The base class
