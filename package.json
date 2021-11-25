@@ -2,7 +2,7 @@
     "name": "rds-test",
     "private": true,
     "scripts": {
-        "docs": "next dev & webpack --config webpack.dev.js --watch",
+        "docs": "webpack --config webpack.prod.js && next dev",
         "docs:build": "webpack --config webpack.prod.js && next build && next export",
         "docs:start": "next start",
         "docs:lint": "next lint",
@@ -12,7 +12,7 @@
         "dev": "webpack --config webpack.dev.js & start-storybook -p 6006",
         "build": "webpack --config webpack.prod.js && build-storybook -o ./docs/storybook",
         "test": "yarn run dev & cypress open",
-        "test:ci": "cypress run --headless",
+        "test:ci": "yarn run dev & cypress run --headless",
         "test:firefox": "cypress run --headless --browser firefox",
         "test:edge": "cypress run --headless --browser edge"
     },

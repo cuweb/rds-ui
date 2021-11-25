@@ -1,3 +1,4 @@
+import Banner from '@components/Banner/Banner'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
@@ -10,7 +11,7 @@ const Home: NextPage = () => (
         </Head>
 
         <main>
-            <h1>RDS</h1>
+            <Banner title="Welcome to the new RDS" />
         </main>
     </div>
 )
