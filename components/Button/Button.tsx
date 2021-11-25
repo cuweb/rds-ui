@@ -1,13 +1,13 @@
 // import { useButton } from '@react-aria/button'
-import React, { useRef } from 'react'
-import Icon from '@components/Icon/Icon'
+import React, { useRef } from 'react';
+import Icon from '@components/Icon/Icon';
 
 interface ButtonProps {
-    ghost: string,
+    ghost?: string,
     text: string,
     link: string,
-    icon: string,
-    full: string,
+    icon?: string,
+    full?: string,
     children: React.ReactNode,
     target: string,
 

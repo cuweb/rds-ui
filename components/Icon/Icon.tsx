@@ -1,15 +1,18 @@
-import React from 'react';
-
 interface IconProps {
     icon: string,
-    size: string,
-    svg: React.ReactNode,
-    className: string,
-    onClick: React.MouseEventHandler<HTMLButtonElement>,
+    size?: string;
+    svg?: React.ReactNode;
+    className?: string;
+    onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const Icon: React.FC<IconProps> = (props: any): JSX.Element => {
-    const { icon, size, svg, className = '', onClick } = props
+const Icon: React.FC<IconProps> = ({
+    icon,
+    size, 
+    svg, 
+    className = '', 
+    onClick,
+}): JSX.Element => {
 
     if (svg) return svg
 

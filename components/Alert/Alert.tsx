@@ -1,14 +1,20 @@
+import React from 'react'
 import Icon from '@components/Icon/Icon'
 
-interface AlertProps {
-    type: string,
-    title: string,
-    content: string,
-    handleClose: boolean,
+export interface AlertProps {
+    type?: string;
+    title: string;
+    content?: string;
+    handleClose?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const Alert: React.FC<AlertProps> = (props:any): JSX.Element => {
-    const { type, title, content, handleClose } = props
+const Alert: React.FC<AlertProps> = ({
+    type, 
+    title, 
+    content, 
+    handleClose,
+}): JSX.Element => {
+
     const renderType = type || 'error'
 
     const icon = {
