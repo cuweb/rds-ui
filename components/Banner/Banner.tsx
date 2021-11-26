@@ -3,7 +3,7 @@ import BannerBreadcrumbs from './components/BannerBreadcumbs'
 
 interface BannerProps {
     title: string;
-    breadcrumbs?: string;
+    breadcrumbs?: {link: string, title: string}[];
     color?: string;
 };
 

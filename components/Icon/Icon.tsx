@@ -2,10 +2,10 @@ import React from 'react'
 
 interface IconProps {
     icon: string,
-    size?: string;
-    svg?: React.ReactNode;
+    size?: number;
+    svg?: React.ReactElement;
     className?: string;
-    onClick: React.MouseEventHandler<HTMLButtonElement>;
+    onClick?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
 };
 
 const Icon: React.FC<IconProps> = ({

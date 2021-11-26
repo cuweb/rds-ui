@@ -1,6 +1,12 @@
 {
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
+        "types": [
+            "jest",
+            "node",
+            "cypress"
+          ],
+        "resolveJsonModule": true,
         "moduleResolution": "node",
         "baseUrl": "./",
         "paths": {

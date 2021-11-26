@@ -1,11 +1,10 @@
-import React from 'react'
 import Icon from '@components/Icon/Icon'
 
 export interface AlertProps {
     type?: 'info' | 'error' | 'success' | 'warning';
     title: string;
     content?: string;
-    handleClose?: React.MouseEventHandler<HTMLButtonElement>;
+    handleClose?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
 };
 
 const Alert: React.FC<AlertProps> = ({

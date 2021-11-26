@@ -1,8 +1,8 @@
 import React from 'react'
 
 interface UblockProps {
-    heading: string;
     children: React.ReactNode;
+    heading?: string;
     color?: string;
     full?: string;
 };
