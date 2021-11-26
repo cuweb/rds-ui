@@ -1,4 +1,8 @@
 describe('Button', () => {
+  beforeEach(() => {
+    cy.global(); // running the global state test commands before each test 
+})
+
   const button = {
     default: `.c-buttoncta`,
     ghost: `.c-buttoncta--ghost`,
