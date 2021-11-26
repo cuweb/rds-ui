@@ -4,7 +4,7 @@
 
 RDS, Carleton University’s design system, is a living digital organism uniting campus wide teams around a common visual language.
 
-### Features
+## Features
 
 - [Storybook](https://storybook.js.org)
 - [NextJS](https://nextjs.org/)
@@ -18,7 +18,6 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 `yarn instal` or `npm install`
 
 ## Development
-
 
 ### Start 
 
@@ -37,7 +36,7 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 `yarn test:ci` or `npm run test:ci`
 
 ## Docs 
-
+ 
 ### Development
 
 `yarn docs` or `npm run docs`
@@ -45,3 +44,19 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 ### Build
 
 `yarn docs:build` or `npm run docs:build`
+
+
+## Troubleshoting 
+
+### Storybook port is in use
+
+`sudo lsof -i:6006`
+
+then
+
+`kill -9 <PID>`
+
+
+## TODO
+
+- Adobe React ARIA
