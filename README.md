@@ -19,17 +19,29 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 
 ## Development
 
+
+### Start 
+
 `yarn dev` or `npm run dev`
 
-## Build 
+### Build 
 
 `yarn build` or `npm run build`
 
-## Test 
+### Test 
 
 `yarn test` or `npm run test`
 
+### CI Test
 
-# TODO
-- Add CSS bundle
-- Add TypeScript
+`yarn test:ci` or `npm run test:ci`
+
+## Docs 
+
+### Development
+
+`yarn docs` or `npm run docs`
+
+### Build
+
+`yarn docs:build` or `npm run docs:build`
