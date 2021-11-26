@@ -1,5 +1,7 @@
+import React from 'react'
+
 interface UblockProps {
-    heading: boolean;
+    heading: string;
     children: React.ReactNode;
     color?: string;
     full?: string;
@@ -12,7 +14,7 @@ const Ublock: React.FC<UblockProps> = ({
     full,
 }): JSX.Element => {
     
-    const backgroundColor = color || 'white'
+    const backgroundColor = color && color || 'white'
     const width = full ? `u-block--full` : ''
 
     return (

@@ -1,3 +1,5 @@
+import React from 'react'
+
 interface IconProps {
     icon: string,
     size?: string;

@@ -13,16 +13,16 @@ interface ButtonProps {
 
 };
 
-const Button: React.FC<ButtonProps> = (props: any): JSX.Element => {
-    const {
-        ghost,
-        text = 'Click',
-        link = '#',
-        icon,
-        full,
-        children,
-        target,
-    } = props
+const Button: React.FC<ButtonProps> = ({
+    ghost,
+    text = 'Click',
+    link = '#',
+    icon,
+    full,
+    children,
+    target,
+}): JSX.Element => {
+
     const isGhost = ghost ? 'c-buttoncta--ghost' : ''
     const isFull = full ? 'c-buttoncta--full' : ''
     const hasIcon = icon ? 'u-icon' : ''

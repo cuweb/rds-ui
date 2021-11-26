@@ -2,7 +2,7 @@ import React from 'react'
 import Icon from '@components/Icon/Icon'
 
 export interface AlertProps {
-    type?: string;
+    type?: 'info' | 'error' | 'success' | 'warning';
     title: string;
     content?: string;
     handleClose?: React.MouseEventHandler<HTMLButtonElement>;

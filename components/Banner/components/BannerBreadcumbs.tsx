@@ -8,8 +8,8 @@ const BannerBreadcrumbs: React.FC<BannerBreadcrumbsProps> = ({
     links,
 }): JSX.Element => {
 
-    const list = links.map((item, index) => (
-        <li itemProp="breadcrumb" key={index}>
+    const list = links.map((item) => (
+        <li itemProp="breadcrumb" key={item.title}>
             <a href={item.link}>{item.title}</a>
         </li>
     ))
