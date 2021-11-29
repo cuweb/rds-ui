@@ -7,7 +7,7 @@ const Ublock = (props) => {
         <div className={`u-block u-block--${backgroundColor} ${width}`}>
             {heading && (
                 <h2
-                    className="c-heading"
+                    className='c-heading'
                     dangerouslySetInnerHTML={{ __html: heading }}
                 />
             )}

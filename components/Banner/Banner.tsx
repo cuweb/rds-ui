@@ -5,7 +5,7 @@ const Banner = (props) => {
     const { title, breadcrumbs, color = 'grey' } = props
     return (
         <Ublock color={color}>
-            <div className="b-banner">
+            <div className='b-banner'>
                 <section>
                     {breadcrumbs && <BannerBreadcrumbs links={breadcrumbs} />}
                     {title && (
