@@ -1,6 +1,20 @@
-const Ublock = (props) => {
-    const { heading, children, color, full } = props
-    const backgroundColor = color || 'white'
+import React from 'react'
+
+interface UblockProps {
+    children: React.ReactNode;
+    heading?: string;
+    color?: string;
+    full?: string;
+};
+
+const Ublock: React.FC<UblockProps> = ({
+    heading, 
+    children, 
+    color, 
+    full,
+}): JSX.Element => {
+    
+    const backgroundColor = color && color || 'white'
     const width = full ? `u-block--full` : ''
 
     return (

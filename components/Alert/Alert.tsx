@@ -1,12 +1,18 @@
 import Icon from '@components/Icon/Icon'
 
-const Alert = (props: {
-    type: any
-    title: any
-    content: any
-    handleClose: any
-}) => {
-    const { type, title, content, handleClose } = props
+export interface AlertProps {
+    type?: 'info' | 'error' | 'success' | 'warning'
+    title: string
+    content?: string
+    handleClose?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
+}
+
+const Alert: React.FC<AlertProps> = ({
+    type,
+    title,
+    content,
+    handleClose,
+}): JSX.Element => {
     const renderType = type || 'error'
 
     const icon = {

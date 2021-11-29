@@ -1,5 +1,20 @@
-const Icon = (props) => {
-    const { icon, size, svg, className = '', onClick } = props
+import React from 'react'
+
+interface IconProps {
+    icon: string,
+    size?: number;
+    svg?: React.ReactElement;
+    className?: string;
+    onClick?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
+};
+
+const Icon: React.FC<IconProps> = ({
+    icon,
+    size, 
+    svg, 
+    className = '', 
+    onClick,
+}): JSX.Element => {
 
     if (svg) return svg
 

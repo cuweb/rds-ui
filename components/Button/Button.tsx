@@ -1,17 +1,28 @@
 // import { useButton } from '@react-aria/button'
-import { useRef } from 'react'
-import Icon from '@components/Icon/Icon'
+import React, { useRef } from 'react';
+import Icon from '@components/Icon/Icon';
 
-const Button = (props) => {
-    const {
-        ghost,
-        text = 'Click',
-        link = '#',
-        icon,
-        full,
-        children,
-        target,
-    } = props
+interface ButtonProps {
+    ghost?: string,
+    text: string,
+    link: string,
+    icon?: string,
+    full?: string,
+    children: React.ReactNode,
+    target: string,
+
+};
+
+const Button: React.FC<ButtonProps> = ({
+    ghost,
+    text = 'Click',
+    link = '#',
+    icon,
+    full,
+    children,
+    target,
+}): JSX.Element => {
+
     const isGhost = ghost ? 'c-buttoncta--ghost' : ''
     const isFull = full ? 'c-buttoncta--full' : ''
     const hasIcon = icon ? 'u-icon' : ''
