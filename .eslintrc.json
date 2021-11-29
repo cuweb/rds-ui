@@ -1,4 +1,7 @@
 {
+    "globals": {
+        "JSX": true
+    },
     "env": {
         "browser": true,
         "es2021": true
@@ -22,8 +25,8 @@
         "prettier"
     ],
     "ignorePatterns": [
-        "**/*.spec.js",
-        "**/*.stories.js"
+        "**/*.spec.*",
+        "**/*.stories.*"
     ],
     "rules": {
         "prettier/prettier": "error",

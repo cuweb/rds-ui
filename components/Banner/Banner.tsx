@@ -1,9 +1,18 @@
 import Ublock from '@components/Ublock/Ublock'
 import BannerBreadcrumbs from './components/BannerBreadcumbs'
 
-const Banner = (props) => {
-    const { title, breadcrumbs, color = 'grey' } = props
-    return (
+interface BannerProps {
+    title: string;
+    breadcrumbs?: {link: string, title: string}[];
+    color?: string;
+};
+
+const Banner: React.FC<BannerProps> = ({
+    title,
+    breadcrumbs,
+    color = 'grey',
+}): JSX.Element => 
+     (
         <Ublock color={color}>
             <div className='b-banner'>
                 <section>
@@ -15,5 +24,5 @@ const Banner = (props) => {
             </div>
         </Ublock>
     )
-}
+
 export default Banner
