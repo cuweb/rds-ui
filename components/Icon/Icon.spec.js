@@ -1,4 +1,8 @@
 describe('Icon', () => {
+    beforeEach(() => {
+        cy.global() // running the global state test commands before each test
+    })
+
     const icon = {
         default: `.c-icon`,
     }
