@@ -8,6 +8,7 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:storybook/recommended",
         "airbnb",
         "next",
         "prettier"
