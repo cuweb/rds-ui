@@ -12,13 +12,15 @@
 // Base partials
 // -------------
 @import 'base/reboot/reboot';
+@import '../../../components/Ublock/Ublock.scss';
+@import '../../../components/Icon/Icon.scss';
 @import 'base/utilities/utilities';
 
 // Layouts
 // -------
 @import '../layouts/col/col';
-@import '../layouts/multicol/multicol';
-@import '../layouts/overlay/overlay';
+@import '../../../layouts/Layout/Layout.scss';
+@import '../../../layouts/Overlay/Overlay.scss';
 
 // Components
 // ----------
@@ -35,7 +37,7 @@
 //--------------
 @import '../../_blocks/alertaside/alertaside';
 @import '../../_blocks/alertheader/alertheader';
-@import '../../_blocks/banner/banner';
+@import '../../../blocks/Banner/Banner.scss';
 @import '../../_blocks/globalnav/globalnav';
 @import '../../_blocks/masthead/masthead';
 

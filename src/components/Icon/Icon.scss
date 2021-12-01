@@ -1,0 +1,57 @@
+.u-icon {
+    fill: $black;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+        text-decoration: none !important;
+    }
+
+    svg {
+        position: relative;
+        display: inline-block;
+        height: 1em;
+        width: 1em;
+        flex-shrink: 0;
+        margin-right: 0.3em;
+        margin-top: -1px;
+    }
+}
+
+.u-icon--notext svg {
+    margin-right: 0;
+}
+
+@include media('<=s') {
+    .u-icon--notext-s svg {
+        margin-right: 0;
+    }
+}
+
+a.u-icon svg:hover {
+    cursor: pointer;
+}
+
+.u-icon--red svg path {
+    fill: $red;
+}
+
+.u-icon--grey svg path {
+    fill: $grey-vader;
+}
+
+.u-icon--circle {
+    &:before {
+        width: 1em;
+        height: 1em;
+        content: '';
+        background-color: $grey;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    svg {
+        padding: 0.3em;
+    }
+}

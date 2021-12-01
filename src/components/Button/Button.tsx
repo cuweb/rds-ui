@@ -1,6 +1,6 @@
 // import { useButton } from '@react-aria/button'
 import React, { useRef } from 'react'
-import Icon from '@src/components/Icon/Icon'
+import Icon from '../Icon/Icon'
 
 interface ButtonProps {
     ghost?: string
