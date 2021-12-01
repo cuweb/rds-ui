@@ -7,7 +7,7 @@ const { title, variations } = data
 
 export default {
     component: title,
-    title: `Components/${title}`,
+    title: `Blocks/${title}`,
 }
 
 const Template: React.FC = (args: any) => <Banner {...args} />

@@ -7,7 +7,7 @@ describe('Banner', () => {
             cy.visit(
                 `${Cypress.env(
                     'baseUrl'
-                )}/iframe.html?id=components-banner--${type}`
+                )}/iframe.html?id=blocks-banner--${type}`
             )
             cy.get(`.b-banner`).should('exist')
             cy.get(`.b-banner ${title}`).should('exist')

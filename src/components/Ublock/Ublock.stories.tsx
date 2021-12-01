@@ -11,7 +11,7 @@ export default {
 
 const Template = (args) => (
     <Ublock {...args}>
-        <p className='b-simple'>
+        <p>
             This is Simple block, an example of a basic block for learning
             purposes.
         </p>

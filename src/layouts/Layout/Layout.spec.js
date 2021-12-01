@@ -7,7 +7,9 @@ describe(title, () => {
             cy.visit(
                 `${Cypress.env(
                     'baseUrl'
-                )}/iframe.html?id=components-layout--multicol-${variation.type}`
+                )}/iframe.html?id=main-concepts-layouts--multicol-${
+                    variation.type
+                }`
             )
             cy.get(data.classname).should('exist')
             cy.get(`.l-multicol--${variation.type}`).should('exist')

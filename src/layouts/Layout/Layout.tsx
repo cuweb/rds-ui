@@ -1,17 +1,13 @@
-import LayoutMA from './components/LayourMA'
-import LayoutAM from './components/LayoutAM'
-import LayoutAMA from './components/LayoutAMA'
-
-const Layout = (props: {
-    children: any
-    type: string
-    aside: any
-    sidebar: any
-}) => {
+const Layout = (props: { children: any; type: string }) => {
     const { children, type } = props
-    if (type === 'am') return <LayoutAM {...props} />
-    if (type === 'ma') return <LayoutMA {...props} />
-    if (type === 'ama') return <LayoutAMA {...props} />
-    return <main>{children}</main>
+    const styles = type ? `l-multicol l-multicol--${type}` : ''
+
+    if (!type) return <main>{children}</main>
+
+    return (
+        <main>
+            <div className={styles}>{children}</div>
+        </main>
+    )
 }
 export default Layout
