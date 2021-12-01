@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
-    entry: ['./styles/_core/scss/core.scss'],
+    entry: ['./src/styles/_core/scss/core.scss'],
     mode: 'production',
     module: {
         rules: [

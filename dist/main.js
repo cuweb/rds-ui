@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./styles/_core/scss/core.scss":
-/*!*************************************!*\
-  !*** ./styles/_core/scss/core.scss ***!
-  \*************************************/
+/***/ "./src/styles/_core/scss/core.scss":
+/*!*****************************************!*\
+  !*** ./src/styles/_core/scss/core.scss ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://rds-test/./styles/_core/scss/core.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://rds-test/./src/styles/_core/scss/core.scss?");
 
 /***/ })
 
@@ -43,7 +43,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./styles/_core/scss/core.scss"](0, __webpack_exports__, __webpack_require__);
+/******/ 	__webpack_modules__["./src/styles/_core/scss/core.scss"](0, __webpack_exports__, __webpack_require__);
 /******/ 	
 /******/ })()
 ;

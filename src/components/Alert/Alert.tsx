@@ -1,4 +1,4 @@
-import Icon from '@components/Icon/Icon'
+import Icon from '@src/components/Icon/Icon'
 
 export interface AlertProps {
     type?: 'info' | 'error' | 'success' | 'warning'

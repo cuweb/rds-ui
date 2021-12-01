@@ -1,4 +1,4 @@
-import getVariation from '../../functions/getVariation'
+import getVariation from '../../../functions/getVariation'
 import Ublock from './Ublock'
 import data from './UblockData.json'
 

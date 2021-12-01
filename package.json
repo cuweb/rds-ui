@@ -2,7 +2,7 @@
     "name": "rds-test",
     "private": true,
     "scripts": {
-        "docs": "webpack --config webpack.prod.js --watch && next dev",
+        "docs": "webpack --config webpack.dev.js --watch & next dev",
         "docs:build": "webpack --config webpack.prod.js && next build && next export",
         "docs:start": "next start",
         "docs:lint": "next lint",

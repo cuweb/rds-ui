@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-    entry: ['./styles/_core/scss/core.scss'],
+    entry: ['./src/styles/_core/scss/core.scss'],
     mode: 'development',
     module: {
         rules: [

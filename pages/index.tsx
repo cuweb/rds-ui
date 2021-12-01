@@ -1,23 +1,6 @@
-import Banner from '@components/Banner/Banner'
-import Layout from '@components/Layout/Layout'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
-const layoutProps = {
-    type: 'ama',
-    children: [
-        <h2>Raven Design System</h2>,
-        'RDS, Carleton University’s design system, is a living digital organism uniting campus wide teams around a common visual language. ',
-    ],
-    sidebar: [
-        <h3>Sidebar</h3>,
-        `Reprehenderit consectetur commodo nostrud nisi ex officia eiusmod et elit magna. Aliquip reprehenderit excepteur culpa fugiat aliqua et ullamco id aute laborum occaecat est anim. Cupidatat ea non esse ullamco deserunt.`,
-    ],
-    aside: [
-        <h3>Menu</h3>,
-        `Nisi adipisicing veniam ullamco reprehenderit mollit aute consectetur in esse pariatur ut adipisicing pariatur. Irure magna eiusmod consectetur nisi nisi nulla voluptate qui. Incididunt laboris ea nisi in deserunt in elit ullamco anim est mollit aute ipsum voluptate.`,
-    ],
-}
+import Banner from '@src/blocks/Banner/Banner'
 
 const Home: NextPage = () => (
     <div>
@@ -28,7 +11,6 @@ const Home: NextPage = () => (
         </Head>
         <header>
             <Banner title='Welcome to the new RDS' />
-            <Layout {...layoutProps} />
         </header>
     </div>
 )
