@@ -1,5 +1,5 @@
 {
-    "name": "@carleton/rds-beta",
+    "name": "@marceloglacial/rds-beta",
     "version": "0.0.1",
     "author": "Carleton University",
     "license": "MIT",
@@ -7,6 +7,9 @@
         "type": "git",
         "url": "git://github.com/cuweb/rds-beta.git"
     },
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "docs": "webpack --config webpack.dev.js --watch & next dev",
         "docs:build": "webpack --config webpack.prod.js && next build && next export",
@@ -16,7 +19,7 @@
         "lint:fix": "lint --fix",
         "start": "yarn dev",
         "dev": "webpack --config webpack.dev.js --watch & start-storybook -p 6006",
-        "build": "webpack --config webpack.prod.js && build-storybook -o ./docs/storybook",
+        "build": "webpack --config webpack.prod.js",
         "test": "yarn run dev & cypress open",
         "test:ci": "yarn run dev & cypress run --headless",
         "test:firefox": "cypress run --headless --browser firefox",
