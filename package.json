@@ -1,6 +1,12 @@
 {
-    "name": "rds-test",
-    "private": true,
+    "name": "@carleton/rds-beta",
+    "version": "0.0.1",
+    "author": "Carleton University",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/cuweb/rds-beta.git"
+    },
     "scripts": {
         "docs": "webpack --config webpack.dev.js --watch & next dev",
         "docs:build": "webpack --config webpack.prod.js && next build && next export",
