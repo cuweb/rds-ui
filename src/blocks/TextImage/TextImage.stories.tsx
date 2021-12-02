@@ -1,36 +1,32 @@
-import Ublock from '@src/components/Ublock/Ublock'
+import React from 'react'
+import TextImage from './TextImage'
 
-const TextImage = (props: {
-    direction: any
-    title: string
-    image: any
-    content: any
-}) => {
-    const { direction, title, image, content } = props
-    const directionClassname = direction === 'left' ? `b-textimg--imgtext` : ''
-
-    return (
-        <Ublock>
-            <div className={`b-textimg ${directionClassname}`}>
-                <div className='textimg__wrapper'>
-                    <section>
-                        {title && (
-                            <h2 dangerouslySetInnerHTML={{ __html: title }} />
-                        )}
-                        {image && <img src={image.src} alt={image.alt} />}
-                        {content && (
-                            <div className='textimg__text'>
-                                <p
-                                    dangerouslySetInnerHTML={{
-                                        __html: content,
-                                    }}
-                                />
-                            </div>
-                        )}
-                    </section>
-                </div>
-            </div>
-        </Ublock>
-    )
+export default {
+    component: TextImage,
+    title: 'Blocks/TextImage',
 }
-export default TextImage
+
+const rightProps = {
+    direction: 'right',
+    title: 'Image to the Right',
+    image: {
+        src: 'https://via.placeholder.com/640x480',
+        alt: 'image',
+    },
+    content:
+        'It is important to note the text is not intended to wrap around the image. In general, the amount of text used should be the same height as the image on large screens. This will, of course, differ if you use a large or small block size.',
+}
+export const ImageToTheRight = (args) => <TextImage {...rightProps} />
+
+const leftProps = {
+    direction: 'left',
+    title: 'Image to the Left',
+    image: {
+        src: 'https://via.placeholder.com/640x480',
+        alt: 'image',
+    },
+    content:
+        'The b-textimg--imgtext modifier is used to move the image to the left. This modifier looks a bit odd at first. But, if the default is text on the left, image on the right - textimg. Then the reverse is -imgtex...image first, then text.',
+}
+
+export const ImageToTheLeft = (args) => <TextImage {...leftProps} />
