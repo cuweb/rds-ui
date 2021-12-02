@@ -1,6 +1,6 @@
 const Overlay = (props: any) => {
     const { type, className, children, isHidden = true } = props
-    const typeClassName = type ? `modal__${type} is-visible` : ''
+    const typeClassName = type ? `modal__${type}` : ''
     const customClassName = className || ''
     const visuallyClass = isHidden ? 'u-visually-hidden' : ''
 

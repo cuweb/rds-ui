@@ -4,10 +4,10 @@ import Banner from '../../blocks/Banner/Banner'
 
 export default {
     component: Overlay,
-    title: 'Main Concepts/Overlay',
+    title: 'Main Concepts/Layouts/Overlay',
 }
 
-export const Search = (args) => {
+export const Default = (args) => {
     const [isHidden, setIsHidden] = useState(true)
     return (
         <div>
