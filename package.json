@@ -7,6 +7,7 @@
         "type": "git",
         "url": "git://github.com/cuweb/rds-beta.git"
     },
+    "main": "dist/main.js",
     "files": [
         "dist"
     ],
