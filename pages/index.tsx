@@ -35,7 +35,7 @@ const Home: NextPage = () => (
                         This is a two column layout consisting of an aside,
                         immediately followed by the main content area. The base
                         class name l-multicol-am reflects the order that the
-                        elements appears in its used of am.'
+                        elements appears in its used of am.
                     </p>
                 </Main>
             </Layout>
