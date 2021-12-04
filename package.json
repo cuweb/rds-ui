@@ -11,16 +11,17 @@
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "start": "yarn dev",
-        "dev": "rollup -c -w & start-storybook -p 6006",
+        "start": "yarn build && start-storybook -p 6006",
+        "dev": "yarn watch & start-storybook -p 6006",
         "watch": "rollup -c -w",
+        "build": "yarn lint && rollup -c",
+        "build:docs": "yarn build && build-storybook -o ./docs/storybook",
         "build:storybook": "build-storybook",
-        "build": "yarn lint && rollup -c && build-storybook -o ./docs/storybook",
         "lint": "eslint src/**/*.tsx",
-        "test": "yarn run dev & cypress open",
-        "test:ci": "yarn run dev & cypress run --headless",
-        "test:firefox": "cypress run --headless --browser firefox",
-        "test:edge": "cypress run --headless --browser edge"
+        "test": "yarn dev & cypress open",
+        "test:ci": "yarn dev & cypress run --headless",
+        "test:firefox": "yarn dev & cypress run --headless --browser firefox",
+        "test:edge": "yarn dev & cypress run --headless --browser edge"
     },
     "np": {
         "publish": false,
