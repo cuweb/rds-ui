@@ -14,7 +14,7 @@
         "dev": "rollup -c -w & start-storybook -p 6006",
         "watch": "rollup -c -w",
         "build:storybook": "build-storybook",
-        "build": "yarn lint && rollup -c",
+        "build": "rollup -c",
         "lint": "eslint src/**/*.tsx",
         "test": "yarn run dev & cypress open",
         "test:ci": "yarn run dev & cypress run --headless",
