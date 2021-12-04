@@ -60,3 +60,8 @@ then
 ## TODO
 
 - Adobe React ARIA
+
+
+## References
+- [Creating a React component library](https://prateeksurana.me/blog/react-component-library-using-storybook-6/)
+- [ESLint](https://javascript.plainenglish.io/setting-eslint-and-prettier-on-a-react-typescript-project-2021-22993565edf9)

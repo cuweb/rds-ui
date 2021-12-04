@@ -5,9 +5,7 @@ describe(title, () => {
     variations.map((variation) => {
         it(`Should render the ${variation.type} U-Block`, () => {
             cy.visit(
-                `${Cypress.env('baseUrl')}/iframe.html?id=components-u-block--${
-                    variation.type
-                }`
+                `${Cypress.env('baseUrl')}/iframe.html?id=components-u-block--${variation.type}`
             )
             cy.get(`.u-block`).should('exist')
             cy.get(`.u-block--${variation.color}`).should('exist')
@@ -15,11 +13,7 @@ describe(title, () => {
     })
 
     it(`Should not render the U-Block heading`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-u-block--no-heading`
-        )
+        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=components-u-block--no-heading`)
         cy.get(`.u-block`).should('exist')
         cy.get(`.c-heading`).should('not.exist')
     })
