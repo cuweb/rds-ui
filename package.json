@@ -11,6 +11,7 @@
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
     "scripts": {
+        "start": "yarn dev",
         "dev": "rollup -c -w & start-storybook -p 6006",
         "watch": "rollup -c -w",
         "build:storybook": "build-storybook",
