@@ -1,6 +1,6 @@
 {
     "name": "@marceloglacial/rds-beta",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "author": "Carleton University",
     "license": "MIT",
     "repository": {
@@ -68,5 +68,7 @@
         "react": "^16.13.0",
         "react-dom": "^16.13.0"
     },
-    "dependencies": {}
+    "files": [
+        "dist"
+    ]
 }
