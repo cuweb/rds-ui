@@ -21,8 +21,7 @@
         "test": "yarn dev & cypress open",
         "test:ci": "yarn dev & cypress run --headless",
         "test:firefox": "yarn dev & cypress run --headless --browser firefox",
-        "test:edge": "yarn dev & cypress run --headless --browser edge",
-        "publish": "yarn publish --acces public"
+        "test:edge": "yarn dev & cypress run --headless --browser edge"
     },
     "np": {
         "publish": false,
