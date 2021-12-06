@@ -5,6 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:storybook/recommended",
         "airbnb",
         "plugin:@typescript-eslint/recommended",
         "prettier",
