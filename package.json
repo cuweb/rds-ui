@@ -1,6 +1,6 @@
 {
     "name": "@marceloglacial/rds-beta",
-    "version": "0.0.9",
+    "version": "0.0.12",
     "author": "Carleton University",
     "license": "MIT",
     "repository": {
@@ -21,7 +21,8 @@
         "test": "yarn dev & cypress open",
         "test:ci": "yarn dev & cypress run --headless",
         "test:firefox": "yarn dev & cypress run --headless --browser firefox",
-        "test:edge": "yarn dev & cypress run --headless --browser edge"
+        "test:edge": "yarn dev & cypress run --headless --browser edge",
+        "publish": "yarn publish --acces public"
     },
     "np": {
         "publish": false,
@@ -66,6 +67,10 @@
         "typescript": "^4.1.2"
     },
     "dependencies": {
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
+    },
+    "peerDependencies": {
         "react": "^17.0.1",
         "react-dom": "^17.0.1"
     },
