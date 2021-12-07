@@ -1,9 +1,10 @@
 import React from 'react'
+import Ublock from '../../../components/Ublock/Ublock'
 import Logo from '../../../components/Logo/Logo'
 
 const FooterBrand: React.FC = (): JSX.Element => {
     return (
-        <div className='u-block u-block--black u-block--waves u-block--border-top'>
+        <Ublock color='black' waves>
             <div className='b-footerbrand'>
                 <a href='https://carleton.ca'>
                     <Logo />
@@ -29,7 +30,7 @@ const FooterBrand: React.FC = (): JSX.Element => {
                     </ul>
                 </nav>
             </div>
-        </div>
+        </Ublock>
     )
 }
 export default FooterBrand
