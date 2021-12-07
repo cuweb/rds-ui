@@ -28,7 +28,7 @@ const TextImage: React.FC<TextImageProps> = ({
     subheading,
     centered,
     groupBlock,
-}) => {
+}): JSX.Element => {
     const directionClassname = direction === 'left' ? `b-textimg--imgtext` : ''
     const centeredClasaname = centered === true ? `c-heading--center` : ''
 
