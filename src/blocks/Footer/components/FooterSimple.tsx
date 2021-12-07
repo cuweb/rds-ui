@@ -1,8 +1,9 @@
 import React from 'react'
+import Ublock from '../../../components/Ublock/Ublock'
 
 const FooterSimple: React.FC = (): JSX.Element => {
     return (
-        <div className='u-block u-block--black'>
+        <Ublock color='black'>
             <div className='b-footersimple'>
                 <div itemScope itemType='http://schema.org/Organization'>
                     <address className='h-card'>
@@ -176,7 +177,7 @@ const FooterSimple: React.FC = (): JSX.Element => {
                     </address>
                 </div>
             </div>
-        </div>
+        </Ublock>
     )
 }
 export default FooterSimple
