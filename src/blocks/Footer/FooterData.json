@@ -1,0 +1,21 @@
+{
+    "title": "Footer",
+    "classname": ".b-footerbrand",
+    "variations": [
+        {
+            "type": "brand",
+            "classname": ".b-footerbrand",
+            "title": "Footer Brand"
+        },
+        {
+            "type": "simple",
+            "classname": ".b-footersimple",
+            "title": "Footer Simple"
+        },
+        {
+            "type": "sitemap",
+            "classname": ".b-footersitemap",
+            "title": "Footer Sitemap"
+        }
+    ]
+}
