@@ -70,7 +70,7 @@ const TextImage: React.FC<TextImageProps> = ({
                         <div className={`b-textimg ${directionClassname}`}>
                             <div className='textimg__wrapper'>
                                 <section>
-                                    {title && (
+                                    {groupTitle && (
                                         <h2
                                             dangerouslySetInnerHTML={{
                                                 __html: groupTitle,
