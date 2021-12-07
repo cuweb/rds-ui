@@ -30,3 +30,90 @@ const leftProps = {
 }
 
 export const ImageToTheLeft = (args) => <TextImage {...leftProps} />
+
+const greyBackgroundProps = {
+    direction: 'right',
+    title: 'Image to the Right',
+    image: {
+        src: 'https://via.placeholder.com/640x480',
+        alt: 'image',
+    },
+    color: 'grey',
+    content:
+        'It is important to note the text is not intended to wrap around the image. In general, the amount of text used should be the same height as the image on large screens. This will, of course, differ if you use a large or small block size.',
+}
+export const GreyBackground = (args) => <TextImage {...greyBackgroundProps} />
+
+const defaultHeadingProps = {
+    direction: 'left',
+    title: 'Heading requirements',
+    image: {
+        src: 'https://via.placeholder.com/640x480',
+        alt: 'image',
+    },
+    content:
+        'The b-textimg--imgtext modifier is used to move the image to the left. This modifier looks a bit odd at first. But, if the default is text on the left, image on the right - textimg. Then the reverse is -imgtex...image first, then text.',
+    heading: 'Supports default block headings',
+    subheading: 'In addition, it supports subheadings.',
+    color: 'grey'
+
+}
+
+export const DefaultBlockHeadings = (args) => <TextImage {...defaultHeadingProps} />
+
+const centeredHeadingProps = {
+    direction: 'left',
+    title: 'Heading requirements',
+    image: {
+        src: 'https://via.placeholder.com/640x480',
+        alt: 'image',
+    },
+    content:
+        'The b-textimg--imgtext modifier is used to move the image to the left. This modifier looks a bit odd at first. But, if the default is text on the left, image on the right - textimg. Then the reverse is -imgtex...image first, then text.',
+    heading: 'Supports centered block headings',
+    subheading: 'In addition, it supports subheadings.',
+    color: 'grey',
+    centered: true
+
+}
+
+export const CenteredBlockHeadings = (args) => <TextImage {...centeredHeadingProps} />
+
+const largeWidthBlockProps = {
+
+    direction: 'right',
+    title: 'Supports the large width block setting',
+    image: {
+        src: 'https://via.placeholder.com/640x480',
+        alt: 'image',
+    },
+    color: 'white',
+    content:
+        'It is important to note the text is not intended to wrap around the image. In general, the amount of text used should be the same height as the image on large screens. This will, of course, differ if you use a large or small block size.',
+
+
+}
+
+export const LargeWidthBlock = (args) => <TextImage {...largeWidthBlockProps} />
+
+const groupingBlocksProps = {
+    direction: 'right',
+    image: {
+        src: 'https://via.placeholder.com/640x480',
+        alt: '',
+    },
+    content:
+        'At least one heading is required when using the Text-Image block. But if a block heading is used, you do not need to add a heading within the block...as per this example.',
+    subcontent: 'Multiple paragraphs can be used in the text are of this block.',
+    heading: 'Supports centered block headings',
+    subheading: 'In addition, it supports subheadings.',
+    color: 'grey',
+    centered: true,
+    groupBlock: true,
+    groupTitle: 'Example header',
+    groupContent: 'It is important to note the text is not intended to wrap around the image. In general, the amount of text used should be the same height as the image on large screens. This will, of course, differ if you use a large or small block size.',
+    
+
+}
+
+export const GroupingBlocks = (args) => <TextImage {...groupingBlocksProps} />
