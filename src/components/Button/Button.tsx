@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../Icon/Icon'
+import Icon from '@src/components/Icon/Icon'
 
 interface ButtonProps {
     ghost?: string

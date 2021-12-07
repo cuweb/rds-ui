@@ -1,5 +1,5 @@
 import React from 'react'
-import getVariation from '../../functions/getVariation'
+import getVariation from '@src/functions/getVariation'
 import Banner from './Banner'
 import data from './BannerData.json'
 

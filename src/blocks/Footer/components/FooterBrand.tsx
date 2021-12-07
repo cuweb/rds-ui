@@ -1,6 +1,6 @@
 import React from 'react'
-import Ublock from '../../../components/Ublock/Ublock'
-import Logo from '../../../components/Logo/Logo'
+import Ublock from '@src/components/Ublock/Ublock'
+import Logo from '@src/components/Logo/Logo'
 
 const FooterBrand: React.FC = (): JSX.Element => {
     return (

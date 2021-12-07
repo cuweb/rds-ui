@@ -1,5 +1,5 @@
 import React from 'react'
-import getVariation from '../../functions/getVariation'
+import getVariation from '@src/functions/getVariation'
 import Footer from './Footer'
 import data from './FooterData.json'
 
