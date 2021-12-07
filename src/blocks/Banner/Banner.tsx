@@ -1,11 +1,12 @@
-import Ublock from '@src/components/Ublock/Ublock'
+import React from 'react'
+import Ublock from '../../components/Ublock/Ublock'
 import BannerBreadcrumbs from './components/BannerBreadcumbs'
 
 interface BannerProps {
     title: string
-    breadcrumbs?: { link: string; title: string }[]
-    color?: string
-    children: any
+    breadcrumbs: { link: string; title: string }[]
+    color: 'grey' | 'white' | 'black'
+    children: React.ReactNode
 }
 
 const Banner: React.FC<BannerProps> = ({

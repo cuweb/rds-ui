@@ -1,4 +1,5 @@
-import Icon from '@src/components/Icon/Icon'
+import React from 'react'
+import Icon from '../Icon/Icon'
 
 export interface AlertProps {
     type?: 'info' | 'error' | 'success' | 'warning'
@@ -7,12 +8,7 @@ export interface AlertProps {
     handleClose?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
 }
 
-const Alert: React.FC<AlertProps> = ({
-    type,
-    title,
-    content,
-    handleClose,
-}): JSX.Element => {
+const Alert: React.FC<AlertProps> = ({ type, title, content, handleClose }): JSX.Element => {
     const renderType = type || 'error'
 
     const icon = {
@@ -33,12 +29,15 @@ const Alert: React.FC<AlertProps> = ({
             {content && <p dangerouslySetInnerHTML={{ __html: content }} />}
             {handleClose && (
                 <button aria-label='Close alert' type='button' data-close>
-                    <span className='u-icon' aria-hidden='true'>
+                    <span
+                        className='u-icon'
+                        aria-hidden='true'
+                        onClick={(e: never) => handleClose(e)}
+                    >
                         <Icon
                             icon='x'
                             size={12}
                             className={`c-alert__button c-alert__button--${renderType}`}
-                            onClick={(e: any) => handleClose(e)}
                         />
                     </span>
                 </button>

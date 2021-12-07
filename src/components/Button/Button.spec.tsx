@@ -27,11 +27,7 @@ describe('Button', () => {
     types.map((type) => {
         it(`Should render the ${type.nane} button`, () => {
             cy.clearCookies()
-            cy.visit(
-                `${Cypress.env('baseUrl')}/iframe.html?id=components-button${
-                    type.tag
-                }`
-            )
+            cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=components-button${type.tag}`)
             cy.get(`.c-buttoncta${type.tag}`).should('exist')
         })
     })

@@ -1,5 +1,4 @@
-// import { useButton } from '@react-aria/button'
-import React, { useRef } from 'react'
+import React from 'react'
 import Icon from '../Icon/Icon'
 
 interface ButtonProps {
@@ -25,13 +24,8 @@ const Button: React.FC<ButtonProps> = ({
     const isFull = full ? 'c-buttoncta--full' : ''
     const hasIcon = icon ? 'u-icon' : ''
 
-    const ref = useRef()
-    // const { linkButtons } = useButton(props, ref)
-
     return (
         <a
-            // {...linkButtons}
-            ref={ref}
             className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost}`}
             target={`_${target}`}
             href={link}

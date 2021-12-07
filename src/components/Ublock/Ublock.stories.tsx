@@ -1,4 +1,5 @@
-import getVariation from '../../../functions/getVariation'
+import React from 'react'
+import getVariation from '../../functions/getVariation'
 import Ublock from './Ublock'
 import data from './UblockData.json'
 
@@ -11,10 +12,7 @@ export default {
 
 const Template = (args) => (
     <Ublock {...args}>
-        <p>
-            This is Simple block, an example of a basic block for learning
-            purposes.
-        </p>
+        <p>This is Simple block, an example of a basic block for learning purposes.</p>
     </Ublock>
 )
 

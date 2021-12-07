@@ -15,35 +15,35 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 
 ## Installation 
 
-`yarn instal` or `npm install`
+`yarn instal`
 
 ## Development
 
 ### Start 
 
-`yarn dev` or `npm run dev`
+`yarn dev`
 
 ### Build 
 
-`yarn build` or `npm run build`
+`yarn build`
 
 ### Test 
 
-`yarn test` or `npm run test`
+`yarn test`
 
 ### CI Test
 
-`yarn test:ci` or `npm run test:ci`
+`yarn test:ci`
 
 ## Docs 
  
 ### Development
 
-`yarn docs` or `npm run docs`
+`yarn docs`
 
 ### Build
 
-`yarn docs:build` or `npm run docs:build`
+`yarn docs:build`
 
 
 ## Troubleshoting 
@@ -60,3 +60,8 @@ then
 ## TODO
 
 - Adobe React ARIA
+
+
+## References
+- [Creating a React component library](https://prateeksurana.me/blog/react-component-library-using-storybook-6/)
+- [ESLint](https://javascript.plainenglish.io/setting-eslint-and-prettier-on-a-react-typescript-project-2021-22993565edf9)

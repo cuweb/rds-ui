@@ -11,18 +11,12 @@ describe('Alert', () => {
     types.map((type) => {
         it(`Should render the ${type} alert`, () => {
             cy.clearCookies()
-            cy.visit(
-                `${Cypress.env(
-                    'baseUrl'
-                )}/iframe.html?id=components-alert--${type}`
-            )
+            cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=components-alert--${type}`)
             cy.get(`.c-alert--${type}`).should('exist')
             cy.get(`.c-alert--${type} ${title}`).should('exist')
             cy.get(`.c-alert--${type} ${icon}`).should('exist')
 
-            type === 'error'
-                ? cy.get(button).should('exist')
-                : cy.get(button).should('not.exist')
+            type === 'error' ? cy.get(button).should('exist') : cy.get(button).should('not.exist')
         })
     })
 })

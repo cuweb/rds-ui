@@ -7,11 +7,7 @@ describe('Overlay', () => {
 
     it(`Should NOT render on load`, () => {
         cy.clearCookies()
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=main-concepts-layouts-overlay--default`
-        )
+        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=main-concepts-layouts-overlay--default`)
         cy.get(overlayContainer).should('not.exist')
     })
 
