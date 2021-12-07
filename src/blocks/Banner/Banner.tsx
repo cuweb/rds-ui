@@ -19,7 +19,7 @@ const Banner: React.FC<BannerProps> = ({
         <div className='b-banner'>
             <section>
                 {breadcrumbs && <BannerBreadcrumbs links={breadcrumbs} />}
-                {title && <h1 dangerouslySetInnerHTML={{ __html: title }} />}
+                <h1 dangerouslySetInnerHTML={{ __html: title }} />
                 {children}
             </section>
         </div>
