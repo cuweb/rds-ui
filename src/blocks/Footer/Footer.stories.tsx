@@ -15,20 +15,17 @@ const Template: React.FC = (args: any) => <Footer {...args} />
 //  Brand Footer
 export const Brand = Template.bind({})
 Brand.args = {
-    title: getVariation('brand', variations).title,
     type: getVariation('brand', variations).type,
 }
 
 //  Simple Footer
 export const Simple = Template.bind({})
 Simple.args = {
-    title: getVariation('simple', variations).title,
     type: getVariation('simple', variations).type,
 }
 
 //  Sitemap Footer
 export const Sitemap = Template.bind({})
 Sitemap.args = {
-    title: getVariation('sitemap', variations).title,
     type: getVariation('sitemap', variations).type,
 }
