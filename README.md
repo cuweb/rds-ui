@@ -57,10 +57,6 @@ then
 `kill -9 <PID>`
 
 
-## TODO
-
-- Adobe React ARIA
-
 
 ## References
 - [Creating a React component library](https://prateeksurana.me/blog/react-component-library-using-storybook-6/)
