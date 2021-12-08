@@ -54,6 +54,20 @@ One you have completed the initial setup above, moving forward to start the deve
 nvm use && yarn dev
 ```
 
+## Test
+
+### Start component and e2e tests
+
+```bash 
+yarn test
+```
+
+### Run headless / ci tests
+
+```bash 
+yarn run test:ci
+```
+
 ## Features
 
 -   [Storybook](https://storybook.js.org)
