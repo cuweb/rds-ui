@@ -22,12 +22,13 @@ You can define the directory name as well:
 
 ```bash
 git clone git@github.com:cuweb/rds-beta.git --branch develop DIRECTORY_NAME
-
-# Change directory 
-cd DIRECTORY_NAME 
 ```
 
-`cd DIRECTORY_NAME`
+Change directory:
+
+```bash 
+cd DIRECTORY_NAME 
+```
 
 ### Check your nvm version
 ```bash
@@ -63,7 +64,10 @@ nvm use && yarn dev
 
 ## CLI Commands
 
-`yarn run --non-interactive` lists all posible CLI commands
+### Lists all posible CLI commands
+```bash
+yarn run --non-interactive
+```
 
 ## Troubleshoting
 
