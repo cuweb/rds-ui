@@ -4,7 +4,7 @@ import Ublock from '@src/components/Ublock/Ublock'
 export interface TextImageProps {
     direction?: string
     title?: string
-    image: React.ReactNode
+    image: HTMLImageElement
     content: string
     color?: string
     heading?: string
