@@ -43,6 +43,7 @@
         "@types/react": "^17.0.0",
         "@typescript-eslint/eslint-plugin": "^5.5.0",
         "@typescript-eslint/parser": "^5.5.0",
+        "@whitespace/storybook-addon-html": "^5.0.0",
         "autoprefixer": "^10.4.0",
         "babel-loader": "^8.2.2",
         "cypress": "^9.1.1",
