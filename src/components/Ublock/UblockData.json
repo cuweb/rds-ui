@@ -1,0 +1,21 @@
+{
+    "title": "U-Block",
+    "classname": ".u-block",
+    "variations": [
+        {
+            "type": "base",
+            "heading": "Base U-block",
+            "color": "white"
+        },
+        {
+            "type": "grey",
+            "heading": "Grey Background",
+            "color": "grey"
+        },
+        {
+            "type": "black",
+            "heading": "Black Background",
+            "color": "black"
+        }
+    ]
+}
