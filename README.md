@@ -18,18 +18,6 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 git clone git@github.com:cuweb/rds-beta.git
 ```
 
-You can define the directory name as well: 
-
-```bash
-git clone git@github.com:cuweb/rds-beta.git --branch develop DIRECTORY_NAME
-```
-
-Change directory:
-
-```bash 
-cd DIRECTORY_NAME 
-```
-
 ### Check your nvm version
 ```bash
 nvm i
@@ -101,3 +89,4 @@ kill -9 <PID>
 
 -   [Creating a React component library](https://prateeksurana.me/blog/react-component-library-using-storybook-6/)
 -   [ESLint](https://javascript.plainenglish.io/setting-eslint-and-prettier-on-a-react-typescript-project-2021-22993565edf9)
+-   [Publish to npm using GitHub Actions](https://sergiodxa.com/articles/github-actions-npm-publish/)
