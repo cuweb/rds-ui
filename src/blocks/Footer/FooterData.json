@@ -1,0 +1,32 @@
+{
+    "title": "Footer",
+    "classname": ".b-footerbrand",
+    "variations": [
+        {
+            "type": "brand",
+            "classname": ".b-footerbrand",
+            "title": "Footer Brand"
+        },
+        {
+            "type": "simple",
+            "classname": ".b-footersimple",
+            "title": "Footer Simple",
+            "data": {
+                "name": "Department Name",
+                "address": "123 Dunton Tower",
+                "map": "http://carleton.ca/map",
+                "contact": "http://carleton.ca/contact",
+                "days": "Monday-Friday",
+                "hours": {
+                    "start": "8:30 am",
+                    "end": "4:30 pm"
+                }
+            }
+        },
+        {
+            "type": "sitemap",
+            "classname": ".b-footersitemap",
+            "title": "Footer Sitemap"
+        }
+    ]
+}

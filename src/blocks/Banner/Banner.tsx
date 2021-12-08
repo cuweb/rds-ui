@@ -1,5 +1,5 @@
 import React from 'react'
-import Ublock from '../../components/Ublock/Ublock'
+import Ublock from '@src/components/Ublock/Ublock'
 import BannerBreadcrumbs from './components/BannerBreadcumbs'
 
 interface BannerProps {
@@ -19,7 +19,7 @@ const Banner: React.FC<BannerProps> = ({
         <div className='b-banner'>
             <section>
                 {breadcrumbs && <BannerBreadcrumbs links={breadcrumbs} />}
-                {title && <h1 dangerouslySetInnerHTML={{ __html: title }} />}
+                <h1 dangerouslySetInnerHTML={{ __html: title }} />
                 {children}
             </section>
         </div>
