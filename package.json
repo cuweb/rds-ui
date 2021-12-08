@@ -11,8 +11,8 @@
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "start": "yarn build && start-storybook -p 6006",
-        "dev": "yarn watch & start-storybook -p 6006",
+        "start": "yarn build && start-storybook -p 6006 --no-manager-cache",
+        "dev": "rollup -c && yarn watch & start-storybook -p 6006 --no-manager-cache",
         "watch": "rollup -c -w",
         "build": "yarn lint && rollup -c",
         "build:docs": "yarn build && build-storybook -o ./docs/storybook",
