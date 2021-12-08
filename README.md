@@ -15,35 +15,59 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 
 ## Installation 
 
-`yarn instal`
+```bash
+yarn instal
+```
 
 ## Development
 
 ### Start 
 
-`yarn dev`
+```bash
+yarn dev
+```
 
 ### Build 
 
-`yarn build`
+```bash
+yarn build
+```
 
 ### Test 
 
-`yarn test`
+```bash
+yarn test
+```
 
 ### CI Test
 
-`yarn test:ci`
+
+```bash
+yarn test:ci
+```
+
 
 ## Docs 
  
 ### Development
 
-`yarn docs`
+```bash
+yarn docs
+```
+
 
 ### Build
 
-`yarn docs:build`
+```bash
+yarn docs:build
+```
+
+
+## Publish 
+
+```bash
+yarn publish --access public
+```
 
 
 ## Troubleshoting 
@@ -56,10 +80,6 @@ then
 
 `kill -9 <PID>`
 
-
-## TODO
-
-- Adobe React ARIA
 
 
 ## References
