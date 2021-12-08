@@ -14,9 +14,9 @@ const Template: React.FC = (args: any) => <TextImage {...args} />
 const GroupTemplate: React.FC = (args: any) => {
     return (
         <>
-            <TextImage {...(args[0])} />
-            <TextImage {...(args[1])} />
-            <TextImage {...(args[1])} />
+            <TextImage {...args.primary} />
+            <TextImage {...args.secondary} />
+            <TextImage {...args.secondary} />
         </>
     )
 }
@@ -86,15 +86,15 @@ LargeWidthBlocks.args = {
 }
 
 export const GroupingBlocks = GroupTemplate.bind({})
-GroupingBlocks.args = [
-    {   direction: centeredHeadings.direction,
+GroupingBlocks.args = {
+    primary:{   direction: centeredHeadings.direction,
         title: centeredHeadings.title,
         image: centeredHeadings.image,
         content: centeredHeadings.content,
         heading: centeredHeadings.heading,
         color: centeredHeadings.color,
     },
-    {
+    secondary:{
         direction: greyBackground.direction,
         title: greyBackground.title,
         image: greyBackground.image,
@@ -102,6 +102,6 @@ GroupingBlocks.args = [
         color: greyBackground.color,
 
     }
-]
+}
 
 
