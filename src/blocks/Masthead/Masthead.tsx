@@ -1,9 +1,10 @@
+import Ublock from '@src/components/Ublock/Ublock'
 import Icon from '@src/components/Icon/Icon'
 import React from 'react'
 
 const Masthead: React.FC = (): JSX.Element => {
     return (
-        <div id='id-masthead' className='u-block u-block--full'>
+        <Ublock id='id-masthead' full>
             <div className='b-masthead'>
                 <h1>
                     <a href='https://ravendesignsystem.github.io/rds/'>
@@ -12,7 +13,7 @@ const Masthead: React.FC = (): JSX.Element => {
                     </a>
                 </h1>
             </div>
-        </div>
+        </Ublock>
     )
 }
 export default Masthead
