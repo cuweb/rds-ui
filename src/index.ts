@@ -7,7 +7,8 @@ import Footer from './blocks/Footer/Footer'
 import Icon from './components/Icon/Icon'
 import Layout from './layouts/Layout/Layout'
 import Main from './layouts/Layout/Main'
+import Masthead from './blocks/Masthead/Masthead'
 import Ublock from './components/Ublock/Ublock'
 import Sidebar from './layouts/Layout/Sidebar'
 
-export { Alert, Aside, Banner, Button, Footer, Icon, Layout, Main, Ublock, Sidebar }
+export { Alert, Aside, Banner, Button, Footer, Icon, Layout, Main, Masthead, Ublock, Sidebar }
