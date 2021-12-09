@@ -27,9 +27,6 @@
         "publish": false,
         "tests": false
     },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    },
     "keywords": [
         "stroybook",
         "react",

@@ -89,4 +89,4 @@ kill -9 <PID>
 
 -   [Creating a React component library](https://prateeksurana.me/blog/react-component-library-using-storybook-6/)
 -   [ESLint](https://javascript.plainenglish.io/setting-eslint-and-prettier-on-a-react-typescript-project-2021-22993565edf9)
--   [Publish to npm using GitHub Actions](https://sergiodxa.com/articles/github-actions-npm-publish/)
+-   [Publishing Node.js packages](https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages)
