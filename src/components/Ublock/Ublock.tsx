@@ -1,14 +1,16 @@
 import React from 'react'
 
 interface UblockProps {
+    id?: string
     children: React.ReactNode
     heading?: string
-    color: 'grey' | 'white' | 'black'
+    color?: 'grey' | 'white' | 'black'
     full?: boolean
     waves?: boolean
 }
 
 const Ublock: React.FC<UblockProps> = ({
+    id = '',
     heading,
     children,
     color = 'white',
@@ -19,7 +21,7 @@ const Ublock: React.FC<UblockProps> = ({
     const wavesClassname = waves ? `u-block--waves u-block--border-top` : ''
 
     return (
-        <div className={`u-block u-block--${color} ${wavesClassname} ${width}`}>
+        <div id={id} className={`u-block u-block--${color} ${wavesClassname} ${width}`}>
             {heading && <h2 className='c-heading' dangerouslySetInnerHTML={{ __html: heading }} />}
             {children}
         </div>
