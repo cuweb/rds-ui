@@ -8,4 +8,7 @@ export default {
 
 const Template: React.FC = (args: any) => <Masthead {...args} />
 
-export const Default = Template.bind({})
+export const Base = Template.bind({})
+Base.args = {
+    title: 'Ravens Design System',
+}
