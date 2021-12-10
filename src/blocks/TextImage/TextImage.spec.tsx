@@ -9,6 +9,7 @@ describe('TextImage', () => {
                 )}/iframe.html?id=blocks-textimage--${type}`
             )
             cy.get(`.b-textimg`).should('exist')
+            cy.get(`.textimg__wrapper`).should('exist')
             cy.get(`.textimg__text`).should('exist')
         })
     })
