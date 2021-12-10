@@ -24,7 +24,7 @@ const TextImage: React.FC<TextImageProps> = ({
     centered,
 }): JSX.Element => {
     const directionClassname = direction === 'left' ? `b-textimg--imgtext` : ''
-    const centeredClasaname = centered === true ? `c-heading--center` : ''
+    const centeredClasaname = centered ? `c-heading--center` : ''
 
     return (
         <Ublock color={color}>
