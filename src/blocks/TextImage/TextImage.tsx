@@ -6,6 +6,7 @@ export interface TextImageProps {
     title?: string
     image: HTMLImageElement
     content: string
+    subcontent: string
     color?: string
     heading?: string
     subheading?: string
@@ -16,6 +17,7 @@ const TextImage: React.FC<TextImageProps> = ({
     title,
     image,
     content,
+    subcontent,
     color,
     heading,
     subheading,
@@ -43,6 +45,7 @@ const TextImage: React.FC<TextImageProps> = ({
                                     __html: content,
                                 }}
                             />
+                            {subcontent && <p>{subcontent}</p>}
                         </div>
                     </section>
                 </div>

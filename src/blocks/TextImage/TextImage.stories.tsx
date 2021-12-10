@@ -73,6 +73,9 @@ CenteredHeadings.args = {
     image: centeredHeadings.image,
     content: centeredHeadings.content,
     heading: centeredHeadings.heading,
+    subheading: centeredHeadings.subheading,
+    color: centeredHeadings.color,
+    centered: centeredHeadings.centered
 }
 
 export const LargeWidthBlocks = Template.bind({})
@@ -83,6 +86,7 @@ LargeWidthBlocks.args = {
     image: largeWidthBlocks.image,
     content: largeWidthBlocks.content,
     color: largeWidthBlocks.color,
+    subcontent: largeWidthBlocks.subcontent,
 }
 
 export const GroupingBlocks = GroupTemplate.bind({})
