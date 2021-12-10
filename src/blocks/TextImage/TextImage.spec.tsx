@@ -1,5 +1,5 @@
 describe('TextImage', () => {
-    const types = ['image-to-the-right']
+    const types = ['image-to-the-right', 'image-to-the-left', 'grey-background', 'default-headings', 'centered-headings', 'large-width-blocks']
     const title = 'h2'
 
     types.map((type) => {
