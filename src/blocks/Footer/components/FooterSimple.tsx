@@ -1,7 +1,31 @@
 import React from 'react'
 import Ublock from '@src/components/Ublock/Ublock'
 
-const FooterSimple: React.FC = (): JSX.Element => {
+interface FooterSimpleProps {
+    name: string
+    address: string
+    email?: string
+    map?: string
+    contact?: string
+    days?: string
+    start?: string
+    end?: string
+    phone?: string
+    fax?: string
+}
+
+const FooterSimple: React.FC<FooterSimpleProps> = ({
+    name,
+    address,
+    email,
+    map,
+    contact,
+    days,
+    start,
+    end,
+    phone,
+    fax,
+}): JSX.Element => {
     return (
         <Ublock color='black'>
             <div className='b-footersimple'>
@@ -9,7 +33,7 @@ const FooterSimple: React.FC = (): JSX.Element => {
                     <address className='h-card'>
                         <p className='p-adr'>
                             <a className='p-name u-url' href='https://carleton.ca'>
-                                Department Name
+                                {name}
                             </a>
                             <br />
                             <a className='p-name u-url' itemProp='name' href='https://carleton.ca'>
@@ -17,7 +41,7 @@ const FooterSimple: React.FC = (): JSX.Element => {
                             </a>
                             <br />
                             <span className='p-extended-address' itemProp='name'>
-                                123 <a href='https://carleton.ca'>Dunton Tower</a>
+                                <a href='https://carleton.ca/campus/map/'>{address}</a>
                             </span>
                             <br />
                             <span className='p-street-address' itemProp='streetAddress'>
@@ -36,34 +60,54 @@ const FooterSimple: React.FC = (): JSX.Element => {
                             <br />
                             <span className='p-country-name'>Canada</span>
                             <br />
-                            <span>
-                                <a href='http://carleton.ca'>View Map</a>
-                            </span>
+                            {map && (
+                                <span className='u-map'>
+                                    <a href={map}>View Map</a>
+                                </span>
+                            )}
                         </p>
                         <p>
-                            <span className='u-email' itemProp='email'>
-                                <a href='mailto:history@carleton.ca'>web@carleton.ca</a>
-                            </span>
-                            <br />
-                            <span className='p-tel' itemProp='telephone'>
-                                Phone: <a href='tel:+1-613-520-2600'>613-520-2600</a>
-                            </span>
-                            <br />
-                            <span className='p-tel-fax' itemProp='faxNumber'>
-                                Fax: 613-520-2600
-                            </span>
-                            <br />
-                            <span itemProp='url'>
-                                <a href='https://carleton.ca/contact/'>Contact page</a>
-                            </span>
+                            {email && (
+                                <>
+                                    <span className='u-email' itemProp='email'>
+                                        <a href={`mailto:${email}`}>{email}</a>
+                                    </span>
+                                    <br />
+                                </>
+                            )}
+                            {phone && (
+                                <>
+                                    <span className='p-tel' itemProp='telephone'>
+                                        Phone: <a href={`tel:${phone}`}>{phone}</a>
+                                    </span>
+                                    <br />
+                                </>
+                            )}
+                            {fax && (
+                                <>
+                                    <span className='p-tel-fax' itemProp='faxNumber'>
+                                        Fax: {fax}
+                                    </span>
+                                    <br />
+                                </>
+                            )}
+                            {contact && (
+                                <span className='p-contact' itemProp='url'>
+                                    <a href={contact}>Contact page</a>
+                                </span>
+                            )}
                             <br />
                         </p>
-                        <p itemProp='hoursAvailable'>
+                        <p className='p-hours' itemProp='hoursAvailable'>
                             <strong>Hours</strong>
                             <br />
-                            <span>Monday-Friday,</span>
-                            <time dateTime='08:30'>8:30 am</time>-
-                            <time dateTime='16:30'>4:30 pm</time>
+                            {days && <span>{days}</span>}
+                            {start && <time dateTime={start}>, {start}</time>}{' '}
+                            {end && (
+                                <>
+                                    - <time dateTime={end}>{end}</time>
+                                </>
+                            )}
                         </p>
                         <ul className='footersimple__social'>
                             <li>
