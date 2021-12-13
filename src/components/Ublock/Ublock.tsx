@@ -21,8 +21,16 @@ const Ublock: React.FC<UblockProps> = ({
     const wavesClassname = waves ? `u-block--waves u-block--border-top` : ''
 
     return (
-        <div id={id} className={`u-block u-block--${color} ${wavesClassname} ${width}`}>
-            {heading && <h2 className='c-heading' dangerouslySetInnerHTML={{ __html: heading }} />}
+        <div
+            id={id}
+            className={`u-block u-block--${color} ${wavesClassname} ${width}`}
+        >
+            {heading && (
+                <h2
+                    className='c-heading'
+                    dangerouslySetInnerHTML={{ __html: heading }}
+                />
+            )}
             {children}
         </div>
     )

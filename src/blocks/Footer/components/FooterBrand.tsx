@@ -12,10 +12,14 @@ const FooterBrand: React.FC = (): JSX.Element => {
                 <nav>
                     <ul>
                         <li>
-                            <a href='https://carleton.ca/privacy/policies/'>Privacy</a>
+                            <a href='https://carleton.ca/privacy/policies/'>
+                                Privacy
+                            </a>
                         </li>
                         <li>
-                            <a href='https://carleton.ca/accessibility/'>Accessibility</a>
+                            <a href='https://carleton.ca/accessibility/'>
+                                Accessibility
+                            </a>
                         </li>
                         <li>
                             <a href='https://library.carleton.ca/content/copyright-carleton'>
@@ -23,7 +27,10 @@ const FooterBrand: React.FC = (): JSX.Element => {
                             </a>
                         </li>
                         <li>
-                            <a className='u-v' href='https://ravendesignsystem.github.io/rds/'>
+                            <a
+                                className='u-v'
+                                href='https://ravendesignsystem.github.io/rds/'
+                            >
                                 RDSv
                             </a>
                         </li>

@@ -8,7 +8,12 @@ export interface AlertProps {
     handleClose?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
 }
 
-const Alert: React.FC<AlertProps> = ({ type, title, content, handleClose }): JSX.Element => {
+const Alert: React.FC<AlertProps> = ({
+    type,
+    title,
+    content,
+    handleClose,
+}): JSX.Element => {
     const renderType = type || 'error'
 
     const icon = {

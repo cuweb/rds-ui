@@ -9,8 +9,16 @@ const Overlay = (props: never) => {
 
     if (isHidden) return <div />
     return (
-        <dialog className='l-overlay-modal' aria-modal='true' aria-hidden={isHidden}>
-            <div className={`${typeClassName} ${visuallyClass} ${customClassName}`}>{children}</div>
+        <dialog
+            className='l-overlay-modal'
+            aria-modal='true'
+            aria-hidden={isHidden}
+        >
+            <div
+                className={`${typeClassName} ${visuallyClass} ${customClassName}`}
+            >
+                {children}
+            </div>
         </dialog>
     )
 }

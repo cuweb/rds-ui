@@ -8,7 +8,12 @@ interface IconProps {
     className?: string
 }
 
-const Icon: React.FC<IconProps> = ({ icon, size, svg, className = '' }): JSX.Element => {
+const Icon: React.FC<IconProps> = ({
+    icon,
+    size,
+    svg,
+    className = '',
+}): JSX.Element => {
     if (svg) return svg
 
     return (

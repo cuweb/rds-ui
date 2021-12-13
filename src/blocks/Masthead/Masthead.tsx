@@ -7,7 +7,10 @@ interface MastheadProps {
     children: React.ReactNode
 }
 
-const Masthead: React.FC<MastheadProps> = ({ title, children }): JSX.Element => {
+const Masthead: React.FC<MastheadProps> = ({
+    title,
+    children,
+}): JSX.Element => {
     return (
         <Ublock id='id-masthead' full>
             <div className='b-masthead'>

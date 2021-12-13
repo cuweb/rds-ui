@@ -32,29 +32,50 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                 <div itemScope itemType='http://schema.org/Organization'>
                     <address className='h-card'>
                         <p className='p-adr'>
-                            <a className='p-name u-url' href='https://carleton.ca'>
+                            <a
+                                className='p-name u-url'
+                                href='https://carleton.ca'
+                            >
                                 {name}
                             </a>
                             <br />
-                            <a className='p-name u-url' itemProp='name' href='https://carleton.ca'>
+                            <a
+                                className='p-name u-url'
+                                itemProp='name'
+                                href='https://carleton.ca'
+                            >
                                 Carleton University
                             </a>
                             <br />
-                            <span className='p-extended-address' itemProp='name'>
-                                <a href='https://carleton.ca/campus/map/'>{address}</a>
+                            <span
+                                className='p-extended-address'
+                                itemProp='name'
+                            >
+                                <a href='https://carleton.ca/campus/map/'>
+                                    {address}
+                                </a>
                             </span>
                             <br />
-                            <span className='p-street-address' itemProp='streetAddress'>
+                            <span
+                                className='p-street-address'
+                                itemProp='streetAddress'
+                            >
                                 1125 Colonel By Drive
                             </span>
                             <br />
-                            <span className='p-locality' itemProp='addressLocality'>
+                            <span
+                                className='p-locality'
+                                itemProp='addressLocality'
+                            >
                                 Ottawa,
                             </span>
                             <span className='p-region' itemProp='addressRegion'>
                                 ON,
                             </span>
-                            <span className='p-postal-code' itemProp='postalCode'>
+                            <span
+                                className='p-postal-code'
+                                itemProp='postalCode'
+                            >
                                 K1S 5B6
                             </span>
                             <br />
@@ -77,15 +98,22 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                             )}
                             {phone && (
                                 <>
-                                    <span className='p-tel' itemProp='telephone'>
-                                        Phone: <a href={`tel:${phone}`}>{phone}</a>
+                                    <span
+                                        className='p-tel'
+                                        itemProp='telephone'
+                                    >
+                                        Phone:{' '}
+                                        <a href={`tel:${phone}`}>{phone}</a>
                                     </span>
                                     <br />
                                 </>
                             )}
                             {fax && (
                                 <>
-                                    <span className='p-tel-fax' itemProp='faxNumber'>
+                                    <span
+                                        className='p-tel-fax'
+                                        itemProp='faxNumber'
+                                    >
                                         Fax: {fax}
                                     </span>
                                     <br />
@@ -102,7 +130,9 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                             <strong>Hours</strong>
                             <br />
                             {days && <span>{days}</span>}
-                            {start && <time dateTime={start}>, {start}</time>}{' '}
+                            {start && (
+                                <time dateTime={start}>, {start}</time>
+                            )}{' '}
                             {end && (
                                 <>
                                     - <time dateTime={end}>{end}</time>
@@ -139,7 +169,9 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                                     >
                                         <path d='M17.8 4.8h-2.4s-1.2.216-1.2 1.2v2.4h3.6l-1.2 4.8h-2.4V24H9.4V13.2H7V8.4h2.4V4.8S8.5 0 13.156 0H17.8v4.8z' />
                                     </svg>
-                                    <span className='u-visually-hidden'>Like us on Facebook</span>
+                                    <span className='u-visually-hidden'>
+                                        Like us on Facebook
+                                    </span>
                                 </a>
                             </li>
                             <li>
@@ -154,7 +186,9 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                                     >
                                         <path d='M2.66 14.347a4.64 4.64 0 0 0 2.21-.093c-2.237-.49-3.917-2.646-3.917-5.24v-.066a4.586 4.586 0 0 0 2.209.662C1.852 8.657.992 7.017.992 5.165c0-.979.239-1.892.662-2.686C4.061 5.707 7.66 7.837 11.722 8.063a6.042 6.042 0 0 1-.12-1.218c0-2.95 2.184-5.345 4.883-5.345 1.402 0 2.672.648 3.559 1.693a9.23 9.23 0 0 0 3.109-1.296c-.37 1.244-1.138 2.289-2.144 2.95A9.06 9.06 0 0 0 23.814 4a10.308 10.308 0 0 1-2.447 2.779l.013.688c0 7.065-4.908 15.201-13.892 15.201-2.765 0-5.332-.886-7.488-2.394.37.04.767.066 1.164.066 2.289 0 4.393-.847 6.06-2.29-2.13-.039-3.943-1.587-4.565-3.703z' />
                                     </svg>
-                                    <span className='u-visually-hidden'>Follow us on Twitter</span>
+                                    <span className='u-visually-hidden'>
+                                        Follow us on Twitter
+                                    </span>
                                 </a>
                             </li>
                             <li>
@@ -197,7 +231,9 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                                     >
                                         <path d='M5.407 23.512H.302V8.154h5.105v15.358zM8.23 8.154h5.105v2.176c.678-1.046 1.89-2.537 4.6-2.537 3.36 0 5.878 2.196 5.878 6.913v8.807H18.71v-8.218c0-2.064-.739-3.472-2.586-3.472-1.41 0-2.25.95-2.62 1.867-.134.328-.167.786-.167 1.245v8.577H8.232s.067-13.917 0-15.358zM2.888.75c1.746 0 2.82 1.147 2.854 2.653 0 1.474-1.108 2.655-2.887 2.655H2.82C1.108 6.058 0 4.878 0 3.403 0 1.897 1.141.75 2.888.75z' />
                                     </svg>
-                                    <span className='u-visually-hidden'>View us on Linkedin</span>
+                                    <span className='u-visually-hidden'>
+                                        View us on Linkedin
+                                    </span>
                                 </a>
                             </li>
                             <li>

@@ -60,7 +60,10 @@ const IconPath: React.FC<IconPathProps> = ({ icon }): JSX.Element => {
         return (
             <g fill='none' fillRule='evenodd'>
                 <circle cx='12' cy='12' fill='#000' r='10' />
-                <path d='M13.824 17.538H10V14.67h3.824zm0-4.301H10V5.07h3.824z' fill='#fff' />
+                <path
+                    d='M13.824 17.538H10V14.67h3.824zm0-4.301H10V5.07h3.824z'
+                    fill='#fff'
+                />
             </g>
         )
     }

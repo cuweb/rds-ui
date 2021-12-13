@@ -4,7 +4,9 @@ interface BannerBreadcrumbsProps {
     links: { link: string; title: string }[]
 }
 
-const BannerBreadcrumbs: React.FC<BannerBreadcrumbsProps> = ({ links }): JSX.Element => {
+const BannerBreadcrumbs: React.FC<BannerBreadcrumbsProps> = ({
+    links,
+}): JSX.Element => {
     const list = links.map((item) => (
         <li itemProp='breadcrumb' key={item.title}>
             <a href={item.link}>{item.title}</a>

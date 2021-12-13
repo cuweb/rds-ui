@@ -11,13 +11,19 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Admissions</h2>
                             <ul>
                                 <li>
-                                    <a href='https://admissions.carleton.ca/programs/'>Programs</a>
+                                    <a href='https://admissions.carleton.ca/programs/'>
+                                        Programs
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://admissions.carleton.ca/'>Undergraduate</a>
+                                    <a href='https://admissions.carleton.ca/'>
+                                        Undergraduate
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://graduate.carleton.ca/'>Graduate</a>
+                                    <a href='https://graduate.carleton.ca/'>
+                                        Graduate
+                                    </a>
                                 </li>
                                 <li>
                                     <a href='https://admissions.carleton.ca/applicant-type/international-applicants/'>
@@ -35,10 +41,14 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/awards/'>Financial Aid</a>
+                                    <a href='https://carleton.ca/awards/'>
+                                        Financial Aid
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/cie/'>Initiatives In Education</a>
+                                    <a href='https://carleton.ca/cie/'>
+                                        Initiatives In Education
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -46,16 +56,24 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Students / Academics</h2>
                             <ul className='footersitemap__list--two'>
                                 <li>
-                                    <a href='https://students.carleton.ca/'>Undergrad Homepage</a>
+                                    <a href='https://students.carleton.ca/'>
+                                        Undergrad Homepage
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://gradstudents.carleton.ca/'>Grad Homepage</a>
+                                    <a href='https://gradstudents.carleton.ca/'>
+                                        Grad Homepage
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://calendar.carleton.ca/'>Calendars</a>
+                                    <a href='https://calendar.carleton.ca/'>
+                                        Calendars
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/cuol/'>Carleton Online</a>
+                                    <a href='https://carleton.ca/cuol/'>
+                                        Carleton Online
+                                    </a>
                                 </li>
                                 <li>
                                     <a href='https://carleton.ca/cc/'>
@@ -63,7 +81,9 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/culearn/'>cuLearn</a>
+                                    <a href='https://carleton.ca/culearn/'>
+                                        cuLearn
+                                    </a>
                                 </li>
                                 <li>
                                     <a href='https://carleton.ca/academics/'>
@@ -81,16 +101,24 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='https://library.carleton.ca/'>Library</a>
+                                    <a href='https://library.carleton.ca/'>
+                                        Library
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://housing.carleton.ca/'>Housing</a>
+                                    <a href='https://housing.carleton.ca/'>
+                                        Housing
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/provost/'>Provost`s Office</a>
+                                    <a href='https://carleton.ca/provost/'>
+                                        Provost`s Office
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/registrar/'>Registrar`s Office</a>
+                                    <a href='https://carleton.ca/registrar/'>
+                                        Registrar`s Office
+                                    </a>
                                 </li>
                                 <li>
                                     <a href='https://carleton.ca/registrar/registration/'>
@@ -113,25 +141,39 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Campus</h2>
                             <ul className='footersitemap__list'>
                                 <li>
-                                    <a href='https://carleton.ca/campus/'>Campus Map</a>
+                                    <a href='https://carleton.ca/campus/'>
+                                        Campus Map
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/campus/directions/'>Directions</a>
+                                    <a href='https://carleton.ca/campus/directions/'>
+                                        Directions
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://events.carleton.ca/'>Events</a>
+                                    <a href='https://events.carleton.ca/'>
+                                        Events
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/parking/'>Parking</a>
+                                    <a href='https://carleton.ca/parking/'>
+                                        Parking
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/safety/'>Safety</a>
+                                    <a href='https://carleton.ca/safety/'>
+                                        Safety
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://dining.carleton.ca/'>Dining Services</a>
+                                    <a href='https://dining.carleton.ca/'>
+                                        Dining Services
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href='https://cusaonline.ca/clubs/'>Clubs &amp; Societies</a>
+                                    <a href='https://cusaonline.ca/clubs/'>
+                                        Clubs &amp; Societies
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -149,7 +191,9 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='https://goravens.ca/'>Go Ravens - Varsity</a>
+                                    <a href='https://goravens.ca/'>
+                                        Go Ravens - Varsity
+                                    </a>
                                 </li>
                                 <li>
                                     <a href='https://goravens.ca/'>
@@ -164,7 +208,9 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                                                 <path d='M44.76 65.605v-53.38C38.6 24.41 26.575 34.466 11.078 41.058c18 7.592 32.44 33.442 33.682 58.747C45.998 74.5 60.443 48.65 78.44 41.057 63.21 45.81 50.97 54.737 44.76 65.605M19.51 14.586c-1.508 1.42-3.54 2.294-5.777 2.294-4.66 0-8.435-3.762-8.435-8.404 0-1.244.28-2.422.77-3.484l6.206-1.15L2.968 0C1.114 2.332 0 5.273 0 8.476 0 16.033 6.15 22.16 13.735 22.16c4.472 0 8.435-2.142 10.942-5.44l-5.168-2.134' />
                                             </g>
                                         </svg>
-                                        <span className='u-visually-hidden'>Visit GoRavens.ca</span>
+                                        <span className='u-visually-hidden'>
+                                            Visit GoRavens.ca
+                                        </span>
                                     </a>
                                 </li>
                             </ul>
@@ -174,12 +220,17 @@ const FooterSitemap: React.FC = (): JSX.Element => {
 
                 <div className='footer__contact'>
                     <address>
-                        <div>1125 Colonel By Drive, Ottawa, ON, K1S 5B6, Canada</div>
+                        <div>
+                            1125 Colonel By Drive, Ottawa, ON, K1S 5B6, Canada
+                        </div>
                         <span className='p-tel'>
-                            Phone: <a href='tel:+1-613-520-2600'>1-613-520-2600</a>
+                            Phone:{' '}
+                            <a href='tel:+1-613-520-2600'>1-613-520-2600</a>
                         </span>
                         <div>
-                            <a href='https://carleton.ca/about/contact/'>Contact Info</a>
+                            <a href='https://carleton.ca/about/contact/'>
+                                Contact Info
+                            </a>
                         </div>
                         <ul>
                             <li>
@@ -211,7 +262,9 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                                     >
                                         <path d='M17.8 4.8h-2.4s-1.2.216-1.2 1.2v2.4h3.6l-1.2 4.8h-2.4V24H9.4V13.2H7V8.4h2.4V4.8S8.5 0 13.156 0H17.8v4.8z' />
                                     </svg>
-                                    <span className='u-visually-hidden'>Like us on Facebook</span>
+                                    <span className='u-visually-hidden'>
+                                        Like us on Facebook
+                                    </span>
                                 </a>
                             </li>
                             <li>
@@ -226,7 +279,9 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                                     >
                                         <path d='M2.66 14.347a4.64 4.64 0 0 0 2.21-.093c-2.237-.49-3.917-2.646-3.917-5.24v-.066a4.586 4.586 0 0 0 2.209.662C1.852 8.657.992 7.017.992 5.165c0-.979.239-1.892.662-2.686C4.061 5.707 7.66 7.837 11.722 8.063a6.042 6.042 0 0 1-.12-1.218c0-2.95 2.184-5.345 4.883-5.345 1.402 0 2.672.648 3.559 1.693a9.23 9.23 0 0 0 3.109-1.296c-.37 1.244-1.138 2.289-2.144 2.95A9.06 9.06 0 0 0 23.814 4a10.308 10.308 0 0 1-2.447 2.779l.013.688c0 7.065-4.908 15.201-13.892 15.201-2.765 0-5.332-.886-7.488-2.394.37.04.767.066 1.164.066 2.289 0 4.393-.847 6.06-2.29-2.13-.039-3.943-1.587-4.565-3.703z' />
                                     </svg>
-                                    <span className='u-visually-hidden'>Follow us on Twitter</span>
+                                    <span className='u-visually-hidden'>
+                                        Follow us on Twitter
+                                    </span>
                                 </a>
                             </li>
                             <li>
@@ -269,7 +324,9 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                                     >
                                         <path d='M5.407 23.512H.302V8.154h5.105v15.358zM8.23 8.154h5.105v2.176c.678-1.046 1.89-2.537 4.6-2.537 3.36 0 5.878 2.196 5.878 6.913v8.807H18.71v-8.218c0-2.064-.739-3.472-2.586-3.472-1.41 0-2.25.95-2.62 1.867-.134.328-.167.786-.167 1.245v8.577H8.232s.067-13.917 0-15.358zM2.888.75c1.746 0 2.82 1.147 2.854 2.653 0 1.474-1.108 2.655-2.887 2.655H2.82C1.108 6.058 0 4.878 0 3.403 0 1.897 1.141.75 2.888.75z' />
                                     </svg>
-                                    <span className='u-visually-hidden'>View us on Linkedin</span>
+                                    <span className='u-visually-hidden'>
+                                        View us on Linkedin
+                                    </span>
                                 </a>
                             </li>
                         </ul>
