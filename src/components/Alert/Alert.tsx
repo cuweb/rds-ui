@@ -30,7 +30,7 @@ const Alert: React.FC<AlertProps> = ({
                 size={30}
                 className={`c-alert__icon c-alert__icon--${renderType}`}
             />
-            <h2>{title || 'Please add a title'}</h2>
+            <h2 dangerouslySetInnerHTML={{ __html: title }} />
             {content && <p dangerouslySetInnerHTML={{ __html: content }} />}
             {handleClose && (
                 <button aria-label='Close alert' type='button' data-close>
