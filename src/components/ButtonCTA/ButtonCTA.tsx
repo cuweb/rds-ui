@@ -11,7 +11,7 @@ interface ButtonProps {
     target: string
 }
 
-const Button: React.FC<ButtonProps> = ({
+const ButtonCTA: React.FC<ButtonProps> = ({
     ghost,
     text = 'Click',
     link = '#',
@@ -36,4 +36,4 @@ const Button: React.FC<ButtonProps> = ({
         </a>
     )
 }
-export default Button
+export default ButtonCTA
