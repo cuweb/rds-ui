@@ -91,12 +91,15 @@ LargeWidthBlocks.args = {
 
 export const GroupingBlocks = GroupTemplate.bind({})
 GroupingBlocks.args = {
-    primary:{   direction: centeredHeadings.direction,
+    primary:{   
+        direction: centeredHeadings.direction,
         title: centeredHeadings.title,
         image: centeredHeadings.image,
         content: centeredHeadings.content,
         heading: centeredHeadings.heading,
+        subheading: centeredHeadings.subheading,
         color: centeredHeadings.color,
+        centered: centeredHeadings.centered
     },
     secondary:{
         direction: greyBackground.direction,
