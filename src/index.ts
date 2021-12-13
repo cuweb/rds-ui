@@ -10,5 +10,19 @@ import Main from './layouts/Layout/Main'
 import Masthead from './blocks/Masthead/Masthead'
 import Ublock from './components/Ublock/Ublock'
 import Sidebar from './layouts/Layout/Sidebar'
+import TextImage from './blocks/TextImage/TextImage'
 
-export { Alert, Aside, Banner, Button, Footer, Icon, Layout, Main, Masthead, Ublock, Sidebar }
+export {
+    Alert,
+    Aside,
+    Banner,
+    Button,
+    Footer,
+    Icon,
+    Layout,
+    Main,
+    Masthead,
+    Ublock,
+    Sidebar,
+    TextImage,
+}

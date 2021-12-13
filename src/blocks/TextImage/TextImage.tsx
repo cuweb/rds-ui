@@ -7,7 +7,7 @@ export interface TextImageProps {
     image: HTMLImageElement
     content: string
     subcontent: string
-    color?: string
+    color?: 'grey' | 'white' | 'black'
     heading?: string
     subheading?: string
     centered?: boolean
