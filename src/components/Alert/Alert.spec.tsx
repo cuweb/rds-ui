@@ -39,6 +39,8 @@ describe('Alert', () => {
         if (type === 'error') {
             it(`${type.toUpperCase()}: Should render close button`, () => {
                 cy.get(button).should('exist')
+                cy.get(`${button} .u-icon`).should('exist')
+                cy.get(`${button} .c-icon`).should('exist')
             })
         }
     })
