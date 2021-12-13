@@ -29,9 +29,14 @@ const TextImage: React.FC<TextImageProps> = ({
     return (
         <Ublock color={color}>
             {heading && (
-                <h2 className={`c-heading- ${centeredClasaname}`}>{heading}</h2>
+                <h2
+                    className={`c-heading- ${centeredClasaname}`}
+                    dangerouslySetInnerHTML={{ __html: heading }}
+                />
             )}
-            {subheading && <p>{subheading}</p>}
+            {subheading && (
+                <p dangerouslySetInnerHTML={{ __html: subheading }} />
+            )}
             <div className={`b-textimg ${directionClassname}`}>
                 <div className='textimg__wrapper'>
                     <section>
@@ -45,7 +50,13 @@ const TextImage: React.FC<TextImageProps> = ({
                                     __html: content,
                                 }}
                             />
-                            {subcontent && <p>{subcontent}</p>}
+                            {subcontent && (
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: subcontent,
+                                    }}
+                                />
+                            )}
                         </div>
                     </section>
                 </div>
