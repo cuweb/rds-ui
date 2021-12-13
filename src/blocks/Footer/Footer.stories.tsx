@@ -20,18 +20,19 @@ Brand.args = {
 
 //  Simple Footer
 export const Simple = Template.bind({})
+const simpleFoter = getVariation('simple', variations)
 Simple.args = {
-    type: getVariation('simple', variations).type,
-    name: getVariation('simple', variations).data.name,
-    email: getVariation('simple', variations).data.email,
-    address: getVariation('simple', variations).data.address,
-    map: getVariation('simple', variations).data.map,
-    contact: getVariation('simple', variations).data.contact,
-    days: getVariation('simple', variations).data.days,
-    start: getVariation('simple', variations).data.hours.start,
-    end: getVariation('simple', variations).data.hours.end,
-    phone: getVariation('simple', variations).data.phone,
-    fax: getVariation('simple', variations).data.fax,
+    type: simpleFoter.type,
+    name: simpleFoter.data.name,
+    email: simpleFoter.data.email,
+    address: simpleFoter.data.address,
+    map: simpleFoter.data.map,
+    contact: simpleFoter.data.contact,
+    days: simpleFoter.data.days,
+    start: simpleFoter.data.hours.start,
+    end: simpleFoter.data.hours.end,
+    phone: simpleFoter.data.phone,
+    fax: simpleFoter.data.fax,
 }
 
 //  Sitemap Footer

@@ -1,6 +1,6 @@
 import React from 'react'
 import TextImage from './TextImage'
-import getVariation from '../../../functions/getVariation'
+import getVariation from '../../functions/getVariation'
 import data from './TextImageData.json'
 
 const { title, variations } = data
@@ -30,7 +30,6 @@ ImageToTheRight.args = {
     content: imageToTheRight.content,
 }
 
-
 export const ImageToTheLeft = Template.bind({})
 const imageToTheLeft = getVariation('imageToTheLeft', variations)
 ImageToTheLeft.args = {
@@ -39,9 +38,6 @@ ImageToTheLeft.args = {
     image: imageToTheLeft.image,
     content: imageToTheLeft.content,
 }
-
-
-
 
 export const GreyBackground = Template.bind({})
 const greyBackground = getVariation('greyBackground', variations)
@@ -64,7 +60,6 @@ DefaultHeadings.args = {
     subheading: defaultHeadings.subheading,
 }
 
-
 export const CenteredHeadings = Template.bind({})
 const centeredHeadings = getVariation('centeredHeadings', variations)
 CenteredHeadings.args = {
@@ -75,7 +70,7 @@ CenteredHeadings.args = {
     heading: centeredHeadings.heading,
     subheading: centeredHeadings.subheading,
     color: centeredHeadings.color,
-    centered: centeredHeadings.centered
+    centered: centeredHeadings.centered,
 }
 
 export const LargeWidthBlocks = Template.bind({})
@@ -91,7 +86,7 @@ LargeWidthBlocks.args = {
 
 export const GroupingBlocks = GroupTemplate.bind({})
 GroupingBlocks.args = {
-    primary:{   
+    primary: {
         direction: centeredHeadings.direction,
         title: centeredHeadings.title,
         image: centeredHeadings.image,
@@ -99,16 +94,13 @@ GroupingBlocks.args = {
         heading: centeredHeadings.heading,
         subheading: centeredHeadings.subheading,
         color: centeredHeadings.color,
-        centered: centeredHeadings.centered
+        centered: centeredHeadings.centered,
     },
-    secondary:{
+    secondary: {
         direction: greyBackground.direction,
         title: greyBackground.title,
         image: greyBackground.image,
         content: greyBackground.content,
         color: greyBackground.color,
-
-    }
+    },
 }
-
-

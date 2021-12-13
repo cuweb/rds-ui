@@ -1,11 +1,13 @@
-import Button from './Button'
+import ButtonCTA from './ButtonCTA'
 
 export default {
-    component: Button,
-    title: 'Components/Button',
+    component: ButtonCTA,
+    title: 'Components/Button CTA',
 }
 
-const Template = (args) => <Button {...args} />
+const Template = (args) => {
+    return <ButtonCTA {...args} />
+}
 
 export const Default = Template.bind({})
 Default.args = {
