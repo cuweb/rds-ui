@@ -71,7 +71,7 @@ describe('TextImage', () => {
         cy.get(`.c-heading-`).should('exist')
     })
 
-        // Centered Headings
+    // Centered Headings
 
         it(`Centered Headings: Should render the centered headings`, () => {
             cy.visit(
@@ -84,7 +84,7 @@ describe('TextImage', () => {
 
         })
 
-        // Large Width Blocks
+    // Large Width Blocks
 
         it(`Large Width Blocks: Should render the large width blocks`, () => {
             cy.visit(
