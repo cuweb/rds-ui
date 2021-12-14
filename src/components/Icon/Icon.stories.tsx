@@ -1,6 +1,8 @@
 import data from './IconData.json'
-import getVariation from '@src/functions/getVariation'
 import Icon from './Icon'
+
+const getVariation = (icon, variations) =>
+    variations.find((item) => item.icon === icon)
 
 export default {
     component: Icon,
