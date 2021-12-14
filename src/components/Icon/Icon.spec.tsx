@@ -8,12 +8,12 @@ describe('Icon', () => {
     const { classname, variations } = data
 
     variations.map((variation) => {
-        const { title, type, icon } = variation
+        const { title, icon } = variation
         it(`${title}: Should render the icon`, () => {
             cy.visit(
                 `${Cypress.env(
                     'baseUrl'
-                )}/iframe.html?id=components-icon--${type}`
+                )}/iframe.html?id=components-icon--${icon}`
             )
             cy.get(classname).should('exist')
         })

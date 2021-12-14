@@ -27,7 +27,7 @@ export const WithIcon = Template.bind({})
 WithIcon.args = {
     text: 'Download our free ebook',
     link: '#',
-    icon: 'arrowDown',
+    icon: 'arrow-down',
 }
 
 export const FullWidth = Template.bind({})

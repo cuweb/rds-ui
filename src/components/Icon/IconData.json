@@ -4,67 +4,54 @@
     "variations": [
         {
             "title": "Alert",
-            "type": "alert",
             "icon": "alert"
         },
         {
             "title": "Arrow Down",
-            "type": "arrow-down",
-            "icon": "arrowDown"
+            "icon": "arrow-down"
         },
         {
             "title": "Github",
-            "type": "github",
             "icon": "github"
         },
         {
             "title": "Info",
-            "type": "info",
             "icon": "info"
         },
         {
             "title": "Plus",
-            "type": "plus",
             "icon": "plus"
         },
         {
             "title": "Warning",
-            "type": "warning",
             "icon": "warning"
         },
         {
             "title": "X",
-            "type": "x",
             "icon": "x"
         },
         {
             "title": "Facebook",
-            "type": "facebook",
             "icon": "facebook"
         },
         {
             "title": "Instagram",
-            "type": "instagram",
             "icon": "instagram"
         },
         {
             "title": "Twitter",
-            "type": "twitter",
             "icon": "twitter"
         },
         {
             "title": "YouTube",
-            "type": "youtube",
             "icon": "youtube"
         },
         {
             "title": "LinkedIn",
-            "type": "linkedin",
             "icon": "linkedin"
         },
         {
             "title": "Pinterest",
-            "type": "pinterest",
             "icon": "pinterest"
         }
     ]
