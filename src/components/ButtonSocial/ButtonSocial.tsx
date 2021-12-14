@@ -19,13 +19,15 @@ const ButtonSocial: React.FC<ButtonProps> = ({
     text,
 }): JSX.Element => {
     return (
-        <a
-            className={`c-buttonsocial c-buttonsocial--${type} u-icon u-icon--circle`}
-            href={url}
-        >
-            <Icon icon={type} />
-            <span className='u-visually-hidden'>{text}</span>
-        </a>
+        <div className='test'>
+            <a
+                className={`c-buttonsocial c-buttonsocial--${type} u-icon u-icon--circle`}
+                href={url}
+            >
+                <Icon icon={type} />
+                <span className='u-visually-hidden'>{text}</span>
+            </a>
+        </div>
     )
 }
 export default ButtonSocial
