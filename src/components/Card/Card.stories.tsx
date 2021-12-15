@@ -1,6 +1,6 @@
 import Card from './Card'
 import data from './CardData.json'
-import getVariation from '../../../functions/getVariation'
+import getVariation from '../../functions/getVariation'
 
 const { title, variations } = data
 
@@ -9,7 +9,7 @@ export default {
     title: `Components/${title}`,
 }
 
-const Template = (args) => <Card {...args} />
+const Template: React.FC = (args: any) => <Card {...args} />
 
 export const BaseCard = Template.bind({})
 const baseCard = getVariation('base', variations)
@@ -43,17 +43,51 @@ NewsVariantWithDate.args = {
     figureItemType: newsVariantWithDate.figureItemType,
     image: newsVariantWithDate.image,
     h3Prop: newsVariantWithDate.h3Prop,
+    date: newsVariantWithDate.date
+}
 
+export const NewsVariantWithDateAndDescription = Template.bind({})
+const newsVariantWithDateAndDescription = getVariation('newsVariantWithDateAndDescription', variations)
+NewsVariantWithDateAndDescription.args = {
+    articleClassName: newsVariantWithDateAndDescription.articleClassName,
+    articleItemType: newsVariantWithDateAndDescription.articleItemType,
+    aProp: newsVariantWithDateAndDescription.aProp,
+    figureItemType: newsVariantWithDateAndDescription.figureItemType,
+    image: newsVariantWithDateAndDescription.image,
+    h3Prop: newsVariantWithDateAndDescription.h3Prop,
+    date: newsVariantWithDateAndDescription.date,
+    description: newsVariantWithDateAndDescription.description
+}
+
+
+export const VideoVariant = Template.bind({})
+const videoVariant = getVariation('videoVariant', variations)
+VideoVariant.args = {
+    articleClassName: videoVariant.articleClassName,
+    articleItemType: videoVariant.articleItemType,
+    aProp: videoVariant.aProp,
+    figureItemType: videoVariant.figureItemType,
+    image: videoVariant.image,
+    h3Prop: videoVariant.h3Prop,
+    span: videoVariant.span,
+    svg: videoVariant.svg
+}
+
+export const PeopleVariant = Template.bind({})
+const peopleVariant = getVariation('peopleVariant', variations)
+PeopleVariant.args = {
+    articleClassName: peopleVariant.articleClassName,
+    articleItemType: peopleVariant.articleItemType,
+    aProp: peopleVariant.aProp,
+    figureItemType: peopleVariant.figureItemType,
+    image: peopleVariant.image,
+    h3Prop: peopleVariant.h3Prop,
+    description: peopleVariant.description
 }
 {/*
 
 
 
-export const NewsVariantWithDateAndDescription = Template.bind({})
-
-export const VideoVariant = Template.bind({})
-
-export const PeopleVariant = Template.bind({})
 
 export const FigureVariant = Template.bind({})
 

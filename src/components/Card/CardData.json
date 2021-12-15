@@ -49,22 +49,97 @@
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
             "aProp": {
-                "href": "https://bit.ly/2kaI1Ll",
+                "href": "https://bit.ly/2E6yTwZ",
+                "itemProp": "url"
+            },
+            "figureItemType": "http://schema.org/ImageObject",
+            "image": {
+                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
+                "alt": "Read more about We knew ravens are smart. But not this smart",
+                "loading": "lazy"
+            },
+            "h3Prop": {
+                "itemProp": "headline",
+                "title": "We knew ravens are smart. But not this smart"
+            },
+            "date": {
+                "dateTime":"2018-03-11",
+                "itemProp":"datePublished",
+                "content":"2018-03-11",
+                "title": "Sunday, March 11th"
+            }
+        },
+        {
+            "type": "newsVariantWithDateAndDescription",
+            "articleClassName": "c-card",
+            "articleItemType": "http://schema.org/Article",
+            "aProp": {
+                "href": "https://bit.ly/2E6yTwZ",
+                "itemProp": "url"
+            },
+            "figureItemType": "http://schema.org/ImageObject",
+            "image": {
+                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
+                "alt": "Read more about We knew ravens are smart.",
+                "loading": "lazy"
+            },
+            "h3Prop": {
+                "itemProp": "headline",
+                "title": "We knew ravens are smart."
+            },
+            "date": {
+                "dateTime":"2018-03-11",
+                "itemProp":"datePublished",
+                "content":"2018-03-11",
+                "title": "Sunday, March 11th"
+            },
+            "description": {
+                "itemProp": "description",
+                "title": "The birds are surprisingly skilled at planning how to get food in the future."
+            }
+        },
+        {
+            "type": "videoVariant",
+            "articleClassName": "c-card c-card--video",
+            "articleItemType": "http://schema.org/VideoObject",
+            "aProp": {
+                "href": "https://www.youtube.com/watch?v=lrYPm6DD44M",
                 "itemProp": "url"
             },
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
-                "alt": "Read more about White-necked Raven",
+                "alt": "Read more about Amazing Raven intelligence",
                 "loading": "lazy"
             },
             "h3Prop": {
                 "itemProp": "name",
-                "title": "White-necked Raven"
+                "title": "Amazing Raven intelligence"
+            },
+            "span": true,
+            "svg": true
+        },
+        {
+            "type": "peopleVariant",
+            "articleClassName": "c-card c-card--people",
+            "articleItemType": "http://schema.org/Person",
+            "aProp": {
+                "href": "https://en.wikipedia.org/wiki/Bill_Murray",
+                "itemProp": "url"
+            },
+            "figureItemType": "http://schema.org/ImageObject",
+            "image": {
+                "src": "https://www.fillmurray.com/500/500",
+                "alt": "Read more about Bill Murray",
+                "loading": "lazy"
+            },
+            "h3Prop": {
+                "itemProp": "name",
+                "title": "Bill Murray"
             },
             "description": {
                 "itemProp": "description",
-                "title": "The white-necked raven is smaller than the common raven, the thick-billed raven."
+                "title": "Actor and Writer"
             }
         }
     ]
