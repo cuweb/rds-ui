@@ -1,0 +1,71 @@
+{
+    "title": "Card",
+    "classname": ".card",
+    "variations": [
+        {
+            "type": "base",
+            "articleClassName": "c-card",
+            "articleItemType": "http://schema.org/Article",
+            "aProp": {
+                "href": "https://bit.ly/2kaI1Ll",
+                "itemProp": "url"
+            },
+            "figureItemType": "http://schema.org/ImageObject",
+            "image": {
+                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
+                "alt": "Read more about White-necked Raven",
+                "loading": "lazy"
+            },
+            "h3Prop": {
+                "itemProp": "name",
+                "title": "White-necked Raven"
+            }
+        },
+        {
+            "type": "cardWithTitleAndDescription",
+            "articleClassName": "c-card",
+            "articleItemType": "http://schema.org/Article",
+            "aProp": {
+                "href": "https://bit.ly/2kaI1Ll",
+                "itemProp": "url"
+            },
+            "figureItemType": "http://schema.org/ImageObject",
+            "image": {
+                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
+                "alt": "Read more about White-necked Raven",
+                "loading": "lazy"
+            },
+            "h3Prop": {
+                "itemProp": "name",
+                "title": "White-necked Raven"
+            },
+            "description": {
+                "itemProp": "description",
+                "title": "The white-necked raven is smaller than the common raven, the thick-billed raven."
+            }
+        },
+        {
+            "type": "newsVariantWithDate",
+            "articleClassName": "c-card",
+            "articleItemType": "http://schema.org/Article",
+            "aProp": {
+                "href": "https://bit.ly/2kaI1Ll",
+                "itemProp": "url"
+            },
+            "figureItemType": "http://schema.org/ImageObject",
+            "image": {
+                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
+                "alt": "Read more about White-necked Raven",
+                "loading": "lazy"
+            },
+            "h3Prop": {
+                "itemProp": "name",
+                "title": "White-necked Raven"
+            },
+            "description": {
+                "itemProp": "description",
+                "title": "The white-necked raven is smaller than the common raven, the thick-billed raven."
+            }
+        }
+    ]
+}
