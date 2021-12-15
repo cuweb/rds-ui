@@ -1,4 +1,8 @@
+import data from './IconData.json'
 import Icon from './Icon'
+
+const getVariation = (icon, variations) =>
+    variations.find((item) => item.icon === icon)
 
 export default {
     component: Icon,
@@ -8,35 +12,40 @@ export default {
 const Template = (args) => <Icon {...args} size={42} />
 
 export const Alert = Template.bind({})
-Alert.args = {
-    icon: 'alert',
-}
+Alert.args = getVariation('alert', data.variations)
 
 export const ArrowDown = Template.bind({})
-ArrowDown.args = {
-    icon: 'arrowDown',
-}
+ArrowDown.args = getVariation('arrow-down', data.variations)
+
+export const Facebook = Template.bind({})
+Facebook.args = getVariation('facebook', data.variations)
 
 export const Github = Template.bind({})
-Github.args = {
-    icon: 'github',
-}
+Github.args = getVariation('github', data.variations)
+
 export const Info = Template.bind({})
-Info.args = {
-    icon: 'info',
-}
+Info.args = getVariation('info', data.variations)
+
+export const Instagram = Template.bind({})
+Instagram.args = getVariation('instagram', data.variations)
+
+export const Linkedin = Template.bind({})
+Linkedin.args = getVariation('linkedin', data.variations)
+
+export const Pinterest = Template.bind({})
+Pinterest.args = getVariation('pinterest', data.variations)
 
 export const Plus = Template.bind({})
-Plus.args = {
-    icon: 'plus',
-}
+Plus.args = getVariation('plus', data.variations)
+
+export const Twitter = Template.bind({})
+Twitter.args = getVariation('twitter', data.variations)
 
 export const Warning = Template.bind({})
-Warning.args = {
-    icon: 'warning',
-}
+Warning.args = getVariation('warning', data.variations)
 
 export const X = Template.bind({})
-X.args = {
-    icon: 'x',
-}
+X.args = getVariation('x', data.variations)
+
+export const Youtube = Template.bind({})
+Youtube.args = getVariation('youtube', data.variations)
