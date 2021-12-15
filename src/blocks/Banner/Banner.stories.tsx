@@ -61,3 +61,17 @@ WithMultipleButtons.args = {
         </p>
     ),
 }
+
+//  Hero Image Banner
+const heroimage = getVariation('heroimage', variations)
+export const HeroImageBanner = Template.bind({})
+HeroImageBanner.args = {
+    title: heroimage.title,
+    imageUrl: heroimage.imageUrl,
+    children: (
+        <ButtonCTA
+            link='https://www.youtube.com/watch?v=lrYPm6DD44M'
+            text='Learn about Ravens'
+        />
+    ),
+}
