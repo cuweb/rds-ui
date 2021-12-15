@@ -18,7 +18,9 @@ const Banner: React.FC<BannerProps> = ({
     <Ublock color={color}>
         <div className='b-banner'>
             <section>
-                {breadcrumbs && <BannerBreadcrumbs links={breadcrumbs} />}
+                {breadcrumbs && (
+                    <BannerBreadcrumbs title={title} links={breadcrumbs} />
+                )}
                 <h1 dangerouslySetInnerHTML={{ __html: title }} />
                 {children}
             </section>
