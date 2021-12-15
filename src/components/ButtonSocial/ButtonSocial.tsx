@@ -4,13 +4,7 @@ import Icon from '@src/components/Icon/Icon'
 interface ButtonProps {
     url: string
     text: string
-    type:
-        | 'facebook'
-        | 'instagram'
-        | 'twitter'
-        | 'youtube'
-        | 'linkedin'
-        | 'pinterest'
+    type: string // TODO: Fix default types. E.G. 'facebook | 'instagram'
 }
 
 const ButtonSocial: React.FC<ButtonProps> = ({

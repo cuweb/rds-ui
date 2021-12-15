@@ -10,7 +10,7 @@ interface UblockProps {
 }
 
 const Ublock: React.FC<UblockProps> = ({
-    id = '',
+    id = undefined,
     heading,
     children,
     color = 'white',

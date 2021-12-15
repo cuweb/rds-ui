@@ -28,6 +28,7 @@
         "react/no-danger": "off",
         "react/require-default-props": "off", // DISCUSS
         "react/jsx-props-no-spreading": "off",
+        "react/no-array-index-key": "off",
         "no-use-before-define": "off",
         "react/function-component-definition": "off",
         "@typescript-eslint/no-use-before-define": [
