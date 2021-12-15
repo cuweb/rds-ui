@@ -1,5 +1,5 @@
 import React from 'react'
-import IconPath from './IconPath'
+import icons from '@src/lib/icons'
 
 interface IconProps {
     icon: string
@@ -8,6 +8,8 @@ interface IconProps {
     className?: string
 }
 
+const getIcon = (type: string) => icons.find((icon) => icon.type === type)
+
 const Icon: React.FC<IconProps> = ({
     icon,
     size,
@@ -15,7 +17,7 @@ const Icon: React.FC<IconProps> = ({
     className = '',
 }): JSX.Element => {
     if (svg) return svg
-
+    const iconPath: any = getIcon(icon)?.path
     return (
         <svg
             className={`c-icon ${className}`}
@@ -25,7 +27,7 @@ const Icon: React.FC<IconProps> = ({
             xmlns='http://www.w3.org/2000/svg'
             aria-hidden='true'
         >
-            <IconPath icon={icon} />
+            <g dangerouslySetInnerHTML={{ __html: iconPath }} />
         </svg>
     )
 }

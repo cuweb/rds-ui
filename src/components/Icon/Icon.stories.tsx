@@ -11,6 +11,9 @@ export default {
 
 const Template = (args) => <Icon {...args} size={42} />
 
+export const Accessibility = Template.bind({})
+Accessibility.args = getVariation('accessibility', data.variations)
+
 export const Alert = Template.bind({})
 Alert.args = getVariation('alert', data.variations)
 
