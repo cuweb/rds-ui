@@ -2,6 +2,7 @@ import React from 'react'
 import getVariation from '@src/functions/getVariation'
 import Banner from './Banner'
 import data from './BannerData.json'
+import ButtonCTA from '@src/components/ButtonCTA/ButtonCTA'
 
 const { title, variations } = data
 
@@ -24,4 +25,39 @@ export const BaseWithBreadCrumbs = Template.bind({})
 BaseWithBreadCrumbs.args = {
     title: breadcrumbs.title,
     breadcrumbs: breadcrumbs.breadcrumbs,
+}
+
+//  Banner with Buttons
+export const WithCTAButton = Template.bind({})
+WithCTAButton.args = {
+    title: breadcrumbs.title,
+    breadcrumbs: breadcrumbs.breadcrumbs,
+    children: (
+        <ButtonCTA
+            link='http://www.nooooooooooooooo.com/'
+            target='blank'
+            text='Join the darkside'
+        />
+    ),
+}
+
+//  Banner with Multiple Buttons
+export const WithMultipleButtons = Template.bind({})
+WithMultipleButtons.args = {
+    title: breadcrumbs.title,
+    breadcrumbs: breadcrumbs.breadcrumbs,
+    children: (
+        <p>
+            <ButtonCTA
+                link='https://www.youtube.com/watch?v=lrYPm6DD44M'
+                text='Learn about Ravens'
+            />
+
+            <ButtonCTA
+                link='http://www.nooooooooooooooo.com/'
+                target='blank'
+                text='Join the darkside'
+            />
+        </p>
+    ),
 }

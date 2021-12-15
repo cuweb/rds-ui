@@ -7,8 +7,8 @@ interface ButtonProps {
     link: string
     icon?: string
     full?: string
-    children: React.ReactNode
-    target: string
+    children?: React.ReactNode
+    target?: string
 }
 
 const ButtonCTA: React.FC<ButtonProps> = ({
@@ -23,11 +23,12 @@ const ButtonCTA: React.FC<ButtonProps> = ({
     const isGhost = ghost ? 'c-buttoncta--ghost' : ''
     const isFull = full ? 'c-buttoncta--full' : ''
     const hasIcon = icon ? 'u-icon' : ''
+    const buttonTarget = target ? `_${target}` : undefined
 
     return (
         <a
             className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost}`}
-            target={`_${target}`}
+            target={buttonTarget}
             href={link}
         >
             {icon && <Icon icon={icon} />}
