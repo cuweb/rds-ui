@@ -27,7 +27,31 @@
         },
         {
             "type": "heroimage",
-            "title": "Hero Image Banner",
+            "title": "Hero Image",
+            "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
+        },
+        {
+            "type": "heroimageLight",
+            "title": "Hero Image lightened ",
+            "brightness": "light",
+            "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
+        },
+        {
+            "type": "heroimageDark",
+            "title": "Hero image darkened",
+            "brightness": "dark",
+            "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
+        },
+        {
+            "type": "heroimageTop",
+            "imagePosition": "top",
+            "title": "Hero image aligned to the top",
+            "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
+        },
+        {
+            "type": "heroimageBottom",
+            "imagePosition": "bottom",
+            "title": "Hero image aligned to the bottom",
             "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
         }
     ]

@@ -8,7 +8,7 @@ interface BannerProps {
     children: React.ReactNode
     imageUrl?: string
     imagePosition?: 'top' | 'bottom'
-    isDark?: boolean
+    brightness?: 'light' | 'dark'
 }
 
 const Banner: React.FC<BannerProps> = ({
@@ -17,12 +17,12 @@ const Banner: React.FC<BannerProps> = ({
     children,
     imageUrl,
     imagePosition,
-    isDark,
+    brightness,
 }): JSX.Element => {
     const bannerColor = imageUrl ? 'black' : 'grey'
     const bannerWidth = !!imageUrl
     const bannerImage = imageUrl ? 'b-banner--img' : ''
-    const bannerBrightness = isDark ? 'b-banner--img-dark' : ''
+    const bannerBrightness = brightness ? `b-banner--img-${brightness}` : ''
     const bannerImagePosition = imagePosition
         ? `b-banner--img-${imagePosition}`
         : ''
@@ -35,7 +35,7 @@ const Banner: React.FC<BannerProps> = ({
         <Ublock color={bannerColor} full={bannerWidth}>
             <div
                 className={`b-banner ${bannerImage} ${bannerBrightness} ${bannerImagePosition}`}
-                style={bannerStyles}
+                style={imageUrl ? bannerStyles : undefined}
             >
                 <section>
                     {breadcrumbs && (

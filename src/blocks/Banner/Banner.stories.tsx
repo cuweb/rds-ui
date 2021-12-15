@@ -14,29 +14,24 @@ export default {
 const Template: React.FC = (args: any) => <Banner {...args} />
 
 //  Base Banner
+const base = getVariation('base', variations)
 export const Base = Template.bind({})
-Base.args = {
-    title: getVariation('base', variations).title,
-}
+Base.args = { ...base }
 
 //  Banner with Breadcrumbs
 const breadcrumbs = getVariation('breadcrumbs', variations)
 export const BaseWithBreadCrumbs = Template.bind({})
-BaseWithBreadCrumbs.args = {
-    title: breadcrumbs.title,
-    breadcrumbs: breadcrumbs.breadcrumbs,
-}
+BaseWithBreadCrumbs.args = { ...breadcrumbs }
 
 //  Banner with Buttons
 export const WithCTAButton = Template.bind({})
 WithCTAButton.args = {
-    title: breadcrumbs.title,
-    breadcrumbs: breadcrumbs.breadcrumbs,
+    ...breadcrumbs,
     children: (
         <ButtonCTA
             link='http://www.nooooooooooooooo.com/'
             target='blank'
-            text='Join the darkside'
+            text='Join the Lightside'
         />
     ),
 }
@@ -44,8 +39,7 @@ WithCTAButton.args = {
 //  Banner with Multiple Buttons
 export const WithMultipleButtons = Template.bind({})
 WithMultipleButtons.args = {
-    title: breadcrumbs.title,
-    breadcrumbs: breadcrumbs.breadcrumbs,
+    ...breadcrumbs,
     children: (
         <p>
             <ButtonCTA
@@ -56,7 +50,7 @@ WithMultipleButtons.args = {
             <ButtonCTA
                 link='http://www.nooooooooooooooo.com/'
                 target='blank'
-                text='Join the darkside'
+                text='Join the Lightside'
             />
         </p>
     ),
@@ -64,14 +58,25 @@ WithMultipleButtons.args = {
 
 //  Hero Image Banner
 const heroimage = getVariation('heroimage', variations)
-export const HeroImageBanner = Template.bind({})
-HeroImageBanner.args = {
-    title: heroimage.title,
-    imageUrl: heroimage.imageUrl,
-    children: (
-        <ButtonCTA
-            link='https://www.youtube.com/watch?v=lrYPm6DD44M'
-            text='Learn about Ravens'
-        />
-    ),
-}
+export const HeroImage = Template.bind({})
+HeroImage.args = { ...heroimage }
+
+//  Hero Image Dark
+const heroimageDark = getVariation('heroimageDark', variations)
+export const HeroImageDark = Template.bind({})
+HeroImageDark.args = { ...heroimageDark }
+
+//  Hero Image Light
+const heroimageLight = getVariation('heroimageLight', variations)
+export const HeroImageLight = Template.bind({})
+HeroImageLight.args = { ...heroimageLight }
+
+//  Hero Image Top
+const heroimageTop = getVariation('heroimageTop', variations)
+export const HeroImageTop = Template.bind({})
+HeroImageTop.args = { ...heroimageTop }
+
+//  Hero Image Bottom
+const heroimageBottom = getVariation('heroimageBottom', variations)
+export const HeroImageBottom = Template.bind({})
+HeroImageBottom.args = { ...heroimageBottom }
