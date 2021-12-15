@@ -4,8 +4,8 @@ import BannerBreadcrumbs from './components/BannerBreadcumbs'
 
 interface BannerProps {
     title: string
-    breadcrumbs: { link: string; title: string }[]
-    children: React.ReactNode
+    breadcrumbs?: { link: string; title: string }[]
+    children?: React.ReactNode
     imageUrl?: string
     imagePosition?: 'top' | 'bottom'
     brightness?: 'light' | 'dark'

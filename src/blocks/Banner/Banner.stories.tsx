@@ -20,8 +20,8 @@ Base.args = { ...base }
 
 //  Banner with Breadcrumbs
 const breadcrumbs = getVariation('breadcrumbs', variations)
-export const BaseWithBreadCrumbs = Template.bind({})
-BaseWithBreadCrumbs.args = { ...breadcrumbs }
+export const WithBreadCrumbs = Template.bind({})
+WithBreadCrumbs.args = { ...breadcrumbs }
 
 //  Banner with Buttons
 export const WithCTAButton = Template.bind({})

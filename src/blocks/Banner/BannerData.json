@@ -10,6 +10,7 @@
         {
             "type": "breadcrumbs",
             "title": "Banner with Breadcrumbs",
+            "url": "with-bread-crumbs",
             "breadcrumbs": [
                 {
                     "title": "Home",
@@ -28,29 +29,34 @@
         {
             "type": "heroimage",
             "title": "Hero Image",
+            "url": "hero-image",
             "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
         },
         {
             "type": "heroimageLight",
-            "title": "Hero Image lightened ",
+            "title": "Hero Image lightened",
+            "url": "hero-image-light",
             "brightness": "light",
             "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
         },
         {
             "type": "heroimageDark",
             "title": "Hero image darkened",
+            "url": "hero-image-dark",
             "brightness": "dark",
             "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
         },
         {
             "type": "heroimageTop",
             "imagePosition": "top",
+            "url": "hero-image-top",
             "title": "Hero image aligned to the top",
             "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
         },
         {
             "type": "heroimageBottom",
             "imagePosition": "bottom",
+            "url": "hero-image-bottom",
             "title": "Hero image aligned to the bottom",
             "imageUrl": "https://cu-raven.s3.amazonaws.com/assets/img/photos/nevermore.jpg"
         }
