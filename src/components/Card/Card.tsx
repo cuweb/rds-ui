@@ -6,9 +6,15 @@ export interface CardProps {
     aProp?: string
     figureItemType?: string
     image?: HTMLImageElement
-    h3Prop: React.ElementType
-    description?: React.ElementType
-    date?: Date
+    imageLoading?: 'eager' | 'lazy' | undefined
+    h3ItemProp?: string
+    h3Title?: string
+    descriptionItemProp?: string
+    descriptionTitle?: string
+    dateTime?: string
+    dateItemProp?: string
+    dateContent?: string | undefined
+    dateTitle?: string
     span?: boolean
     svg?: boolean
     figureCaptionTitle?: string
@@ -21,9 +27,15 @@ const Card: React.FC<CardProps> = ({
     aProp,
     figureItemType,
     image,
-    h3Prop,
-    description,
-    date,
+    imageLoading,
+    h3ItemProp,
+    h3Title,
+    descriptionItemProp,
+    descriptionTitle,
+    dateTime,
+    dateItemProp,
+    dateContent,
+    dateTitle,
     span,
     svg,
     figureCaptionTitle,
@@ -53,7 +65,7 @@ const Card: React.FC<CardProps> = ({
                         <img
                             src={image.src}
                             alt={image.alt}
-                            loading={image.loading}
+                            loading={imageLoading}
                         />
                     )}
                     {figureCaptionTitle && (
@@ -61,22 +73,14 @@ const Card: React.FC<CardProps> = ({
                     )}
                 </figure>
                 <header>
-                    {date && (
-                        <time
-                            dateTime={date.dateTime}
-                            itemProp={date.itemProp}
-                            content={date.content}
-                        >
-                            {date.title}
+                    {dateItemProp && (
+                        <time dateTime={dateTime} itemProp={dateItemProp}>
+                            {dateTitle}
                         </time>
                     )}
-                    {h3Prop && (
-                        <h3 itemProp={h3Prop.itemProp}>{h3Prop.title}</h3>
-                    )}
-                    {description && (
-                        <p itemProp={description.itemProp}>
-                            {description.title}
-                        </p>
+                    {h3ItemProp && <h3 itemProp={h3ItemProp}>{h3Title}</h3>}
+                    {descriptionItemProp && (
+                        <p itemProp={descriptionItemProp}>{descriptionTitle}</p>
                     )}
                 </header>
             </a>
@@ -89,9 +93,9 @@ const Card: React.FC<CardProps> = ({
                             {figureCaptionTitle && (
                                 <figcaption>{figureCaptionTitle}</figcaption>
                             )}
-                            {description && (
-                                <p itemProp={description.itemProp}>
-                                    {description.title}
+                            {descriptionItemProp && (
+                                <p itemProp={descriptionItemProp}>
+                                    {descriptionTitle}
                                 </p>
                             )}
                         </figure>
@@ -101,9 +105,9 @@ const Card: React.FC<CardProps> = ({
                         {figureCaptionTitle && (
                             <figcaption>{figureCaptionTitle}</figcaption>
                         )}
-                        {description && (
-                            <p itemProp={description.itemProp}>
-                                {description.title}
+                        {descriptionItemProp && (
+                            <p itemProp={descriptionItemProp}>
+                                {descriptionTitle}
                             </p>
                         )}
                     </figure>

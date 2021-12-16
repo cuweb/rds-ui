@@ -10,13 +10,11 @@
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
-                "alt": "Read more about White-necked Raven",
-                "loading": "lazy"
+                "alt": "Read more about White-necked Raven"
             },
-            "h3Prop": {
-                "itemProp": "name",
-                "title": "White-necked Raven"
-            }
+            "imageLoading": "lazy",
+            "h3ItemProp": "name",
+            "h3Title": "White-necked Raven"
         },
         {
             "type": "cardWithTitleAndDescription",
@@ -26,17 +24,13 @@
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
-                "alt": "Read more about White-necked Raven",
-                "loading": "lazy"
+                "alt": "Read more about White-necked Raven"
             },
-            "h3Prop": {
-                "itemProp": "name",
-                "title": "White-necked Raven"
-            },
-            "description": {
-                "itemProp": "description",
-                "title": "The white-necked raven is smaller than the common raven, the thick-billed raven."
-            }
+            "imageLoading":"lazy",
+            "h3ItemProp": "name",
+            "h3Title": "White-necked Raven",
+            "descriptionItemProp": "description",
+            "descriptionTitle": "The white-necked raven is smaller than the common raven, the thick-billed raven."
         },
         {
             "type": "newsVariantWithDate",
@@ -46,19 +40,14 @@
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
-                "alt": "Read more about We knew ravens are smart. But not this smart",
-                "loading": "lazy"
+                "alt": "Read more about We knew ravens are smart. But not this smart"
             },
-            "h3Prop": {
-                "itemProp": "headline",
-                "title": "We knew ravens are smart. But not this smart"
-            },
-            "date": {
-                "dateTime":"2018-03-11",
-                "itemProp":"datePublished",
-                "content":"2018-03-11",
-                "title": "Sunday, March 11th"
-            }
+            "imageLoading":"lazy",
+            "h3ItemProp": "headline",
+            "h3Title": "We knew ravens are smart. But not this smart",
+            "dateTime":"2018-03-11",
+            "dateItemProp":"datePublished",
+            "dateTitle": "Sunday, March 11th"
         },
         {
             "type": "newsVariantWithDateAndDescription",
@@ -68,23 +57,17 @@
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
-                "alt": "Read more about We knew ravens are smart.",
-                "loading": "lazy"
+                "alt": "Read more about We knew ravens are smart."
             },
-            "h3Prop": {
-                "itemProp": "headline",
-                "title": "We knew ravens are smart."
-            },
-            "date": {
-                "dateTime":"2018-03-11",
-                "itemProp":"datePublished",
-                "content":"2018-03-11",
-                "title": "Sunday, March 11th"
-            },
-            "description": {
-                "itemProp": "description",
-                "title": "The birds are surprisingly skilled at planning how to get food in the future."
-            }
+            "imageLoading":"lazy",
+            "h3ItemProp": "headline",
+            "h3Title": "We knew ravens are smart.",
+            "dateTime":"2018-03-11",
+            "dateItemProp":"datePublished",
+            "dateTitle": "Sunday, March 11th",
+            "descriptionItemProp": "description",
+            "descriptionTitle": "The birds are surprisingly skilled at planning how to get food in the future."
+
         },
         {
             "type": "videoVariant",
@@ -94,13 +77,11 @@
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
-                "alt": "Read more about Amazing Raven intelligence",
-                "loading": "lazy"
+                "alt": "Read more about Amazing Raven intelligence"
             },
-            "h3Prop": {
-                "itemProp": "name",
-                "title": "Amazing Raven intelligence"
-            },
+            "imageLoading":"lazy",
+            "h3ItemProp": "name",
+            "h3Title": "Amazing Raven intelligence",
             "span": true,
             "svg": true
         },
@@ -112,17 +93,14 @@
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://www.fillmurray.com/500/500",
-                "alt": "Read more about Bill Murray",
-                "loading": "lazy"
+                "alt": "Read more about Bill Murray"
             },
-            "h3Prop": {
-                "itemProp": "name",
-                "title": "Bill Murray"
-            },
-            "description": {
-                "itemProp": "description",
-                "title": "Actor and Writer"
-            }
+            "imageLoading":"lazy",
+            "h3ItemProp": "name",
+            "h3Title": "Bill Murray",
+            "descriptionItemProp": "description",
+            "descriptionTitle": "Actor and Writer"
+
         },
         {
             "type": "figureVariant",
@@ -156,17 +134,14 @@
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://dummyimage.com/768x300/eee/222.gif",
-                "alt": "Read more about Max-width card",
-                "loading": "lazy"
+                "alt": "Read more about Max-width card"
             },
-            "h3Prop": {
-                "itemProp": "name",
-                "title": "Max-width card"
-            },
-            "description": {
-                "itemProp": "description",
-                "title": "Usually, cards are used in 3 and 4 column grid blocks to control their size. You can use them outside a grid, but they need to be in a small width block and their image dimensions need to be 768x300px."
-            }
+            "imageLoading":"lazy",
+            "h3ItemProp": "name",
+            "h3Title": "Max-width card",
+            "descriptionItemProp": "description",
+            "descriptionTitle": "Usually, cards are used in 3 and 4 column grid blocks to control their size. You can use them outside a grid, but they need to be in a small width block and their image dimensions need to be 768x300px."
+
         }
     ]
 }

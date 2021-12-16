@@ -19,7 +19,9 @@ BaseCard.args = {
     aProp: baseCard.aProp,
     figureItemType: baseCard.figureItemType,
     image: baseCard.image,
-    h3Prop: baseCard.h3Prop
+    imageLoading: baseCard.imageLoading,
+    h3ItemProp: baseCard.h3ItemProp,
+    h3Title: baseCard.h3Title
 }
 
 export const CardWithTitleAndDescription = Template.bind({})
@@ -30,8 +32,11 @@ CardWithTitleAndDescription.args = {
     aProp: cardWithTitleAndDescription.aProp,
     figureItemType: cardWithTitleAndDescription.figureItemType,
     image: cardWithTitleAndDescription.image,
-    h3Prop: cardWithTitleAndDescription.h3Prop,
-    description: cardWithTitleAndDescription.description
+    imageLoading: cardWithTitleAndDescription.imageLoading,
+    h3ItemProp: cardWithTitleAndDescription.h3ItemProp,
+    h3Title: cardWithTitleAndDescription.h3Title,
+    descriptionItemProp: cardWithTitleAndDescription.descriptionItemProp,
+    descriptionTitle: cardWithTitleAndDescription.descriptionTitle
 }
 
 export const NewsVariantWithDate = Template.bind({})
@@ -42,8 +47,12 @@ NewsVariantWithDate.args = {
     aProp: newsVariantWithDate.aProp,
     figureItemType: newsVariantWithDate.figureItemType,
     image: newsVariantWithDate.image,
-    h3Prop: newsVariantWithDate.h3Prop,
-    date: newsVariantWithDate.date
+    imageLoading: newsVariantWithDate.imageLoading,
+    h3ItemProp: newsVariantWithDate.h3ItemProp,
+    h3Title: newsVariantWithDate.h3Title,
+    dateTime: newsVariantWithDate.dateTime,
+    dateItemProp: newsVariantWithDate.dateItemProp,
+    dateTitle: newsVariantWithDate.dateTitle
 }
 
 export const NewsVariantWithDateAndDescription = Template.bind({})
@@ -54,9 +63,14 @@ NewsVariantWithDateAndDescription.args = {
     aProp: newsVariantWithDateAndDescription.aProp,
     figureItemType: newsVariantWithDateAndDescription.figureItemType,
     image: newsVariantWithDateAndDescription.image,
-    h3Prop: newsVariantWithDateAndDescription.h3Prop,
-    date: newsVariantWithDateAndDescription.date,
-    description: newsVariantWithDateAndDescription.description
+    imageLoading: newsVariantWithDateAndDescription.imageLoading,
+    h3ItemProp: newsVariantWithDateAndDescription.h3ItemProp,
+    h3Title: newsVariantWithDateAndDescription.h3Title,
+    dateTime: newsVariantWithDateAndDescription.dateTime,
+    dateItemProp: newsVariantWithDateAndDescription.dateItemProp,
+    dateTitle: newsVariantWithDateAndDescription.dateTitle,
+    descriptionItemProp: cardWithTitleAndDescription.descriptionItemProp,
+    descriptionTitle: cardWithTitleAndDescription.descriptionTitle
 }
 
 
@@ -68,7 +82,9 @@ VideoVariant.args = {
     aProp: videoVariant.aProp,
     figureItemType: videoVariant.figureItemType,
     image: videoVariant.image,
-    h3Prop: videoVariant.h3Prop,
+    imageLoading: videoVariant.imageLoading,
+    h3ItemProp: videoVariant.h3ItemProp,
+    h3Title: videoVariant.h3Title,
     span: videoVariant.span,
     svg: videoVariant.svg
 }
@@ -81,8 +97,11 @@ PeopleVariant.args = {
     aProp: peopleVariant.aProp,
     figureItemType: peopleVariant.figureItemType,
     image: peopleVariant.image,
-    h3Prop: peopleVariant.h3Prop,
-    description: peopleVariant.description
+    imageLoading: peopleVariant.imageLoading,
+    h3ItemProp: peopleVariant.h3ItemProp,
+    h3Title: peopleVariant.h3Title,
+    descriptionItemProp: cardWithTitleAndDescription.descriptionItemProp,
+    descriptionTitle: cardWithTitleAndDescription.descriptionTitle
 }
 
 export const FigureVariant = Template.bind({})
@@ -113,6 +132,9 @@ MaxWidthVariant.args = {
     aProp: maxWidthVariant.aProp,
     figureItemType: maxWidthVariant.figureItemType,
     image: maxWidthVariant.image,
-    h3Prop: maxWidthVariant.h3Prop,
-    description: maxWidthVariant.description
+    imageLoading: maxWidthVariant.imageLoading,
+    h3ItemProp: maxWidthVariant.h3ItemProp,
+    h3Title: maxWidthVariant.h3Title,
+    descriptionItemProp: cardWithTitleAndDescription.descriptionItemProp,
+    descriptionTitle: cardWithTitleAndDescription.descriptionTitle
 }
