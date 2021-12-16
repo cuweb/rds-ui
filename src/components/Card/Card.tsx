@@ -3,14 +3,16 @@ import React from 'react'
 export interface CardProps {
     articleClassName?: string
     articleItemType: string
-    aProp: any
-    figureItemType: string
-    image: any
-    h3Prop: any
-    description?: any
-    date?: any
+    aProp?: string
+    figureItemType?: string
+    image?: HTMLImageElement
+    h3Prop: React.ElementType
+    description?: React.ReactNode
+    date?: Date
     span?: boolean
     svg?: boolean
+    figureCaptionTitle?: string
+    figureVariant?: boolean
 }
 
 const Card: React.FC<CardProps> = ({
@@ -24,14 +26,12 @@ const Card: React.FC<CardProps> = ({
     date,
     span,
     svg,
-}): JSX.Element => {
-    return (
-        <article
-            className={articleClassName}
-            itemScope
-            itemType={articleItemType}
-        >
-            <a href={aProp.href} itemProp={aProp.itemProp}>
+    figureCaptionTitle,
+    figureVariant,
+}): JSX.Element => (
+    <article className={articleClassName} itemScope itemType={articleItemType}>
+        {!figureVariant ? (
+            <a href={aProp} itemProp='url'>
                 <figure itemScope itemType={figureItemType}>
                     {span && (
                         <span
@@ -49,11 +49,16 @@ const Card: React.FC<CardProps> = ({
                             )}
                         </span>
                     )}
-                    <img
-                        src={image.src}
-                        alt={image.alt}
-                        loading={image.loading}
-                    />
+                    {image && (
+                        <img
+                            src={image.src}
+                            alt={image.alt}
+                            loading={image.loading}
+                        />
+                    )}
+                    {figureCaptionTitle && (
+                        <figcaption>{figureCaptionTitle}</figcaption>
+                    )}
                 </figure>
                 <header>
                     {date && (
@@ -65,7 +70,9 @@ const Card: React.FC<CardProps> = ({
                             {date.title}
                         </time>
                     )}
-                    <h3 itemProp={h3Prop.itemProp}>{h3Prop.title}</h3>
+                    {h3Prop && (
+                        <h3 itemProp={h3Prop.itemProp}>{h3Prop.title}</h3>
+                    )}
                     {description && (
                         <p itemProp={description.itemProp}>
                             {description.title}
@@ -73,7 +80,36 @@ const Card: React.FC<CardProps> = ({
                     )}
                 </header>
             </a>
-        </article>
-    )
-}
+        ) : (
+            // eslint-disable-next-line react/jsx-no-useless-fragment
+            <>
+                {aProp ? (
+                    <a href={aProp} itemProp='url'>
+                        <figure>
+                            {figureCaptionTitle && (
+                                <figcaption>{figureCaptionTitle}</figcaption>
+                            )}
+                            {description && (
+                                <p itemProp={description.itemProp}>
+                                    {description.title}
+                                </p>
+                            )}
+                        </figure>
+                    </a>
+                ) : (
+                    <figure>
+                        {figureCaptionTitle && (
+                            <figcaption>{figureCaptionTitle}</figcaption>
+                        )}
+                        {description && (
+                            <p itemProp={description.itemProp}>
+                                {description.title}
+                            </p>
+                        )}
+                    </figure>
+                )}
+            </>
+        )}
+    </article>
+)
 export default Card

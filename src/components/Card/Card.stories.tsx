@@ -84,15 +84,35 @@ PeopleVariant.args = {
     h3Prop: peopleVariant.h3Prop,
     description: peopleVariant.description
 }
-{/*
-
-
-
 
 export const FigureVariant = Template.bind({})
-
+const figureVariant = getVariation('figureVariant', variations)
+FigureVariant.args = {
+    articleClassName: figureVariant.articleClassName,
+    articleItemType: figureVariant.articleItemType,
+    aProp: figureVariant.aProp,
+    description: figureVariant.description,
+    figureCaptionTitle: figureVariant.figureCaptionTitle,
+    figureVariant: figureVariant.figureVariant
+}
 export const FigureVariantWithoutLink = Template.bind({})
+const figureVariantWithoutLink = getVariation('figureVariantWithoutLink', variations)
+FigureVariantWithoutLink.args = {
+    articleClassName: figureVariantWithoutLink.articleClassName,
+    articleItemType: figureVariantWithoutLink.articleItemType,
+    description: figureVariantWithoutLink.description,
+    figureCaptionTitle: figureVariantWithoutLink.figureCaptionTitle,
+    figureVariant: figureVariant.figureVariant
+}
 
 export const MaxWidthVariant = Template.bind({})
-*/}
-
+const maxWidthVariant = getVariation('maxWidthVariant', variations)
+MaxWidthVariant.args = {
+    articleClassName: maxWidthVariant.articleClassName,
+    articleItemType: maxWidthVariant.articleItemType,
+    aProp: maxWidthVariant.aProp,
+    figureItemType: maxWidthVariant.figureItemType,
+    image: maxWidthVariant.image,
+    h3Prop: maxWidthVariant.h3Prop,
+    description: maxWidthVariant.description
+}

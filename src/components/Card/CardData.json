@@ -6,10 +6,7 @@
             "type": "base",
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
-            "aProp": {
-                "href": "https://bit.ly/2kaI1Ll",
-                "itemProp": "url"
-            },
+            "aProp": "https://bit.ly/2kaI1Ll",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
@@ -25,10 +22,7 @@
             "type": "cardWithTitleAndDescription",
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
-            "aProp": {
-                "href": "https://bit.ly/2kaI1Ll",
-                "itemProp": "url"
-            },
+            "aProp": "https://bit.ly/2kaI1Ll",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
@@ -48,10 +42,7 @@
             "type": "newsVariantWithDate",
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
-            "aProp": {
-                "href": "https://bit.ly/2E6yTwZ",
-                "itemProp": "url"
-            },
+            "aProp": "https://bit.ly/2E6yTwZ",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
@@ -73,10 +64,7 @@
             "type": "newsVariantWithDateAndDescription",
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
-            "aProp": {
-                "href": "https://bit.ly/2E6yTwZ",
-                "itemProp": "url"
-            },
+            "aProp": "https://bit.ly/2E6yTwZ",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
@@ -102,10 +90,7 @@
             "type": "videoVariant",
             "articleClassName": "c-card c-card--video",
             "articleItemType": "http://schema.org/VideoObject",
-            "aProp": {
-                "href": "https://www.youtube.com/watch?v=lrYPm6DD44M",
-                "itemProp": "url"
-            },
+            "aProp": "https://www.youtube.com/watch?v=lrYPm6DD44M",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
@@ -123,10 +108,7 @@
             "type": "peopleVariant",
             "articleClassName": "c-card c-card--people",
             "articleItemType": "http://schema.org/Person",
-            "aProp": {
-                "href": "https://en.wikipedia.org/wiki/Bill_Murray",
-                "itemProp": "url"
-            },
+            "aProp": "https://en.wikipedia.org/wiki/Bill_Murray",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://www.fillmurray.com/500/500",
@@ -140,6 +122,50 @@
             "description": {
                 "itemProp": "description",
                 "title": "Actor and Writer"
+            }
+        },
+        {
+            "type": "figureVariant",
+            "articleClassName": "c-card c-card--figure",
+            "articleItemType": "http://schema.org/QuantitativeValue",
+            "aProp": "https://goravens.ca",
+            "description": {
+                "itemProp": "value",
+                "title": "15"
+            },
+            "figureCaptionTitle": "U-Sports Titles",
+            "figureVariant": true
+        },
+        {
+            "type": "figureVariantWithoutLink",
+            "articleClassName": "c-card c-card--figure",
+            "articleItemType": "http://schema.org/QuantitativeValue",
+            "description": {
+                "itemProp": "value",
+                "title": "15"
+            },
+            "figureCaptionTitle": "U-Sports Titles",
+            "figureVariant": true
+
+        },
+        {
+            "type": "maxWidthVariant",
+            "articleClassName": "c-card",
+            "articleItemType": "http://schema.org/Article",
+            "aProp": "https://news.nationalgeographic.com/2017/07/ravens-problem-solving-smart-birds/",
+            "figureItemType": "http://schema.org/ImageObject",
+            "image": {
+                "src": "https://dummyimage.com/768x300/eee/222.gif",
+                "alt": "Read more about Max-width card",
+                "loading": "lazy"
+            },
+            "h3Prop": {
+                "itemProp": "name",
+                "title": "Max-width card"
+            },
+            "description": {
+                "itemProp": "description",
+                "title": "Usually, cards are used in 3 and 4 column grid blocks to control their size. You can use them outside a grid, but they need to be in a small width block and their image dimensions need to be 768x300px."
             }
         }
     ]
