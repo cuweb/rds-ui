@@ -1,3 +1,7 @@
+//
+// NOTE: To build the stories, run 'node buildStories.js' in your terminal
+//
+
 import React from 'react'
 import icons from '@src/lib/icons'
 
@@ -17,7 +21,10 @@ const Icon: React.FC<IconProps> = ({
     className = '',
 }): JSX.Element => {
     if (svg) return svg
-    const iconPath: string = getIcon(icon)!.path
+    const iconPath: string | undefined = getIcon(icon)?.path
+
+    if (!iconPath) return <div>No Icon found.</div>
+
     return (
         <svg
             className={`c-icon ${className}`}
