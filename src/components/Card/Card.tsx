@@ -1,13 +1,13 @@
 import React from 'react'
 
 export interface CardProps {
-    articleClassName?: string
+    articleClassName: string
     articleItemType: string
     aProp?: string
     figureItemType?: string
     image?: HTMLImageElement
     h3Prop: React.ElementType
-    description?: React.ReactNode
+    description?: React.ElementType
     date?: Date
     span?: boolean
     svg?: boolean
