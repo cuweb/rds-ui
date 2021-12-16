@@ -1,7 +1,7 @@
 import React from 'react'
 import icons from '@src/lib/icons'
 
-interface IconProps {
+export interface IconProps {
     icon: string
     size?: number
     svg?: React.ReactElement
@@ -17,7 +17,7 @@ const Icon: React.FC<IconProps> = ({
     className = '',
 }): JSX.Element => {
     if (svg) return svg
-    const iconPath: any = getIcon(icon)?.path
+    const iconPath: string = getIcon(icon)!.path
     return (
         <svg
             className={`c-icon ${className}`}
