@@ -3,6 +3,10 @@
     "classname": ".c-icon",
     "variations": [
         {
+            "title": "Accessibility",
+            "icon": "accessibility"
+        },
+        {
             "title": "Alert",
             "icon": "alert"
         },

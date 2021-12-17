@@ -42,7 +42,7 @@ const Alert: React.FC<AlertProps> = ({
                         aria-hidden='true'
                         onClick={(e: never) => handleClose(e)}
                     >
-                        <Icon icon='x' size={12} />
+                        <Icon icon='X' size={12} />
                     </span>
                 </button>
             )}

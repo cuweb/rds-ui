@@ -1,12 +1,18 @@
-import React from 'react'
-import IconPath from './IconPath'
+//
+// NOTE: To build the stories, run 'node buildStories.js' in your terminal
+//
 
-interface IconProps {
+import React from 'react'
+import icons from '@src/lib/icons'
+
+export interface IconProps {
     icon: string
     size?: number
     svg?: React.ReactElement
     className?: string
 }
+
+const getIcon = (type: string) => icons.find((icon) => icon.type === type)
 
 const Icon: React.FC<IconProps> = ({
     icon,
@@ -15,6 +21,9 @@ const Icon: React.FC<IconProps> = ({
     className = '',
 }): JSX.Element => {
     if (svg) return svg
+    const iconPath: string | undefined = getIcon(icon)?.path
+
+    if (!iconPath) return <div>No Icon found.</div>
 
     return (
         <svg
@@ -25,7 +34,7 @@ const Icon: React.FC<IconProps> = ({
             xmlns='http://www.w3.org/2000/svg'
             aria-hidden='true'
         >
-            <IconPath icon={icon} />
+            <g dangerouslySetInnerHTML={{ __html: iconPath }} />
         </svg>
     )
 }
