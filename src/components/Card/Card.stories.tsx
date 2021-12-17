@@ -100,8 +100,8 @@ PeopleVariant.args = {
     imageLoading: peopleVariant.imageLoading,
     h3ItemProp: peopleVariant.h3ItemProp,
     h3Title: peopleVariant.h3Title,
-    descriptionItemProp: cardWithTitleAndDescription.descriptionItemProp,
-    descriptionTitle: cardWithTitleAndDescription.descriptionTitle
+    descriptionItemProp: peopleVariant.descriptionItemProp,
+    descriptionTitle: peopleVariant.descriptionTitle
 }
 
 export const FigureVariant = Template.bind({})
