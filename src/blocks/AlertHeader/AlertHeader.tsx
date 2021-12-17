@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Ublock from '@src/components/Ublock/Ublock'
 import Icon from '@src/components/Icon/Icon'
+import { getCookie, setCookie } from '@src/functions/useCookies'
 
 export interface AlertHeaderProps {
     title: string
@@ -11,9 +12,16 @@ const AlertHeader: React.FC<AlertHeaderProps> = ({
     title,
     description,
 }): JSX.Element => {
-    const [isClose, setIsClose] = useState(false)
+    const cookieName = 'calerton-cookies-banner'
+    const isClosed = getCookie(cookieName)
+    const [hidden, setHidden] = useState(false)
+    const closeAlert = () => {
+        setHidden(true)
+        setCookie(cookieName, 'closed', 365)
+    }
 
-    if (isClose) return <div />
+    if (isClosed || hidden) return <div className='visually-hidden' />
+
     return (
         <Ublock alert>
             <div className='b-alertheader'>
@@ -28,7 +36,7 @@ const AlertHeader: React.FC<AlertHeaderProps> = ({
             <button
                 aria-label='Close alert'
                 type='button'
-                onClick={() => setIsClose(true)}
+                onClick={closeAlert}
                 data-close
             >
                 <Icon icon='X' />
