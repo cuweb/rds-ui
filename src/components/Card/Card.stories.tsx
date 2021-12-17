@@ -121,7 +121,7 @@ FigureVariantWithoutLink.args = {
     articleItemType: figureVariantWithoutLink.articleItemType,
     description: figureVariantWithoutLink.description,
     figureCaptionTitle: figureVariantWithoutLink.figureCaptionTitle,
-    figureVariant: figureVariant.figureVariant
+    figureVariant: figureVariantWithoutLink.figureVariant
 }
 
 export const MaxWidthVariant = Template.bind({})
@@ -135,6 +135,6 @@ MaxWidthVariant.args = {
     imageLoading: maxWidthVariant.imageLoading,
     h3ItemProp: maxWidthVariant.h3ItemProp,
     h3Title: maxWidthVariant.h3Title,
-    descriptionItemProp: cardWithTitleAndDescription.descriptionItemProp,
-    descriptionTitle: cardWithTitleAndDescription.descriptionTitle
+    descriptionItemProp: maxWidthVariant.descriptionItemProp,
+    descriptionTitle: maxWidthVariant.descriptionTitle
 }
