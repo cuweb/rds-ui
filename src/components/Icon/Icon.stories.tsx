@@ -139,8 +139,8 @@ Compass.args = { icon: 'compass' }
 export const CreditCard = Template.bind({})
 CreditCard.args = { icon: 'credit-card' }
  
-export const Cushield = Template.bind({})
-Cushield.args = { icon: 'cushield' }
+export const CuShield = Template.bind({})
+CuShield.args = { icon: 'cushield' }
  
 export const Dash = Template.bind({})
 Dash.args = { icon: 'dash' }
@@ -349,6 +349,12 @@ MailRead.args = { icon: 'mail-read' }
 export const Map = Template.bind({})
 Map.args = { icon: 'map' }
  
+export const MarkRanvensWhite = Template.bind({})
+MarkRanvensWhite.args = { icon: 'mark-ravens-white' }
+ 
+export const MarkRavens = Template.bind({})
+MarkRavens.args = { icon: 'mark-ravens' }
+ 
 export const Mark360 = Template.bind({})
 Mark360.args = { icon: 'mark-360' }
  
@@ -357,9 +363,6 @@ MarkCushield.args = { icon: 'mark-cushield' }
  
 export const MarkGithub = Template.bind({})
 MarkGithub.args = { icon: 'mark-github' }
- 
-export const MarkRavens = Template.bind({})
-MarkRavens.args = { icon: 'mark-ravens' }
  
 export const Megaphone = Template.bind({})
 Megaphone.args = { icon: 'megaphone' }
