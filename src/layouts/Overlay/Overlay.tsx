@@ -1,8 +1,18 @@
 import React from 'react'
 
-// TODO: FIX TYPE
-const Overlay = (props: never) => {
-    const { type, className, children, isHidden = true } = props
+export interface OverlayProps {
+    type: string
+    className?: string | undefined
+    children: React.ReactNode
+    isHidden?: boolean
+}
+
+const Overlay: React.FC<OverlayProps> = ({
+    type,
+    className,
+    children,
+    isHidden,
+}): JSX.Element => {
     const typeClassName = type ? `modal__${type}` : ''
     const customClassName = className || ''
     const visuallyClass = isHidden ? 'u-visually-hidden' : ''

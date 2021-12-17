@@ -1,4 +1,5 @@
 import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import TextImage from './TextImage'
 import getVariation from '../../functions/getVariation'
 import data from './TextImageData.json'
@@ -8,10 +9,10 @@ const { title, variations } = data
 export default {
     component: TextImage,
     title: `Blocks/${title}`,
-}
+} as Meta
 
-const Template: React.FC = (args: any) => <TextImage {...args} />
-const GroupTemplate: React.FC = (args: any) => {
+const Template: Story = (args: any) => <TextImage {...args} />
+const GroupTemplate: Story = (args: any) => {
     return (
         <>
             <TextImage {...args.primary} />

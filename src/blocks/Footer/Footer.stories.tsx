@@ -1,16 +1,17 @@
 import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import getVariation from '@src/functions/getVariation'
 import Footer from './Footer'
 import data from './FooterData.json'
 
-const { title, variations } = data
+const { variations } = data
 
 export default {
-    component: title,
-    title: `Blocks/${title}`,
-}
+    component: Footer,
+    title: `Blocks/Footer`,
+} as Meta
 
-const Template: React.FC = (args: any) => <Footer {...args} />
+const Template: Story = (args: any) => <Footer {...args} />
 
 //  Brand Footer
 export const Brand = Template.bind({})

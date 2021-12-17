@@ -1,18 +1,20 @@
+import React from 'react'
 import Alert from './Alert'
+import { Meta, Story } from '@storybook/react'
 
 export default {
     component: Alert,
     title: 'Components/Alert',
-}
+} as Meta
 
-const Template = (args) => <Alert {...args} />
+const Template: Story = (args: any) => <Alert {...args} />
 
 export const Error = Template.bind({})
 Error.args = {
     type: 'error',
     title: 'Error Alert',
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e) => alert('test'),
+    handleClose: (e: any) => alert('test'),
 }
 
 export const Information = Template.bind({})
