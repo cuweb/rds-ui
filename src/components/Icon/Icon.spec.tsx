@@ -2,7 +2,7 @@ import icons from '../../lib/icons'
 
 describe('Icon', () => {
     beforeEach(() => {
-        cy.global() // running the global state test commands before each test
+        cy.global()
     })
 
     icons.map((variation) => {
