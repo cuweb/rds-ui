@@ -19,13 +19,15 @@ ${getCamelCase(item.title)}.args = { icon: '${item.type}' }
 fs.writeFile(
     `Icon.stories.tsx`,
     `import Icon from './Icon'
-
+import React from 'react'
+import { Meta, Story } from '@storybook/react'
+    
 export default {
     component: Icon,
     title: 'Components/Icon',
-}
+} as Meta
     
-const Template = (args) => <Icon {...args} size={42} />
+const Template: Story = (args: any) => <Icon {...args} size={42} />
 ${stories.toString()}
 
     `,

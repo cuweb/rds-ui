@@ -1,17 +1,18 @@
 import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import getVariation from '@src/functions/getVariation'
 import Banner from './Banner'
 import data from './BannerData.json'
 import ButtonCTA from '@src/components/ButtonCTA/ButtonCTA'
 
-const { title, variations } = data
+const { variations } = data
 
 export default {
-    component: title,
-    title: `Blocks/${title}`,
-}
+    component: Banner,
+    title: `Blocks/Banner`,
+} as Meta
 
-const Template: React.FC = (args: any) => <Banner {...args} />
+const Template: Story = (args: any) => <Banner {...args} />
 
 //  Base Banner
 const base = getVariation('base', variations)

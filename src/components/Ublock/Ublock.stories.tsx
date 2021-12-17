@@ -1,4 +1,5 @@
 import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import getVariation from '../../functions/getVariation'
 import Ublock from './Ublock'
 import data from './UblockData.json'
@@ -6,13 +7,16 @@ import data from './UblockData.json'
 const { title, variations } = data
 
 export default {
-    component: title,
+    component: Ublock,
     title: `Components/${title}`,
-}
+} as Meta
 
-const Template = (args) => (
+const Template: Story = (args: any) => (
     <Ublock {...args}>
-        <p>This is Simple block, an example of a basic block for learning purposes.</p>
+        <p>
+            This is Simple block, an example of a basic block for learning
+            purposes.
+        </p>
     </Ublock>
 )
 
