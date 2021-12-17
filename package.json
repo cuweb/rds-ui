@@ -10,7 +10,6 @@
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
-    "type": "module",
     "scripts": {
         "start": "yarn build && start-storybook -p 6006",
         "dev": "rollup -c && (yarn watch & start-storybook -p 6006 --no-manager-cache)",
