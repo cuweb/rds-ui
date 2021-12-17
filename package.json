@@ -15,7 +15,7 @@
         "start": "yarn build && start-storybook -p 6006",
         "dev": "rollup -c && (yarn watch & start-storybook -p 6006 --no-manager-cache)",
         "watch": "rollup -c -w",
-        "build": "yarn lint && rollup -c && yarn build:docs",
+        "build": "yarn lint && rollup -c",
         "build:docs": "build-storybook -o ./docs/storybook",
         "lint": "eslint src/**/*.tsx",
         "test": "yarn dev & cypress open",
