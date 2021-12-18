@@ -110,7 +110,8 @@ FigureVariant.args = {
     articleClassName: figureVariant.articleClassName,
     articleItemType: figureVariant.articleItemType,
     aProp: figureVariant.aProp,
-    description: figureVariant.description,
+    descriptionItemProp: figureVariant.descriptionItemProp,
+    descriptionTitle: figureVariant.descriptionTitle,
     figureCaptionTitle: figureVariant.figureCaptionTitle,
     figureVariant: figureVariant.figureVariant
 }
@@ -119,7 +120,8 @@ const figureVariantWithoutLink = getVariation('figureVariantWithoutLink', variat
 FigureVariantWithoutLink.args = {
     articleClassName: figureVariantWithoutLink.articleClassName,
     articleItemType: figureVariantWithoutLink.articleItemType,
-    description: figureVariantWithoutLink.description,
+    descriptionItemProp: figureVariantWithoutLink.descriptionItemProp,
+    descriptionTitle: figureVariantWithoutLink.descriptionTitle,
     figureCaptionTitle: figureVariantWithoutLink.figureCaptionTitle,
     figureVariant: figureVariantWithoutLink.figureVariant
 }

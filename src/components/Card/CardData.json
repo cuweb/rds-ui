@@ -107,10 +107,8 @@
             "articleClassName": "c-card c-card--figure",
             "articleItemType": "http://schema.org/QuantitativeValue",
             "aProp": "https://goravens.ca",
-            "description": {
-                "itemProp": "value",
-                "title": "15"
-            },
+            "descriptionItemProp": "value",
+            "descriptionTitle": "15",
             "figureCaptionTitle": "U-Sports Titles",
             "figureVariant": true
         },
@@ -118,10 +116,8 @@
             "type": "figureVariantWithoutLink",
             "articleClassName": "c-card c-card--figure",
             "articleItemType": "http://schema.org/QuantitativeValue",
-            "description": {
-                "itemProp": "value",
-                "title": "15"
-            },
+            "descriptionItemProp": "value",
+            "descriptionTitle": "15",
             "figureCaptionTitle": "U-Sports Titles",
             "figureVariant": true
 
