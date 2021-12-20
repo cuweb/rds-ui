@@ -2,23 +2,22 @@
 // ---------------
 
 @import 'alertaside/alertaside';
-@import 'alertheader/alertheader';
+@import '../..//blocks/AlertHeader/AlertHeader.scss';
 @import '../../blocks/Banner/Banner.scss';
 @import 'cardgrid/cardgrid';
 @import 'content/content';
 @import 'details/details';
 @import 'form/form';
 @import 'form/flatpickr';
-@import 'footerbrand/footerbrand';
-@import 'footersimple/footersimple';
-@import 'footersitemap/footersitemap';
+@import '../../blocks/Footer/components/FooterBrand.scss';
+@import '../../blocks/Footer/components/FooterSimple.scss';
+@import '../../blocks/Footer/components/FooterSitemap.scss';
 @import 'globalnav/globalnav';
 @import 'imgfull/imgfull';
 @import 'listing/listing';
 @import 'login/login';
-@import 'masthead/masthead';
+@import '../../blocks/Masthead/Masthead.scss';
 @import 'menu/menu';
-// @import 'search/search';
 @import 'sidebar/sidebar';
-@import 'textimg/textimg';
+@import '../../blocks/TextImage/TextImage.scss';
 @import 'timeline/timeline';
