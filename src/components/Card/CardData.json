@@ -4,64 +4,68 @@
     "variations": [
         {
             "type": "base",
+            "cardType": "default",
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
-            "aProp": "https://bit.ly/2kaI1Ll",
+            "articleProp": "https://bit.ly/2kaI1Ll",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
                 "alt": "Read more about White-necked Raven"
             },
             "imageLoading": "lazy",
-            "h3ItemProp": "name",
-            "h3Title": "White-necked Raven"
+            "header3ItemProp": "name",
+            "header3Title": "White-necked Raven"
         },
         {
             "type": "cardWithTitleAndDescription",
+            "cardType": "default",
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
-            "aProp": "https://bit.ly/2kaI1Ll",
+            "articleProp": "https://bit.ly/2kaI1Ll",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
                 "alt": "Read more about White-necked Raven"
             },
             "imageLoading":"lazy",
-            "h3ItemProp": "name",
-            "h3Title": "White-necked Raven",
+            "header3ItemProp": "name",
+            "header3Title": "White-necked Raven",
             "descriptionItemProp": "description",
             "descriptionTitle": "The white-necked raven is smaller than the common raven, the thick-billed raven."
         },
         {
             "type": "newsVariantWithDate",
+            "cardType": "default",
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
-            "aProp": "https://bit.ly/2E6yTwZ",
+            "articleProp": "https://bit.ly/2E6yTwZ",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
                 "alt": "Read more about We knew ravens are smart. But not this smart"
             },
             "imageLoading":"lazy",
-            "h3ItemProp": "headline",
-            "h3Title": "We knew ravens are smart. But not this smart",
+            "header3ItemProp": "headline",
+            "header3Title": "We knew ravens are smart. But not this smart",
             "dateTime":"2018-03-11",
             "dateItemProp":"datePublished",
             "dateTitle": "Sunday, March 11th"
         },
         {
             "type": "newsVariantWithDateAndDescription",
+            "cardType": "default",
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
-            "aProp": "https://bit.ly/2E6yTwZ",
+            "articleProp": "https://bit.ly/2E6yTwZ",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
                 "alt": "Read more about We knew ravens are smart."
             },
             "imageLoading":"lazy",
-            "h3ItemProp": "headline",
-            "h3Title": "We knew ravens are smart.",
+            "header3ItemProp": "headline",
+            "header3Title": "We knew ravens are smart.",
             "dateTime":"2018-03-11",
             "dateItemProp":"datePublished",
             "dateTitle": "Sunday, March 11th",
@@ -71,74 +75,72 @@
         },
         {
             "type": "videoVariant",
+            "cardType": "default",
             "articleClassName": "c-card c-card--video",
             "articleItemType": "http://schema.org/VideoObject",
-            "aProp": "https://www.youtube.com/watch?v=lrYPm6DD44M",
+            "articleProp": "https://www.youtube.com/watch?v=lrYPm6DD44M",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
                 "alt": "Read more about Amazing Raven intelligence"
             },
             "imageLoading":"lazy",
-            "h3ItemProp": "name",
-            "h3Title": "Amazing Raven intelligence",
+            "header3ItemProp": "name",
+            "header3Title": "Amazing Raven intelligence",
             "span": true,
             "svg": true
         },
         {
             "type": "peopleVariant",
+            "cardType": "default",
             "articleClassName": "c-card c-card--people",
             "articleItemType": "http://schema.org/Person",
-            "aProp": "https://en.wikipedia.org/wiki/Bill_Murray",
+            "articleProp": "https://en.wikipedia.org/wiki/Bill_Murray",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://www.fillmurray.com/500/500",
                 "alt": "Read more about Bill Murray"
             },
             "imageLoading":"lazy",
-            "h3ItemProp": "name",
-            "h3Title": "Bill Murray",
+            "header3ItemProp": "name",
+            "header3Title": "Bill Murray",
             "descriptionItemProp": "description",
             "descriptionTitle": "Actor and Writer"
 
         },
         {
             "type": "figureVariant",
+            "cardType": "figureVariantWithLink",
             "articleClassName": "c-card c-card--figure",
             "articleItemType": "http://schema.org/QuantitativeValue",
-            "aProp": "https://goravens.ca",
-            "description": {
-                "itemProp": "value",
-                "title": "15"
-            },
-            "figureCaptionTitle": "U-Sports Titles",
-            "figureVariant": true
+            "articleProp": "https://goravens.ca",
+            "descriptionItemProp": "value",
+            "descriptionTitle": "15",
+            "figureCaptionTitle": "U-Sports Titles"
         },
         {
             "type": "figureVariantWithoutLink",
+            "cardType": "figureVariantWithoutLink",
             "articleClassName": "c-card c-card--figure",
             "articleItemType": "http://schema.org/QuantitativeValue",
-            "description": {
-                "itemProp": "value",
-                "title": "15"
-            },
-            "figureCaptionTitle": "U-Sports Titles",
-            "figureVariant": true
-
+            "descriptionItemProp": "value",
+            "descriptionTitle": "15",
+            "figureCaptionTitle": "U-Sports Titles"
         },
         {
             "type": "maxWidthVariant",
+            "cardType": "default",
             "articleClassName": "c-card",
             "articleItemType": "http://schema.org/Article",
-            "aProp": "https://news.nationalgeographic.com/2017/07/ravens-problem-solving-smart-birds/",
+            "articleProp": "https://news.nationalgeographic.com/2017/07/ravens-problem-solving-smart-birds/",
             "figureItemType": "http://schema.org/ImageObject",
             "image": {
                 "src": "https://dummyimage.com/768x300/eee/222.gif",
                 "alt": "Read more about Max-width card"
             },
             "imageLoading":"lazy",
-            "h3ItemProp": "name",
-            "h3Title": "Max-width card",
+            "header3ItemProp": "name",
+            "header3Title": "Max-width card",
             "descriptionItemProp": "description",
             "descriptionTitle": "Usually, cards are used in 3 and 4 column grid blocks to control their size. You can use them outside a grid, but they need to be in a small width block and their image dimensions need to be 768x300px."
 
