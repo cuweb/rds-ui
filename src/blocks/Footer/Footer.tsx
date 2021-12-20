@@ -4,7 +4,7 @@ import FooterSimple from './components/FooterSimple'
 import FooterSitemap from './components/FooterSitemap'
 
 export interface FooterProps {
-    type: 'brand' | 'simple' | 'sitemap'
+    type?: 'brand' | 'simple' | 'sitemap'
     name: string
     address: string
 }
@@ -20,6 +20,6 @@ const Footer: React.FC<FooterProps> = (props): JSX.Element => {
         sitemap: <FooterSitemap />,
     }
 
-    return footerTypes[props.type]
+    return footerTypes[props.type || 'brand']
 }
 export default Footer
