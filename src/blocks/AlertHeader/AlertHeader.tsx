@@ -12,12 +12,12 @@ const AlertHeader: React.FC<AlertHeaderProps> = ({
     title,
     description,
 }): JSX.Element => {
-    const cookieName = 'calerton-cookies-banner'
+    const cookieName = `calerton-cookies-banner`
     const isClosed = getCookie(cookieName)
     const [hidden, setHidden] = useState(false)
     const closeAlert = () => {
         setHidden(true)
-        setCookie(cookieName, 'closed', 365)
+        setCookie(cookieName, 'closed', 30)
     }
 
     if (isClosed === 'closed' || hidden)
