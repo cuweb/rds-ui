@@ -1,6 +1,6 @@
-describe('ContentTable', () => {
+describe('Table', () => {
     const types = [
-        'table-component',
+        'tables',
     ]
 
     types.map((type) => {
@@ -8,7 +8,7 @@ describe('ContentTable', () => {
             cy.visit(
                 `${Cypress.env(
                     'baseUrl'
-                )}/iframe.html?id=components-card--${type}`
+                )}/iframe.html?id=components-table--${type}`
             )
             cy.get(`table`).should('exist')
         })
@@ -19,7 +19,7 @@ describe('ContentTable', () => {
             cy.visit(
                 `${Cypress.env(
                     'baseUrl'
-                )}/iframe.html?id=components-contenttable--${type}`
+                )}/iframe.html?id=components-table--${type}`
             )
             cy.get(`thead`).should('exist')
         })
@@ -30,7 +30,7 @@ describe('ContentTable', () => {
             cy.visit(
                 `${Cypress.env(
                     'baseUrl'
-                )}/iframe.html?id=components-contenttable--${type}`
+                )}/iframe.html?id=components-table--${type}`
             )
             cy.get(`tr`).should('exist')
         })
@@ -41,7 +41,7 @@ describe('ContentTable', () => {
             cy.visit(
                 `${Cypress.env(
                     'baseUrl'
-                )}/iframe.html?id=components-contenttable--${type}`
+                )}/iframe.html?id=components-table--${type}`
             )
             cy.get(`th`).should('exist')
         })
@@ -52,7 +52,7 @@ describe('ContentTable', () => {
             cy.visit(
                 `${Cypress.env(
                     'baseUrl'
-                )}/iframe.html?id=components-contenttable--${type}`
+                )}/iframe.html?id=components-table--${type}`
             )
             cy.get(`tbody`).should('exist')
         })
@@ -63,7 +63,7 @@ describe('ContentTable', () => {
             cy.visit(
                 `${Cypress.env(
                     'baseUrl'
-                )}/iframe.html?id=components-contenttable--${type}`
+                )}/iframe.html?id=components-table--${type}`
             )
             cy.get(`td`).should('exist')
         })
