@@ -20,7 +20,8 @@ const AlertHeader: React.FC<AlertHeaderProps> = ({
         setCookie(cookieName, 'closed', 365)
     }
 
-    if (isClosed || hidden) return <div className='visually-hidden' />
+    if (isClosed === 'closed' || hidden)
+        return <div className='visually-hidden' />
 
     return (
         <Ublock alert>

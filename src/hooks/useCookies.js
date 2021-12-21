@@ -1,5 +1,6 @@
 /* eslint-disable no-plusplus */
 export const getCookie = (cname) => {
+    if (typeof window === 'undefined') return false
     const name = `${cname}=`
     const decodedCookie = decodeURIComponent(document.cookie)
     const ca = decodedCookie.split(';')

@@ -1,6 +1,6 @@
 {
     "name": "@marceloglacial/rds-beta",
-    "version": "0.7.0",
+    "version": "0.7.1",
     "author": "Carleton University",
     "license": "MIT",
     "repository": {
@@ -10,7 +10,6 @@
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
-    "type": "module",
     "scripts": {
         "start": "start-storybook -p 6006 --ci",
         "dev": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --no-manager-cache)",
@@ -18,10 +17,8 @@
         "build": "rm -rf dist && yarn lint && rollup -c",
         "build:docs": "build-storybook -o ./docs/storybook",
         "lint": "eslint src/**/*.tsx",
-        "test": "yarn dev & cypress open",
-        "test:ci": "yarn dev & cypress run --headless",
-        "test:firefox": "yarn dev & cypress run --headless --browser firefox",
-        "test:edge": "yarn dev & cypress run --headless --browser edge"
+        "test": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --no-manager-cache & cypress open)",
+        "test:ci": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --ci & cypress run --headless)"
     },
     "np": {
         "publish": false,
@@ -46,7 +43,7 @@
         "@whitespace/storybook-addon-html": "^5.0.0",
         "autoprefixer": "^10.4.0",
         "babel-loader": "^8.2.2",
-        "cypress": "^9.1.1",
+        "cypress": "^9.2.0",
         "eslint": "^8.3.0",
         "eslint-config-airbnb": "^19.0.2",
         "eslint-config-prettier": "^8.3.0",
