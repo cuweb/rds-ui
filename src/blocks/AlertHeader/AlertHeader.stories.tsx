@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
 import AlertHeader from './AlertHeader'
-import { removeCookie } from '@src/functions/useCookies'
+import { removeCookie } from '@src/hooks/useCookies'
 
 export default {
     component: AlertHeader,
