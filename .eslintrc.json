@@ -22,9 +22,11 @@
     "plugins": [
         "react",
         "@typescript-eslint",
-        "react-hooks"
+        "react-hooks",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": "off",
         "react/no-danger": "off",
         "react/require-default-props": "off", // DISCUSS
         "react/jsx-props-no-spreading": "off",

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Ublock from '@src/components/Ublock/Ublock'
 import Icon from '@src/components/Icon/Icon'
-import { getCookie, setCookie } from '@src/functions/useCookies'
+import { getCookie, setCookie } from '@src/hooks/useCookies'
 
 export interface AlertHeaderProps {
     title: string
