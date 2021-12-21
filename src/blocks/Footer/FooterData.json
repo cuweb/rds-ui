@@ -16,7 +16,10 @@
                 "address": "123 Dunton Tower",
                 "map": "http://carleton.ca/map",
                 "contact": "http://carleton.ca/contact",
-                "days": "Monday-Friday",
+                "email": "email@carleton.ca",
+                "phone": "613-520-2600",
+                "fax": "613-520-2600",
+                "days": "Monday-Saturday",
                 "hours": {
                     "start": "8:30 am",
                     "end": "4:30 pm"

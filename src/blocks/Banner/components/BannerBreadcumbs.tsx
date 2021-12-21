@@ -2,9 +2,13 @@ import React from 'react'
 
 interface BannerBreadcrumbsProps {
     links: { link: string; title: string }[]
+    title: string
 }
 
-const BannerBreadcrumbs: React.FC<BannerBreadcrumbsProps> = ({ links }): JSX.Element => {
+const BannerBreadcrumbs: React.FC<BannerBreadcrumbsProps> = ({
+    links,
+    title,
+}): JSX.Element => {
     const list = links.map((item) => (
         <li itemProp='breadcrumb' key={item.title}>
             <a href={item.link}>{item.title}</a>
@@ -15,6 +19,13 @@ const BannerBreadcrumbs: React.FC<BannerBreadcrumbsProps> = ({ links }): JSX.Ele
         <nav aria-label='breadcrumb'>
             <ol itemScope itemType='http://schema.org/BreadcrumbList'>
                 {list}
+                <li
+                    className='u-visually-hidden'
+                    itemProp='breadcrumb'
+                    aria-current='page'
+                >
+                    {title}
+                </li>
             </ol>
         </nav>
     )

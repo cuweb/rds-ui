@@ -8,9 +8,12 @@ export interface AlertProps {
     handleClose?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
 }
 
-const Alert: React.FC<AlertProps> = ({ type, title, content, handleClose }): JSX.Element => {
-    const renderType = type || 'error'
-
+const Alert: React.FC<AlertProps> = ({
+    type = 'error',
+    title,
+    content,
+    handleClose,
+}): JSX.Element => {
     const icon = {
         error: 'alert',
         info: 'info',
@@ -19,26 +22,27 @@ const Alert: React.FC<AlertProps> = ({ type, title, content, handleClose }): JSX
     }
 
     return (
-        <div className={`c-alert c-alert--${renderType}`} role={renderType}>
+        <div className={`c-alert c-alert--${type}`} role={type}>
             <Icon
                 icon={icon[type || 'error']}
                 size={30}
-                className={`c-alert__icon c-alert__icon--${renderType}`}
+                className={`c-alert__icon c-alert__icon--${type}`}
             />
-            <h2>{title || 'Please add a title'}</h2>
+            <h2 dangerouslySetInnerHTML={{ __html: title }} />
             {content && <p dangerouslySetInnerHTML={{ __html: content }} />}
             {handleClose && (
-                <button aria-label='Close alert' type='button' data-close>
+                <button
+                    className={`c-alert__button c-alert__button--${type}`}
+                    aria-label='Close alert'
+                    type='button'
+                    data-close
+                >
                     <span
                         className='u-icon'
                         aria-hidden='true'
                         onClick={(e: never) => handleClose(e)}
                     >
-                        <Icon
-                            icon='x'
-                            size={12}
-                            className={`c-alert__button c-alert__button--${renderType}`}
-                        />
+                        <Icon icon='X' size={12} />
                     </span>
                 </button>
             )}
