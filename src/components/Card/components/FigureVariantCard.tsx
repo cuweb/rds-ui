@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 
 export interface FigureVariantCardProps {
     link?: string
@@ -8,7 +8,12 @@ export interface FigureVariantCardProps {
 
 const LinkWrapper = (props) => {
     const { link, children } = props
-    if (link) return <a href={link}>{children}</a>
+    if (link)
+        return (
+            <a href={link} itemProp='url'>
+                {children}
+            </a>
+        )
     return children
 }
 
