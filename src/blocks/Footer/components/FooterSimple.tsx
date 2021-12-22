@@ -2,7 +2,7 @@ import React from 'react'
 import Ublock from '@src/components/Ublock/Ublock'
 import ButtonSocial from '@src/components/ButtonSocial/ButtonSocial'
 
-interface FooterSimpleProps {
+export interface FooterSimpleProps {
     name: string
     address: string
     email?: string
@@ -13,6 +13,12 @@ interface FooterSimpleProps {
     end?: string
     phone?: string
     fax?: string
+}
+
+export interface SocialButtonsProps {
+    url: string
+    text: string
+    type: string
 }
 
 const FooterSimple: React.FC<FooterSimpleProps> = ({
@@ -27,7 +33,7 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
     phone,
     fax,
 }): JSX.Element => {
-    const socialButtons = [
+    const socialButtons: SocialButtonsProps[] = [
         {
             type: 'facebook',
             url: 'https://www.facebook.com/carletonuniversity',

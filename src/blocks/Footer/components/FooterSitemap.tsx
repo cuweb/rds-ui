@@ -3,8 +3,14 @@ import Ublock from '@src/components/Ublock/Ublock'
 import Icon from '@src/components/Icon/Icon'
 import ButtonSocial from '@src/components/ButtonSocial/ButtonSocial'
 
+export interface SocialButtonsProps {
+    url: string
+    text: string
+    type: string
+}
+
 const FooterSitemap: React.FC = (): JSX.Element => {
-    const socialButtons = [
+    const socialButtons: SocialButtonsProps[] = [
         {
             type: 'facebook',
             url: 'https://www.facebook.com/carletonuniversity',
