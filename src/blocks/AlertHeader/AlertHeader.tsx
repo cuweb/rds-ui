@@ -20,30 +20,34 @@ const AlertHeader: React.FC<AlertHeaderProps> = ({
         setCookie(cookieName, 'closed', 30)
     }
 
-    if (isClosed === 'closed' || hidden)
-        return <div className='visually-hidden' />
-
-    return (
-        <Ublock alert>
-            <div className='b-alertheader'>
-                <div className='c-alert c-alert--error' role='alert'>
-                    <Icon icon='alert' size={50} />
-                    <h2 dangerouslySetInnerHTML={{ __html: title }} />
-                    {description && (
-                        <p dangerouslySetInnerHTML={{ __html: description }} />
-                    )}
+    if (isClosed !== 'closed' || !hidden)
+        return (
+            <Ublock alert>
+                <div className='b-alertheader'>
+                    <div className='c-alert c-alert--error' role='alert'>
+                        <Icon icon='alert' size={50} />
+                        <h2 dangerouslySetInnerHTML={{ __html: title }} />
+                        {description && (
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: description,
+                                }}
+                            />
+                        )}
+                    </div>
                 </div>
-            </div>
-            <button
-                aria-label='Close alert'
-                type='button'
-                onClick={closeAlert}
-                data-close
-            >
-                <Icon icon='X' />
-            </button>
-        </Ublock>
-    )
+                <button
+                    aria-label='Close alert'
+                    type='button'
+                    onClick={closeAlert}
+                    data-close
+                >
+                    <Icon icon='X' />
+                </button>
+            </Ublock>
+        )
+
+    return <div className='visually-hidden' />
 }
 
 export default AlertHeader
