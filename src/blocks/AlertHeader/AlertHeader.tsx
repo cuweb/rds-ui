@@ -5,14 +5,18 @@ import Icon from '@src/components/Icon/Icon'
 export interface AlertHeaderProps {
     title: string
     description?: string | undefined
-    onClick: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
+    handleClose: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
+    isHidden?: boolean
 }
 
 const AlertHeader: React.FC<AlertHeaderProps> = ({
     title,
     description,
-    onClick,
-}): JSX.Element => {
+    handleClose,
+    isHidden,
+}): JSX.Element | null => {
+    if (isHidden) return null
+
     return (
         <Ublock alert>
             <div className='b-alertheader'>
@@ -31,7 +35,7 @@ const AlertHeader: React.FC<AlertHeaderProps> = ({
             <button
                 aria-label='Close alert'
                 type='button'
-                onClick={(e: never) => onClick(e)}
+                onClick={(e: never) => handleClose(e)}
                 data-close
             >
                 <Icon icon='X' />
