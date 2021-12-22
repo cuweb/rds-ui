@@ -6,8 +6,8 @@ export interface TableProps {
 }
 
 const Table: React.FC<TableProps> = ({ columns, rows }): JSX.Element => {
-    const ths = columns.map((column) => <th>{column}</th>)
-    const tds = rows.map((row) => (
+    const tableColumn = columns.map((column) => <th>{column}</th>)
+    const tableRow = rows.map((row) => (
         <tr>
             {row.map((r) => (
                 <td>{r}</td>
@@ -17,9 +17,9 @@ const Table: React.FC<TableProps> = ({ columns, rows }): JSX.Element => {
     return (
         <table>
             <thead>
-                <tr>{ths}</tr>
+                <tr>{tableColumn}</tr>
             </thead>
-            <tbody>{tds}</tbody>
+            <tbody>{tableRow}</tbody>
         </table>
     )
 }
