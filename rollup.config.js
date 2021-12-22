@@ -27,7 +27,7 @@ export default {
         commonjs(),
         typescript({ useTsconfigDeclarationDir: true }),
         scss({
-            watch: 'src',
+            watch: 'src/**/*.scss',
             output: 'dist/rds.css',
             outputStyle: 'compressed',
             processor: () => postcss([autoprefixer()]),
