@@ -1,39 +1,41 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import BaseCard from './components/BaseCard'
 import FigureVariantCard from './components/FigureVariantCard'
-import MaxWidthVariantCard from './components/MaxWidthVariantCard'
 import NewsVariantCard from './components/NewsVariantCard'
 import PeopleVariantCard from './components/PeopleVariantCard'
 import VideoVariantCard from './components/VideoVariantCard'
 
 export interface CardProps {
-    cardType:
-        | 'base'
-        | 'newsVariant'
-        | 'videoVariant'
-        | 'peopleVariant'
-        | 'figureVariant'
-        | 'maxWidthVariant'
+    type: 'base' | 'news' | 'video' | 'people' | 'figure'
     link: string
-    src: string
-    alt: string
     header: string
     description: string
-    dateTime: string
+    time: string
     date: string
     caption: string
+    image: ImageProps
+}
+
+export interface ImageProps {
+    src: string
+    alt: string
+}
+
+export interface TypeProps {
+    [index: string]: ReactElement
 }
 
 const Card: React.FC<CardProps> = (props): JSX.Element => {
-    const { cardType } = props
+    const { type } = props
 
-    if (cardType === 'base') return <BaseCard {...props} />
-    if (cardType === 'newsVariant') return <NewsVariantCard {...props} />
-    if (cardType === 'videoVariant') return <VideoVariantCard {...props} />
-    if (cardType === 'peopleVariant') return <PeopleVariantCard {...props} />
-    if (cardType === 'figureVariant') return <FigureVariantCard {...props} />
-    if (cardType === 'maxWidthVariant') return <MaxWidthVariantCard {...props} />
-    return <>No Card</>
+    const cardTypes: TypeProps = {
+        base: <BaseCard {...props} />,
+        news: <NewsVariantCard {...props} />,
+        video: <VideoVariantCard {...props} />,
+        people: <PeopleVariantCard {...props} />,
+        figure: <FigureVariantCard {...props} />,
+    }
+    return cardTypes[type || 'base']
 }
 
 export default Card

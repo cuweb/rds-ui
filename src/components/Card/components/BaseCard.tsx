@@ -2,23 +2,26 @@ import React from 'react'
 
 export interface BaseCardProps {
     link: string
-    src: string
-    alt: string
     header: string
     description?: string
+    image: ImageProps
+}
+
+export interface ImageProps {
+    src: string
+    alt: string
 }
 
 const BaseCard: React.FC<BaseCardProps> = ({
     link,
-    src,
-    alt,
     header,
     description,
+    image,
 }): JSX.Element => (
     <article className='c-card' itemScope itemType='http://schema.org/Article'>
         <a href={link} itemProp='url'>
             <figure itemScope itemType='http://schema.org/ImageObject'>
-                <img src={src} alt={alt} loading='lazy' />
+                <img src={image.src} alt={image.alt} loading='lazy' />
             </figure>
             <header>
                 <h3
