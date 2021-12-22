@@ -6,6 +6,9 @@ import Banner from './blocks/Banner/Banner'
 import ButtonCTA from './components/ButtonCTA/ButtonCTA'
 import ButtonSocial from './components/ButtonSocial/ButtonSocial'
 import Footer from './blocks/Footer/Footer'
+import FooterBrand from './blocks/Footer/components/FooterBrand'
+import FooterSimple from './blocks/Footer/components/FooterSimple'
+import FooterSitemap from './blocks/Footer/components/FooterSitemap'
 import Icon from './components/Icon/Icon'
 import Layout from './layouts/Layout/Layout'
 import Logo from './components/Logo/Logo'
@@ -24,6 +27,9 @@ export {
     ButtonCTA,
     ButtonSocial,
     Footer,
+    FooterBrand,
+    FooterSimple,
+    FooterSitemap,
     Icon,
     Layout,
     Logo,
