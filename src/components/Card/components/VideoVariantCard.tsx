@@ -2,15 +2,18 @@ import React from 'react'
 
 export interface VideoVariantCardProps {
     link: string
+    image: ImageProps
+    header: string
+}
+
+export interface ImageProps {
     src: string
     alt: string
-    header: string
 }
 
 const VideoVariantCard: React.FC<VideoVariantCardProps> = ({
     link,
-    src,
-    alt,
+    image,
     header,
 }): JSX.Element => (
     <article
@@ -20,7 +23,7 @@ const VideoVariantCard: React.FC<VideoVariantCardProps> = ({
     >
         <a href={link} itemProp='url'>
             <figure itemScope itemType='http://schema.org/ImageObject'>
-                <img src={src} alt={alt} loading='lazy' />
+                <img src={image.src} alt={image.alt} loading='lazy' />
                 <span className='u-icon u-icon--circle' aria-hidden='true'>
                     <svg
                         viewBox='0 0 24 24'

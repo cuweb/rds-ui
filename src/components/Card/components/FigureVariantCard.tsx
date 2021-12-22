@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { Children } from 'react'
 
 export interface FigureVariantCardProps {
     link?: string
     description: string
     caption: string
+}
+
+const LinkWrapper = (props) => {
+    const { link, children } = props
+    if (link) return <a href={link}>{children}</a>
+    return children
 }
 
 const FigureVariantCard: React.FC<FigureVariantCardProps> = ({
@@ -16,17 +22,7 @@ const FigureVariantCard: React.FC<FigureVariantCardProps> = ({
         itemScope
         itemType='http://schema.org/QuantitativeValue'
     >
-        {link ? (
-            <a href={link} itemProp='url'>
-                <figure>
-                    <figcaption>{caption}</figcaption>
-                    <p
-                        itemProp='description'
-                        dangerouslySetInnerHTML={{ __html: description }}
-                    />
-                </figure>
-            </a>
-        ) : (
+        <LinkWrapper link={link}>
             <figure>
                 <figcaption>{caption}</figcaption>
                 <p
@@ -34,7 +30,7 @@ const FigureVariantCard: React.FC<FigureVariantCardProps> = ({
                     dangerouslySetInnerHTML={{ __html: description }}
                 />
             </figure>
-        )}
+        </LinkWrapper>
     </article>
 )
 export default FigureVariantCard

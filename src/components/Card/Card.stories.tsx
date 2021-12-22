@@ -16,8 +16,7 @@ const baseCard = getVariation('base', variations)
 BaseCard.args = {
     cardType: baseCard.cardType,
     link: baseCard.link,
-    src: baseCard.src,
-    alt: baseCard.src,
+    image: baseCard.image,
     header: baseCard.header
 }
 
@@ -26,8 +25,7 @@ const cardWithTitleAndDescription = getVariation('cardWithTitleAndDescription', 
 CardWithTitleAndDescription.args = {
     cardType: cardWithTitleAndDescription.cardType,
     link: cardWithTitleAndDescription.link,
-    src: cardWithTitleAndDescription.src,
-    alt: cardWithTitleAndDescription.src,
+    image: cardWithTitleAndDescription.image,
     header: cardWithTitleAndDescription.header,
     description: cardWithTitleAndDescription.description
 }
@@ -37,9 +35,8 @@ const newsVariantWithDate = getVariation('newsVariantWithDate', variations)
 NewsVariantWithDate.args = {
     cardType: newsVariantWithDate.cardType,
     link: newsVariantWithDate.link,
-    src: newsVariantWithDate.src,
-    alt: newsVariantWithDate.src,
-    dateTime: newsVariantWithDate.dateTime,
+    image: newsVariantWithDate.image,
+    time: newsVariantWithDate.time,
     date: newsVariantWithDate.date,
     header: newsVariantWithDate.header
 }
@@ -49,9 +46,8 @@ const newsVariantWithDateAndDescription = getVariation('newsVariantWithDateAndDe
 NewsVariantWithDateAndDescription.args = {
     cardType: newsVariantWithDateAndDescription.cardType,
     link: newsVariantWithDateAndDescription.link,
-    src: newsVariantWithDateAndDescription.src,
-    alt: newsVariantWithDateAndDescription.src,
-    dateTime: newsVariantWithDateAndDescription.dateTime,
+    image: newsVariantWithDateAndDescription.image,
+    time: newsVariantWithDateAndDescription.time,
     date: newsVariantWithDateAndDescription.date,
     header: newsVariantWithDateAndDescription.header,
     description: newsVariantWithDateAndDescription.description
@@ -63,8 +59,7 @@ const videoVariant = getVariation('videoVariant', variations)
 VideoVariant.args = {
     cardType: videoVariant.cardType,
     link: videoVariant.link,
-    src: videoVariant.src,
-    alt: videoVariant.src,
+    image: videoVariant.image,
     header: videoVariant.header
 }
 
@@ -73,8 +68,7 @@ const peopleVariant = getVariation('peopleVariant', variations)
 PeopleVariant.args = {
     cardType: peopleVariant.cardType,
     link: peopleVariant.link,
-    src: peopleVariant.src,
-    alt: peopleVariant.src,
+    image: peopleVariant.image,
     header: peopleVariant.header,
     description: peopleVariant.description
 }
@@ -100,8 +94,7 @@ const maxWidthVariant = getVariation('maxWidthVariant', variations)
 MaxWidthVariant.args = {
     cardType: maxWidthVariant.cardType,
     link: maxWidthVariant.link,
-    src: maxWidthVariant.src,
-    alt: maxWidthVariant.src,
+    image: maxWidthVariant.image,
     header: maxWidthVariant.header,
     description: maxWidthVariant.description
 }

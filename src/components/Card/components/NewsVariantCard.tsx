@@ -2,20 +2,23 @@ import React from 'react'
 
 export interface NewsVariantCardProps {
     link: string
-    src: string
-    alt: string
+    image: ImageProps
     header: string
-    dateTime: string
+    time: string
     date: string
     description?: string
 }
 
+export interface ImageProps {
+    src: string
+    alt: string
+}
+
 const NewsVariantCard: React.FC<NewsVariantCardProps> = ({
     link,
-    src,
-    alt,
+    image,
     header,
-    dateTime,
+    time,
     date,
     description,
 }): JSX.Element => (
@@ -26,10 +29,10 @@ const NewsVariantCard: React.FC<NewsVariantCardProps> = ({
     >
         <a href={link} itemProp='url'>
             <figure itemScope itemType='http://schema.org/ImageObject'>
-                <img src={src} alt={alt} loading='lazy' />
+                <img src={image.src} alt={image.alt} loading='lazy' />
             </figure>
             <header>
-                <time dateTime={dateTime} itemProp='datePublished'>
+                <time dateTime={time} itemProp='datePublished'>
                     {date}
                 </time>
                 <h3
