@@ -11,6 +11,7 @@ import FooterSimple from './blocks/Footer/components/FooterSimple'
 import FooterSitemap from './blocks/Footer/components/FooterSitemap'
 import Icon from './components/Icon/Icon'
 import Layout from './layouts/Layout/Layout'
+import LinkWrapper from './components/LinkWrapper/LinkWrapper'
 import Logo from './components/Logo/Logo'
 import Main from './layouts/Layout/Main'
 import Masthead from './blocks/Masthead/Masthead'
@@ -32,6 +33,7 @@ export {
     FooterSitemap,
     Icon,
     Layout,
+    LinkWrapper,
     Logo,
     Main,
     Masthead,
