@@ -31,7 +31,7 @@
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
                 "alt": "Read more about We knew ravens are smart. But not this smart"
             },
-            "time":"2018-03-11",
+            "date": "2018-03-11",
             "header": "We knew ravens are smart. But not this smart"
         },
         {
@@ -42,10 +42,9 @@
                 "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
                 "alt": "Read more about We knew ravens are smart."
             },
-            "time":"2018-03-11",
+            "date": "2018-03-11",
             "header": "We knew ravens are smart.",
             "description": "The birds are surprisingly skilled at planning how to get food in the future."
-
         },
         {
             "type": "videoVariant",
@@ -67,20 +66,19 @@
             },
             "header": "Bill Murray",
             "description": "Actor and Writer"
-
         },
         {
             "type": "figureVariant",
             "cardType": "figure",
             "link": "https://goravens.ca",
             "description": "15",
-            "caption":"U-Sports Titles"
+            "caption": "U-Sports Titles"
         },
         {
             "type": "figureVariantWithoutLink",
             "cardType": "figure",
             "description": "15",
-            "caption":"U-Sports Titles"
+            "caption": "U-Sports Titles"
         },
         {
             "type": "maxWidthVariant",

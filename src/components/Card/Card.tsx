@@ -10,7 +10,6 @@ export interface CardProps {
     link: string
     header: string
     description: string
-    time: string
     date: string
     caption: string
     image: ImageProps

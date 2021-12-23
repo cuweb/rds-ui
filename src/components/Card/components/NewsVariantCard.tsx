@@ -1,11 +1,11 @@
 import React from 'react'
-import convertData from '@src/functions/convertDate'
+import convertDate from '@src/functions/convertDate'
 
 export interface NewsVariantCardProps {
     link: string
     image: ImageProps
     header: string
-    time: string
+    date: string
     description?: string
 }
 
@@ -18,10 +18,10 @@ const NewsVariantCard: React.FC<NewsVariantCardProps> = ({
     link,
     image,
     header,
-    time,
+    date, // TODO: check TS content error
     description,
 }): JSX.Element => {
-    const date = convertData(time)
+    const longDate = convertDate(date)
     return (
         <article
             className='c-card'
@@ -33,8 +33,8 @@ const NewsVariantCard: React.FC<NewsVariantCardProps> = ({
                     <img src={image.src} alt={image.alt} loading='lazy' />
                 </figure>
                 <header>
-                    <time dateTime={time} itemProp='datePublished'>
-                        {date}
+                    <time dateTime={date} itemProp='datePublished'>
+                        {longDate}
                     </time>
                     <h3
                         itemProp='name'
