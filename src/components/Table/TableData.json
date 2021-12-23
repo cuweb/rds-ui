@@ -1,0 +1,11 @@
+{
+    "title": "Table",
+    "classname": ".table",
+    "variations": [
+        {
+            "type": "base",
+            "columns": ["Table header item", "Table header item"],
+            "rows": [["data", "data"], ["data", "data"], ["data", "data"]]
+        }
+    ]
+}
