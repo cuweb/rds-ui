@@ -7,16 +7,26 @@ export default {
     title: 'Main Concepts/Layouts/Overlay',
 }
 
-export const Default = (args) => {
+export const Default = () => {
     const [isHidden, setIsHidden] = useState(true)
     return (
         <div className='example'>
-            <button className='c-buttoncta' onClick={(e) => setIsHidden(!isHidden)}>
+            <button
+                className='c-buttoncta'
+                onClick={(e) => setIsHidden(!isHidden)}
+            >
                 Open Dialog
             </button>
-            <Overlay isHidden={isHidden} type='banner' className='custom__class'>
+            <Overlay
+                isHidden={isHidden}
+                type='banner'
+                className='custom__class'
+            >
                 <Banner title='Banner Dialog'>
-                    <button className='c-buttoncta' onClick={(e) => setIsHidden(!isHidden)}>
+                    <button
+                        className='c-buttoncta'
+                        onClick={(e) => setIsHidden(!isHidden)}
+                    >
                         Close Dialog
                     </button>
                 </Banner>

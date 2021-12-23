@@ -1,3 +1,5 @@
+import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import ButtonSocial from './ButtonSocial'
 import data from './ButtonSocialData.json'
 import getVariation from '@src/functions/getVariation'
@@ -5,11 +7,9 @@ import getVariation from '@src/functions/getVariation'
 export default {
     component: ButtonSocial,
     title: 'Components/Button Social',
-}
+} as Meta
 
-const Template = (args) => {
-    return <ButtonSocial {...args} />
-}
+const Template: Story = (args: any) => <ButtonSocial {...args} />
 
 export const Facebook = Template.bind({})
 Facebook.args = getVariation('facebook', data.variations)

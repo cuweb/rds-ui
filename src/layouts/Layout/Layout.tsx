@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Layout = (props: { children: React.ReactNode; type: string }) => {
+const Layout = (props: { children?: React.ReactNode; type?: string }) => {
     const { children, type } = props
     const styles = type ? `l-multicol l-multicol--${type}` : ''
 

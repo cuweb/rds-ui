@@ -1,3 +1,3 @@
 const getVariation = (type, variations) =>
-  variations.find((item) => item.type === type);
-export default getVariation;
+    variations.find((item) => item.type === type)
+export default getVariation

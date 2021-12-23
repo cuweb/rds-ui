@@ -1,13 +1,13 @@
+import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import ButtonCTA from './ButtonCTA'
 
 export default {
     component: ButtonCTA,
     title: 'Components/Button CTA',
-}
+} as Meta
 
-const Template = (args) => {
-    return <ButtonCTA {...args} />
-}
+const Template: Story = (args: any) => <ButtonCTA {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
