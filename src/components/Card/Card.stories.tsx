@@ -40,7 +40,6 @@ NewsVariantWithDate.args = {
     link: newsVariantWithDate.link,
     image: newsVariantWithDate.image,
     time: newsVariantWithDate.time,
-    date: newsVariantWithDate.date,
     header: newsVariantWithDate.header,
 }
 
@@ -54,7 +53,6 @@ NewsVariantWithDateAndDescription.args = {
     link: newsVariantWithDateAndDescription.link,
     image: newsVariantWithDateAndDescription.image,
     time: newsVariantWithDateAndDescription.time,
-    date: newsVariantWithDateAndDescription.date,
     header: newsVariantWithDateAndDescription.header,
     description: newsVariantWithDateAndDescription.description,
 }
