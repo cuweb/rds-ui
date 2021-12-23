@@ -6,6 +6,7 @@ import ButtonCTA from './components/ButtonCTA/ButtonCTA'
 import Footer from './blocks/Footer/Footer'
 import Icon from './components/Icon/Icon'
 import Layout from './layouts/Layout/Layout'
+import LinkWrapper from './components/LinkWrapper/LinkWrapper'
 import Main from './layouts/Layout/Main'
 import Masthead from './blocks/Masthead/Masthead'
 import Ublock from './components/Ublock/Ublock'
@@ -20,6 +21,7 @@ export {
     Footer,
     Icon,
     Layout,
+    LinkWrapper,
     Main,
     Masthead,
     Ublock,

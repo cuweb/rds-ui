@@ -1,20 +1,10 @@
 import React from 'react'
+import LinkWrapper from '@src/components/LinkWrapper/LinkWrapper'
 
 export interface FigureVariantCardProps {
     link?: string
     description: string
     caption: string
-}
-
-const LinkWrapper = (props) => {
-    const { link, children } = props
-    if (link)
-        return (
-            <a href={link} itemProp='url'>
-                {children}
-            </a>
-        )
-    return children
 }
 
 const FigureVariantCard: React.FC<FigureVariantCardProps> = ({
@@ -29,11 +19,8 @@ const FigureVariantCard: React.FC<FigureVariantCardProps> = ({
     >
         <LinkWrapper link={link}>
             <figure>
-                <figcaption>{caption}</figcaption>
-                <p
-                    itemProp='description'
-                    dangerouslySetInnerHTML={{ __html: description }}
-                />
+                <figcaption dangerouslySetInnerHTML={{ __html: caption }} />
+                <p itemProp='description'>{description}</p>
             </figure>
         </LinkWrapper>
     </article>

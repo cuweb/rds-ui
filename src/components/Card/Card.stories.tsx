@@ -14,87 +14,95 @@ const Template: React.FC = (args: any) => <Card {...args} />
 export const BaseCard = Template.bind({})
 const baseCard = getVariation('base', variations)
 BaseCard.args = {
-    cardType: baseCard.cardType,
+    type: baseCard.cardType,
     link: baseCard.link,
     image: baseCard.image,
-    header: baseCard.header
+    header: baseCard.header,
 }
 
 export const CardWithTitleAndDescription = Template.bind({})
-const cardWithTitleAndDescription = getVariation('cardWithTitleAndDescription', variations)
+const cardWithTitleAndDescription = getVariation(
+    'cardWithTitleAndDescription',
+    variations
+)
 CardWithTitleAndDescription.args = {
-    cardType: cardWithTitleAndDescription.cardType,
+    type: cardWithTitleAndDescription.cardType,
     link: cardWithTitleAndDescription.link,
     image: cardWithTitleAndDescription.image,
     header: cardWithTitleAndDescription.header,
-    description: cardWithTitleAndDescription.description
+    description: cardWithTitleAndDescription.description,
 }
 
 export const NewsVariantWithDate = Template.bind({})
 const newsVariantWithDate = getVariation('newsVariantWithDate', variations)
 NewsVariantWithDate.args = {
-    cardType: newsVariantWithDate.cardType,
+    type: newsVariantWithDate.cardType,
     link: newsVariantWithDate.link,
     image: newsVariantWithDate.image,
     time: newsVariantWithDate.time,
     date: newsVariantWithDate.date,
-    header: newsVariantWithDate.header
+    header: newsVariantWithDate.header,
 }
 
 export const NewsVariantWithDateAndDescription = Template.bind({})
-const newsVariantWithDateAndDescription = getVariation('newsVariantWithDateAndDescription', variations)
+const newsVariantWithDateAndDescription = getVariation(
+    'newsVariantWithDateAndDescription',
+    variations
+)
 NewsVariantWithDateAndDescription.args = {
-    cardType: newsVariantWithDateAndDescription.cardType,
+    type: newsVariantWithDateAndDescription.cardType,
     link: newsVariantWithDateAndDescription.link,
     image: newsVariantWithDateAndDescription.image,
     time: newsVariantWithDateAndDescription.time,
     date: newsVariantWithDateAndDescription.date,
     header: newsVariantWithDateAndDescription.header,
-    description: newsVariantWithDateAndDescription.description
+    description: newsVariantWithDateAndDescription.description,
 }
-
 
 export const VideoVariant = Template.bind({})
 const videoVariant = getVariation('videoVariant', variations)
 VideoVariant.args = {
-    cardType: videoVariant.cardType,
+    type: videoVariant.cardType,
     link: videoVariant.link,
     image: videoVariant.image,
-    header: videoVariant.header
+    header: videoVariant.header,
 }
 
 export const PeopleVariant = Template.bind({})
 const peopleVariant = getVariation('peopleVariant', variations)
 PeopleVariant.args = {
-    cardType: peopleVariant.cardType,
+    type: peopleVariant.cardType,
     link: peopleVariant.link,
     image: peopleVariant.image,
     header: peopleVariant.header,
-    description: peopleVariant.description
+    description: peopleVariant.description,
 }
 
 export const FigureVariant = Template.bind({})
 const figureVariant = getVariation('figureVariant', variations)
 FigureVariant.args = {
-    cardType: figureVariant.cardType,
+    type: figureVariant.cardType,
     link: figureVariant.link,
     description: figureVariant.description,
-    caption: figureVariant.caption
+    caption: figureVariant.caption,
 }
 export const FigureVariantWithoutLink = Template.bind({})
-const figureVariantWithoutLink = getVariation('figureVariantWithoutLink', variations)
+const figureVariantWithoutLink = getVariation(
+    'figureVariantWithoutLink',
+    variations
+)
 FigureVariantWithoutLink.args = {
-    cardType: figureVariantWithoutLink.cardType,
+    type: figureVariantWithoutLink.cardType,
     description: figureVariantWithoutLink.description,
-    caption: figureVariantWithoutLink.caption
+    caption: figureVariantWithoutLink.caption,
 }
 
 export const MaxWidthVariant = Template.bind({})
 const maxWidthVariant = getVariation('maxWidthVariant', variations)
 MaxWidthVariant.args = {
-    cardType: maxWidthVariant.cardType,
+    type: maxWidthVariant.cardType,
     link: maxWidthVariant.link,
     image: maxWidthVariant.image,
     header: maxWidthVariant.header,
-    description: maxWidthVariant.description
+    description: maxWidthVariant.description,
 }
