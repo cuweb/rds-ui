@@ -7,6 +7,7 @@ describe('Button CTA', () => {
         default: `.c-buttoncta`,
         ghost: `.c-buttoncta--ghost`,
         full: `.c-buttoncta--full`,
+        centered: `.c-buttoncta--center`,
     }
 
     const types = [
@@ -21,6 +22,10 @@ describe('Button CTA', () => {
         {
             nane: 'Full Width',
             tag: '--full',
+        },
+        {
+            nane: 'Centered',
+            tag: '--center',
         },
     ]
 

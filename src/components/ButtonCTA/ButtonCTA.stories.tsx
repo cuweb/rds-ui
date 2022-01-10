@@ -37,3 +37,10 @@ FullWidth.args = {
     icon: 'plus',
     full: true,
 }
+
+export const Centered = Template.bind({})
+Centered.args = {
+    text: 'Centered Button',
+    link: '#',
+    center: true,
+}
