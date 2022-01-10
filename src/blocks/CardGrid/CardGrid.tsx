@@ -1,5 +1,6 @@
 import React from 'react'
 import Ublock from '@src/components/Ublock/Ublock'
+import Ugrid from '@src/components/Ugrid/Ugrid'
 import ButtonCTA from '@src/components/ButtonCTA/ButtonCTA'
 
 export interface CardGridProps {
@@ -26,9 +27,9 @@ const CardGrid: React.FC<CardGridProps> = ({
     return (
         <Ublock color={color || 'white'}>
             {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
-            <div className={`b-cardgrid u-grid u-grid--${columns}`}>
+            <Ugrid className='b-cardgrid' columns={columns}>
                 {children}
-            </div>
+            </Ugrid>
             {button && (
                 <ButtonCTA text={button.text} link={button.url} center />
             )}
