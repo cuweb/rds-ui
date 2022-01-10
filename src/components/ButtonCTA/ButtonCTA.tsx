@@ -7,12 +7,14 @@ interface ButtonProps {
     link: string
     icon?: string
     full?: string
+    center?: boolean
     children?: React.ReactNode
     target?: string
 }
 
 const ButtonCTA: React.FC<ButtonProps> = ({
     ghost,
+    center,
     text = 'Click',
     link = '#',
     icon,
@@ -23,11 +25,12 @@ const ButtonCTA: React.FC<ButtonProps> = ({
     const isGhost = ghost ? 'c-buttoncta--ghost' : ''
     const isFull = full ? 'c-buttoncta--full' : ''
     const hasIcon = icon ? 'u-icon' : ''
+    const isCenter = center ? 'c-buttoncta--center' : ''
     const buttonTarget = target ? `_${target}` : undefined
 
     return (
         <a
-            className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost}`}
+            className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isCenter}`}
             target={buttonTarget}
             href={link}
         >
