@@ -44,3 +44,20 @@ FourColumns.args = {
     title: 'Four Columns',
     columns: 4,
 }
+
+export const WithButton = Template.bind({})
+WithButton.args = {
+    title: 'With Load More',
+    columns: 3,
+    button: {
+        url: 'https://carleton.ca',
+        text: 'Visit Carleton',
+    },
+}
+
+export const WithLoadMore = Template.bind({})
+WithLoadMore.args = {
+    title: 'With Load More',
+    columns: 3,
+    handleLoad: () => alert('add a custom load more handler'),
+}

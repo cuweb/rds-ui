@@ -31,4 +31,24 @@ describe('Card Grid', () => {
             cy.get(title).should('exist')
         })
     })
+
+    it(`With Button: Should render Button CTA`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-card-grid--with-button`
+        )
+        cy.get(`a.c-buttoncta.c-buttoncta--center`).should('exist')
+    })
+
+    it(`With Button: Should render Load More Button`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-card-grid--with-load-more`
+        )
+        cy.get(`button.c-buttoncta.c-buttoncta--center`)
+            .should('exist')
+            .contains('Load more')
+    })
 })
