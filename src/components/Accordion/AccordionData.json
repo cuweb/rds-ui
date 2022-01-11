@@ -1,0 +1,24 @@
+{
+    "title": "Accordion",
+    "classname": ".accordion",
+    "variations": [
+        {
+            "type": "base",
+            "accordionData": [
+                {"id": "1", "title": "Common raven", "content": "The <strong>common raven</strong> (Corvus corax), also known as the northern raven, is a large all-black passerine bird. Found across the Northern Hemisphere, it is the most widely distributed of all corvids."},
+                {"id": "2", "title": "Australian raven", "content": "The <strong>Australian raven</strong> (Corvus coronoides) is a passerine bird in the genus Corvus native to much of southern and northeastern Australia. Measuring 46–53 centimetres (18–21 in) in length, it has all-black plumage, beak and mouth, as well as strong grey-black legs and feet."},
+                {"id": "3", "title": "This is a test of an accordion label that spans more than one line. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a dictum enim. Nunc sit amet purus sed magna dapibus convallis cursus a sapien.", "content": "The <strong>Australian raven</strong> (Corvus coronoides) is a passerine bird in the genus Corvus native to much of southern and northeastern Australia. Measuring 46–53 centimetres (18–21 in) in length, it has all-black plumage, beak and mouth, as well as strong grey-black legs and feet."},
+                {"id": "4", "title": "Thick-billed raven", "content": "The <strong>thick-billed raven</strong> (Corvus crassirostris), a corvid from the Horn of Africa, shares with the common raven the distinction of being the largest bird in the corvid family, and indeed the largest of the most diverse bird order with well over 5,000 identified species, the passerines."}
+            ]
+            
+        },
+        {
+            "type": "single",
+            "accordionData": [
+                {"id": "1", "title": "Common raven", "content": "The <strong>common raven</strong> (Corvus corax), also known as the northern raven, is a large all-black passerine bird. Found across the Northern Hemisphere, it is the most widely distributed of all corvids."},
+                {"id": "2", "title": "Australian raven", "content": "The <strong>Australian raven</strong> (Corvus coronoides) is a passerine bird in the genus Corvus native to much of southern and northeastern Australia. Measuring 46–53 centimetres (18–21 in) in length, it has all-black plumage, beak and mouth, as well as strong grey-black legs and feet."},
+                {"id": "3", "title": "Thick-billed raven", "content": "The <strong>thick-billed raven</strong> (Corvus crassirostris), a corvid from the Horn of Africa, shares with the common raven the distinction of being the largest bird in the corvid family, and indeed the largest of the most diverse bird order with well over 5,000 identified species, the passerines."}
+            ]
+        }
+    ]
+}
