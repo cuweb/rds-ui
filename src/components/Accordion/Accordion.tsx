@@ -19,7 +19,7 @@ export interface TypeProps {
 
 const Accordion: React.FC<AccordionProps> = (props): JSX.Element => {
     const { type } = props
-    console.log(props);
+
     const AccordionTypes: TypeProps = {
         base: <BaseAccordion {...props} />,
         single: <SingleVariantAccordion {...props} />,
