@@ -1,0 +1,10 @@
+{
+    "title": "ImageCaption",
+    "classname": ".imageCaption",
+    "variations": [
+        {
+            "type": "base",
+            "caption": "Bill Murray is an American actor, comedian, and writer. The fifth of nine children, he was born William James Murray in Wilmette, Illinois, to Lucille (Collins), a mailroom clerk, and Edward Joseph Murray II, who sold lumber."
+        }
+    ]
+}
