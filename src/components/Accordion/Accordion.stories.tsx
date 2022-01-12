@@ -2,15 +2,16 @@ import React from 'react'
 import Accordion from './Accordion'
 import getVariation from '../../functions/getVariation'
 import data from './AccordionData.json'
+import { Meta, Story } from '@storybook/react'
 
 const { title, variations } = data
 
 export default {
     component: Accordion,
     title: `Components/${title}`,
-}
+} as Meta
 
-const Template: React.FC = (args: any) => <Accordion {...args} />
+const Template: Story = (args: any) => <Accordion {...args} />
 
 export const BaseAccordion = Template.bind({})
 const baseAccordion = getVariation('base', variations)
