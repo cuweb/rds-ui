@@ -1,0 +1,16 @@
+{
+    "title": "Video",
+    "classname": ".video",
+    "variations": [
+        {
+            "type": "base",
+            "id": 1,
+            "frame": {
+                "width": "500",
+                "height": "281",
+                "src": "https://www.youtube.com/embed/ngElkyQ6Rhs?feature=oembed&amp;rel=0&amp;showinfo=0",
+                "frameBorder": "0"
+            }
+        }
+    ]
+}

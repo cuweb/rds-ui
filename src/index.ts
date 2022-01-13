@@ -20,6 +20,7 @@ import Masthead from './blocks/Masthead/Masthead'
 import Overlay from './layouts/Overlay/Overlay'
 import Ublock from './components/Ublock/Ublock'
 import Ugrid from './components/Ugrid/Ugrid'
+import Video from './components/Video/Video'
 import Sidebar from './layouts/Layout/Sidebar'
 import TextImage from './blocks/TextImage/TextImage'
 
@@ -45,6 +46,7 @@ export {
     Overlay,
     Ublock,
     Ugrid,
+    Video,
     Sidebar,
     TextImage,
 }
