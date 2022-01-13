@@ -10,7 +10,7 @@ const Badge: React.FC<BadgesProps> = ({ type, content }): JSX.Element => {
         <>
             {type === 'notCool' && <strong>👎 Not cool</strong>}
             {type === 'cool' && <strong>😎 Cool</strong>}
-            <span className="c-badge">{content}</span>
+            <span className="c-badge" dangerouslySetInnerHTML={{ __html: content }} />
         </>
     )
 }
