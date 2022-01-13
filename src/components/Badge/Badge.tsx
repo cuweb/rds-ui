@@ -5,7 +5,7 @@ export interface BadgesProps {
     content: string
 }
 
-const BadgesCaption: React.FC<BadgesProps> = ({ type, content }): JSX.Element => {
+const Badge: React.FC<BadgesProps> = ({ type, content }): JSX.Element => {
     return (
         <>
             {type === 'notCool' && <strong>👎 Not cool</strong>}
@@ -15,4 +15,4 @@ const BadgesCaption: React.FC<BadgesProps> = ({ type, content }): JSX.Element =>
     )
 }
 
-export default BadgesCaption
+export default Badge

@@ -2,6 +2,7 @@ import './styles/rds.scss'
 import Alert from './components/Alert/Alert'
 import AlertHeader from './blocks/AlertHeader/AlertHeader'
 import Aside from './layouts/Layout/Aside'
+import Badge from './components/Badge/Badge'
 import Banner from './blocks/Banner/Banner'
 import ButtonCTA from './components/ButtonCTA/ButtonCTA'
 import ButtonSocial from './components/ButtonSocial/ButtonSocial'
@@ -27,6 +28,7 @@ export {
     Alert,
     AlertHeader,
     Aside,
+    Badge,
     Banner,
     ButtonCTA,
     ButtonSocial,
