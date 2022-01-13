@@ -1,16 +1,22 @@
 import React from 'react'
 
 export interface ImageCaptionProps {
+    id: string
     caption: string
+    image: ImageProps
 }
 
-const ImageCaption: React.FC<ImageCaptionProps> = ({ caption }): JSX.Element => {
+export interface ImageProps {
+    src: string
+    alt: string
+}
+
+const ImageCaption: React.FC<ImageCaptionProps> = ({ id, caption, image }): JSX.Element => {
     return (
-        <figure className="c-imgcaption" aria-labelledby="figcaption_id_1" >
-            <img src="https://www.fillmurray.com/640/360" alt="Bill Murray" />
+        <figure className="c-imgcaption" aria-labelledby={`figcaption_id_${id}`} >
+            <img src={image.src} alt={image.alt} />
             <figcaption dangerouslySetInnerHTML={{ __html: caption }} />
         </figure>
     )
 }
-
 export default ImageCaption

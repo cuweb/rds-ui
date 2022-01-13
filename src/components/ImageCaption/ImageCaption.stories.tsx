@@ -16,5 +16,6 @@ const Template: Story = (args: any) => <ImageCaption {...args} />
 export const BaseImageCaption = Template.bind({})
 const baseImageCaption = getVariation('base', variations)
 BaseImageCaption.args = {
-    caption: baseImageCaption.caption
+    caption: baseImageCaption.caption,
+    image: baseImageCaption.image
 }
