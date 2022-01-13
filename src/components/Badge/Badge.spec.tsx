@@ -17,29 +17,4 @@ describe('Badge', () => {
             cy.get(`span`).should('exist')
         })
     })
-
-    //not cool badge
-    it(`Not cool Badge: Should render strong`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-badge--not-cool-badge`
-        )
-        cy.get(`strong`).should('exist')
-    })
-
-    //cool badge
-    it(`Cool Badge: Should render strong`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-badge--cool-badge`
-        )
-        cy.get(`strong`).should('exist')
-    })
-
-
-
-
-
 })
