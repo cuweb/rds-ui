@@ -1,0 +1,52 @@
+{
+    "title": "Accordion",
+    "classname": ".accordion",
+    "variations": [
+        {
+            "type": "base",
+            "mainData":{
+                "image": {
+                    "src": "image.jpg",
+                    "alt": ""
+                },
+                "header": "Small Title Area",
+                "paragraph": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            "subData": [
+                {
+                    "image": {
+                        "src": "image.jpg",
+                        "alt": ""
+                    },
+                    "header": "Small Title Area",
+                    "paragraph": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                },               
+                {
+                    "image": {
+                        "src": "image.jpg",
+                        "alt": ""
+                    },
+                    "header": "Small Title Area",
+                    "paragraph": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                },
+                {
+                    "image": {
+                        "src": "image.jpg",
+                        "alt": ""
+                    },
+                    "header": "Small Title Area",
+                    "paragraph": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                },
+                {
+                    "image": {
+                        "src": "image.jpg",
+                        "alt": ""
+                    },
+                    "header": "Small Title Area",
+                    "paragraph": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                }
+            ]
+            
+        }
+    ]
+}
