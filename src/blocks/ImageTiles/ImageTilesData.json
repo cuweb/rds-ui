@@ -1,9 +1,10 @@
 {
-    "title": "Accordion",
-    "classname": ".accordion",
+    "title": "ImageTiles",
+    "classname": ".imageTiles",
     "variations": [
         {
             "type": "base",
+            "uBlockFull": true,
             "mainData":{
                 "image": {
                     "src": "image.jpg",

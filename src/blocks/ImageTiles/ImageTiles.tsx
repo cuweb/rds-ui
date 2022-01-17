@@ -26,54 +26,54 @@ const ImageTiles: React.FC<ImageTilesProps> = ({
 }): JSX.Element => {
 
     return (
-        <Ublock full={}>
-                        <div class="b-imagetile">
+        <Ublock full={uBlockFull}>
+            <div className="b-imagetile">
 
-        <div class="imagetile__container">
-            <a class="imagetile__item">
-                <img src="image.jpg" alt="">
-                <div class="imagetile__content">
-                    <h3>Small Title Area</h3>
-                    <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div className="imagetile__container">
+                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
+                        <img src="image.jpg" alt="" />
+                        <div className="imagetile__content">
+                            <h3>Small Title Area</h3>
+                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
 
-        <div class="imagetile__container">
-            <a class="imagetile__item">
-                <img src="image.jpg" alt="">
-                <div class="imagetile__content">
-                    <h3>Small Title Area</h3>
-                    <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div className="imagetile__container">
+                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
+                        <img src="image.jpg" alt="" />
+                        <div className="imagetile__content">
+                            <h3>Small Title Area</h3>
+                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
+                        <img src="image.jpg" alt="" />
+                        <div className="imagetile__content">
+                            <h3>Small Title Area</h3>
+                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
+                        <img src="image.jpg" alt="" />
+                        <div className="imagetile__content">
+                            <h3>Small Title Area</h3>
+                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
+                        <img src="image.jpg" alt="" />
+                        <div className="imagetile__content">
+                            <h3>Small Title Area</h3>
+                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </a>
                 </div>
-            </a>
 
-            <a class="imagetile__item">
-                <img src="image.jpg" alt="">
-                <div class="imagetile__content">
-                    <h3>Small Title Area</h3>
-                    <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </a>
-
-            <a class="imagetile__item">
-                <img src="image.jpg" alt="">
-                <div class="imagetile__content">
-                    <h3>Small Title Area</h3>
-                    <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </a>
-
-            <a class="imagetile__item">
-                <img src="image.jpg" alt="">
-                <div class="imagetile__content">
-                    <h3>Small Title Area</h3>
-                    <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </a>
-        </div>
-
-        </div>
+            </div>
         </Ublock>
     )
 }
