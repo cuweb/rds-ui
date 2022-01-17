@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/role-supports-aria-props */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react'
 
@@ -27,8 +28,8 @@ const Accordion: React.FC<AccordionProps> = ({
         <>
             {accordionData.map((accordion, index) => 
                 <div key={index} className="c-accordion">
-                    <input className={`accordion__input ${accordionClass}`} id={`accordion-id-${index}${accordionId}`}  name={`accordion-${accordionType}`} type="checkbox" onClick={toggleHandler}/>
-                    <label htmlFor={`accordion-id-${index}${accordionId}`} aria-controls={`accordion-aria-control-${index}${accordionId}`} id={`accordion-labelledby-${index}${accordionId}`} role="heading" aria-level={1} dangerouslySetInnerHTML={{ __html: accordion.title }} />
+                    <input className={`accordion__input ${accordionClass}`} id={`accordion-id-${index}${accordionId}`}  name={`accordion-${accordionType}`} type={accordionType} aria-expanded={!ariaState} onClick={toggleHandler}/>
+                    <label htmlFor={`accordion-id-${index}${accordionId}`} aria-controls={`accordion-aria-control-${index}${accordionId}`} id={`accordion-labelledby-${index}${accordionId}`} role="heading" aria-level={1} aria-hidden={ariaState} dangerouslySetInnerHTML={{ __html: accordion.title }} />
                     <div id={`accordion-aria-control-${index}${accordionId}`} className="accordion__content" role="region" aria-labelledby={`accordion-labelledby-${index}${accordionId}`} aria-hidden={ariaState} >
                         <div className="accordion__spacing">
                             <p dangerouslySetInnerHTML={{ __html: accordion.content }} />
