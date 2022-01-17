@@ -28,49 +28,25 @@ const ImageTiles: React.FC<ImageTilesProps> = ({
     return (
         <Ublock full={uBlockFull}>
             <div className="b-imagetile">
-
                 <div className="imagetile__container">
                     <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
-                        <img src="image.jpg" alt="" />
+                        <img src={mainData.image.src} alt={mainData.image.alt} />
                         <div className="imagetile__content">
-                            <h3>Small Title Area</h3>
-                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>{mainData.header}</h3>
+                            <p>{mainData.paragraph}</p>
                         </div>
                     </a>
                 </div>
-
                 <div className="imagetile__container">
-                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
-                        <img src="image.jpg" alt="" />
-                        <div className="imagetile__content">
-                            <h3>Small Title Area</h3>
-                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
-
-                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
-                        <img src="image.jpg" alt="" />
-                        <div className="imagetile__content">
-                            <h3>Small Title Area</h3>
-                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
-
-                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
-                        <img src="image.jpg" alt="" />
-                        <div className="imagetile__content">
-                            <h3>Small Title Area</h3>
-                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
-
-                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
-                        <img src="image.jpg" alt="" />
-                        <div className="imagetile__content">
-                            <h3>Small Title Area</h3>
-                            <p>This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </a>
+                    {subData.map((subItem, index) => 
+                        <a key={index} href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
+                            <img src={subItem.image.src} alt={subItem.image.alt} />
+                            <div className="imagetile__content">
+                                <h3>{subItem.header}</h3>
+                                <p>{subItem.paragraph}</p>
+                            </div>
+                        </a>
+                    )}
                 </div>
 
             </div>
