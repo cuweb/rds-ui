@@ -16,6 +16,6 @@ const Template: Story = (args: any) => <Video {...args} />
 export const BaseVideo = Template.bind({})
 const baseVideo = getVariation('base', variations)
 BaseVideo.args = {
-    id: baseVideo.id,
+    title: baseVideo.title,
     video: baseVideo.video
 }
