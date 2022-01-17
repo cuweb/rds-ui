@@ -17,5 +17,5 @@ export const BaseVideo = Template.bind({})
 const baseVideo = getVariation('base', variations)
 BaseVideo.args = {
     id: baseVideo.id,
-    frame: baseVideo.frame
+    video: baseVideo.video
 }
