@@ -1,0 +1,11 @@
+{
+    "title": "Search Form",
+    "classname": ".searchForm",
+    "variations": [
+        {
+            "type": "base",
+            "labelContent": "Search",
+            "spanContent": "Search button"
+        }
+    ]
+}
