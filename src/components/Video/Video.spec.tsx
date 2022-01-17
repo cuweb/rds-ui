@@ -4,7 +4,7 @@ describe('Video', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-video--base-video&args=id:1`
+            )}/iframe.html?id=components-video--base-video`
         )
         cy.get(`.c-video`).should('exist')
     })
@@ -13,7 +13,7 @@ describe('Video', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-video--base-video&args=id:1`
+            )}/iframe.html?id=components-video--base-video`
         )
         cy.get(`iframe`).should('exist')
     })
