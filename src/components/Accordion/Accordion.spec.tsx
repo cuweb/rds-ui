@@ -109,7 +109,6 @@ describe('Accordion', () => {
         cy.get(`.accordion__content`).should('have.attr', 'aria-hidden', 'true')
     })
 
-
     //base checkbox checked
     it(`base: Should render the check`, () => {
         cy.visit(
@@ -139,7 +138,6 @@ describe('Accordion', () => {
         
     })
   
-
     //Single variant accordion
     it(`single variant accordion: Should render accordion input single`, () => {
         cy.visit(
