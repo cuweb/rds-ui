@@ -1,7 +1,7 @@
 describe('Card', () => {
     const types = [
-        'base-accordion',
-        'single-varian-accordion',
+        'base',
+        'single',
     ]
 
     types.map((type) => {
@@ -86,7 +86,7 @@ describe('Card', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-accordion--single-varian-accordion`
+            )}/iframe.html?id=components-accordion--single`
         )
         cy.get(`.accordion__input--single`).should('exist')
     })
