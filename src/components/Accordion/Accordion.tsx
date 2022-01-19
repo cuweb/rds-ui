@@ -21,14 +21,27 @@ const Accordion: React.FC<AccordionProps> = ({
     const accordionType = type === 'single' ? 'radio' : 'checkbox'
     const accordionId = type === 'single' ? 's' : ''
     const [ariaState, setAriaState] = useState(true)
+    const [checkedState, setCheckedState] = useState(
+        new Array(accordionData.length).fill(false)
+    );
     const toggleHandler=()=>{
         setAriaState(!ariaState)
     }
+    const handleOnChange = (position:number) => {
+        const updatedCheckedState = checkedState.map((item, index) => {
+            if (index === position) {
+              return !item;
+            } 
+              return item;
+          });
+          setCheckedState(updatedCheckedState);
+    }
+
     return (
         <>
             {accordionData.map((accordion, index) => 
                 <div key={index} className="c-accordion">
-                    <input className={`accordion__input ${accordionClass}`} id={`accordion-id-${index}${accordionId}`}  name={`accordion-${accordionType}`} type="checkbox" aria-expanded={!ariaState} onClick={toggleHandler}/>
+                    <input className={`accordion__input ${accordionClass}`} id={`accordion-id-${index}${accordionId}`}  name={`accordion-${accordionType}`} type="checkbox" aria-expanded={!ariaState} onClick={toggleHandler} checked={checkedState[index]} onChange={() => handleOnChange(index)}/>
                     <label htmlFor={`accordion-id-${index}${accordionId}`} aria-controls={`accordion-aria-control-${index}${accordionId}`} id={`accordion-labelledby-${index}${accordionId}`} role="heading" aria-level={1} aria-hidden={ariaState} dangerouslySetInnerHTML={{ __html: accordion.title }} />
                     <div id={`accordion-aria-control-${index}${accordionId}`} className="accordion__content" role="region" aria-labelledby={`accordion-labelledby-${index}${accordionId}`} aria-hidden={ariaState} >
                         <div className="accordion__spacing">
