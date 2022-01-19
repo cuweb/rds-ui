@@ -16,6 +16,5 @@ const Template: Story = (args: any) => <SearchForm {...args} />
 export const BaseSearchForm = Template.bind({})
 const baseBaseSearchForm = getVariation('base', variations)
 BaseSearchForm.args = {
-    labelContent: baseBaseSearchForm.labelContent,
-    spanContent: baseBaseSearchForm.spanContent
+    title: baseBaseSearchForm.title,
 }

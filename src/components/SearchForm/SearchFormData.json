@@ -4,8 +4,7 @@
     "variations": [
         {
             "type": "base",
-            "labelContent": "Search",
-            "spanContent": "Search button"
+            "title": "Search"
         }
     ]
 }
