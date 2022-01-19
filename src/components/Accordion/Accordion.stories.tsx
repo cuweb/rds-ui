@@ -13,16 +13,16 @@ export default {
 
 const Template: Story = (args: any) => <Accordion {...args} />
 
-export const BaseAccordion = Template.bind({})
+export const Base = Template.bind({})
 const baseAccordion = getVariation('base', variations)
-BaseAccordion.args = {
+Base.args = {
     type: baseAccordion.type,
     accordionData: baseAccordion.accordionData
 }
 
-export const SingleVarianAccordion = Template.bind({})
+export const Single = Template.bind({})
 const singleVarianAccordion = getVariation('single', variations)
-SingleVarianAccordion.args = {
+Single.args = {
     type: singleVarianAccordion.type,
     accordionData: singleVarianAccordion.accordionData
 }
