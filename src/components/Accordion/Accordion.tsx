@@ -28,7 +28,7 @@ const Accordion: React.FC<AccordionProps> = ({
         <>
             {accordionData.map((accordion, index) => 
                 <div key={index} className="c-accordion">
-                    <input className={`accordion__input ${accordionClass}`} id={`accordion-id-${index}${accordionId}`}  name={`accordion-${accordionType}`} type={accordionType} aria-expanded={!ariaState} onClick={toggleHandler}/>
+                    <input className={`accordion__input ${accordionClass}`} id={`accordion-id-${index}${accordionId}`}  name={`accordion-${accordionType}`} type="checkbox" aria-expanded={!ariaState} onClick={toggleHandler}/>
                     <label htmlFor={`accordion-id-${index}${accordionId}`} aria-controls={`accordion-aria-control-${index}${accordionId}`} id={`accordion-labelledby-${index}${accordionId}`} role="heading" aria-level={1} aria-hidden={ariaState} dangerouslySetInnerHTML={{ __html: accordion.title }} />
                     <div id={`accordion-aria-control-${index}${accordionId}`} className="accordion__content" role="region" aria-labelledby={`accordion-labelledby-${index}${accordionId}`} aria-hidden={ariaState} >
                         <div className="accordion__spacing">

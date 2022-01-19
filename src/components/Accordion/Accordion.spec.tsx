@@ -1,4 +1,4 @@
-describe('Card', () => {
+describe('Accordion', () => {
     const types = [
         'base',
         'single',
@@ -78,6 +78,17 @@ describe('Card', () => {
                 )}/iframe.html?id=components-accordion--${type}`
             )
             cy.get(`p`).should('exist')
+        })
+    })
+
+    types.map((type) => {
+        it(`${type}: Should render the paragraph`, () => {
+            cy.visit(
+                `${Cypress.env(
+                    'baseUrl'
+                )}/iframe.html?id=components-accordion--${type}`
+            )
+            cy.get('[type="checkbox"]').check().should('exist')
         })
     })
 
