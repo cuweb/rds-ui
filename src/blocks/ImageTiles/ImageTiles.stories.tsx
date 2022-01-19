@@ -16,7 +16,5 @@ const Template: Story = (args: any) => <ImageTiles {...args} />
 export const BaseImageTiles = Template.bind({})
 const baseImageTiles = getVariation('base', variations)
 BaseImageTiles.args = {
-    mainData: baseImageTiles.mainData,
-    subData: baseImageTiles.subData,
-    uBlockFull: baseImageTiles.uBlockFull,
+    data: baseImageTiles.data,
 }

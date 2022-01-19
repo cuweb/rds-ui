@@ -2,48 +2,47 @@ import React from 'react'
 import Ublock from '@src/components/Ublock/Ublock'
 
 export interface ImageTilesProps {
-    uBlockFull: boolean
-    mainData: ImageTilesMainProps
-    subData: ImageTilesSubProps[]
+    data: ImageTilesMainProps
 }
 
 export interface ImageTilesMainProps {
     image: HTMLImageElement
-    header: string
-    paragraph: string
+    title: string
+    description: string
+    href: string
+    tilesData: TilesProps[]
 }
 
-export interface ImageTilesSubProps {
+export interface TilesProps {
     image: HTMLImageElement
-    header: string
-    paragraph: string
+    title: string
+    description: string
+    href: string
 }
 
 const ImageTiles: React.FC<ImageTilesProps> = ({
-    uBlockFull,
-    mainData,
-    subData,
+    data
 }): JSX.Element => {
 
     return (
-        <Ublock full={uBlockFull}>
+        <Ublock full>
             <div className="b-imagetile">
                 <div className="imagetile__container">
-                    <a href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
-                        <img src={mainData.image.src} alt={mainData.image.alt} />
+                    <a href={data.href} className="imagetile__item">
+                        <img src={data.image.src} alt={data.image.alt} />
                         <div className="imagetile__content">
-                            <h3>{mainData.header}</h3>
-                            <p>{mainData.paragraph}</p>
+                            <h3>{data.title}</h3>
+                            <p>{data.description}</p>
                         </div>
                     </a>
                 </div>
                 <div className="imagetile__container">
-                    {subData.map((subItem, index) => 
-                        <a key={index} href="https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/" className="imagetile__item">
-                            <img src={subItem.image.src} alt={subItem.image.alt} />
+                    {data.tilesData.map((tile, index) => 
+                        <a key={index} href={tile.href} className="imagetile__item">
+                            <img src={tile.image.src} alt={tile.image.alt} />
                             <div className="imagetile__content">
-                                <h3>{subItem.header}</h3>
-                                <p>{subItem.paragraph}</p>
+                                <h3>{tile.title}</h3>
+                                <p>{tile.description}</p>
                             </div>
                         </a>
                     )}

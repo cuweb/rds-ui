@@ -1,4 +1,4 @@
-describe('ImageTiles', () => {
+describe('Image Tiles', () => {
 
     it(`Image Tiles: Should render u-block`, () => {
         cy.visit(
