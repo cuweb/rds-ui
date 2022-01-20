@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 export interface AccordionProps {
     type: 'base' | 'single'
-    accordionData: AccordionItemProps[]
+    data: AccordionItemProps[]
 }
 
 export interface AccordionItemProps {
@@ -15,14 +15,14 @@ export interface AccordionItemProps {
 
 const Accordion: React.FC<AccordionProps> = ({
     type, 
-    accordionData
+    data
 }): JSX.Element => {
     const accordionClass = type === 'single' ? 'accordion__input--single' : ''
     const accordionType = type === 'single' ? 'radio' : 'checkbox'
     const accordionId = type === 'single' ? 's' : ''
     const [ariaState, setAriaState] = useState(true)
     const [checkedState, setCheckedState] = useState(
-        new Array(accordionData.length).fill(false)
+        new Array(data.length).fill(false)
     );
     const [divState, setDivState] = useState(
         [false, false, false, false]
@@ -47,7 +47,7 @@ const Accordion: React.FC<AccordionProps> = ({
 
     return (
         <>
-            {accordionData.map((accordion, index) => 
+            {data.map((accordion, index) => 
                 <div key={index} className="c-accordion">
                     <input 
                         className={`accordion__input ${accordionClass}`} 
@@ -85,9 +85,9 @@ const Accordion: React.FC<AccordionProps> = ({
                             role="region" 
                             aria-labelledby={`accordion-labelledby-${index}${accordionId}`} 
                             aria-hidden={ariaState} 
-                            style={{display: divState[index] === true ? 'inline':'none'}}
+                            style={{maxHeight: divState[index] === true ? '200px':'0px', transition: '500ms'}}
                         >
-                            <div className="accordion__spacing">
+                            <div className="accordion__spacing" >
                                 <p dangerouslySetInnerHTML={{ __html: accordion.content }} />
                             </div>
                         </div>}
