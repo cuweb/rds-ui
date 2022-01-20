@@ -4,53 +4,53 @@
     "variations": [
         {
             "type": "base",
-            "data":{
-                "image": {
-                    "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
-                    "alt": ""
-                },
-                "title": "Small Title Area",
-                "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/",
-                "tilesData": [
-                    {
-                        "image": {
-                            "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
-                            "alt": ""
+            "data": [
+                        {
+                            "image": {
+                                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
+                                "alt": ""
+                            },
+                            "title": "Small Title Area",
+                            "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                            "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/"
                         },
-                        "title": "Small Title Area",
-                        "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/",
-                        "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                    },               
-                    {
-                        "image": {
-                            "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
-                            "alt": ""
+                        {
+                            "image": {
+                                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
+                                "alt": ""
+                            },
+                            "title": "Small Title Area",
+                            "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/",
+                            "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        },               
+                        {
+                            "image": {
+                                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
+                                "alt": ""
+                            },
+                            "title": "Small Title Area",
+                            "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/",
+                            "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                         },
-                        "title": "Small Title Area",
-                        "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/",
-                        "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                    },
-                    {
-                        "image": {
-                            "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
-                            "alt": ""
+                        {
+                            "image": {
+                                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
+                                "alt": ""
+                            },
+                            "title": "Small Title Area",
+                            "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/",
+                            "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                         },
-                        "title": "Small Title Area",
-                        "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/",
-                        "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                    },
-                    {
-                        "image": {
-                            "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
-                            "alt": ""
-                        },
-                        "title": "Small Title Area",
-                        "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/",
-                        "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                    }
+                        {
+                            "image": {
+                                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
+                                "alt": ""
+                            },
+                            "title": "Small Title Area",
+                            "href": "https://ravendesignsystem.github.io/rds/dev/blocks/main/imagetile/",
+                            "description": "This is the excerpt area. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        }
                 ]
-            }
         }
     ]
 }
