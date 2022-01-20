@@ -24,30 +24,73 @@ const Accordion: React.FC<AccordionProps> = ({
     const [checkedState, setCheckedState] = useState(
         new Array(accordionData.length).fill(false)
     );
+    const [divState, setDivState] = useState(
+        [false, false, false, false]
+    );
     const toggleHandler=()=>{
         setAriaState(!ariaState)
     }
     const handleOnChange = (position:number) => {
-        const updatedCheckedState = checkedState.map((item, index) => {
-            if (index === position) {
-              return !item;
-            } 
-              return item;
-          });
+        const updatedCheckedState = checkedState.map((item, index) =>
+            index === position ? !item : item
+          );
           setCheckedState(updatedCheckedState);
+
+        const updatedDivState = divState.map((item, index) => {
+            if (index === position  && checkedState[index] === false) {
+              return true;
+            } 
+              return false;
+          });
+          setDivState(updatedDivState);
     }
 
     return (
         <>
             {accordionData.map((accordion, index) => 
                 <div key={index} className="c-accordion">
-                    <input className={`accordion__input ${accordionClass}`} id={`accordion-id-${index}${accordionId}`}  name={`accordion-${accordionType}`} type="checkbox" aria-expanded={!ariaState} onClick={toggleHandler} checked={checkedState[index]} onChange={() => handleOnChange(index)}/>
-                    <label htmlFor={`accordion-id-${index}${accordionId}`} aria-controls={`accordion-aria-control-${index}${accordionId}`} id={`accordion-labelledby-${index}${accordionId}`} role="heading" aria-level={1} aria-hidden={ariaState} dangerouslySetInnerHTML={{ __html: accordion.title }} />
-                    <div id={`accordion-aria-control-${index}${accordionId}`} className="accordion__content" role="region" aria-labelledby={`accordion-labelledby-${index}${accordionId}`} aria-hidden={ariaState} >
-                        <div className="accordion__spacing">
-                            <p dangerouslySetInnerHTML={{ __html: accordion.content }} />
-                        </div>
-                    </div>
+                    <input 
+                        className={`accordion__input ${accordionClass}`} 
+                        id={`accordion-id-${index}${accordionId}`}  
+                        name={`accordion-${accordionType}`} 
+                        type="checkbox" 
+                        aria-expanded={!ariaState} 
+                        onClick={toggleHandler} 
+                        checked={checkedState[index]} 
+                        onChange={() => handleOnChange(index)}
+                    />
+                    <label 
+                        htmlFor={`accordion-id-${index}${accordionId}`} 
+                        aria-controls={`accordion-aria-control-${index}${accordionId}`} 
+                        id={`accordion-labelledby-${index}${accordionId}`} 
+                        role="heading" 
+                        aria-level={1} 
+                        aria-hidden={ariaState} 
+                        dangerouslySetInnerHTML={{ __html: accordion.title }} 
+                    />
+                    {type === 'base' ?                     
+                        <div id={`accordion-aria-control-${index}${accordionId}`} 
+                            className="accordion__content" 
+                            role="region" 
+                            aria-labelledby={`accordion-labelledby-${index}${accordionId}`} 
+                            aria-hidden={ariaState} 
+                        >
+                            <div className="accordion__spacing">
+                                <p dangerouslySetInnerHTML={{ __html: accordion.content }} />
+                            </div>
+                        </div> 
+                            :                     
+                        <div id={`accordion-aria-control-${index}${accordionId}`} 
+                            className="accordion__content" 
+                            role="region" 
+                            aria-labelledby={`accordion-labelledby-${index}${accordionId}`} 
+                            aria-hidden={ariaState} 
+                            style={{display: divState[index] === true ? 'inline':'none'}}
+                        >
+                            <div className="accordion__spacing">
+                                <p dangerouslySetInnerHTML={{ __html: accordion.content }} />
+                            </div>
+                        </div>}
                 </div>
             )}
         </>
