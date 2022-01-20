@@ -13,8 +13,8 @@ export default {
 
 const Template: Story = (args: any) => <ImageTiles {...args} />
 
-export const BaseImageTiles = Template.bind({})
+export const Base = Template.bind({})
 const baseImageTiles = getVariation('base', variations)
-BaseImageTiles.args = {
+Base.args = {
     data: baseImageTiles.data,
 }

@@ -4,7 +4,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`.u-block`).should('exist')
     })
@@ -13,7 +13,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`.u-block--full`).should('exist')
     })
@@ -22,7 +22,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`.b-imagetile`).should('exist')
     })
@@ -31,7 +31,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`.imagetile__container`).should('exist')
     })
@@ -40,7 +40,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`a`).should('exist')
     })
@@ -49,7 +49,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`.imagetile__item`).should('exist')
     })
@@ -58,7 +58,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`img`).should('exist')
     })
@@ -67,7 +67,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`.imagetile__content`).should('exist')
     })
@@ -76,7 +76,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`h3`).should('exist')
     })
@@ -85,7 +85,7 @@ describe('Image Tiles', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-image-tiles--base-image-tiles`
+            )}/iframe.html?id=blocks-image-tiles--base`
         )
         cy.get(`p`).should('exist')
     })
