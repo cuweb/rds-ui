@@ -1,10 +1,10 @@
-describe('SearchForm', () => {
+describe('Search Form', () => {
 
     it(`Search Form: Should render form`, () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-search-form--base-search-form`
+            )}/iframe.html?id=components-search-form--base`
         )
         cy.get(`form`).should('exist')
     })
@@ -13,7 +13,7 @@ describe('SearchForm', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-search-form--base-search-form`
+            )}/iframe.html?id=components-search-form--base`
         )
         cy.get(`.c-searchform`).should('exist')
     })
@@ -22,7 +22,7 @@ describe('SearchForm', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-search-form--base-search-form`
+            )}/iframe.html?id=components-search-form--base`
         )
         cy.get(`label`).should('exist')
     })
@@ -31,7 +31,7 @@ describe('SearchForm', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-search-form--base-search-form`
+            )}/iframe.html?id=components-search-form--base`
         )
         cy.get(`input`).should('exist')
     })
@@ -40,7 +40,7 @@ describe('SearchForm', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-search-form--base-search-form`
+            )}/iframe.html?id=components-search-form--base`
         )
         cy.get(`button`).should('exist')
     })
@@ -49,7 +49,7 @@ describe('SearchForm', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-search-form--base-search-form`
+            )}/iframe.html?id=components-search-form--base`
         )
         cy.get(`svg`).should('exist')
     })
@@ -58,7 +58,7 @@ describe('SearchForm', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-search-form--base-search-form`
+            )}/iframe.html?id=components-search-form--base`
         )
         cy.get(`span`).should('exist')
     })
@@ -67,7 +67,7 @@ describe('SearchForm', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-search-form--base-search-form`
+            )}/iframe.html?id=components-search-form--base`
         )
         cy.get(`.u-visually-hidden`).should('exist')
     })

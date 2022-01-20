@@ -4,7 +4,8 @@
     "variations": [
         {
             "type": "base",
-            "title": "Search"
+            "title": "Search",
+            "placeHolder": "Search"
         }
     ]
 }

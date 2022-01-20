@@ -13,8 +13,9 @@ export default {
 
 const Template: Story = (args: any) => <SearchForm {...args} />
 
-export const BaseSearchForm = Template.bind({})
+export const Base = Template.bind({})
 const baseBaseSearchForm = getVariation('base', variations)
-BaseSearchForm.args = {
+Base.args = {
     title: baseBaseSearchForm.title,
+    placeHolder: baseBaseSearchForm.placeHolder
 }
