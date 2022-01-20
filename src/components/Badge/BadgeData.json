@@ -1,0 +1,22 @@
+{
+    "title": "Badge",
+    "classname": ".badge",
+    "variations": [
+        {
+            "type": "number",
+            "content": "5"
+        },
+        {
+            "type": "label",
+            "content": "New"
+        },
+        {
+            "type": "notCool",
+            "content": "Maximum"
+        },
+        {
+            "type": "cool",
+            "content": "Max"
+        }
+    ]
+}
