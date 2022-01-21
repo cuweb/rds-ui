@@ -8,7 +8,7 @@ export interface ImageTilesProps {
 export interface ImageTilesDataProps {
     image: HTMLImageElement
     title: string
-    description: string
+    description?: string
     href: string
 }
 
