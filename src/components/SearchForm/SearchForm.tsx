@@ -4,11 +4,13 @@ import React from 'react'
 export interface SearchFormProps {
     title: string,
     placeHolder?: string
+    action?: string
+    onSubmit: React.FormEventHandler
 }
 
-const SearchForm: React.FC<SearchFormProps> = ({ title, placeHolder }): JSX.Element => {
+const SearchForm: React.FC<SearchFormProps> = ({ title, placeHolder, action, onSubmit }): JSX.Element => {
     return (
-        <form className="c-searchform" role="search" method="get" action="https://carleton.ca">
+        <form className="c-searchform" role="search" method="get" action={action} onSubmit={onSubmit}>
             <label htmlFor="searchform__input">{title}</label>
             <input id="searchform__input" name="s" type="search" autoComplete="off" placeholder={placeHolder} />
             <button type="submit" title={title}>

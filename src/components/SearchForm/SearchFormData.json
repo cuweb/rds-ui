@@ -5,7 +5,8 @@
         {
             "type": "base",
             "title": "Search",
-            "placeHolder": "Search"
+            "placeHolder": "Search",
+            "action": "https://carleton.ca"
         }
     ]
 }
