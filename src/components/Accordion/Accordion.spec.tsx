@@ -98,14 +98,14 @@ describe('Accordion', () => {
     })
 
     //single checkbox checked
-    it(`base: Should render the check`, () => {
+    it(`single: Should render the check`, () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
             )}/iframe.html?id=components-accordion--single`
         )
         cy.clearCookies()
-        cy.get('[type="checkbox"]').click({multiple: true, force: true}).check();
+        cy.get('[type="checkbox"]').click({multiple: true, force: true});
         cy.get(`input`).should('have.attr', 'aria-expanded', 'true')
         cy.get(`label`).should('have.attr', 'aria-hidden', 'false')
         cy.get(`.accordion__content`).should('have.attr', 'aria-hidden', 'false')
