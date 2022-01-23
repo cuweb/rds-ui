@@ -1,5 +1,4 @@
 describe('Search Form', () => {
-
     it(`Search Form: Should render form`, () => {
         cy.visit(
             `${Cypress.env(
