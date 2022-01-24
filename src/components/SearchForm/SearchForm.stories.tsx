@@ -18,5 +18,6 @@ const baseBaseSearchForm = getVariation('base', variations)
 Base.args = {
     title: baseBaseSearchForm.title,
     placeHolder: baseBaseSearchForm.placeHolder,
-    action: baseBaseSearchForm.action
+    action: baseBaseSearchForm.action,
+    onSubmit: (e: any) => alert('test')
 }
