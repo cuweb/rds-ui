@@ -71,15 +71,6 @@ describe('Search Form', () => {
         cy.get(`.u-visually-hidden`).should('exist')
     })
 
-    it(`Search Form: Should render action `, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-search-form--base`
-        )
-        cy.get('form action').should('exist')
-    })
-
     it(`Search Form: Should render action and submit`, () => {
         cy.visit(
             `${Cypress.env(
