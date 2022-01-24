@@ -101,12 +101,11 @@ const Accordion: React.FC<AccordionProps> = ({
                             </div>
                         </div> 
                             :                     
-                        <div id={`accordion-aria-control-${index}${accordionId}`} 
+                        <div id={`accordion-aria-control-single-${divState[index]} ${index}${accordionId}`} 
                             className="accordion__content" 
                             role="region" 
                             aria-labelledby={`accordion-labelledby-${index}${accordionId}`} 
                             aria-hidden={ariaState} 
-                            style={{maxHeight: divState[index] === true ? '200px':'0px', transition: '500ms'}}
                         >
                             <div className="accordion__spacing" >
                                 <p dangerouslySetInnerHTML={{ __html: accordion.content }} />

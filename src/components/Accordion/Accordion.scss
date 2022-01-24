@@ -92,3 +92,13 @@
 .c-accordion input[type='checkbox']:checked + label::after {
 	transform: rotate(135deg);
 }
+
+.accordion-aria-control-single-true {
+	max-height: 200px;
+	transition: 500ms;
+}
+
+.accordion-aria-control-single-false {
+	max-height: 0px;
+	transition: 500ms;
+}
