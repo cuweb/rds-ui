@@ -71,19 +71,28 @@ describe('Search Form', () => {
         cy.get(`.u-visually-hidden`).should('exist')
     })
 
-    it(`Search Form: Should render submit`, () => {
+    it(`Search Form: Should test submit`, () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
             )}/iframe.html?id=components-search-form--base`
         )
         cy.get('form').submit().should('exist')
+    })
+
+    it(`Search Form: Should test click`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=components-search-form--base`
+        )
+        cy.get('form').click()
         cy.on('window:alert',(txt)=>{
             expect(txt).to.contains('test');
          })
     })
 
-    it(`Search Form: Should render action`, () => {
+    it(`Search Form: Should test action click`, () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
@@ -92,6 +101,5 @@ describe('Search Form', () => {
         cy.get('form').submit().then(() => {
             cy.url().should('include', 'https://carleton.ca');
         });
-
     })
 })
