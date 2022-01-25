@@ -16,7 +16,7 @@
         "watch": "rollup -c -w",
         "build": "rm -rf dist && yarn lint && rollup -c",
         "build:docs": "build-storybook -o ./docs/storybook",
-        "lint": "eslint src/**/*.tsx",
+        "lint": "prettier -w src && eslint src/**/*.tsx --fix",
         "test": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 & cypress open)",
         "test:ci": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --ci & cypress run --headless)"
     },

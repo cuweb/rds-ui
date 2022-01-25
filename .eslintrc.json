@@ -26,7 +26,7 @@
         "prettier"
     ],
     "rules": {
-        "prettier/prettier": "off",
+        "prettier/prettier": "error",
         "react/no-danger": "off",
         "react/require-default-props": "off", // DISCUSS
         "react/jsx-props-no-spreading": "off",
