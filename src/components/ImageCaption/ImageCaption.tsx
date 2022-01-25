@@ -11,9 +11,16 @@ export interface ImageProps {
     alt: string
 }
 
-const ImageCaption: React.FC<ImageCaptionProps> = ({ id, caption, image }): JSX.Element => {
+const ImageCaption: React.FC<ImageCaptionProps> = ({
+    id,
+    caption,
+    image,
+}): JSX.Element => {
     return (
-        <figure className="c-imgcaption" aria-labelledby={`figcaption_id_${id}`} >
+        <figure
+            className='c-imgcaption'
+            aria-labelledby={`figcaption_id_${id}`}
+        >
             <img src={image.src} alt={image.alt} />
             <figcaption dangerouslySetInnerHTML={{ __html: caption }} />
         </figure>

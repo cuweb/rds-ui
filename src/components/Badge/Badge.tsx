@@ -6,7 +6,10 @@ export interface BadgesProps {
 
 const Badge: React.FC<BadgesProps> = ({ content }): JSX.Element => {
     return (
-        <span className="c-badge" dangerouslySetInnerHTML={{ __html: content }} />
+        <span
+            className='c-badge'
+            dangerouslySetInnerHTML={{ __html: content }}
+        />
     )
 }
 

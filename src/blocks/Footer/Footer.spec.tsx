@@ -8,7 +8,11 @@ describe('Footer', () => {
 
     variations.map((variation) => {
         it(`${variation.type.toUpperCase()}: Should render U-Block`, () => {
-            cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-footer--${variation.type}`)
+            cy.visit(
+                `${Cypress.env('baseUrl')}/iframe.html?id=blocks-footer--${
+                    variation.type
+                }`
+            )
             cy.get(`.u-block`).should('exist')
         })
     })
@@ -17,18 +21,26 @@ describe('Footer', () => {
         it(`${variation.type.toUpperCase()}: Should render ${
             variation.classname
         } classname`, () => {
-            cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-footer--${variation.type}`)
+            cy.visit(
+                `${Cypress.env('baseUrl')}/iframe.html?id=blocks-footer--${
+                    variation.type
+                }`
+            )
             cy.get(variation.classname).should('exist')
         })
     })
 
     it(`SIMPLE: Should render Name`, () => {
-        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-footer--simple`)
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-footer--simple`
+        )
         cy.get(`.p-name`).should('exist')
     })
 
     it(`SIMPLE: Should render Name`, () => {
-        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-footer--simple`)
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-footer--simple`
+        )
         cy.get(`.p-name`).should('exist').should('not.be.empty')
     })
 
