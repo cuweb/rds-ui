@@ -72,29 +72,18 @@ const Accordion: React.FC<AccordionProps> = ({
                         aria-level={1} 
                         aria-hidden={ariaState} 
                         dangerouslySetInnerHTML={{ __html: accordion.title }} 
-                    />
-                    {type === 'base' ?                     
-                        <div id={`accordion-aria-control-${index}${accordionId}`} 
-                            className="accordion__content" 
-                            role="region" 
-                            aria-labelledby={`accordion-labelledby-${index}${accordionId}`} 
-                            aria-hidden={ariaState} 
-                        >
-                            <div className="accordion__spacing">
-                                <p dangerouslySetInnerHTML={{ __html: accordion.content }} />
-                            </div>
-                        </div> 
-                            :                     
-                        <div id={`accordion-aria-control-single-${divState[index]} ${index}${accordionId}`} 
-                            className="accordion__content" 
-                            role="region" 
-                            aria-labelledby={`accordion-labelledby-${index}${accordionId}`} 
-                            aria-hidden={ariaState} 
-                        >
-                            <div className="accordion__spacing" >
-                                <p dangerouslySetInnerHTML={{ __html: accordion.content }} />
-                            </div>
-                        </div>}
+                    />                    
+                    <div id={`accordion-aria-control-${divState[index]} ${index}${accordionId}`} 
+                        className="accordion__content" 
+                        role="region" 
+                        aria-labelledby={`accordion-labelledby-${index}${accordionId}`} 
+                        aria-hidden={ariaState} 
+                    >
+                        <div className="accordion__spacing">
+                            <p dangerouslySetInnerHTML={{ __html: accordion.content }} />
+                        </div>
+                    </div> 
+
                 </div>
             )}
         </>

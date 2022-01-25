@@ -93,12 +93,12 @@
 	transform: rotate(135deg);
 }
 
-.accordion-aria-control-single-true {
+.accordion-aria-control-true {
 	max-height: 200px;
 	transition: 500ms;
 }
 
-.accordion-aria-control-single-false {
+.accordion-aria-control-false {
 	max-height: 0px;
 	transition: 500ms;
 }
