@@ -18,6 +18,16 @@ const baseBaseSearchForm = getVariation('base', variations)
 Base.args = {
     title: baseBaseSearchForm.title,
     placeHolder: baseBaseSearchForm.placeHolder,
-    action: baseBaseSearchForm.action,
-    onSubmit: (e: any) => alert('test')
+    onSubmit: (e: any) => {
+        e.preventDefault()
+        alert('test')
+    }
+}
+
+export const WithAction = Template.bind({})
+const withActionSearchForm = getVariation('base', variations)
+WithAction.args = {
+    title: withActionSearchForm.title,
+    placeHolder: withActionSearchForm.placeHolder,
+    action: withActionSearchForm.action
 }
