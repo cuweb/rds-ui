@@ -15,5 +15,5 @@ export const Tables = Template.bind({})
 const tables = getVariation('base', variations)
 Tables.args = {
     columns: tables.columns,
-    rows: tables.rows
+    rows: tables.rows,
 }
