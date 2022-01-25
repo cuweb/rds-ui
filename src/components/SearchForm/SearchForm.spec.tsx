@@ -77,7 +77,6 @@ describe('Search Form', () => {
                 'baseUrl'
             )}/iframe.html?id=components-search-form--base`
         )
-        //cy.get('form').submit().should('exist')
         cy.get('form').submit().should('exist')
         cy.on('window:alert',(txt)=>{
             expect(txt).to.contains('test');
