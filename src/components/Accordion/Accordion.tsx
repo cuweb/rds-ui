@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export interface AccordionProps {
-    type: 'base' | 'single'
+    type?: 'base' | 'single' | undefined
     data: AccordionItemProps[]
 }
 
@@ -12,16 +12,23 @@ export interface AccordionItemProps {
 }
 
 const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
-    const accordionClass = type === 'single' ? 'accordion__input--single' : ''
-    const accordionType = type === 'single' ? 'radio' : 'checkbox'
-    const accordionId = type === 'single' ? 's' : ''
-    const [ariaState, setAriaState] = useState(true)
+    const types = type === undefined ? 'base' : type
+    const accordionClass = types === 'single' ? 'accordion__input--single' : ''
+    const accordionType = types === 'single' ? 'radio' : 'checkbox'
+    const accordionId = types === 'single' ? 's' : ''
+    const [ariaState, setAriaState] = useState(
+        new Array(data.length).fill(true)
+    )
     const [checkedState, setCheckedState] = useState(
         new Array(data.length).fill(false)
     )
     const [divState, setDivState] = useState(new Array(data.length).fill(false))
-    const toggleHandler = () => {
-        setAriaState(!ariaState)
+    const toggleHandler = (position: number) => {
+        
+        const updatedAriaState = ariaState.map((item, index) =>
+            index === position ? !item : item
+        )
+        setAriaState(updatedAriaState)
     }
     const handleOnChange = (
         position: number,
@@ -55,10 +62,10 @@ const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
                         id={`accordion-id-${index}${accordionId}`}
                         name={`accordion-${accordionType}`}
                         type='checkbox'
-                        aria-expanded={!ariaState}
-                        onClick={toggleHandler}
+                        aria-expanded={!ariaState[index]}
+                        onClick={() => toggleHandler(index)}
                         checked={checkedState[index]}
-                        onChange={() => handleOnChange(index, type)}
+                        onChange={() => handleOnChange(index, types)}
                     />
                     <label
                         htmlFor={`accordion-id-${index}${accordionId}`}
@@ -66,7 +73,7 @@ const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
                         id={`accordion-labelledby-${index}${accordionId}`}
                         role='heading'
                         aria-level={1}
-                        aria-hidden={ariaState}
+                        aria-hidden={ariaState[index]}
                         dangerouslySetInnerHTML={{ __html: accordion.title }}
                     />
                     <div
@@ -74,7 +81,7 @@ const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
                         className='accordion__content'
                         role='region'
                         aria-labelledby={`accordion-labelledby-${index}${accordionId}`}
-                        aria-hidden={ariaState}
+                        aria-hidden={ariaState[index]}
                     >
                         <div className='accordion__spacing'>
                             <p
