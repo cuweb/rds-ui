@@ -25,21 +25,19 @@ const Accordion: React.FC<AccordionProps> = ({
         new Array(data.length).fill(false)
     );
     const [divState, setDivState] = useState(
-        [false, false, false, false]
+        new Array(data.length).fill(false)
     );
     const toggleHandler=()=>{
         setAriaState(!ariaState)
     }
-    const handleOnChangeBase = (position:number) => {
-        const updatedCheckedState = checkedState.map((item, index) =>
+    const handleOnChange = (position:number, accordionTypes: 'base' | 'single') => {
+        if (accordionTypes === 'base') {
+            const updatedCheckedState = checkedState.map((item, index) =>
             index === position ? !item : item
           );
           setCheckedState(updatedCheckedState);
-
-    }
-
-    const handleOnChangeSingle = (position:number) => {
-        const updatedCheckedState = checkedState.map((item, index) =>
+        } else {
+            const updatedCheckedState = checkedState.map((item, index) =>
             index === position ? !item : false
           );
           setCheckedState(updatedCheckedState);
@@ -51,35 +49,22 @@ const Accordion: React.FC<AccordionProps> = ({
               return false;
           });
           setDivState(updatedDivState);
+        };
     }
-
     return (
         <>
             {data.map((accordion, index) => 
                 <div key={index} className="c-accordion">
-                    {type === 'base' ? 
-                        <input 
-                            className={`accordion__input ${accordionClass}`} 
-                            id={`accordion-id-${index}${accordionId}`}  
-                            name={`accordion-${accordionType}`} 
-                            type="checkbox" 
-                            aria-expanded={!ariaState} 
-                            onClick={toggleHandler} 
-                            checked={checkedState[index]} 
-                            onChange={() => handleOnChangeBase(index)}
-                        /> :
-                        <input 
-                            className={`accordion__input ${accordionClass}`} 
-                            id={`accordion-id-${index}${accordionId}`}  
-                            name={`accordion-${accordionType}`} 
-                            type="checkbox" 
-                            aria-expanded={!ariaState} 
-                            onClick={toggleHandler} 
-                            checked={checkedState[index]} 
-                            onChange={() => handleOnChangeSingle(index)}
-                        />
-                    }
-
+                    <input 
+                        className={`accordion__input ${accordionClass}`} 
+                        id={`accordion-id-${index}${accordionId}`}  
+                        name={`accordion-${accordionType}`} 
+                        type="checkbox" 
+                        aria-expanded={!ariaState} 
+                        onClick={toggleHandler} 
+                        checked={checkedState[index]} 
+                        onChange={() => handleOnChange(index, type)}
+                    /> 
                     <label 
                         htmlFor={`accordion-id-${index}${accordionId}`} 
                         aria-controls={`accordion-aria-control-${index}${accordionId}`} 
