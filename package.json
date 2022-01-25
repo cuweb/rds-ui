@@ -14,9 +14,10 @@
         "start": "start-storybook -p 6006 --ci",
         "dev": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006)",
         "watch": "rollup -c -w",
-        "build": "rm -rf dist && yarn lint && rollup -c",
+        "build": "rm -rf dist && yarn format && yarn lint && rollup -c",
         "build:docs": "build-storybook -o ./docs/storybook",
-        "lint": "prettier -w src && eslint src/**/*.tsx --fix",
+        "format": "prettier -w src",
+        "lint": "eslint --fix src/**/*.tsx",
         "test": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 & cypress open)",
         "test:ci": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --ci & cypress run --headless)"
     },
