@@ -41,7 +41,6 @@ const Accordion: React.FC<AccordionProps> = ({
             index === position ? !item : false
           );
           setCheckedState(updatedCheckedState);
-
         const updatedDivState = divState.map((item, index) => {
             if (index === position  && checkedState[index] === false) {
               return true;
