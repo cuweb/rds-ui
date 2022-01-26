@@ -83,61 +83,35 @@ describe('Accordion', () => {
         })
     })
 
-    //base checkbox checked
-    it(`base: Should render the check`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-accordion--base`
-        )
-        cy.clearCookies()
-        cy.get('[type="checkbox"]').click({multiple: true, force: true}).check();
-        cy.get(`input`).should('have.attr', 'aria-expanded', 'false')
-        cy.get(`label`).should('have.attr', 'aria-hidden', 'true')
-        cy.get(`.accordion__content`).should('have.attr', 'aria-hidden', 'true')
+    types.map((type) => {
+        it(`${type}: Should render the check`, () => {
+            cy.visit(
+                `${Cypress.env(
+                    'baseUrl'
+                )}/iframe.html?id=components-accordion--base`
+            )
+            cy.clearCookies()
+            cy.get('[type="checkbox"]').click({multiple: true, force: true}).check();
+            cy.get(`input`).should('have.attr', 'aria-expanded', 'true')
+            cy.get(`label`).should('have.attr', 'aria-hidden', 'false')
+            cy.get(`.accordion__content`).should('have.attr', 'aria-hidden', 'false')
+        })
     })
 
-    //single checkbox checked
-    it(`single: Should render the check`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-accordion--single`
-        )
-        cy.clearCookies()
-        cy.get('[type="checkbox"]').click({multiple: true, force: true});
-        cy.get(`input`).should('have.attr', 'aria-expanded', 'true')
-        cy.get(`label`).should('have.attr', 'aria-hidden', 'false')
-        cy.get(`.accordion__content`).should('have.attr', 'aria-hidden', 'false')
-        
+    types.map((type) => {
+        it(`${type}: Should render the uncheck`, () => {
+            cy.visit(
+                `${Cypress.env(
+                    'baseUrl'
+                )}/iframe.html?id=components-accordion--base`
+            )
+            cy.get('[type="checkbox"]').uncheck();
+            cy.get(`input`).should('have.attr', 'aria-expanded', 'false')
+            cy.get(`label`).should('have.attr', 'aria-hidden', 'true')
+            cy.get(`.accordion__content`).should('have.attr', 'aria-hidden', 'true')
+        })
     })
 
-    //base checkbox unchecked
-    it(`base: Should render the uncheck`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-accordion--base`
-        )
-        cy.get('[type="checkbox"]').uncheck();
-        cy.get(`input`).should('have.attr', 'aria-expanded', 'false')
-        cy.get(`label`).should('have.attr', 'aria-hidden', 'true')
-        cy.get(`.accordion__content`).should('have.attr', 'aria-hidden', 'true')
-    })
-
-    //single checkbox unchecked
-    it(`single: Should render the uncheck`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-accordion--single`
-        )
-        cy.get('[type="checkbox"]').uncheck();
-        cy.get(`input`).should('have.attr', 'aria-expanded', 'false')
-        cy.get(`label`).should('have.attr', 'aria-hidden', 'true')
-        cy.get(`.accordion__content`).should('have.attr', 'aria-hidden', 'true')
-    })
-  
     //Single variant accordion
     it(`single variant accordion: Should render accordion input single`, () => {
         cy.visit(
