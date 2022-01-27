@@ -99,7 +99,7 @@ describe('Search Form', () => {
             )}/iframe.html?id=components-search-form--with-action`
         )
         cy.request({
-            method: 'post',
+            method: 'put',
             url: 'https://carleton.ca',
             form: true, 
             headers: {
