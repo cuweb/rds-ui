@@ -86,7 +86,7 @@ const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
                         dangerouslySetInnerHTML={{ __html: accordion.title }}
                     />
                     <div
-                        id={`accordion-aria-control-${divState[index]} ${index}${accordionId}`}
+                        id={`accordion-aria-control-${index}${accordionId}`}
                         className='accordion__content'
                         role='region'
                         aria-labelledby={`accordion-labelledby-${index}${accordionId}`}
