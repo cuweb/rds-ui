@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export interface AccordionProps {
-    type?: 'base' | 'single' | undefined
+    type?: 'single' | undefined
     data: AccordionItemProps[]
 }
 
@@ -23,12 +23,21 @@ const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
         new Array(data.length).fill(false)
     )
     const [divState, setDivState] = useState(new Array(data.length).fill(false))
-    const toggleHandler = (position: number) => {
-        
-        const updatedAriaState = ariaState.map((item, index) =>
-            index === position ? !item : item
-        )
-        setAriaState(updatedAriaState)
+    const toggleHandler = (position: number, accordionTypes: 'base' | 'single') => {
+        if (accordionTypes === 'base') {
+            const updatedBaseAriaState = ariaState.map((item, index) =>
+                index === position ? !item : item
+            )
+            setAriaState(updatedBaseAriaState)
+        } else {
+            const updatedSingleAriaState = ariaState.map((item, index) => {
+                if (index === position && ariaState[index] === true) {
+                    return false
+                }
+                return true
+             })
+             setAriaState(updatedSingleAriaState)
+        }
     }
     const handleOnChange = (
         position: number,
@@ -63,7 +72,7 @@ const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
                         name={`accordion-${accordionType}`}
                         type='checkbox'
                         aria-expanded={!ariaState[index]}
-                        onClick={() => toggleHandler(index)}
+                        onClick={() => toggleHandler(index, types)}
                         checked={checkedState[index]}
                         onChange={() => handleOnChange(index, types)}
                     />
