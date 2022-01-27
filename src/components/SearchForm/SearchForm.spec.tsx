@@ -98,6 +98,15 @@ describe('Search Form', () => {
                 'baseUrl'
             )}/iframe.html?id=components-search-form--with-action`
         )
-        cy.get('form').should('have.attr', 'action', 'https://carleton.ca')
+        cy.request({
+            method: 'post',
+            url: 'https://carleton.ca',
+            form: true, 
+            headers: {
+              accept: "application/json",          
+             },
+        }).then((response) => {
+            expect(response.status).to.eq(200);   
+        })
     })
 })
