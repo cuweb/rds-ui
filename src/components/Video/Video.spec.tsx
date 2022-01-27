@@ -1,5 +1,4 @@
 describe('Video', () => {
-
     it(`Base Video: Should render c-video`, () => {
         cy.visit(
             `${Cypress.env(
@@ -17,5 +16,4 @@ describe('Video', () => {
         )
         cy.get(`iframe`).should('exist')
     })
-
 })

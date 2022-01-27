@@ -1,10 +1,9 @@
 describe('Badge', () => {
-
     const types = [
         'number-badge',
         'label-badge',
         'not-cool-badge',
-        'cool-badge'
+        'cool-badge',
     ]
 
     types.map((type) => {

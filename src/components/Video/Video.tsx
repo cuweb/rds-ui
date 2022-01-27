@@ -15,8 +15,15 @@ export interface VideoItemProps {
 
 const Video: React.FC<VideoProps> = ({ title, video }): JSX.Element => {
     return (
-        <div className="c-video">
-            <iframe title={title} width={video.width} height={video.height} src={video.src} frameBorder={video.frameBorder || 0} allowFullScreen={video.fullScreen || true} />
+        <div className='c-video'>
+            <iframe
+                title={title}
+                width={video.width}
+                height={video.height}
+                src={video.src}
+                frameBorder={video.frameBorder || 0}
+                allowFullScreen={video.fullScreen || true}
+            />
         </div>
     )
 }

@@ -1,5 +1,4 @@
 describe('Image Caption', () => {
-
     it(`Base Image Caption: Should render figure`, () => {
         cy.visit(
             `${Cypress.env(
@@ -35,5 +34,4 @@ describe('Image Caption', () => {
         )
         cy.get(`figcaption`).should('exist')
     })
-
 })

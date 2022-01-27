@@ -71,7 +71,6 @@ describe('Card', () => {
         cy.get(`h3`).should('exist')
     })
 
-
     // Card with title and description
 
     it(`Card with title and description: Should render anchor element`, () => {
@@ -408,7 +407,6 @@ describe('Card', () => {
         cy.get(`p`).should('exist')
     })
 
-
     // Figure variant
 
     it(`Figure variant: Should render the c-card--figure`, () => {
@@ -447,7 +445,6 @@ describe('Card', () => {
         cy.get(`p`).should('exist')
     })
 
-
     // Figure variant without link
 
     it(`Figure variant without link: Should render the c-card--figure`, () => {
@@ -476,7 +473,6 @@ describe('Card', () => {
         )
         cy.get(`p`).should('exist')
     })
-
 
     // Max-width variant
 
@@ -524,5 +520,4 @@ describe('Card', () => {
         )
         cy.get(`p`).should('exist')
     })
-
 })
