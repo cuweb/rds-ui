@@ -53,8 +53,18 @@ yarn test
 ### Run headless / ci tests
 
 ```bash 
-yarn run test:ci
+yarn test:ci
 ```
+
+## Release
+
+This project auto-publishes NPM releases. Please run the pre-release commeand before publish your new release
+
+```bash 
+yarn prerelease
+```
+
+
 
 ## Features
 
