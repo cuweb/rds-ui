@@ -87,9 +87,9 @@ describe('Search Form', () => {
             )}/iframe.html?id=components-search-form--base`
         )
         cy.get('form').click()
-        cy.on('window:alert',(txt)=>{
-            expect(txt).to.contains('test');
-         })
+        cy.on('window:alert', (txt) => {
+            expect(txt).to.contains('test')
+        })
     })
 
     it(`Search Form: Should test action click`, () => {
@@ -101,12 +101,12 @@ describe('Search Form', () => {
         cy.request({
             method: 'put',
             url: 'https://carleton.ca',
-            form: true, 
+            form: true,
             headers: {
-              accept: "application/json",          
-             },
+                accept: 'application/json',
+            },
         }).then((response) => {
-            expect(response.status).to.eq(200);   
+            expect(response.status).to.eq(200)
         })
     })
 })

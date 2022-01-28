@@ -17,12 +17,12 @@ export const Base = Template.bind({})
 const baseAccordion = getVariation('base', variations)
 Base.args = {
     type: baseAccordion.type,
-    data: baseAccordion.data
+    data: baseAccordion.data,
 }
 
 export const Single = Template.bind({})
 const singleVarianAccordion = getVariation('single', variations)
 Single.args = {
     type: singleVarianAccordion.type,
-    data: singleVarianAccordion.data
+    data: singleVarianAccordion.data,
 }

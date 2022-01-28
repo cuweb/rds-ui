@@ -23,7 +23,10 @@ const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
         new Array(data.length).fill(false)
     )
     const [divState, setDivState] = useState(new Array(data.length).fill(false))
-    const toggleHandler = (position: number, accordionTypes: 'base' | 'single') => {
+    const toggleHandler = (
+        position: number,
+        accordionTypes: 'base' | 'single'
+    ) => {
         if (accordionTypes === 'base') {
             const updatedBaseAriaState = ariaState.map((item, index) =>
                 index === position ? !item : item
@@ -35,8 +38,8 @@ const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
                     return false
                 }
                 return true
-             })
-             setAriaState(updatedSingleAriaState)
+            })
+            setAriaState(updatedSingleAriaState)
         }
     }
     const handleOnChange = (
