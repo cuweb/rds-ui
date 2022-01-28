@@ -1,7 +1,5 @@
 describe('Table', () => {
-    const types = [
-        'tables',
-    ]
+    const types = ['tables']
 
     types.map((type) => {
         it(`${type}: Should render the table`, () => {
@@ -68,5 +66,4 @@ describe('Table', () => {
             cy.get(`td`).should('exist')
         })
     })
-
 })

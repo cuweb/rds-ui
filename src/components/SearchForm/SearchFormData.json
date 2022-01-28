@@ -1,0 +1,12 @@
+{
+    "title": "Search Form",
+    "classname": ".searchForm",
+    "variations": [
+        {
+            "type": "base",
+            "title": "Search",
+            "placeHolder": "Search",
+            "action": "https://carleton.ca"
+        }
+    ]
+}

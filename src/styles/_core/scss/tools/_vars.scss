@@ -21,10 +21,10 @@ $version: '0.22.5';
 // 1. Media query breakpoints
 // --------------------------
 $breakpoints: (
-	s: 760px,
-	l: 1024px,
-	layout-s: 810px,
-	layout-l: 1050px,
+    s: 760px,
+    l: 1024px,
+    layout-s: 810px,
+    layout-l: 1050px,
 );
 
 // 2. Grid vars
@@ -90,8 +90,9 @@ $student-turquoise: #6ed3cf;
 // -------------
 
 $font-family: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B', -apple-system,
-	'blinkmacsystemfont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Helvetica',
-	'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    'blinkmacsystemfont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
 
 // 6. Type Scale
 // -------------

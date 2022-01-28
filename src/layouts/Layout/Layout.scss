@@ -188,7 +188,9 @@
     }
 
     @include media('>=layout-l') {
-        grid-template-columns: calc(200px + #{$layout-gutter}) auto calc(270px + #{$layout-gutter});
+        grid-template-columns: calc(200px + #{$layout-gutter}) auto calc(
+                270px + #{$layout-gutter}
+            );
 
         // Add padding and border to sidebar element
         .multicol__sidebar {
@@ -219,7 +221,8 @@
 
 // CSS Grid IE11 Fallback
 // TODO: look into @support grid
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active),
+    screen and (-ms-high-contrast: none) {
     /**
     * Flexbox Global Styles
     */
