@@ -1,4 +1,5 @@
 import './styles/rds.scss'
+import Accordion from './components/Accordion/Accordion'
 import Alert from './components/Alert/Alert'
 import AlertHeader from './blocks/AlertHeader/AlertHeader'
 import Aside from './layouts/Layout/Aside'
@@ -24,6 +25,7 @@ import Sidebar from './layouts/Layout/Sidebar'
 import TextImage from './blocks/TextImage/TextImage'
 
 export {
+    Accordion,
     Alert,
     AlertHeader,
     Aside,

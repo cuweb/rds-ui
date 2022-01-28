@@ -26,6 +26,20 @@
         "prettier"
     ],
     "rules": {
+        "jsx-a11y/label-has-associated-control": [
+            2,
+            {
+                "labelComponents": [
+                    "label"
+                ],
+                "labelAttributes": [
+                    "htmlFor"
+                ],
+                "controlComponents": [
+                    "input"
+                ]
+            }
+        ],
         "prettier/prettier": "off",
         "react/no-danger": "off",
         "react/require-default-props": "off", // DISCUSS
