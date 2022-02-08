@@ -20,7 +20,11 @@
         "lint": "eslint --fix src/**/*.tsx",
         "test": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 & cypress open)",
         "test:ci": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --ci --quiet & cypress run --headless)",
-        "prerelease": "yarn build && yarn build:docs && yarn test:ci"
+        "prerelease": "source $HOME/.nvm/nvm.sh; nvm install && yarn build && yarn build:docs && yarn test:ci",
+        "prepublish": "source $HOME/.nvm/nvm.sh; nvm install && yarn build && yarn build:docs && yarn test:ci",
+        "predev": "source $HOME/.nvm/nvm.sh; nvm install",
+        "preinstall": "source $HOME/.nvm/nvm.sh; nvm install",
+        "prebuild": "source $HOME/.nvm/nvm.sh; nvm install"
     },
     "np": {
         "publish": false,
