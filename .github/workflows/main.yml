@@ -12,7 +12,7 @@ jobs:
               uses: cypress-io/github-action@v2
               with:
                   install: false
-                  build: yarn install --immutable --immutable-cache --check-cache --ignore-scripts && yarn build:ci
+                  build: yarn build:ci
                   start: yarn start
                   wait-on: 'http://localhost:6006'
                   wait-on-timeout: 110
