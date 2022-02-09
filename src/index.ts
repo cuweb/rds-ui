@@ -18,6 +18,7 @@ import ImageTiles from './blocks/ImageTiles/ImageTiles'
 import ImageCaption from './components/ImageCaption/ImageCaption'
 import Layout from './layouts/Layout/Layout'
 import LinkWrapper from './components/LinkWrapper/LinkWrapper'
+import Login from './blocks/Login/Login'
 import Logo from './components/Logo/Logo'
 import Main from './layouts/Layout/Main'
 import Masthead from './blocks/Masthead/Masthead'
@@ -49,6 +50,7 @@ export {
     ImageCaption,
     Layout,
     LinkWrapper,
+    Login,
     Logo,
     Main,
     Masthead,
