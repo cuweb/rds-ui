@@ -5,6 +5,7 @@ interface MenuItemProps {
     id: string
     title: string
     link?: string
+    target?: string
     subMenu?: {
         title: string
         link?: string
@@ -14,15 +15,19 @@ interface MenuItemProps {
 const MenuItem: React.FC<MenuItemProps> = ({
     id,
     title,
+    target,
     link = '#',
     subMenu,
 }): JSX.Element => {
     const [isOpen, setIsOpen] = useState(false)
-    const subMenuClassName = subMenu ? 'has-submenu' : ''
+    const isOpenClassName = isOpen ? 'open' : ''
+    const subMenuClassName = subMenu ? `has-submenu ${isOpenClassName}` : ''
     const menuId = `menu_id_${id}`
     return (
         <li key={id} className={subMenuClassName}>
-            <a href={link}>{title}</a>
+            <a href={link} target={target}>
+                {title}
+            </a>
             {subMenu && (
                 <>
                     <button

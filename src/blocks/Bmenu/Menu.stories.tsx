@@ -13,7 +13,7 @@ const menu = [
         link: '#',
     },
     {
-        title: 'Item 2',
+        title: 'Carleton Univertisy',
         link: 'http://carleton.ca',
         target: '_blank',
     },
