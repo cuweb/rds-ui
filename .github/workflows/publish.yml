@@ -16,9 +16,9 @@ jobs:
                   node-version: 16
                   registry-url: https://registry.npmjs.org
             - name: 📦 install
-              run: yarn install
+              run: yarn install --immutable --immutable-cache --check-cache --ignore-scripts
             - name: 📦 build
-              run: yarn build
+              run: yarn build:ci
             - name: 🚀 publish
               run: npm publish --access public
               env:
