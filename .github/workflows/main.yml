@@ -11,9 +11,9 @@ jobs:
             - name: Cypress run
               uses: cypress-io/github-action@v2
               with:
-                  # install-command: yarn install --immutable --immutable-cache --check-cache --ignore-scripts
-                  build: yarn build:ci
-                  start: yarn start:ci
+                  install-command: NOYARNPREINSTALL=1 yarn install
+                  build: NOYARNPREINSTALL=1 yarn build
+                  start: NOYARNPREINSTALL=1 yarn start
                   wait-on: 'http://localhost:6006'
                   wait-on-timeout: 110
                   headless: true
