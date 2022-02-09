@@ -1,16 +1,19 @@
 import Ublock from '@src/components/Ublock/Ublock'
 import Icon from '@src/components/Icon/Icon'
 import React from 'react'
+import MastheadActions from './MastheadActions'
 
 interface MastheadProps {
     title: string
-    children: React.ReactNode
+    actions?: Array<MastheadItemsProps>
 }
 
-const Masthead: React.FC<MastheadProps> = ({
-    title,
-    children,
-}): JSX.Element => {
+interface MastheadItemsProps {
+    text: string
+    link: string
+}
+
+const Masthead: React.FC<MastheadProps> = ({ title, actions }): JSX.Element => {
     return (
         <Ublock id='id-masthead' full>
             <div className='b-masthead'>
@@ -20,7 +23,7 @@ const Masthead: React.FC<MastheadProps> = ({
                         {title}
                     </a>
                 </h1>
-                {children}
+                {actions && <MastheadActions items={actions} />}
             </div>
         </Ublock>
     )
