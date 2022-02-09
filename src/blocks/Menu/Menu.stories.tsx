@@ -74,8 +74,8 @@ const StoryLayout: React.FC = ({ children }) => {
             <Aside>{children}</Aside>
             <Main>
                 <h2>Sidebar Menu</h2>
-                {new Array(15).fill(
-                    <p>
+                {[...Array(10)].map((x, i) => (
+                    <p key={i}>
                         Dolor cupidatat et id magna. Deserunt dolor non sint
                         laboris mollit minim aliqua velit aliqua occaecat
                         pariatur sunt laboris. Ut ullamco dolor ut excepteur
@@ -85,7 +85,7 @@ const StoryLayout: React.FC = ({ children }) => {
                         tempor cupidatat consectetur do irure aliqua id culpa.
                         Anim pariatur pariatur sint sit sunt labore quis.
                     </p>
-                )}
+                ))}
             </Main>
         </Layout>
     )

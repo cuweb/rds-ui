@@ -1,20 +1,18 @@
 import React from 'react'
 import MenuItem from './MenuItem'
 
-interface NewType {
-    title: string
-    link?: string
-    subMenu?: {
-        title: string
-        link?: string
-    }[]
-}
-
 export interface MenuProps {
     type: 'top' | 'side'
     sticky?: boolean
     className?: 'string' | undefined
-    menu: NewType[]
+    menu: {
+        title: string
+        link?: string
+        subMenu?: {
+            title: string
+            link?: string
+        }[]
+    }[]
 }
 
 const Menu: React.FC<MenuProps> = ({
