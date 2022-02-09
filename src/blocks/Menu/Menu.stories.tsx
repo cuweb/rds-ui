@@ -16,43 +16,43 @@ const menu = [
         link: '#',
     },
     {
-        title: 'Carleton Univertisy',
+        title: 'Item 2',
         link: 'http://carleton.ca',
         target: '_blank',
     },
     {
-        title: 'About',
+        title: 'Item 3',
         subMenu: [
             {
-                title: 'Dean`s Message',
-                link: '#',
-                subMenu: [
-                    {
-                        title: 'Dean`s Sub Message',
-                        link: '#',
-                    },
-                    {
-                        title: 'FASS Sub Leadership',
-                        link: '#',
-                    },
-                ],
+                title: 'Item 3.1',
+                link: '#3-1',
             },
             {
-                title: 'FASS Leadership',
-                link: '#',
+                title: 'Item 3.2',
+                link: '#3-2',
             },
         ],
     },
     {
-        title: 'Future Students',
+        title: 'Item 4',
         subMenu: [
             {
-                title: 'Undesgraduate Programs',
-                link: '#',
+                title: 'Item 4.1',
+                link: '#4-1',
             },
             {
-                title: 'Graduate Programs',
-                link: '#',
+                title: 'Item 4.2',
+                link: '#4-2',
+                subMenu: [
+                    {
+                        title: 'Item 4.1.1',
+                        link: '#4-1-1',
+                    },
+                    {
+                        title: 'Item 4.1.2',
+                        link: '#4-1-2',
+                    },
+                ],
             },
         ],
     },
