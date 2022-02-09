@@ -12,9 +12,10 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "start": "yarn run nvmuse && start-storybook -p 6006 --ci",
+        "start:ci": "start-storybook -p 6006 --ci",
         "dev": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006)",
         "watch": "rollup -c -w",
-        "build": "rm -rf dist && yarn format && yarn lint && rollup -c",
+        "build": "yarn run nvmuse && rm -rf dist && yarn format && yarn lint && rollup -c",
         "build:ci": "rm -rf dist && yarn format && yarn lint && rollup -c",
         "build:docs": "yarn run nvmuse && build-storybook -o ./docs/storybook",
         "format": "prettier -w src",
@@ -24,8 +25,7 @@
         "prerelease": "yarn build && yarn build:docs && yarn test:ci",
         "nvmuse": "unset PREFIX && source $HOME/.nvm/nvm.sh && nvm install",
         "predev": "yarn run nvmuse",
-        "preinstall": "yarn run nvmuse",
-        "prebuild": "yarn run nvmuse"
+        "preinstall": "yarn run nvmuse"
     },
     "np": {
         "publish": false,
@@ -50,7 +50,7 @@
         "@whitespace/storybook-addon-html": "^5.0.0",
         "autoprefixer": "^10.4.0",
         "babel-loader": "^8.2.2",
-        "cypress": "^9.4.1",
+        "cypress": "^9.2.0",
         "eslint": "^8.3.0",
         "eslint-config-airbnb": "^19.0.2",
         "eslint-config-prettier": "^8.3.0",

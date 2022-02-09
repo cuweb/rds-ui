@@ -13,7 +13,7 @@ jobs:
               with:
                   install-command: yarn install --ignore-scripts
                   build: yarn build:ci
-                  start: yarn start
+                  start: yarn start:ci
                   wait-on: 'http://localhost:6006'
                   wait-on-timeout: 110
                   headless: true
