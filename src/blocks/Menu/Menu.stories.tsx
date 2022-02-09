@@ -26,6 +26,16 @@ const menu = [
             {
                 title: 'Dean`s Message',
                 link: '#',
+                subMenu: [
+                    {
+                        title: 'Dean`s Sub Message',
+                        link: '#',
+                    },
+                    {
+                        title: 'FASS Sub Leadership',
+                        link: '#',
+                    },
+                ],
             },
             {
                 title: 'FASS Leadership',

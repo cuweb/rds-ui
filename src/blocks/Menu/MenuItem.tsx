@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import MenuListItem from './MenuListItem'
 
 interface MenuItemProps {
     id: string
@@ -40,7 +39,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
                     </button>
                     <ul id={menuId} className='is-submenu'>
                         {subMenu.map((item, index) => (
-                            <MenuListItem
+                            <MenuItem
                                 key={index.toString()}
                                 id={index.toString()}
                                 {...item}
