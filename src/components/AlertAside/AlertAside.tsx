@@ -1,4 +1,5 @@
 import React from 'react'
+import Sidebar from '@src/layouts/Layout/Sidebar'
 import Ublock from '../Ublock/Ublock'
 import Alert from '../Alert/Alert'
 
@@ -22,11 +23,13 @@ const AlertAside: React.FC<AlertAsideProps> = ({
         handleClose,
     }
     return (
-        <Ublock>
-            <div className='b-alertaside'>
-                <Alert {...aprops} />
-            </div>
-        </Ublock>
+        <Sidebar>
+            <Ublock>
+                <div className='b-alertaside'>
+                    <Alert {...aprops} />
+                </div>
+            </Ublock>
+        </Sidebar>
     )
 }
 export default AlertAside

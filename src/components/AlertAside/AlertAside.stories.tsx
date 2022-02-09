@@ -1,13 +1,32 @@
 import React from 'react'
 import AlertAside from './AlertAside'
 import { Meta, Story } from '@storybook/react'
+import Layout from '@src/layouts/Layout/Layout'
+import  Main  from '@src/layouts/Layout/Main'
+
+
 
 export default {
     component: AlertAside,
     title: 'Components/AlertAside',
 } as Meta
 
-const Template: Story = (args: any) => <AlertAside {...args} />
+const Template: Story = (args: any) => <>
+<Layout type='ma'>
+        <Main>
+            <h2>Multicol MA (Main + Aside)</h2>
+            <p>
+                This is another two column layout, but this time it consists of
+                a main content area, immediately followed by the aside. The base
+                class name l-multicol-ma reflects the order that the elements
+                appears in its used of ma.
+            </p>
+        </Main>
+        <AlertAside {...args} /> 
+    </Layout>
+
+
+</>
 
 export const Error = Template.bind({})
 Error.args = {
@@ -34,7 +53,7 @@ Success.args = {
 export const Warning = Template.bind({})
 Warning.args = {
     type: 'warning',
-    title: 'Aside Outdoor event',
+    title: ' Outdoor event',
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
 }
