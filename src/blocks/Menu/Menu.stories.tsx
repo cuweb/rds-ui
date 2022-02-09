@@ -4,72 +4,20 @@ import Menu from './Menu'
 import Aside from '@src/layouts/Layout/Aside'
 import Main from '@src/layouts/Layout/Main'
 import Layout from '@src/layouts/Layout/Layout'
+import data from './MenuData.json'
 
 export default {
     component: Menu,
     title: `Blocks/Sidebar Menu`,
 } as Meta
 
-const menu = [
-    {
-        title: 'Item 1',
-        link: '#',
-    },
-    {
-        title: 'Item 2',
-        link: 'http://carleton.ca',
-        target: '_blank',
-    },
-    {
-        title: 'Item 3',
-        subMenu: [
-            {
-                title: 'Item 3.1',
-                link: '#3-1',
-            },
-            {
-                title: 'Item 3.2',
-                link: '#3-2',
-            },
-        ],
-    },
-    {
-        title: 'Item 4',
-        subMenu: [
-            {
-                title: 'Item 4.1',
-                link: '#4-1',
-            },
-            {
-                title: 'Item 4.2',
-                link: '#4-2',
-                subMenu: [
-                    {
-                        title: 'Item 4.1.1',
-                        link: '#4-1-1',
-                    },
-                    {
-                        title: 'Item 4.1.2',
-                        link: '#4-1-2',
-                    },
-                ],
-            },
-        ],
-    },
-]
+const menu = data.menu
 
 export const SideMenu = () => (
     <StoryLayout>
         <Menu type='side' menu={menu} />
     </StoryLayout>
 )
-
-// TODO: Review the top menu
-// export const TopMenu = () => (
-//     <StoryLayout>
-//         <Menu type='top' menu={menu} />
-//     </StoryLayout>
-// )
 
 export const Sticky = () => (
     <StoryLayout>
