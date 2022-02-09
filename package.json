@@ -15,6 +15,7 @@
         "dev": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006)",
         "watch": "rollup -c -w",
         "build": "rm -rf dist && yarn format && yarn lint && rollup -c",
+        "build:ci": "rm -rf dist && yarn format && yarn lint && rollup -c",
         "build:docs": "yarn run nvmuse && build-storybook -o ./docs/storybook",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.tsx",

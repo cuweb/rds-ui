@@ -18,7 +18,7 @@ jobs:
             - name: 📦 install
               run: yarn install
             - name: 📦 build
-              run: yarn build
+              run: yarn build:ci
             - name: 🚀 publish
               run: npm publish --access public
               env:
