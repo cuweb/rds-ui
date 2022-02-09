@@ -8,12 +8,14 @@ jobs:
               uses: actions/checkout@v2
             # Install NPM dependencies, cache them correctly
             # and run all Cypress tests
+            env:
+              NOYARNPREINSTALL: 1
             - name: Cypress run
               uses: cypress-io/github-action@v2
               with:
-                  install-command: NOYARNPREINSTALL=1 yarn install
-                  build: NOYARNPREINSTALL=1 yarn build
-                  start: NOYARNPREINSTALL=1 yarn start
+                  install-command: $NOYARNPREINSTALL yarn install
+                  build: $NOYARNPREINSTALL yarn build
+                  start: $NOYARNPREINSTALL yarn start
                   wait-on: 'http://localhost:6006'
                   wait-on-timeout: 110
                   headless: true

@@ -18,7 +18,7 @@ jobs:
             - name: 📦 install
               run: NOYARNPREINSTALL=1 yarn install
             - name: 📦 build
-              run: NOYARNPREINSTALL=1 yarn build:ci
+              run: NOYARNPREINSTALL=1 yarn build
             - name: 🚀 publish
               run: npm publish --access public
               env:
