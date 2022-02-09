@@ -24,8 +24,7 @@
         "test:ci": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --ci --quiet & cypress run --headless)",
         "prerelease": "yarn build && yarn build:docs && yarn test:ci",
         "nvmuse": "unset PREFIX && source $HOME/.nvm/nvm.sh && nvm install",
-        "predev": "yarn run nvmuse",
-        "preinstall": "yarn run nvmuse"
+        "predev": "yarn run nvmuse"
     },
     "np": {
         "publish": false,

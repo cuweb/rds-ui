@@ -11,8 +11,8 @@ jobs:
             - name: Cypress run
               uses: cypress-io/github-action@v2
               with:
-                  install-command: yarn install --immutable --immutable-cache --check-cache --ignore-scripts
-                  build: yarn remove cypress && yarn add cypress && yarn build:ci
+                  # install-command: yarn install --immutable --immutable-cache --check-cache --ignore-scripts
+                  build: yarn build:ci
                   start: yarn start:ci
                   wait-on: 'http://localhost:6006'
                   wait-on-timeout: 110
