@@ -16,8 +16,7 @@ jobs:
                   node-version: 16
                   registry-url: https://registry.npmjs.org
             - name: 📦 install
-              run: yarn remove cypress
-              run: yarn install --immutable --immutable-cache --check-cache --ignore-scripts
+              run: yarn install --ignore-scripts
             - name: 📦 build
               run: yarn build:ci
             - name: 🚀 publish
