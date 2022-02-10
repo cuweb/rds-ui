@@ -11,24 +11,17 @@
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "install:ci": "NOPRESCRIPTS=1 yarn install",
         "start": "start-storybook -p 6006 --ci",
-        "start:ci": "NOPRESCRIPTS=1 yarn start",
         "dev": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006)",
         "watch": "rollup -c -w",
         "build": "rm -rf dist && yarn format && yarn lint && rollup -c && yarn run build:docs",
-        "build:ci": "NOPRESCRIPTS=1 yarn build",
         "build:docs": "rm -rf docs && build-storybook -o ./docs/storybook",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.tsx",
         "test": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 & cypress open)",
         "test:ci": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --ci --quiet & cypress run --headless)",
         "prerelease": "yarn build && yarn build:docs && yarn test:ci",
-        "nvmuse": "unset PREFIX && source $HOME/.nvm/nvm.sh && nvm install",
-        "predev": "test -n \"$NOPRESCRIPTS\" || yarn run nvmuse",
-        "preinstall": "test -n \"$NOPRESCRIPTS\" || yarn run nvmuse",
-        "prebuild": "test -n \"$NOPRESCRIPTS\" || yarn run nvmuse",
-        "pretest": "test -n \"$NOPRESCRIPTS\" || yarn run nvmuse"
+        "nvmuse": "unset PREFIX && source $HOME/.nvm/nvm.sh && nvm install"
     },
     "np": {
         "publish": false,
