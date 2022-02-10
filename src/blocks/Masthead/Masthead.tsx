@@ -3,18 +3,21 @@ import React from 'react'
 import MastheadActions from './MastheadActions'
 import MastheadTitle from './MastheadTitle'
 import { MastheadProps } from './MastHeadInterfaces'
+import MastheadMenu from './MastheadMenu'
 
 const Masthead: React.FC<MastheadProps> = ({
     title,
     url,
     brand,
     actions,
+    menu,
 }): JSX.Element => {
     return (
         <Ublock id='id-masthead' full>
             <div className='b-masthead'>
                 <MastheadTitle title={title} url={url} brand={brand} />
                 {actions && <MastheadActions items={actions} />}
+                {menu && <MastheadMenu menu={menu} />}
             </div>
         </Ublock>
     )
