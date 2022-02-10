@@ -1,8 +1,12 @@
 type Brand = string | undefined
 type MenuItem = {
+    id: string | number
     text: string
     link: string
-}[]
+    subMenu?: MenuItem[]
+}
+
+type Menu = Array<MenuItem>
 
 type Actions = {
     text: string
@@ -14,7 +18,7 @@ export interface MastheadProps {
     url: string
     brand?: Brand
     actions?: Actions
-    menu?: MenuItem
+    menu?: Menu
 }
 
 export interface MastheadTitleProps {
@@ -28,5 +32,9 @@ export interface MastheadActionsProps {
 }
 
 export interface MastheadMenuProps {
-    menu: MenuItem
+    menu: Menu
+}
+
+export interface MastheadMenuItemProps {
+    item: MenuItem
 }

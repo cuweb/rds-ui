@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { MastheadMenuProps } from './MastHeadInterfaces'
+import MastheadMenuItem from './MastheadMenuItem'
 
 const MastheadMenu: FC<MastheadMenuProps> = ({ menu }): JSX.Element => {
     return (
@@ -10,11 +11,18 @@ const MastheadMenu: FC<MastheadMenuProps> = ({ menu }): JSX.Element => {
                 aria-label='Main Navigation'
             >
                 <ul className='nav__menu nav__menu--top'>
-                    {menu.map((item, index) => (
-                        <li key={index}>
-                            <a href={item.link}>{item.text}</a>
-                        </li>
-                    ))}
+                    {menu.map((item, index) => {
+                        const itemProps = {
+                            ...item,
+                            id: index,
+                        }
+                        return (
+                            <MastheadMenuItem
+                                key={index.toString()}
+                                item={itemProps}
+                            />
+                        )
+                    })}
                 </ul>
             </div>
         </nav>

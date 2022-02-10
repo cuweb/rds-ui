@@ -15,6 +15,16 @@ const args = {
         {
             text: 'Item 1',
             link: '/',
+            subMenu: [
+                {
+                    text: 'Item 1.1',
+                    link: '/',
+                },
+                {
+                    text: 'Item 1.2',
+                    link: '/',
+                },
+            ],
         },
         {
             text: 'Item 2',
