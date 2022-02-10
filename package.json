@@ -11,20 +11,17 @@
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "start": "yarn run nvmuse && start-storybook -p 6006 --ci",
+        "start": "start-storybook -p 6006 --ci",
         "dev": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006)",
         "watch": "rollup -c -w",
         "build": "rm -rf dist && yarn format && yarn lint && rollup -c",
-        "build:docs": "yarn run nvmuse && build-storybook -o ./docs/storybook",
+        "build:docs": "build-storybook -o ./docs/storybook",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.tsx",
-        "test": "yarn run nvmuse && rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 & cypress open)",
-        "test:ci": "yarn run nvmuse && rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --ci --quiet & cypress run --headless)",
+        "test": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 & cypress open)",
+        "test:ci": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --ci --quiet & cypress run --headless)",
         "prerelease": "yarn build && yarn build:docs && yarn test:ci",
-        "nvmuse": "unset PREFIX && source $HOME/.nvm/nvm.sh && nvm install",
-        "predev": "yarn run nvmuse",
-        "preinstall": "yarn run nvmuse",
-        "prebuild": "yarn run nvmuse"
+        "nvmuse": "unset PREFIX && source $HOME/.nvm/nvm.sh && nvm install"
     },
     "np": {
         "publish": false,
