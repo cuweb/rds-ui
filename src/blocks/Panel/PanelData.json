@@ -9,6 +9,22 @@
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel."
         },
         {
+            "type": "basePanelWithNote",
+            "cardType": "base",
+            "title": "This is the title",
+            "contentLink": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel."
+        },
+        {
+            "type": "baseHeadingTitlePanel",
+            "cardType": "base",
+            "heading": "This is the title",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.",
+            "button": {
+                "url": "https://carleton.ca",
+                "text": "Text"
+            }
+        },
+        {
             "type": "panelWithImage",
             "cardType": "base",
             "title": "This is the title",
@@ -33,9 +49,8 @@
             }
         },
         {
-            "type": "entireBlockIntoCTA",
+            "type": "entirePanelIntoCTA",
             "cardType": "CTAPanel",
-            "link": "https://ravendesignsystem.github.io/rds//dev/components/buttons/cta-button/",
             "title": "This is the title",
             "image": {
                 "src": "https://via.placeholder.com/640x480",
@@ -49,8 +64,8 @@
         {
             "type": "panelWithIcons",
             "cardType": "icon",
+            "titleIcon": "Ideas@Carleton",
             "heading": "This is the title",
-            "subheading": "This is the title",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.",
             "buttonIcon" : {
                 "content": "Download now"
