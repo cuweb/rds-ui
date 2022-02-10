@@ -2,14 +2,14 @@ import Ublock from '@src/components/Ublock/Ublock'
 import React from 'react'
 
 interface LoginProps {
-    title: string
+    title?: string
     onSubmit?: React.FormEventHandler
 }
 
 const Login: React.FC<LoginProps> = ({ title, onSubmit }): JSX.Element => {
     const loginForm = (
         <div className='b-login'>
-            <h2>{title}</h2>
+            {title && <h2 id="login_title">{title}</h2>}
             <form
                 className='c-form'
                 name='loginform'

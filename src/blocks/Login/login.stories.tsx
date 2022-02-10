@@ -35,6 +35,15 @@ const DialogTemplate: Story = (args: any) => {
 export const BaseLogin = Template.bind({})
 
 BaseLogin.args = {
+    onSubmit: (e: any) => {
+        e.preventDefault()
+        alert('Login form submited!')
+    },
+}
+
+export const WithTitle = Template.bind({})
+
+WithTitle.args = {
     title: 'Login Title',
     onSubmit: (e: any) => {
         e.preventDefault()
