@@ -2,7 +2,8 @@ name: Publish
 on:
     release:
         types: [published]
-
+env:
+    NOPRESCRIPTS: 1
 jobs:
     release:
         name: 🚀 release
