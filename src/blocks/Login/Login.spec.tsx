@@ -15,7 +15,9 @@ describe('Login', () => {
     })
 
     it(`Should render title`, () => {
-        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-login--with-title`)
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-login--with-title`
+        )
         cy.get(`#login_title`).should('exist')
     })
 
@@ -27,6 +29,15 @@ describe('Login', () => {
     it(`Should render password field`, () => {
         cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-login--base`)
         cy.get(`#user_pass`).should('exist')
+    })
+
+    it(`Should render forget password link`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-login--with-forget-link`
+        )
+        cy.get(`.login__link`).should('exist')
     })
 
     it(`Should have submit`, () => {

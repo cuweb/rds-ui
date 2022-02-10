@@ -3,13 +3,18 @@ import React from 'react'
 
 interface LoginProps {
     title?: string
+    forgetLink?: string
     onSubmit?: React.FormEventHandler
 }
 
-const Login: React.FC<LoginProps> = ({ title, onSubmit }): JSX.Element => {
+const Login: React.FC<LoginProps> = ({
+    title,
+    forgetLink,
+    onSubmit,
+}): JSX.Element => {
     const loginForm = (
         <div className='b-login'>
-            {title && <h2 id="login_title">{title}</h2>}
+            {title && <h2 id='login_title'>{title}</h2>}
             <form
                 className='c-form'
                 name='loginform'
@@ -27,12 +32,11 @@ const Login: React.FC<LoginProps> = ({ title, onSubmit }): JSX.Element => {
                 />
                 <label htmlFor='user_pass'>
                     Password
-                    <a
-                        className='login__link'
-                        href='https://myone.carleton.ca/'
-                    >
-                        Forgot password?
-                    </a>
+                    {forgetLink && (
+                        <a className='login__link' href={forgetLink}>
+                            Forgot password?
+                        </a>
+                    )}
                 </label>
                 <input
                     type='password'

@@ -51,6 +51,16 @@ WithTitle.args = {
     },
 }
 
+export const WithForgetLink = Template.bind({})
+
+WithForgetLink.args = {
+    forgetLink: 'https://myone.carleton.ca/',
+    onSubmit: (e: any) => {
+        e.preventDefault()
+        alert('Login form submited!')
+    },
+}
+
 export const InDialogue = DialogTemplate.bind({})
 
 InDialogue.args = {
