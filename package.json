@@ -21,11 +21,12 @@
         "test": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 & cypress open)",
         "test:ci": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006 --ci --quiet & cypress run --headless)",
         "prerelease": "yarn build && yarn build:docs && yarn test:ci",
-        "nvmuse": "unset PREFIX && source $HOME/.nvm/nvm.sh && nvm install",
-        "predev": "test -n \"$NOPRESCRIPTS\" || yarn run nvmuse",
-        "preinstall": "test -n \"$NOPRESCRIPTS\" || yarn run nvmuse",
-        "prebuild": "test -n \"$NOPRESCRIPTS\" || yarn run nvmuse",
-        "pretest": "test -n \"$NOPRESCRIPTS\" || yarn run nvmuse"
+        "nvmuse": "test -n \"$NOPRESCRIPTS\" || unset PREFIX && source $HOME/.nvm/nvm.sh && nvm install",
+        "predev": "yarn run nvmuse",
+        "prestart": "yarn run nvmuse",
+        "preinstall": "yarn run nvmuse",
+        "prebuild": "yarn run nvmuse",
+        "pretest": "yarn run nvmuse"
     },
     "np": {
         "publish": false,
@@ -50,7 +51,7 @@
         "@whitespace/storybook-addon-html": "^5.0.0",
         "autoprefixer": "^10.4.0",
         "babel-loader": "^8.2.2",
-        "cypress": "^9.2.0",
+        "cypress": "^9.4.1",
         "eslint": "^8.3.0",
         "eslint-config-airbnb": "^19.0.2",
         "eslint-config-prettier": "^8.3.0",
