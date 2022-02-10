@@ -1,11 +1,5 @@
 import React from 'react'
-
-interface MastheadActionsProps {
-    items: {
-        text: string
-        link: string
-    }[]
-}
+import { MastheadActionsProps } from './MastHeadInterfaces'
 
 const MastheadActions: React.FC<MastheadActionsProps> = ({
     items,

@@ -1,28 +1,19 @@
 import Ublock from '@src/components/Ublock/Ublock'
-import Icon from '@src/components/Icon/Icon'
 import React from 'react'
 import MastheadActions from './MastheadActions'
+import MastheadTitle from './MastheadTitle'
+import { MastheadProps } from './MastHeadInterfaces'
 
-interface MastheadProps {
-    title: string
-    actions?: Array<MastheadItemsProps>
-}
-
-interface MastheadItemsProps {
-    text: string
-    link: string
-}
-
-const Masthead: React.FC<MastheadProps> = ({ title, actions }): JSX.Element => {
+const Masthead: React.FC<MastheadProps> = ({
+    title,
+    url,
+    brand,
+    actions,
+}): JSX.Element => {
     return (
         <Ublock id='id-masthead' full>
             <div className='b-masthead'>
-                <h1>
-                    <a href='https://ravendesignsystem.github.io/rds/'>
-                        <Icon icon='cushield' size={24} />
-                        {title}
-                    </a>
-                </h1>
+                <MastheadTitle title={title} url={url} brand={brand} />
                 {actions && <MastheadActions items={actions} />}
             </div>
         </Ublock>

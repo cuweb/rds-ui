@@ -9,6 +9,8 @@ export default {
 
 const args = {
     title: 'Ravens Design System',
+    url: 'https://github.com/cuweb/rds-beta',
+    brand: 'https://sprott.carleton.ca/wp-content/uploads/CU_Sprott_Logo_Primary_RBG_Red_Black_on_lightBG_300-1024x343.jpg',
     actions: [
         {
             text: 'Item 1',
@@ -21,7 +23,10 @@ const args = {
     ],
 }
 
-export const Base = () => <Masthead title={args.title} />
+export const Base = () => <Masthead title={args.title} url={args.url} />
+export const CustomLogo = () => (
+    <Masthead title={args.title} url={args.url} brand={args.brand} />
+)
 export const WithMenu = () => (
-    <Masthead title={args.title} actions={args.actions} />
+    <Masthead title={args.title} url={args.url} actions={args.actions} />
 )
