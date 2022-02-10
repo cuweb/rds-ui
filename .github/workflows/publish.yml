@@ -2,7 +2,6 @@ name: Publish
 on:
     release:
         types: [published]
-
 jobs:
     release:
         name: 🚀 release
@@ -16,9 +15,9 @@ jobs:
                   node-version: 16
                   registry-url: https://registry.npmjs.org
             - name: 📦 install
-              run: NOYARNPREINSTALL=1 yarn install
+              run: yarn install
             - name: 📦 build
-              run: NOYARNPREINSTALL=1 yarn build
+              run: yarn build
             - name: 🚀 publish
               run: npm publish --access public
               env:
