@@ -1,11 +1,10 @@
 import { useEffect, RefObject } from 'react'
 
 type Event = KeyboardEvent
+type RefType = RefObject<HTMLElement>
+type HandlerType = (event: Event) => void
 
-const useEscToClose = <T extends HTMLElement = HTMLElement>(
-    ref: RefObject<T>,
-    handler: (event: Event) => void
-) => {
+const useEscToClose = (ref: RefType, handler: HandlerType) => {
     useEffect(() => {
         const listener = (event: Event) => {
             if (event.key === 'Escape') {
