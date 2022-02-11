@@ -6,7 +6,6 @@ import Overlay from '@src/layouts/Overlay/Overlay'
 import Login, { LoginProps } from '../Login/Login'
 
 const MastheadLogin: FC<LoginProps> = (props): JSX.Element => {
-    const { title } = props
     const [isOpen, setIsOpen] = useState(false)
     const modalContainer = useRef(null)
     useOnClickOutside(modalContainer, () => setIsOpen(false))
