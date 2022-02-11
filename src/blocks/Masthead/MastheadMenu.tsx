@@ -1,6 +1,10 @@
 import React, { FC } from 'react'
-import { MastheadMenuProps } from './MastHeadInterfaces'
+import { Menu } from './MastHeadTypes'
 import MastheadMenuItem from './MastheadMenuItem'
+
+export interface MastheadMenuProps {
+    menu: Menu
+}
 
 const MastheadMenu: FC<MastheadMenuProps> = ({ menu }): JSX.Element => {
     return (
@@ -14,7 +18,7 @@ const MastheadMenu: FC<MastheadMenuProps> = ({ menu }): JSX.Element => {
                     {menu.map((item, index) => {
                         const itemProps = {
                             ...item,
-                            id: index,
+                            id: item.id || index,
                         }
                         return (
                             <MastheadMenuItem

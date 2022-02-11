@@ -1,6 +1,12 @@
 import Icon from '@src/components/Icon/Icon'
 import React from 'react'
-import { MastheadTitleProps } from './MastHeadInterfaces'
+import { Brand } from './MastHeadTypes'
+
+export interface MastheadTitleProps {
+    title: string
+    url: string
+    brand?: Brand
+}
 
 const MastheadTitle: React.FC<MastheadTitleProps> = ({
     title,

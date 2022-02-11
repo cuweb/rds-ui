@@ -11,6 +11,21 @@ const args = {
     title: 'Ravens Design System',
     url: 'https://github.com/cuweb/rds-beta',
     brand: 'https://sprott.carleton.ca/wp-content/uploads/CU_Sprott_Logo_Primary_RBG_Red_Black_on_lightBG_300-1024x343.jpg',
+    actions: {
+        search: {
+            title: 'Search',
+            placeholder: 'Search',
+            onSubmit: (e: any) => {
+                e.preventDefault()
+                alert('Search')
+            },
+        },
+        login: {
+            active: true,
+            onSubmit: () => alert('Login'),
+            forgetLink: 'http://carleton.ca',
+        },
+    },
     menu: [
         {
             text: 'Item 1',
@@ -58,3 +73,8 @@ export const BrandLogo = () => (
 export const WithMenu = () => (
     <Masthead title={args.title} url={args.url} menu={args.menu} />
 )
+export const WithActions = () => (
+    <Masthead title={args.title} url={args.url} actions={args.actions} />
+)
+
+export const KitchenSink = () => <Masthead {...args} />

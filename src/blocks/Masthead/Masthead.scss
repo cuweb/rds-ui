@@ -246,3 +246,15 @@ body {
     max-height: 70px;
     width: auto;
 }
+
+// Actions
+.b-masthead .c-searchform {
+    display: flex;
+    align-items: center;
+    button {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+}

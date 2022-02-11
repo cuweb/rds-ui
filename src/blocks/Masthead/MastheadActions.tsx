@@ -1,14 +1,18 @@
 import React from 'react'
-import { MastheadActionsProps } from './MastHeadInterfaces'
+import MastheadSearch from './MastheadSearch'
+import { Actions } from './MastHeadTypes'
+
+interface MastheadActionsProps {
+    items: Actions
+}
 
 const MastheadActions: React.FC<MastheadActionsProps> = ({
     items,
 }): JSX.Element => {
+    const { search } = items
     return (
-        <ul className='masthead__actions nav__menu--vert '>
-            {items.map((item, index) => (
-                <li key={index}>{item.text}</li>
-            ))}
+        <ul className='masthead__actions'>
+            {search && <MastheadSearch {...search} />}
         </ul>
     )
 }

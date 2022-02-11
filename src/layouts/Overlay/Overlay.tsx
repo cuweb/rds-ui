@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface OverlayProps {
-    type: string
+    type?: string
     className?: string | undefined
     children: React.ReactNode
     isHidden?: boolean
