@@ -37,6 +37,16 @@ const args = {
         {
             text: 'Item 4',
             link: '/',
+            subMenu: [
+                {
+                    text: 'Item 4.1',
+                    link: '/',
+                },
+                {
+                    text: 'Item 4.2',
+                    link: '/',
+                },
+            ],
         },
     ],
 }
