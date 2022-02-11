@@ -21,9 +21,10 @@ const args = {
             },
         },
         login: {
-            active: true,
+            title: 'Login',
             onSubmit: () => alert('Login'),
             forgetLink: 'http://carleton.ca',
+            registerLink: 'http://carleton.ca',
         },
     },
     menu: [
