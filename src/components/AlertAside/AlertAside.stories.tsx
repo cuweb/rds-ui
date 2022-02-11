@@ -3,6 +3,7 @@ import AlertAside from './AlertAside'
 import { Meta, Story } from '@storybook/react'
 import Layout from '@src/layouts/Layout/Layout'
 import  Main  from '@src/layouts/Layout/Main'
+import Sidebar from '@src/layouts/Layout/Sidebar'
 
 
 
@@ -22,7 +23,9 @@ const Template: Story = (args: any) => <>
                 appears in its used of ma.
             </p>
         </Main>
+        <Sidebar>
         <AlertAside {...args} /> 
+        </Sidebar>
     </Layout>
 
 
