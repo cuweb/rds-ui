@@ -1,5 +1,6 @@
 import React, { FC, useState, useRef } from 'react'
 import useOnClickOutside from '@src/hooks/useOnClickOutside'
+import useEscToClose from '@src/hooks/useEscKey'
 import { MastheadMenuItemProps } from './MastHeadInterfaces'
 
 const MastheadMenuItem: FC<MastheadMenuItemProps> = ({ item }): JSX.Element => {
@@ -7,6 +8,7 @@ const MastheadMenuItem: FC<MastheadMenuItemProps> = ({ item }): JSX.Element => {
     const [isOpen, setIsOpen] = useState(false)
     const subMenuContainer = useRef(null)
     useOnClickOutside(subMenuContainer, () => setIsOpen(false))
+    useEscToClose(subMenuContainer, () => setIsOpen(false))
 
     // Base Menu
     if (!subMenu) {
