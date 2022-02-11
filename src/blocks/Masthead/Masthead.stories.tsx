@@ -21,7 +21,7 @@ const args = {
             },
         },
         login: {
-            title: 'Login',
+            title: 'Login to Your App',
             forgetLink: 'http://carleton.ca',
             registerLink: 'http://carleton.ca',
             onSubmit: (e: any) => {

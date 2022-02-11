@@ -21,7 +21,7 @@ const MastheadLogin: FC<LoginProps> = (props): JSX.Element => {
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <Icon icon='lock' />
-                    {title && <span className='u-hide-s'>{title}</span>}
+                    <span className='u-hide-s'>Login</span>
                 </button>
             </li>
         )
