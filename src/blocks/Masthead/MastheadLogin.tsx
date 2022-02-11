@@ -1,15 +1,17 @@
 import React, { FC, useState, useRef } from 'react'
 import useOnClickOutside from '@src/hooks/useOnClickOutside'
+import useEscToClose from '@src/hooks/useEscKey'
 import Icon from '@src/components/Icon/Icon'
-import Ublock from '@src/components/Ublock/Ublock'
 import Overlay from '@src/layouts/Overlay/Overlay'
-import { Login } from './MastHeadTypes'
+import { Login as LoginType } from './MastHeadTypes'
+import Login from '../Login/Login'
 
-const MastheadLogin: FC<Login> = (props): JSX.Element => {
+const MastheadLogin: FC<LoginType> = (props): JSX.Element => {
     const { title } = props
     const [isOpen, setIsOpen] = useState(false)
     const modalContainer = useRef(null)
     useOnClickOutside(modalContainer, () => setIsOpen(false))
+    useEscToClose(modalContainer, () => setIsOpen(false))
 
     if (!isOpen) {
         return (
@@ -39,11 +41,7 @@ const MastheadLogin: FC<Login> = (props): JSX.Element => {
                 </button>
             </li>
             <Overlay isHidden={!isOpen}>
-                <Ublock color='grey'>
-                    <div className='b-search'>
-                        <p>Login</p>
-                    </div>
-                </Ublock>
+                <Login {...props} />
             </Overlay>
         </div>
     )

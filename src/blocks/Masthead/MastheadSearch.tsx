@@ -1,5 +1,6 @@
 import React, { FC, useState, useRef } from 'react'
 import useOnClickOutside from '@src/hooks/useOnClickOutside'
+import useEscToClose from '@src/hooks/useEscKey'
 import Icon from '@src/components/Icon/Icon'
 import Ublock from '@src/components/Ublock/Ublock'
 import Overlay from '@src/layouts/Overlay/Overlay'
@@ -12,6 +13,7 @@ const MastheadSearch: FC<SearchFormProps> = (props): JSX.Element => {
     const [isOpen, setIsOpen] = useState(false)
     const modalContainer = useRef(null)
     useOnClickOutside(modalContainer, () => setIsOpen(false))
+    useEscToClose(modalContainer, () => setIsOpen(false))
 
     if (!isOpen) {
         return (

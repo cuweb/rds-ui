@@ -22,4 +22,14 @@
     input[type='submit'] {
         width: 100%;
     }
+
+    .user_pass {
+        display: flex;
+    }
+
+    .login__link {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
 }
