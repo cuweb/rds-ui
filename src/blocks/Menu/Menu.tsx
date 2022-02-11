@@ -4,7 +4,7 @@ import MenuItem from './MenuItem'
 export interface MenuProps {
     type: 'top' | 'side'
     sticky?: boolean
-    className?: 'string' | undefined
+    className?: string | undefined
     menu: {
         title: string
         link?: string
