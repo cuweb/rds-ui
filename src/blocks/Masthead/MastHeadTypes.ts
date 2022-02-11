@@ -1,5 +1,5 @@
-import React from 'react'
 import { SearchFormProps } from '@src/components/SearchForm/SearchForm'
+import { LoginProps } from '../Login/Login'
 
 export type Brand = string | undefined
 export type MenuItem = {
@@ -10,14 +10,8 @@ export type MenuItem = {
 }
 
 export type Menu = Array<MenuItem>
-export type Login = {
-    title?: string
-    forgetLink: string
-    registerLink: string
-    onSubmit?: React.FormEventHandler
-}
 
 export type Actions = {
     search?: SearchFormProps
-    login?: Login
+    login?: LoginProps
 }

@@ -1,15 +1,17 @@
 import Ublock from '@src/components/Ublock/Ublock'
 import React from 'react'
 
-interface LoginProps {
+export interface LoginProps {
     title?: string
     forgetLink?: string
+    registerLink?: string
     onSubmit?: React.FormEventHandler
 }
 
 const Login: React.FC<LoginProps> = ({
     title,
     forgetLink,
+    registerLink,
     onSubmit,
 }): JSX.Element => {
     const loginForm = (
@@ -59,6 +61,14 @@ const Login: React.FC<LoginProps> = ({
                     />
                 </div>
             </form>
+            {registerLink && (
+                <p className='login__account'>
+                    Not registered?
+                    <a className='u-link' href='/register/'>
+                        Create an account
+                    </a>
+                </p>
+            )}
         </div>
     )
     return <Ublock color='grey'>{loginForm}</Ublock>

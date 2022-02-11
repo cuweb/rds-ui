@@ -3,10 +3,9 @@ import useOnClickOutside from '@src/hooks/useOnClickOutside'
 import useEscToClose from '@src/hooks/useEscKey'
 import Icon from '@src/components/Icon/Icon'
 import Overlay from '@src/layouts/Overlay/Overlay'
-import { Login as LoginType } from './MastHeadTypes'
-import Login from '../Login/Login'
+import Login, { LoginProps } from '../Login/Login'
 
-const MastheadLogin: FC<LoginType> = (props): JSX.Element => {
+const MastheadLogin: FC<LoginProps> = (props): JSX.Element => {
     const { title } = props
     const [isOpen, setIsOpen] = useState(false)
     const modalContainer = useRef(null)

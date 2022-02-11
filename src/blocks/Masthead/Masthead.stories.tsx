@@ -22,9 +22,12 @@ const args = {
         },
         login: {
             title: 'Login',
-            onSubmit: () => alert('Login'),
             forgetLink: 'http://carleton.ca',
             registerLink: 'http://carleton.ca',
+            onSubmit: (e: any) => {
+                e.preventDefault()
+                alert('Login')
+            },
         },
     },
     menu: [
