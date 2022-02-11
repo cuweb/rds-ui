@@ -22,6 +22,7 @@ import Login from './blocks/Login/Login'
 import Logo from './components/Logo/Logo'
 import Main from './layouts/Layout/Main'
 import Masthead from './blocks/Masthead/Masthead'
+import Menu from './blocks/Menu/Menu'
 import Overlay from './layouts/Overlay/Overlay'
 import Ublock from './components/Ublock/Ublock'
 import Ugrid from './components/Ugrid/Ugrid'
@@ -54,6 +55,7 @@ export {
     Logo,
     Main,
     Masthead,
+    Menu,
     Overlay,
     Ublock,
     Ugrid,
