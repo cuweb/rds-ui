@@ -51,5 +51,16 @@ describe('AlertAside', () => {
                 cy.get(`${button} .c-icon`).should('exist')
             })
         }
+        if (type === 'error') {
+            it(`${type.toUpperCase()}: Should trigger an alert on Click on close button`, () => {
+                cy.get(`${button} .c-icon`).click()
+                cy.on('window:alert', (text) => {
+                    expect(text).to.contains('test');
+                  });
+
+                
+            })
+        }
+
     })
 })
