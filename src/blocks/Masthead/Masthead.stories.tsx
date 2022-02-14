@@ -29,6 +29,27 @@ const args = {
                 alert('Login')
             },
         },
+        buttons: [
+            {
+                text: 'Button 1',
+                link: '/',
+                subMenu: [
+                    {
+                        text: 'Button 1.1',
+                        link: '/',
+                    },
+                    {
+                        text: 'Button 1.2',
+                        link: '/',
+                    },
+                ],
+            },
+            {
+                text: 'Button 2',
+                link: '/',
+                type: 'red',
+            },
+        ],
     },
     menu: [
         {

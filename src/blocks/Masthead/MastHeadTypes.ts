@@ -14,4 +14,5 @@ export type Menu = Array<MenuItem>
 export type Actions = {
     search?: SearchFormProps
     login?: LoginProps
+    buttons?: MenuItem[]
 }
