@@ -34,29 +34,29 @@ const Template: Story = (args: any) => <>
 export const Error = Template.bind({})
 Error.args = {
     type: 'error',
-    title: 'Error Aside Alert',
-    content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
+    title: 'Error Alert Aside block example ',
+    content: `This is an example of an Alert Aside block. This block can use any variant of the Alert component.`,
     handleClose: (e: any) => alert('test'),
 }
 
 export const Information = Template.bind({})
 Information.args = {
     type: 'info',
-    title: 'Aside Information alert',
-    content: 'Used to highlight <a href="#">informational content</a>.',
+    title: 'Information Alert Aside block example',
+    content: 'This is an example of an Alert Aside block. This block can use any variant of the Alert component.',
 }
 
 export const Success = Template.bind({})
 Success.args = {
     type: 'success',
-    title: 'Aside Upload success',
-    content: 'Your <a href="#">document</a> was uploaded successfully.',
+    title: 'Upload success Alert Aside block example',
+    content: 'This is an example of an Alert Aside block. This block can use any variant of the Alert component.',
 }
 
 export const Warning = Template.bind({})
 Warning.args = {
     type: 'warning',
-    title: ' Outdoor event',
+    title: ' Warning Alert Aside block example. ',
     content:
-        'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
+        'This is an example of an Alert Aside block. This block can use any variant of the Alert component.',
 }
