@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
-import Masthead from './Masthead'
+import Masthead from '@src/blocks/Masthead/Masthead'
 
 export default {
     component: Masthead,
@@ -10,7 +10,6 @@ export default {
 const args = {
     title: 'Ravens Design System',
     url: 'https://github.com/cuweb/rds-beta',
-    brand: 'https://sprott.carleton.ca/wp-content/uploads/CU_Sprott_Logo_Primary_RBG_Red_Black_on_lightBG_300-1024x343.jpg',
     actions: {
         search: {
             title: 'Search',
@@ -93,7 +92,13 @@ const args = {
 
 export const Base = () => <Masthead title={args.title} url={args.url} />
 export const BrandLogo = () => (
-    <Masthead title={args.title} url={args.url} brand={args.brand} />
+    <Masthead
+        title={args.title}
+        url={args.url}
+        brand={
+            'https://sprott.carleton.ca/wp-content/uploads/CU_Sprott_Logo_Primary_RBG_Red_Black_on_lightBG_300-1024x343.jpg'
+        }
+    />
 )
 export const WithMenu = () => (
     <Masthead title={args.title} url={args.url} menu={args.menu} />

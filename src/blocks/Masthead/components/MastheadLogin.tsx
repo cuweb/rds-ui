@@ -3,7 +3,7 @@ import useOnClickOutside from '@src/hooks/useOnClickOutside'
 import useEscToClose from '@src/hooks/useEscKey'
 import Icon from '@src/components/Icon/Icon'
 import Overlay from '@src/layouts/Overlay/Overlay'
-import Login, { LoginProps } from '../Login/Login'
+import Login, { LoginProps } from '@src/blocks/Login/Login'
 
 const MastheadLogin: FC<LoginProps> = (props): JSX.Element => {
     const [isOpen, setIsOpen] = useState(false)

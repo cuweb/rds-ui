@@ -1,8 +1,8 @@
 import React from 'react'
-import MastheadCTAButton from './MastheadCTAButton'
-import MastheadLogin from './MastheadLogin'
-import MastheadSearch from './MastheadSearch'
-import { Actions } from './MastHeadTypes'
+import MastheadCTAButton from '@src/blocks/Masthead/components/MastheadCTAButton'
+import MastheadLogin from '@src/blocks/Masthead/components/MastheadLogin'
+import MastheadSearch from '@src/blocks/Masthead/components/MastheadSearch'
+import { Actions } from '@src/blocks/Masthead/MastHeadTypes'
 
 interface MastheadActionsProps {
     items: Actions
@@ -18,8 +18,8 @@ const MastheadActions: React.FC<MastheadActionsProps> = ({
                 buttons.map((item, index) => (
                     <MastheadCTAButton key={index} {...item} />
                 ))}
-            {search && <MastheadSearch {...search} />}
             {login && <MastheadLogin {...login} />}
+            {search && <MastheadSearch {...search} />}
         </ul>
     )
 }

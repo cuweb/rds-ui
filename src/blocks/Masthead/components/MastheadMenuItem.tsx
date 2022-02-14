@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { MenuItem } from './MastHeadTypes'
-import MastheadSubMenu from './MastheadSubMenu'
+import { MenuItem } from '@src/blocks/Masthead/MastHeadTypes'
+import MastheadSubMenu from '@src/blocks/Masthead/components/MastheadSubMenu'
 
 export interface MastheadMenuItemProps {
     item: MenuItem
