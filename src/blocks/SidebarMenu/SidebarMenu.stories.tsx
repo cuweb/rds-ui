@@ -1,13 +1,13 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
-import Menu from './Menu'
+import SidebarMenu from './SidebarMenu'
 import Aside from '@src/layouts/Layout/Aside'
 import Main from '@src/layouts/Layout/Main'
 import Layout from '@src/layouts/Layout/Layout'
-import data from './MenuData.json'
+import data from './SidebarMenuData.json'
 
 export default {
-    component: Menu,
+    component: SidebarMenu,
     title: `Blocks/Sidebar Menu`,
 } as Meta
 
@@ -15,13 +15,13 @@ const menu = data.menu
 
 export const SideMenu = () => (
     <StoryLayout>
-        <Menu type='side' menu={menu} />
+        <SidebarMenu menu={menu} />
     </StoryLayout>
 )
 
 export const Sticky = () => (
     <StoryLayout>
-        <Menu type='side' menu={menu} sticky />
+        <SidebarMenu menu={menu} sticky />
     </StoryLayout>
 )
 

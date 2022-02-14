@@ -1,22 +1,20 @@
 import React from 'react'
-import MenuItem from './MenuItem'
+import SidebarMenuItem from '@src/blocks/SidebarMenu/SidebarMenuItem'
 
-export interface MenuProps {
-    type: 'top' | 'side'
+export interface SidebarMenuProps {
     sticky?: boolean
     className?: string | undefined
     menu: {
-        title: string
+        text: string
         link?: string
         subMenu?: {
-            title: string
+            text: string
             link?: string
         }[]
     }[]
 }
 
-const Menu: React.FC<MenuProps> = ({
-    type,
+const SidebarMenu: React.FC<SidebarMenuProps> = ({
     sticky,
     className = '',
     menu,
@@ -25,17 +23,21 @@ const Menu: React.FC<MenuProps> = ({
     return (
         <div className={`b-menu ${stickyClassName} ${className}`}>
             <nav
-                className={`c-nav c-nav--${type}nav`}
+                className='c-nav c-nav--sidenav'
                 role='presentation'
                 aria-label='Main Navigation'
             >
-                <ul className='nav__menu'>
+                <ul className='nav__menu nav__menu--side'>
                     {menu.map((item, index) => (
-                        <MenuItem key={index} id={index.toString()} {...item} />
+                        <SidebarMenuItem
+                            key={index}
+                            id={index.toString()}
+                            {...item}
+                        />
                     ))}
                 </ul>
             </nav>
         </div>
     )
 }
-export default Menu
+export default SidebarMenu

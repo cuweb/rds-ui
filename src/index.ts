@@ -22,7 +22,7 @@ import Login from '@src/blocks/Login/Login'
 import Logo from '@src/components/Logo/Logo'
 import Main from '@src/layouts/Layout/Main'
 import Masthead from '@src/blocks/Masthead/Masthead'
-import Menu from '@src/blocks/Menu/Menu'
+import SidebarMenu from '@src/blocks/SidebarMenu/SidebarMenu'
 import Overlay from '@src/layouts/Overlay/Overlay'
 import Ublock from '@src/components/Ublock/Ublock'
 import Ugrid from '@src/components/Ugrid/Ugrid'
@@ -55,12 +55,12 @@ export {
     Logo,
     Main,
     Masthead,
-    Menu,
     Overlay,
     Ublock,
     Ugrid,
     SearchForm,
     Video,
     Sidebar,
+    SidebarMenu,
     TextImage,
 }

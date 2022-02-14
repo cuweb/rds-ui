@@ -23,11 +23,11 @@ const Masthead: React.FC<MastheadProps> = ({
     actions,
     menu,
 }): JSX.Element => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
     const isMobile = useWindowSize().width < 1024
     const hasMenu = menu && !isMobile
     const hasActions = actions && !isMobile
-    const hasMobileMenu = isMobile && isOpen
+    const hasMobileMenu = isMobile && isOpen && menu
 
     return (
         <>
@@ -46,7 +46,7 @@ const Masthead: React.FC<MastheadProps> = ({
             </Ublock>
             {hasMobileMenu && (
                 <Overlay type='menu'>
-                    {menu && <MastheadMenu menu={menu} />}
+                    <MastheadMenu menu={menu} />
                 </Overlay>
             )}
         </>

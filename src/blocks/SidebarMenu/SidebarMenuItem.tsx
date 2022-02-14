@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 
-interface MenuItemProps {
+interface SidebarMenuItemProps {
     id: string
-    title: string
+    text: string
     link?: string
     target?: string
     subMenu?: {
-        title: string
+        text: string
         link?: string
     }[]
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({
+const SidebarMenuItem: React.FC<SidebarMenuItemProps> = ({
     id,
-    title,
+    text,
     target,
     link = '#',
     subMenu,
@@ -25,7 +25,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
     return (
         <li key={id} className={subMenuClassName}>
             <a href={link} target={target}>
-                {title}
+                {text}
             </a>
             {subMenu && (
                 <>
@@ -39,7 +39,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
                     </button>
                     <ul id={menuId} className='is-submenu'>
                         {subMenu.map((item, index) => (
-                            <MenuItem
+                            <SidebarMenuItem
                                 key={index.toString()}
                                 id={index.toString()}
                                 {...item}
@@ -51,4 +51,4 @@ const MenuItem: React.FC<MenuItemProps> = ({
         </li>
     )
 }
-export default MenuItem
+export default SidebarMenuItem
