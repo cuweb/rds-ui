@@ -1,0 +1,23 @@
+{
+    "title": "Timeline",
+    "classname": ".timeline",
+    "variations": [
+        {
+            "type": "base",
+            "data": [
+                {
+                    "name": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                }, 
+                {
+                    "name": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                },
+                {
+                    "name": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                }
+            ]
+        }
+    ]
+}
