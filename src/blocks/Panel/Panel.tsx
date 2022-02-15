@@ -15,24 +15,24 @@ export interface PanelProps {
     contentLink?: ContentLinkProps
     buttonIcon?: ButtonIconProps
 }
-interface ButtonProps {
+export interface ButtonProps {
     url: string
     text: string
 }
-interface ButtonIconProps {
+export interface ButtonIconProps {
     content: string
 }
-interface ContentLinkProps {
+export interface ContentLinkProps {
     content: string
 }
-export interface TypeProps {
+export interface TypeOfProps {
     [index: string]: ReactElement
 }
 
 const Panel: React.FC<PanelProps> = (props): JSX.Element => {
     const { type } = props
 
-    const panelTypes: TypeProps = {
+    const panelTypes: TypeOfProps = {
         base: <BasePanel {...props} />,
         CTAPanel: <CTAPanel {...props} />,
         icon: <IconPanel {...props} />,

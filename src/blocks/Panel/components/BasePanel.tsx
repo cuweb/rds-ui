@@ -11,12 +11,12 @@ export interface BasePanelProps {
     button?: ButtonProps
 }
 
-interface ButtonProps {
+export interface ButtonProps {
     url: string
     text: string
 }
 
-interface ContentLinkProps {
+export interface ContentLinkProps {
     content: string
 }
 

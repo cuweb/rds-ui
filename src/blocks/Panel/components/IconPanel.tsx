@@ -8,7 +8,7 @@ export interface IconPanelProps {
     buttonIcon?: ButtonIconProps
 }
 
-interface ButtonIconProps {
+export interface ButtonIconProps {
     content: string
 }
 
