@@ -1,4 +1,3 @@
-import './styles/rds.scss'
 import Accordion from '@src/components/Accordion/Accordion'
 import Alert from '@src/components/Alert/Alert'
 import AlertHeader from '@src/blocks/AlertHeader/AlertHeader'
