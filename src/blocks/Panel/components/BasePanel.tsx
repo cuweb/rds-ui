@@ -7,7 +7,7 @@ export interface BasePanelProps {
     content: string
     contentLink?: ContentLinkProps
     heading?: string
-    image: HTMLImageElement
+    image?: HTMLImageElement
     button?: ButtonProps
 }
 
@@ -32,7 +32,7 @@ const BasePanel: React.FC<BasePanelProps> = ({
         <div className='b-sidebar'>
             {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
             {heading && <h3 dangerouslySetInnerHTML={{ __html: heading }} />}
-            <img src={image.src} alt={image.alt} />
+            {image &&<img src={image.src} alt={image.alt} />}
             <p dangerouslySetInnerHTML={{ __html: content }} />
             {contentLink && (
                 <p>
