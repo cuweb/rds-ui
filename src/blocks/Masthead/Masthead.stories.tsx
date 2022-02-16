@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
-import Masthead from '@src/blocks/Masthead/Masthead'
+import Masthead from '@blocks/Masthead/Masthead'
 
 export default {
     component: Masthead,

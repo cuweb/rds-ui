@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import Ublock from '@src/components/Ublock/Ublock'
-import useWindowSize from '@src/hooks/useWindowSize'
-import Overlay from '@src/layouts/Overlay/Overlay'
-import MastheadActions from '@src/blocks/Masthead/components/MastheadActions'
-import MastheadTitle from '@src/blocks/Masthead/components/MastheadTitle'
-import { Brand, Actions, Menu } from '@src/blocks/Masthead/MastHeadTypes'
-import MastheadMenu from '@src/blocks/Masthead/components/MastheadMenu'
-import MastheadMobileButton from '@src/blocks/Masthead/components/MastheadMobileButton'
+import Ublock from '@components/Ublock/Ublock'
+import useWindowSize from '@hooks/useWindowSize'
+import Overlay from '@layouts/Overlay/Overlay'
+import MastheadActions from '@blocks/Masthead/components/MastheadActions'
+import MastheadTitle from '@blocks/Masthead/components/MastheadTitle'
+import { Brand, Actions, Menu } from '@blocks/Masthead/MastHeadTypes'
+import MastheadMenu from '@blocks/Masthead/components/MastheadMenu'
+import MastheadMobileButton from '@blocks/Masthead/components/MastheadMobileButton'
 
 export interface MastheadProps {
     title: string

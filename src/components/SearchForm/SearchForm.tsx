@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
-import Icon from '@src/components/Icon/Icon'
+import Icon from '@components/Icon/Icon'
 
 export interface SearchFormProps {
     title?: string

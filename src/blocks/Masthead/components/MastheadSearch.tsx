@@ -1,12 +1,10 @@
 import React, { FC, useState, useRef } from 'react'
-import useOnClickOutside from '@src/hooks/useOnClickOutside'
-import useEscToClose from '@src/hooks/useEscKey'
-import Icon from '@src/components/Icon/Icon'
-import Ublock from '@src/components/Ublock/Ublock'
-import Overlay from '@src/layouts/Overlay/Overlay'
-import SearchForm, {
-    SearchFormProps,
-} from '@src/components/SearchForm/SearchForm'
+import useOnClickOutside from '@hooks/useOnClickOutside'
+import useEscToClose from '@hooks/useEscKey'
+import Icon from '@components/Icon/Icon'
+import Ublock from '@components/Ublock/Ublock'
+import Overlay from '@layouts/Overlay/Overlay'
+import SearchForm, { SearchFormProps } from '@components/SearchForm/SearchForm'
 
 const MastheadSearch: FC<SearchFormProps> = (props): JSX.Element => {
     const { title } = props

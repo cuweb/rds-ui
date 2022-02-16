@@ -1,9 +1,9 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import getVariation from '@src/functions/getVariation'
+import getVariation from '@functions/getVariation'
 import Banner from './Banner'
 import data from './BannerData.json'
-import ButtonCTA from '@src/components/ButtonCTA/ButtonCTA'
+import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
 
 const { variations } = data
 

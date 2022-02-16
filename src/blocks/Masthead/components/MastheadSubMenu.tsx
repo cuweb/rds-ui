@@ -1,6 +1,6 @@
 import React, { FC, useState, useRef } from 'react'
-import useOnClickOutside from '@src/hooks/useOnClickOutside'
-import useEscToClose from '@src/hooks/useEscKey'
+import useOnClickOutside from '@hooks/useOnClickOutside'
+import useEscToClose from '@hooks/useEscKey'
 
 export interface MastheadSubMenuProps {
     id?: string | number

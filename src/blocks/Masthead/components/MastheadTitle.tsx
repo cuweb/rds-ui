@@ -1,6 +1,6 @@
-import Icon from '@src/components/Icon/Icon'
+import Icon from '@components/Icon/Icon'
 import React from 'react'
-import { Brand } from '@src/blocks/Masthead/MastHeadTypes'
+import { Brand } from '@blocks/Masthead/MastHeadTypes'
 
 export interface MastheadTitleProps {
     title: string

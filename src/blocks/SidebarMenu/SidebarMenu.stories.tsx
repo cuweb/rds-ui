@@ -1,9 +1,9 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
 import SidebarMenu from './SidebarMenu'
-import Aside from '@src/layouts/Layout/Aside'
-import Main from '@src/layouts/Layout/Main'
-import Layout from '@src/layouts/Layout/Layout'
+import Aside from '@layouts/Layout/Aside'
+import Main from '@layouts/Layout/Main'
+import Layout from '@layouts/Layout/Layout'
 import data from './SidebarMenuData.json'
 
 export default {

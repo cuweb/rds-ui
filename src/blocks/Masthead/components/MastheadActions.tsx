@@ -1,8 +1,8 @@
 import React from 'react'
-import MastheadCTAButton from '@src/blocks/Masthead/components/MastheadCTAButton'
-import MastheadLogin from '@src/blocks/Masthead/components/MastheadLogin'
-import MastheadSearch from '@src/blocks/Masthead/components/MastheadSearch'
-import { Actions } from '@src/blocks/Masthead/MastHeadTypes'
+import MastheadCTAButton from '@blocks/Masthead/components/MastheadCTAButton'
+import MastheadLogin from '@blocks/Masthead/components/MastheadLogin'
+import MastheadSearch from '@blocks/Masthead/components/MastheadSearch'
+import { Actions } from '@blocks/Masthead/MastHeadTypes'
 
 interface MastheadActionsProps {
     items: Actions

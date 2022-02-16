@@ -1,9 +1,9 @@
 import React, { FC, useState, useRef } from 'react'
-import useOnClickOutside from '@src/hooks/useOnClickOutside'
-import useEscToClose from '@src/hooks/useEscKey'
-import Icon from '@src/components/Icon/Icon'
-import Overlay from '@src/layouts/Overlay/Overlay'
-import Login, { LoginProps } from '@src/blocks/Login/Login'
+import useOnClickOutside from '@hooks/useOnClickOutside'
+import useEscToClose from '@hooks/useEscKey'
+import Icon from '@components/Icon/Icon'
+import Overlay from '@layouts/Overlay/Overlay'
+import Login, { LoginProps } from '@blocks/Login/Login'
 
 const MastheadLogin: FC<LoginProps> = (props): JSX.Element => {
     const [isOpen, setIsOpen] = useState(false)

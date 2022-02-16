@@ -1,6 +1,6 @@
 import React from 'react'
-import Ublock from '@src/components/Ublock/Ublock'
-import ButtonSocial from '@src/components/ButtonSocial/ButtonSocial'
+import Ublock from '@components/Ublock/Ublock'
+import ButtonSocial from '@components/ButtonSocial/ButtonSocial'
 
 export interface FooterSimpleProps {
     name: string

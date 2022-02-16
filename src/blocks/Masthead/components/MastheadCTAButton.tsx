@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import MastheadSubMenu from '@src/blocks/Masthead/components/MastheadSubMenu'
+import MastheadSubMenu from '@blocks/Masthead/components/MastheadSubMenu'
 
 export interface MastheadCTAButtonProps {
     type?: 'white' | 'red' | undefined

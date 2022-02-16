@@ -1,4 +1,4 @@
-import { SearchFormProps } from '@src/components/SearchForm/SearchForm'
+import { SearchFormProps } from '@components/SearchForm/SearchForm'
 import { LoginProps } from '../Login/Login'
 
 export type Brand = string | undefined

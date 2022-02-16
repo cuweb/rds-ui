@@ -1,5 +1,5 @@
 import React from 'react'
-import SidebarMenuItem from '@src/blocks/SidebarMenu/SidebarMenuItem'
+import SidebarMenuItem from '@blocks/SidebarMenu/SidebarMenuItem'
 
 export interface SidebarMenuProps {
     sticky?: boolean

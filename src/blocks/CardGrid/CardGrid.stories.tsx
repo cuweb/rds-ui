@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
 import CardGrid from './CardGrid'
-import Card from '@src/components/Card/Card'
+import Card from '@components/Card/Card'
 import data from './CardGridData.json'
 
 export default {

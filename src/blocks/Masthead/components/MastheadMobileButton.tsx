@@ -1,4 +1,4 @@
-import Icon from '@src/components/Icon/Icon'
+import Icon from '@components/Icon/Icon'
 import React, { FC } from 'react'
 
 interface MastheadMobileButtonProps {

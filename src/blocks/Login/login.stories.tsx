@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Meta, Story } from '@storybook/react'
 import Login from './Login'
-import Overlay from '@src/layouts/Overlay/Overlay'
+import Overlay from '@layouts/Overlay/Overlay'
 
 export default {
     component: Login,
