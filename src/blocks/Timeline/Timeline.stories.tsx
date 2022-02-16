@@ -20,26 +20,33 @@ export const Base = Template.bind({})
 const baseTimeline = getVariation('base', variations)
 
 Base.args = {
-    stepFirst: '2009',
-    stepLast: '2020',
-    allSteps: baseTimeline.data,
+    stepFirst: baseTimeline.stepFirst,
+    stepLast: baseTimeline.stepLast,
+    allSteps: baseTimeline.allSteps,
 }
 
 export const WithTitle = Template.bind({})
 
+const withTitleTimeline = getVariation('withTitle', variations)
+
 WithTitle.args = {
-    title: 'This is Timeline block Title',
-    stepFirst: '2009',
-    stepLast: '2020',
-    allSteps: baseTimeline.data,
+    title: withTitleTimeline.title,
+    stepFirst: withTitleTimeline.stepFirst,
+    stepLast: withTitleTimeline.stepLast,
+    allSteps: withTitleTimeline.allSteps,
 }
 
 export const WithTitleAndDescription = Template.bind({})
 
+const withTitleAndDescription = getVariation(
+    'withTitleAndDescription',
+    variations
+)
+
 WithTitleAndDescription.args = {
-    title: 'This is Timeline block Title',
-    description: 'This is Timeline block description',
-    stepFirst: '2009',
-    stepLast: '2020',
-    allSteps: baseTimeline.data,
+    title: withTitleAndDescription.title,
+    description: withTitleAndDescription.description,
+    stepFirst: withTitleAndDescription.stepFirst,
+    stepLast: withTitleAndDescription.stepLast,
+    allSteps: withTitleAndDescription.allSteps,
 }
