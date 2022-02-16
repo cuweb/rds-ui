@@ -1,43 +1,30 @@
-import React, { ReactElement } from 'react'
-import BasePanel from './components/BasePanel'
-import CTAPanel from './components/CTAPanel'
-import IconPanel from './components/IconPanel'
+import React, { ReactNode } from 'react'
+import Ublock from '@src/components/Ublock/Ublock'
+import Icon from '@src/components/Icon/Icon'
 
 export interface PanelProps {
-    type: 'base' | 'CTAPanel' | 'icon'
-    title?: string
-    titleIcon?: string
-    heading?: string
-    image: HTMLImageElement
-    content: string
-    button?: ButtonProps
-    fakeButton: string
-    contentLink?: ContentLinkProps
-    buttonIcon?: ButtonIconProps
-}
-export interface ButtonProps {
-    url: string
-    text: string
-}
-export interface ButtonIconProps {
-    content: string
-}
-export interface ContentLinkProps {
-    content: string
-}
-export interface TypeOfProps {
-    [index: string]: ReactElement
+    title?: string | undefined
+    titleWithHeading?: string | undefined
+    children?: ReactNode
+    icon?: string
 }
 
 const Panel: React.FC<PanelProps> = (props): JSX.Element => {
-    const { type } = props
+    const { title, children, titleWithHeading, icon } = props
 
-    const panelTypes: TypeOfProps = {
-        base: <BasePanel {...props} />,
-        CTAPanel: <CTAPanel {...props} />,
-        icon: <IconPanel {...props} />,
-    }
-    return panelTypes[type || 'base']
+    return (
+        <Ublock>
+            <div className='b-sidebar'>
+                {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
+                {titleWithHeading && (
+                    <h2 className='sidebar__heading'>
+                        {icon && <Icon icon={icon} />} {titleWithHeading}
+                    </h2>
+                )}
+                {children}
+            </div>
+        </Ublock>
+    )
 }
 
 export default Panel

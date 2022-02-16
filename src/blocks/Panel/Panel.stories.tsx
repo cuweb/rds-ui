@@ -1,86 +1,68 @@
 import React from 'react'
-import { Meta, Story } from '@storybook/react'
-import getVariation from '@src/functions/getVariation'
+import { Meta } from '@storybook/react'
 import Panel from './Panel'
-import data from './PanelData.json'
-
-const { title, variations } = data
+import CTAPanel from './components/CTAPanel'
+import ButtonCTA from '@src/components/ButtonCTA/ButtonCTA'
 
 export default {
-    component: Panel,
-    title: `Blocks/${title}`,
+    title: `Blocks/Panel`,
+    component: Panel, CTAPanel
 } as Meta
 
-const Template: Story = (args: any) => <Panel {...args} />
-
 // Base Panel
-export const Base= Template.bind({})
-const basePanel = getVariation('basePanel', variations)
-Base.args = {
-    type: basePanel.panelType,
-    title: basePanel.title,
-    content: basePanel.content,
-}
+export const Base = () => (
+    <Panel title='This is the title'>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.</p>
+    </Panel>
+)
 
-// Base Panel with Note
-export const WithNote= Template.bind({})
-const basePanelWithNote = getVariation('basePanelWithNote', variations)
-WithNote.args = {
-    type: basePanelWithNote.panelType,
-    title: basePanelWithNote.title,
-    contentLink: basePanelWithNote.contentLink,
-}
+// Base Panel with Link
+export const BasePanelWithLink = () => (
+    <Panel title='This is the title'>
+        <p>Lorem ipsum <a href="https://carleton.ca/">dolor</a> sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.</p>
+    </Panel>
+)
 
-// //  Base Heading vs Title Panel
-export const HeadingAndTitle= Template.bind({})
-const headingAndTitle = getVariation('basePanelWithNote', variations)
-HeadingAndTitle.args = {
-    type: headingAndTitle.panelType,
-    heading: headingAndTitle.heading,
-    content: headingAndTitle.content,
-    button: headingAndTitle.button,
-}
+// Panel with Heading and Button
+export const PanelWithHeadingAndButton = () => (
+    <Panel titleWithHeading='Ideas@Carleton'>
+        <h3>This is the title</h3>
+        <p>Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.</p>
+        <ButtonCTA link='https://carleton.ca' text='Text'/>
+    </Panel>
+)
 
-// //  Panel with Image
-export const WithImage= Template.bind({})
-const panelWithImage = getVariation('panelWithImage', variations)
-WithImage.args = {
-    type: panelWithImage.panelType,
-    title: panelWithImage.title,
-    content: panelWithImage.content,
-    image: panelWithImage.image,
-}
+// Panel with Image
+export const PanelWithImage = () => (
+    <Panel title='This is the title'>
+        <img src="https://via.placeholder.com/640x480" alt="image" />
+        <p>Lorem ipsum <a href="https://carleton.ca/">dolor</a> sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.</p>
+    </Panel>
+)
 
-// //  Panel with CTA Button
-export const WithCTAButton= Template.bind({})
-const panelWithCTAButton = getVariation('panelWithCTAButton', variations)
-WithCTAButton.args = {
-    type: panelWithCTAButton.panelType,
-    title: panelWithCTAButton.title,
-    content: panelWithCTAButton.content,
-    image: panelWithCTAButton.image,
-    button: panelWithCTAButton.button,
-}
+// Panel with CTA Button
+export const PanelWithCTAButton = () => (
+    <Panel title='This is the title'>
+        <img src="https://via.placeholder.com/640x480" alt="image" />
+        <p>Lorem ipsum <a href="https://carleton.ca/">dolor</a> sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.</p>
+        <ButtonCTA link='https://ravendesignsystem.github.io/rds//dev/components/buttons/cta-button/' text='More about CTA buttons'/>
+    </Panel>
+)
 
-// //  Entire Panel Into CTA
-export const IntoCTA= Template.bind({})
-const entirePanelIntoCTA = getVariation('entirePanelIntoCTA', variations)
-IntoCTA.args = {
-    type: entirePanelIntoCTA.panelType,
-    title: entirePanelIntoCTA.title,
-    content: entirePanelIntoCTA.content,
-    image: entirePanelIntoCTA.image,
-    fakeButton: entirePanelIntoCTA.fakeButton,
-}
+// Entire Panel into CTA
+export const EntirePanelIntoPanel = () => (
+    <CTAPanel title='This is the title'>
+        <img src="https://via.placeholder.com/640x480" alt="" />
+        <p>Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.</p>
+        <div className="c-buttoncta">More about CTA buttons</div>
+    </CTAPanel>
+)
 
-// //  Panel with Icons
-// export const panelWithIcons = Template.bind({})
-export const WithIcons= Template.bind({})
-const panelWithIcons = getVariation('panelWithIcons', variations)
-WithIcons.args = {
-    type: panelWithIcons.panelType,
-    titleIcon: panelWithIcons.titleIcon,
-    content: panelWithIcons.content,
-    heading: panelWithIcons.heading,
-    buttonIcon: panelWithIcons.buttonIcon,
-}
+// Entire Panel into CTA
+export const PanelWithIcons = () => (
+    <Panel icon='light-bulb' titleWithHeading='Ideas@Carleton'>
+        <h3>This is the title</h3>
+        <p>Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.</p>
+        <ButtonCTA link='https://carleton.ca' icon='arrow-down' text='Download now'/>
+    </Panel>
+)
