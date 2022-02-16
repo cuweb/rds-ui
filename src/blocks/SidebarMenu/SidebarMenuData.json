@@ -1,44 +1,44 @@
 {
     "menu": [
         {
-            "text": "Item 1",
+            "title": "Item 1",
             "link": "#"
         },
         {
-            "text": "Item 2",
+            "title": "Item 2",
             "link": "http://carleton.ca",
             "target": "_blank"
         },
         {
-            "text": "Item 3",
+            "title": "Item 3",
             "subMenu": [
                 {
-                    "text": "Item 3.1",
+                    "title": "Item 3.1",
                     "link": "#3-1"
                 },
                 {
-                    "text": "Item 3.2",
+                    "title": "Item 3.2",
                     "link": "#3-2"
                 }
             ]
         },
         {
-            "text": "Item 4",
+            "title": "Item 4",
             "subMenu": [
                 {
-                    "text": "Item 4.1",
+                    "title": "Item 4.1",
                     "link": "#4-1"
                 },
                 {
-                    "text": "Item 4.2",
+                    "title": "Item 4.2",
                     "link": "#4-2",
                     "subMenu": [
                         {
-                            "text": "Item 4.1.1",
+                            "title": "Item 4.1.1",
                             "link": "#4-1-1"
                         },
                         {
-                            "text": "Item 4.1.2",
+                            "title": "Item 4.1.2",
                             "link": "#4-1-2"
                         }
                     ]

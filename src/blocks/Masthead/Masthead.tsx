@@ -4,16 +4,17 @@ import useWindowSize from '@hooks/useWindowSize'
 import Overlay from '@layouts/Overlay/Overlay'
 import MastheadActions from '@blocks/Masthead/components/MastheadActions'
 import MastheadTitle from '@blocks/Masthead/components/MastheadTitle'
-import { Brand, Actions, Menu } from '@blocks/Masthead/MastHeadTypes'
-import MastheadMenu from '@blocks/Masthead/components/MastheadMenu'
+import { Brand, Actions } from '@blocks/Masthead/MastHeadTypes'
 import MastheadMobileButton from '@blocks/Masthead/components/MastheadMobileButton'
+import NavMenu from '@components/NavMenu/NavMenu'
+import { NavMenuItemTypes } from '@components/NavMenu/components/NavMenuItem'
 
 export interface MastheadProps {
     title: string
     url: string
     brand?: Brand
     actions?: Actions
-    menu?: Menu
+    menu?: Array<NavMenuItemTypes>
 }
 
 const Masthead: React.FC<MastheadProps> = ({
@@ -34,7 +35,7 @@ const Masthead: React.FC<MastheadProps> = ({
             <Ublock id='id-masthead' full>
                 <div className='b-masthead'>
                     <MastheadTitle title={title} url={url} brand={brand} />
-                    {hasMenu && <MastheadMenu menu={menu} />}
+                    {hasMenu && <NavMenu type='top' menu={menu} />}
                     {hasActions && <MastheadActions items={actions} />}
                     {isMobile && (
                         <MastheadMobileButton
@@ -46,7 +47,7 @@ const Masthead: React.FC<MastheadProps> = ({
             </Ublock>
             {hasMobileMenu && (
                 <Overlay type='menu'>
-                    <MastheadMenu menu={menu} />
+                    <NavMenu type='top' menu={menu} />
                 </Overlay>
             )}
         </>

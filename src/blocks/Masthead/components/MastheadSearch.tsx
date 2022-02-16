@@ -19,7 +19,7 @@ const MastheadSearch: FC<SearchFormProps> = (props): JSX.Element => {
                 <button
                     type='button'
                     aria-label='Open Search'
-                    className='masthead__searchbtn u-icon u-icon--notext-s'
+                    className='masthead__searchbtn u-icon u-icon--notitle-s'
                     onClick={() => setIsOpen(true)}
                 >
                     <Icon icon='search' />
@@ -35,7 +35,7 @@ const MastheadSearch: FC<SearchFormProps> = (props): JSX.Element => {
                 <button
                     type='button'
                     aria-label='Close Modals'
-                    className='masthead__closebtn u-icon u-icon--notext'
+                    className='masthead__closebtn u-icon u-icon--notitle'
                     onClick={() => setIsOpen(false)}
                 >
                     <Icon icon='X' />

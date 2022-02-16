@@ -30,21 +30,21 @@ const args = {
         },
         buttons: [
             {
-                text: 'Button 1',
+                title: 'Button 1',
                 link: '/',
                 subMenu: [
                     {
-                        text: 'Button 1.1',
+                        title: 'Button 1.1',
                         link: '/',
                     },
                     {
-                        text: 'Button 1.2',
+                        title: 'Button 1.2',
                         link: '/',
                     },
                 ],
             },
             {
-                text: 'Button 2',
+                title: 'Button 2',
                 link: '/',
                 type: 'red',
             },
@@ -52,37 +52,37 @@ const args = {
     },
     menu: [
         {
-            text: 'Item 1',
+            title: 'Item 1',
             link: '/',
             subMenu: [
                 {
-                    text: 'Item 1.1',
+                    title: 'Item 1.1',
                     link: '/',
                 },
                 {
-                    text: 'Item 1.2',
+                    title: 'Item 1.2',
                     link: '/',
                 },
             ],
         },
         {
-            text: 'Item 2',
+            title: 'Item 2',
             link: '/',
         },
         {
-            text: 'Item 3',
+            title: 'Item 3',
             link: '/',
         },
         {
-            text: 'Item 4',
+            title: 'Item 4',
             link: '/',
             subMenu: [
                 {
-                    text: 'Item 4.1',
+                    title: 'Item 4.1',
                     link: '/',
                 },
                 {
-                    text: 'Item 4.2',
+                    title: 'Item 4.2',
                     link: '/',
                 },
             ],

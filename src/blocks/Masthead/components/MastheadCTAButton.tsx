@@ -3,17 +3,17 @@ import MastheadSubMenu from '@blocks/Masthead/components/MastheadSubMenu'
 
 export interface MastheadCTAButtonProps {
     type?: 'white' | 'red' | undefined
-    text: string
+    title: string
     link: string
     subMenu?: {
-        text: string
+        title: string
         link: string
     }[]
 }
 
 const MastheadCTAButton: FC<MastheadCTAButtonProps> = ({
     type = 'white',
-    text,
+    title,
     link,
     subMenu,
 }): JSX.Element => {
@@ -21,12 +21,12 @@ const MastheadCTAButton: FC<MastheadCTAButtonProps> = ({
         return (
             <li className={`masthead__cta masthead__cta--${type}`}>
                 <a className='u-icon' href={link}>
-                    {text}
+                    {title}
                 </a>
             </li>
         )
     }
 
-    return <MastheadSubMenu text={text} subMenu={subMenu} direction='right' />
+    return <MastheadSubMenu title={title} subMenu={subMenu} direction='right' />
 }
 export default MastheadCTAButton

@@ -32,7 +32,7 @@ const MastheadLogin: FC<LoginProps> = (props): JSX.Element => {
                 <button
                     type='button'
                     aria-label='Close Modals'
-                    className='masthead__closebtn u-icon u-icon--notext'
+                    className='masthead__closebtn u-icon u-icon--notitle'
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <Icon icon='X' />

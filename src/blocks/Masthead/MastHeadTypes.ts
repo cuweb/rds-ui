@@ -4,7 +4,7 @@ import { LoginProps } from '../Login/Login'
 export type Brand = string | undefined
 export type MenuItem = {
     id?: string | number
-    text: string
+    title: string
     link: string
     subMenu?: MenuItem[]
 }

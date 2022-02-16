@@ -4,17 +4,17 @@ import useEscToClose from '@hooks/useEscKey'
 
 export interface MastheadSubMenuProps {
     id?: string | number
-    text: string
+    title: string
     direction?: string
     subMenu: {
-        text: string
+        title: string
         link: string
     }[]
 }
 
 const MastheadSubMenu: FC<MastheadSubMenuProps> = ({
     id,
-    text,
+    title,
     subMenu,
     direction = 'left',
 }): JSX.Element => {
@@ -39,13 +39,13 @@ const MastheadSubMenu: FC<MastheadSubMenuProps> = ({
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <span className='u-visually-hidden'>Show submenu for</span>
-                {text}
+                {title}
             </button>
             {isOpen && (
                 <ul id={`'id_${id}`} className='is-submenu'>
                     {subMenu.map((subItem, index) => (
                         <li key={index.toString()}>
-                            <a href={subItem.link}>{subItem.text}</a>
+                            <a href={subItem.link}>{subItem.title}</a>
                         </li>
                     ))}
                 </ul>
