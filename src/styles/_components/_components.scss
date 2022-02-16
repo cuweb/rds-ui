@@ -5,6 +5,7 @@
 // -------------------
 @import '../../components/Accordion/Accordion.scss';
 @import '../../components/Alert/Alert.scss';
+@import '../../components/AlertAside/AlertAside.scss';
 @import '../../components/Badge/Badge.scss';
 @import '../../components/ButtonCTA/ButtonCTA.scss';
 @import '../../components/ButtonSocial/ButtonSocial.scss';
@@ -12,8 +13,7 @@
 @import 'heading/heading';
 @import '../../components/ImageCaption/ImageCaption.scss';
 @import 'menupopup/menupopup';
-@import 'menupopup/menupopup';
-@import 'navmenu/navmenu';
+@import '../../blocks/Menu/Menu.scss';
 @import 'navicon/navicon';
 @import '../../components/SearchForm/SearchForm.scss';
 @import 'table/table';

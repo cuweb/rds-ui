@@ -1,6 +1,7 @@
 import './styles/rds.scss'
 import Accordion from './components/Accordion/Accordion'
 import Alert from './components/Alert/Alert'
+import AlertAside from './components/AlertAside/AlertAside'
 import AlertHeader from './blocks/AlertHeader/AlertHeader'
 import Aside from './layouts/Layout/Aside'
 import Badge from './components/Badge/Badge'
@@ -22,6 +23,7 @@ import Login from './blocks/Login/Login'
 import Logo from './components/Logo/Logo'
 import Main from './layouts/Layout/Main'
 import Masthead from './blocks/Masthead/Masthead'
+import Menu from './blocks/Menu/Menu'
 import Overlay from './layouts/Overlay/Overlay'
 import Ublock from './components/Ublock/Ublock'
 import Ugrid from './components/Ugrid/Ugrid'
@@ -33,6 +35,7 @@ import TextImage from './blocks/TextImage/TextImage'
 export {
     Accordion,
     Alert,
+    AlertAside,
     AlertHeader,
     Aside,
     Badge,
@@ -54,6 +57,7 @@ export {
     Logo,
     Main,
     Masthead,
+    Menu,
     Overlay,
     Ublock,
     Ugrid,
