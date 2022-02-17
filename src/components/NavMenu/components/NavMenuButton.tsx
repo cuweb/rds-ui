@@ -14,8 +14,6 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
     isOpen,
     onClick,
 }): JSX.Element => {
-    console.log(isOpen)
-
     const buttonTypes = {
         top: (
             <button

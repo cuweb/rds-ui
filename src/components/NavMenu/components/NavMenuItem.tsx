@@ -8,6 +8,7 @@ export type NavMenuItemTypes = {
     title: string
     link: string
     className?: string
+    color?: string
     subMenu?: {
         title: string
         link: string

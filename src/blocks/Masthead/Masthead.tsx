@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import Ublock from '@components/Ublock/Ublock'
 import useWindowSize from '@hooks/useWindowSize'
 import Overlay from '@layouts/Overlay/Overlay'
-import MastheadActions from '@blocks/Masthead/components/MastheadActions'
-import MastheadTitle from '@blocks/Masthead/components/MastheadTitle'
-import { Brand, Actions } from '@blocks/Masthead/MastHeadTypes'
+import MastheadActions, {
+    MastheadActionsTypes,
+} from '@blocks/Masthead/components/MastheadActions'
+import MastheadTitle, {
+    MastHeadBrand,
+} from '@blocks/Masthead/components/MastheadTitle'
 import MastheadMobileButton from '@blocks/Masthead/components/MastheadMobileButton'
 import NavMenu from '@components/NavMenu/NavMenu'
 import { NavMenuItemTypes } from '@components/NavMenu/components/NavMenuItem'
@@ -12,8 +15,8 @@ import { NavMenuItemTypes } from '@components/NavMenu/components/NavMenuItem'
 export interface MastheadProps {
     title: string
     url: string
-    brand?: Brand
-    actions?: Actions
+    brand?: MastHeadBrand
+    actions?: MastheadActionsTypes
     menu?: Array<NavMenuItemTypes>
 }
 

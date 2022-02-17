@@ -1,11 +1,20 @@
 import React from 'react'
 import MastheadLogin from '@blocks/Masthead/components/MastheadLogin'
 import MastheadSearch from '@blocks/Masthead/components/MastheadSearch'
-import { Actions } from '@blocks/Masthead/MastHeadTypes'
-import NavMenuItem from '@components/NavMenu/components/NavMenuItem'
+import NavMenuItem, {
+    NavMenuItemTypes,
+} from '@components/NavMenu/components/NavMenuItem'
+import { SearchFormProps } from '@components/SearchForm/SearchForm'
+import { LoginProps } from '@blocks/Login/Login'
+
+export type MastheadActionsTypes = {
+    search?: SearchFormProps
+    login?: LoginProps
+    buttons?: NavMenuItemTypes[]
+}
 
 interface MastheadActionsProps {
-    items: Actions
+    items: MastheadActionsTypes
 }
 
 const MastheadActions: React.FC<MastheadActionsProps> = ({
