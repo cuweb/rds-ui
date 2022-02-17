@@ -45,7 +45,7 @@ export {
     ButtonSocial,
     Card,
     CardGrid,
-    Filter,
+    // Filter,
     Footer,
     FooterBrand,
     FooterSimple,
