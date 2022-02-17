@@ -10,21 +10,21 @@ export default {
 const menu = [
     {
         title: 'Item 1',
-        link: 'Link 1',
+        link: '/',
         subMenu: [
             {
                 title: 'Item 1.1',
-                link: 'Link 1.2',
+                link: '/',
             },
         ],
     },
     {
         title: 'Item 2',
-        link: 'Link 2',
+        link: '/',
     },
     {
         title: 'Item 3',
-        link: 'Link 3',
+        link: '/',
     },
 ]
 

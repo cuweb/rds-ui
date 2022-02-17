@@ -5,7 +5,7 @@ import { NavMenuItemTypes } from '@components/NavMenu/components/NavMenuItem'
 export interface SidebarMenuProps {
     sticky?: boolean
     className?: string | undefined
-    menu: Array<NavMenuItemTypes>
+    menu: NavMenuItemTypes[]
 }
 const SidebarMenu: React.FC<SidebarMenuProps> = ({
     sticky,

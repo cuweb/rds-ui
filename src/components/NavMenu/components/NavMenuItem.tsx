@@ -6,7 +6,7 @@ import NavMenuButton from './NavMenuButton'
 
 export type NavMenuItemTypes = {
     title: string
-    link: string
+    link?: string
     className?: string
     color?: string
     subMenu?: {
@@ -27,7 +27,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     item,
     direction = 'left',
 }): JSX.Element => {
-    const { title, link, subMenu, className = '' } = item
+    const { title, link = '#', subMenu, className = '' } = item
     const [isOpen, setIsOpen] = useState(false)
     const isOpenClassName = isOpen ? 'open' : ''
     const subMenuClassName = {

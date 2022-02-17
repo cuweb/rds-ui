@@ -17,7 +17,7 @@ export interface MastheadProps {
     url: string
     brand?: MastHeadBrand
     actions?: MastheadActionsTypes
-    menu?: Array<NavMenuItemTypes>
+    menu?: NavMenuItemTypes[]
 }
 
 const Masthead: React.FC<MastheadProps> = ({
