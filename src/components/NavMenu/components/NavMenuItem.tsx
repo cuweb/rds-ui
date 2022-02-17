@@ -19,6 +19,7 @@ export type NavMenuItemTypes = {
 export interface NavMenuItemProps {
     type: NavMenuTypes
     item: NavMenuItemTypes
+    isMobile?: boolean
     direction?: 'left' | 'right'
 }
 
@@ -26,13 +27,14 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     type,
     item,
     direction = 'left',
+    isMobile,
 }): JSX.Element => {
     const { title, link = '#', subMenu, className = '' } = item
     const [isOpen, setIsOpen] = useState(false)
     const isOpenClassName = isOpen ? 'open' : ''
     const subMenuClassName = {
         side: '',
-        top: `c-menupopup c-menupopup--${direction}`,
+        top: !isMobile ? `c-menupopup c-menupopup--${direction}` : '',
     }
 
     const subMenuContainer = useRef(null)
@@ -58,7 +60,6 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                 onClick={() => setIsOpen(!isOpen)}
             />
             <ul className={`is-submenu ${isOpenClassName}`}>
-                <a href={link}>{title}</a>
                 <ul>
                     {subMenu.map((subItem, index) => (
                         <li className={subItem.className || ''} key={index}>

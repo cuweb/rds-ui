@@ -11,6 +11,7 @@ import MastheadTitle, {
 import MastheadMobileButton from '@blocks/Masthead/components/MastheadMobileButton'
 import NavMenu from '@components/NavMenu/NavMenu'
 import { NavMenuItemTypes } from '@components/NavMenu/components/NavMenuItem'
+import theme from 'config/theme'
 
 export interface MastheadProps {
     title: string
@@ -27,11 +28,12 @@ const Masthead: React.FC<MastheadProps> = ({
     actions,
     menu,
 }): JSX.Element => {
-    const [isOpen, setIsOpen] = useState(true)
-    const isMobile = useWindowSize().width < 1024
+    const [isOpen, setIsOpen] = useState(false)
+    const isMobile = useWindowSize().width < theme.breakpoints.mobile
     const hasMenu = menu && !isMobile
     const hasActions = actions && !isMobile
     const hasMobileMenu = isMobile && isOpen && menu
+    const hasMobileButton = isMobile && menu
 
     return (
         <>
@@ -40,7 +42,7 @@ const Masthead: React.FC<MastheadProps> = ({
                     <MastheadTitle title={title} url={url} brand={brand} />
                     {hasMenu && <NavMenu type='top' menu={menu} />}
                     {hasActions && <MastheadActions items={actions} />}
-                    {isMobile && (
+                    {hasMobileButton && (
                         <MastheadMobileButton
                             isOpen={isOpen}
                             setIsOpen={setIsOpen}
@@ -50,7 +52,7 @@ const Masthead: React.FC<MastheadProps> = ({
             </Ublock>
             {hasMobileMenu && (
                 <Overlay type='menu'>
-                    <NavMenu type='top' menu={menu} />
+                    <NavMenu type='top' menu={menu} isMobile />
                 </Overlay>
             )}
         </>
