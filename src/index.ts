@@ -30,6 +30,7 @@ import Ugrid from './components/Ugrid/Ugrid'
 import SearchForm from './components/SearchForm/SearchForm'
 import Video from './components/Video/Video'
 import Sidebar from './layouts/Layout/Sidebar'
+import Table from './components/Table/Table'
 import TextImage from './blocks/TextImage/TextImage'
 
 export {
@@ -64,5 +65,6 @@ export {
     SearchForm,
     Video,
     Sidebar,
+    Table,
     TextImage,
 }
