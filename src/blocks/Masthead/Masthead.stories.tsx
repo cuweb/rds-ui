@@ -46,7 +46,7 @@ const args = {
             {
                 title: 'Button 2',
                 link: '/',
-                type: 'red',
+                color: 'red',
             },
         ],
     },

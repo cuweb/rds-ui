@@ -1,18 +1,13 @@
+import { NavMenuItemTypes } from '@components/NavMenu/components/NavMenuItem'
+import { NavMenuTypes } from '@components/NavMenu/NavMenu'
 import { SearchFormProps } from '@components/SearchForm/SearchForm'
 import { LoginProps } from '../Login/Login'
 
 export type Brand = string | undefined
-export type MenuItem = {
-    id?: string | number
-    title: string
-    link: string
-    subMenu?: MenuItem[]
-}
-
-export type Menu = Array<MenuItem>
+export type Menu = Array<NavMenuTypes>
 
 export type Actions = {
     search?: SearchFormProps
     login?: LoginProps
-    buttons?: MenuItem[]
+    buttons?: Array<NavMenuItemTypes & { color?: 'red' | 'white' | string }>
 }

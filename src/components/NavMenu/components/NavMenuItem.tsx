@@ -7,24 +7,31 @@ import NavMenuButton from './NavMenuButton'
 export type NavMenuItemTypes = {
     title: string
     link: string
+    className?: string
     subMenu?: {
         title: string
         link: string
+        className?: string
     }[]
 }
 
 export interface NavMenuItemProps {
     type: NavMenuTypes
     item: NavMenuItemTypes
+    direction?: 'left' | 'right'
 }
 
-const NavMenuItem: FC<NavMenuItemProps> = ({ type, item }): JSX.Element => {
-    const { title, link, subMenu } = item
+const NavMenuItem: FC<NavMenuItemProps> = ({
+    type,
+    item,
+    direction = 'left',
+}): JSX.Element => {
+    const { title, link, subMenu, className = '' } = item
     const [isOpen, setIsOpen] = useState(false)
     const isOpenClassName = isOpen ? 'open' : ''
     const subMenuClassName = {
         side: '',
-        top: 'c-menupopup',
+        top: `c-menupopup c-menupopup--${direction}`,
     }
 
     const subMenuContainer = useRef(null)
@@ -33,14 +40,14 @@ const NavMenuItem: FC<NavMenuItemProps> = ({ type, item }): JSX.Element => {
 
     if (!subMenu)
         return (
-            <li>
+            <li className={className}>
                 <a href={link}>{title}</a>
             </li>
         )
 
     return (
         <li
-            className={`has-submenu ${subMenuClassName[type]} ${isOpenClassName}`}
+            className={`has-submenu ${subMenuClassName[type]} ${isOpenClassName} ${className}`}
             ref={subMenuContainer}
         >
             <NavMenuButton
@@ -53,7 +60,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({ type, item }): JSX.Element => {
                 <a href={link}>{title}</a>
                 <ul>
                     {subMenu.map((subItem, index) => (
-                        <li key={index}>
+                        <li className={subItem.className || ''} key={index}>
                             <a href={subItem.link}>{subItem.title}</a>
                         </li>
                     ))}

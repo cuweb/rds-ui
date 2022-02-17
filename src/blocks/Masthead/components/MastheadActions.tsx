@@ -1,8 +1,8 @@
 import React from 'react'
-import MastheadCTAButton from '@blocks/Masthead/components/MastheadCTAButton'
 import MastheadLogin from '@blocks/Masthead/components/MastheadLogin'
 import MastheadSearch from '@blocks/Masthead/components/MastheadSearch'
 import { Actions } from '@blocks/Masthead/MastHeadTypes'
+import NavMenuItem from '@components/NavMenu/components/NavMenuItem'
 
 interface MastheadActionsProps {
     items: Actions
@@ -16,7 +16,20 @@ const MastheadActions: React.FC<MastheadActionsProps> = ({
         <ul className='masthead__actions'>
             {buttons &&
                 buttons.map((item, index) => (
-                    <MastheadCTAButton key={index} {...item} />
+                    <NavMenuItem
+                        type='top'
+                        direction='right'
+                        item={{
+                            title: item.title,
+                            link: item.link,
+                            className: `masthead__cta masthead__cta--${
+                                item.color || 'white'
+                            }`,
+                            subMenu: item.subMenu,
+                        }}
+                        key={index}
+                        {...item}
+                    />
                 ))}
             {login && <MastheadLogin {...login} />}
             {search && <MastheadSearch {...search} />}
