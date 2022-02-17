@@ -1,7 +1,7 @@
 import React from 'react'
-import Ublock from '@src/components/Ublock/Ublock'
-import Icon from '@src/components/Icon/Icon'
-import ButtonSocial from '@src/components/ButtonSocial/ButtonSocial'
+import Ublock from '@components/Ublock/Ublock'
+import Icon from '@components/Icon/Icon'
+import ButtonSocial from '@components/ButtonSocial/ButtonSocial'
 
 export interface SocialButtonsProps {
     url: string

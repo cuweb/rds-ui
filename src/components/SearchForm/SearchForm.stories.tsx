@@ -17,7 +17,7 @@ export const Base = Template.bind({})
 const baseBaseSearchForm = getVariation('base', variations)
 Base.args = {
     title: baseBaseSearchForm.title,
-    placeHolder: baseBaseSearchForm.placeHolder,
+    placeholder: baseBaseSearchForm.placeholder,
     onSubmit: (e: any) => {
         e.preventDefault()
         alert('test')
@@ -28,6 +28,6 @@ export const WithAction = Template.bind({})
 const withActionSearchForm = getVariation('base', variations)
 WithAction.args = {
     title: withActionSearchForm.title,
-    placeHolder: withActionSearchForm.placeHolder,
+    placeholder: withActionSearchForm.placeholder,
     action: withActionSearchForm.action,
 }

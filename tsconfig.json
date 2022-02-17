@@ -1,9 +1,24 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
-      "@src/*": [
-        "src/*"
+      "@blocks/*": [
+        "blocks/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@functions/*": [
+        "functions/*"
       ],
     },
     "target": "es5",
@@ -32,10 +47,11 @@
     ]
   },
   "include": [
-    "src"
+    "src",
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "src/index.ts"
   ]
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import getVariation from '@src/functions/getVariation'
+import getVariation from '@functions/getVariation'
 import Footer from './Footer'
 import data from './FooterData.json'
 

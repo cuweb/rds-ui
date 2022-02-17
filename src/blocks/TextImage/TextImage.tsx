@@ -1,5 +1,5 @@
 import React from 'react'
-import Ublock from '@src/components/Ublock/Ublock'
+import Ublock from '@components/Ublock/Ublock'
 
 export interface TextImageProps {
     direction?: string
