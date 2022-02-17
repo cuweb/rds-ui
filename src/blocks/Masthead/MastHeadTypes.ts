@@ -9,5 +9,5 @@ export type Menu = Array<NavMenuTypes>
 export type Actions = {
     search?: SearchFormProps
     login?: LoginProps
-    buttons?: Array<NavMenuItemTypes & { color?: 'red' | 'white' | string }>
+    buttons?: Array<NavMenuItemTypes & { color?: 'red' | 'white' | undefined }>
 }
