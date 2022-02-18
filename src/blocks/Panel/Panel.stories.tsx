@@ -50,7 +50,7 @@ export const PanelWithCTAButton = () => (
 )
 
 // Entire Panel into CTA
-export const EntirePanelIntoPanel = () => (
+export const EntirePanelIntoCTA = () => (
     <CTAPanel title='This is the title'>
         <img src="https://via.placeholder.com/640x480" alt="" />
         <p>Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.</p>

@@ -1,80 +1,59 @@
-// Took from alert
-// describe('', () => {
-//     it('Does not do much!', () => {
-//       expect(true).to.equal(true)
-//     })
-//   })
-
 describe('Panel', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-    const block = {
-        url: 'blocks-panel--base',
-        className: '.b-sidebar',
-        title: 'h2',
-        titleWithHeading: 'h2',
-        heading: 'h3',
-        content: 'p',
-        icon: '.c-icon',
-        image: 'img',
-        button: '.c-buttoncta',
-        // url: 'blocks-alert-header--base',
-        // className: '.b-alertheader',
-        // title: 'h2',
-        // content: 'p',
-        // icon: '.c-icon',
-        // closeButton: '.u-block > button',
-    }
+    const types = ['base', 'base-panel-with-link', 'panel-with-heading-and-button', 'panel-with-image', 'panel-with-cta-button', 'entire-panel-into-cta', 'panel-with-icons']
 
-    it(`Should render u-block`, () => {
-        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=${block.url}`)
-        cy.get(block.className).should('exist')
-    })
-
-    it(`Should render light bulb icon`, () => {
-        cy.get(
-            `${block.className} > ${block.icon}  ${block.title}`
-        ).should('exist')
-    })
-
-    it(`Should render title`, () => {
-        cy.get(`${block.className} ${block.title}`).should('exist')
-    })
-
-    it(`Should render with heading`, () => {
-        // cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=${block.url}`)
-        // cy.get(`${block.className} ${block.titleWithHeading}`).should('exist')
-        // cy.get(`${block.className} ${block.heading}`).should('exist')
-        // cy.get(`${block.ClassName} h3`).should('exist')
-    })
-
-    it(`Should render the paragraph`, () => {
-        cy.get(`${block.className} ${block.content}`).should('exist')
-    })
-
-    // it(`Should render the image`, () => {
-    //     cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=${block.url}`)
-    //     // cy.get(`img`).should('exist')
-    //     // cy.get('div[class=".b-sidebar"]').find("img").should('exist');
-    //     // cy.get(`${block.className} ${block.image}`).should('exist')
-    //     // cy.get(block.className).find(block.image).should('exist')
-    //     cy.get(`img`).should('exist')
-    // })
-    it(`Base Image Caption: Should render img`, () => {
-
-        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--panel-with-image`)
-        
-        cy.get(`img`).should('exist')
-        
+    types.map((type) => {
+        it(`${type}: Should render the u-block`, () => {
+            cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--${type}`)
+            cy.get(`.u-block`).should('exist')
         })
-    
+    })
 
-    it(`Should render the button`, () => {
-        // cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=${block.url}`)
-        // cy.get(block.button).should('exist')
-        // cy.get(`${block.closeButton} > ${block.icon}`).should('exist')
+    types.map((type) => {
+        it(`${type}: Should render the container`, () => {
+            cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--${type}`)
+            cy.get(`.b-sidebar`).should('exist')
+        })
+    })
+
+    types.map((type) => {
+        it(`${type}: Should render the title`, () => {
+            cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--${type}`)
+            cy.get(`h2`).should('exist')
+        })
+    })
+
+    it(`BasePanelWithLink: Should render the link`, () => {
+        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--base-panel-with-link`)
+        cy.get(`a`).should('exist')
+    })
+
+    it(`PanelWithHeadingAndButton:Should render the heading and CTA button`, () => {
+        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--panel-with-heading-and-button`)
+        cy.get(`.sidebar__heading`).should('exist')
+        cy.get(`.c-buttoncta`).should('exist')
+    })
+
+    it(`PanelWithImage: Should render the image`, () => {
+        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--panel-with-image`)
+        cy.get(`img`).should('exist')
+        cy.get(`a`).should('exist')
+    })
+
+    it(`PanelWithCTAButton: Should render the image and CTA button`, () => {
+        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--panel-with-cta-button`)
+        cy.get(`img`).should('exist')
+        cy.get(`a`).should('exist')
+        cy.get(`.c-buttoncta`).should('exist')
+    })
+
+    it(`EntirePanelIntoCTA: Should render the panel as c-buttoncta`, () => {
+        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--entire-panel-into-cta`)
+        cy.get(`.c-buttoncta`).should('exist')
+    })
+
+    it(`PanelWithIcons: Should render the icons`, () => {
+        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--panel-with-icons`)
+        cy.get(`.b-sidebar svg`).should('exist')
     })
 
 })
-
