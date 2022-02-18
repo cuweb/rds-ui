@@ -85,7 +85,6 @@ describe('Masthead - Menu', () => {
         cy.get(`.has-submenu.open`).should('exist')
 
         // Close
-        cy.get(`.has-submenu.open`).should('exist')
         cy.get(`.nav--menubar__button`)
             .first()
             .click({ multiple: true, force: true })
@@ -130,7 +129,6 @@ describe('Masthead - Actions Menu', () => {
         cy.get(`.c-menupopup--right.open`).should('exist')
 
         // Close
-        cy.get(`.c-menupopup--right.open`).should('exist')
         cy.get(`.nav--menubar__button`)
             .first()
             .click({ multiple: true, force: true })
@@ -161,7 +159,6 @@ describe('Masthead - Login', () => {
         cy.get(`.modal__login`).should('exist')
 
         // Close
-        cy.get(`.modal__login`).should('exist')
         cy.get(`.masthead__closebtn`).click()
         cy.get(`.modal__login`).should('not.exist')
     })
@@ -189,8 +186,59 @@ describe('Masthead - Search', () => {
         cy.get(`.modal__search`).should('exist')
 
         // Close
-        cy.get(`.modal__search`).should('exist')
         cy.get(`.masthead__closebtn`).click()
         cy.get(`.modal__search`).should('not.exist')
+    })
+})
+
+describe('Masthead - Mobile', () => {
+    const viewport = 'iphone-7'
+    it(`should render mobile button`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-masthead--kitchen-sink`
+        )
+        cy.viewport(viewport)
+        cy.get(`.masthead__navicon`).should('exist')
+        cy.get(`.c-navicon`).should('exist')
+    })
+
+    it(`Should not render menu`, () => {
+        cy.viewport(viewport)
+        cy.get(`.nav__menu.nav__menu--top`).should('not.exist')
+    })
+
+    it(`Should not render actions buttons`, () => {
+        cy.viewport(viewport)
+        cy.get(`.masthead__cta`).should('not.exist')
+    })
+
+    it(`Should not render login`, () => {
+        cy.viewport(viewport)
+        cy.get(`.masthead__login`).should('not.exist')
+    })
+
+    it(`Should not render search`, () => {
+        cy.viewport(viewport)
+        cy.get(`.masthead__search`).should('not.exist')
+    })
+
+    it(`Should not render search`, () => {
+        cy.viewport(viewport)
+        cy.get(`.masthead__search`).should('not.exist')
+    })
+
+    it(`Should togle menu`, () => {
+        cy.viewport(viewport)
+        // Open
+        cy.get(`.modal__menu`).should('not.exist')
+        cy.get(`.c-navicon`).click()
+        cy.get(`.modal__menu`).should('exist')
+        cy.get(`.nav__menu.nav__menu--top`).should('exist')
+
+        // Close
+        cy.get(`.masthead__closebtn`).click()
+        cy.get(`.modal__menu`).should('not.exist')
     })
 })
