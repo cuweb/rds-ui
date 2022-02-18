@@ -9,11 +9,7 @@ export type NavMenuItemTypes = {
     link?: string
     className?: string
     color?: string
-    subMenu?: {
-        title: string
-        link: string
-        className?: string
-    }[]
+    subMenu?: NavMenuItemTypes[]
 }
 
 export interface NavMenuItemProps {
@@ -56,15 +52,22 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
             <NavMenuButton
                 type={type}
                 title={title}
+                link={link}
                 isOpen={isOpen}
                 onClick={() => setIsOpen(!isOpen)}
             />
             <ul className={`is-submenu ${isOpenClassName}`}>
                 <ul>
                     {subMenu.map((subItem, index) => (
-                        <li className={subItem.className || ''} key={index}>
-                            <a href={subItem.link}>{subItem.title}</a>
-                        </li>
+                        <NavMenuItem
+                            type='side'
+                            item={{
+                                title: subItem.title,
+                                link: subItem.link,
+                                subMenu: subItem.subMenu,
+                            }}
+                            key={index}
+                        />
                     ))}
                 </ul>
             </ul>

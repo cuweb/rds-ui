@@ -4,6 +4,7 @@ import { NavMenuTypes } from '../NavMenu'
 export interface NavMenuButtonProps {
     type: NavMenuTypes
     title: string
+    link: string
     onClick: (event: MouseEvent) => void
     isOpen: boolean
 }
@@ -11,6 +12,7 @@ export interface NavMenuButtonProps {
 const NavMenuButton: FC<NavMenuButtonProps> = ({
     type,
     title,
+    link,
     isOpen,
     onClick,
 }): JSX.Element => {
@@ -28,7 +30,7 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
         ),
         side: (
             <>
-                <a href='javacript:void()'>{title}</a>
+                <a href={link}>{title}</a>
                 <button
                     type='button'
                     aria-expanded={isOpen}
