@@ -8,8 +8,7 @@ describe('AlertAside', () => {
     const content = 'p'
     const icon = '.c-alert__icon'
     const button = '.c-alert__button'
-    const asideSidebar ='.b-alertaside'
-
+    const asideSidebar = '.b-alertaside'
 
     types.map((type) => {
         it(`${type.toUpperCase()}: Should render container`, () => {
@@ -21,10 +20,9 @@ describe('AlertAside', () => {
             cy.clearCookies()
             cy.get(`.c-alert--${type}`).should('exist')
         })
-        
+
         it(`${type.toUpperCase()}: Should render sidebar`, () => {
             cy.get(`${asideSidebar}`).should('exist')
-              
         })
 
         it(`${type.toUpperCase()}: Should render title`, () => {
@@ -32,7 +30,6 @@ describe('AlertAside', () => {
                 .should('exist')
                 .should('not.be.empty')
         })
-       
 
         it(`${type.toUpperCase()}: Should render content`, () => {
             cy.get(`.c-alert--${type} ${content}`)
@@ -55,12 +52,9 @@ describe('AlertAside', () => {
             it(`${type.toUpperCase()}: Should trigger an alert on Click on close button`, () => {
                 cy.get(`${button} .c-icon`).click()
                 cy.on('window:alert', (text) => {
-                    expect(text).to.contains('test');
-                  });
-
-                
+                    expect(text).to.contains('test')
+                })
             })
         }
-
     })
 })

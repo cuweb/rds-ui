@@ -10,6 +10,7 @@ describe('Sidebar Menu', () => {
     const presentation = '[role="presentation"]'
     const ariaLabel = '[aria-label="Main Navigation"]'
     const subMenu = '.has-submenu'
+    const subMenuList = '.is-submenu'
     const menuButton = '.has-submenu > button'
 
     it(`Should render container`, () => {
@@ -58,15 +59,19 @@ describe('Sidebar Menu', () => {
     it(`Should toggle submenu when the button is clicked`, () => {
         // Open
         cy.get(menuButton)
+            .first()
             .click({ multiple: true, force: true })
             .should('have.attr', 'aria-expanded', 'true')
-        cy.get(`${subMenu}.open`).should('exist')
+        cy.get(subMenu).first().should('not.have.class', '.open')
+        cy.get(subMenuList).first().should('not.have.class', '.open')
 
         // False
         cy.get(menuButton)
+            .first()
             .click({ multiple: true, force: true })
             .should('have.attr', 'aria-expanded', 'false')
-        cy.get(`${subMenu}.open`).should('not.exist')
+        cy.get(subMenu).first().should('not.have.class', '.open')
+        cy.get(subMenuList).first().should('not.have.class', '.open')
     })
 
     it(`Should be sticky`, () => {

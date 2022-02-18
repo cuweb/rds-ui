@@ -5,12 +5,14 @@ export type NavMenuTypes = 'side' | 'top'
 export interface NavMenuProps {
     type: NavMenuTypes
     label?: string
+    isMobile?: boolean
     menu: Array<NavMenuItemTypes>
 }
 const NavMenu: FC<NavMenuProps> = ({
     type,
     label = 'Main Navigation',
     menu,
+    isMobile,
 }): JSX.Element => {
     return (
         <nav
@@ -20,7 +22,12 @@ const NavMenu: FC<NavMenuProps> = ({
         >
             <ul className={`nav__menu nav__menu--${type}`}>
                 {menu.map((item, index) => (
-                    <NavMenuItem item={item} type={type} key={index} />
+                    <NavMenuItem
+                        item={item}
+                        type={type}
+                        key={index}
+                        isMobile={isMobile}
+                    />
                 ))}
             </ul>
         </nav>
