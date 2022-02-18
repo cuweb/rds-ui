@@ -8,15 +8,15 @@
             "stepLast": "2020",
             "allSteps": [
                 {
-                    "name": "Sub title for an individual item",
+                    "title": "Sub title for an individual item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
                 },
                 {
-                    "name": "Sub title for an individual item",
+                    "title": "Sub title for an individual item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
                 },
                 {
-                    "name": "Sub title for an individual item",
+                    "title": "Sub title for an individual item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
                 }
             ]
@@ -28,15 +28,15 @@
             "stepLast": "2020",
             "allSteps": [
                 {
-                    "name": "Sub title for an individual item",
+                    "title": "Sub title for an individual item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
                 },
                 {
-                    "name": "Sub title for an individual item",
+                    "title": "Sub title for an individual item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
                 },
                 {
-                    "name": "Sub title for an individual item",
+                    "title": "Sub title for an individual item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
                 }
             ]
@@ -49,15 +49,15 @@
             "stepLast": "2020",
             "allSteps": [
                 {
-                    "name": "Sub title for an individual item",
+                    "title": "Sub title for an individual item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
                 },
                 {
-                    "name": "Sub title for an individual item",
+                    "title": "Sub title for an individual item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
                 },
                 {
-                    "name": "Sub title for an individual item",
+                    "title": "Sub title for an individual item",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
                 }
             ]

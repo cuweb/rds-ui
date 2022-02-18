@@ -7,7 +7,7 @@ interface TimelineProps {
     stepFirst: string
     stepLast: string
     allSteps: {
-        name: string
+        title: string
         description: string
     }[]
 }
@@ -23,7 +23,7 @@ const Timeline: React.FC<TimelineProps> = ({
         <li itemProp='item' key={index}>
             <p
                 itemProp='name'
-                dangerouslySetInnerHTML={{ __html: step.name }}
+                dangerouslySetInnerHTML={{ __html: step.title }}
             />
             <p
                 itemProp='description'
