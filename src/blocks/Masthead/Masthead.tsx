@@ -1,28 +1,59 @@
-import Ublock from '@src/components/Ublock/Ublock'
-import Icon from '@src/components/Icon/Icon'
-import React from 'react'
+import React, { useState } from 'react'
+import Ublock from '@components/Ublock/Ublock'
+import useWindowSize from '@hooks/useWindowSize'
+import Overlay from '@layouts/Overlay/Overlay'
+import MastheadActions, {
+    MastheadActionsTypes,
+} from '@blocks/Masthead/components/MastheadActions'
+import MastheadTitle, {
+    MastHeadBrand,
+} from '@blocks/Masthead/components/MastheadTitle'
+import MastheadMobileButton from '@blocks/Masthead/components/MastheadMobileButton'
+import NavMenu from '@components/NavMenu/NavMenu'
+import { NavMenuItemTypes } from '@components/NavMenu/components/NavMenuItem'
 
-interface MastheadProps {
+export interface MastheadProps {
     title: string
-    children: React.ReactNode
+    url: string
+    brand?: MastHeadBrand
+    actions?: MastheadActionsTypes
+    menu?: NavMenuItemTypes[]
 }
 
 const Masthead: React.FC<MastheadProps> = ({
     title,
-    children,
+    url,
+    brand,
+    actions,
+    menu,
 }): JSX.Element => {
+    const [isOpen, setIsOpen] = useState(true)
+    const isMobile = useWindowSize().width < 1024
+    const hasMenu = menu && !isMobile
+    const hasActions = actions && !isMobile
+    const hasMobileMenu = isMobile && isOpen && menu
+
     return (
-        <Ublock id='id-masthead' full>
-            <div className='b-masthead'>
-                <h1>
-                    <a href='https://ravendesignsystem.github.io/rds/'>
-                        <Icon icon='cushield' size={24} />
-                        {title}
-                    </a>
-                </h1>
-                {children}
-            </div>
-        </Ublock>
+        <>
+            <Ublock id='id-masthead' full>
+                <div className='b-masthead'>
+                    <MastheadTitle title={title} url={url} brand={brand} />
+                    {hasMenu && <NavMenu type='top' menu={menu} />}
+                    {hasActions && <MastheadActions items={actions} />}
+                    {isMobile && (
+                        <MastheadMobileButton
+                            isOpen={isOpen}
+                            setIsOpen={setIsOpen}
+                        />
+                    )}
+                </div>
+            </Ublock>
+            {hasMobileMenu && (
+                <Overlay type='menu'>
+                    <NavMenu type='top' menu={menu} />
+                </Overlay>
+            )}
+        </>
     )
 }
 export default Masthead

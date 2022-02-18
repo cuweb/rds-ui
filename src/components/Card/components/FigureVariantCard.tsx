@@ -1,5 +1,5 @@
 import React from 'react'
-import LinkWrapper from '@src/components/LinkWrapper/LinkWrapper'
+import LinkWrapper from '@components/LinkWrapper/LinkWrapper'
 
 export interface FigureVariantCardProps {
     link?: string

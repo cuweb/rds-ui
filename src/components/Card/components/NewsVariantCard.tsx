@@ -1,5 +1,5 @@
 import React from 'react'
-import convertDate from '@src/functions/convertDate'
+import convertDate from '@functions/convertDate'
 
 export interface NewsVariantCardProps {
     link: string
