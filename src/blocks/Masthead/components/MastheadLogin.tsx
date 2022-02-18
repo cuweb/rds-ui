@@ -38,7 +38,7 @@ const MastheadLogin: FC<LoginProps> = (props): JSX.Element => {
                     <Icon icon='X' />
                 </button>
             </li>
-            <Overlay isHidden={!isOpen}>
+            <Overlay type='login' isHidden={!isOpen}>
                 <Login {...props} />
             </Overlay>
         </div>

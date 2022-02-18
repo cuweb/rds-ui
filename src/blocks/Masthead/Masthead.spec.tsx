@@ -1,4 +1,4 @@
-describe('Masthead', () => {
+describe('Masthead - Base', () => {
     beforeEach(() => {
         cy.global()
     })
@@ -43,11 +43,7 @@ describe('Masthead - Brand Logo', () => {
     })
 })
 
-describe('Masthead - With Menu', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
+describe('Masthead - Menu', () => {
     it(`Should render menu container`, () => {
         cy.visit(
             `${Cypress.env(
@@ -88,7 +84,7 @@ describe('Masthead - With Menu', () => {
             .should('have.attr', 'aria-expanded', 'true')
         cy.get(`.has-submenu.open`).should('exist')
 
-        // Open
+        // Close
         cy.get(`.has-submenu.open`).should('exist')
         cy.get(`.nav--menubar__button`)
             .first()
@@ -98,11 +94,7 @@ describe('Masthead - With Menu', () => {
     })
 })
 
-describe('Masthead - With Actions', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
+describe('Masthead - Actions Container', () => {
     it(`Should render actions container`, () => {
         cy.visit(
             `${Cypress.env(
@@ -111,15 +103,94 @@ describe('Masthead - With Actions', () => {
         )
         cy.get(`.masthead__actions`).should('exist')
     })
+})
 
+describe('Masthead - Actions Menu', () => {
     it(`Should render actions buttons`, () => {
         cy.get(`.masthead__cta`).should('exist').should('not.be.empty')
         cy.get(`.masthead__cta--white`).should('exist')
+    })
+
+    it(`Should render actions red button`, () => {
         cy.get(`.masthead__cta--red`).should('exist')
-        cy.get(`.c-menupopup--right`).should('exist')
     })
 
     it(`Should render actions buttons submenu`, () => {
         cy.get(`.c-menupopup--right`).should('exist')
+        cy.get(`.c-menupopup--right`).should('exist')
+    })
+
+    it(`Should toggle menu when click`, () => {
+        // Open
+        cy.get(`.c-menupopup--right.open`).should('not.exist')
+        cy.get(`.nav--menubar__button`)
+            .first()
+            .click({ multiple: true, force: true })
+            .should('have.attr', 'aria-expanded', 'true')
+        cy.get(`.c-menupopup--right.open`).should('exist')
+
+        // Close
+        cy.get(`.c-menupopup--right.open`).should('exist')
+        cy.get(`.nav--menubar__button`)
+            .first()
+            .click({ multiple: true, force: true })
+            .should('have.attr', 'aria-expanded', 'false')
+        cy.get(`.c-menupopup--right.open`).should('not.exist')
+    })
+})
+
+describe('Masthead - Login', () => {
+    it(`Should render container`, () => {
+        cy.get(`.masthead__login`).should('exist').should('not.be.empty')
+    })
+
+    it(`Should render icon`, () => {
+        cy.get(`.masthead__login svg`).should('exist')
+    })
+
+    it(`Should render button text`, () => {
+        cy.get(`.masthead__login button span`)
+            .should('exist')
+            .should('not.be.empty')
+    })
+
+    it(`Should toggle dialog on click`, () => {
+        // Open
+        cy.get(`.modal__login`).should('not.exist')
+        cy.get(`.masthead__login button`).click()
+        cy.get(`.modal__login`).should('exist')
+
+        // Close
+        cy.get(`.modal__login`).should('exist')
+        cy.get(`.masthead__closebtn`).click()
+        cy.get(`.modal__login`).should('not.exist')
+    })
+})
+
+describe('Masthead - Search', () => {
+    it(`Should render container`, () => {
+        cy.get(`.masthead__search`).should('exist').should('not.be.empty')
+    })
+
+    it(`Should render icon`, () => {
+        cy.get(`.masthead__search svg`).should('exist')
+    })
+
+    it(`Should render button text`, () => {
+        cy.get(`.masthead__search button span`)
+            .should('exist')
+            .should('not.be.empty')
+    })
+
+    it(`Should toggle dialog on click`, () => {
+        // Open
+        cy.get(`.modal__search`).should('not.exist')
+        cy.get(`.masthead__search button`).click()
+        cy.get(`.modal__search`).should('exist')
+
+        // Close
+        cy.get(`.modal__search`).should('exist')
+        cy.get(`.masthead__closebtn`).click()
+        cy.get(`.modal__search`).should('not.exist')
     })
 })
