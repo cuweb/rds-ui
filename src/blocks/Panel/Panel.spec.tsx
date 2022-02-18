@@ -4,6 +4,8 @@
 //       expect(true).to.equal(true)
 //     })
 //   })
+/*
+
 
 describe('Panel', () => {
     beforeEach(() => {
@@ -77,4 +79,55 @@ describe('Panel', () => {
     })
 
 })
+*/
+
+import { first } from 'cypress/types/lodash'
+
+describe('Accordion', () => {
+    const types = ['base', 'base-panel-with-link', 'panel-with-heading-and-button', 'panel-with-image', 'panel-with-cta-button', 'entire-panel-into-panel', 'panel-with-icons']
+
+    types.map((type) => {
+        it(`${type}: Should render the u-block`, () => {
+            cy.visit(
+                `${Cypress.env(
+                    'baseUrl'
+                )}/iframe.html?id=blocks-panel--${type}`
+            )
+            cy.get(`.u-block`).should('exist')
+        })
+    })
+
+    types.map((type) => {
+        it(`${type}: Should render the b-sidebar`, () => {
+            cy.visit(
+                `${Cypress.env(
+                    'baseUrl'
+                )}/iframe.html?id=blocks-panel--${type}`
+            )
+            cy.get(`.b-sidebar`).should('exist')
+        })
+    })
+
+    it(`PanelWithImage: Should render the img`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-panel--panel-with-image`
+        )
+        cy.get(`img`).should('exist')
+    })
+
+
+
+    it(`EntirePanelIntoPanel: Should render the c-buttoncta`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-panel--entire-panel-into-panel`
+        )
+        cy.get(`.c-buttoncta`).should('exist')
+    })
+
+})
+
 
