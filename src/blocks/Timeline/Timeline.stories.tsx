@@ -2,7 +2,7 @@ import React from 'react'
 import { Meta, Story } from '@storybook/react'
 import Timeline from './Timeline'
 import data from './TimelineData.json'
-import getVariation from '@src/functions/getVariation'
+import getVariation from '@functions/getVariation'
 
 const { variations } = data
 
