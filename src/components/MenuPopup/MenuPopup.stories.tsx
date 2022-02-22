@@ -12,9 +12,11 @@ export const Base = () => (
         title='Open Menu'
         isButton
         buttonClassName='c-buttoncta'
-        menu={{
-            title: 'Item 1',
-            link: '#',
-        }}
+        menu={[
+            {
+                title: 'Item 1',
+                link: '#',
+            },
+        ]}
     />
 )

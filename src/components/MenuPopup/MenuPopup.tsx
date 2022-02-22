@@ -4,24 +4,20 @@ import useEscToClose from '@hooks/useEscKey'
 import MenuPopupButton, {
     MenuPopupButtonProps,
 } from './components/MenuPopupButton'
+import MenuPopupMenu, { MenuPopupMenuProps } from './components/MenuPopupMenu'
 
 export interface MenuPopupProps {
-    menu: {
-        title: string
-        link: string
-        icon?: string
-        itemClassName?: string
-    }
-    menuClassname?: string
     className?: string
 }
 
-const MenuPopup: FC<MenuPopupProps & MenuPopupButtonProps> = ({
+const MenuPopup: FC<
+    MenuPopupProps & MenuPopupButtonProps & MenuPopupMenuProps
+> = ({
     isButton = false,
     title,
     className = '',
     buttonClassName = '',
-    menuClassname = '',
+    menu,
 }): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const menuContainer = useRef(null)
@@ -35,31 +31,11 @@ const MenuPopup: FC<MenuPopupProps & MenuPopupButtonProps> = ({
         setIsOpen,
         isOpen,
     }
+
     return (
         <div className={`c-menupopup ${className}`} ref={menuContainer}>
             <MenuPopupButton {...buttonProps} />
-            {isOpen && (
-                <ul
-                    className={`menupopup__menu ${menuClassname}`}
-                    aria-label='menupopup'
-                >
-                    <li className='menupopup__sep'>
-                        <a href='https://graduate.carleton.ca'>
-                            Graduate Admissions
-                        </a>
-                    </li>
-                    <li>
-                        <a href='https://graduate.carleton.ca/programs/'>
-                            Graduate Programs
-                        </a>
-                    </li>
-                    <li>
-                        <a href='https://graduate.carleton.ca/apply-online/'>
-                            Apply Online
-                        </a>
-                    </li>
-                </ul>
-            )}
+            {isOpen && <MenuPopupMenu menu={menu} />}
         </div>
     )
 }
