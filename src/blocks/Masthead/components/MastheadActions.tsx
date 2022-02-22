@@ -22,7 +22,7 @@ const MastheadActions: React.FC<MastheadActionsProps> = ({
 }): JSX.Element => {
     const { search, login, buttons } = items
     return (
-        <ul className='masthead__actions'>
+        <>
             {buttons &&
                 buttons.map((item, index) => (
                     <NavMenuItem
@@ -31,7 +31,7 @@ const MastheadActions: React.FC<MastheadActionsProps> = ({
                         item={{
                             title: item.title,
                             link: item.link,
-                            className: `masthead__cta masthead__cta--${
+                            className: `u-hide-s masthead__cta masthead__cta--${
                                 item.color || 'white'
                             }`,
                             subMenu: item.subMenu,
@@ -42,7 +42,7 @@ const MastheadActions: React.FC<MastheadActionsProps> = ({
                 ))}
             {login && <MastheadLogin {...login} />}
             {search && <MastheadSearch {...search} />}
-        </ul>
+        </>
     )
 }
 export default MastheadActions

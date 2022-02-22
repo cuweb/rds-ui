@@ -9,16 +9,13 @@ export type NavMenuItemTypes = {
     link?: string
     className?: string
     color?: string
-    subMenu?: {
-        title: string
-        link: string
-        className?: string
-    }[]
+    subMenu?: NavMenuItemTypes[]
 }
 
 export interface NavMenuItemProps {
     type: NavMenuTypes
     item: NavMenuItemTypes
+    isMobile?: boolean
     direction?: 'left' | 'right'
 }
 
@@ -26,13 +23,14 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     type,
     item,
     direction = 'left',
+    isMobile,
 }): JSX.Element => {
     const { title, link = '#', subMenu, className = '' } = item
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
     const isOpenClassName = isOpen ? 'open' : ''
     const subMenuClassName = {
         side: '',
-        top: `c-menupopup c-menupopup--${direction}`,
+        top: !isMobile ? `c-menupopup c-menupopup--${direction}` : '',
     }
 
     const subMenuContainer = useRef(null)
@@ -54,16 +52,22 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
             <NavMenuButton
                 type={type}
                 title={title}
+                link={link}
                 isOpen={isOpen}
                 onClick={() => setIsOpen(!isOpen)}
             />
             <ul className={`is-submenu ${isOpenClassName}`}>
-                <a href={link}>{title}</a>
                 <ul>
                     {subMenu.map((subItem, index) => (
-                        <li className={subItem.className || ''} key={index}>
-                            <a href={subItem.link}>{subItem.title}</a>
-                        </li>
+                        <NavMenuItem
+                            type='side'
+                            item={{
+                                title: subItem.title,
+                                link: subItem.link,
+                                subMenu: subItem.subMenu,
+                            }}
+                            key={index}
+                        />
                     ))}
                 </ul>
             </ul>

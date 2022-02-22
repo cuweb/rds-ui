@@ -8,7 +8,7 @@ export default {
 } as Meta
 
 const Template: Story = (args: any) => {
-    const [isHidden, setIsHidden] = useState(false)
+    const [isHidden, setIsHidden] = useState<boolean>(false)
     const handleClose = () => setIsHidden(true)
 
     return (
