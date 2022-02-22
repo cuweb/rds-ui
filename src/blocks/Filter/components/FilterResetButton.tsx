@@ -3,14 +3,11 @@ import React from 'react'
 
 interface FilterResetButtonProps {
     handleReset: Function
-    filterSelectedItems: []
 }
 
 const FilterResetButton: React.FC<FilterResetButtonProps> = ({
     handleReset,
-    filterSelectedItems,
 }): JSX.Element => {
-    const isDisable = filterSelectedItems.length === 0
     return (
         <div className='form__field'>
             <div className='form__group form__group--reset'>
@@ -18,7 +15,6 @@ const FilterResetButton: React.FC<FilterResetButtonProps> = ({
                     type='submit'
                     className='form__button form__button--reset'
                     onClick={(e) => handleReset(e)}
-                    disabled={isDisable}
                 >
                     Reset Filters
                     <figure className='form__icon'>

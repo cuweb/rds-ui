@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Meta, Story } from '@storybook/react'
 import Filter from './Filter'
 
@@ -11,10 +11,13 @@ const Template: Story = (args: any) => {
     return <Filter {...args} />
 }
 
+const handleFilterItems = (items: []) => {
+    //write your own filter function here
+    console.log(items)
+}
 export const Base = Template.bind({})
 Base.args = {
-    // contentFilters: ['a', 'b'],
-    filterItems: [
+    contentFilters: [
         {
             title: 'category',
             items: [
@@ -28,9 +31,19 @@ Base.args = {
                 },
             ],
         },
+        {
+            title: 'tag',
+            items: [
+                {
+                    id: '1',
+                    name: 'ghgg',
+                },
+                {
+                    id: '2',
+                    name: 'jjj',
+                },
+            ],
+        },
     ],
-    contentFilterSave: (item:any)=>{
-        console.log(item)
-    }
+    handleFilterItems: handleFilterItems,
 }
-

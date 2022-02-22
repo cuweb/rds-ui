@@ -4,36 +4,39 @@ import FilterResetButton from './FilterResetButton'
 
 interface FilterItemsProps {
     isMenuOpen: boolean
-    contentFilters: string[]
-    filterItems: {
-        id: string
-        name: string
-        taxonomy: string
+    isSelected: Function
+    handleSelect: Function
+    handleApply: Function
+    handleReset: Function
+    contentFilters: {
+        title: string
+        items: []
     }[]
 }
 const FilterItems: React.FC<FilterItemsProps> = ({
+    isSelected,
+    handleSelect,
+    handleApply,
     isMenuOpen,
     contentFilters,
-    filterItems,
+    handleReset,
 }): JSX.Element => {
     const menuClass = isMenuOpen ? `content-filter__dialog--open e-shadow` : ''
 
     return (
         <div className={`content-filter__dialog ${menuClass}`}>
             <form className='b-form'>
-                {contentFilters.sort().map((filter, index) => {
-                    const itemProps = {
-                        filter,
-                        isMenuOpen,
-                        contentFilters,
-                        filterItems,
-                    }
-                    return <FilterFormField {...itemProps} key={index} />
-                })}
-                <FilterResetButton
-                    handleReset={() => undefined}
-                    filterSelectedItems={[]}
-                />
+                {contentFilters &&
+                    contentFilters.sort().map((filter, index) => {
+                        const itemProps = {
+                            filter,
+                            isSelected,
+                            handleSelect,
+                            handleApply,
+                        }
+                        return <FilterFormField {...itemProps} key={index} />
+                    })}
+                <FilterResetButton handleReset={handleReset} />
             </form>
         </div>
     )

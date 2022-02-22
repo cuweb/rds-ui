@@ -1,30 +1,27 @@
-import Icon from '@src/components/Icon/Icon'
 import React from 'react'
+import Icon from '@src/components/Icon/Icon'
 import useVisible from '../../../functions/useVisible'
 
 interface FilterFormFieldProps {
-    isSelected?: Function
-    handleSelect?: Function
-    handleApply?: Function
-    filterItems: {
-        id: string
-        name: string
-        taxonomy: string
-    }[]
+    filter: {
+        title: string
+        items: []
+    }
+    isSelected: Function
+    handleSelect: Function
+    handleApply: Function
 }
 
 const FilterFormField: React.FC<FilterFormFieldProps> = ({
+    filter,
     isSelected,
     handleSelect,
     handleApply,
-    filterItems,
 }): JSX.Element => {
     const { ref, isVisible, setIsVisible } = useVisible(
         false,
         'form__dropdown-button'
     )
-
-    const itemTitle = 'Categories'
 
     return (
         <div
@@ -37,7 +34,7 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
                     className='form__group--dropdown-button'
                     onClick={() => setIsVisible(!isVisible)}
                 >
-                    {itemTitle}
+                    {filter.title}
                     <figure className='form__icon'>
                         <Icon icon='chevron-down' size={12} />
                     </figure>
@@ -45,30 +42,34 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
                 {isVisible && (
                     <div className='form__group--dropdown' ref={ref}>
                         <div className='form__group--dropdown-content'>
-                            {filterItems && filterItems.length === 0 && (
+                            {filter.items && filter.items.length === 0 && (
                                 <div className='form__group'>No Items</div>
                             )}
-                            {filterItems && filterItems.map((item, index) => {
-                                const { id, name, taxonomy } = item
-                                return (
-                                    <div className='form__group' key={index}>
-                                        <input
-                                            id={id}
-                                            type='checkbox'
-                                            name={name}
-                                            className='form__input--checkbox'
-                                            // onChange={() =>
-                                            //     handleSelect(taxonomy, id)
-                                            // }
-                                            // defaultChecked={isSelected(
-                                            //     taxonomy,
-                                            //     id
-                                            // )}
-                                        />
-                                        <label htmlFor={id}>{name}</label>
-                                    </div>
-                                )
-                            })}
+                            {filter.items &&
+                                filter.items.map((item, index) => {
+                                    const { id, name } = item
+                                    return (
+                                        <div
+                                            className='form__group'
+                                            key={index}
+                                        >
+                                            <input
+                                                id={id}
+                                                type='checkbox'
+                                                name={name}
+                                                className='form__input--checkbox'
+                                                onChange={() =>
+                                                    handleSelect(name, id)
+                                                }
+                                                defaultChecked={isSelected(
+                                                    name,
+                                                    id
+                                                )}
+                                            />
+                                            <label htmlFor={id}>{name}</label>
+                                        </div>
+                                    )
+                                })}
                         </div>
                         <div className='form__group--dropdown-footer'>
                             <a
@@ -76,7 +77,7 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
                                 className='content-filter__button content-filter__button--apply'
                                 onClick={(e) => {
                                     setIsVisible(false)
-                                    // handleApply(e)
+                                    handleApply(e)
                                 }}
                             >
                                 Apply Filters
