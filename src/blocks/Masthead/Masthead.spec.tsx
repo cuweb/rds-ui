@@ -217,7 +217,7 @@ describe('Masthead - Mobile', () => {
 
     it(`Should not render search`, () => {
         cy.viewport(viewport)
-        cy.get(`.masthead__search`).should('not.be.visible')
+        cy.get(`.masthead__search`).should('be.visible')
     })
 
     it(`Should togle menu`, () => {
