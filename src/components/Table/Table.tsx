@@ -15,14 +15,12 @@ const Table: React.FC<TableProps> = ({ columns, rows }): JSX.Element => {
         </tr>
     ))
     return (
-        <main>
-            <table>
-                <thead>
-                    <tr>{tableColumn}</tr>
-                </thead>
-                <tbody>{tableRow}</tbody>
-            </table>
-        </main>
+        <table>
+            <thead>
+                <tr>{tableColumn}</tr>
+            </thead>
+            <tbody>{tableRow}</tbody>
+        </table>
     )
 }
 
