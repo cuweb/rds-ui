@@ -33,6 +33,7 @@ const Masthead: React.FC<MastheadProps> = ({
     const hasMenu = menu && !isMobile
     const hasMobileMenu = isMobile && isOpen && menu
     const hasMobileButton = isMobile && menu
+    const hasActions = actions || (isMobile && menu)
 
     return (
         <>
@@ -40,12 +41,16 @@ const Masthead: React.FC<MastheadProps> = ({
                 <div className='b-masthead'>
                     <MastheadTitle title={title} url={url} brand={brand} />
                     {hasMenu && <NavMenu type='top' menu={menu} />}
-                    {actions && <MastheadActions items={actions} />}
-                    {hasMobileButton && (
-                        <MastheadMobileButton
-                            isOpen={isOpen}
-                            setIsOpen={setIsOpen}
-                        />
+                    {hasActions && (
+                        <ul className='masthead__actions'>
+                            {actions && <MastheadActions items={actions} />}
+                            {hasMobileButton && (
+                                <MastheadMobileButton
+                                    isOpen={isOpen}
+                                    setIsOpen={setIsOpen}
+                                />
+                            )}
+                        </ul>
                     )}
                 </div>
             </Ublock>

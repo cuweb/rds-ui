@@ -22,7 +22,7 @@ const MastheadActions: React.FC<MastheadActionsProps> = ({
 }): JSX.Element => {
     const { search, login, buttons } = items
     return (
-        <ul className='masthead__actions'>
+        <>
             {buttons &&
                 buttons.map((item, index) => (
                     <NavMenuItem
@@ -42,7 +42,7 @@ const MastheadActions: React.FC<MastheadActionsProps> = ({
                 ))}
             {login && <MastheadLogin {...login} />}
             {search && <MastheadSearch {...search} />}
-        </ul>
+        </>
     )
 }
 export default MastheadActions

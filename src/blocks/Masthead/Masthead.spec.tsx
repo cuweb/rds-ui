@@ -29,10 +29,6 @@ describe('Masthead - Base', () => {
 })
 
 describe('Masthead - Brand Logo', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     it(`Should render Image`, () => {
         cy.visit(
             `${Cypress.env(
@@ -211,22 +207,17 @@ describe('Masthead - Mobile', () => {
 
     it(`Should not render actions buttons`, () => {
         cy.viewport(viewport)
-        cy.get(`.masthead__cta`).should('not.exist')
+        cy.get(`.masthead__cta`).should('not.be.visible')
     })
 
     it(`Should not render login`, () => {
         cy.viewport(viewport)
-        cy.get(`.masthead__login`).should('not.exist')
+        cy.get(`.masthead__login`).should('not.be.visible')
     })
 
     it(`Should not render search`, () => {
         cy.viewport(viewport)
-        cy.get(`.masthead__search`).should('not.exist')
-    })
-
-    it(`Should not render search`, () => {
-        cy.viewport(viewport)
-        cy.get(`.masthead__search`).should('not.exist')
+        cy.get(`.masthead__search`).should('not.be.visible')
     })
 
     it(`Should togle menu`, () => {
