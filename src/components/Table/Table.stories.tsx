@@ -1,3 +1,4 @@
+import React from 'react'
 import Table from './Table'
 import data from './TableData.json'
 import getVariation from '../../functions/getVariation'
@@ -9,7 +10,11 @@ export default {
     title: `Components/${title}`,
 }
 
-const Template: React.FC = (args: any) => <Table {...args} />
+const Template: React.FC = (args: any) => (
+    <main>
+        <Table {...args} />
+    </main>
+)
 
 export const Tables = Template.bind({})
 const tables = getVariation('base', variations)
