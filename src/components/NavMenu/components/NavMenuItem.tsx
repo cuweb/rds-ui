@@ -26,7 +26,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     isMobile,
 }): JSX.Element => {
     const { title, link = '#', subMenu, className = '' } = item
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
     const isOpenClassName = isOpen ? 'open' : ''
     const subMenuClassName = {
         side: '',

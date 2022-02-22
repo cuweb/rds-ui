@@ -31,7 +31,7 @@ const MastheadActions: React.FC<MastheadActionsProps> = ({
                         item={{
                             title: item.title,
                             link: item.link,
-                            className: `masthead__cta masthead__cta--${
+                            className: `u-hide-s masthead__cta masthead__cta--${
                                 item.color || 'white'
                             }`,
                             subMenu: item.subMenu,

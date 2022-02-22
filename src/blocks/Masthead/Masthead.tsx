@@ -28,10 +28,9 @@ const Masthead: React.FC<MastheadProps> = ({
     actions,
     menu,
 }): JSX.Element => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
     const isMobile = useWindowSize().width < theme.breakpoints.mobile
     const hasMenu = menu && !isMobile
-    const hasActions = actions && !isMobile
     const hasMobileMenu = isMobile && isOpen && menu
     const hasMobileButton = isMobile && menu
 
@@ -41,7 +40,7 @@ const Masthead: React.FC<MastheadProps> = ({
                 <div className='b-masthead'>
                     <MastheadTitle title={title} url={url} brand={brand} />
                     {hasMenu && <NavMenu type='top' menu={menu} />}
-                    {hasActions && <MastheadActions items={actions} />}
+                    {actions && <MastheadActions items={actions} />}
                     {hasMobileButton && (
                         <MastheadMobileButton
                             isOpen={isOpen}

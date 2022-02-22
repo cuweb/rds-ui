@@ -6,14 +6,14 @@ import Overlay from '@layouts/Overlay/Overlay'
 import Login, { LoginProps } from '@blocks/Login/Login'
 
 const MastheadLogin: FC<LoginProps> = (props): JSX.Element => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
     const modalContainer = useRef(null)
     useOnClickOutside(modalContainer, () => setIsOpen(false))
     useEscToClose(modalContainer, () => setIsOpen(false))
 
     if (!isOpen) {
         return (
-            <li className='masthead__login'>
+            <li className='masthead__login u-hide-s'>
                 <button
                     type='button'
                     className='u-icon'

@@ -8,7 +8,7 @@ import SearchForm, { SearchFormProps } from '@components/SearchForm/SearchForm'
 
 const MastheadSearch: FC<SearchFormProps> = (props): JSX.Element => {
     const { title } = props
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
     const modalContainer = useRef(null)
     useOnClickOutside(modalContainer, () => setIsOpen(false))
     useEscToClose(modalContainer, () => setIsOpen(false))
