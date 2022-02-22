@@ -2,7 +2,7 @@ import React from 'react'
 import { Meta } from '@storybook/react'
 import Panel from './Panel'
 import CTAPanel from './components/CTAPanel'
-import ButtonCTA from '@src/components/ButtonCTA/ButtonCTA'
+import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
 
 export default {
     title: `Blocks/Panel`,

@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
-import Ublock from '@src/components/Ublock/Ublock'
-import Icon from '@src/components/Icon/Icon'
+import Ublock from '@components/Ublock/Ublock'
+import Icon from '@components/Icon/Icon'
 
 export interface PanelProps {
     title?: string | undefined
