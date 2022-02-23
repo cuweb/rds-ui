@@ -215,7 +215,7 @@ describe('Masthead - Mobile', () => {
         cy.get(`.masthead__login`).should('not.be.visible')
     })
 
-    it(`Should not render search`, () => {
+    it(`Should render search`, () => {
         cy.viewport(viewport)
         cy.get(`.masthead__search`).should('be.visible')
     })

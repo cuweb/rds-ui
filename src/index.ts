@@ -27,6 +27,7 @@ import Overlay from './layouts/Overlay/Overlay'
 import Ublock from './components/Ublock/Ublock'
 import Ugrid from './components/Ugrid/Ugrid'
 import SearchForm from './components/SearchForm/SearchForm'
+import Panel from './blocks/Panel/Panel'
 import Video from './components/Video/Video'
 import Sidebar from './layouts/Layout/Sidebar'
 import Table from './components/Table/Table'
@@ -61,6 +62,7 @@ export {
     Ublock,
     Ugrid,
     SearchForm,
+    Panel,
     Video,
     Sidebar,
     SidebarMenu,
