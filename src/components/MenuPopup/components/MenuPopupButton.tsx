@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, MouseEvent } from 'react'
 
 export interface MenuPopupButtonProps {
     isButton?: boolean
@@ -6,8 +6,7 @@ export interface MenuPopupButtonProps {
     link?: string
     icon?: string
     buttonClassName?: string
-    setIsOpen: (isOpen: boolean) => void
-    isOpen: boolean
+    onClick?: (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void
 }
 
 const MenuPopupButton: FC<MenuPopupButtonProps> = ({
@@ -15,16 +14,11 @@ const MenuPopupButton: FC<MenuPopupButtonProps> = ({
     title,
     link = '#',
     buttonClassName = '',
-    setIsOpen,
-    isOpen,
+    onClick,
 }): JSX.Element => {
     if (!isButton)
         return (
-            <a
-                href={link}
-                className={buttonClassName}
-                onClick={() => setIsOpen(!isOpen)}
-            >
+            <a href={link} className={buttonClassName}>
                 {title}
             </a>
         )
@@ -34,7 +28,9 @@ const MenuPopupButton: FC<MenuPopupButtonProps> = ({
             type='button'
             aria-label='Toggle Menu'
             className={buttonClassName}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={(
+                event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+            ) => onClick && onClick(event)}
         >
             {title}
         </button>

@@ -8,6 +8,7 @@ import MenuPopupMenu, { MenuPopupMenuProps } from './components/MenuPopupMenu'
 
 export interface MenuPopupProps {
     className?: string
+    direction?: 'left' | 'right'
 }
 
 const MenuPopup: FC<
@@ -18,6 +19,7 @@ const MenuPopup: FC<
     className = '',
     buttonClassName = '',
     menu,
+    direction = 'left',
 }): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const menuContainer = useRef(null)
@@ -28,13 +30,17 @@ const MenuPopup: FC<
         isButton,
         title,
         buttonClassName,
-        setIsOpen,
-        isOpen,
     }
 
     return (
-        <div className={`c-menupopup ${className}`} ref={menuContainer}>
-            <MenuPopupButton {...buttonProps} />
+        <div
+            className={`c-menupopup c-menupopup--${direction}  ${className}`}
+            ref={menuContainer}
+        >
+            <MenuPopupButton
+                {...buttonProps}
+                onClick={() => setIsOpen(!isOpen)}
+            />
             {isOpen && <MenuPopupMenu menu={menu} />}
         </div>
     )
