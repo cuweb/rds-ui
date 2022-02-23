@@ -12,22 +12,21 @@ const MultipleHeading: React.FC<MultipleHeadingProps> = ({
     subheader,
     description,
     center,
-}): JSX.Element => (
+}): JSX.Element => {
     const isCenter = center ? 'c-heading--center' : ''
     return (
         <header>
-            {header && (
-                <h2
-                    className={`c-heading' ${isCenter}`}
-                    dangerouslySetInnerHTML={{ __html: header }}
-                />
-            )}
-            <h3 dangerouslySetInnerHTML={{ __html: subheader }} />
+            <h2
+                className={`c-heading ${isCenter}`}
+                dangerouslySetInnerHTML={{ __html: header }}
+            />
             {description && (
                 <p dangerouslySetInnerHTML={{ __html: description }} />
-            )}           
-            {/* {children} */}
+            )}
+            {subheader && (
+                <h3 dangerouslySetInnerHTML={{ __html: subheader }} />
+            )}
         </header>
     )
-)
+}
 export default MultipleHeading

@@ -8,14 +8,13 @@ export interface BaseHeadingProps {
 const BaseHeading: React.FC<BaseHeadingProps> = ({
     header,
     center,
-}): JSX.Element => (
+}): JSX.Element => {
     const isCenter = center ? 'c-heading--center' : ''
     return (
         <h2
-            className={`c-heading' ${isCenter}`}
+            className={`c-heading ${isCenter}`}
             dangerouslySetInnerHTML={{ __html: header }}
         />
     )
-
-)
+}
 export default BaseHeading

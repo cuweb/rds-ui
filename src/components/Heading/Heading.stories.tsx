@@ -1,51 +1,66 @@
-// import React from 'react'
-// import { Meta, Story } from '@storybook/react'
-// import getVariation from '../../functions/getVariation'
-// import Ublock from './Ublock'
-// import data from './UblockData.json'
+import React from 'react'
+import { Meta, Story } from '@storybook/react'
+import Heading from './Heading'
+import data from './HeadingData.json'
+import getVariation from '../../functions/getVariation'
 
-// const { title, variations } = data
+const { title, variations } = data
 
-// export default {
-//     component: Ublock,
-//     title: `Components/${title}`,
-// } as Meta
+export default {
+    component: Heading,
+    title: `Components/${title}`,
+}
 
-// const Template: Story = (args: any) => (
-//     <Ublock {...args}>
-//         <p>
-//             This is Simple block, an example of a basic block for learning
-//             purposes.
-//         </p>
-//     </Ublock>
-// )
+const Template: React.FC = (args: any) => <Heading {...args} />
 
-// //  Base Ublock
-// export const Base = Template.bind({})
-// const base = getVariation('base', variations)
-// Base.args = {
-//     heading: base.heading,
-//     color: base.color,
-// }
+// Base Heading
+export const BaseHeading = Template.bind({})
+const baseHeading = getVariation('baseHeading', variations)
+BaseHeading.args = {
+    type: baseHeading.headingType,
+    header: baseHeading.header,
+}
 
-// //  Grey Ublock
-// export const GreyBackground = Template.bind({})
-// const grey = getVariation('grey', variations)
-// GreyBackground.args = {
-//     heading: grey.heading,
-//     color: grey.color,
-// }
+// Base Centered Heading
+export const CenteredHeading = Template.bind({})
+const centeredHeading = getVariation('centeredHeading', variations)
+CenteredHeading.args = {
+    type: centeredHeading.headingType,
+    header: centeredHeading.header,
+    center: centeredHeading.center,
+}
 
-// //  Black Ublock
-// export const BlackBackground = Template.bind({})
-// const black = getVariation('black', variations)
-// BlackBackground.args = {
-//     heading: black.heading,
-//     color: black.color,
-// }
+// Heading with Paragraph
+export const HeadingWithParagraph = Template.bind({})
+const headingWithParagraph = getVariation('headingWithParagraph', variations)
+HeadingWithParagraph.args = {
+    type: headingWithParagraph.headingType,
+    header: headingWithParagraph.header,
+    description: headingWithParagraph.description,
+}
 
-// //  No Heading Ublock
-// export const NoHeading = Template.bind({})
-// NoHeading.args = {
-//     color: grey.color,
-// }
+// Heading with Paragraph
+export const CenteredHeadingWithParagraph = Template.bind({})
+const centeredHeadingWithParagraph = getVariation(
+    'centeredHeadingWithParagraph',
+    variations
+)
+CenteredHeadingWithParagraph.args = {
+    type: centeredHeadingWithParagraph.headingType,
+    header: centeredHeadingWithParagraph.header,
+    description: centeredHeadingWithParagraph.description,
+    center: centeredHeadingWithParagraph.center,
+}
+
+//Heading with Paragraph and Subhead
+export const HeadingWithParagraphAndSubhead = Template.bind({})
+const headingWithParagraphSubhead = getVariation(
+    'headingWithParagraphSubhead',
+    variations
+)
+HeadingWithParagraphAndSubhead.args = {
+    type: headingWithParagraphSubhead.headingType,
+    header: headingWithParagraphSubhead.header,
+    description: headingWithParagraphSubhead.description,
+    subheader: headingWithParagraphSubhead.subheader,
+}
