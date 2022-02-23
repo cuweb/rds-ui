@@ -3,60 +3,6 @@
     "classname": ".card",
     "variations": [
         {
-            "type": "base",
-            "cardType": "base",
-            "link": "https://bit.ly/2kaI1Ll",
-            "image": {
-                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
-                "alt": "Read more about White-necked Raven"
-            },
-            "header": "White-necked Raven"
-        },
-        {
-            "type": "cardWithTitleAndDescription",
-            "cardType": "base",
-            "link": "https://bit.ly/2kaI1Ll",
-            "image": {
-                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
-                "alt": "Read more about White-necked Raven"
-            },
-            "header": "White-necked Raven",
-            "description": "The white-necked raven is smaller than the common raven, the thick-billed raven."
-        },
-        {
-            "type": "newsVariantWithDate",
-            "cardType": "news",
-            "link": "https://bit.ly/2E6yTwZ",
-            "image": {
-                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
-                "alt": "Read more about We knew ravens are smart. But not this smart"
-            },
-            "date": "2018-03-11",
-            "header": "We knew ravens are smart. But not this smart"
-        },
-        {
-            "type": "newsVariantWithDateAndDescription",
-            "cardType": "news",
-            "link": "https://bit.ly/2E6yTwZ",
-            "image": {
-                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
-                "alt": "Read more about We knew ravens are smart."
-            },
-            "date": "2018-03-11",
-            "header": "We knew ravens are smart.",
-            "description": "The birds are surprisingly skilled at planning how to get food in the future."
-        },
-        {
-            "type": "videoVariant",
-            "cardType": "video",
-            "link": "https://www.youtube.com/watch?v=lrYPm6DD44M",
-            "image": {
-                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
-                "alt": "Read more about Amazing Raven intelligence"
-            },
-            "header": "Amazing Raven intelligence"
-        },
-        {
             "type": "peopleVariant",
             "cardType": "people",
             "link": "https://en.wikipedia.org/wiki/Bill_Murray",
@@ -68,28 +14,15 @@
             "description": "Actor and Writer"
         },
         {
-            "type": "figureVariant",
-            "cardType": "figure",
-            "link": "https://goravens.ca",
-            "description": "15",
-            "caption": "U-Sports Titles"
-        },
-        {
-            "type": "figureVariantWithoutLink",
-            "cardType": "figure",
-            "description": "15",
-            "caption": "U-Sports Titles"
-        },
-        {
-            "type": "maxWidthVariant",
-            "cardType": "base",
-            "link": "https://news.nationalgeographic.com/2017/07/ravens-problem-solving-smart-birds/",
+            "type": "peopleVariantWithoutImage",
+            "cardType": "people",
+            "link": "https://en.wikipedia.org/wiki/Bill_Murray",
             "image": {
-                "src": "https://dummyimage.com/768x300/eee/222.gif",
-                "alt": "Read more about Max-width card"
+                "src": "",
+                "alt": "Read more about Bill Murray"
             },
-            "header": "Max-width card",
-            "description": "Usually, cards are used in 3 and 4 column grid blocks to control their size. You can use them outside a grid, but they need to be in a small width block and their image dimensions need to be 768x300px."
+            "header": "Bill Murray",
+            "description": "Actor and Writer"
         }
     ]
 }

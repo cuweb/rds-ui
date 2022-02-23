@@ -1,0 +1,34 @@
+// People variant
+//===============
+.c-card--people {
+    text-align: center;
+    border-top: 1px solid $grey;
+
+    &:after {
+        left: calc(50% - 12.5px) !important;
+    }
+}
+.c-card--people figure {
+    padding-top: 20px;
+
+    img {
+        border-radius: 50%;
+        border: 5px solid rgba($grey-yoda, 0.75);
+        margin: 0 auto;
+        max-width: 55%;
+    }
+}
+
+.card-initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    font-size: 8vw;
+    margin-right: auto;
+    background-color: $grey-yoda;
+    margin-top: 10px;
+}

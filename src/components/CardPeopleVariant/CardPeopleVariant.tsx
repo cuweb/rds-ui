@@ -1,4 +1,5 @@
 import React from 'react'
+import checkImageUrl from '@functions/checkImageUrl'
 
 export interface CardPeopleVariantProps {
     link: string
@@ -18,6 +19,14 @@ const CardPeopleVariant: React.FC<CardPeopleVariantProps> = ({
     header,
     description,
 }): JSX.Element => {
+    // console.log(checkImageUrl(image.src)) checking if its a valid image url
+
+    const Initials = header
+        .split(' ')
+        .map((name) => name[0])
+        .join('')
+        .toUpperCase() // getting Initials
+
     return (
         <article
             className='c-card c-card--people'
@@ -25,9 +34,14 @@ const CardPeopleVariant: React.FC<CardPeopleVariantProps> = ({
             itemType='http://schema.org/Person'
         >
             <a href={link} itemProp='url'>
-                <figure itemScope itemType='http://schema.org/ImageObject'>
-                    <img src={image.src} alt={image.alt} loading='lazy' />
-                </figure>
+                {image.src.length > 0 ? (
+                    <figure itemScope itemType='http://schema.org/ImageObject'>
+                        <img src={image.src} alt={image.alt} loading='lazy' />
+                    </figure>
+                ) : (
+                    <div className='card-initials'>{Initials}</div>
+                )}
+
                 <header>
                     <h3
                         itemProp='name'

@@ -1,29 +1,38 @@
 import data from './CardData.json'
 import getVariation from '../../functions/getVariation'
-import PeopleVariantCard from './CardPeopleVariant'
+import CardPeopleVariant from './CardPeopleVariant'
 import React from 'react';
-import { Meta, Story } from '@storybook/react'
+import {  Story } from '@storybook/react'
 
-const { title, variations } = data
+const {  variations } = data
 
 export default {
-    component: PeopleVariantCard,
-    title: `Components/PeopleVariantCard`,
+    component: CardPeopleVariant,
+    title: `Components/Card People Variant`,
 }
 
-const Template: Story = (args: any) => <PeopleVariantCard {...args} />
+const Template: Story = (args: any) => <CardPeopleVariant {...args} />
 
 
 
 
-export const PeopleVariant = Template.bind({})
-const peopleVariant = getVariation('peopleVariant', variations)
-PeopleVariant.args = {
-    type: peopleVariant.cardType,
-    link: peopleVariant.link,
-    image: peopleVariant.image,
-    header: peopleVariant.header,
-    description: peopleVariant.description,
+export const PeopleCard = Template.bind({})
+const peopleCard = getVariation('peopleVariant', variations)
+PeopleCard.args = {
+    type: peopleCard.cardType,
+    link: peopleCard.link,
+    image: peopleCard.image,
+    header: peopleCard.header,
+    description: peopleCard.description,
 }
 
 
+export const PeopleCardNoImage = Template.bind({})
+const peopleCardNoImage = getVariation('peopleVariantWithoutImage', variations)
+PeopleCardNoImage.args = {
+    type: peopleCardNoImage.cardType,
+    link: peopleCardNoImage.link,
+    image: peopleCardNoImage.image,
+    header: peopleCardNoImage.header,
+    description: peopleCardNoImage.description,
+}
