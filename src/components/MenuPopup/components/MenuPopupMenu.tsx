@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import Icon from '@components/Icon/Icon'
 
 export interface MenuPopupMenuProps {
     menu: {
@@ -20,7 +21,7 @@ const MenuPopupMenu: FC<MenuPopupMenuProps> = ({
             {menu.map((item, index) => (
                 <li key={index} className={item.separator ? 'popup__sep' : ''}>
                     <a href={item.link} className={item.className}>
-                        {item.title}
+                        {item.icon && <Icon icon={item.icon} />} {item.title}
                     </a>
                 </li>
             ))}

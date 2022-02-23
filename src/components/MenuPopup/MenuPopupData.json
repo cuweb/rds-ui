@@ -1,0 +1,45 @@
+{
+    "divStyles": {
+        "maxWidth": 120
+    },
+    "stylesRight": {
+        "maxWidth": 120,
+        "marginLeft": 100
+    },
+    "menu": [
+        {
+            "title": "Item 1",
+            "link": "#"
+        },
+        {
+            "title": "Item 2",
+            "link": "#",
+            "separator": true
+        },
+        {
+            "title": "Item 3",
+            "link": "#"
+        },
+        {
+            "title": "Item 4",
+            "link": "#"
+        }
+    ],
+    "menuIcons": [
+        {
+            "title": "Github",
+            "link": "#",
+            "icon": "github"
+        },
+        {
+            "title": "Facebook",
+            "link": "#",
+            "icon": "facebook"
+        },
+        {
+            "title": "Twitter",
+            "link": "#",
+            "icon": "twitter"
+        }
+    ]
+}
