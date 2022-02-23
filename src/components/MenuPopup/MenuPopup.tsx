@@ -39,7 +39,7 @@ const MenuPopup: FC<
         >
             <MenuPopupButton
                 {...buttonProps}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => setIsOpen((openState) => !openState)}
             />
             {isOpen && <MenuPopupMenu menu={menu} />}
         </div>
