@@ -18,7 +18,8 @@
         },
         {
             "title": "Item 3",
-            "link": "#"
+            "link": "#",
+            "className": "item-classname"
         },
         {
             "title": "Item 4",

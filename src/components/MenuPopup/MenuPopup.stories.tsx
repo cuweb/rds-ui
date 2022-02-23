@@ -10,7 +10,13 @@ export default {
 
 export const Base = () => (
     <div style={data.divStyles}>
-        <MenuPopup title='Menu Popup' isButton menu={data.menu} />
+        <MenuPopup
+            title='Menu Popup'
+            className='custom-classname'
+            buttonClassName='button-classname'
+            isButton
+            menu={data.menu}
+        />
     </div>
 )
 
