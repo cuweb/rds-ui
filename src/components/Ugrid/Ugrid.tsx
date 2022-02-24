@@ -11,7 +11,7 @@ const Ugrid: React.FC<UgridProps> = ({
     children,
 }): JSX.Element => {
     return (
-        <div className={`${className} u-grid u-grid--${columns}`}>
+        <div className={`${className} u-grid--s1 u-grid u-grid--${columns}`}>
             {children}
         </div>
     )

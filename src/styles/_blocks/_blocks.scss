@@ -1,7 +1,6 @@
 // Core RDS Blocks
 // ---------------
 
-@import 'alertaside/alertaside';
 @import '../..//blocks/AlertHeader/AlertHeader.scss';
 @import '../../blocks/Banner/Banner.scss';
 @import 'cardgrid/cardgrid';
@@ -16,9 +15,9 @@
 @import 'imgfull/imgfull';
 @import '../../blocks/ImageTiles/ImageTiles.scss';
 @import 'listing/listing';
-@import 'login/login';
+@import '../../blocks/Login/Login.scss';
 @import '../../blocks/Masthead/Masthead.scss';
 @import 'menu/menu';
 @import 'sidebar/sidebar';
 @import '../../blocks/TextImage/TextImage.scss';
-@import 'timeline/timeline';
+@import '../../blocks/Timeline/Timeline.scss';

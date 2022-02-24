@@ -1,0 +1,66 @@
+{
+    "title": "Timeline",
+    "classname": ".timeline",
+    "variations": [
+        {
+            "type": "base",
+            "stepFirst": "2009",
+            "stepLast": "2020",
+            "allSteps": [
+                {
+                    "title": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                },
+                {
+                    "title": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                },
+                {
+                    "title": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                }
+            ]
+        },
+        {
+            "type": "withTitle",
+            "title": "This is Timeline block Title",
+            "stepFirst": "2009",
+            "stepLast": "2020",
+            "allSteps": [
+                {
+                    "title": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                },
+                {
+                    "title": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                },
+                {
+                    "title": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                }
+            ]
+        },
+        {
+            "type": "withTitleAndDescription",
+            "title": "This is Timeline block Title",
+            "description": "This is Timeline block description",
+            "stepFirst": "2009",
+            "stepLast": "2020",
+            "allSteps": [
+                {
+                    "title": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                },
+                {
+                    "title": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                },
+                {
+                    "title": "Sub title for an individual item",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur eleifend diam."
+                }
+            ]
+        }
+    ]
+}

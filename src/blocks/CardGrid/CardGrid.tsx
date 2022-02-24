@@ -1,7 +1,7 @@
 import React from 'react'
-import Ublock from '@src/components/Ublock/Ublock'
-import Ugrid from '@src/components/Ugrid/Ugrid'
-import ButtonCTA from '@src/components/ButtonCTA/ButtonCTA'
+import Ublock from '@components/Ublock/Ublock'
+import Ugrid from '@components/Ugrid/Ugrid'
+import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
 
 export interface CardGridProps {
     title?: string
