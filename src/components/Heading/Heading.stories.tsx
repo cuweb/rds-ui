@@ -9,15 +9,14 @@ const { title, variations } = data
 export default {
     component: Heading,
     title: `Components/${title}`,
-}
+} as Meta
 
-const Template: React.FC = (args: any) => <Heading {...args} />
+const Template: Story = (args: any) => <Heading {...args} />
 
 // Base Heading
 export const BaseHeading = Template.bind({})
 const baseHeading = getVariation('baseHeading', variations)
 BaseHeading.args = {
-    type: baseHeading.headingType,
     header: baseHeading.header,
 }
 
@@ -25,7 +24,6 @@ BaseHeading.args = {
 export const CenteredHeading = Template.bind({})
 const centeredHeading = getVariation('centeredHeading', variations)
 CenteredHeading.args = {
-    type: centeredHeading.headingType,
     header: centeredHeading.header,
     center: centeredHeading.center,
 }
@@ -34,19 +32,17 @@ CenteredHeading.args = {
 export const HeadingWithParagraph = Template.bind({})
 const headingWithParagraph = getVariation('headingWithParagraph', variations)
 HeadingWithParagraph.args = {
-    type: headingWithParagraph.headingType,
     header: headingWithParagraph.header,
     description: headingWithParagraph.description,
 }
 
-// Heading with Paragraph
+// Centered Heading with Paragraph
 export const CenteredHeadingWithParagraph = Template.bind({})
 const centeredHeadingWithParagraph = getVariation(
     'centeredHeadingWithParagraph',
     variations
 )
 CenteredHeadingWithParagraph.args = {
-    type: centeredHeadingWithParagraph.headingType,
     header: centeredHeadingWithParagraph.header,
     description: centeredHeadingWithParagraph.description,
     center: centeredHeadingWithParagraph.center,
@@ -59,7 +55,6 @@ const headingWithParagraphSubhead = getVariation(
     variations
 )
 HeadingWithParagraphAndSubhead.args = {
-    type: headingWithParagraphSubhead.headingType,
     header: headingWithParagraphSubhead.header,
     description: headingWithParagraphSubhead.description,
     subheader: headingWithParagraphSubhead.subheader,

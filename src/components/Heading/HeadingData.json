@@ -4,31 +4,26 @@
     "variations": [
         {
             "type": "baseHeading",
-            "headingType": "base",
             "header": "Base Heading component"
         },
         {
             "type": "centeredHeading",
-            "headingType": "base",
             "header": "Centered Heading component",
             "center": "true"
         },
         {
             "type": "headingWithParagraph",
-            "headingType": "multiple",
             "header": "Heading with Paragraph",
             "description": "There should only be one, short paragraph within heading components."
         },
         {
             "type": "centeredHeadingWithParagraph",
-            "headingType": "multiple",
             "header": "Centered Heading with Paragraph",
             "description": "There should only be one, short paragraph within heading components.",
             "center": "true"
         },
         {
             "type": "headingWithParagraphSubhead",
-            "headingType": "multiple",
             "header": "Heading with Paragraph and Subheading",
             "description": "There should only be one, short paragraph within heading components.",
             "subheader": "Subheadings following an h2 need to be h3."
