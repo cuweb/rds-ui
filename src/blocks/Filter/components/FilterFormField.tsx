@@ -38,6 +38,7 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
                     className='form__group--dropdown-button'
                     onClick={() => setIsVisible(!isVisible)}
                     onKeyDown={() => setIsVisible(!isVisible)}
+                    tabIndex={0}
                 >
                     {title}
                     <figure className='form__icon'>
@@ -77,6 +78,7 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
                         </div>
                         <div className='form__group--dropdown-footer'>
                             <button
+                                type='button'
                                 className='content-filter__button content-filter__button--apply'
                                 onClick={(e) => {
                                     setIsVisible(false)

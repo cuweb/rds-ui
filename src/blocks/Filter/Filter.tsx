@@ -6,7 +6,7 @@ interface FilterProps {
     contentFilters: {
         title: string
         items: {
-            id: string,
+            id: string
             name: string
         }[]
     }[]
@@ -38,7 +38,9 @@ const Filter: React.FC<FilterProps> = ({
         handleFilterItems(selectedItems)
     }
 
-    const handleReset = (e: Event) => {
+    const handleReset = (
+        e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => {
         e.preventDefault()
         setIsMenuOpen(false)
         setSelectedItems([])

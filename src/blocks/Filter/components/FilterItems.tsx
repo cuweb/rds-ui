@@ -7,11 +7,11 @@ interface FilterItemsProps {
     isSelected: (name: string) => boolean | undefined
     handleSelect: (name: string) => void
     handleApply: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
-    handleReset: (e: Event) => void
+    handleReset: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
     contentFilters: {
         title: string
         items: {
-            id?: string,
+            id?: string
             name: string
         }[]
     }[]

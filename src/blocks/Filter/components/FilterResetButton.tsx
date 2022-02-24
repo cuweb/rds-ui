@@ -1,8 +1,8 @@
-import Icon from '@src/components/Icon/Icon'
 import React from 'react'
+import Icon from '@src/components/Icon/Icon'
 
 interface FilterResetButtonProps {
-    handleReset: Function
+    handleReset: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 const FilterResetButton: React.FC<FilterResetButtonProps> = ({
