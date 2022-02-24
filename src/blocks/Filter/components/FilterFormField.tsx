@@ -1,15 +1,18 @@
 import React from 'react'
 import Icon from '@src/components/Icon/Icon'
-import useVisible from '../../../functions/useVisible'
+import useVisible from '../../../functions/useVisible.js'
 
 interface FilterFormFieldProps {
     filter: {
         title: string
-        items: []
+        items: {
+            id?: string
+            name: string
+        }[]
     }
-    isSelected: Function
-    handleSelect: Function
-    handleApply: Function
+    isSelected: (name: string) => boolean | undefined
+    handleSelect: (name: string) => void
+    handleApply: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 const FilterFormField: React.FC<FilterFormFieldProps> = ({
@@ -22,7 +25,7 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
         false,
         'form__dropdown-button'
     )
-
+    const { title, items } = filter
     return (
         <div
             className={`form__field form__field--checkbox ${
@@ -31,10 +34,12 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
         >
             <fieldset>
                 <div
+                    role='button'
                     className='form__group--dropdown-button'
                     onClick={() => setIsVisible(!isVisible)}
+                    onKeyDown={() => setIsVisible(!isVisible)}
                 >
-                    {filter.title}
+                    {title}
                     <figure className='form__icon'>
                         <Icon icon='chevron-down' size={12} />
                     </figure>
@@ -42,11 +47,11 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
                 {isVisible && (
                     <div className='form__group--dropdown' ref={ref}>
                         <div className='form__group--dropdown-content'>
-                            {filter.items && filter.items.length === 0 && (
+                            {items && items.length === 0 && (
                                 <div className='form__group'>No Items</div>
                             )}
-                            {filter.items &&
-                                filter.items.map((item, index) => {
+                            {items &&
+                                items.map((item, index) => {
                                     const { id, name } = item
                                     return (
                                         <div
@@ -59,11 +64,10 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
                                                 name={name}
                                                 className='form__input--checkbox'
                                                 onChange={() =>
-                                                    handleSelect(name, id)
+                                                    handleSelect(name)
                                                 }
                                                 defaultChecked={isSelected(
-                                                    name,
-                                                    id
+                                                    name
                                                 )}
                                             />
                                             <label htmlFor={id}>{name}</label>
@@ -72,8 +76,7 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
                                 })}
                         </div>
                         <div className='form__group--dropdown-footer'>
-                            <a
-                                href='#'
+                            <button
                                 className='content-filter__button content-filter__button--apply'
                                 onClick={(e) => {
                                     setIsVisible(false)
@@ -81,7 +84,7 @@ const FilterFormField: React.FC<FilterFormFieldProps> = ({
                                 }}
                             >
                                 Apply Filters
-                            </a>
+                            </button>
                         </div>
                     </div>
                 )}

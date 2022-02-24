@@ -1,0 +1,37 @@
+{
+    "title": "Filter",
+    "classname": ".filter",
+    "variations": [
+        {
+            "type": "base",
+            "contentFilters": [
+                {
+                    "title": "categories",
+                    "items": [
+                        {
+                            "id": "1",
+                            "name": "Science"
+                        },
+                        {
+                            "id": "2",
+                            "name": "Health"
+                        }
+                    ]
+                },
+                {
+                    "title": "tags",
+                    "items": [
+                        {
+                            "id": "1",
+                            "name": "2021"
+                        },
+                        {
+                            "id": "2",
+                            "name": "2022"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

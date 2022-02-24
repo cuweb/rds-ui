@@ -18,7 +18,7 @@ const FilterResetButton: React.FC<FilterResetButtonProps> = ({
                 >
                     Reset Filters
                     <figure className='form__icon'>
-                        <Icon icon={'sync'} size={12} />
+                        <Icon icon='sync' size={12} />
                     </figure>
                 </button>
             </div>

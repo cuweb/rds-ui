@@ -1,6 +1,10 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
 import Filter from './Filter'
+import data from './FData.json'
+import getVariation from '@src/functions/getVariation'
+
+const { variations } = data
 
 export default {
     component: Filter,
@@ -16,34 +20,10 @@ const handleFilterItems = (items: []) => {
     console.log(items)
 }
 export const Base = Template.bind({})
+
+const baseFilter = getVariation('base', variations)
+
 Base.args = {
-    contentFilters: [
-        {
-            title: 'category',
-            items: [
-                {
-                    id: '1',
-                    name: 'aaaa',
-                },
-                {
-                    id: '2',
-                    name: 'bbb',
-                },
-            ],
-        },
-        {
-            title: 'tag',
-            items: [
-                {
-                    id: '1',
-                    name: 'ghgg',
-                },
-                {
-                    id: '2',
-                    name: 'jjj',
-                },
-            ],
-        },
-    ],
+    contentFilters: baseFilter.contentFilters,
     handleFilterItems: handleFilterItems,
 }

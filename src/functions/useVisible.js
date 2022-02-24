@@ -1,5 +1,3 @@
-// @see https://www.cluemediator.com/detect-click-outside-a-react-component-using-react-hooks
-
 import { useState, useRef, useEffect } from 'react'
 
 function useVisible(initialIsVisible, button) {

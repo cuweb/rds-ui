@@ -4,13 +4,16 @@ import FilterResetButton from './FilterResetButton'
 
 interface FilterItemsProps {
     isMenuOpen: boolean
-    isSelected: Function
-    handleSelect: Function
-    handleApply: Function
-    handleReset: Function
+    isSelected: (name: string) => boolean | undefined
+    handleSelect: (name: string) => void
+    handleApply: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    handleReset: (e: Event) => void
     contentFilters: {
         title: string
-        items: []
+        items: {
+            id?: string,
+            name: string
+        }[]
     }[]
 }
 const FilterItems: React.FC<FilterItemsProps> = ({

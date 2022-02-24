@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import FilterItems from './components/FilterItems'
 
 interface FilterProps {
-    handleFilterItems: Function
+    handleFilterItems: (items: string[]) => void
     contentFilters: {
         title: string
-        items: []
+        items: {
+            id: string,
+            name: string
+        }[]
     }[]
 }
 
@@ -16,8 +19,7 @@ const Filter: React.FC<FilterProps> = ({
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
     const [selectedItems, setSelectedItems] = useState<string[]>([])
 
-    const isSelected = (name: string) =>
-        selectedItems.includes(name)
+    const isSelected = (name: string) => selectedItems.includes(name)
 
     const handleSelect = (name: string) => {
         const selected: string = name
@@ -29,7 +31,7 @@ const Filter: React.FC<FilterProps> = ({
         )
     }
     const handleApply = (
-        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+        e: React.MouseEvent<HTMLButtonElement, MouseEvent>
     ) => {
         e.preventDefault()
         setIsMenuOpen(false)
@@ -53,7 +55,7 @@ const Filter: React.FC<FilterProps> = ({
     }
 
     return (
-        <div className={`content-filter`}>
+        <div className='content-filter'>
             <FilterItems {...filterProps} />
         </div>
     )
