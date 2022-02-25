@@ -54,7 +54,7 @@
                     ]
                 }
             ],
-            "dataToFilter" : [
+            "dataToFilter": [
                 { "category": "sport", "name": "Football" },
                 { "category": "sport", "name": "Baseball" },
                 { "category": "sport", "name": "Basketball" },
