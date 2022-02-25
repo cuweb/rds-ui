@@ -9,6 +9,7 @@ import ButtonCTA from './components/ButtonCTA/ButtonCTA'
 import ButtonSocial from './components/ButtonSocial/ButtonSocial'
 import Card from './components/Card/Card'
 import CardGrid from './blocks/CardGrid/CardGrid'
+import Filter from './blocks/Filter/Filter'
 import Footer from './blocks/Footer/Footer'
 import FooterBrand from './blocks/Footer/components/FooterBrand'
 import FooterSimple from './blocks/Footer/components/FooterSimple'
@@ -46,6 +47,7 @@ export {
     ButtonSocial,
     Card,
     CardGrid,
+    Filter,
     Footer,
     FooterBrand,
     FooterSimple,
