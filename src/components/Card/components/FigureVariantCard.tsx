@@ -20,7 +20,11 @@ const FigureVariantCard: React.FC<FigureVariantCardProps> = ({
         <LinkWrapper link={link}>
             <figure>
                 <figcaption dangerouslySetInnerHTML={{ __html: caption }} />
-                <p itemProp='description'>{description}</p>
+                {description ? (
+                    <p itemProp='description'>{description}</p>
+                ) : (
+                    <p> Add Desc</p>
+                )}
             </figure>
         </LinkWrapper>
     </article>
