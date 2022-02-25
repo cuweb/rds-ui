@@ -32,6 +32,36 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "withData",
+            "contentFilters": [
+                {
+                    "title": "categories",
+                    "items": [
+                        {
+                            "id": "1",
+                            "name": "sport"
+                        },
+                        {
+                            "id": "2",
+                            "name": "technology"
+                        },
+                        {
+                            "id": "3",
+                            "name": "health"
+                        }
+                    ]
+                }
+            ],
+            "dataToFilter" : [
+                { "category": "sport", "name": "Football" },
+                { "category": "sport", "name": "Baseball" },
+                { "category": "sport", "name": "Basketball" },
+                { "category": "technology", "name": "iPod" },
+                { "category": "technology", "name": "iPhone" },
+                { "category": "technology", "name": "Macbook" }
+            ]
         }
     ]
 }
