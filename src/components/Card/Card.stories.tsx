@@ -66,16 +66,6 @@ VideoVariant.args = {
     header: videoVariant.header,
 }
 
-export const PeopleVariant = Template.bind({})
-const peopleVariant = getVariation('peopleVariant', variations)
-PeopleVariant.args = {
-    type: peopleVariant.cardType,
-    link: peopleVariant.link,
-    image: peopleVariant.image,
-    header: peopleVariant.header,
-    description: peopleVariant.description,
-}
-
 export const FigureVariant = Template.bind({})
 const figureVariant = getVariation('figureVariant', variations)
 FigureVariant.args = {
