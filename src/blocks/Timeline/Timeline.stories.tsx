@@ -2,12 +2,7 @@ import React from 'react'
 import { Meta, Story } from '@storybook/react'
 import Timeline from './Timeline'
 import data from './TimelineData.json'
-<<<<<<< HEAD
 import getVariation from '@functions/getVariation'
-=======
-import getVariation from '@functions/getVariation';
-
->>>>>>> feature/WSDEV-870-card-image-placeholder
 
 const { variations } = data
 
