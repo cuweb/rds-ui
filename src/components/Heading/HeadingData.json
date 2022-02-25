@@ -1,0 +1,32 @@
+{
+    "title": "Heading",
+    "classname": ".heading",
+    "variations": [
+        {
+            "type": "baseHeading",
+            "header": "Base Heading component"
+        },
+        {
+            "type": "centeredHeading",
+            "header": "Centered Heading component",
+            "center": "true"
+        },
+        {
+            "type": "headingWithParagraph",
+            "header": "Heading with Paragraph",
+            "description": "There should only be one, short paragraph within heading components."
+        },
+        {
+            "type": "centeredHeadingWithParagraph",
+            "header": "Centered Heading with Paragraph",
+            "description": "There should only be one, short paragraph within heading components.",
+            "center": "true"
+        },
+        {
+            "type": "headingWithParagraphSubhead",
+            "header": "Heading with Paragraph and Subheading",
+            "description": "There should only be one, short paragraph within heading components.",
+            "subheader": "Subheadings following an h2 need to be h3."
+        }
+    ]
+}

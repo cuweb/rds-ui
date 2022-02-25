@@ -14,6 +14,7 @@ import Footer from './blocks/Footer/Footer'
 import FooterBrand from './blocks/Footer/components/FooterBrand'
 import FooterSimple from './blocks/Footer/components/FooterSimple'
 import FooterSitemap from './blocks/Footer/components/FooterSitemap'
+import Heading from './components/Heading/Heading'
 import Icon from './components/Icon/Icon'
 import ImageTiles from './blocks/ImageTiles/ImageTiles'
 import ImageCaption from './components/ImageCaption/ImageCaption'
@@ -51,6 +52,7 @@ export {
     FooterBrand,
     FooterSimple,
     FooterSitemap,
+    Heading,
     Icon,
     ImageTiles,
     ImageCaption,
