@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Meta, Story } from '@storybook/react'
 import Filter from './Filter'
 import data from './FData.json'
-import getVariation from '@src/functions/getVariation'
+import getVariation from '@functions/getVariation'
 
 const { variations } = data
 
@@ -59,8 +59,8 @@ const TemplateWithData: Story = (args: any) => {
                 <ul>
                     {items &&
                         items.length > 0 &&
-                        items.map((item) => (
-                            <li>
+                        items.map((item, index) => (
+                            <li key={index}>
                                 name: <span>{item.name}</span> / category:{' '}
                                 <span>{item.category}</span>
                             </li>

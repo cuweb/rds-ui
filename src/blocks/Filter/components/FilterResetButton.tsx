@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '@src/components/Icon/Icon'
+import Icon from '@components/Icon/Icon'
 
 interface FilterResetButtonProps {
     handleReset: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void

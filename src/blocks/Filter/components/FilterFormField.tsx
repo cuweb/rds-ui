@@ -1,6 +1,6 @@
 import React from 'react'
-import Icon from '@src/components/Icon/Icon'
-import useVisible from '../../../functions/useVisible.js'
+import Icon from '@components/Icon/Icon'
+import useVisible from '@functions/useVisible.js'
 
 interface FilterFormFieldProps {
     filter: {

@@ -1,9 +1,9 @@
 import React from 'react'
 import AlertAside from './AlertAside'
 import { Meta, Story } from '@storybook/react'
-import Layout from '@src/layouts/Layout/Layout'
-import Main from '@src/layouts/Layout/Main'
-import Sidebar from '@src/layouts/Layout/Sidebar'
+import Layout from '@layouts/Layout/Layout'
+import Main from '@layouts/Layout/Main'
+import Sidebar from '@layouts/Layout/Sidebar'
 
 export default {
     component: AlertAside,
