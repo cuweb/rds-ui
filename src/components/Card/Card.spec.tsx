@@ -294,7 +294,6 @@ describe('Card', () => {
         cy.get(`svg`).should('exist')
     })
 
-
     // Figure variant
 
     it(`Figure variant: Should render the c-card--figure`, () => {

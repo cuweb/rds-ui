@@ -1,10 +1,10 @@
-import data from './CardData.json'
+import data from './CardPeopleData.json'
 import getVariation from '../../functions/getVariation'
 import CardPeople from './CardPeople'
-import React from 'react';
-import {  Story } from '@storybook/react'
+import React from 'react'
+import { Story } from '@storybook/react'
 
-const {  variations } = data
+const { variations } = data
 
 export default {
     component: CardPeople,
@@ -12,9 +12,6 @@ export default {
 }
 
 const Template: Story = (args: any) => <CardPeople {...args} />
-
-
-
 
 export const PeopleCard = Template.bind({})
 const peopleCard = getVariation('peopleVariant', variations)
@@ -26,7 +23,6 @@ PeopleCard.args = {
     lastName: peopleCard.lastName,
     description: peopleCard.description,
 }
-
 
 export const PeopleCardWithNoImage = Template.bind({})
 const peopleCardNoImage = getVariation('peopleVariantWithoutImage', variations)
