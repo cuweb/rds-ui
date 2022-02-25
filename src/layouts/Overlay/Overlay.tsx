@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface OverlayProps {
-    type: string
+    type?: 'search' | 'menu' | 'login' | string
     className?: string | undefined
     children: React.ReactNode
     isHidden?: boolean

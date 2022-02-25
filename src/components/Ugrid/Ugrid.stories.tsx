@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import Card from '@src/components/Card/Card'
+import Card from '@components/Card/Card'
 import Ugrid from './Ugrid'
 
 export default {

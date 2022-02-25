@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Meta, Story } from '@storybook/react'
 import AlertHeader from './AlertHeader'
-import { removeCookie } from '@src/hooks/useCookies'
 
 export default {
     component: AlertHeader,
@@ -9,7 +8,7 @@ export default {
 } as Meta
 
 const Template: Story = (args: any) => {
-    const [isHidden, setIsHidden] = useState(false)
+    const [isHidden, setIsHidden] = useState<boolean>(false)
     const handleClose = () => setIsHidden(true)
 
     return (

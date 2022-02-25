@@ -2,7 +2,7 @@ import React from 'react'
 import { Meta, Story } from '@storybook/react'
 import ButtonSocial from './ButtonSocial'
 import data from './ButtonSocialData.json'
-import getVariation from '@src/functions/getVariation'
+import getVariation from '@functions/getVariation'
 
 export default {
     component: ButtonSocial,

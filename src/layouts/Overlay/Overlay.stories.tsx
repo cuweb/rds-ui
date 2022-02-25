@@ -8,7 +8,7 @@ export default {
 }
 
 export const Default = () => {
-    const [isHidden, setIsHidden] = useState(true)
+    const [isHidden, setIsHidden] = useState<boolean>(true)
     return (
         <div className='example'>
             <button
