@@ -23,7 +23,7 @@ const FigureVariantCard: React.FC<FigureVariantCardProps> = ({
                 {description ? (
                     <p itemProp='description'>{description}</p>
                 ) : (
-                    <p> Add Desc</p>
+                    <p> Add Figure</p>
                 )}
             </figure>
         </LinkWrapper>
