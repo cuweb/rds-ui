@@ -14,7 +14,7 @@
         "start": "start-storybook -p 6006 --ci",
         "dev": "rm -rf dist && rollup -c && (yarn watch & start-storybook -p 6006)",
         "watch": "rollup -c -w",
-        "build": "rm -rf dist && yarn format && yarn lint && rollup -c && yarn run build:docs",
+        "build": "rm -rf dist && yarn format && yarn lint && rollup -c",
         "build:docs": "rm -rf docs && build-storybook --quiet -o ./docs/storybook",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.tsx",
@@ -72,6 +72,7 @@
         "typescript": "^4.1.2"
     },
     "dependencies": {
+        "formik": "^2.2.9",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "tsconfig-paths-webpack-plugin": "^3.5.2"
