@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface CardPeopleVariantProps {
+export interface CardPeopleProps {
     link: string
     image: ImageProps
     header: string
@@ -14,7 +14,7 @@ export interface ImageProps {
     alt: string
 }
 
-const CardPeopleVariant: React.FC<CardPeopleVariantProps> = ({
+const CardPeople: React.FC<CardPeopleProps> = ({
     link,
     image,
     firstName,
@@ -51,4 +51,4 @@ const CardPeopleVariant: React.FC<CardPeopleVariantProps> = ({
         </article>
     )
 }
-export default CardPeopleVariant
+export default CardPeople
