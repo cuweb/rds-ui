@@ -22,7 +22,8 @@ PeopleCard.args = {
     type: peopleCard.cardType,
     link: peopleCard.link,
     image: peopleCard.image,
-    header: peopleCard.header,
+    firstName: peopleCard.firstName,
+    lastName: peopleCard.lastName,
     description: peopleCard.description,
 }
 
@@ -33,6 +34,7 @@ PeopleCardNoImage.args = {
     type: peopleCardNoImage.cardType,
     link: peopleCardNoImage.link,
     image: peopleCardNoImage.image,
-    header: peopleCardNoImage.header,
+    firstName: peopleCard.firstName,
+    lastName: peopleCard.lastName,
     description: peopleCardNoImage.description,
 }

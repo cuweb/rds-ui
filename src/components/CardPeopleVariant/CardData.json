@@ -10,7 +10,8 @@
                 "src": "https://www.fillmurray.com/500/500",
                 "alt": "Read more about Bill Murray"
             },
-            "header": "Bill Murray",
+            "firstName": "Bill",
+            "lastName": "Murray",
             "description": "Actor and Writer"
         },
         {
@@ -21,7 +22,8 @@
                 "src": "",
                 "alt": "Read more about Bill Murray"
             },
-            "header": "Bill Murray",
+            "firstName": "Bill",
+            "lastName": "Murray",
             "description": "Actor and Writer"
         }
     ]

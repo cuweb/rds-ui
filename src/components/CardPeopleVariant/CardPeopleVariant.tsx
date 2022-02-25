@@ -1,11 +1,12 @@
 import React from 'react'
-import checkImageUrl from '@functions/checkImageUrl'
 
 export interface CardPeopleVariantProps {
     link: string
     image: ImageProps
     header: string
     description: string
+    firstName: string
+    lastName: string
 }
 
 export interface ImageProps {
@@ -16,17 +17,10 @@ export interface ImageProps {
 const CardPeopleVariant: React.FC<CardPeopleVariantProps> = ({
     link,
     image,
-    header,
+    firstName,
+    lastName,
     description,
 }): JSX.Element => {
-    // console.log(checkImageUrl(image.src)) checking if its a valid image url
-
-    const Initials = header
-        .split(' ')
-        .map((name) => name[0])
-        .join('')
-        .toUpperCase() // getting Initials
-
     return (
         <article
             className='c-card c-card--people'
@@ -39,14 +33,15 @@ const CardPeopleVariant: React.FC<CardPeopleVariantProps> = ({
                         <img src={image.src} alt={image.alt} loading='lazy' />
                     </figure>
                 ) : (
-                    <div className='card-initials'>{Initials}</div>
+                    <div className='card-initials'>
+                        {firstName?.charAt(0)} {lastName?.charAt(0)}
+                    </div>
                 )}
 
                 <header>
-                    <h3
-                        itemProp='name'
-                        dangerouslySetInnerHTML={{ __html: header }}
-                    />
+                    <h3 itemProp='name'>
+                        {firstName} {lastName}
+                    </h3>
                     <p
                         itemProp='description'
                         dangerouslySetInnerHTML={{ __html: description }}
