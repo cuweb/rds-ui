@@ -1,27 +1,33 @@
-import React, { FC, HTMLInputTypeAttribute } from 'react'
+import React, { FC, HTMLProps } from 'react'
+import FormField from './FormField'
 
-interface FormInputProps {
+export interface FormInputProps {
     label?: string
     description?: string
-    type: HTMLInputTypeAttribute
-    id?: string
-    name?: string
-    placeholder?: string
+    onChange: (e: unknown) => void
 }
-const FormInput: FC<FormInputProps> = ({
+
+export type InputType = HTMLProps<HTMLInputElement>
+
+const FormInput: FC<FormInputProps & InputType> = ({
     id,
     type,
     label,
     description,
     name,
     placeholder,
+    onChange,
 }): JSX.Element => {
     return (
-        <div className='form__field form__field--text'>
-            <label htmlFor={id}>{label}</label>
-            {description && <p className='form__description'>{description}</p>}
-            <input id={id} type={type} name={name} placeholder={placeholder} />
-        </div>
+        <FormField id={id} type={type} label={label} description={description}>
+            <input
+                id={id}
+                type={type}
+                name={name}
+                placeholder={placeholder}
+                onChange={(e) => onChange(e)}
+            />
+        </FormField>
     )
 }
 export default FormInput
