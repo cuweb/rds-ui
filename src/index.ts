@@ -10,10 +10,12 @@ import ButtonSocial from './components/ButtonSocial/ButtonSocial'
 import Card from './components/Card/Card'
 import CardGrid from './blocks/CardGrid/CardGrid'
 import CardPeople from './components/CardPeople/CardPeople'
+import Filter from './blocks/Filter/Filter'
 import Footer from './blocks/Footer/Footer'
 import FooterBrand from './blocks/Footer/components/FooterBrand'
 import FooterSimple from './blocks/Footer/components/FooterSimple'
 import FooterSitemap from './blocks/Footer/components/FooterSitemap'
+import Heading from './components/Heading/Heading'
 import Icon from './components/Icon/Icon'
 import ImageTiles from './blocks/ImageTiles/ImageTiles'
 import ImageCaption from './components/ImageCaption/ImageCaption'
@@ -47,10 +49,12 @@ export {
     Card,
     CardGrid,
     CardPeople,
+    Filter,
     Footer,
     FooterBrand,
     FooterSimple,
     FooterSitemap,
+    Heading,
     Icon,
     ImageTiles,
     ImageCaption,

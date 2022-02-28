@@ -1,0 +1,67 @@
+{
+    "title": "Filter",
+    "classname": ".filter",
+    "variations": [
+        {
+            "type": "base",
+            "contentFilters": [
+                {
+                    "title": "categories",
+                    "items": [
+                        {
+                            "id": "1",
+                            "name": "Science"
+                        },
+                        {
+                            "id": "2",
+                            "name": "Health"
+                        }
+                    ]
+                },
+                {
+                    "title": "tags",
+                    "items": [
+                        {
+                            "id": "1",
+                            "name": "2021"
+                        },
+                        {
+                            "id": "2",
+                            "name": "2022"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "withData",
+            "contentFilters": [
+                {
+                    "title": "categories",
+                    "items": [
+                        {
+                            "id": "1",
+                            "name": "sport"
+                        },
+                        {
+                            "id": "2",
+                            "name": "technology"
+                        },
+                        {
+                            "id": "3",
+                            "name": "health"
+                        }
+                    ]
+                }
+            ],
+            "dataToFilter": [
+                { "category": "sport", "name": "Football" },
+                { "category": "sport", "name": "Baseball" },
+                { "category": "sport", "name": "Basketball" },
+                { "category": "technology", "name": "iPod" },
+                { "category": "technology", "name": "iPhone" },
+                { "category": "technology", "name": "Macbook" }
+            ]
+        }
+    ]
+}
