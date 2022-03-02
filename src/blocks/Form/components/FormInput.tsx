@@ -4,6 +4,8 @@ import FormField from './FormField'
 export interface FormInputProps {
     label?: string
     description?: string
+    min?: number
+    max?: number
     onChange: (e: unknown) => void
 }
 
@@ -16,6 +18,8 @@ const FormInput: FC<FormInputProps & InputType> = ({
     description,
     name,
     placeholder,
+    max,
+    min,
     onChange,
 }): JSX.Element => {
     return (
@@ -24,6 +28,8 @@ const FormInput: FC<FormInputProps & InputType> = ({
                 id={id}
                 type={type}
                 name={name}
+                max={max}
+                min={min}
                 placeholder={placeholder}
                 onChange={(e) => onChange(e)}
             />

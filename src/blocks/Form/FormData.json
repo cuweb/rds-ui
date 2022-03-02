@@ -1,0 +1,16 @@
+{
+    "content": {
+        "description": "",
+        "placeholder": ""
+    },
+    "variations": [
+        {
+            "variaton": "text",
+            "type": "input"
+        },
+        {
+            "variaton": "number",
+            "type": "input"
+        }
+    ]
+}
