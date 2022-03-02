@@ -1,16 +1,23 @@
 {
     "content": {
-        "description": "",
-        "placeholder": ""
+        "description": "This example has the description above the input field",
+        "placeholder": "his field has a placeholder"
     },
     "variations": [
         {
-            "variaton": "text",
-            "type": "input"
+            "variaton": "InputType",
+            "type": "text",
+            "label": "Text Label"
         },
         {
-            "variaton": "number",
-            "type": "input"
+            "variaton": "InputNumber",
+            "type": "number",
+            "label": "Number Label"
+        },
+        {
+            "variaton": "InputPassword",
+            "type": "password",
+            "label": "Password Label"
         }
     ]
 }

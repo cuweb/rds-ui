@@ -6,7 +6,12 @@ export interface FormInputProps {
     description?: string
     min?: number
     max?: number
-    onChange: (e: unknown) => void
+    maxLength?: number
+    minLength?: number
+    onChange?: (e: unknown) => void
+    required?: boolean
+    disabled?: boolean
+    readonly?: boolean
 }
 
 export type InputType = HTMLProps<HTMLInputElement>
@@ -20,7 +25,12 @@ const FormInput: FC<FormInputProps & InputType> = ({
     placeholder,
     max,
     min,
+    maxLength,
+    minLength,
     onChange,
+    required,
+    disabled,
+    readOnly,
 }): JSX.Element => {
     return (
         <FormField id={id} type={type} label={label} description={description}>
@@ -30,8 +40,13 @@ const FormInput: FC<FormInputProps & InputType> = ({
                 name={name}
                 max={max}
                 min={min}
+                maxLength={maxLength}
+                minLength={minLength}
                 placeholder={placeholder}
-                onChange={(e) => onChange(e)}
+                onChange={onChange ? (e) => onChange(e) : undefined}
+                required={required}
+                disabled={disabled}
+                readOnly={readOnly}
             />
         </FormField>
     )
