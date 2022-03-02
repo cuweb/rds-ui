@@ -5,7 +5,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card`
+            )}/iframe.html?id=components-card-people-card--base-card`
         )
         cy.get(`.c-card--people`).should('exist')
     })
@@ -14,7 +14,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card`
+            )}/iframe.html?id=components-card-people-card--base-card`
         )
         cy.get(`a`).should('exist')
     })
@@ -23,7 +23,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card`
+            )}/iframe.html?id=components-card-people-card--base-card`
         )
         cy.get(`img`).should('exist')
     })
@@ -32,7 +32,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card`
+            )}/iframe.html?id=components-card-people-card--base-card`
         )
         cy.get(`header`).should('exist')
     })
@@ -41,7 +41,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card`
+            )}/iframe.html?id=components-card-people-card--base-card`
         )
         cy.get(`h3`).should('exist')
     })
@@ -61,7 +61,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card-with-no-image`
+            )}/iframe.html?id=components-card-people-card--with-no-image`
         )
         cy.get(`.c-card--people`).should('exist')
     })
@@ -70,7 +70,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card-with-no-image`
+            )}/iframe.html?id=components-card-people-card--with-no-image`
         )
         cy.get(`a`).should('exist')
     })
@@ -79,7 +79,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card-with-no-image`
+            )}/iframe.html?id=components-card-people-card--with-no-image`
         )
         cy.get(`.card-initials`).should('exist')
     })
@@ -88,7 +88,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card-with-no-image`
+            )}/iframe.html?id=components-card-people-card--with-no-image`
         )
         cy.get(`header`).should('exist')
     })
@@ -97,7 +97,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card-with-no-image`
+            )}/iframe.html?id=components-card-people-card--with-no-image`
         )
         cy.get(`h3`).should('exist')
     })
@@ -106,7 +106,7 @@ describe('CardPeople', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=components-card-people--people-card-with-no-image`
+            )}/iframe.html?id=components-card-people-card--with-no-image`
         )
         cy.get(`p`).should('exist')
     })
