@@ -1,13 +1,13 @@
 import React from 'react'
 import LinkWrapper from '@components/LinkWrapper/LinkWrapper'
 
-export interface FigureVariantCardProps {
+export interface CardFigureProps {
     link?: string
     description: string
     caption: string
 }
 
-const FigureVariantCard: React.FC<FigureVariantCardProps> = ({
+const CardFigure: React.FC<CardFigureProps> = ({
     link,
     description,
     caption,
@@ -25,4 +25,4 @@ const FigureVariantCard: React.FC<FigureVariantCardProps> = ({
         </LinkWrapper>
     </article>
 )
-export default FigureVariantCard
+export default CardFigure

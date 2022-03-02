@@ -1,7 +1,7 @@
 import React from 'react'
 import convertDate from '@functions/convertDate'
 
-export interface NewsVariantCardProps {
+export interface CardNewsProps {
     link: string
     image: ImageProps
     header: string
@@ -14,7 +14,7 @@ export interface ImageProps {
     alt: string
 }
 
-const NewsVariantCard: React.FC<NewsVariantCardProps> = ({
+const CardNews: React.FC<CardNewsProps> = ({
     link,
     image,
     header,
@@ -51,4 +51,4 @@ const NewsVariantCard: React.FC<NewsVariantCardProps> = ({
         </article>
     )
 }
-export default NewsVariantCard
+export default CardNews

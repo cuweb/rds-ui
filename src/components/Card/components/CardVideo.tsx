@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface VideoVariantCardProps {
+export interface CardVideoProps {
     link: string
     image: ImageProps
     header: string
@@ -11,7 +11,7 @@ export interface ImageProps {
     alt: string
 }
 
-const VideoVariantCard: React.FC<VideoVariantCardProps> = ({
+const CardVideo: React.FC<CardVideoProps> = ({
     link,
     image,
     header,
@@ -43,4 +43,4 @@ const VideoVariantCard: React.FC<VideoVariantCardProps> = ({
         </a>
     </article>
 )
-export default VideoVariantCard
+export default CardVideo

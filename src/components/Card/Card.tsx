@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react'
-import BaseCard from './components/BaseCard'
-import FigureVariantCard from './components/FigureVariantCard'
-import NewsVariantCard from './components/NewsVariantCard'
-import VideoVariantCard from './components/VideoVariantCard'
+import CardBase from './components/CardBase'
+import CardFigure from './components/CardFigure'
+import CardNews from './components/CardNews'
+import CardVideo from './components/CardVideo'
 
 export interface CardProps {
     type: 'base' | 'news' | 'video' | 'figure'
@@ -27,10 +27,10 @@ const Card: React.FC<CardProps> = (props): JSX.Element => {
     const { type } = props
 
     const cardTypes: TypeProps = {
-        base: <BaseCard {...props} />,
-        news: <NewsVariantCard {...props} />,
-        video: <VideoVariantCard {...props} />,
-        figure: <FigureVariantCard {...props} />,
+        base: <CardBase {...props} />,
+        news: <CardNews {...props} />,
+        video: <CardVideo {...props} />,
+        figure: <CardFigure {...props} />,
     }
     return cardTypes[type || 'base']
 }

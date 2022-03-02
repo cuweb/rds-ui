@@ -1,15 +1,17 @@
 import Card from './Card'
 import data from './CardData.json'
 import getVariation from '../../functions/getVariation'
+import { Meta, Story } from '@storybook/react'
+import React from 'react';
 
 const { title, variations } = data
 
 export default {
     component: Card,
     title: `Components/${title}`,
-}
+}as Meta
 
-const Template: React.FC = (args: any) => <Card {...args} />
+const Template: Story = (args: any) => <Card {...args} />
 
 export const BaseCard = Template.bind({})
 const baseCard = getVariation('base', variations)

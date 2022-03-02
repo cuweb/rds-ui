@@ -8,14 +8,14 @@ const { variations } = data
 
 export default {
     component: CardPeople,
-    title: `Components/Card People`,
+    title: `Components/Card/People Card`,
 }
 
 const Template: Story = (args: any) => <CardPeople {...args} />
 
-export const PeopleCard = Template.bind({})
+export const BaseCard = Template.bind({})
 const peopleCard = getVariation('peopleVariant', variations)
-PeopleCard.args = {
+BaseCard.args = {
     type: peopleCard.cardType,
     link: peopleCard.link,
     image: peopleCard.image,
@@ -24,9 +24,9 @@ PeopleCard.args = {
     description: peopleCard.description,
 }
 
-export const PeopleCardWithNoImage = Template.bind({})
+export const WithNoImage = Template.bind({})
 const peopleCardNoImage = getVariation('peopleVariantWithoutImage', variations)
-PeopleCardWithNoImage.args = {
+WithNoImage.args = {
     type: peopleCardNoImage.cardType,
     link: peopleCardNoImage.link,
     image: peopleCardNoImage.image,

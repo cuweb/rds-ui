@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface BaseCardProps {
+export interface CardBaseProps {
     link: string
     header: string
     description?: string
@@ -12,7 +12,7 @@ export interface ImageProps {
     alt: string
 }
 
-const BaseCard: React.FC<BaseCardProps> = ({
+const CardBase: React.FC<CardBaseProps> = ({
     link,
     header,
     description,
@@ -38,4 +38,4 @@ const BaseCard: React.FC<BaseCardProps> = ({
         </a>
     </article>
 )
-export default BaseCard
+export default CardBase
