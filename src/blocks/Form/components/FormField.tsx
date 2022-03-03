@@ -1,5 +1,6 @@
 import React, { FC, InputHTMLAttributes, TextareaHTMLAttributes } from 'react'
 import { FormikValues, Field } from 'formik'
+import { v4 as uuidv4 } from 'uuid'
 import FormFieldWrapper from './FormFieldWrapper'
 
 export type InputAttributesTypes = InputHTMLAttributes<HTMLInputElement> &
@@ -28,7 +29,9 @@ const FormField: FC<FieldType> = ({
         submit: 'button',
         empty: null,
     }
+    const fieldId = attributes.id || uuidv4()
     const formFieldProps = {
+        id: fieldId,
         type: fieldTypes[attributes.type || 'empty'] || attributes.type,
         label: heading?.label,
         description: heading?.description,
@@ -36,7 +39,7 @@ const FormField: FC<FieldType> = ({
 
     return (
         <FormFieldWrapper {...formFieldProps}>
-            <Field {...attributes}>
+            <Field id={fieldId} {...attributes}>
                 {options &&
                     options.map((option: FormikValues, optionIndex: number) => (
                         <option key={optionIndex} value={option.value}>

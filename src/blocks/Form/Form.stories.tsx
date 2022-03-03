@@ -23,6 +23,8 @@ const fields: FieldType[] = [
             type: 'text',
             name: 'text',
             placeholder: content.placeholder,
+            maxLength: 10,
+            minLength: 2,
         },
     },
     {
@@ -39,6 +41,8 @@ const fields: FieldType[] = [
         attributes: {
             type: 'number',
             name: 'number',
+            max: 10,
+            min: 1,
         },
         heading: {
             label: 'Number',
