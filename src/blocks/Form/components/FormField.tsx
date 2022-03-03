@@ -1,24 +1,50 @@
-import React, { FC, HTMLInputTypeAttribute } from 'react'
+import React, { FC, InputHTMLAttributes, TextareaHTMLAttributes } from 'react'
+import { FormikValues, Field } from 'formik'
+import FormFieldWrapper from './FormFieldWrapper'
 
-interface FormFieldProps {
-    id?: string
-    label?: string
-    description?: string
-    type?: HTMLInputTypeAttribute | 'textarea' | 'select' | 'button'
-}
-const FormField: FC<FormFieldProps> = ({
-    type = 'text',
-    id,
-    label,
-    description,
-    children,
+export type InputAttributesTypes = InputHTMLAttributes<HTMLInputElement> &
+    TextareaHTMLAttributes<HTMLTextAreaElement> & {
+        as?: string | undefined
+    }
+
+export type FieldType = {
+    heading?: {
+        label: string
+        description: string
+    }
+    attributes: InputAttributesTypes
+    options?: {
+        text: string
+        value: string
+    }[]
+} & FormikValues
+
+const FormField: FC<FieldType> = ({
+    attributes,
+    heading,
+    options,
 }): JSX.Element => {
+    const fieldTypes: FormikValues = {
+        submit: 'button',
+        empty: null,
+    }
+    const formFieldProps = {
+        type: fieldTypes[attributes.type || 'empty'] || attributes.type,
+        label: heading?.label,
+        description: heading?.description,
+    }
+
     return (
-        <div className={`form__field form__field--${type}`}>
-            <label htmlFor={id}>{label}</label>
-            {description && <p className='form__description'>{description}</p>}
-            {children}
-        </div>
+        <FormFieldWrapper {...formFieldProps}>
+            <Field {...attributes}>
+                {options &&
+                    options.map((option: FormikValues, optionIndex: number) => (
+                        <option key={optionIndex} value={option.value}>
+                            {option.text}
+                        </option>
+                    ))}
+            </Field>
+        </FormFieldWrapper>
     )
 }
 export default FormField

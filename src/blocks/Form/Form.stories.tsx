@@ -1,102 +1,97 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
 import Form from './Form'
-import FormInput from './components/FormInput'
+import { FieldType } from './components/FormField'
 
 export default {
     component: Form,
-    title: `Blocks/Form/Input`,
+    title: `Blocks/Form`,
 } as Meta
 
 const content = {
     description: 'This example has the description above the input field',
     placeholder: 'This field has a placeholder',
 }
-const handleChange = (e: any) => console.log(e.target.value)
 
-export const Text = () => (
-    <Form>
-        <FormInput
-            id='input-text'
-            type='text'
-            name='input-text'
-            label='Text Label'
-            description={content.description}
-            placeholder={content.placeholder}
-            maxLength={20}
-            minLength={1}
-            onChange={handleChange}
-            required={true}
-        />
-    </Form>
-)
+const fields: FieldType[] = [
+    {
+        heading: {
+            label: 'Text',
+            description: content.description,
+        },
+        attributes: {
+            type: 'text',
+            name: 'text',
+            placeholder: content.placeholder,
+        },
+    },
+    {
+        heading: {
+            label: 'Password',
+            description: content.description,
+        },
+        attributes: {
+            type: 'password',
+            name: 'password',
+        },
+    },
+    {
+        attributes: {
+            type: 'number',
+            name: 'number',
+        },
+        heading: {
+            label: 'Number',
+            description: content.description,
+        },
+        placeholder: content.placeholder,
+    },
+    {
+        attributes: {
+            type: 'select',
+            as: 'select',
+            name: 'select',
+        },
+        options: [
+            {
+                text: 'Red',
+                value: 'red',
+            },
+            {
+                text: 'Blue',
+                value: 'blue',
+            },
+        ],
+        heading: {
+            label: 'Select Options',
+            description: content.description,
+        },
+    },
+    {
+        attributes: {
+            type: 'textarea',
+            as: 'textarea',
+            name: 'textarea',
+            placeholder: content.placeholder,
+            rows: 5,
+        },
+        heading: {
+            label: 'Textarea',
+            description: content.description,
+        },
+    },
+    {
+        attributes: {
+            type: 'submit',
+            name: 'Submit',
+        },
+    },
+]
 
-export const Number = () => (
-    <Form>
-        <FormInput
-            id='input-number'
-            type='number'
-            label='Number Label'
-            max={10}
-            min={1}
-            description={content.description}
-            placeholder={content.placeholder}
-            onChange={handleChange}
-        />
-    </Form>
-)
-
-export const Password = () => (
-    <Form>
-        <FormInput
-            id='input-password'
-            type='password'
-            label='Password Label'
-            maxLength={20}
-            minLength={1}
-            description={content.description}
-            placeholder={content.placeholder}
-            onChange={handleChange}
-        />
-    </Form>
-)
-export const Email = () => (
-    <Form>
-        <FormInput
-            id='input-email'
-            type='email'
-            label='Email Label'
-            description={content.description}
-            placeholder={content.placeholder}
-            onChange={handleChange}
-        />
-    </Form>
-)
-
-export const Disabled = () => (
-    <Form>
-        <FormInput
-            id='input-disabled'
-            type='text'
-            name='input-text'
-            label='Disabled Label'
-            description={content.description}
-            placeholder='This field is disabled'
-            disabled={true}
-        />
-    </Form>
-)
-
-export const ReadOnly = () => (
-    <Form>
-        <FormInput
-            id='input'
-            type='text'
-            name='input-text'
-            label='Read Only Label'
-            description={content.description}
-            placeholder={'This field is read only'}
-            readOnly={true}
-        />
-    </Form>
+export const KitchenSink = () => (
+    <Form
+        title='Kitchen Skink Form'
+        description='All the fields in one'
+        fields={fields}
+    />
 )
