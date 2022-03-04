@@ -1,7 +1,12 @@
+// @see https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls
+// @see https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers
+// @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement
+
 import React, { FC, InputHTMLAttributes, TextareaHTMLAttributes } from 'react'
 import { FormikValues, Field } from 'formik'
-import { v4 as uuidv4 } from 'uuid'
-import FormFieldWrapper from './FormFieldWrapper'
+import FormFieldWrapper, { FormFieldWrapperProps } from './FormFieldWrapper'
+import FormSelect from './FormSelect'
+import FormRadio from './FormRadio'
 
 export type InputAttributesTypes = InputHTMLAttributes<HTMLInputElement> &
     TextareaHTMLAttributes<HTMLTextAreaElement> & {
@@ -20,33 +25,30 @@ export type FieldType = {
     }[]
 } & FormikValues
 
-const FormField: FC<FieldType> = ({
-    attributes,
-    heading,
-    options,
-}): JSX.Element => {
+const FormField: FC<FieldType> = (props): JSX.Element => {
+    const { attributes, heading, options } = props
     const fieldTypes: FormikValues = {
         submit: 'button',
         empty: null,
     }
-    const fieldId = attributes.id || uuidv4()
-    const formFieldProps = {
-        id: fieldId,
+    const fieldWrapperProps: FormFieldWrapperProps = {
+        id: attributes.id,
         type: fieldTypes[attributes.type || 'empty'] || attributes.type,
         label: heading?.label,
         description: heading?.description,
     }
 
+    const formFieldTypes: FormikValues = {
+        select: <FormSelect options={options} attributes={attributes} />,
+        radio: <FormRadio {...props} />,
+        empty: null,
+    }
+
     return (
-        <FormFieldWrapper {...formFieldProps}>
-            <Field id={fieldId} {...attributes}>
-                {options &&
-                    options.map((option: FormikValues, optionIndex: number) => (
-                        <option key={optionIndex} value={option.value}>
-                            {option.text}
-                        </option>
-                    ))}
-            </Field>
+        <FormFieldWrapper {...fieldWrapperProps}>
+            {formFieldTypes[attributes.type || 'empty'] || (
+                <Field {...attributes} />
+            )}
         </FormFieldWrapper>
     )
 }

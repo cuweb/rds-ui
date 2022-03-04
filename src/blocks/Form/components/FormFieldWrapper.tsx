@@ -1,10 +1,11 @@
-import React, { FC, HTMLInputTypeAttribute } from 'react'
+import React, { FC } from 'react'
+import { InputAttributesTypes } from './FormField'
 
 export interface FormFieldWrapperProps {
     id?: string
     label?: string
     description?: string
-    type?: HTMLInputTypeAttribute | 'textarea' | 'select' | 'button'
+    type?: InputAttributesTypes
 }
 const FormFieldWrapper: FC<FormFieldWrapperProps> = ({
     type = 'text',
@@ -13,6 +14,22 @@ const FormFieldWrapper: FC<FormFieldWrapperProps> = ({
     description,
     children,
 }): JSX.Element => {
+    const isMultiple = ['checkbox', 'radio'].includes(type.toString())
+
+    if (isMultiple) {
+        return (
+            <div className={`form__field form__field--${type}`}>
+                <fieldset>
+                    <legend>{label}</legend>
+                    {description && (
+                        <p className='form__description'>{description}</p>
+                    )}
+                    <div className='form__group'>{children}</div>
+                </fieldset>
+            </div>
+        )
+    }
+
     return (
         <div className={`form__field form__field--${type}`}>
             <label htmlFor={id}>{label}</label>
