@@ -101,7 +101,17 @@ export const KitchenSink = () => {
         },
         {
             heading: {
-                label: 'Textarea',
+                label: 'File Uploads',
+                description: content.description,
+            },
+            attributes: {
+                type: 'file',
+                name: 'file',
+            },
+        },
+        {
+            heading: {
+                label: 'Text Area',
                 description: content.description,
             },
             attributes: {
@@ -190,7 +200,7 @@ export const KitchenSink = () => {
         },
         {
             heading: {
-                label: 'Select Options',
+                label: 'Select Lists',
                 description: content.description,
             },
             attributes: {
@@ -212,7 +222,38 @@ export const KitchenSink = () => {
         },
         {
             heading: {
-                label: 'Radio',
+                label: 'Multi-Select Lists',
+                description: content.description,
+            },
+            attributes: {
+                id: 'field-select-multiple',
+                type: 'select',
+                as: 'select',
+                name: 'select-multiple',
+                multiple: true,
+            },
+            options: [
+                {
+                    text: 'Red',
+                    value: 'red',
+                },
+                {
+                    text: 'Blue',
+                    value: 'blue',
+                },
+                {
+                    text: 'Green',
+                    value: 'Green',
+                },
+                {
+                    text: 'Yellow',
+                    value: 'yellow',
+                },
+            ],
+        },
+        {
+            heading: {
+                label: 'Radio Buttons',
                 description: content.description,
             },
             attributes: {
@@ -233,7 +274,7 @@ export const KitchenSink = () => {
         },
         {
             heading: {
-                label: 'Checkbox',
+                label: 'Checkboxes',
                 description: content.description,
             },
             attributes: {

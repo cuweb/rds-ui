@@ -1,5 +1,5 @@
 // @see https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls
-// @see https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers
+// @see https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
 // @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement
 
 import React, { FC, InputHTMLAttributes, TextareaHTMLAttributes } from 'react'
@@ -7,6 +7,7 @@ import { FormikValues, Field } from 'formik'
 import FormFieldWrapper, { FormFieldWrapperProps } from './FormFieldWrapper'
 import FormSelect from './FormSelect'
 import FormMultiple from './FormMultiple'
+import FormFile from './FormFile'
 
 export type InputAttributesTypes = InputHTMLAttributes<HTMLInputElement> &
     TextareaHTMLAttributes<HTMLTextAreaElement> & {
@@ -42,6 +43,7 @@ const FormField: FC<FieldType> = (props): JSX.Element => {
         select: <FormSelect options={options} attributes={attributes} />,
         radio: <FormMultiple {...props} />,
         checkbox: <FormMultiple {...props} />,
+        file: <FormFile {...props} />,
         empty: null,
     }
 
