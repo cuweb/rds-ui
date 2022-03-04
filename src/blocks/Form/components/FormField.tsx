@@ -6,7 +6,7 @@ import React, { FC, InputHTMLAttributes, TextareaHTMLAttributes } from 'react'
 import { FormikValues, Field } from 'formik'
 import FormFieldWrapper, { FormFieldWrapperProps } from './FormFieldWrapper'
 import FormSelect from './FormSelect'
-import FormRadio from './FormRadio'
+import FormMultiple from './FormMultiple'
 
 export type InputAttributesTypes = InputHTMLAttributes<HTMLInputElement> &
     TextareaHTMLAttributes<HTMLTextAreaElement> & {
@@ -40,7 +40,8 @@ const FormField: FC<FieldType> = (props): JSX.Element => {
 
     const formFieldTypes: FormikValues = {
         select: <FormSelect options={options} attributes={attributes} />,
-        radio: <FormRadio {...props} />,
+        radio: <FormMultiple {...props} />,
+        checkbox: <FormMultiple {...props} />,
         empty: null,
     }
 

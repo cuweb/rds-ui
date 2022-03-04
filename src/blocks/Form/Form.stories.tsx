@@ -232,6 +232,27 @@ export const KitchenSink = () => {
             ],
         },
         {
+            heading: {
+                label: 'Checkbox',
+                description: content.description,
+            },
+            attributes: {
+                id: 'field-checkbox',
+                type: 'checkbox',
+                name: 'checkbox',
+            },
+            options: [
+                {
+                    text: 'Red',
+                    value: 'red',
+                },
+                {
+                    text: 'Blue',
+                    value: 'blue',
+                },
+            ],
+        },
+        {
             attributes: {
                 type: 'submit',
                 name: 'Submit',
