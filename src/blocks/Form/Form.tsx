@@ -1,32 +1,21 @@
-import Ublock from '@components/Ublock/Ublock'
+import Ublock, { UblockProps } from '@components/Ublock/Ublock'
 import React, { FC } from 'react'
 import { Formik, Form as FormFormik, FormikValues } from 'formik'
 import FormField, { FieldType } from './components/FormField'
 
 export interface FormProps {
-    title?: string
-    description?: string
-    centered?: boolean
     fields: FieldType[]
     initialValues?: FormikValues
+    block?: UblockProps
 }
 
 const Form: FC<FormProps> = ({
-    title,
-    description,
-    centered,
     initialValues = {},
     fields,
+    block,
 }): JSX.Element => {
-    const titleClassName = centered ? 'c-heading--center' : ''
     return (
-        <Ublock>
-            {title && (
-                <header>
-                    <h2 className={`c-heading ${titleClassName}`}>{title}</h2>
-                    {description && <p>{description}</p>}
-                </header>
-            )}
+        <Ublock {...block}>
             <Formik
                 initialValues={initialValues}
                 onSubmit={(values, actions) => {

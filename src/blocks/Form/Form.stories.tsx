@@ -2,6 +2,7 @@ import React from 'react'
 import { Meta } from '@storybook/react'
 import Form from './Form'
 import { FieldType } from './components/FormField'
+import { UblockProps } from '@components/Ublock/Ublock'
 
 export default {
     component: Form,
@@ -9,6 +10,12 @@ export default {
 } as Meta
 
 export const KitchenSink = () => {
+    const blockProps: UblockProps = {
+        heading: {
+            title: 'Kitchen Sink Form',
+            content: 'All the form inputs<br /><br />',
+        },
+    }
     const content = {
         description: 'This example has the description above the input field',
         placeholder: 'This field has a placeholder',
@@ -17,7 +24,7 @@ export const KitchenSink = () => {
     const fields: FieldType[] = [
         {
             heading: {
-                label: 'Text',
+                label: 'Text Field',
                 description: content.description,
             },
             attributes: {
@@ -160,26 +167,6 @@ export const KitchenSink = () => {
         },
         {
             heading: {
-                label: 'Month',
-                description: content.description,
-            },
-            attributes: {
-                type: 'month',
-                name: 'month',
-            },
-        },
-        {
-            heading: {
-                label: 'Week',
-                description: content.description,
-            },
-            attributes: {
-                type: 'week',
-                name: 'week',
-            },
-        },
-        {
-            heading: {
                 label: 'Time',
                 description: content.description,
             },
@@ -294,6 +281,41 @@ export const KitchenSink = () => {
             ],
         },
         {
+            heading: {
+                label: 'Required field',
+                description: content.description,
+            },
+            attributes: {
+                type: 'text',
+                name: 'required-field',
+                required: true,
+            },
+        },
+        {
+            heading: {
+                label: 'Read only field',
+                description: content.description,
+            },
+            attributes: {
+                type: 'text',
+                name: 'read-only-fields',
+                value: 'This field is read only',
+                readOnly: true,
+            },
+        },
+        {
+            heading: {
+                label: 'Disabled field',
+                description: content.description,
+            },
+            attributes: {
+                type: 'text',
+                name: 'read-only-fields',
+                value: 'This field is disabled',
+                disabled: true,
+            },
+        },
+        {
             attributes: {
                 type: 'submit',
                 name: 'Submit',
@@ -301,11 +323,5 @@ export const KitchenSink = () => {
         },
     ]
 
-    return (
-        <Form
-            title='Kitchen Skink Form'
-            description='All the fields in one'
-            fields={fields}
-        />
-    )
+    return <Form fields={fields} block={blockProps} />
 }

@@ -3,6 +3,7 @@
 // @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement
 
 import React, { FC, InputHTMLAttributes, TextareaHTMLAttributes } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import { FormikValues, Field } from 'formik'
 import FormFieldWrapper, { FormFieldWrapperProps } from './FormFieldWrapper'
 import FormSelect from './FormSelect'
@@ -28,15 +29,18 @@ export type FieldType = {
 
 const FormField: FC<FieldType> = (props): JSX.Element => {
     const { attributes, heading, options } = props
+    const fieldId = attributes.id || uuidv4()
     const fieldTypes: FormikValues = {
         submit: 'button',
         empty: null,
     }
+
     const fieldWrapperProps: FormFieldWrapperProps = {
-        id: attributes.id,
+        id: fieldId,
         type: fieldTypes[attributes.type || 'empty'] || attributes.type,
         label: heading?.label,
         description: heading?.description,
+        required: attributes.required,
     }
 
     const formFieldTypes: FormikValues = {
@@ -50,7 +54,7 @@ const FormField: FC<FieldType> = (props): JSX.Element => {
     return (
         <FormFieldWrapper {...fieldWrapperProps}>
             {formFieldTypes[attributes.type || 'empty'] || (
-                <Field {...attributes} />
+                <Field id={fieldId} {...attributes} />
             )}
         </FormFieldWrapper>
     )
