@@ -4,7 +4,8 @@
 
 import React, { FC, InputHTMLAttributes, TextareaHTMLAttributes } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { FormikValues, Field } from 'formik'
+import { FormikValues, Field, ErrorMessage } from 'formik'
+import { validateEmail, validateUrl } from '@functions/validateFields'
 import FormFieldWrapper, { FormFieldWrapperProps } from './FormFieldWrapper'
 import FormSelect from './FormSelect'
 import FormMultiple from './FormMultiple'
@@ -20,6 +21,7 @@ export type FieldType = {
         label: string
         description: string
     }
+    validate?: unknown
     attributes: InputAttributesTypes
     options?: {
         text: string
@@ -28,7 +30,7 @@ export type FieldType = {
 } & FormikValues
 
 const FormField: FC<FieldType> = (props): JSX.Element => {
-    const { attributes, heading, options } = props
+    const { attributes, heading, options, validate } = props
     const fieldId = attributes.id || uuidv4()
     const fieldTypes: FormikValues = {
         submit: 'button',
@@ -48,13 +50,34 @@ const FormField: FC<FieldType> = (props): JSX.Element => {
         radio: <FormMultiple {...props} />,
         checkbox: <FormMultiple {...props} />,
         file: <FormFile {...props} />,
-        empty: null,
+        empty: undefined,
+    }
+
+    const validationTypes: FormikValues = {
+        email: (value: string) => validateEmail(value),
+        url: (value: string) => validateUrl(value),
+        none: null,
     }
 
     return (
         <FormFieldWrapper {...fieldWrapperProps}>
             {formFieldTypes[attributes.type || 'empty'] || (
-                <Field id={fieldId} {...attributes} />
+                <Field
+                    id={fieldId}
+                    validate={
+                        validate || validationTypes[attributes.type || 'none']
+                    }
+                    {...attributes}
+                />
+            )}
+            {attributes.name && (
+                <ErrorMessage name={attributes.name}>
+                    {(errorMessage) => (
+                        <div className='form__message form__warning'>
+                            {errorMessage}
+                        </div>
+                    )}
+                </ErrorMessage>
             )}
         </FormFieldWrapper>
     )

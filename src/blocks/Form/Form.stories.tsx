@@ -172,16 +172,6 @@ export const KitchenSink = () => {
         },
         {
             heading: {
-                label: 'Color',
-                description: content.description,
-            },
-            attributes: {
-                type: 'color',
-                name: 'color',
-            },
-        },
-        {
-            heading: {
                 label: 'Select Lists',
                 description: content.description,
             },
@@ -293,7 +283,7 @@ export const KitchenSink = () => {
             },
             attributes: {
                 type: 'text',
-                name: 'read-only-fields',
+                name: 'read-only-field',
                 value: 'This field is read only',
                 readOnly: true,
             },
@@ -305,7 +295,7 @@ export const KitchenSink = () => {
             },
             attributes: {
                 type: 'text',
-                name: 'read-only-fields',
+                name: 'disabled-field',
                 value: 'This field is disabled',
                 disabled: true,
             },
@@ -318,6 +308,11 @@ export const KitchenSink = () => {
             },
         },
     ]
-
-    return <Form fields={fields} block={blockProps} />
+    return (
+        <Form
+            fields={fields}
+            block={blockProps}
+            onSubmit={(values) => console.log(values)}
+        />
+    )
 }
