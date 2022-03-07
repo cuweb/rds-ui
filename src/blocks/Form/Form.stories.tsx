@@ -32,8 +32,6 @@ export const KitchenSink = () => {
                 type: 'text',
                 name: 'text',
                 placeholder: content.placeholder,
-                maxLength: 10,
-                minLength: 2,
             },
         },
         {
@@ -56,9 +54,6 @@ export const KitchenSink = () => {
             attributes: {
                 type: 'number',
                 name: 'number',
-                max: 10,
-                min: 0,
-                step: 2,
                 placeholder: '123567890',
             },
         },
@@ -318,7 +313,8 @@ export const KitchenSink = () => {
         {
             attributes: {
                 type: 'submit',
-                name: 'Submit',
+                name: 'submit',
+                value: 'Submit form',
             },
         },
     ]

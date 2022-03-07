@@ -9,19 +9,21 @@ export interface FormProps {
     block?: UblockProps
 }
 
-const Form: FC<FormProps> = ({
-    initialValues = {},
-    fields,
-    block,
-}): JSX.Element => {
+const Form: FC<FormProps> = ({ initialValues, fields, block }): JSX.Element => {
+    const initialFieldsValues = fields.reduce((acc, cur) => {
+        const { id, name = '', type = '', defaultValue } = cur.attributes
+        const denyList = ['select']
+        if (denyList.includes(type)) return { ...acc }
+        const fieldKey: string = name || id || ''
+        return { ...acc, [fieldKey]: defaultValue || '' }
+    }, {})
+
     return (
         <Ublock {...block}>
             <Formik
-                initialValues={initialValues}
-                onSubmit={(values, actions) => {
-                    console.log({ values, actions })
-                    alert(JSON.stringify(values, null, 2))
-                    actions.setSubmitting(false)
+                initialValues={initialValues || initialFieldsValues}
+                onSubmit={(values) => {
+                    console.log({ values })
                 }}
             >
                 <FormFormik className='b-form'>
