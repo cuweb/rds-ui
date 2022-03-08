@@ -155,9 +155,6 @@ export const KitchenSink = () => {
             attributes: {
                 type: 'date',
                 name: 'date',
-                min: '2022-06-01',
-                max: '2022-08-31',
-                step: '7',
             },
         },
         {
@@ -215,7 +212,7 @@ export const KitchenSink = () => {
                 },
                 {
                     text: 'Green',
-                    value: 'Green',
+                    value: 'green',
                 },
                 {
                     text: 'Yellow',
