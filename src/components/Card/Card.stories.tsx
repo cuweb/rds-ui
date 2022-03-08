@@ -1,15 +1,17 @@
 import Card from './Card'
 import data from './CardData.json'
 import getVariation from '../../functions/getVariation'
+import { Meta, Story } from '@storybook/react'
+import React from 'react';
 
 const { title, variations } = data
 
 export default {
     component: Card,
     title: `Components/${title}`,
-}
+}as Meta
 
-const Template: React.FC = (args: any) => <Card {...args} />
+const Template: Story = (args: any) => <Card {...args} />
 
 export const BaseCard = Template.bind({})
 const baseCard = getVariation('base', variations)
@@ -64,16 +66,6 @@ VideoVariant.args = {
     link: videoVariant.link,
     image: videoVariant.image,
     header: videoVariant.header,
-}
-
-export const PeopleVariant = Template.bind({})
-const peopleVariant = getVariation('peopleVariant', variations)
-PeopleVariant.args = {
-    type: peopleVariant.cardType,
-    link: peopleVariant.link,
-    image: peopleVariant.image,
-    header: peopleVariant.header,
-    description: peopleVariant.description,
 }
 
 export const FigureVariant = Template.bind({})
