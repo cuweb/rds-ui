@@ -1,3 +1,21 @@
+const testBaseUrl = () => {
+    it(`Visit base url`, () => {
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-form--kitchen-sink`
+        )
+    })
+}
+const testFormContainers = () => {
+    it(`Should render U-Block`, () => {
+        cy.get(`.u-block`).should('exist')
+    })
+    it(`Should render Form container`, () => {
+        cy.get(`form.b-form`).should('exist')
+    })
+    it(`Should render Form Fields`, () => {
+        cy.get(`.form__field`).should('exist')
+    })
+}
 const testContent = (type: string) => {
     const fieldName = `.form__field--${type}`
     it(`Should render Label`, () => {
@@ -64,21 +82,8 @@ describe('Form - Kitchen Sink', () => {
     beforeEach(() => {
         cy.global()
     })
-
-    it(`Should render U-Block`, () => {
-        cy.visit(
-            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-form--kitchen-sink`
-        )
-        cy.get(`.u-block`).should('exist')
-    })
-
-    it(`Should render Form container`, () => {
-        cy.get(`form.b-form`).should('exist')
-    })
-
-    it(`Should render Form Fields`, () => {
-        cy.get(`.form__field`).should('exist')
-    })
+    testBaseUrl()
+    testFormContainers()
 })
 
 describe('Form - Text Field', () => {
