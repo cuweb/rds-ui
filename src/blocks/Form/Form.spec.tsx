@@ -44,8 +44,19 @@ const testRange = (name: string, range?: number) => {
 }
 
 const testSelect = (name: string, option: string | string[]) => {
-    it(`Should accept range`, () => {
+    it(`Should select option`, () => {
         cy.get(`[name="${name}"]`).select(option)
+    })
+}
+
+const testCheck = (name: string, option: string | string[]) => {
+    it(`Should choose option`, () => {
+        cy.get(`[name="${name}"]`).check(option)
+    })
+}
+const testAttribute = (name: string, attribute: string) => {
+    it(`Should have the ${attribute} attribute`, () => {
+        cy.get(`[name="${name}"]`).should('have.attr', attribute)
     })
 }
 
@@ -177,4 +188,34 @@ describe('Form - Multi Select Field', () => {
     testSelect(fieldName, 'Red')
     testSelect(fieldName, 'Blue')
     testSelect(fieldName, ['Red', 'Blue', 'Yellow'])
+})
+
+describe('Form - Radio Field', () => {
+    const fieldName = 'radio'
+    testContent(fieldName)
+    testCheck(fieldName, 'red')
+    testCheck(fieldName, 'blue')
+})
+
+describe('Form - Checkbox Field', () => {
+    const fieldName = 'checkbox'
+    testContent(fieldName)
+    testCheck(fieldName, 'red')
+    testCheck(fieldName, 'blue')
+})
+
+describe('Form - Required Field', () => {
+    const fieldName = 'required-field'
+    testAttribute(fieldName, 'required')
+    testTyping(fieldName, 'required')
+})
+
+describe('Form - Read Only Field', () => {
+    const fieldName = 'read-only-field'
+    testAttribute(fieldName, 'readonly')
+})
+
+describe('Form - Disabled Field', () => {
+    const fieldName = 'disabled-field'
+    testAttribute(fieldName, 'disabled')
 })
