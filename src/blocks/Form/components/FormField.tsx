@@ -5,7 +5,11 @@
 import React, { FC, InputHTMLAttributes, TextareaHTMLAttributes } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { FormikValues, Field, ErrorMessage } from 'formik'
-import { validateEmail, validateUrl } from '@functions/validateFields'
+import {
+    validateEmail,
+    validateTel,
+    validateUrl,
+} from '@functions/validateFields'
 import FormFieldWrapper, { FormFieldWrapperProps } from './FormFieldWrapper'
 import FormSelect from './FormSelect'
 import FormMultiple from './FormMultiple'
@@ -56,6 +60,7 @@ const FormField: FC<FieldType> = (props): JSX.Element => {
     const validationTypes: FormikValues = {
         email: (value: string) => validateEmail(value),
         url: (value: string) => validateUrl(value),
+        tel: (value: string) => validateTel(value),
         none: null,
     }
 

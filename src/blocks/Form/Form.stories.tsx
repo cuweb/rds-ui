@@ -98,7 +98,7 @@ export const KitchenSink = () => {
             attributes: {
                 type: 'tel',
                 name: 'tel',
-                placeholder: '9999999999',
+                placeholder: '+9(999)999.9999',
             },
         },
         {
