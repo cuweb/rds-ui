@@ -53,6 +53,16 @@ const testTyping = (type: string, text?: string) => {
     })
 }
 
+const testErrorMessage = (name: string, error: string) => {
+    it(`Should render error when type a invalid ${name}`, () => {
+        cy.get('.form__message.form__warning').should('not.exist')
+        cy.get(`[name="${name}"]`).type('!@_.../osososo')
+        cy.get('body').click()
+        cy.get('.form__message.form__warning').should('exist').contains(error)
+        cy.get(`[name="${name}"]`).clear()
+    })
+}
+
 const testRange = (name: string, range?: number) => {
     it(`Should accept range`, () => {
         cy.get(`[name="${name}"]`)
@@ -115,6 +125,7 @@ describe('Form - Email Field', () => {
     testContent(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
+    testErrorMessage(fieldType, 'Invalid email address')
     testTyping(fieldType, 'email@email.com')
 })
 
@@ -123,6 +134,7 @@ describe('Form - Url Field', () => {
     testContent(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
+    testErrorMessage(fieldType, 'Invalid url address')
     testTyping(fieldType, 'https://carleton.ca')
 })
 
@@ -139,6 +151,7 @@ describe('Form - Phone Field', () => {
     testContent(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
+    testErrorMessage(fieldType, 'Invalid phone number')
     testTyping(fieldType, '+9(999) 999-9999')
 })
 
