@@ -88,6 +88,12 @@ const testAttribute = (name: string, attribute: string) => {
     })
 }
 
+const testFile = () => {
+    it(`Should accept files`, () => {
+        cy.get('input[type=file]').selectFile('cypress/fixtures/raven.jpeg')
+    })
+}
+
 describe('Form - Kitchen Sink', () => {
     beforeEach(() => {
         cy.global()
@@ -157,10 +163,7 @@ describe('Form - Phone Field', () => {
 
 describe('Form - File Field', () => {
     testContent('file')
-    // TODO: https://stackoverflow.com/questions/47074225/how-to-test-file-inputs-with-cypress
-    // it(`Should accept type`, () => {
-    //     cy.get(`input[name="tel"]`).type('+9(999) 999-9999')
-    // })
+    testFile()
 })
 
 describe('Form - Textarea Field', () => {
