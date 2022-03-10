@@ -1,3 +1,4 @@
+import data from './FormData.json'
 const testBaseUrl = () => {
     it(`Visit base url`, () => {
         cy.visit(
@@ -16,7 +17,7 @@ const testFormContainers = () => {
         cy.get(`.form__field`).should('exist')
     })
 }
-const testContent = (type: string) => {
+const testHeaderInfo = (type: string) => {
     const fieldName = `.form__field--${type}`
     it(`Should render Label`, () => {
         cy.get(`${fieldName} label`).should('exist').should('not.be.empty')
@@ -94,6 +95,22 @@ const testFile = () => {
     })
 }
 
+const testSubmit = () => {
+    it(`Should submit the right values`, () => {
+        cy.get('[name="submit"]').click()
+        // TODO: Get the real values from the form
+        const formValues = `{"text":"text","password":"password","number":1234567890,"email":"email@email.com","url":"https://carleton.ca","search":"search","tel":"+9(999) 999-9999","file":"C:\\\\fakepath\\\\raven.jpeg","textarea":"textarea","range":"","datetime-local":"2017-06-01T08:30","date":"2017-06-01","time":"08:30","radio":"blue","checkbox":["red","blue"],"required-field":"required","read-only-field":"This field is read only","disabled-field":"This field is disabled","submit":"Submit form","select":"blue","select-multiple":["red","blue","yellow"]}`
+        cy.on('window:alert', (txt) => {
+            expect(txt.toString().trim()).to.contain(
+                formValues.toString().trim()
+            )
+        })
+    })
+}
+
+// Tests
+// =========================================
+
 describe('Form - Kitchen Sink', () => {
     beforeEach(() => {
         cy.global()
@@ -104,7 +121,7 @@ describe('Form - Kitchen Sink', () => {
 
 describe('Form - Text Field', () => {
     const fieldType = 'text'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
     testTyping(fieldType)
@@ -112,7 +129,7 @@ describe('Form - Text Field', () => {
 
 describe('Form - Password Field', () => {
     const fieldType = 'password'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
     testTyping(fieldType)
@@ -120,7 +137,7 @@ describe('Form - Password Field', () => {
 
 describe('Form - Number Field', () => {
     const fieldType = 'number'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
     testTyping(fieldType, '1234567890')
@@ -128,7 +145,7 @@ describe('Form - Number Field', () => {
 
 describe('Form - Email Field', () => {
     const fieldType = 'email'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
     testErrorMessage(fieldType, 'Invalid email address')
@@ -137,7 +154,7 @@ describe('Form - Email Field', () => {
 
 describe('Form - Url Field', () => {
     const fieldType = 'url'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
     testErrorMessage(fieldType, 'Invalid url address')
@@ -146,7 +163,7 @@ describe('Form - Url Field', () => {
 
 describe('Form - Search Field', () => {
     const fieldType = 'search'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
     testTyping(fieldType)
@@ -154,7 +171,7 @@ describe('Form - Search Field', () => {
 
 describe('Form - Phone Field', () => {
     const fieldType = 'tel'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testInput(fieldType)
     testPlaceholder(fieldType)
     testErrorMessage(fieldType, 'Invalid phone number')
@@ -162,44 +179,44 @@ describe('Form - Phone Field', () => {
 })
 
 describe('Form - File Field', () => {
-    testContent('file')
+    testHeaderInfo('file')
     testFile()
 })
 
 describe('Form - Textarea Field', () => {
     const fieldType = 'textarea'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testPlaceholder(fieldType)
     testTyping(fieldType)
 })
 
 describe('Form - Slider Field', () => {
     const fieldType = 'range'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testRange(fieldType, 1200)
 })
 
 describe('Form - Date/Time Field', () => {
     const fieldType = 'datetime-local'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testTyping(fieldType, '2017-06-01T08:30')
 })
 
 describe('Form - Date Field', () => {
     const fieldType = 'date'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testTyping(fieldType, '2017-06-01')
 })
 
 describe('Form - Time Field', () => {
     const fieldType = 'time'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testTyping(fieldType, '08:30')
 })
 
 describe('Form - Select Field', () => {
     const fieldType = 'select'
-    testContent(fieldType)
+    testHeaderInfo(fieldType)
     testSelect(fieldType, 'red')
     testSelect(fieldType, 'blue')
 })
@@ -213,14 +230,14 @@ describe('Form - Multi Select Field', () => {
 
 describe('Form - Radio Field', () => {
     const fieldName = 'radio'
-    testContent(fieldName)
+    testHeaderInfo(fieldName)
     testCheck(fieldName, 'red')
     testCheck(fieldName, 'blue')
 })
 
 describe('Form - Checkbox Field', () => {
     const fieldName = 'checkbox'
-    testContent(fieldName)
+    testHeaderInfo(fieldName)
     testCheck(fieldName, 'red')
     testCheck(fieldName, 'blue')
 })
@@ -239,4 +256,8 @@ describe('Form - Read Only Field', () => {
 describe('Form - Disabled Field', () => {
     const fieldName = 'disabled-field'
     testAttribute(fieldName, 'disabled')
+})
+
+describe('Form - Submit', () => {
+    testSubmit()
 })
