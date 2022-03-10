@@ -1,4 +1,3 @@
-import data from './FormData.json'
 const testBaseUrl = () => {
     it(`Visit base url`, () => {
         cy.visit(
