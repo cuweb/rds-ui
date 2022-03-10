@@ -1,6 +1,6 @@
+import Icon from './Icon'
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import Icon from './Icon'
 
 export default {
     component: Icon,
@@ -215,6 +215,9 @@ FileSymlinkDirectory.args = { icon: 'file-symlink-directory' }
 
 export const FileSymlinkFile = Template.bind({})
 FileSymlinkFile.args = { icon: 'file-symlink-file' }
+
+export const FileUpload = Template.bind({})
+FileUpload.args = { icon: 'file-upload' }
 
 export const FileWord = Template.bind({})
 FileWord.args = { icon: 'file-word' }

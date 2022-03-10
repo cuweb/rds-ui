@@ -1,9 +1,12 @@
 import React from 'react'
 
-interface UblockProps {
+export interface UblockProps {
     id?: string
-    children: React.ReactNode
-    heading?: string
+    heading?: {
+        title: string
+        centered?: boolean
+        content?: string
+    }
     color?: 'grey' | 'white' | 'black'
     full?: boolean
     large?: boolean
@@ -25,6 +28,9 @@ const Ublock: React.FC<UblockProps> = ({
     const wavesClassname = waves ? `u-block--waves u-block--border-top` : ''
     const largeClassname = large ? `u-block--l` : ''
     const alertClassname = alert ? `u-block--alert` : ''
+    const headingCenteredClassname = heading?.centered
+        ? `c-heading--center`
+        : ''
 
     return (
         <div
@@ -32,11 +38,21 @@ const Ublock: React.FC<UblockProps> = ({
             className={`u-block u-block--${color} ${wavesClassname} ${width} ${largeClassname} ${alertClassname}`}
         >
             {heading && (
-                <h2
-                    className='c-heading'
-                    dangerouslySetInnerHTML={{ __html: heading }}
-                />
+                <header>
+                    <h2
+                        className={`c-heading ${headingCenteredClassname}`}
+                        dangerouslySetInnerHTML={{ __html: heading.title }}
+                    />
+                    {heading.content && (
+                        <p
+                            dangerouslySetInnerHTML={{
+                                __html: heading.content,
+                            }}
+                        />
+                    )}
+                </header>
             )}
+
             {children}
         </div>
     )
