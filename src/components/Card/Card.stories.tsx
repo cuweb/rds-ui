@@ -2,14 +2,14 @@ import Card from './Card'
 import data from './CardData.json'
 import getVariation from '../../functions/getVariation'
 import { Meta, Story } from '@storybook/react'
-import React from 'react';
+import React from 'react'
 
 const { title, variations } = data
 
 export default {
     component: Card,
     title: `Components/${title}`,
-}as Meta
+} as Meta
 
 const Template: Story = (args: any) => <Card {...args} />
 
