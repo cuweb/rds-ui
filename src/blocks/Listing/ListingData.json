@@ -1,0 +1,200 @@
+{
+    "title": "Listing",
+    "classname": ".listing",
+    "variations": [
+        {
+            "type": "base",
+            "listType": "base",
+            "header": "Base example",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven" 
+                }
+            ]
+        },
+        {
+            "type": "withSubtitles",
+            "listType": "base",
+            "header": "Listing block with subtitles",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven",
+                    "description": "Corvus albicollis"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven",
+                    "description": "Corvus corax"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven",
+                    "description": "Corvus crassirostris"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven",
+                    "description": "Corvus cryptoleucus"
+                }
+            ]
+        },
+        {
+            "type": "withImage",
+            "listType": "base",
+            "header": "Listing block with image",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven",
+                    "description": "Corvus albicollis",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven",
+                    "description": "Corvus corax",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven",
+                    "description": "Corvus crassirostris",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven",
+                    "description": "Corvus cryptoleucus",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
+                        "alt": ""
+                    }
+                }
+            ]
+        },
+        {
+            "type": "withBadge",
+            "listType": "base",
+            "header": "Listing block with badge",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven",
+                    "description": "Corvus albicollis",
+                    "badge": "3"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven",
+                    "description": "Corvus corax",
+                    "badge": "5"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven",
+                    "description": "Corvus crassirostris",
+                    "badge": "v1.0"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven",
+                    "description": "Corvus cryptoleucus",
+                    "badge": "New"
+                }
+            ]
+        },
+        {
+            "type": "withIcon",
+            "listType": "base",
+            "header": "Listing block with icon",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven",
+                    "icon": "M64.46 128c36.62-33.212 53.897-76.17 54.456-119.942C102.432 10.738 83.56 8.213 64.46 0 45.354 8.213 26.483 10.74 10 8.058 10.558 51.83 27.836 94.788 64.46 128zM30.042 36.78c0-2.466.856-4.732 2.282-6.528l7.156 2.96-4.773.885a6.395 6.395 0 0 0-.592 2.684 6.48 6.48 0 0 0 6.486 6.475 6.455 6.455 0 0 0 4.443-1.767l3.974 1.643a10.535 10.535 0 0 1-8.414 4.19c-5.83 0-10.562-4.718-10.562-10.54zm8.518 25.1c11.917-5.08 21.163-12.825 25.9-22.21v41.12c4.776-8.373 14.19-15.25 25.898-18.91-13.84 5.847-24.946 25.76-25.898 45.253-.955-19.492-12.06-39.406-25.9-45.254z"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven",
+                    "icon": "M64.46 128c36.62-33.212 53.897-76.17 54.456-119.942C102.432 10.738 83.56 8.213 64.46 0 45.354 8.213 26.483 10.74 10 8.058 10.558 51.83 27.836 94.788 64.46 128zM30.042 36.78c0-2.466.856-4.732 2.282-6.528l7.156 2.96-4.773.885a6.395 6.395 0 0 0-.592 2.684 6.48 6.48 0 0 0 6.486 6.475 6.455 6.455 0 0 0 4.443-1.767l3.974 1.643a10.535 10.535 0 0 1-8.414 4.19c-5.83 0-10.562-4.718-10.562-10.54zm8.518 25.1c11.917-5.08 21.163-12.825 25.9-22.21v41.12c4.776-8.373 14.19-15.25 25.898-18.91-13.84 5.847-24.946 25.76-25.898 45.253-.955-19.492-12.06-39.406-25.9-45.254z"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven",
+                    "icon": "M64.46 128c36.62-33.212 53.897-76.17 54.456-119.942C102.432 10.738 83.56 8.213 64.46 0 45.354 8.213 26.483 10.74 10 8.058 10.558 51.83 27.836 94.788 64.46 128zM30.042 36.78c0-2.466.856-4.732 2.282-6.528l7.156 2.96-4.773.885a6.395 6.395 0 0 0-.592 2.684 6.48 6.48 0 0 0 6.486 6.475 6.455 6.455 0 0 0 4.443-1.767l3.974 1.643a10.535 10.535 0 0 1-8.414 4.19c-5.83 0-10.562-4.718-10.562-10.54zm8.518 25.1c11.917-5.08 21.163-12.825 25.9-22.21v41.12c4.776-8.373 14.19-15.25 25.898-18.91-13.84 5.847-24.946 25.76-25.898 45.253-.955-19.492-12.06-39.406-25.9-45.254z"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven",
+                    "icon": "M64.46 128c36.62-33.212 53.897-76.17 54.456-119.942C102.432 10.738 83.56 8.213 64.46 0 45.354 8.213 26.483 10.74 10 8.058 10.558 51.83 27.836 94.788 64.46 128zM30.042 36.78c0-2.466.856-4.732 2.282-6.528l7.156 2.96-4.773.885a6.395 6.395 0 0 0-.592 2.684 6.48 6.48 0 0 0 6.486 6.475 6.455 6.455 0 0 0 4.443-1.767l3.974 1.643a10.535 10.535 0 0 1-8.414 4.19c-5.83 0-10.562-4.718-10.562-10.54zm8.518 25.1c11.917-5.08 21.163-12.825 25.9-22.21v41.12c4.776-8.373 14.19-15.25 25.898-18.91-13.84 5.847-24.946 25.76-25.898 45.253-.955-19.492-12.06-39.406-25.9-45.254z"
+                }
+            ]
+        },
+        {
+            "type": "iconsAndSubtitles",
+            "listType": "base",
+            "header": "Listing block with icons and subtitles",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "#filepath",
+                    "title": "Ravens Annual Report (PDF)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "pdf"
+                },
+                {
+                    "src": "#filepath",
+                    "title": "Yay, Another Spreadsheet (XLS)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "xls"
+                },
+                {
+                    "src": "#filepath",
+                    "title": "Project Charter (DOC)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "doc"
+                },
+                {
+                    "src": "#filepath",
+                    "title": "Watch me read bullets (PPT)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "ppt"
+                },
+                {
+                    "src": "#filepath",
+                    "title": "Zip it, Dr. Evil (ZIP)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "zip"
+                }
+            ]
+        }
+    ]
+}
