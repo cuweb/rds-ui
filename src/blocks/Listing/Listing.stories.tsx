@@ -66,3 +66,59 @@ IconAndSubtitle.args = {
     noborder: iconAndSubtitle.noborder,
     data: iconAndSubtitle.data,
 }
+
+export const EventVariant = Template.bind({})
+const eventVariant = getVariation('event', variations)
+EventVariant.args = {
+    type: eventVariant.listType,
+    header: eventVariant.header,
+    noborder: eventVariant.noborder,
+    data: eventVariant.data,
+}
+
+export const NewsVariant = Template.bind({})
+const newsVariant = getVariation('news', variations)
+NewsVariant.args = {
+    type: newsVariant.listType,
+    header: newsVariant.header,
+    noborder: newsVariant.noborder,
+    data: newsVariant.data,
+}
+
+export const NewsImageVariant = Template.bind({})
+const newsImageVariant = getVariation('newsImage', variations)
+NewsImageVariant.args = {
+    type: newsImageVariant.listType,
+    header: newsImageVariant.header,
+    noborder: newsImageVariant.noborder,
+    data: newsImageVariant.data,
+}
+
+export const PeopleVariant = Template.bind({})
+const peopleVariant = getVariation('people', variations)
+PeopleVariant.args = {
+    type: peopleVariant.listType,
+    header: peopleVariant.header,
+    noborder: peopleVariant.noborder,
+    data: peopleVariant.data,
+}
+
+export const VideoVariant = Template.bind({})
+const videoVariant = getVariation('video', variations)
+VideoVariant.args = {
+    type: videoVariant.listType,
+    header: videoVariant.header,
+    noborder: videoVariant.noborder,
+    data: videoVariant.data,
+}
+
+export const TwoColumn = Template.bind({})
+const twoColumn = getVariation('twoColumn', variations)
+TwoColumn.args = {
+    type: twoColumn.listType,
+    header: twoColumn.header,
+    noborder: twoColumn.noborder,
+    data: twoColumn.data,
+    columndata: twoColumn.columndata,
+    
+}
