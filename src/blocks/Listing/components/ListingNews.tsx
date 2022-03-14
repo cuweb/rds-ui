@@ -1,7 +1,7 @@
 import React from 'react'
 import Ublock from '../../../components/Ublock/Ublock'
 import Heading from '../../../components/Heading/Heading'
-import convertDate from '../../../functions/convertDate'
+import convertDate from '../../../functions/convertDate.js'
 
 export interface ListingNewsProps {
     header: string

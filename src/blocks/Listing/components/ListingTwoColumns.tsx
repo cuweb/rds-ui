@@ -1,4 +1,3 @@
-import { map } from 'cypress/types/lodash'
 import React from 'react'
 import Ublock from '../../../components/Ublock/Ublock'
 
