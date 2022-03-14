@@ -29,30 +29,31 @@ const ListingNews: React.FC<ListingNewsProps> = ({
     data,
 }): JSX.Element => {
     return (
-        <Ublock>
-        <Heading header={header} noborder={noborder} />
-            <div className="b-listing b-listing--news">
-                <ul itemScope itemType="http://schema.org/ItemList">
-                    {data.map((list, index) => (
-                        <li itemProp="item" key={index}>
-                            <a href={list.src} itemProp="url">
-                                {list.image && (
-                                    <figure>
-                                        <img src={list.image.src} alt={list.image.alt} itemProp="image" />
-                                    </figure>
-                                )}
-                                <header itemScope itemType="http://schema.org/NewsArticle">
-                                    <time dateTime={list.datetime} itemProp="datePublished" >{convertDate(list.datetime)}</time>
-                                    <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: list.title }} />
-                                    {list.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: list.description }} />}
-                                </header>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-    </Ublock>
-
+            <Ublock>
+                <header>
+                    <Heading header={header} noborder={noborder} />
+                </header>
+                <div className="b-listing b-listing--news">
+                    <ul itemScope itemType="http://schema.org/ItemList">
+                        {data.map((list, index) => (
+                            <li itemProp="item" key={index}>
+                                <a href={list.src} itemProp="url">
+                                    {list.image && (
+                                        <figure>
+                                            <img src={list.image.src} alt={list.image.alt} itemProp="image" />
+                                        </figure>
+                                    )}
+                                    <header itemScope itemType="http://schema.org/NewsArticle">
+                                        <time dateTime={list.datetime} itemProp="datePublished" >{convertDate(list.datetime)}</time>
+                                        <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: list.title }} />
+                                        {list.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: list.description }} />}
+                                    </header>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+        </Ublock>
     )
 }
 

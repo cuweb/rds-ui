@@ -31,9 +31,10 @@ const ListingBase: React.FC<ListingBaseProps> = ({
     const isIcon = data[0].icon ? 'b-listing--icon' : '';
     const isFileIcon = data[0].fileIcon ? 'b-listing--icon' : '';
     return (
-        
         <Ublock>
-        <Heading header={header} noborder={noborder} />
+            <header>
+                <Heading header={header} noborder={noborder} />
+            </header>
             <div className={`b-listing ${isIcon} ${isFileIcon}`}>
                 <ul itemScope itemType="http://schema.org/ItemList">
                     {data.map((list, index) => (

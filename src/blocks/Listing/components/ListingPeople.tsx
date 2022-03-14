@@ -28,29 +28,30 @@ const ListingPeople: React.FC<ListingPeopleProps> = ({
     data,
 }): JSX.Element => {
     return (
-        <Ublock>
-        <Heading header={header} noborder={noborder} />
-            <div className="b-listing b-listing--people">
-                <ul itemScope itemType="http://schema.org/Person">
-                    {data.map((list, index) => (
-                        <li itemProp="item" key={index}>
-                            <a href={list.src} itemProp="url">
-                                {list.image && (
-                                    <figure>
-                                        <img src={list.image.src} alt={list.image.alt} itemProp="image" />
-                                    </figure>
-                                )}
-                                <div>
-                                    <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: list.title }} />
-                                    {list.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: list.description }} />}
-                                </div>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-    </Ublock>
-
+            <Ublock>
+                <header>
+                    <Heading header={header} noborder={noborder} />
+                </header>
+                <div className="b-listing b-listing--people">
+                    <ul itemScope itemType="http://schema.org/Person">
+                        {data.map((list, index) => (
+                            <li itemProp="item" key={index}>
+                                <a href={list.src} itemProp="url">
+                                    {list.image && (
+                                        <figure>
+                                            <img src={list.image.src} alt={list.image.alt} itemProp="image" />
+                                        </figure>
+                                    )}
+                                    <div>
+                                        <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: list.title }} />
+                                        {list.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: list.description }} />}
+                                    </div>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+        </Ublock>
     )
 }
 

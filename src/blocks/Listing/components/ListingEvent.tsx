@@ -34,7 +34,9 @@ const ListingEvent: React.FC<ListingEventProps> = ({
 }): JSX.Element => {
     return (
         <Ublock>
-        <Heading header={header} noborder={noborder} />
+            <header>
+                <Heading header={header} noborder={noborder} />
+            </header>
             <div className="b-listing b-listing--event">
                 <ul itemScope itemType="http://schema.org/Event">
                     {data.map((list, index) => (

@@ -71,7 +71,6 @@ const ListingTwoColumns: React.FC<ListingVideoProps> = ({
                 </section>
             </div>
         </Ublock>
-
     )
 }
 
