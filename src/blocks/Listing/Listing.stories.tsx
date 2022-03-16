@@ -66,6 +66,7 @@ IconAndSubtitle.args = {
     header: iconAndSubtitle.header,
     noborder: iconAndSubtitle.noborder,
     data: iconAndSubtitle.data,
+    hasIcon: iconAndSubtitle.hasIcon,
 }
 
 export const EventVariant = Template.bind({})

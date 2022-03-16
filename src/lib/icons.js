@@ -1260,28 +1260,24 @@ const icons = [
         path: `<g fill="none" fill-rule="evenodd"><g fill-rule="nonzero"><path d="M4 23V1h10.84L20 6.473V23z" fill="#fff"/><g fill="#bf112b"><path d="M14.62 1.611l4.809 5.142v15.636H4.57V1.61zM14.858 1H4v22h16V6.5z"/><path d="M14 7V1h.195L20 6.805V7z" fill-opacity=".215"/><path d="M14.6 1.848L19.152 6.4H14.6zm0-.848H14v6h6v-.6z"/></g></g><path d="M16 15.34c0-1.98-8-.117-8 2.263 0 .192.135.397.353.397 1.675 0 4.779-11 3.26-11s.859 9.023 3.66 9.023c.408 0 .727-.167.727-.683z" stroke="#bf112b" stroke-width=".5"/></g>`,
         tags: ['pdf'],
     },
-
     {
         title: 'xls',
         type: 'xls',
         path: `<g fill="none"><path d="M4 23V1h10.84L20 6.473V23z" fill="#fff"/><path d="M14.62 1.611l4.809 5.142v15.636H4.57V1.61zM14.858 1H4v22h16V6.5z" fill="#388e3c"/><path d="M14 7V1h.195L20 6.805V7z" fill="#e8f5e9"/><path d="M14.6 1.848L19.152 6.4H14.6zm0-.848H14v6h6v-.6zM11.497 11.327L12.78 9h2.16l-2.193 3.471L15 16h-2.183l-1.32-2.37-1.32 2.37H8l2.247-3.529L8.06 9h2.156z" fill="#388e3c"/></g>`,
         tags: ['xls'],
     },
-
     {
         title: 'doc',
         type: 'doc',
         path: `<g fill="none"><path d="M4 23V1h10.84L20 6.473V23z" fill="#fff"/><path d="M14.62 1.611l4.809 5.142v15.636H4.57V1.61zM14.858 1H4v22h16V6.5z" fill="#1976d2"/><path d="M14 7V1h.195L20 6.805V7z" fill="#e3f2fd"/><path d="M14.6 1.848L19.152 6.4H14.6zm0-.848H14v6h6v-.6zM13.324 13.39L14.19 9H16l-1.606 7h-1.891l-1.013-3.99-.993 3.99H8.611L7 9h1.813l.868 4.39L10.721 9h1.548z" fill="#1976d2"/></g>`,
         tags: ['doc'],
     },
-
     {
         title: 'ppt',
         type: 'ppt',
         path: `<g fill="none" fill-rule="evenodd"><g fill-rule="nonzero"><path d="M4 23V1h10.84L20 6.473V23z" fill="#fff"/><path d="M14.62 1.611l4.809 5.142v15.636H4.57V1.61zM14.858 1H4v22h16V6.5z" fill="#ff6d00"/><path d="M14 7V1h.195L20 6.805V7z" fill="#fff3e0"/><path d="M14.6 1.848L19.152 6.4H14.6zm0-.848H14v6h6v-.6z" fill="#ff6d00"/></g><path d="M10 12.5v-3" stroke="#ff6d00" stroke-linecap="square"/><path d="M11.656 9H9v7h1.65v-2.412h.854c.91 0 1.637-.217 2.18-.651.544-.435.817-1.004.816-1.706C14.5 9.744 13.552 9 11.656 9zm-.622 3.45H10V10.2h1.034c1.31 0 1.966.371 1.966 1.113 0 .759-.655 1.137-1.966 1.137z" fill="#ff6d00" fill-rule="nonzero"/></g>`,
         tags: ['ppt'],
     },
-
     {
         title: 'zip',
         type: 'zip',
