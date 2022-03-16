@@ -20,36 +20,51 @@ export interface ImageProps {
     alt: string
 }
 
-
 const ListingPeople: React.FC<ListingPeopleProps> = ({
     header,
     noborder,
     data,
 }): JSX.Element => {
     return (
-            <Ublock>
-                <header>
-                    <Heading header={header} noborder={noborder} />
-                </header>
-                <div className="b-listing b-listing--people">
-                    <ul itemScope itemType="http://schema.org/Person">
-                        {data.map((item, index) => (
-                            <li itemProp="item" key={index}>
-                                <a href={item.src} itemProp="url">
-                                    {item.image && (
-                                        <figure>
-                                            <img src={item.image.src} alt={item.image.alt} itemProp="image" />
-                                        </figure>
+        <Ublock>
+            <header>
+                <Heading header={header} noborder={noborder} />
+            </header>
+            <div className='b-listing b-listing--people'>
+                <ul itemScope itemType='http://schema.org/Person'>
+                    {data.map((item, index) => (
+                        <li itemProp='item' key={index}>
+                            <a href={item.src} itemProp='url'>
+                                {item.image && (
+                                    <figure>
+                                        <img
+                                            src={item.image.src}
+                                            alt={item.image.alt}
+                                            itemProp='image'
+                                        />
+                                    </figure>
+                                )}
+                                <div>
+                                    <h3
+                                        itemProp='headline'
+                                        dangerouslySetInnerHTML={{
+                                            __html: item.title,
+                                        }}
+                                    />
+                                    {item.description && (
+                                        <p
+                                            itemProp='description'
+                                            dangerouslySetInnerHTML={{
+                                                __html: item.description,
+                                            }}
+                                        />
                                     )}
-                                    <div>
-                                        <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: item.title }} />
-                                        {item.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: item.description }} />}
-                                    </div>
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                                </div>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </Ublock>
     )
 }

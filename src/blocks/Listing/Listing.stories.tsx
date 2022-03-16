@@ -1,15 +1,15 @@
-import React from 'react';
-import Listing from './Listing';
-import data from './ListingData.json';
-import getVariation from '../../functions/getVariation';
-import { Meta, Story } from '@storybook/react';
+import React from 'react'
+import Listing from './Listing'
+import data from './ListingData.json'
+import getVariation from '../../functions/getVariation'
+import { Meta, Story } from '@storybook/react'
 
 const { title, variations } = data
 
 export default {
     component: Listing,
     title: `Blocks/${title}`,
-}as Meta
+} as Meta
 
 const Template: Story = (args: any) => <Listing {...args} />
 
@@ -121,5 +121,4 @@ TwoColumn.args = {
     noborder: twoColumn.noborder,
     data: twoColumn.data,
     columndata: twoColumn.columndata,
-    
 }

@@ -33,14 +33,13 @@ export interface ColumnProp {
     title: string
 }
 
-
 export interface TypeProps {
     [index: string]: ReactElement
 }
 
 const Listing: React.FC<ListingProps> = (props): JSX.Element => {
     const { type } = props
-    
+
     const cardTypes: TypeProps = {
         base: <ListingBase {...props} />,
         icon: <ListingBase hasIcon {...props} />,

@@ -22,37 +22,60 @@ export interface ImageProps {
     alt: string
 }
 
-
 const ListingNews: React.FC<ListingNewsProps> = ({
     header,
     noborder,
     data,
 }): JSX.Element => {
     return (
-            <Ublock>
-                <header>
-                    <Heading header={header} noborder={noborder} />
-                </header>
-                <div className="b-listing b-listing--news">
-                    <ul itemScope itemType="http://schema.org/ItemList">
-                        {data.map((item, index) => (
-                            <li itemProp="item" key={index}>
-                                <a href={item.src} itemProp="url">
-                                    {item.image && (
-                                        <figure>
-                                            <img src={item.image.src} alt={item.image.alt} itemProp="image" />
-                                        </figure>
+        <Ublock>
+            <header>
+                <Heading header={header} noborder={noborder} />
+            </header>
+            <div className='b-listing b-listing--news'>
+                <ul itemScope itemType='http://schema.org/ItemList'>
+                    {data.map((item, index) => (
+                        <li itemProp='item' key={index}>
+                            <a href={item.src} itemProp='url'>
+                                {item.image && (
+                                    <figure>
+                                        <img
+                                            src={item.image.src}
+                                            alt={item.image.alt}
+                                            itemProp='image'
+                                        />
+                                    </figure>
+                                )}
+                                <header
+                                    itemScope
+                                    itemType='http://schema.org/NewsArticle'
+                                >
+                                    <time
+                                        dateTime={item.datetime}
+                                        itemProp='datePublished'
+                                    >
+                                        {convertDate(item.datetime)}
+                                    </time>
+                                    <h3
+                                        itemProp='headline'
+                                        dangerouslySetInnerHTML={{
+                                            __html: item.title,
+                                        }}
+                                    />
+                                    {item.description && (
+                                        <p
+                                            itemProp='description'
+                                            dangerouslySetInnerHTML={{
+                                                __html: item.description,
+                                            }}
+                                        />
                                     )}
-                                    <header itemScope itemType="http://schema.org/NewsArticle">
-                                        <time dateTime={item.datetime} itemProp="datePublished" >{convertDate(item.datetime)}</time>
-                                        <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: item.title }} />
-                                        {item.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: item.description }} />}
-                                    </header>
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                                </header>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </Ublock>
     )
 }

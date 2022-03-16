@@ -595,7 +595,7 @@ export const Zap = Template.bind({})
 Zap.args = { icon: 'zap' }
 
 export const Raven = Template.bind({})
-Raven.args = { icon: 'raven', size: '128', viewBox: "0 0 128 128" }
+Raven.args = { icon: 'raven', size: '128', viewBox: '0 0 128 128' }
 
 export const PDF = Template.bind({})
 PDF.args = { icon: 'pdf' }

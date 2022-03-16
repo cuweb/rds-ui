@@ -20,7 +20,7 @@ const Icon: React.FC<IconProps> = ({
     size,
     svg,
     className = '',
-    viewBox
+    viewBox,
 }): JSX.Element => {
     if (svg) return svg
     const iconPath: string | undefined = getIcon(icon)?.path
