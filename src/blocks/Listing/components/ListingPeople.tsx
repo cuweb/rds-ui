@@ -33,17 +33,17 @@ const ListingPeople: React.FC<ListingPeopleProps> = ({
                 </header>
                 <div className="b-listing b-listing--people">
                     <ul itemScope itemType="http://schema.org/Person">
-                        {data.map((list, index) => (
+                        {data.map((item, index) => (
                             <li itemProp="item" key={index}>
-                                <a href={list.src} itemProp="url">
-                                    {list.image && (
+                                <a href={item.src} itemProp="url">
+                                    {item.image && (
                                         <figure>
-                                            <img src={list.image.src} alt={list.image.alt} itemProp="image" />
+                                            <img src={item.image.src} alt={item.image.alt} itemProp="image" />
                                         </figure>
                                     )}
                                     <div>
-                                        <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: list.title }} />
-                                        {list.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: list.description }} />}
+                                        <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: item.title }} />
+                                        {item.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: item.description }} />}
                                     </div>
                                 </a>
                             </li>

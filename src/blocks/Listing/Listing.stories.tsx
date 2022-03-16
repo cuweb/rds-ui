@@ -56,6 +56,7 @@ WithIcon.args = {
     header: withIcon.header,
     noborder: withIcon.noborder,
     data: withIcon.data,
+    hasIcon: withIcon.hasIcon,
 }
 
 export const IconAndSubtitle = Template.bind({})

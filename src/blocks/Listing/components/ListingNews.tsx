@@ -35,18 +35,18 @@ const ListingNews: React.FC<ListingNewsProps> = ({
                 </header>
                 <div className="b-listing b-listing--news">
                     <ul itemScope itemType="http://schema.org/ItemList">
-                        {data.map((list, index) => (
+                        {data.map((item, index) => (
                             <li itemProp="item" key={index}>
-                                <a href={list.src} itemProp="url">
-                                    {list.image && (
+                                <a href={item.src} itemProp="url">
+                                    {item.image && (
                                         <figure>
-                                            <img src={list.image.src} alt={list.image.alt} itemProp="image" />
+                                            <img src={item.image.src} alt={item.image.alt} itemProp="image" />
                                         </figure>
                                     )}
                                     <header itemScope itemType="http://schema.org/NewsArticle">
-                                        <time dateTime={list.datetime} itemProp="datePublished" >{convertDate(list.datetime)}</time>
-                                        <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: list.title }} />
-                                        {list.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: list.description }} />}
+                                        <time dateTime={item.datetime} itemProp="datePublished" >{convertDate(item.datetime)}</time>
+                                        <h3 itemProp="headline" dangerouslySetInnerHTML={{ __html: item.title }} />
+                                        {item.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: item.description }} />}
                                     </header>
                                 </a>
                             </li>

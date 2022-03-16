@@ -1,6 +1,7 @@
 import React from 'react'
 import Ublock from '../../../components/Ublock/Ublock'
 import Heading from '../../../components/Heading/Heading'
+import convertDateAndTime from '../../../functions/convertDateAndTime.js'
 
 export interface ListingEventProps {
     header: string
@@ -12,7 +13,7 @@ export interface ListProps {
     src: string
     title: string
     description?: string
-    date: DateProps
+    date: string
 }
 
 export interface ImageProps {
@@ -20,18 +21,14 @@ export interface ImageProps {
     alt: string
 }
 
-export interface DateProps {
-    month: string
-    day: string
-    startTime: string
-    endTime: string
-}
-
 const ListingEvent: React.FC<ListingEventProps> = ({
     header,
     noborder,
     data,
 }): JSX.Element => {
+
+    console.log(data[0].date);
+    console.log(convertDateAndTime(data[0].date).startTime);
     return (
         <Ublock>
             <header>
@@ -39,19 +36,19 @@ const ListingEvent: React.FC<ListingEventProps> = ({
             </header>
             <div className="b-listing b-listing--event">
                 <ul itemScope itemType="http://schema.org/Event">
-                    {data.map((list, index) => (
+                    {data.map((item, index) => (
                         <li itemProp="item" key={index}>
-                            <a href={list.src} itemProp="url">
+                            <a href={item.src} itemProp="url">
                                 <time itemProp="startDate" dateTime="">
-                                    {list.date.month}<span>{list.date.day}</span>
+                                    {convertDateAndTime(item.date).month}<span>{convertDateAndTime(item.date).day}</span>
                                 </time>
                                 <div>
-                                    <h3>{list.date.startTime}</h3>
-                                    <p>{list.date.endTime}</p>
+                                    <h3>{convertDateAndTime(item.date).startTime}</h3>
+                                    <p>{convertDateAndTime(item.date).endTime}</p>
                                 </div>
                                 <div itemProp="name">
-                                    <h3 dangerouslySetInnerHTML={{ __html: list.title }} />
-                                    {list.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: list.description }} />}
+                                    <h3 dangerouslySetInnerHTML={{ __html: item.title }} />
+                                    {item.description && <p itemProp="description" dangerouslySetInnerHTML={{ __html: item.description }} />}
                                 </div>
                             </a>
                         </li>

@@ -5,31 +5,22 @@ import ListingNews from './components/ListingNews'
 import ListingPeople from './components/ListingPeople'
 import ListingVideo from './components/ListingVideo'
 import ListingTwoColumns from './components/ListingTwoColumns'
-//import CardFigure from './components/CardFigure'
-//import CardNews from './components/CardNews'
-//import CardVideo from './components/CardVideo'
 
 export interface ListingProps {
-    type: 'base' | 'event' | 'news' | 'people' | 'twoColumn'
+    type: 'base' | 'event' | 'news' | 'people' | 'twoColumn' | 'icon'
     header: string
     noborder: boolean
     data: ListProps[]
     columndata: ListTwoColumnProps
+    hasIcon?: boolean
 }
 
 export interface ListProps {
     src: string
     title: string
     description?: string
-    date: DateProps
+    date: string
     datetime: string
-}
-
-export interface DateProps {
-    month: string
-    day: string
-    startTime: string
-    endTime: string
 }
 
 export interface ListTwoColumnProps {
@@ -52,6 +43,7 @@ const Listing: React.FC<ListingProps> = (props): JSX.Element => {
     
     const cardTypes: TypeProps = {
         base: <ListingBase {...props} />,
+        icon: <ListingBase hasIcon {...props} />,
         event: <ListingEvent {...props} />,
         news: <ListingNews {...props} />,
         people: <ListingPeople {...props} />,

@@ -135,6 +135,7 @@
             "listType": "base",
             "header": "Listing block with icon",
             "noborder": true,
+            "hasIcon": true,
             "data": [
                 {
                     "src": "https://en.wikipedia.org/wiki/White-necked_raven",
@@ -206,36 +207,20 @@
                     "src": "#eventurl",
                     "title": "Event Title",
                     "description": "Event location",
-                    "date": {
-                        "month": "Apr",
-                        "day": "21",
-                        "startTime": "08:00 am",
-                        "endTime": "09:00 pm"
-                    }
+                    "date": "2018-04-21, 08:00 am, 09:00 pm"
+                },
+                {
+                    "src": "#eventurl",
+                    "title": "Event Title",
+                    "description": "Event location",
+                    "date": "2018-04-21, 08:00 am, 09:00 pm"
 
                 },
                 {
                     "src": "#eventurl",
                     "title": "Event Title",
                     "description": "Event location",
-                    "date": {
-                        "month": "Apr",
-                        "day": "21",
-                        "startTime": "08:00 am",
-                        "endTime": "09:00 pm"
-                    }
-
-                },
-                {
-                    "src": "#eventurl",
-                    "title": "Event Title",
-                    "description": "Event location",
-                    "date": {
-                        "month": "Apr",
-                        "day": "21",
-                        "startTime": "08:00 am",
-                        "endTime": "09:00 pm"
-                    }
+                    "date": "2018-04-21, 08:00 am, 09:00 pm"
                 }
             ]
         },
