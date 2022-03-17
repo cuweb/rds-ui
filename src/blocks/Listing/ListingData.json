@@ -140,22 +140,22 @@
                 {
                     "src": "https://en.wikipedia.org/wiki/White-necked_raven",
                     "title": "White-necked Raven",
-                    "icon": "raven"
+                    "icon": "mark-ravens"
                 },
                 {
                     "src": "https://en.wikipedia.org/wiki/Common_raven",
                     "title": "Common raven",
-                    "icon": "raven"
+                    "icon": "mark-ravens"
                 },
                 {
                     "src": "https://en.wikipedia.org/wiki/Australian_raven",
                     "title": "Australian raven",
-                    "icon": "raven"
+                    "icon": "mark-ravens"
                 },
                 {
                     "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
                     "title": "Thick-billed raven",
-                    "icon": "raven"
+                    "icon": "mark-ravens"
                 }
             ]
         },
@@ -170,31 +170,31 @@
                     "src": "#filepath",
                     "title": "Ravens Annual Report (PDF)",
                     "description": "73KB - June 15 1973",
-                    "fileIcon": "pdf"
+                    "icon": "pdf"
                 },
                 {
                     "src": "#filepath",
                     "title": "Yay, Another Spreadsheet (XLS)",
                     "description": "73KB - June 15 1973",
-                    "fileIcon": "xls"
+                    "icon": "xls"
                 },
                 {
                     "src": "#filepath",
                     "title": "Project Charter (DOC)",
                     "description": "73KB - June 15 1973",
-                    "fileIcon": "doc"
+                    "icon": "doc"
                 },
                 {
                     "src": "#filepath",
                     "title": "Watch me read bullets (PPT)",
                     "description": "73KB - June 15 1973",
-                    "fileIcon": "ppt"
+                    "icon": "ppt"
                 },
                 {
                     "src": "#filepath",
                     "title": "Zip it, Dr. Evil (ZIP)",
                     "description": "73KB - June 15 1973",
-                    "fileIcon": "zip"
+                    "icon": "zip"
                 }
             ]
         },
@@ -371,42 +371,6 @@
                     }
                 }
             ]
-        },
-        {
-            "type": "twoColumn",
-            "listType": "base",
-            "header": "Listing blocks in two columns",
-            "noborder": true,
-            "data": [
-                {
-                    "title": "Two column Listing blocks"
-                },
-                {
-                    "title": "Two column Listing blocks"
-                }
-            ],
-            "columndata": {
-                "firstColumn": [
-                    {
-                        "src": "https://en.wikipedia.org/wiki/White-necked_raven",
-                        "title": "White-necked Raven"
-                    },
-                    {
-                        "src": "https://en.wikipedia.org/wiki/Australian_raven",
-                        "title": "Australian raven"
-                    }
-                ],
-                "secondColumn": [
-                    {
-                        "src": "https://en.wikipedia.org/wiki/White-necked_raven",
-                        "title": "White-necked Raven"
-                    },
-                    {
-                        "src": "https://en.wikipedia.org/wiki/Australian_raven",
-                        "title": "Australian raven"
-                    }
-                ]
-            }
         }
     ]
 }

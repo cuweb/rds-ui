@@ -3,6 +3,7 @@
     "version": "0.10.0",
     "author": "Carleton University",
     "license": "MIT",
+    "type": "module",
     "repository": {
         "type": "git",
         "url": "git://github.com/cuweb/rds-beta.git"
