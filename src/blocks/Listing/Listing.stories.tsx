@@ -4,6 +4,7 @@ import data from './ListingData.json'
 import getVariation from '../../functions/getVariation'
 import { Meta, Story } from '@storybook/react'
 import Ugrid from '@components/Ugrid/Ugrid'
+import Ublock from '@components/Ublock/Ublock'
 
 const { title, variations } = data
 
@@ -117,9 +118,19 @@ VideoVariant.args = {
 
 export const TwoColumn = () => {
     return (
-        <Ugrid columns={2}>
-            <Listing type='base' data={getVariation('base', variations).data} />
-            <Listing type='base' data={getVariation('base', variations).data} />
-        </Ugrid>
+        <Ublock>
+            <Ugrid columns={2}>
+                <Listing
+                    type='base'
+                    data={getVariation('base', variations).data}
+                    hasUblock={false}
+                />
+                <Listing
+                    type='base'
+                    data={getVariation('base', variations).data}
+                    hasUblock={false}
+                />
+            </Ugrid>
+        </Ublock>
     )
 }

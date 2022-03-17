@@ -8,7 +8,7 @@ export interface ListingHeaderProps {
 
 const ListingHeader: FC<ListingHeaderProps> = ({
     header,
-    noborder,
+    noborder = true,
 }): JSX.Element | null => {
     if (!header) return null
     return (
