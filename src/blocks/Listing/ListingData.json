@@ -1,0 +1,412 @@
+{
+    "title": "Listing",
+    "classname": ".listing",
+    "variations": [
+        {
+            "type": "base",
+            "listType": "base",
+            "header": "Base example",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven"
+                }
+            ]
+        },
+        {
+            "type": "withSubtitles",
+            "listType": "base",
+            "header": "Listing block with subtitles",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven",
+                    "description": "Corvus albicollis"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven",
+                    "description": "Corvus corax"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven",
+                    "description": "Corvus crassirostris"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven",
+                    "description": "Corvus cryptoleucus"
+                }
+            ]
+        },
+        {
+            "type": "withImage",
+            "listType": "base",
+            "header": "Listing block with image",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven",
+                    "description": "Corvus albicollis",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven",
+                    "description": "Corvus corax",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven",
+                    "description": "Corvus crassirostris",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven",
+                    "description": "Corvus cryptoleucus",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
+                        "alt": ""
+                    }
+                }
+            ]
+        },
+        {
+            "type": "withBadge",
+            "listType": "base",
+            "header": "Listing block with badge",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven",
+                    "description": "Corvus albicollis",
+                    "badge": "3"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven",
+                    "description": "Corvus corax",
+                    "badge": "5"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven",
+                    "description": "Corvus crassirostris",
+                    "badge": "v1.0"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven",
+                    "description": "Corvus cryptoleucus",
+                    "badge": "New"
+                }
+            ]
+        },
+        {
+            "type": "withIcon",
+            "listType": "icon",
+            "header": "Listing block with icon",
+            "noborder": true,
+            "hasIcon": true,
+            "data": [
+                {
+                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                    "title": "White-necked Raven",
+                    "icon": "raven"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Common_raven",
+                    "title": "Common raven",
+                    "icon": "raven"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                    "title": "Australian raven",
+                    "icon": "raven"
+                },
+                {
+                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
+                    "title": "Thick-billed raven",
+                    "icon": "raven"
+                }
+            ]
+        },
+        {
+            "type": "iconsAndSubtitles",
+            "listType": "icon",
+            "header": "Listing block with icons and subtitles",
+            "noborder": true,
+            "hasIcon": true,
+            "data": [
+                {
+                    "src": "#filepath",
+                    "title": "Ravens Annual Report (PDF)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "pdf"
+                },
+                {
+                    "src": "#filepath",
+                    "title": "Yay, Another Spreadsheet (XLS)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "xls"
+                },
+                {
+                    "src": "#filepath",
+                    "title": "Project Charter (DOC)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "doc"
+                },
+                {
+                    "src": "#filepath",
+                    "title": "Watch me read bullets (PPT)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "ppt"
+                },
+                {
+                    "src": "#filepath",
+                    "title": "Zip it, Dr. Evil (ZIP)",
+                    "description": "73KB - June 15 1973",
+                    "fileIcon": "zip"
+                }
+            ]
+        },
+        {
+            "type": "event",
+            "listType": "event",
+            "header": "Listing block with event",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "#eventurl",
+                    "title": "Event Title",
+                    "description": "Event location",
+                    "date": "2018-04-21, 08:00 am, 09:00 pm"
+                },
+                {
+                    "src": "#eventurl",
+                    "title": "Event Title",
+                    "description": "Event location",
+                    "date": "2018-04-21, 08:00 am, 09:00 pm"
+                },
+                {
+                    "src": "#eventurl",
+                    "title": "Event Title",
+                    "description": "Event location",
+                    "date": "2018-04-21, 08:00 am, 09:00 pm"
+                }
+            ]
+        },
+        {
+            "type": "news",
+            "listType": "news",
+            "header": "News variant",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://goo.gl/LnS148",
+                    "title": "News items that have long titles will be allowed to flow over two lines, and will automatically add an ellipsis beyond that",
+                    "description": "Carleton Ravens football is looking to expand its list of coaches by 1 position.  Having started a program from scratch in 2013, the Ravens have continued to develop and improve over the past four years.",
+                    "datetime": "2018-03-14"
+                },
+                {
+                    "src": "https://goo.gl/LnS148",
+                    "title": "News items that have long titles will be allowed to flow over two lines, and will automatically add an ellipsis beyond that",
+                    "description": "Carleton Ravens football is looking to expand its list of coaches by 1 position.  Having started a program from scratch in 2013, the Ravens have continued to develop and improve over the past four years.",
+                    "datetime": "2018-03-14"
+                },
+                {
+                    "src": "https://goo.gl/LnS148",
+                    "title": "News items that have long titles will be allowed to flow over two lines, and will automatically add an ellipsis beyond that",
+                    "description": "Carleton Ravens football is looking to expand its list of coaches by 1 position.  Having started a program from scratch in 2013, the Ravens have continued to develop and improve over the past four years.",
+                    "datetime": "2018-03-14"
+                }
+            ]
+        },
+        {
+            "type": "newsImage",
+            "listType": "news",
+            "header": "News variant with Image",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://goo.gl/LnS148",
+                    "title": "News items that have long titles will be allowed to flow over two lines, and will automatically add an ellipsis beyond that",
+                    "description": "Carleton Ravens football is looking to expand its list of coaches by 1 position.  Having started a program from scratch in 2013, the Ravens have continued to develop and improve over the past four years.",
+                    "datetime": "2018-03-14",
+                    "image": {
+                        "src": "https://goravens.ca/wp-content/uploads/football-helmet.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://goo.gl/LnS148",
+                    "title": "News items that have long titles will be allowed to flow over two lines, and will automatically add an ellipsis beyond that",
+                    "description": "Carleton Ravens football is looking to expand its list of coaches by 1 position.  Having started a program from scratch in 2013, the Ravens have continued to develop and improve over the past four years.",
+                    "datetime": "2018-03-14",
+                    "image": {
+                        "src": "https://goravens.ca/wp-content/uploads/football-helmet.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://goo.gl/LnS148",
+                    "title": "News items that have long titles will be allowed to flow over two lines, and will automatically add an ellipsis beyond that",
+                    "description": "Carleton Ravens football is looking to expand its list of coaches by 1 position.  Having started a program from scratch in 2013, the Ravens have continued to develop and improve over the past four years.",
+                    "datetime": "2018-03-14",
+                    "image": {
+                        "src": "https://goravens.ca/wp-content/uploads/football-helmet.jpg",
+                        "alt": ""
+                    }
+                }
+            ]
+        },
+        {
+            "type": "people",
+            "listType": "people",
+            "header": "People variant",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "http://www.imdb.com/name/nm0000195/",
+                    "title": "Bill Murray",
+                    "description": "Actor/Writer",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/photos/fill-murray.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "http://www.imdb.com/name/nm0000195/",
+                    "title": "Peter Venkman",
+                    "description": "Ghost buster",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/photos/fill-murray.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "http://www.imdb.com/name/nm0000195/",
+                    "title": "Carl Spackler",
+                    "description": "Caddy for Shack",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/photos/fill-murray.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "http://www.imdb.com/name/nm0000195/",
+                    "title": "Phil Connors",
+                    "description": "Groundhog for a Day",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/photos/fill-murray.jpg",
+                        "alt": ""
+                    }
+                }
+            ]
+        },
+        {
+            "type": "video",
+            "listType": "video",
+            "header": "Video variant",
+            "noborder": true,
+            "data": [
+                {
+                    "src": "https://www.youtube.com/watch?v=Nrmj0fIUJAc",
+                    "title": "White-necked Raven",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://www.youtube.com/watch?v=KpApJr53Sgo",
+                    "title": "Common Raven",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://www.youtube.com/watch?v=uJST7x-s548",
+                    "title": "Thick-billed raven",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
+                        "alt": ""
+                    }
+                },
+                {
+                    "src": "https://www.youtube.com/watch?v=AXxVw76hgtk",
+                    "title": "Chihuahuan raven",
+                    "image": {
+                        "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
+                        "alt": ""
+                    }
+                }
+            ]
+        },
+        {
+            "type": "twoColumn",
+            "listType": "base",
+            "header": "Listing blocks in two columns",
+            "noborder": true,
+            "data": [
+                {
+                    "title": "Two column Listing blocks"
+                },
+                {
+                    "title": "Two column Listing blocks"
+                }
+            ],
+            "columndata": {
+                "firstColumn": [
+                    {
+                        "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                        "title": "White-necked Raven"
+                    },
+                    {
+                        "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                        "title": "Australian raven"
+                    }
+                ],
+                "secondColumn": [
+                    {
+                        "src": "https://en.wikipedia.org/wiki/White-necked_raven",
+                        "title": "White-necked Raven"
+                    },
+                    {
+                        "src": "https://en.wikipedia.org/wiki/Australian_raven",
+                        "title": "Australian raven"
+                    }
+                ]
+            }
+        }
+    ]
+}

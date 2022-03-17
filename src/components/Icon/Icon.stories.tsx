@@ -593,3 +593,21 @@ Youtube.args = { icon: 'youtube' }
 
 export const Zap = Template.bind({})
 Zap.args = { icon: 'zap' }
+
+export const Raven = Template.bind({})
+Raven.args = { icon: 'raven', size: '128', viewBox: '0 0 128 128' }
+
+export const PDF = Template.bind({})
+PDF.args = { icon: 'pdf' }
+
+export const XLS = Template.bind({})
+XLS.args = { icon: 'xls' }
+
+export const DOC = Template.bind({})
+DOC.args = { icon: 'doc' }
+
+export const PPT = Template.bind({})
+PPT.args = { icon: 'ppt' }
+
+export const ZIP = Template.bind({})
+ZIP.args = { icon: 'zip' }
