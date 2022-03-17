@@ -1,14 +1,12 @@
 import React from 'react'
 import Ublock from '../../../components/Ublock/Ublock'
-import Heading from '../../../components/Heading/Heading'
+import ListingHeader, { ListingHeaderProps } from './ListingHeader'
 
 export interface ListingVideoProps {
-    header: string
-    noborder?: boolean
-    data: ListProps[]
+    data: VideoListProps[]
 }
 
-export interface ListProps {
+export interface VideoListProps {
     src: string
     title: string
     image?: ImageProps
@@ -19,16 +17,14 @@ export interface ImageProps {
     alt: string
 }
 
-const ListingVideo: React.FC<ListingVideoProps> = ({
+const ListingVideo: React.FC<ListingVideoProps & ListingHeaderProps> = ({
     header,
     noborder,
     data,
 }): JSX.Element => {
     return (
         <Ublock>
-            <header>
-                <Heading header={header} noborder={noborder} />
-            </header>
+            <ListingHeader header={header} noborder={noborder} />
             <div className='b-listing b-listing--video'>
                 <ul itemScope itemType='http://schema.org/ItemList'>
                     {data.map((item, index) => (

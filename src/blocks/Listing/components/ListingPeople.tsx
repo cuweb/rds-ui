@@ -1,10 +1,8 @@
 import React from 'react'
 import Ublock from '../../../components/Ublock/Ublock'
-import Heading from '../../../components/Heading/Heading'
+import ListingHeader, { ListingHeaderProps } from './ListingHeader'
 
 export interface ListingPeopleProps {
-    header: string
-    noborder?: boolean
     data: ListProps[]
 }
 
@@ -20,16 +18,14 @@ export interface ImageProps {
     alt: string
 }
 
-const ListingPeople: React.FC<ListingPeopleProps> = ({
+const ListingPeople: React.FC<ListingPeopleProps & ListingHeaderProps> = ({
     header,
     noborder,
     data,
 }): JSX.Element => {
     return (
         <Ublock>
-            <header>
-                <Heading header={header} noborder={noborder} />
-            </header>
+            <ListingHeader header={header} noborder={noborder} />
             <div className='b-listing b-listing--people'>
                 <ul itemScope itemType='http://schema.org/Person'>
                     {data.map((item, index) => (

@@ -1,15 +1,13 @@
 import React from 'react'
 import Ublock from '../../../components/Ublock/Ublock'
-import Heading from '../../../components/Heading/Heading'
 import convertDate from '../../../functions/convertDate.js'
+import ListingHeader, { ListingHeaderProps } from './ListingHeader'
 
 export interface ListingNewsProps {
-    header: string
-    noborder?: boolean
-    data: ListProps[]
+    data: NewsListProps[]
 }
 
-export interface ListProps {
+export interface NewsListProps {
     src: string
     title: string
     description?: string
@@ -22,16 +20,14 @@ export interface ImageProps {
     alt: string
 }
 
-const ListingNews: React.FC<ListingNewsProps> = ({
+const ListingNews: React.FC<ListingNewsProps & ListingHeaderProps> = ({
     header,
     noborder,
     data,
 }): JSX.Element => {
     return (
         <Ublock>
-            <header>
-                <Heading header={header} noborder={noborder} />
-            </header>
+            <ListingHeader header={header} noborder={noborder} />
             <div className='b-listing b-listing--news'>
                 <ul itemScope itemType='http://schema.org/ItemList'>
                     {data.map((item, index) => (

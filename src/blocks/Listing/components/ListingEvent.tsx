@@ -1,15 +1,13 @@
 import React from 'react'
 import Ublock from '../../../components/Ublock/Ublock'
-import Heading from '../../../components/Heading/Heading'
 import convertDateAndTime from '../../../functions/convertDateAndTime.js'
+import ListingHeader, { ListingHeaderProps } from './ListingHeader'
 
 export interface ListingEventProps {
-    header: string
-    noborder?: boolean
-    data: ListProps[]
+    data: EventListProps[]
 }
 
-export interface ListProps {
+export interface EventListProps {
     src: string
     title: string
     description?: string
@@ -21,16 +19,14 @@ export interface ImageProps {
     alt: string
 }
 
-const ListingEvent: React.FC<ListingEventProps> = ({
+const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
     header,
     noborder,
     data,
 }): JSX.Element => {
     return (
         <Ublock>
-            <header>
-                <Heading header={header} noborder={noborder} />
-            </header>
+            <ListingHeader header={header} noborder={noborder} />
             <div className='b-listing b-listing--event'>
                 <ul itemScope itemType='http://schema.org/Event'>
                     {data.map((item, index) => (

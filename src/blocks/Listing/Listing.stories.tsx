@@ -3,6 +3,7 @@ import Listing from './Listing'
 import data from './ListingData.json'
 import getVariation from '../../functions/getVariation'
 import { Meta, Story } from '@storybook/react'
+import Ugrid from '@components/Ugrid/Ugrid'
 
 const { title, variations } = data
 
@@ -114,12 +115,11 @@ VideoVariant.args = {
     data: videoVariant.data,
 }
 
-export const TwoColumn = Template.bind({})
-const twoColumn = getVariation('twoColumn', variations)
-TwoColumn.args = {
-    type: twoColumn.listType,
-    header: twoColumn.header,
-    noborder: twoColumn.noborder,
-    data: twoColumn.data,
-    columndata: twoColumn.columndata,
+export const TwoColumn = () => {
+    return (
+        <Ugrid columns={2}>
+            <Listing type='base' data={getVariation('base', variations).data} />
+            <Listing type='base' data={getVariation('base', variations).data} />
+        </Ugrid>
+    )
 }

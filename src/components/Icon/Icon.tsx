@@ -10,7 +10,6 @@ export interface IconProps {
     size?: number
     svg?: React.ReactElement
     className?: string
-    viewBox?: string
 }
 
 const getIcon = (type: string) => icons.find((icon) => icon.type === type)
@@ -20,7 +19,6 @@ const Icon: React.FC<IconProps> = ({
     size,
     svg,
     className = '',
-    viewBox,
 }): JSX.Element => {
     if (svg) return svg
     const iconPath: string | undefined = getIcon(icon)?.path
@@ -30,7 +28,7 @@ const Icon: React.FC<IconProps> = ({
     return (
         <svg
             className={`c-icon ${className}`}
-            viewBox={viewBox || '0 0 24 24'}
+            viewBox='0 0 24 24'
             width={size || 16}
             height={size || 16}
             xmlns='http://www.w3.org/2000/svg'

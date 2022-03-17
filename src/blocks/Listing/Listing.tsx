@@ -1,38 +1,20 @@
 import React, { ReactElement } from 'react'
-import ListingBase from './components/ListingBase'
-import ListingEvent from './components/ListingEvent'
-import ListingNews from './components/ListingNews'
+import ListingBase, { BaseListProps } from './components/ListingBase'
+import ListingEvent, { EventListProps } from './components/ListingEvent'
+import ListingNews, { NewsListProps } from './components/ListingNews'
 import ListingPeople from './components/ListingPeople'
-import ListingVideo from './components/ListingVideo'
+import ListingVideo, { VideoListProps } from './components/ListingVideo'
 
 export interface ListingProps {
     type: 'base' | 'event' | 'news' | 'people' | 'icon'
-    header: string
-    noborder: boolean
-    data: ListProps[]
-    columndata: ListTwoColumnProps
+    header?: string
+    noborder?: boolean
+    data: BaseListProps[] &
+        EventListProps[] &
+        NewsListProps[] &
+        VideoListProps[]
     hasIcon?: boolean
 }
-
-export interface ListProps {
-    src: string
-    title: string
-    description?: string
-    date: string
-    datetime: string
-    icon: string
-}
-
-export interface ListTwoColumnProps {
-    firstColumn: ColumnProp[]
-    secondColumn: ColumnProp[]
-}
-
-export interface ColumnProp {
-    src: string
-    title: string
-}
-
 export interface TypeProps {
     [index: string]: ReactElement
 }
