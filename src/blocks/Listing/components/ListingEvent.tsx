@@ -1,5 +1,6 @@
+import convertDate from '@functions/convertDate'
+import convertTime from '@functions/convertTime'
 import React from 'react'
-import convertDateAndTime from '../../../functions/convertDateAndTime.js'
 import { ListingHeaderProps } from './ListingHeader'
 import ListingWrapper, { ListingWrapperProps } from './ListingWrapper'
 
@@ -12,6 +13,8 @@ export interface EventListProps {
     title: string
     description?: string
     date: string
+    startTime?: string
+    endTime?: string
 }
 
 export interface ImageProps {
@@ -29,14 +32,16 @@ const ListingEvent: React.FC<
                     <li itemProp='item' key={index}>
                         <a href={item.src} itemProp='url'>
                             <time itemProp='startDate' dateTime=''>
-                                {convertDateAndTime(item.date).month}
-                                <span>{convertDateAndTime(item.date).day}</span>
+                                {convertDate(item.date, 'month')}
+                                <span>{convertDate(item.date, 'day')}</span>
                             </time>
                             <div>
-                                <h3>
-                                    {convertDateAndTime(item.date).startTime}
-                                </h3>
-                                <p>{convertDateAndTime(item.date).endTime}</p>
+                                {item.startTime && item.endTime && (
+                                    <>
+                                        <h3>{convertTime(item.startTime)}</h3>
+                                        <p>{convertTime(item.endTime)}</p>
+                                    </>
+                                )}
                             </div>
                             <div itemProp='name'>
                                 <h3

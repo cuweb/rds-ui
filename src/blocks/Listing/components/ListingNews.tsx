@@ -1,5 +1,5 @@
 import React from 'react'
-import convertDate from '../../../functions/convertDate.js'
+import convertDate from '@functions/convertDate'
 import { ListingHeaderProps } from './ListingHeader'
 import ListingWrapper, { ListingWrapperProps } from './ListingWrapper'
 
