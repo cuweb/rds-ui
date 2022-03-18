@@ -38,7 +38,7 @@ const ListingPeople: React.FC<
                             )}
                             <div>
                                 <h3
-                                    itemProp='headline'
+                                    itemProp='name'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,
                                     }}

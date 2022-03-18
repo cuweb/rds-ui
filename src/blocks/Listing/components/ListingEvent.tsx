@@ -45,13 +45,14 @@ const ListingEvent: React.FC<
                             </div>
                             <div itemProp='name'>
                                 <h3
+                                    itemProp='name'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,
                                     }}
                                 />
                                 {item.description && (
                                     <p
-                                        itemProp='description'
+                                        itemProp='location'
                                         dangerouslySetInnerHTML={{
                                             __html: item.description,
                                         }}

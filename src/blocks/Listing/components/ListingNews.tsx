@@ -49,7 +49,7 @@ const ListingNews: React.FC<
                                     {convertDate(item.datetime)}
                                 </time>
                                 <h3
-                                    itemProp='headline'
+                                    itemProp='name'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,
                                     }}

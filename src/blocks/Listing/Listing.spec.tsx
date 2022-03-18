@@ -13,7 +13,7 @@ const testUblock = () => {
 }
 
 const testHeading = (type: string) => {
-    if (type !== 'two-colum') {
+    if (type !== 'two-column') {
         it(`Should render heading`, () => {
             cy.get(`header`).should('exist')
             cy.get(`.c-heading`).should('exist').should('not.be.empty')
@@ -50,7 +50,7 @@ const testSubtitle = (type: string) => {
         'base-listing',
         'with-icon',
         'video-variant',
-        'two-colum',
+        'two-column',
     ].includes(type)
     if (noSubtitle) return false
     it(`Should render subtitle`, () => {
@@ -88,6 +88,78 @@ const testItemType = (type: string) => {
     })
 }
 
+const testListItemProp = () => {
+    it(`Should render the right itemProp`, () => {
+        cy.get(`li[itemprop='item']`).should('exist')
+    })
+}
+
+const testDivItemProp = (type: string) => {
+    const withDivItemProp = [
+        'base-listing',
+        'with-badge',
+        'with-icon',
+        'video-variant',
+    ].includes(type)
+    if (!withDivItemProp) return false
+    it(`Should render div itemProp`, () => {
+        cy.get(`div[itemprop='name']`).should('exist')
+    })
+}
+
+const testHeadingItemProp = (type: string) => {
+    const HeadingItemProp = [
+        'with-subtitles',
+        'with-image',
+        'icon-and-subtitle',
+        'event-variant',
+        'news-variant',
+        'news-image-variant',
+        'people-variant',
+    ].includes(type)
+    if (!HeadingItemProp) return false
+    it(`Should render h3 itemProp`, () => {
+        cy.get(`h3[itemprop='name']`).should('exist')
+    })
+}
+
+const testParagraphItemProp = (type: string) => {
+    const ParagraphItemProp = [
+        'with-subtitles',
+        'with-image',
+        'icon-and-subtitle',
+        'people-variant',
+        'event-variant',
+    ].includes(type)
+    if (!ParagraphItemProp) return false
+    if (type === 'event-variant') {
+        it(`Should render p itemProp`, () => {
+            cy.get(`p[itemprop='location']`).should('exist')
+        })
+    } else {
+        it(`Should render p itemProp`, () => {
+            cy.get(`p[itemprop='description']`).should('exist')
+        })
+    }
+}
+
+const testTime = (type: string) => {
+    const Time = [
+        'event-variant',
+        'news-variant',
+        'news-image-variant',
+    ].includes(type)
+    if (!Time) return false
+    it(`Should render time`, () => {
+        cy.get(`time`).should('exist')
+    })
+    if (type === 'event-variant') {
+        it(`Should render time itemProp`, () => {
+            cy.get(`time[itemprop='startDate']`).should('exist')
+        })
+    }
+}
+
 const types = [
     'base-listing',
     'with-subtitles',
@@ -100,7 +172,7 @@ const types = [
     'news-image-variant',
     'people-variant',
     'video-variant',
-    'two-colum',
+    'two-column',
 ]
 types.map((type) => {
     describe(`Listings ${type.split('-').join(' ')}`, () => {
@@ -113,6 +185,11 @@ types.map((type) => {
         testTitle()
         testSubtitle(type)
         testImage(type)
+        testItemType(type)
+        testListItemProp()
+        testDivItemProp(type)
+        testHeadingItemProp(type)
+        testParagraphItemProp(type)
         testItemType(type)
     })
 })

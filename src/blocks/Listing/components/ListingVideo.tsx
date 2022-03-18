@@ -42,7 +42,7 @@ const ListingVideo: React.FC<
                                     </svg>
                                 </figure>
                             )}
-                            <div>
+                            <div itemProp='name'>
                                 <h3
                                     itemProp='headline'
                                     dangerouslySetInnerHTML={{

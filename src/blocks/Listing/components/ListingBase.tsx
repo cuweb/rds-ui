@@ -45,6 +45,7 @@ const ListingBase: React.FC<
                             )}
                             <div itemProp='name'>
                                 <h3
+                                    itemProp='name'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,
                                     }}
