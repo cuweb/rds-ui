@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface UblockProps {
+export interface UblockProps {
     id?: string
     children: React.ReactNode
     heading?: string

@@ -2,6 +2,36 @@
 
 const icons = [
     {
+        title: 'pdf',
+        type: 'pdf',
+        path: `<g><g fill="none" fill-rule="evenodd"><g fill-rule="nonzero"><path d="M4 23V1h10.84L20 6.473V23z" fill="#fff"></path><g fill="#bf112b"><path d="M14.62 1.611l4.809 5.142v15.636H4.57V1.61zM14.858 1H4v22h16V6.5z"></path><path d="M14 7V1h.195L20 6.805V7z" fill-opacity=".215"></path><path d="M14.6 1.848L19.152 6.4H14.6zm0-.848H14v6h6v-.6z"></path></g></g><path d="M16 15.34c0-1.98-8-.117-8 2.263 0 .192.135.397.353.397 1.675 0 4.779-11 3.26-11s.859 9.023 3.66 9.023c.408 0 .727-.167.727-.683z" stroke="#bf112b" stroke-width=".5"></path></g></g>`,
+        tags: ['pdf', 'document'],
+    },
+    {
+        title: 'xls',
+        type: 'xls',
+        path: `<g><g fill="none"><path d="M4 23V1h10.84L20 6.473V23z" fill="#fff"></path><path d="M14.62 1.611l4.809 5.142v15.636H4.57V1.61zM14.858 1H4v22h16V6.5z" fill="#388e3c"></path><path d="M14 7V1h.195L20 6.805V7z" fill="#e8f5e9"></path><path d="M14.6 1.848L19.152 6.4H14.6zm0-.848H14v6h6v-.6zM11.497 11.327L12.78 9h2.16l-2.193 3.471L15 16h-2.183l-1.32-2.37-1.32 2.37H8l2.247-3.529L8.06 9h2.156z" fill="#388e3c"></path></g></g>`,
+        tags: ['xls', 'excel', 'spreadsheet', 'document', 'office'],
+    },
+    {
+        title: 'doc',
+        type: 'doc',
+        path: `<g><g fill="none"><path d="M4 23V1h10.84L20 6.473V23z" fill="#fff"></path><path d="M14.62 1.611l4.809 5.142v15.636H4.57V1.61zM14.858 1H4v22h16V6.5z" fill="#1976d2"></path><path d="M14 7V1h.195L20 6.805V7z" fill="#e3f2fd"></path><path d="M14.6 1.848L19.152 6.4H14.6zm0-.848H14v6h6v-.6zM13.324 13.39L14.19 9H16l-1.606 7h-1.891l-1.013-3.99-.993 3.99H8.611L7 9h1.813l.868 4.39L10.721 9h1.548z" fill="#1976d2"></path></g></g>`,
+        tags: ['doc', 'word', 'document', 'office'],
+    },
+    {
+        title: 'ppt',
+        type: 'ppt',
+        path: `<g><g fill="none" fill-rule="evenodd"><g fill-rule="nonzero"><path d="M4 23V1h10.84L20 6.473V23z" fill="#fff"></path><path d="M14.62 1.611l4.809 5.142v15.636H4.57V1.61zM14.858 1H4v22h16V6.5z" fill="#ff6d00"></path><path d="M14 7V1h.195L20 6.805V7z" fill="#fff3e0"></path><path d="M14.6 1.848L19.152 6.4H14.6zm0-.848H14v6h6v-.6z" fill="#ff6d00"></path></g><path d="M10 12.5v-3" stroke="#ff6d00" stroke-linecap="square"></path><path d="M11.656 9H9v7h1.65v-2.412h.854c.91 0 1.637-.217 2.18-.651.544-.435.817-1.004.816-1.706C14.5 9.744 13.552 9 11.656 9zm-.622 3.45H10V10.2h1.034c1.31 0 1.966.371 1.966 1.113 0 .759-.655 1.137-1.966 1.137z" fill="#ff6d00" fill-rule="nonzero"></path></g></g>`,
+        tags: ['ppt', 'powerpoint', 'presentation', 'document', 'office'],
+    },
+    {
+        title: 'zip',
+        type: 'zip',
+        path: `<g><g fill="none" fill-rule="evenodd"><g fill-rule="nonzero"><path d="M4 23V1h10.84L20 6.473V23z" fill="#fff"></path><path d="M14.62 1.611l4.809 5.142v15.636H4.57V1.61zM14.858 1H4v22h16V6.5z" fill="#ffa000"></path><path d="M14 7V1h.195L20 6.805V7z" fill="#ffca28" fill-opacity=".38"></path><path d="M14.6 1.848L19.152 6.4H14.6zm0-.848H14v6h6v-.6z" fill="#ffa000"></path></g><g fill="#ffa000"><path d="M8 11v.889h1.836v.052L8 14.381V15h3v-.889H9.164v-.052L11 11.619V11zM12 11v4h1v-4zM14 11v4h.855l.002-1.333h.807c.793 0 1.336-.555 1.336-1.344 0-.8-.52-1.323-1.288-1.323z"></path></g><path d="M15 12h.525c.29 0 .475.173.475.501 0 .327-.187.499-.479.499H15z" fill="#f9f9f9"></path><g fill="#ffa000"><path d="M6.5 2a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1zM6.5 5a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1zM6.5 8a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1zM6.5 11a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1zM6.5 14a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1zM6.5 17a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1zM6.5 20a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1z"></path></g></g></g>`,
+        tags: ['zip'],
+    },
+    {
         title: 'Accessibility',
         type: 'accessibility',
         path: '<path d="M16.87 9.645l-3.435.484a4.734 4.734 0 0 0-.024.07c-.122.365.164 2.794.281 3.731l1.294 3.92a.795.795 0 0 1-.567.965.795.795 0 0 1-.966-.567l-1.31-3.983s-.02-.14-.158-.14c-.131 0-.156.141-.156.141l-1.312 4.005a.796.796 0 0 1-.966.568.795.795 0 0 1-.568-.966l1.351-4.156c.128-1.048.368-3.178.255-3.517a4.734 4.734 0 0 0-.024-.071L7.13 9.645a.795.795 0 0 1-.674-.896.795.795 0 0 1 .895-.674l4.047.571.602.001h.602l4.047-.572a.795.795 0 0 1 .895.674.795.795 0 0 1-.674.896zM12 5.079a1.494 1.494 0 1 1 0 2.989 1.494 1.494 0 0 1 0-2.989zm0-2.38A9.3 9.3 0 1 0 12 21.3a9.3 9.3 0 0 0 0-18.6z" fill="#222"></path><path d="M12 22.787C6.052 22.787 1.213 17.948 1.213 12S6.052 1.213 12 1.213 22.787 6.052 22.787 12 17.948 22.787 12 22.787zM12 .022C5.385.022.022 5.385.022 12c0 6.615 5.363 11.978 11.978 11.978 6.615 0 11.978-5.363 11.978-11.978C23.978 5.385 18.615.022 12 .022z" fill="#373B3E"></path>',
