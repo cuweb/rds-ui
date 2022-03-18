@@ -190,6 +190,6 @@ types.map((type) => {
         testDivItemProp(type)
         testHeadingItemProp(type)
         testParagraphItemProp(type)
-        testItemType(type)
+        testTime(type)
     })
 })
