@@ -1,18 +1,12 @@
-interface dateOptionsTypes {
-    long: TypeProps
-    month: TypeProps
-    day: TypeProps
-}
-
 interface TypeProps {
-    [index: string]: string
+    [index: string]: object
 }
 
 type convertDateTypes = 'long' | 'month' | 'day' | undefined
 
 const convertDate = (time: string, format?: convertDateTypes) => {
     const event = new Date(time)
-    const options: dateOptionsTypes = {
+    const options: TypeProps = {
         long: { weekday: 'long', month: 'long', day: 'numeric' },
         month: {
             month: 'short',
