@@ -347,6 +347,7 @@
                 {
                     "src": "https://www.youtube.com/watch?v=Nrmj0fIUJAc",
                     "title": "White-necked Raven",
+                    "icon": "video",
                     "image": {
                         "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg",
                         "alt": ""
@@ -355,6 +356,7 @@
                 {
                     "src": "https://www.youtube.com/watch?v=KpApJr53Sgo",
                     "title": "Common Raven",
+                    "icon": "video",
                     "image": {
                         "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
                         "alt": ""
@@ -363,6 +365,7 @@
                 {
                     "src": "https://www.youtube.com/watch?v=uJST7x-s548",
                     "title": "Thick-billed raven",
+                    "icon": "video",
                     "image": {
                         "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-3.jpg",
                         "alt": ""
@@ -371,6 +374,7 @@
                 {
                     "src": "https://www.youtube.com/watch?v=AXxVw76hgtk",
                     "title": "Chihuahuan raven",
+                    "icon": "video",
                     "image": {
                         "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-4.jpg",
                         "alt": ""

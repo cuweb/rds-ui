@@ -585,6 +585,9 @@ Verified.args = { icon: 'verified' }
 export const Versions = Template.bind({})
 Versions.args = { icon: 'versions' }
 
+export const Video = Template.bind({})
+Video.args = { icon: 'video' }
+
 export const VideoPlayer = Template.bind({})
 VideoPlayer.args = { icon: 'video-player' }
 
