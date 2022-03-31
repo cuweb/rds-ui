@@ -1,14 +1,10 @@
 import React from 'react'
+import { CardImageProps } from '../Card'
 
 export interface CardVideoProps {
     link: string
-    image: ImageProps
+    image: CardImageProps
     header: string
-}
-
-export interface ImageProps {
-    src: string
-    alt: string
 }
 
 const CardVideo: React.FC<CardVideoProps> = ({

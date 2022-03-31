@@ -1,15 +1,11 @@
 import React from 'react'
+import { CardImageProps } from '../Card'
 
 export interface CardBaseProps {
     link: string
     header: string
     description?: string
-    image: ImageProps
-}
-
-export interface ImageProps {
-    src: string
-    alt: string
+    image: CardImageProps
 }
 
 const CardBase: React.FC<CardBaseProps> = ({

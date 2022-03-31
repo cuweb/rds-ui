@@ -7,7 +7,7 @@ export interface CardGridProps {
     title?: string
     columns?: 1 | 2 | 3 | 4 | undefined
     button?: ButtonProps
-    color: 'grey' | 'white' | 'black' | undefined
+    color?: 'grey' | 'white' | 'black' | undefined
     handleLoad?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
 }
 
@@ -20,12 +20,12 @@ const CardGrid: React.FC<CardGridProps> = ({
     title,
     button,
     columns = 3,
-    color,
+    color = 'white',
     children,
     handleLoad,
 }): JSX.Element => {
     return (
-        <Ublock color={color || 'white'}>
+        <Ublock color={color}>
             {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
             <Ugrid className='b-cardgrid' columns={columns}>
                 {children}

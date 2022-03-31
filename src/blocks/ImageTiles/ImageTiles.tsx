@@ -6,7 +6,10 @@ export interface ImageTilesProps {
 }
 
 export interface ImageTilesDataProps {
-    image: HTMLImageElement
+    image: {
+        src: string
+        alt: string
+    }
     title: string
     description?: string
     href: string
@@ -18,7 +21,11 @@ const ImageTiles: React.FC<ImageTilesProps> = ({ data }): JSX.Element => {
             <div className='b-imagetile'>
                 <div className='imagetile__container'>
                     <a href={data[0].href} className='imagetile__item'>
-                        <img src={data[0].image.src} alt={data[0].image.alt} />
+                        <img
+                            src={data[0].image.src}
+                            alt={data[0].image.alt}
+                            loading='lazy'
+                        />
                         <div className='imagetile__content'>
                             <h3>{data[0].title}</h3>
                             <p>{data[0].description}</p>
@@ -32,7 +39,11 @@ const ImageTiles: React.FC<ImageTilesProps> = ({ data }): JSX.Element => {
                             href={tile.href}
                             className='imagetile__item'
                         >
-                            <img src={tile.image.src} alt={tile.image.alt} />
+                            <img
+                                src={tile.image.src}
+                                alt={tile.image.alt}
+                                loading='lazy'
+                            />
                             <div className='imagetile__content'>
                                 <h3>{tile.title}</h3>
                                 {tile.description && <p>{tile.description}</p>}
