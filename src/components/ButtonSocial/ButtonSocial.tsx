@@ -1,14 +1,20 @@
 import React from 'react'
 import Icon from '@components/Icon/Icon'
 
-interface ButtonProps {
+export interface ButtonSocialProps {
     url: string
     text: string
-    type: string // TODO: Fix default types. E.G. 'facebook | 'instagram'
+    type:
+        | 'facebook'
+        | 'instagram'
+        | 'twitter'
+        | 'youtube'
+        | 'linkedin'
+        | 'pinterest'
     className?: string
 }
 
-const ButtonSocial: React.FC<ButtonProps> = ({
+const ButtonSocial: React.FC<ButtonSocialProps> = ({
     type,
     url,
     text,
