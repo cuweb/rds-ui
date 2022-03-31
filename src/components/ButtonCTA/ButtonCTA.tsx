@@ -2,7 +2,7 @@ import React from 'react'
 import Icon from '@components/Icon/Icon'
 
 interface ButtonProps {
-    ghost?: string
+    ghost?: boolean
     text: string
     link: string
     icon?: string

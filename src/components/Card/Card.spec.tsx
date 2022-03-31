@@ -5,7 +5,6 @@ describe('Card', () => {
         'news-variant-with-date',
         'news-variant-with-date-and-description',
         'video-variant',
-        'people-variant',
         'figure-variant',
         'figure-variant-without-link',
         'max-width-variant',
@@ -293,118 +292,6 @@ describe('Card', () => {
             )}/iframe.html?id=components-card--video-variant`
         )
         cy.get(`svg`).should('exist')
-    })
-
-    // People variant
-
-    it(`People variant: Should render the c-card--people`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`.c-card--people`).should('exist')
-    })
-
-    it(`People variant: Should render anchor element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`a`).should('exist')
-    })
-
-    it(`People variant: Should render image element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`img`).should('exist')
-    })
-
-    it(`People variant: Should render header element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`header`).should('exist')
-    })
-
-    it(`People variant: Should render section heading element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`h3`).should('exist')
-    })
-
-    it(`People variant: Should render paragraph element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`p`).should('exist')
-    })
-
-    // People variant
-
-    it(`People variant: Should render the c-card--people`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`.c-card--people`).should('exist')
-    })
-
-    it(`People variant: Should render anchor element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`a`).should('exist')
-    })
-
-    it(`People variant: Should render image element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`img`).should('exist')
-    })
-
-    it(`People variant: Should render header element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`header`).should('exist')
-    })
-
-    it(`People variant: Should render section heading element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`h3`).should('exist')
-    })
-
-    it(`People variant: Should render paragraph element`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=components-card--people-variant`
-        )
-        cy.get(`p`).should('exist')
     })
 
     // Figure variant

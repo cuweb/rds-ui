@@ -15,7 +15,7 @@ import theme from 'config/theme'
 
 export interface MastheadProps {
     title: string
-    url: string
+    url?: string
     brand?: MastHeadBrand
     actions?: MastheadActionsTypes
     menu?: NavMenuItemTypes[]
@@ -23,7 +23,7 @@ export interface MastheadProps {
 
 const Masthead: React.FC<MastheadProps> = ({
     title,
-    url,
+    url = '/',
     brand,
     actions,
     menu,

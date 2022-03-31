@@ -1,6 +1,6 @@
+import Icon from './Icon'
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import Icon from './Icon'
 
 export default {
     component: Icon,
@@ -177,6 +177,9 @@ DiffAdded.args = { icon: 'diff-added' }
 export const Dining = Template.bind({})
 Dining.args = { icon: 'dining' }
 
+export const Doc = Template.bind({})
+Doc.args = { icon: 'doc' }
+
 export const Documents = Template.bind({})
 Documents.args = { icon: 'documents' }
 
@@ -215,6 +218,9 @@ FileSymlinkDirectory.args = { icon: 'file-symlink-directory' }
 
 export const FileSymlinkFile = Template.bind({})
 FileSymlinkFile.args = { icon: 'file-symlink-file' }
+
+export const FileUpload = Template.bind({})
+FileUpload.args = { icon: 'file-upload' }
 
 export const FileWord = Template.bind({})
 FileWord.args = { icon: 'file-word' }
@@ -405,6 +411,9 @@ Parking.args = { icon: 'parking' }
 export const Parliament = Template.bind({})
 Parliament.args = { icon: 'parliament' }
 
+export const Pdf = Template.bind({})
+Pdf.args = { icon: 'pdf' }
+
 export const Pencil = Template.bind({})
 Pencil.args = { icon: 'pencil' }
 
@@ -428,6 +437,9 @@ Plug.args = { icon: 'plug' }
 
 export const Plus = Template.bind({})
 Plus.args = { icon: 'plus' }
+
+export const Ppt = Template.bind({})
+Ppt.args = { icon: 'ppt' }
 
 export const Project = Template.bind({})
 Project.args = { icon: 'project' }
@@ -576,6 +588,9 @@ Verified.args = { icon: 'verified' }
 export const Versions = Template.bind({})
 Versions.args = { icon: 'versions' }
 
+export const Video = Template.bind({})
+Video.args = { icon: 'video' }
+
 export const VideoPlayer = Template.bind({})
 VideoPlayer.args = { icon: 'video-player' }
 
@@ -588,8 +603,14 @@ Watch.args = { icon: 'watch' }
 export const X = Template.bind({})
 X.args = { icon: 'X' }
 
+export const Xls = Template.bind({})
+Xls.args = { icon: 'xls' }
+
 export const Youtube = Template.bind({})
 Youtube.args = { icon: 'youtube' }
 
 export const Zap = Template.bind({})
 Zap.args = { icon: 'zap' }
+
+export const Zip = Template.bind({})
+Zip.args = { icon: 'zip' }

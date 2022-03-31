@@ -138,27 +138,6 @@
     }
 }
 
-// People variant
-//===============
-.c-card--people {
-    text-align: center;
-    border-top: 1px solid $grey;
-
-    &:after {
-        left: calc(50% - 12.5px) !important;
-    }
-}
-.c-card--people figure {
-    padding-top: 20px;
-
-    img {
-        border-radius: 50%;
-        border: 5px solid rgba($grey-yoda, 0.75);
-        margin: 0 auto;
-        max-width: 55%;
-    }
-}
-
 .c-card--figure {
     text-align: center;
 

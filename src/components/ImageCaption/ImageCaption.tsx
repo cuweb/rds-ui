@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface ImageCaptionProps {
-    id: string
+    id?: string
     caption: string
     image: ImageProps
 }
@@ -19,7 +19,7 @@ const ImageCaption: React.FC<ImageCaptionProps> = ({
     return (
         <figure
             className='c-imgcaption'
-            aria-labelledby={`figcaption_id_${id}`}
+            aria-labelledby={id ? `figcaption_id_${id}` : ''}
         >
             <img src={image.src} alt={image.alt} />
             <figcaption dangerouslySetInnerHTML={{ __html: caption }} />

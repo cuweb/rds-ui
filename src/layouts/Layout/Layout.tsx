@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Layout = (props: { children?: React.ReactNode; type?: string }) => {
+interface LayoutProps {
+    type?: 'am' | 'ma' | 'ama' | undefined
+}
+
+const Layout: FC<LayoutProps> = (props): JSX.Element => {
     const { children, type } = props
     const styles = type ? `l-multicol l-multicol--${type}` : ''
 
