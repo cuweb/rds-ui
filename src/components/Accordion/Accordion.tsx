@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export interface AccordionProps {
-    type?: 'single' | undefined
+    type?: 'base' | 'single' | undefined
     data: AccordionItemProps[]
 }
 
@@ -11,11 +11,13 @@ export interface AccordionItemProps {
     content: string
 }
 
-const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
-    const types = type === undefined ? 'base' : type
-    const accordionClass = types === 'single' ? 'accordion__input--single' : ''
-    const accordionType = types === 'single' ? 'radio' : 'checkbox'
-    const accordionId = types === 'single' ? 's' : ''
+const Accordion: React.FC<AccordionProps> = ({
+    type = 'base',
+    data,
+}): JSX.Element => {
+    const accordionClass = type === 'single' ? 'accordion__input--single' : ''
+    const accordionType = type === 'single' ? 'radio' : 'checkbox'
+    const accordionId = type === 'single' ? 's' : ''
     const [ariaState, setAriaState] = useState(
         new Array(data.length).fill(true)
     )
@@ -75,9 +77,9 @@ const Accordion: React.FC<AccordionProps> = ({ type, data }): JSX.Element => {
                         name={`accordion-${accordionType}`}
                         type='checkbox'
                         aria-expanded={!ariaState[index]}
-                        onClick={() => toggleHandler(index, types)}
+                        onClick={() => toggleHandler(index, type)}
                         checked={checkedState[index]}
-                        onChange={() => handleOnChange(index, types)}
+                        onChange={() => handleOnChange(index, type)}
                     />
                     <label
                         htmlFor={`accordion-id-${index}${accordionId}`}
