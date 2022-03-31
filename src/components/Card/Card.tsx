@@ -6,18 +6,18 @@ import PeopleVariantCard from './components/PeopleVariantCard'
 import VideoVariantCard from './components/VideoVariantCard'
 
 export interface CardProps {
-    type: 'base' | 'news' | 'video' | 'people' | 'figure'
+    type?: 'base' | 'news' | 'video' | 'people' | 'figure' | undefined
     link: string
     header: string
     description: string
     date: string
     caption: string
-    image: ImageProps
+    image: CardImageProps
 }
 
-export interface ImageProps {
+export interface CardImageProps {
     src: string
-    alt: string
+    alt?: string
 }
 
 export interface TypeProps {
@@ -25,7 +25,7 @@ export interface TypeProps {
 }
 
 const Card: React.FC<CardProps> = (props): JSX.Element => {
-    const { type } = props
+    const { type = 'base' } = props
 
     const cardTypes: TypeProps = {
         base: <BaseCard {...props} />,

@@ -11,6 +11,7 @@ export interface ButtonSocialProps {
         | 'youtube'
         | 'linkedin'
         | 'pinterest'
+        | string
     className?: string
 }
 

@@ -1,15 +1,11 @@
 import React from 'react'
+import { CardImageProps } from '../Card'
 
 export interface PeopleVariantCardProps {
     link: string
-    image: ImageProps
+    image: CardImageProps
     header: string
     description: string
-}
-
-export interface ImageProps {
-    src: string
-    alt: string
 }
 
 const PeopleVariantCard: React.FC<PeopleVariantCardProps> = ({
