@@ -1,0 +1,30 @@
+{
+    "title": "Card",
+    "classname": ".card",
+    "variations": [
+        {
+            "type": "peopleVariant",
+            "cardType": "people",
+            "link": "https://en.wikipedia.org/wiki/Bill_Murray",
+            "image": {
+                "src": "https://www.fillmurray.com/500/500",
+                "alt": "Read more about Bill Murray"
+            },
+            "firstName": "Bill",
+            "lastName": "Murray",
+            "description": "Actor and Writer"
+        },
+        {
+            "type": "peopleVariantWithoutImage",
+            "cardType": "people",
+            "link": "https://en.wikipedia.org/wiki/Bill_Murray",
+            "image": {
+                "src": "",
+                "alt": "Read more about Bill Murray"
+            },
+            "firstName": "Bill",
+            "lastName": "Murray",
+            "description": "Actor and Writer"
+        }
+    ]
+}

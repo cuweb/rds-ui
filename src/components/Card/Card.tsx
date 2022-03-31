@@ -1,18 +1,11 @@
 import React, { ReactElement } from 'react'
-import BaseCard, { BaseCardProps } from './components/BaseCard'
-import FigureVariantCard, {
-    FigureVariantCardProps,
-} from './components/FigureVariantCard'
-import NewsVariantCard, {
-    NewsVariantCardProps,
-} from './components/NewsVariantCard'
-import PeopleVariantCard, {
-    PeopleVariantCardProps,
-} from './components/PeopleVariantCard'
-import VideoVariantCard from './components/VideoVariantCard'
+import CardBase, { CardBaseProps } from './components/CardBase'
+import CardFigure, { CardFigureProps } from './components/CardFigure'
+import CardNews, { CardNewsProps } from './components/CardNews'
+import CardVideo, { CardVideoProps } from './components/CardVideo'
 
 export interface CardProps {
-    type?: 'base' | 'news' | 'video' | 'people' | 'figure' | undefined
+    type: 'base' | 'news' | 'video' | 'figure'
 }
 
 export interface CardImageProps {
@@ -25,20 +18,15 @@ export interface TypeProps {
 }
 
 const Card: React.FC<
-    CardProps &
-        NewsVariantCardProps &
-        PeopleVariantCardProps &
-        FigureVariantCardProps &
-        BaseCardProps
+    CardProps & CardBaseProps & CardNewsProps & CardFigureProps & CardVideoProps
 > = (props): JSX.Element => {
     const { type = 'base' } = props
 
     const cardTypes: TypeProps = {
-        base: <BaseCard {...props} />,
-        news: <NewsVariantCard {...props} />,
-        video: <VideoVariantCard {...props} />,
-        people: <PeopleVariantCard {...props} />,
-        figure: <FigureVariantCard {...props} />,
+        base: <CardBase {...props} />,
+        news: <CardNews {...props} />,
+        video: <CardVideo {...props} />,
+        figure: <CardFigure {...props} />,
     }
     return cardTypes[type || 'base']
 }

@@ -1,0 +1,284 @@
+[
+    {
+        "heading": {
+            "label": "Text Field",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "id": "input-text",
+            "type": "text",
+            "name": "text",
+            "placeholder": "This field has a placeholder"
+        }
+    },
+    {
+        "heading": {
+            "label": "Password",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "id": "input-password",
+            "type": "password",
+            "name": "password",
+            "placeholder": "******"
+        }
+    },
+    {
+        "heading": {
+            "label": "Number",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "number",
+            "name": "number",
+            "placeholder": "123567890"
+        }
+    },
+    {
+        "heading": {
+            "label": "Email",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "email",
+            "name": "email",
+            "placeholder": "email@email.com"
+        }
+    },
+    {
+        "heading": {
+            "label": "Url",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "url",
+            "name": "url",
+            "placeholder": "http://"
+        }
+    },
+    {
+        "heading": {
+            "label": "Search",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "search",
+            "name": "search",
+            "placeholder": "Search"
+        }
+    },
+    {
+        "heading": {
+            "label": "Phone",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "tel",
+            "name": "tel",
+            "placeholder": "+9(999)999.9999"
+        }
+    },
+    {
+        "heading": {
+            "label": "File Uploads",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "file",
+            "name": "file"
+        }
+    },
+    {
+        "heading": {
+            "label": "Text Area",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "textarea",
+            "as": "textarea",
+            "name": "textarea",
+            "placeholder": "This field has a placeholder",
+            "rows": 5
+        }
+    },
+    {
+        "heading": {
+            "label": "Slider",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "range",
+            "name": "range",
+            "min": 1000,
+            "max": 2000,
+            "step": 100
+        }
+    },
+    {
+        "heading": {
+            "label": "Date/Time",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "datetime-local",
+            "name": "datetime-local"
+        }
+    },
+    {
+        "heading": {
+            "label": "Date",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "date",
+            "name": "date"
+        }
+    },
+    {
+        "heading": {
+            "label": "Time",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "time",
+            "name": "time"
+        }
+    },
+    {
+        "heading": {
+            "label": "Select Lists",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "id": "field-select",
+            "type": "select",
+            "as": "select",
+            "name": "select"
+        },
+        "options": [
+            {
+                "text": "Red",
+                "value": "red"
+            },
+            {
+                "text": "Blue",
+                "value": "blue"
+            }
+        ]
+    },
+    {
+        "heading": {
+            "label": "Multi-Select Lists",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "id": "field-select-multiple",
+            "type": "select",
+            "as": "select",
+            "name": "select-multiple",
+            "multiple": true
+        },
+        "options": [
+            {
+                "text": "Red",
+                "value": "red"
+            },
+            {
+                "text": "Blue",
+                "value": "blue"
+            },
+            {
+                "text": "Green",
+                "value": "green"
+            },
+            {
+                "text": "Yellow",
+                "value": "yellow"
+            }
+        ]
+    },
+    {
+        "heading": {
+            "label": "Radio Buttons",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "id": "field-radio",
+            "type": "radio",
+            "name": "radio"
+        },
+        "options": [
+            {
+                "text": "Red",
+                "value": "red"
+            },
+            {
+                "text": "Blue",
+                "value": "blue"
+            }
+        ]
+    },
+    {
+        "heading": {
+            "label": "Checkboxes",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "id": "field-checkbox",
+            "type": "checkbox",
+            "name": "checkbox"
+        },
+        "options": [
+            {
+                "text": "Red",
+                "value": "red"
+            },
+            {
+                "text": "Blue",
+                "value": "blue"
+            }
+        ]
+    },
+    {
+        "heading": {
+            "label": "Required field",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "text",
+            "name": "required-field",
+            "required": true
+        }
+    },
+    {
+        "heading": {
+            "label": "Read only field",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "text",
+            "name": "read-only-field",
+            "value": "This field is read only",
+            "readOnly": true
+        }
+    },
+    {
+        "heading": {
+            "label": "Disabled field",
+            "description": "This example has the description above the input field"
+        },
+        "attributes": {
+            "type": "text",
+            "name": "disabled-field",
+            "value": "This field is disabled",
+            "disabled": true
+        }
+    },
+    {
+        "attributes": {
+            "type": "submit",
+            "name": "submit",
+            "value": "Submit form"
+        }
+    }
+]
