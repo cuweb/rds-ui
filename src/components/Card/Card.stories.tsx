@@ -1,6 +1,7 @@
 import Card from './Card'
 import data from './CardData.json'
 import getVariation from '../../functions/getVariation'
+import React from 'react'
 
 const { title, variations } = data
 
