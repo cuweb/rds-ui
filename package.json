@@ -2,7 +2,6 @@
     "name": "@marceloglacial/rds-beta",
     "version": "0.12.1",
     "author": "Carleton University",
-    "type": "module",
     "license": "MIT",
     "repository": {
         "type": "git",

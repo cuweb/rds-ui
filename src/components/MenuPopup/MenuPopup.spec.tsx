@@ -34,7 +34,9 @@ describe('Menu Popup  - Base', () => {
 describe('Menu Popup  - Menu', () => {
     it(`Should render container`, () => {
         cy.visit(
-            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-menu-popup--base`
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=components-menu-popup--base`
         )
         cy.get(`.c-menupopup button`).click()
         cy.get(`.menupopup__menu`).should('exist')
@@ -62,7 +64,7 @@ describe('Menu Popup  - Right Side', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-menu-popup--right-side-menu`
+            )}/iframe.html?id=components-menu-popup--right-side-menu`
         )
         cy.get(`.c-menupopup--right`).should('exist')
     })
@@ -73,7 +75,7 @@ describe('Menu Popup  - With Icons', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-menu-popup--with-icons`
+            )}/iframe.html?id=components-menu-popup--with-icons`
         )
         cy.get(`.c-menupopup button`).click()
         cy.get(`.c-icon`).should('exist')
