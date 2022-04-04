@@ -5,7 +5,7 @@ import data from './MenuPopupData.json'
 
 export default {
     component: MenuPopup,
-    title: `Blocks/Menu Popup`,
+    title: `Components/Menu Popup`,
 } as Meta
 
 export const Base = () => (
