@@ -32,10 +32,12 @@ const args = {
             {
                 title: 'Button 1',
                 link: '/',
+                icon: 'github',
                 subMenu: [
                     {
                         title: 'Button 1.1',
                         link: '/',
+                        icon: 'github',
                     },
                     {
                         title: 'Button 1.2',
@@ -47,6 +49,7 @@ const args = {
                 title: 'Button 2',
                 link: '/',
                 color: 'red',
+                icon: 'github',
             },
         ],
     },
