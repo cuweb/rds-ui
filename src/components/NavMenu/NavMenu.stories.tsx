@@ -5,7 +5,7 @@ import Overlay from '@layouts/Overlay/Overlay'
 
 export default {
     component: NavMenu,
-    title: `Blocks/NavMenu`,
+    title: `Components/NavMenu`,
 } as Meta
 
 const menu = [

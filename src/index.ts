@@ -40,6 +40,9 @@ import Video from './components/Video/Video'
 import Sidebar from './layouts/Layout/Sidebar'
 import Table from './components/Table/Table'
 import TextImage from './blocks/TextImage/TextImage'
+import Timeline from './blocks/Timeline/Timeline'
+import MenuPopup from './components/MenuPopup/MenuPopup'
+import NavMenu from './components/NavMenu/NavMenu'
 
 export {
     Accordion,
@@ -74,14 +77,17 @@ export {
     Logo,
     Main,
     Masthead,
+    MenuPopup,
+    NavMenu,
     Overlay,
-    Ublock,
-    Ugrid,
-    SearchForm,
     Panel,
-    Video,
+    SearchForm,
     Sidebar,
     SidebarMenu,
     Table,
+    Timeline,
     TextImage,
+    Ublock,
+    Ugrid,
+    Video,
 }
