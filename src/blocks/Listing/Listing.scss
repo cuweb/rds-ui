@@ -100,11 +100,13 @@
 //=============
 
 .b-listing.b-listing--news figure {
-    width: 30%;
+    width: auto;
+    max-width: 30%;
 
     @include media('>s') {
         margin-right: 30px;
-        width: 30%;
+        width: auto;
+        max-width: 30%;
     }
 }
 

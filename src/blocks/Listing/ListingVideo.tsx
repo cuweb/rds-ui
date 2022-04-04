@@ -1,15 +1,16 @@
 import React from 'react'
-import { ListingHeaderProps } from './ListingHeader'
-import ListingWrapper, { ListingWrapperProps } from './ListingWrapper'
+import Icon from '../../components/Icon/Icon'
+import { ListingHeaderProps } from './components/ListingHeader'
+import ListingWrapper from './components/ListingWrapper'
 
-export interface ListingPeopleProps {
-    data: ListProps[]
+export interface ListingVideoProps {
+    data: VideoListProps[]
+    hasUblock?: boolean
 }
 
-export interface ListProps {
+export interface VideoListProps {
     src: string
     title: string
-    description?: string
     image?: ImageProps
 }
 
@@ -18,12 +19,14 @@ export interface ImageProps {
     alt: string
 }
 
-const ListingPeople: React.FC<
-    ListingPeopleProps & ListingHeaderProps & ListingWrapperProps
-> = ({ header, data, hasUblock }): JSX.Element => {
+const ListingVideo: React.FC<ListingVideoProps & ListingHeaderProps> = ({
+    header,
+    data,
+    hasUblock = true,
+}): JSX.Element => {
     return (
-        <ListingWrapper type='people' header={header} hasUblock={hasUblock}>
-            <ul itemScope itemType='http://schema.org/Person'>
+        <ListingWrapper type='video' header={header} hasUblock={hasUblock}>
+            <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
                         <a href={item.src} itemProp='url'>
@@ -34,23 +37,16 @@ const ListingPeople: React.FC<
                                         alt={item.image.alt}
                                         itemProp='image'
                                     />
+                                    <Icon icon='video' />
                                 </figure>
                             )}
-                            <div>
+                            <div itemProp='name'>
                                 <h3
-                                    itemProp='name'
+                                    itemProp='headline'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,
                                     }}
                                 />
-                                {item.description && (
-                                    <p
-                                        itemProp='description'
-                                        dangerouslySetInnerHTML={{
-                                            __html: item.description,
-                                        }}
-                                    />
-                                )}
                             </div>
                         </a>
                     </li>
@@ -60,4 +56,4 @@ const ListingPeople: React.FC<
     )
 }
 
-export default ListingPeople
+export default ListingVideo

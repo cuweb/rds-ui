@@ -1,34 +1,75 @@
-import React, { ReactElement } from 'react'
-import ListingBase, { BaseListProps } from './components/ListingBase'
-import ListingEvent, { EventListProps } from './components/ListingEvent'
-import ListingNews, { NewsListProps } from './components/ListingNews'
-import ListingPeople from './components/ListingPeople'
-import ListingVideo, { VideoListProps } from './components/ListingVideo'
-import { ListingTypes, ListingWrapperProps } from './components/ListingWrapper'
+import React from 'react'
+import Icon from '@components/Icon/Icon'
+import { ListingHeaderProps } from './components/ListingHeader'
+import ListingWrapper from './components/ListingWrapper'
 
 export interface ListingProps {
-    type: ListingTypes
-    header?: string
-    noborder?: boolean
     data: BaseListProps[]
+    hasUblock?: boolean
 }
-export interface TypeProps {
-    [index: string]: ReactElement
+export interface BaseListProps {
+    src: string
+    title: string
+    description?: string
+    image?: ImageProps
+    badge?: string
+    icon?: string
+}
+export interface ImageProps {
+    src: string
+    alt: string
 }
 
-const Listing: React.FC<ListingProps & ListingWrapperProps> = (
-    props
-): JSX.Element => {
-    const { type } = props
-
-    const listTypes: TypeProps = {
-        base: <ListingBase {...props} />,
-        event: <ListingEvent {...props} />,
-        news: <ListingNews {...props} />,
-        people: <ListingPeople {...props} />,
-        video: <ListingVideo {...props} />,
-    }
-    return listTypes[type || 'base']
+const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
+    header,
+    data,
+    hasUblock = true,
+}): JSX.Element => {
+    return (
+        <ListingWrapper type='base' header={header} hasUblock={hasUblock}>
+            <ul itemScope itemType='http://schema.org/ItemList'>
+                {data.map((item, index) => (
+                    <li itemProp='item' key={index}>
+                        <a href={item.src} itemProp='url'>
+                            {item.image && (
+                                <figure>
+                                    <img
+                                        src={item.image.src}
+                                        alt={item.image.alt}
+                                        itemProp='image'
+                                    />
+                                </figure>
+                            )}
+                            {item.icon && item.icon && (
+                                <figure>
+                                    <Icon icon={item.icon} />
+                                </figure>
+                            )}
+                            <div itemProp='name'>
+                                <h3
+                                    itemProp='name'
+                                    dangerouslySetInnerHTML={{
+                                        __html: item.title,
+                                    }}
+                                />
+                                {item.description && (
+                                    <p
+                                        itemProp='description'
+                                        dangerouslySetInnerHTML={{
+                                            __html: item.description,
+                                        }}
+                                    />
+                                )}
+                            </div>
+                            {item.badge && (
+                                <span className='c-badge'>{item.badge}</span>
+                            )}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </ListingWrapper>
+    )
 }
 
 export default Listing

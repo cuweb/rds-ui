@@ -1,17 +1,16 @@
 import React from 'react'
-import convertDate from '@functions/convertDate'
-import { ListingHeaderProps } from './ListingHeader'
-import ListingWrapper, { ListingWrapperProps } from './ListingWrapper'
+import { ListingHeaderProps } from './components/ListingHeader'
+import ListingWrapper from './components/ListingWrapper'
 
-export interface ListingNewsProps {
-    data: NewsListProps[]
+export interface ListingPeopleProps {
+    data: ListProps[]
+    hasUblock?: boolean
 }
 
-export interface NewsListProps {
+export interface ListProps {
     src: string
     title: string
     description?: string
-    datetime: string
     image?: ImageProps
 }
 
@@ -20,12 +19,14 @@ export interface ImageProps {
     alt: string
 }
 
-const ListingNews: React.FC<
-    ListingNewsProps & ListingHeaderProps & ListingWrapperProps
-> = ({ header, data, hasUblock }): JSX.Element => {
+const ListingPeople: React.FC<ListingPeopleProps & ListingHeaderProps> = ({
+    header,
+    data,
+    hasUblock = true,
+}): JSX.Element => {
     return (
-        <ListingWrapper type='news' header={header} hasUblock={hasUblock}>
-            <ul itemScope itemType='http://schema.org/ItemList'>
+        <ListingWrapper type='people' header={header} hasUblock={hasUblock}>
+            <ul itemScope itemType='http://schema.org/Person'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
                         <a href={item.src} itemProp='url'>
@@ -38,16 +39,7 @@ const ListingNews: React.FC<
                                     />
                                 </figure>
                             )}
-                            <header
-                                itemScope
-                                itemType='http://schema.org/NewsArticle'
-                            >
-                                <time
-                                    dateTime={item.datetime}
-                                    itemProp='datePublished'
-                                >
-                                    {convertDate(item.datetime)}
-                                </time>
+                            <div>
                                 <h3
                                     itemProp='name'
                                     dangerouslySetInnerHTML={{
@@ -62,7 +54,7 @@ const ListingNews: React.FC<
                                         }}
                                     />
                                 )}
-                            </header>
+                            </div>
                         </a>
                     </li>
                 ))}
@@ -71,4 +63,4 @@ const ListingNews: React.FC<
     )
 }
 
-export default ListingNews
+export default ListingPeople

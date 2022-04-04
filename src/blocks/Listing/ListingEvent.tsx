@@ -1,11 +1,12 @@
 import convertDate from '@functions/convertDate'
 import convertTime from '@functions/convertTime'
 import React from 'react'
-import { ListingHeaderProps } from './ListingHeader'
-import ListingWrapper, { ListingWrapperProps } from './ListingWrapper'
+import { ListingHeaderProps } from './components/ListingHeader'
+import ListingWrapper from './components/ListingWrapper'
 
 export interface ListingEventProps {
     data: EventListProps[]
+    hasUblock?: boolean
 }
 
 export interface EventListProps {
@@ -22,9 +23,11 @@ export interface ImageProps {
     alt: string
 }
 
-const ListingEvent: React.FC<
-    ListingEventProps & ListingHeaderProps & ListingWrapperProps
-> = ({ header, data, hasUblock }): JSX.Element => {
+const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
+    header,
+    data,
+    hasUblock = true,
+}): JSX.Element => {
     return (
         <ListingWrapper type='event' header={header} hasUblock={hasUblock}>
             <ul itemScope itemType='http://schema.org/Event'>
