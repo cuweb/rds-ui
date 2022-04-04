@@ -2,22 +2,16 @@ import Ublock, { UblockProps } from '@components/Ublock/Ublock'
 import React, { FC, ReactElement } from 'react'
 import ListingHeader, { ListingHeaderProps } from './ListingHeader'
 
-export type ListingTypes =
-    | 'base'
-    | 'event'
-    | 'news'
-    | 'people'
-    | 'icon'
-    | 'video'
+export type ListingTypes = 'base' | 'event' | 'news' | 'people' | 'video'
 
 export interface ListingWrapperProps {
-    hasUblock?: boolean
+    noUblock?: boolean
     type: ListingTypes
     uBlockProps?: UblockProps
 }
 
 const ListingWrapper: FC<ListingWrapperProps & ListingHeaderProps> = ({
-    hasUblock = true,
+    noUblock,
     children,
     type,
     header,
@@ -31,8 +25,8 @@ const ListingWrapper: FC<ListingWrapperProps & ListingHeaderProps> = ({
             {children}
         </div>
     )
-    if (hasUblock) return <Ublock {...uBlockProps}>{content}</Ublock>
-    return content
+    if (noUblock) return content
+    return <Ublock {...uBlockProps}>{content}</Ublock>
 }
 
 export default ListingWrapper
