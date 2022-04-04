@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../../components/Icon/Icon'
+import Icon from '@components/Icon/Icon'
 import { ListingHeaderProps } from './components/ListingHeader'
 import ListingWrapper from './components/ListingWrapper'
 
@@ -37,7 +37,7 @@ const ListingVideo: React.FC<ListingVideoProps & ListingHeaderProps> = ({
                                         alt={item.image.alt}
                                         itemProp='image'
                                     />
-                                    <Icon icon='video' />
+                                    <Icon icon='video' size={32} />
                                 </figure>
                             )}
                             <div itemProp='name'>
