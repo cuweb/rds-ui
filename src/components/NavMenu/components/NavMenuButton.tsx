@@ -1,3 +1,4 @@
+import Icon from '@components/Icon/Icon'
 import React, { FC, MouseEvent } from 'react'
 import { NavMenuTypes } from '../NavMenu'
 
@@ -7,6 +8,7 @@ export interface NavMenuButtonProps {
     link: string
     onClick: (event: MouseEvent) => void
     isOpen: boolean
+    icon?: string
 }
 
 const NavMenuButton: FC<NavMenuButtonProps> = ({
@@ -14,6 +16,7 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
     title,
     link,
     isOpen,
+    icon,
     onClick,
 }): JSX.Element => {
     const buttonTypes = {
@@ -25,6 +28,9 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
                 onClick={(e: never) => onClick(e)}
             >
                 <span className='u-visually-hidden'>Show submenu for</span>
+                {icon && (
+                    <Icon className='c-navmenu__icon' icon={icon} size={16} />
+                )}
                 {title}
             </button>
         ),
