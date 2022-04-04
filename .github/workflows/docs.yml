@@ -2,6 +2,8 @@ name: Build Docs
 on:
     release:
         types: [published]
+env:
+    NOPRESCRIPTS: 1
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
