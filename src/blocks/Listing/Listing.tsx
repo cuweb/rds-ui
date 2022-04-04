@@ -10,11 +10,7 @@ export interface ListingProps {
     type: ListingTypes
     header?: string
     noborder?: boolean
-    data: BaseListProps[] &
-        EventListProps[] &
-        NewsListProps[] &
-        VideoListProps[]
-    hasIcon?: boolean
+    data: BaseListProps[]
 }
 export interface TypeProps {
     [index: string]: ReactElement
@@ -27,7 +23,6 @@ const Listing: React.FC<ListingProps & ListingWrapperProps> = (
 
     const listTypes: TypeProps = {
         base: <ListingBase {...props} />,
-        icon: <ListingBase hasIcon {...props} />,
         event: <ListingEvent {...props} />,
         news: <ListingNews {...props} />,
         people: <ListingPeople {...props} />,

@@ -5,7 +5,6 @@ import ListingWrapper, { ListingWrapperProps } from './ListingWrapper'
 
 export interface ListingBaseProps {
     data: BaseListProps[]
-    hasIcon?: boolean
 }
 export interface BaseListProps {
     src: string
@@ -22,7 +21,7 @@ export interface ImageProps {
 
 const ListingBase: React.FC<
     ListingBaseProps & ListingHeaderProps & ListingWrapperProps
-> = ({ header, data, hasIcon, hasUblock }): JSX.Element => {
+> = ({ header, data, hasUblock }): JSX.Element => {
     return (
         <ListingWrapper type='base' header={header} hasUblock={hasUblock}>
             <ul itemScope itemType='http://schema.org/ItemList'>
@@ -38,7 +37,7 @@ const ListingBase: React.FC<
                                     />
                                 </figure>
                             )}
-                            {hasIcon && item.icon && (
+                            {item.icon && item.icon && (
                                 <figure>
                                     <Icon icon={item.icon} />
                                 </figure>
