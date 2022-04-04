@@ -15,6 +15,9 @@ jobs:
             - name: 📦 install
               run: yarn install
 
+            - name: 🔧 build app
+              run: yarn build
+
             - name: 🔧 build docs
               run: yarn build:docs
 
