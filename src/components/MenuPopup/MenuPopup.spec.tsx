@@ -5,7 +5,9 @@ describe('Menu Popup  - Base', () => {
 
     it(`Should render container`, () => {
         cy.visit(
-            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-menu-popup--base`
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=components-menu-popup--base`
         )
         cy.get(`.c-menupopup`).should('exist')
     })
