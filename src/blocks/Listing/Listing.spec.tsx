@@ -1,4 +1,4 @@
-const testBaseUrl = (type: string) => {
+const testUrl = (type: string) => {
     it(`Should visit the page`, () => {
         cy.visit(
             `${Cypress.env('baseUrl')}/iframe.html?id=blocks-listing--${type}`
@@ -77,7 +77,7 @@ const testItemType = (type: string) => {
     const itemTypes: itemsType = {
         default: 'ItemList',
         people: 'Person',
-        event: 'Event',
+        events: 'Event',
     }
     it(`Should render the right itemType`, () => {
         cy.get(
@@ -166,17 +166,17 @@ const types = [
     'with-image',
     'with-badge',
     'with-icon',
-    'icon-and-subtitle',
-    'event-variant',
+    'files-listing',
+    'events-variant',
     'news-variant',
-    'news-image-variant',
+    'news-variant-with-image',
     'people-variant',
     'video-variant',
     'two-column',
 ]
 types.map((type) => {
     describe(`Listings ${type.split('-').join(' ')}`, () => {
-        testBaseUrl(type)
+        testUrl(type)
         testUblock()
         testHeading(type)
         testContainer()

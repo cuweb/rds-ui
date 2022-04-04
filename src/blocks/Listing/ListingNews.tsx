@@ -1,30 +1,33 @@
 import React from 'react'
-import Icon from '../../../components/Icon/Icon'
-import { ListingHeaderProps } from './ListingHeader'
-import ListingWrapper, { ListingWrapperProps } from './ListingWrapper'
+import convertDate from '@functions/convertDate'
+import { ListingHeaderProps } from './components/ListingHeader'
+import ListingWrapper from './components/ListingWrapper'
 
-export interface ListingBaseProps {
-    data: BaseListProps[]
-    hasIcon?: boolean
+export interface ListingNewsProps {
+    data: NewsListProps[]
+    noUblock?: boolean
 }
-export interface BaseListProps {
+
+export interface NewsListProps {
     src: string
     title: string
     description?: string
+    datetime: string
     image?: ImageProps
-    badge?: string
-    icon?: string
 }
+
 export interface ImageProps {
     src: string
     alt: string
 }
 
-const ListingBase: React.FC<
-    ListingBaseProps & ListingHeaderProps & ListingWrapperProps
-> = ({ header, data, hasIcon, hasUblock }): JSX.Element => {
+const ListingNews: React.FC<ListingNewsProps & ListingHeaderProps> = ({
+    header,
+    data,
+    noUblock,
+}): JSX.Element => {
     return (
-        <ListingWrapper type='base' header={header} hasUblock={hasUblock}>
+        <ListingWrapper type='news' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
@@ -38,12 +41,16 @@ const ListingBase: React.FC<
                                     />
                                 </figure>
                             )}
-                            {hasIcon && item.icon && (
-                                <figure>
-                                    <Icon icon={item.icon} />
-                                </figure>
-                            )}
-                            <div itemProp='name'>
+                            <header
+                                itemScope
+                                itemType='http://schema.org/NewsArticle'
+                            >
+                                <time
+                                    dateTime={item.datetime}
+                                    itemProp='datePublished'
+                                >
+                                    {convertDate(item.datetime)}
+                                </time>
                                 <h3
                                     itemProp='name'
                                     dangerouslySetInnerHTML={{
@@ -58,10 +65,7 @@ const ListingBase: React.FC<
                                         }}
                                     />
                                 )}
-                            </div>
-                            {item.badge && (
-                                <span className='c-badge'>{item.badge}</span>
-                            )}
+                            </header>
                         </a>
                     </li>
                 ))}
@@ -70,4 +74,4 @@ const ListingBase: React.FC<
     )
 }
 
-export default ListingBase
+export default ListingNews

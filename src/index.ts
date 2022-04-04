@@ -22,6 +22,10 @@ import ImageCaption from './components/ImageCaption/ImageCaption'
 import Layout from './layouts/Layout/Layout'
 import LinkWrapper from './components/LinkWrapper/LinkWrapper'
 import Listing from './blocks/Listing/Listing'
+import ListingEvent from './blocks/Listing/ListingEvent'
+import ListingNews from './blocks/Listing/ListingNews'
+import ListingPeople from './blocks/Listing/ListingPeople'
+import ListingVideo from './blocks/Listing/ListingVideo'
 import Login from './blocks/Login/Login'
 import Logo from './components/Logo/Logo'
 import Main from './layouts/Layout/Main'
@@ -36,6 +40,9 @@ import Video from './components/Video/Video'
 import Sidebar from './layouts/Layout/Sidebar'
 import Table from './components/Table/Table'
 import TextImage from './blocks/TextImage/TextImage'
+import Timeline from './blocks/Timeline/Timeline'
+import MenuPopup from './components/MenuPopup/MenuPopup'
+import NavMenu from './components/NavMenu/NavMenu'
 
 export {
     Accordion,
@@ -62,18 +69,25 @@ export {
     Layout,
     LinkWrapper,
     Listing,
+    ListingEvent,
+    ListingNews,
+    ListingPeople,
+    ListingVideo,
     Login,
     Logo,
     Main,
     Masthead,
+    MenuPopup,
+    NavMenu,
     Overlay,
-    Ublock,
-    Ugrid,
-    SearchForm,
     Panel,
-    Video,
+    SearchForm,
     Sidebar,
     SidebarMenu,
     Table,
+    Timeline,
     TextImage,
+    Ublock,
+    Ugrid,
+    Video,
 }

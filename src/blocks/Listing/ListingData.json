@@ -9,19 +9,15 @@
             "noborder": true,
             "data": [
                 {
-                    "src": "https://en.wikipedia.org/wiki/White-necked_raven",
                     "title": "White-necked Raven"
                 },
                 {
-                    "src": "https://en.wikipedia.org/wiki/Common_raven",
                     "title": "Common raven"
                 },
                 {
-                    "src": "https://en.wikipedia.org/wiki/Australian_raven",
                     "title": "Australian raven"
                 },
                 {
-                    "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
                     "title": "Thick-billed raven"
                 }
             ]
