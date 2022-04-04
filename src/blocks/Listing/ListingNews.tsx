@@ -5,7 +5,7 @@ import ListingWrapper from './components/ListingWrapper'
 
 export interface ListingNewsProps {
     data: NewsListProps[]
-    hasUblock?: boolean
+    noUblock?: boolean
 }
 
 export interface NewsListProps {
@@ -24,10 +24,10 @@ export interface ImageProps {
 const ListingNews: React.FC<ListingNewsProps & ListingHeaderProps> = ({
     header,
     data,
-    hasUblock = true,
+    noUblock,
 }): JSX.Element => {
     return (
-        <ListingWrapper type='news' header={header} hasUblock={hasUblock}>
+        <ListingWrapper type='news' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>

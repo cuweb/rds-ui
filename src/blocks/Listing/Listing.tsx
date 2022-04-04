@@ -5,7 +5,7 @@ import ListingWrapper from './components/ListingWrapper'
 
 export interface ListingProps {
     data: BaseListProps[]
-    hasUblock?: boolean
+    noUblock?: boolean
 }
 export interface BaseListProps {
     src: string
@@ -23,10 +23,10 @@ export interface ImageProps {
 const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
     header,
     data,
-    hasUblock = true,
+    noUblock,
 }): JSX.Element => {
     return (
-        <ListingWrapper type='base' header={header} hasUblock={hasUblock}>
+        <ListingWrapper type='base' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
@@ -42,7 +42,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
                             )}
                             {item.icon && item.icon && (
                                 <figure>
-                                    <Icon icon={item.icon} />
+                                    <Icon icon={item.icon} size={45} />
                                 </figure>
                             )}
                             <div itemProp='name'>

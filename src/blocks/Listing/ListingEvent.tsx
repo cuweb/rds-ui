@@ -6,7 +6,7 @@ import ListingWrapper from './components/ListingWrapper'
 
 export interface ListingEventProps {
     data: EventListProps[]
-    hasUblock?: boolean
+    noUblock?: boolean
 }
 
 export interface EventListProps {
@@ -26,10 +26,10 @@ export interface ImageProps {
 const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
     header,
     data,
-    hasUblock = true,
+    noUblock,
 }): JSX.Element => {
     return (
-        <ListingWrapper type='event' header={header} hasUblock={hasUblock}>
+        <ListingWrapper type='event' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/Event'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>

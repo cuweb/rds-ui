@@ -4,7 +4,7 @@ import ListingWrapper from './components/ListingWrapper'
 
 export interface ListingPeopleProps {
     data: ListProps[]
-    hasUblock?: boolean
+    noUblock?: boolean
 }
 
 export interface ListProps {
@@ -22,10 +22,10 @@ export interface ImageProps {
 const ListingPeople: React.FC<ListingPeopleProps & ListingHeaderProps> = ({
     header,
     data,
-    hasUblock = true,
+    noUblock,
 }): JSX.Element => {
     return (
-        <ListingWrapper type='people' header={header} hasUblock={hasUblock}>
+        <ListingWrapper type='people' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/Person'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>

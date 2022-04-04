@@ -5,7 +5,7 @@ import ListingWrapper from './components/ListingWrapper'
 
 export interface ListingVideoProps {
     data: VideoListProps[]
-    hasUblock?: boolean
+    noUblock?: boolean
 }
 
 export interface VideoListProps {
@@ -22,10 +22,10 @@ export interface ImageProps {
 const ListingVideo: React.FC<ListingVideoProps & ListingHeaderProps> = ({
     header,
     data,
-    hasUblock = true,
+    noUblock,
 }): JSX.Element => {
     return (
-        <ListingWrapper type='video' header={header} hasUblock={hasUblock}>
+        <ListingWrapper type='video' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>

@@ -5,6 +5,8 @@ import ListingEvent from './ListingEvent'
 import ListingNews from './ListingNews'
 import ListingPeople from './ListingPeople'
 import ListingVideo from './ListingVideo'
+import Ublock from '@components/Ublock/Ublock'
+import Ugrid from '@components/Ugrid/Ugrid'
 
 export default {
     component: Listing,
@@ -390,19 +392,53 @@ export const VideoVariant = () => {
     )
 }
 
-// export const TwoColumn = () => {
-//     return (
-//         <Ublock>
-//             <Ugrid columns={2}>
-//                 <Listing
-//                     //                     data={getVariation('base', variations).data}
-//                     hasUblock={false}
-//                 />
-//                 <Listing
-//                     //                     data={getVariation('base', variations).data}
-//                     hasUblock={false}
-//                 />
-//             </Ugrid>
-//         </Ublock>
-//     )
-// }
+export const TwoColumn = () => {
+    return (
+        <Ublock>
+            <Ugrid columns={2}>
+                <Listing
+                    noUblock
+                    data={[
+                        {
+                            src: '#',
+                            title: 'White-necked Raven',
+                        },
+                        {
+                            src: '#',
+                            title: 'Common raven',
+                        },
+                        {
+                            src: '#',
+                            title: 'Australian raven',
+                        },
+                        {
+                            src: '#',
+                            title: 'Thick-billed raven',
+                        },
+                    ]}
+                />
+                <Listing
+                    noUblock
+                    data={[
+                        {
+                            src: '#',
+                            title: 'White-necked Raven',
+                        },
+                        {
+                            src: '#',
+                            title: 'Common raven',
+                        },
+                        {
+                            src: '#',
+                            title: 'Australian raven',
+                        },
+                        {
+                            src: '#',
+                            title: 'Thick-billed raven',
+                        },
+                    ]}
+                />{' '}
+            </Ugrid>
+        </Ublock>
+    )
+}
