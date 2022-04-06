@@ -48,6 +48,11 @@ body {
         'Segoe UI Symbol';
     font-style: normal;
     color: $black;
+
+    &.raven-mode {
+        color: white;
+        background-color: #444444;
+    }
 }
 
 // #content {
@@ -76,6 +81,14 @@ a {
 
     &:focus {
         outline: 0 none;
+    }
+}
+
+.raven-mode a {
+    color: $red-dark;
+
+    &:hover {
+        text-decoration: underline;
     }
 }
 
