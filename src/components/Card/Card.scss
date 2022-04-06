@@ -174,3 +174,11 @@
         display: none;
     }
 }
+
+.raven-mode .c-card {
+    background-color: $grey-emperor;
+
+    a {
+        color: white !important;
+    }
+}
