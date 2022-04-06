@@ -9,7 +9,7 @@ export default {
 
 const args = {
     title: 'Ravens Design System',
-    url: 'https://github.com/cuweb/rds-beta',
+    url: 'https://github.com/cuweb/rds-ui',
     actions: {
         search: {
             title: 'Search',
