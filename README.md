@@ -1,4 +1,4 @@
-![Cypress workflow](https://github.com/cuweb/rds-react/actions/workflows/main.yml/badge.svg)
+![Cypress workflow](https://github.com/cuweb/rds-ui/actions/workflows/main.yml/badge.svg)
 
 # Raven Design System UI
 
@@ -15,7 +15,7 @@ RDS, Carleton University’s design system, is a living digital organism uniting
 ### Clone this repo
 
 ```bash 
-git clone git@github.com:cuweb/rds-react.git
+git clone git@github.com:cuweb/rds-ui.git
 ```
 
 ### Check your nvm version
