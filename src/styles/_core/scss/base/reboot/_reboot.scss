@@ -51,7 +51,7 @@ body {
 
     &.raven-mode {
         color: white;
-        background-color: #444444;
+        background-color: #333333;
     }
 }
 
@@ -76,19 +76,26 @@ a {
     font-weight: 500;
     text-decoration: none;
     outline: none;
-    color: $black;
+    color: $link;
+    border-bottom: 1px solid #c8dae3;
     cursor: pointer;
 
     &:focus {
         outline: 0 none;
     }
+    &:hover {
+        color: $red;
+        border-color: $red;
+    }
 }
 
 .raven-mode a {
-    color: $red-dark;
+    color: $link-dark;
+    border-color: $link-dark;
 
     &:hover {
-        text-decoration: underline;
+        color: $grey-anakin;
+        border-color: $grey-anakin;
     }
 }
 

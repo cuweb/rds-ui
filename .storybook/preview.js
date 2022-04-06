@@ -4,7 +4,7 @@ import '../dist/rds.css'
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
     darkMode: {
-        dark: { ...themes.dark, appBg: '#444444' },
+        dark: { ...themes.dark, appBg: '#333333' },
         darkClass: 'raven-mode',
         stylePreview: true,
     },

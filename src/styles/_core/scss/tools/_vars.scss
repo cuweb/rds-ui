@@ -49,9 +49,11 @@ $block-padding-m: 30px !default;
 
 // CU digital near black
 $black: #222;
+$black-soft: #333333;
 
 // CU digital grey
 $grey: #f3f3f3;
+$grey-dark: #4d4d4d;
 
 // CU digital red
 $red: #bf112b;
@@ -60,6 +62,7 @@ $light-red: #f9e6e9;
 
 // Main link color
 $link: #105f83;
+$link-dark: $red-dark;
 
 // Other colors
 $blue: #91d5ff; // info foreground
