@@ -1,11 +1,11 @@
 {
-    "name": "@marceloglacial/rds-beta",
-    "version": "0.13.0",
+    "name": "@carleton/rds-ui",
+    "version": "1.0.0",
     "author": "Carleton University",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git://github.com/cuweb/rds-beta.git"
+        "url": "git://github.com/cuweb/rds-ui.git"
     },
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
