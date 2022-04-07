@@ -77,7 +77,7 @@ a {
     text-decoration: none;
     outline: none;
     color: $link;
-    border-bottom: 1px solid #c8dae3;
+    border-bottom: 1px solid $link-border;
     cursor: pointer;
 
     &:focus {
