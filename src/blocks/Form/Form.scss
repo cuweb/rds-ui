@@ -353,3 +353,9 @@ input[type='color'] {
     height: 64px;
     padding: 8px;
 }
+
+.raven-mode {
+    .form__field--button input {
+        box-shadow: none;
+    }
+}
