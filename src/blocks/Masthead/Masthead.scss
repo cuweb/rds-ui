@@ -310,25 +310,6 @@ body {
             fill: $dark-icon-fill;
         }
     }
-    .c-menupopup > button + ul {
-        background-color: $dark-background-hover;
-        color: white;
-        border-color: $dark-border-color-light;
-
-        a:hover {
-            color: $dark-font-color;
-            background-color: $dark-background;
-            z-index: 999;
-        }
-
-        &::before {
-            border-bottom-color: $dark-border-color-light;
-        }
-
-        &::after {
-            border-bottom-color: $dark-background-hover;
-        }
-    }
 
     .masthead__actions {
         li {

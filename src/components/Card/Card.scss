@@ -175,10 +175,25 @@
     }
 }
 
-.raven-mode .c-card {
-    background-color: $black;
+.raven-mode {
+    .c-card {
+        background-color: $dark-background-hard;
 
-    a {
-        color: white !important;
+        a {
+            color: white !important;
+
+            p {
+                color: $dark-font-color;
+            }
+        }
+    }
+    .c-card--figure a p {
+        color: $dark-font-color;
+    }
+    .c-card--people {
+        border-color: $dark-background-hard;
+    }
+    .card-initials {
+        color: $black;
     }
 }

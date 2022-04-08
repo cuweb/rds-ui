@@ -1,5 +1,13 @@
 .c-menupopup {
     position: relative;
+
+    a {
+        border: none;
+
+        &:hover {
+            border: none;
+        }
+    }
 }
 
 // carrot added showing submenu
@@ -113,4 +121,36 @@
 
 .popup__sep {
     border-top: 1px solid $grey-yoda;
+}
+
+.raven-mode .c-menupopup {
+    & > button + ul {
+        background-color: $dark-background-hover;
+        color: white;
+        border-color: $dark-border-color-light;
+
+        a:hover {
+            color: $dark-font-color;
+            background-color: $dark-background;
+            z-index: 999;
+        }
+
+        &::before {
+            border-bottom-color: $dark-border-color-light;
+        }
+
+        &::after {
+            border-bottom-color: $dark-background-hover;
+        }
+    }
+    & > button + ul a {
+        color: $dark-font-color;
+    }
+    .popup__sep {
+        border-color: $dark-border-color;
+    }
+
+    .c-icon {
+        fill: $dark-icon-fill;
+    }
 }
