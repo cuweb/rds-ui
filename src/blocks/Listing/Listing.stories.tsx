@@ -153,22 +153,22 @@ export const WithIcon = () => {
                 {
                     src: '#',
                     title: 'White-necked Raven',
-                    icon: 'mark-ravens',
+                    icon: 'github',
                 },
                 {
                     src: '#',
                     title: 'Common raven',
-                    icon: 'mark-ravens',
+                    icon: 'twitter',
                 },
                 {
                     src: '#',
                     title: 'Australian raven',
-                    icon: 'mark-ravens',
+                    icon: 'facebook',
                 },
                 {
                     src: '#',
                     title: 'Thick-billed raven',
-                    icon: 'mark-ravens',
+                    icon: 'linkedin',
                 },
             ]}
         />

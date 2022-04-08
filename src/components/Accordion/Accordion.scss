@@ -31,9 +31,9 @@
 }
 
 .raven-mode .c-accordion a {
-    color: $link-dark;
+    color: $dark-link;
     background-color: unset;
-    border-bottom: 1px solid $link-dark;
+    border-bottom: 1px solid $dark-link;
 
     &:hover {
         border-color: $grey-anakin;
