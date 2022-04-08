@@ -45,9 +45,11 @@
             font-size: 16px;
             padding: 12px 10px;
             line-height: 1.4;
+            border: none;
 
             &:hover {
                 color: $red;
+                border: none;
             }
         }
 
@@ -160,6 +162,10 @@ dialog {
                 display: block;
                 color: $grey-emperor;
                 padding: 10px 15px;
+                border: none;
+                &:hover {
+                    border: none;
+                }
             }
 
             ul {
@@ -205,6 +211,28 @@ dialog {
                     border: none;
                 }
             }
+        }
+    }
+}
+
+.raven-mode {
+    .c-nav:not(.c-nav--topnav) {
+        li:not(.nav__expand) a:hover,
+        .is-submenu li a {
+            color: white;
+        }
+        button[aria-expanded='true'],
+        button:hover {
+            background-color: transparent;
+        }
+
+        & > ul > li {
+            border-color: $dark-border-color;
+        }
+
+        & > ul > .has-submenu.open {
+            box-shadow: none;
+            border-bottom: solid 3px $dark-border-color;
         }
     }
 }
