@@ -88,3 +88,9 @@ footer .c-buttoncta {
     padding: 0.5rem 1.25rem;
     font-size: $pixel14;
 }
+
+.raven-mode {
+    .c-buttoncta:hover {
+        background-color: $dark-background-soft;
+    }
+}
