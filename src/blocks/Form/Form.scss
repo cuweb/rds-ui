@@ -354,8 +354,42 @@ input[type='color'] {
     padding: 8px;
 }
 
-.raven-mode {
+.raven-mode .b-form {
+    color: $dark-font-color-soft;
     .form__field--button input {
         box-shadow: none;
+    }
+    .form__upload {
+        background: unset;
+        border-color: $dark-border-color-light;
+
+        input {
+            background: unset;
+        }
+        svg {
+            fill: $dark-icon-fill;
+        }
+    }
+    textarea,
+    select,
+    input {
+        background-color: $dark-background;
+        color: $dark-font-color;
+        border-color: $dark-border-color-light;
+        &::placeholder {
+            color: $dark-font-color-soft;
+        }
+
+        &:disabled {
+            background-color: $dark-background-hard;
+            color: $dark-font-color-soft;
+        }
+    }
+    fieldset {
+        color: $dark-font-color;
+        border-color: $dark-border-color-light;
+    }
+    label {
+        color: $dark-font-color;
     }
 }
