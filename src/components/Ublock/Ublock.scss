@@ -166,3 +166,10 @@ aside > .u-block--panel {
         max-width: none;
     }
 }
+
+.raven-mode {
+    .u-block--white,
+    .u-block--grey {
+        color: $black;
+    }
+}
