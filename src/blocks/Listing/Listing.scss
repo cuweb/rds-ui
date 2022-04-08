@@ -298,7 +298,7 @@ aside .b-listing--people {
 
 .raven-mode .b-listing {
     a {
-        border-bottom: $dark-border;
+        border-bottom: $dark-border-color;
         color: $dark-font-color;
 
         &:hover {
@@ -317,10 +317,10 @@ aside .b-listing--people {
     }
     & > ul,
     & > ul > li {
-        border-color: $dark-border;
+        border-color: $dark-border-color;
     }
 
     a svg {
-        fill: white;
+        fill: $dark-icon-fill;
     }
 }
