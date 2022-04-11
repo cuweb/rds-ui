@@ -34,6 +34,7 @@ import SidebarMenu from './blocks/SidebarMenu/SidebarMenu'
 import Overlay from './layouts/Overlay/Overlay'
 import Ublock from './components/Ublock/Ublock'
 import Ugrid from './components/Ugrid/Ugrid'
+import UserImage from './components/UserImage/UserImage'
 import SearchForm from './components/SearchForm/SearchForm'
 import Panel from './blocks/Panel/Panel'
 import Video from './components/Video/Video'
@@ -89,5 +90,6 @@ export {
     TextImage,
     Ublock,
     Ugrid,
+    UserImage,
     Video,
 }

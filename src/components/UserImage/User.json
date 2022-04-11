@@ -1,0 +1,21 @@
+{
+    "title": "UserImage",
+    "variations": [
+        {
+            "type": "profile",
+            "imageUrl": "",
+            "alt": "",
+            "firstName": "John",
+            "lastName": "Doe",
+            "isProfile": true
+        },
+        {
+            "type": "nav",
+            "imageUrl": "",
+            "alt": "",
+            "firstName": "John",
+            "lastName": "Doe",
+            "isNav": true
+        }
+    ]
+}
