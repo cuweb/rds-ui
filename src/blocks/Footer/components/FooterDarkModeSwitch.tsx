@@ -15,10 +15,7 @@ const FootterDarkModeSwitch: FC = (): JSX.Element => {
         >
             <Icon icon='mark-ravens' className='mark-ravens' />
             <div>
-                <Icon
-                    icon='mark-ravens-no-shield-white'
-                    className='mark-ravens-dark'
-                />
+                <Icon icon='mark-ravens-white' className='mark-ravens-dark' />
             </div>
             <div className='star' />
             <div className='star' />

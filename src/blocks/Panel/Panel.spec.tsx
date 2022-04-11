@@ -5,7 +5,6 @@ describe('Panel', () => {
         'panel-with-heading-and-button',
         'panel-with-image',
         'panel-with-cta-button',
-        'entire-panel-into-cta',
         'panel-with-icons',
     ]
 
@@ -73,15 +72,6 @@ describe('Panel', () => {
         )
         cy.get(`img`).should('exist')
         cy.get(`a`).should('exist')
-        cy.get(`.c-buttoncta`).should('exist')
-    })
-
-    it(`EntirePanelIntoCTA: Should render the panel as c-buttoncta`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=blocks-panel--entire-panel-into-cta`
-        )
         cy.get(`.c-buttoncta`).should('exist')
     })
 
