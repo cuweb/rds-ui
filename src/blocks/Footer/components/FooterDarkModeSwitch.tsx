@@ -1,19 +1,17 @@
 import Icon from '@components/Icon/Icon'
+import useDarkMode from '@hooks/useDarkMode'
 import React, { FC } from 'react'
 
-export interface FootterDarkModeSwitchProps {
-    onClick?: (e: unknown) => void
-}
+const FootterDarkModeSwitch: FC = (): JSX.Element => {
+    const [enabled, setDarkMode] = useDarkMode()
 
-const FootterDarkModeSwitch: FC<FootterDarkModeSwitchProps> = ({
-    onClick,
-}): JSX.Element => {
     return (
         <button
             type='button'
             data-text='Dark Mode'
             className='btn-toggle btn-halo'
-            onClick={onClick}
+            // @ts-expect-error: TODO: Fix this not calling action
+            onClick={() => setDarkMode(!enabled)}
         >
             <Icon icon='mark-ravens' className='mark-ravens' />
             <div>
