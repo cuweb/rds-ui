@@ -7,6 +7,7 @@ export interface IUserImage {
     lastName?: string
     isProfile?: boolean
     isNav?: boolean
+    isRound?: boolean
     handleClick?: React.MouseEventHandler<HTMLDivElement>
 }
 
@@ -17,11 +18,16 @@ const UserImage: React.FC<IUserImage> = ({
     lastName,
     isProfile,
     isNav,
+    isRound,
     handleClick,
 }): JSX.Element => {
-    const className = isProfile ? 'isProfile' : isNav ? 'isNav' : ''
     return (
-        <div className={`userImage ${className}`} onClick={handleClick}>
+        <div
+            className={`userImage ${isProfile ? 'isProfile' : ''} ${
+                isNav ? 'isNav' : ''
+            } ${isRound ? 'isRound' : ''}`}
+            onClick={handleClick}
+        >
             {imageUrl ? (
                 <img
                     src={imageUrl}

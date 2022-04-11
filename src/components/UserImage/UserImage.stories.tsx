@@ -14,8 +14,17 @@ export default {
 const Template: Story = (args: any) => <UserImage {...args} />
 
 export const UserImg = Template.bind({})
-const ProfileImage = getVariation('profile', variations)
+const image = getVariation('base', variations)
 UserImg.args = {
+    imageUrl: image.imageUrl,
+    alt: image.alt,
+    firstName: image.firstName,
+    lastName: image.lastName,
+}
+
+export const UserProfileImg = Template.bind({})
+const ProfileImage = getVariation('profile', variations)
+UserProfileImg.args = {
     imageUrl: ProfileImage.imageUrl,
     alt: ProfileImage.alt,
     firstName: ProfileImage.firstName,
@@ -23,8 +32,20 @@ UserImg.args = {
     isProfile: ProfileImage.isProfile,
 }
 
-const NavImage = getVariation('navbar', variations)
-UserImg.args = {
+export const UserProfileImgRound = Template.bind({})
+const ProfileImageRound = getVariation('profileRound', variations)
+UserProfileImgRound.args = {
+    imageUrl: ProfileImageRound.imageUrl,
+    alt: ProfileImageRound.alt,
+    firstName: ProfileImageRound.firstName,
+    lastName: ProfileImageRound.lastName,
+    isProfile: ProfileImageRound.isProfile,
+    isRound: ProfileImageRound.isRound,
+}
+
+export const UserNavImg = Template.bind({})
+const NavImage = getVariation('nav', variations)
+UserNavImg.args = {
     imageUrl: NavImage.imageUrl,
     alt: NavImage.alt,
     firstName: NavImage.firstName,
