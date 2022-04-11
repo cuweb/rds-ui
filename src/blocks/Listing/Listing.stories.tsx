@@ -7,6 +7,7 @@ import ListingPeople from './ListingPeople'
 import ListingVideo from './ListingVideo'
 import Ublock from '@components/Ublock/Ublock'
 import Ugrid from '@components/Ugrid/Ugrid'
+import ListingMarketplace from './ListingMarketplace'
 
 export default {
     component: Listing,
@@ -440,5 +441,60 @@ export const TwoColumn = () => {
                 />{' '}
             </Ugrid>
         </Ublock>
+    )
+}
+
+
+export const MarketplaceVariant = () => {
+    return (
+        <ListingMarketplace
+            header='Listing block Marketplace'
+            data={[
+                {
+                    image: {
+                        src: 'https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg',
+                        alt: '',
+                    },
+                    src: "#",
+                    title: "Embroidered Duvet cover and Shams",
+                    price: "$25",
+                    condition: "Good",
+                    availability: "Active",
+                },
+                {
+                    image: {
+                        src: 'https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg',
+                        alt: '',
+                    },
+                    src: "#",
+                    title: "Embroidered Duvet cover and Shams",
+                    price: "$25",
+                    condition: "Good",
+                    availability: "Active",
+                },
+                {
+                    image: {
+                        src: 'https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg',
+                        alt: '',
+                    },
+                    src: "#",
+                    title: "Embroidered Duvet cover and Shams",
+                    price: "$25",
+                    condition: "Good",
+                    availability: "Active",
+                },
+                {
+                    image: {
+                        src: 'https://cu-raven.s3.amazonaws.com/assets/img/raven/img-1.jpg',
+                        alt: '',
+                    },
+                    src: "#",
+                    title: "Embroidered Duvet cover and Shams",
+                    price: "$25",
+                    condition: "Good",
+                    availability: "Active",
+                },
+            ]}
+        />
     )
 }

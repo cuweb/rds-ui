@@ -2,7 +2,13 @@ import Ublock, { UblockProps } from '@components/Ublock/Ublock'
 import React, { FC, ReactElement } from 'react'
 import ListingHeader, { ListingHeaderProps } from './ListingHeader'
 
-export type ListingTypes = 'base' | 'event' | 'news' | 'people' | 'video'
+export type ListingTypes =
+    | 'base'
+    | 'event'
+    | 'news'
+    | 'people'
+    | 'video'
+    | 'marketplace'
 
 export interface ListingWrapperProps {
     noUblock?: boolean
