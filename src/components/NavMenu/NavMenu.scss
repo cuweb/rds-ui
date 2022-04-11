@@ -352,4 +352,21 @@ $navicon-types: (spin) !default;
             background-color: $dark-icon-fill;
         }
     }
+
+    // Mobile
+    dialog .nav__menu--top li {
+        border-color: $dark-border-color-light;
+    }
+    dialog .nav__menu--top a {
+        color: $dark-font-color;
+
+        &:hover {
+            background-color: none;
+            color: $dark-link-hover;
+        }
+    }
+    dialog .nav__menu--top .nav--menubar__button {
+        background-color: $dark-background-hard;
+        color: $dark-font-color;
+    }
 }
