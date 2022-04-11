@@ -354,7 +354,7 @@ input[type='color'] {
     padding: 8px;
 }
 
-.raven-mode .b-form {
+.raven-mode .b-form:not(.b-form--login) {
     color: $dark-font-color-soft;
     .form__field--button input {
         box-shadow: none;

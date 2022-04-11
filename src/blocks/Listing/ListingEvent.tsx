@@ -38,14 +38,16 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
                                 {convertDate(item.date, 'month')}
                                 <span>{convertDate(item.date, 'day')}</span>
                             </time>
-                            <div>
-                                {item.startTime && item.endTime && (
-                                    <>
+                            {(item.startTime || item.endTime) && (
+                                <div>
+                                    {item.startTime && (
                                         <h3>{convertTime(item.startTime)}</h3>
+                                    )}
+                                    {item.endTime && (
                                         <p>{convertTime(item.endTime)}</p>
-                                    </>
-                                )}
-                            </div>
+                                    )}
+                                </div>
+                            )}
                             <div itemProp='name'>
                                 <h3
                                     itemProp='name'

@@ -18,7 +18,7 @@ const Login: React.FC<LoginProps> = ({
         <div className='b-login'>
             {title && <h2 id='login_title'>{title}</h2>}
             <form
-                className='b-form'
+                className='b-form b-form--login'
                 name='loginform'
                 acceptCharset='UTF-8'
                 onSubmit={onSubmit}
