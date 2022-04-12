@@ -20,6 +20,10 @@ describe('Button CTA', () => {
             tag: '--ghost',
         },
         {
+            nane: 'Grey',
+            tag: '--grey',
+        },
+        {
             nane: 'Full Width',
             tag: '--full',
         },
