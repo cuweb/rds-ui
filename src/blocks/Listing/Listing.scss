@@ -300,9 +300,11 @@ aside .b-listing--people {
     a {
         border-bottom: $dark-border-color;
         color: $dark-font-color;
+        background-color: $dark-background-hover;
+        padding-left: 1rem;
 
         &:hover {
-            background-color: $dark-background-hover;
+            background-color: $dark-background-soft;
         }
     }
     a time {
@@ -315,6 +317,11 @@ aside .b-listing--people {
     a h4 {
         color: $dark-link;
     }
+    a:hover h3,
+    a:hover h4 {
+        color: $dark-font-color;
+    }
+
     & > ul,
     & > ul > li {
         border-color: $dark-border-color;
