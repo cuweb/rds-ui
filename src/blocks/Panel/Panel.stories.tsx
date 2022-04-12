@@ -21,6 +21,16 @@ export const Base = () => (
     </Panel>
 )
 
+// Base Panel
+export const BaseWithSubMenu = () => (
+    <Panel title='This is the title'>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            convallis neque quis enim eleifend luctus. Aliquam erat volutpat.
+            Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.
+        </p>
+    </Panel>
+)
 // Base Panel with Link
 export const BasePanelWithLink = () => (
     <Panel title='This is the title'>
