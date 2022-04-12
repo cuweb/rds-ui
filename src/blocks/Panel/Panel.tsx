@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import Ublock from '@components/Ublock/Ublock'
+import Ublock, { UblockProps } from '@components/Ublock/Ublock'
 import Icon from '@components/Icon/Icon'
 
 export interface PanelProps {
@@ -7,13 +7,14 @@ export interface PanelProps {
     titleWithHeading?: string | undefined
     children?: ReactNode
     icon?: string
+    block?: UblockProps
 }
 
 const Panel: React.FC<PanelProps> = (props): JSX.Element => {
-    const { title, children, titleWithHeading, icon } = props
+    const { title, children, titleWithHeading, icon, block } = props
 
     return (
-        <Ublock>
+        <Ublock {...block}>
             <div className='b-sidebar'>
                 {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
                 {titleWithHeading && (

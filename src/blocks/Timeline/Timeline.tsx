@@ -1,4 +1,4 @@
-import Ublock from '@components/Ublock/Ublock'
+import Ublock, { UblockProps } from '@components/Ublock/Ublock'
 import React from 'react'
 
 interface TimelineProps {
@@ -10,6 +10,7 @@ interface TimelineProps {
         title: string
         description: string
     }[]
+    block?: UblockProps
 }
 
 const Timeline: React.FC<TimelineProps> = ({
@@ -18,6 +19,7 @@ const Timeline: React.FC<TimelineProps> = ({
     stepFirst,
     stepLast,
     allSteps,
+    block,
 }): JSX.Element => {
     const steps = allSteps.map((step, index) => (
         <li itemProp='item' key={index}>
@@ -32,7 +34,7 @@ const Timeline: React.FC<TimelineProps> = ({
         </li>
     ))
     return (
-        <Ublock>
+        <Ublock {...block}>
             <section className='b-timeline'>
                 {title && (
                     <h2
