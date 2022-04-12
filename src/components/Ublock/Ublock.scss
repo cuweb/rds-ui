@@ -167,9 +167,12 @@ aside > .u-block--panel {
     }
 }
 
-.raven-mode {
-    .u-block--white,
-    .u-block--grey {
-        color: $black;
+.raven-mode .u-block {
+    &.u-block--white {
+        background-color: $grey-anakin;
+    }
+
+    &.u-block--grey {
+        background-color: $grey-vader;
     }
 }

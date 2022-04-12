@@ -1,4 +1,4 @@
-import Ublock from '@components/Ublock/Ublock'
+import Ublock, { UblockProps } from '@components/Ublock/Ublock'
 import React from 'react'
 
 export interface LoginProps {
@@ -6,6 +6,7 @@ export interface LoginProps {
     forgetLink?: string
     registerLink?: string
     onSubmit?: React.FormEventHandler
+    block?: UblockProps
 }
 
 const Login: React.FC<LoginProps> = ({
@@ -13,6 +14,9 @@ const Login: React.FC<LoginProps> = ({
     forgetLink,
     registerLink,
     onSubmit,
+    block = {
+        color: 'grey',
+    },
 }): JSX.Element => {
     const loginForm = (
         <div className='b-login'>
@@ -71,7 +75,7 @@ const Login: React.FC<LoginProps> = ({
             )}
         </div>
     )
-    return <Ublock color='grey'>{loginForm}</Ublock>
+    return <Ublock {...block}>{loginForm}</Ublock>
 }
 
 export default Login

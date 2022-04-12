@@ -1,13 +1,13 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import ButtonCTA from './ButtonCTA'
+import ButtonCTA, { ButtonProps } from './ButtonCTA'
 
 export default {
     component: ButtonCTA,
     title: 'Components/Button CTA',
 } as Meta
 
-const Template: Story = (args: any) => <ButtonCTA {...args} />
+const Template: Story<ButtonProps> = (args: any) => <ButtonCTA {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
@@ -21,6 +21,13 @@ Ghost.args = {
     text: 'Stay Puft',
     link: 'https://en.wikipedia.org/wiki/Stay_Puft_Marshmallow_Man',
     ghost: true,
+}
+
+export const Grey = Template.bind({})
+Grey.args = {
+    text: 'Meet Qui-Gon Jinn',
+    link: 'https://starwars.fandom.com/wiki/Gray_Jedi',
+    grey: true,
 }
 
 export const WithIcon = Template.bind({})

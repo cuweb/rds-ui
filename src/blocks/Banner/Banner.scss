@@ -198,15 +198,13 @@
 }
 
 .raven-mode .b-banner {
+    nav a {
+        color: $dark-font-color;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     &.b-banner--img {
         color: white;
-    }
-
-    .c-buttoncta {
-        color: white;
-    }
-
-    .c-buttoncta--ghost {
-        color: $red;
     }
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Meta, Story } from '@storybook/react'
-import Login from './Login'
+import Login, { LoginProps } from './Login'
 import Overlay from '@layouts/Overlay/Overlay'
 
 export default {
@@ -8,7 +8,7 @@ export default {
     title: `Blocks/Login`,
 } as Meta
 
-const Template: Story = (args: any) => {
+const Template: Story<LoginProps> = (args: any) => {
     return <Login {...args} />
 }
 
