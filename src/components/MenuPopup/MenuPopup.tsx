@@ -19,6 +19,7 @@ const MenuPopup: FC<
     className = '',
     buttonClassName = '',
     menu,
+    icon,
     direction = 'left',
 }): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -29,6 +30,7 @@ const MenuPopup: FC<
     const buttonProps = {
         isButton,
         title,
+        icon,
         buttonClassName,
     }
 

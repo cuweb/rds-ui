@@ -77,3 +77,10 @@ a.b-sidebar {
     display: block;
     margin: 20px;
 }
+
+.b-sidebar__actions {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 99;
+}
