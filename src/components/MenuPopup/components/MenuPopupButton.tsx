@@ -21,8 +21,8 @@ const MenuPopupButton: FC<MenuPopupButtonProps> = ({
     if (!isButton)
         return (
             <a href={link} className={buttonClassName}>
-                {title}
                 {icon && <Icon icon={icon} />}
+                {title}
             </a>
         )
 
@@ -35,8 +35,8 @@ const MenuPopupButton: FC<MenuPopupButtonProps> = ({
                 event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>
             ) => onClick && onClick(event)}
         >
-            {title}
             {icon && <Icon icon={icon} />}
+            {title}
         </button>
     )
 }
