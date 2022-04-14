@@ -1,12 +1,12 @@
 describe('Panel', () => {
     const types = [
         'base',
-        'base-panel-with-link',
-        'panel-with-heading-and-button',
-        'panel-with-image',
-        'panel-with-cta-button',
+        'with-link',
+        'with-heading-and-button',
+        'with-image',
+        'with-cta-button',
         'entire-panel-into-cta',
-        'panel-with-icons',
+        'with-icons',
     ]
 
     types.map((type) => {
@@ -40,7 +40,7 @@ describe('Panel', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-panel--base-panel-with-link`
+            )}/iframe.html?id=blocks-panel--with-link`
         )
         cy.get(`a`).should('exist')
     })
@@ -49,7 +49,7 @@ describe('Panel', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-panel--panel-with-heading-and-button`
+            )}/iframe.html?id=blocks-panel--with-heading-and-button`
         )
         cy.get(`.sidebar__heading`).should('exist')
         cy.get(`.c-buttoncta`).should('exist')
@@ -59,7 +59,7 @@ describe('Panel', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-panel--panel-with-image`
+            )}/iframe.html?id=blocks-panel--with-image`
         )
         cy.get(`img`).should('exist')
         cy.get(`a`).should('exist')
@@ -69,7 +69,7 @@ describe('Panel', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-panel--panel-with-cta-button`
+            )}/iframe.html?id=blocks-panel--with-cta-button`
         )
         cy.get(`img`).should('exist')
         cy.get(`a`).should('exist')
@@ -89,8 +89,44 @@ describe('Panel', () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-panel--panel-with-icons`
+            )}/iframe.html?id=blocks-panel--with-icons`
         )
         cy.get(`.b-sidebar svg`).should('exist')
     })
+
+    it(`with-actions: Should render the u-block`, () => {
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+        )
+        cy.get(`.u-block`).should('exist')
+    })
+    
+    it(`with-actions: Should render the container`, () => {
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+        )
+        cy.get(`.b-sidebar`).should('exist')
+    })
+    
+    it(`with-actions: Should render the container`, () => {
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+        )
+        cy.get(`.b-sidebar`).should('exist')
+    })
+    
+    it(`with-actions: Should render the title`, () => {
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+        )
+        cy.get(`.b-sidebar__actions`).should('exist')
+    })
+    
+    it(`with-actions: Should render the title`, () => {
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+        )
+        cy.get(`.c-menupopup`).should('exist')
+    })
 })
+
