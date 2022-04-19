@@ -20,7 +20,7 @@ describe('Avatar', () => {
                 'baseUrl'
             )}/iframe.html?id=blocks-avatar--base-with-click`
         )
-        cy.get(`.image__clickable`).click()
+        cy.get(`.button__image`).click()
         cy.on('window:alert', (txt) => {
             expect(txt).to.contains('photo')
         })

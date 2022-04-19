@@ -93,6 +93,7 @@ WithDetails.args = {
         topText: 'Danny Brown',
         bottomText: 'Director, Enterprise Applications',
     },
+    handleClick: () => alert('You clicked the photo!'),
 }
 
 export const WithDetailsLeft = TemplateWithChildren.bind({})
@@ -109,4 +110,5 @@ WithDetailsLeft.args = {
     },
     sideDetails: true,
     isRound: false,
+    handleClick: () => alert('You clicked the photo!'),
 }
