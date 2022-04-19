@@ -4,6 +4,7 @@
     border-radius: 5px;
     border: 1px solid $grey-yoda;
     display: block;
+    position: relative;
 
     > * {
         padding-right: 20px;
@@ -76,4 +77,15 @@ a.b-sidebar {
 .b-sidebar > .c-buttoncta {
     display: block;
     margin: 20px;
+}
+
+.b-sidebar .b-sidebar__actions {
+    position: absolute;
+    top: 1.25rem;
+    right: 0;
+    z-index: 99;
+
+    .c-menupopup > button::after {
+        display: none;
+    }
 }

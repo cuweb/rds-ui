@@ -114,3 +114,14 @@
 .popup__sep {
     border-top: 1px solid $grey-yoda;
 }
+
+.b-sidebar__actions {
+    position: absolute;
+    top: 1.25rem;
+    right: 0;
+    z-index: 99;
+
+    .c-menupopup > button::after {
+        display: none;
+    }
+}
