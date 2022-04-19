@@ -36,3 +36,16 @@ export const WithIcons = () => (
         <MenuPopup title='With Icons' isButton menu={data.menuIcons} />
     </div>
 )
+
+export const WithoutTitle = () => (
+    <div className='b-sidebar__actions' style={data.divStyles}>
+        <MenuPopup
+            icon='kebab-hor'
+            className='custom-classname'
+            buttonClassName='button-classname'
+            isButton
+            direction='right'
+            menu={data.menu}
+        />
+    </div>
+)
