@@ -3,6 +3,7 @@ import Alert from './components/Alert/Alert'
 import AlertAside from './components/AlertAside/AlertAside'
 import AlertHeader from './blocks/AlertHeader/AlertHeader'
 import Aside from './layouts/Layout/Aside'
+import Avatar from './blocks/Avatar/Avatar'
 import Badge from './components/Badge/Badge'
 import Banner from './blocks/Banner/Banner'
 import ButtonCTA from './components/ButtonCTA/ButtonCTA'
@@ -34,7 +35,6 @@ import SidebarMenu from './blocks/SidebarMenu/SidebarMenu'
 import Overlay from './layouts/Overlay/Overlay'
 import Ublock from './components/Ublock/Ublock'
 import Ugrid from './components/Ugrid/Ugrid'
-import UserImage from './components/UserImage/UserImage'
 import SearchForm from './components/SearchForm/SearchForm'
 import Panel from './blocks/Panel/Panel'
 import Video from './components/Video/Video'
@@ -51,6 +51,7 @@ export {
     AlertAside,
     AlertHeader,
     Aside,
+    Avatar,
     Badge,
     Banner,
     ButtonCTA,
@@ -90,6 +91,5 @@ export {
     TextImage,
     Ublock,
     Ugrid,
-    UserImage,
     Video,
 }
