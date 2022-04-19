@@ -38,9 +38,7 @@ describe('Panel', () => {
 
     it(`BasePanelWithLink: Should render the link`, () => {
         cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=blocks-panel--with-link`
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-link`
         )
         cy.get(`a`).should('exist')
     })
@@ -57,9 +55,7 @@ describe('Panel', () => {
 
     it(`PanelWithImage: Should render the image`, () => {
         cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=blocks-panel--with-image`
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-image`
         )
         cy.get(`img`).should('exist')
         cy.get(`a`).should('exist')
@@ -87,46 +83,53 @@ describe('Panel', () => {
 
     it(`PanelWithIcons: Should render the icons`, () => {
         cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=blocks-panel--with-icons`
+            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-icons`
         )
         cy.get(`.b-sidebar svg`).should('exist')
     })
 
     it(`with-actions: Should render the u-block`, () => {
         cy.visit(
-            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-panel--with-actions`
         )
         cy.get(`.u-block`).should('exist')
     })
-    
+
     it(`with-actions: Should render the container`, () => {
         cy.visit(
-            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-panel--with-actions`
         )
         cy.get(`.b-sidebar`).should('exist')
     })
-    
+
     it(`with-actions: Should render the container`, () => {
         cy.visit(
-            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-panel--with-actions`
         )
         cy.get(`.b-sidebar`).should('exist')
     })
-    
+
     it(`with-actions: Should render the title`, () => {
         cy.visit(
-            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-panel--with-actions`
         )
         cy.get(`.b-sidebar__actions`).should('exist')
     })
-    
+
     it(`with-actions: Should render the title`, () => {
         cy.visit(
-            `${Cypress.env('baseUrl')}/iframe.html?id=blocks-panel--with-actions`
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-panel--with-actions`
         )
         cy.get(`.c-menupopup`).should('exist')
     })
 })
-
