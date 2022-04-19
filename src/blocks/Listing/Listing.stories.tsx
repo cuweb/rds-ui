@@ -39,6 +39,33 @@ export const BaseListing = () => {
     )
 }
 
+export const WithoutArrow = () => {
+    return (
+        <Listing
+            header='Example Without Arrow'
+            noArrow
+            data={[
+                {
+                    src: '#',
+                    title: 'White-necked Raven',
+                },
+                {
+                    src: '#',
+                    title: 'Common raven',
+                },
+                {
+                    src: '#',
+                    title: 'Australian raven',
+                },
+                {
+                    src: '#',
+                    title: 'Thick-billed raven',
+                },
+            ]}
+        />
+    )
+}
+
 export const WithSubtitles = () => {
     return (
         <Listing
