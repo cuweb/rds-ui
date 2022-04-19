@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 import React, { ReactNode } from 'react'
 import Ublock from '@components/Ublock/Ublock'
 import Icon from '@components/Icon/Icon'
