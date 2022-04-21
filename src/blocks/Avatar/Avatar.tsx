@@ -1,0 +1,71 @@
+import React from 'react'
+
+export interface IAvatar {
+    children?: React.ReactNode
+    imageUrl?: string
+    alt?: string
+    firstName?: string
+    lastName?: string
+    caption?: {
+        topText: string
+        bottomText?: string
+    }
+    isRound?: boolean
+    sideDetails?: boolean
+    handleClick?: React.MouseEventHandler<HTMLButtonElement> | undefined
+}
+
+const Avatar: React.FC<IAvatar> = ({
+    children,
+    imageUrl,
+    alt,
+    firstName,
+    lastName,
+    caption,
+    isRound = true,
+    sideDetails = false,
+    handleClick,
+}): JSX.Element => {
+    const roundImage = isRound ? 'image__round' : ''
+    const leftsideDetails = sideDetails ? 'details__leftside' : ''
+    const imageAlt = alt || 'Picture'
+    return (
+        <div className={`b-avatar ${leftsideDetails}`}>
+            <div className='details__aside'>
+                <figure className={`${roundImage}`}>
+                    {imageUrl && handleClick && (
+                        <button
+                            className='button__image'
+                            type='button'
+                            onClick={handleClick}
+                        >
+                            <img src={imageUrl} alt={imageAlt} />
+                        </button>
+                    )}
+                    {imageUrl && !handleClick && (
+                        <img src={imageUrl} alt={imageAlt} />
+                    )}
+                    {!imageUrl && firstName && lastName && (
+                        <p>
+                            {firstName?.charAt(0)} {lastName?.charAt(0)}
+                        </p>
+                    )}
+                    {caption && (
+                        <figcaption>
+                            {caption && caption.topText}
+                            <br />
+                            {caption && caption.bottomText}
+                        </figcaption>
+                    )}
+                </figure>
+            </div>
+            {children && (
+                <div className='details__meta'>
+                    <dl className='u-link'>{children}</dl>
+                </div>
+            )}
+        </div>
+    )
+}
+
+export default Avatar
