@@ -72,6 +72,8 @@
     /* // Details Content Styles */
     /* // ---------------------- */
     .details__meta {
+        margin-bottom: 2rem;
+
         @include media('>s') {
             order: 1;
         }
