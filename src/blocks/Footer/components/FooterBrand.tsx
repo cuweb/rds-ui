@@ -1,6 +1,7 @@
 import React from 'react'
 import Ublock from '@components/Ublock/Ublock'
 import Logo from '@components/Logo/Logo'
+import FooterDarkModeSwitch from './FooterDarkModeSwitch'
 
 const FooterBrand: React.FC = (): JSX.Element => {
     return (
@@ -36,6 +37,7 @@ const FooterBrand: React.FC = (): JSX.Element => {
                         </li>
                     </ul>
                 </nav>
+                <FooterDarkModeSwitch />
             </div>
         </Ublock>
     )

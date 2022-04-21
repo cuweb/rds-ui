@@ -1,15 +1,16 @@
+footer {
+    position: relative !important;
+    overflow: hidden;
+}
+
 .u-block--black + .u-block--black > .b-footerbrand {
     padding-top: 40px;
 }
 
 .b-footerbrand {
-    max-width: 280px;
+    max-width: 430px;
     margin: auto;
     padding-bottom: 140px;
-
-    @include media('>s') {
-        max-width: 330px;
-    }
 
     svg {
         display: block;
@@ -22,28 +23,70 @@
         justify-content: center;
         margin: 20px auto 0 auto;
         list-style: none;
-
-        @include media('>s') {
-            justify-content: space-between;
-        }
     }
 
     li {
         font-size: $pixel12;
-
-        @include media('<=s') {
-            margin: 0 10px;
-        }
+        margin: 0 10px;
     }
 
     li a {
         color: $grey-kenobi;
-        border-bottom: 1px solid $grey-vader;
+        border-bottom: 1px solid $grey-emperor;
         padding-bottom: 4px;
 
         &:hover {
             color: white;
             border-bottom: 1px solid white;
         }
+    }
+}
+
+// Animated River Option
+.b-footerbrand__river {
+    // height: 0%;
+    // width: 100%;
+    position: absolute;
+    bottom: -50px;
+    // left: 0;
+    // background: #e91c24;
+}
+
+.b-footerbrand__wave {
+    // background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    background: url(https://cu-rds.s3.amazonaws.com/assets/svg/rideau.svg)
+        repeat-x;
+
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+.b-footerbrand__wave:nth-of-type(2) {
+    top: -194px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+        swell 7s ease -1.25s infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+    0%,
+    100% {
+        transform: translate3d(0, -25px, 0);
+    }
+    50% {
+        transform: translate3d(0, 5px, 0);
     }
 }

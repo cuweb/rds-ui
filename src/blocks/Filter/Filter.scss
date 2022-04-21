@@ -289,3 +289,24 @@
         display: none;
     }
 }
+
+.raven-mode .content-filter {
+    .b-form,
+    .form__field,
+    .form__field:first-child,
+    .form__field:last-child,
+    .form__group--reset,
+    .form__group--dropdown {
+        background-color: $black;
+        border-color: $grey-dark;
+    }
+    .form__field.form__field--dropdown {
+        border-bottom-color: $black;
+    }
+    .form__field:last-child {
+        overflow: hidden;
+    }
+    .form__icon svg {
+        fill: $dark-icon-fill;
+    }
+}

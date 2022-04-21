@@ -49,9 +49,12 @@ $block-padding-m: 30px !default;
 
 // CU digital near black
 $black: #222;
+$black-soft: #333333;
+$black-vader: #444444;
 
 // CU digital grey
 $grey: #f3f3f3;
+$grey-dark: #4d4d4d;
 
 // CU digital red
 $red: #bf112b;
@@ -59,6 +62,7 @@ $light-red: #f9e6e9;
 
 // Main link color
 $link: #105f83;
+$link-border: #c8dae3;
 
 // Other colors
 $blue: #91d5ff; // info foreground
@@ -122,3 +126,20 @@ $z-index-10000: 10000;
 $ds-y: 0 1px 2px rgba($black, 0.2);
 $ds-k: 0 5px 8px 2px rgba($grey-emperor, 0.1);
 $ds-l: 0 5px 18px 2px rgba(83, 83, 83, 0.2);
+
+// 9. Dark Mode
+// ----------------
+$dark-red: #e91c24;
+$dark-link: $dark-red;
+$dark-link-border: $dark-red;
+$dark-link-hover: $grey-anakin;
+$dark-link-hover-border: $grey-anakin;
+$dark-border-color: $grey-emperor;
+$dark-border-color-light: $grey-vader;
+$dark-background: $grey-dark;
+$dark-background-soft: $grey-vader;
+$dark-background-hard: #222222;
+$dark-background-hover: $black;
+$dark-font-color: #ffffff;
+$dark-font-color-soft: $grey-anakin;
+$dark-icon-fill: white;

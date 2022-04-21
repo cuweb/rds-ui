@@ -14,7 +14,7 @@ const CardNews: React.FC<CardNewsProps> = ({
     link,
     image,
     header,
-    date, // TODO: check TS content error
+    date,
     description,
 }): JSX.Element => {
     const longDate = convertDate(date)

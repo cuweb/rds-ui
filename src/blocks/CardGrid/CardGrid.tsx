@@ -20,7 +20,7 @@ const CardGrid: React.FC<CardGridProps> = ({
     title,
     button,
     columns = 3,
-    color = 'white',
+    color,
     children,
     handleLoad,
 }): JSX.Element => {

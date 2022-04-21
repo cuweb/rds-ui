@@ -166,3 +166,9 @@
         }
     }
 }
+
+.raven-mode {
+    .timeline__list p + p {
+        color: $dark-font-color-soft;
+    }
+}

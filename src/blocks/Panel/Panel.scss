@@ -89,3 +89,22 @@ a.b-sidebar {
         display: none;
     }
 }
+
+.raven-mode .b-sidebar {
+    background-color: $dark-background-hover;
+    border-color: $dark-border-color;
+
+    h2 {
+        background-color: $dark-background;
+    }
+
+    a:not(.c-buttoncta) {
+        color: $dark-link;
+        border-color: $dark-link-border;
+
+        &:hover {
+            color: $dark-link-hover;
+            border-color: $dark-link-hover-border;
+        }
+    }
+}

@@ -48,6 +48,11 @@ body {
         'Segoe UI Symbol';
     font-style: normal;
     color: $black;
+
+    &.raven-mode {
+        color: white;
+        background-color: $black-soft;
+    }
 }
 
 // #content {
@@ -71,11 +76,26 @@ a {
     font-weight: 500;
     text-decoration: none;
     outline: none;
-    color: $black;
+    color: $link;
+    border-bottom: 1px solid $link-border;
     cursor: pointer;
 
     &:focus {
         outline: 0 none;
+    }
+    &:hover {
+        color: $red;
+        border-color: $red;
+    }
+}
+
+.raven-mode a {
+    color: $dark-link;
+    border-color: $dark-link-border;
+
+    &:hover {
+        color: $dark-link-hover;
+        border-color: $dark-link-hover-border;
     }
 }
 
@@ -252,6 +272,10 @@ video {
     margin-bottom: 20px;
     height: auto;
     background-color: $grey-kenobi;
+}
+
+.raven-mode svg {
+    fill: white;
 }
 
 // 5. Table styles
