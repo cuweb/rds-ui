@@ -420,6 +420,9 @@ Pencil.args = { icon: 'pencil' }
 export const Person = Template.bind({})
 Person.args = { icon: 'person' }
 
+export const Phone = Template.bind({})
+Phone.args = { icon: 'phone' }
+
 export const Pin = Template.bind({})
 Pin.args = { icon: 'pin' }
 

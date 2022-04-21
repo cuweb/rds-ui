@@ -136,22 +136,22 @@
                 {
                     "src": "https://en.wikipedia.org/wiki/White-necked_raven",
                     "title": "White-necked Raven",
-                    "icon": "mark-ravens"
+                    "icon": "map"
                 },
                 {
                     "src": "https://en.wikipedia.org/wiki/Common_raven",
                     "title": "Common raven",
-                    "icon": "mark-ravens"
+                    "icon": "map"
                 },
                 {
                     "src": "https://en.wikipedia.org/wiki/Australian_raven",
                     "title": "Australian raven",
-                    "icon": "mark-ravens"
+                    "icon": "map"
                 },
                 {
                     "src": "https://en.wikipedia.org/wiki/Thick-billed_raven",
                     "title": "Thick-billed raven",
-                    "icon": "mark-ravens"
+                    "icon": "map"
                 }
             ]
         },

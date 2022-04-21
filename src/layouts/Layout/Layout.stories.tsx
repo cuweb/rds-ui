@@ -16,9 +16,9 @@ export const Single = (args: any) => (
             The single column layout only requires a {`<main>`} tag in between
             your {`<header>`} and {`<footer>`} tags.
             <br />
-            When using the single column layout, all Main section blocks can be
-            used within the {`<main>`} section, including all fixed and
-            full-width blocks.
+            When using the single column <a href='#'>layout</a>, all Main
+            section blocks can be used within the {`<main>`} section, including
+            all fixed and full-width blocks.
         </p>
     </Layout>
 )

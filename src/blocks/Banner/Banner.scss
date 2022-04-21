@@ -54,6 +54,8 @@
 
         a {
             font-weight: 300;
+            color: $black;
+            border: none;
 
             &:hover {
                 text-decoration: underline;
@@ -192,5 +194,17 @@
         margin: 0;
         padding: 0;
         font-size: 15px;
+    }
+}
+
+.raven-mode .b-banner {
+    nav a {
+        color: $dark-font-color;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &.b-banner--img {
+        color: white;
     }
 }

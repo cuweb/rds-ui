@@ -4,6 +4,7 @@
     border-radius: 5px;
     border: 1px solid $grey-yoda;
     display: block;
+    position: relative;
 
     > * {
         padding-right: 20px;
@@ -76,4 +77,34 @@ a.b-sidebar {
 .b-sidebar > .c-buttoncta {
     display: block;
     margin: 20px;
+}
+
+.b-sidebar .b-sidebar__actions {
+    position: absolute;
+    top: 1.25rem;
+    right: 0;
+    z-index: 99;
+
+    .c-menupopup > button::after {
+        display: none;
+    }
+}
+
+.raven-mode .b-sidebar {
+    background-color: $dark-background-hover;
+    border-color: $dark-border-color;
+
+    h2 {
+        background-color: $dark-background;
+    }
+
+    a:not(.c-buttoncta) {
+        color: $dark-link;
+        border-color: $dark-link-border;
+
+        &:hover {
+            color: $dark-link-hover;
+            border-color: $dark-link-hover-border;
+        }
+    }
 }

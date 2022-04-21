@@ -1,5 +1,6 @@
 .b-footersitemap a {
     color: $grey-luke;
+    border: none;
 
     &:hover {
         color: white;
@@ -146,5 +147,11 @@
                 }
             }
         }
+    }
+}
+
+.raven-mode {
+    svg {
+        fill: $black;
     }
 }

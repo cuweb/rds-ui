@@ -74,6 +74,7 @@ a.c-buttoncta--grey {
 
 a.c-buttoncta--full {
     width: 100%;
+    justify-content: center;
 }
 
 .c-buttoncta.u-icon svg {
@@ -87,4 +88,26 @@ footer .c-buttoncta {
     margin: 0 !important;
     padding: 0.5rem 1.25rem;
     font-size: $pixel14;
+}
+
+.raven-mode {
+    .c-buttoncta,
+    a.c-buttoncta {
+        color: $dark-font-color;
+        &:hover {
+            background-color: $dark-background-soft;
+        }
+    }
+
+    .c-buttoncta--ghost,
+    a.c-buttoncta--ghost {
+        box-shadow: inherit;
+        color: $dark-font-color;
+        border-color: $dark-font-color;
+        background-color: $dark-background-soft;
+
+        &:hover {
+            background-color: $red;
+        }
+    }
 }

@@ -30,6 +30,17 @@
     }
 }
 
+.raven-mode .c-accordion a {
+    color: $dark-link;
+    background-color: unset;
+    border-bottom: 1px solid $dark-link;
+
+    &:hover {
+        border-color: $grey-anakin;
+        color: $grey-anakin;
+    }
+}
+
 .c-accordion + *:not(.c-accordion) {
     margin-top: 25px;
 }
@@ -45,11 +56,19 @@
     cursor: pointer;
 }
 
+.raven-mode .c-accordion label {
+    background-color: $black-vader;
+}
+
 .accordion__content {
     max-height: 0;
     overflow: hidden;
     background-color: white;
     transition: max-height 0.75s;
+}
+
+.raven-mode .accordion__content {
+    background-color: $black;
 }
 
 .accordion__spacing {

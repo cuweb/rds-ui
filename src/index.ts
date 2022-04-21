@@ -3,6 +3,7 @@ import Alert from './components/Alert/Alert'
 import AlertAside from './components/AlertAside/AlertAside'
 import AlertHeader from './blocks/AlertHeader/AlertHeader'
 import Aside from './layouts/Layout/Aside'
+import Avatar from './blocks/Avatar/Avatar'
 import Badge from './components/Badge/Badge'
 import Banner from './blocks/Banner/Banner'
 import ButtonCTA from './components/ButtonCTA/ButtonCTA'
@@ -50,6 +51,7 @@ export {
     AlertAside,
     AlertHeader,
     Aside,
+    Avatar,
     Badge,
     Banner,
     ButtonCTA,

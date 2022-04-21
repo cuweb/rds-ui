@@ -37,7 +37,11 @@ const menu = [
     },
 ]
 
-export const SideMenu = () => <NavMenu type='side' menu={menu} />
+export const SideMenu = () => (
+    <div style={{ maxWidth: '200px' }}>
+        <NavMenu type='side' menu={menu} />
+    </div>
+)
 export const TopMenu = () => (
     <div className='b-masthead'>
         <NavMenu type='top' menu={menu} />

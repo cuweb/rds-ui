@@ -16,6 +16,16 @@ body {
 // 	width: 100%;
 // }
 
+.b-masthead a {
+    border: none;
+    color: $black;
+
+    &:hover {
+        border: none;
+        color: $black;
+    }
+}
+
 .b-masthead nav {
     width: 100%;
     margin-right: 50px;
@@ -162,6 +172,7 @@ body {
         align-items: center;
         padding: 0 8px;
         font-size: 18px;
+        color: $black;
 
         &:hover {
             color: $red;
@@ -261,4 +272,51 @@ body {
 
 .c-navmenu__icon {
     margin-right: 0.5rem;
+}
+
+.raven-mode {
+    .b-masthead {
+        background-color: $dark-background;
+        border-bottom-color: $dark-border-color-light;
+
+        h1 {
+            border-color: $dark-border-color-light;
+        }
+        a {
+            color: $dark-font-color;
+            border: none;
+        }
+    }
+
+    .c-menupopup {
+        & > button::after {
+            color: $dark-font-color;
+        }
+    }
+    .b-masthead button:hover,
+    .b-masthead [aria-expanded='true'],
+    .c-nav > ul a:hover,
+    .c-nav > ul button:hover,
+    .c-nav > ul button[aria-expanded='true'] {
+        background-color: $dark-background-hover;
+        color: $dark-font-color;
+    }
+    .masthead__cta > a {
+        &:hover {
+            background-color: $dark-background-hover;
+            color: $dark-font-color;
+        }
+        &:hover svg {
+            fill: $dark-icon-fill;
+        }
+    }
+
+    .masthead__actions {
+        li {
+            border-color: $dark-border-color-light;
+        }
+        svg {
+            fill: $dark-icon-fill;
+        }
+    }
 }
