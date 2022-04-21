@@ -7,6 +7,7 @@
         "type": "git",
         "url": "git://github.com/cuweb/rds-ui.git"
     },
+    "type": "module",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
