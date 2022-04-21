@@ -96,6 +96,12 @@
     }
 } // End .b-listing
 
+.b-listing:not(.b-listing--accordion).b-listing--no-arrow {
+    a {
+        background-image: none;
+    }
+}
+
 // News variant
 //=============
 

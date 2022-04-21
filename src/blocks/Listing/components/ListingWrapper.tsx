@@ -8,6 +8,7 @@ export interface ListingWrapperProps {
     noUblock?: boolean
     type: ListingTypes
     uBlockProps?: UblockProps
+    noArrow?: boolean
 }
 
 const ListingWrapper: FC<ListingWrapperProps & ListingHeaderProps> = ({
@@ -17,10 +18,12 @@ const ListingWrapper: FC<ListingWrapperProps & ListingHeaderProps> = ({
     header,
     noborder,
     uBlockProps,
+    noArrow = false,
 }): JSX.Element => {
     const typeClassName = `b-listing--${type}`
+    const arrowClassName = noArrow ? 'b-listing--no-arrow' : ''
     const content: ReactElement = (
-        <div className={`b-listing ${typeClassName}`}>
+        <div className={`b-listing ${arrowClassName} ${typeClassName}`}>
             <ListingHeader header={header} noborder={noborder} />
             {children}
         </div>

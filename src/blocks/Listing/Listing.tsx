@@ -6,6 +6,7 @@ import ListingWrapper from './components/ListingWrapper'
 export interface ListingProps {
     data: BaseListProps[]
     noUblock?: boolean
+    noArrow?: boolean
 }
 export interface BaseListProps {
     src: string
@@ -24,9 +25,15 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
     header,
     data,
     noUblock,
+    noArrow,
 }): JSX.Element => {
     return (
-        <ListingWrapper type='base' header={header} noUblock={noUblock}>
+        <ListingWrapper
+            type='base'
+            header={header}
+            noUblock={noUblock}
+            noArrow={noArrow}
+        >
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
