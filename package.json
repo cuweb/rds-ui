@@ -1,6 +1,6 @@
 {
     "name": "rds-ui",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "author": "Carleton University",
     "license": "MIT",
     "repository": {
@@ -36,10 +36,10 @@
         "@babel/core": "^7.12.9",
         "@rollup/plugin-commonjs": "^17.0.0",
         "@rollup/plugin-node-resolve": "^11.0.0",
-        "@storybook/addon-actions": "^6.4.20",
-        "@storybook/addon-essentials": "^6.4.20",
-        "@storybook/addon-links": "^6.4.20",
-        "@storybook/react": "^6.4.20",
+        "@storybook/addon-actions": "^6.4.21",
+        "@storybook/addon-essentials": "^6.4.21",
+        "@storybook/addon-links": "^6.4.21",
+        "@storybook/react": "^6.4.21",
         "@types/react": "^17.0.0",
         "@types/uuid": "^8.3.4",
         "@typescript-eslint/eslint-plugin": "^5.5.0",
@@ -48,7 +48,7 @@
         "autoprefixer": "^10.4.0",
         "babel-loader": "^8.2.2",
         "concurrently": "^7.1.0",
-        "cypress": "^9.5.3",
+        "cypress": "^9.5.4",
         "eslint": "^8.3.0",
         "eslint-config-airbnb": "^19.0.2",
         "eslint-config-prettier": "^8.3.0",
@@ -58,7 +58,7 @@
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-react": "^7.27.1",
         "eslint-plugin-react-hooks": "^4.3.0",
-        "eslint-plugin-storybook": "^0.5.7",
+        "eslint-plugin-storybook": "^0.5.8",
         "postcss": "^8.4.5",
         "prettier": "^2.5.0",
         "rollup": "^2.34.2",
@@ -66,6 +66,7 @@
         "rollup-plugin-scss": "3",
         "rollup-plugin-typescript2": "^0.29.0",
         "sass": "^1.44.0",
+        "storybook-dark-mode": "^1.0.9",
         "typescript": "^4.1.2"
     },
     "dependencies": {

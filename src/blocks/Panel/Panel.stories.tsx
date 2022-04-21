@@ -1,13 +1,11 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
 import Panel from './Panel'
-import CTAPanel from './components/CTAPanel'
 import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
 
 export default {
     title: `Blocks/Panel`,
     component: Panel,
-    CTAPanel,
 } as Meta
 
 // Base Panel
@@ -109,20 +107,7 @@ export const WithCTAButton = () => (
     </Panel>
 )
 
-// Entire Panel into CTA
-export const EntirePanelIntoCTA = () => (
-    <CTAPanel title='This is the title'>
-        <img src='https://via.placeholder.com/640x480' alt='' />
-        <p>
-            Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis
-            neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent
-            malesuada dapibus turpis, a aliquam lacus mollis vel.
-        </p>
-        <div className='c-buttoncta'>More about CTA buttons</div>
-    </CTAPanel>
-)
-
-// Entire Panel into CTA
+// Panel With Icons
 export const WithIcons = () => (
     <Panel icon='light-bulb' titleWithHeading='Ideas@Carleton'>
         <h3>This is the title</h3>

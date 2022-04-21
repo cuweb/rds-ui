@@ -18,7 +18,7 @@
         .textimg__wrapper {
             position: relative;
         }
-        // Additonal wrapper
+        // Additional wrapper
         section,
         .textimg__wrapper > div {
             min-height: 270px;
@@ -29,20 +29,21 @@
 
         h2,
         h3 {
-            //text-align: left;
-            //border-bottom: none;
-            //font-size: $pixel28;
-
-            // @include media('>=820px', '<=960px') {
-            // 	max-width: 370px; // TODO REMOVED FOR GH-40 (not sure what it's doing)
-            // 	margin: 0; // TODO REMOVED FOR GH-40 (not sure what it's doing)
-            // }
-
-            // @include media('>=720px', '<=820px') {
-            // 	max-width: 335px; // TODO REMOVED FOR GH-40 (not sure what it's doing)
-            // 	margin: 0; // TODO REMOVED FOR GH-40 (not sure what it's doing)
-            // }
+            border-bottom: 1px solid $grey-yoda;
         }
+        //text-align: left;
+
+        //font-size: $pixel28;
+
+        // @include media('>=820px', '<=960px') {
+        // 	max-width: 370px; // TODO REMOVED FOR GH-40 (not sure what it's doing)
+        // 	margin: 0; // TODO REMOVED FOR GH-40 (not sure what it's doing)
+        // }
+
+        // @include media('>=720px', '<=820px') {
+        // 	max-width: 335px; // TODO REMOVED FOR GH-40 (not sure what it's doing)
+        // 	margin: 0; // TODO REMOVED FOR GH-40 (not sure what it's doing)
+        // }
 
         .textimg__text {
             //margin: 0 auto;
@@ -107,3 +108,37 @@
         // max-width: 55%; // TODO REMOVED FOR GH-40
     }
 } // end if > s
+
+// u-block--black rules
+//---------------------
+
+.u-block--black .b-textimg {
+    a {
+        color: red;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    h1,
+    h2,
+    h3 {
+        border-bottom: 1px solid $grey-vader;
+    }
+}
+
+// Utility text styles
+//------------------
+@include media('>=s') {
+    .u-txt--xl.b-textimg {
+        h2 {
+            font-size: 45px;
+        }
+
+        p {
+            font-size: 30px;
+            line-height: 1.35;
+        }
+    }
+}

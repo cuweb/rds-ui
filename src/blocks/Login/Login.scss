@@ -1,7 +1,7 @@
 .b-login {
     max-width: 440px;
     margin: 0 auto;
-
+    color: $black;
     h2 {
         margin-bottom: 15px;
         text-align: center;
@@ -37,5 +37,17 @@
         display: flex;
         align-items: center;
         font-size: 14px;
+    }
+}
+
+.raven-mode .b-login {
+    color: $dark-font-color;
+    form {
+        background-color: $dark-background;
+        border-color: $dark-border-color;
+        border-radius: 0.5rem;
+    }
+    .form__field--button input {
+        box-shadow: none;
     }
 }

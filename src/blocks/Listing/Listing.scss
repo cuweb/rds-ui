@@ -28,6 +28,7 @@
         align-items: center;
         min-height: 60px;
         padding: 10px 50px 10px 0;
+        border: none;
         background-size: 12px;
         background-position: right 15px center;
         background-repeat: no-repeat;
@@ -40,6 +41,7 @@
 
         &:hover {
             background-color: $grey;
+            border: none;
 
             h3,
             h4 {
@@ -297,5 +299,41 @@ aside .b-listing--people {
     img {
         max-width: 65%;
         min-width: 45px;
+    }
+}
+
+.raven-mode .b-listing {
+    a {
+        border-bottom: $dark-border-color;
+        color: $dark-font-color;
+        background-color: $dark-background-hover;
+        padding-left: 1rem;
+
+        &:hover {
+            background-color: $dark-background-soft;
+        }
+    }
+    a time {
+        color: $dark-font-color-soft;
+    }
+    a time span {
+        color: $dark-font-color;
+    }
+    a h3,
+    a h4 {
+        color: $dark-link;
+    }
+    a:hover h3,
+    a:hover h4 {
+        color: $dark-font-color;
+    }
+
+    & > ul,
+    & > ul > li {
+        border-color: $dark-border-color;
+    }
+
+    a svg {
+        fill: $dark-icon-fill;
     }
 }

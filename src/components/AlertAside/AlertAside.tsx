@@ -1,5 +1,5 @@
 import React from 'react'
-import Ublock from '../Ublock/Ublock'
+import Ublock, { UblockProps } from '../Ublock/Ublock'
 import Alert from '../Alert/Alert'
 
 export interface AlertAsideProps {
@@ -7,6 +7,7 @@ export interface AlertAsideProps {
     title: string
     content?: string
     handleClose?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
+    block?: UblockProps
 }
 
 const AlertAside: React.FC<AlertAsideProps> = ({
@@ -14,6 +15,7 @@ const AlertAside: React.FC<AlertAsideProps> = ({
     title,
     content,
     handleClose,
+    block,
 }): JSX.Element => {
     const aprops = {
         type,
@@ -22,7 +24,7 @@ const AlertAside: React.FC<AlertAsideProps> = ({
         handleClose,
     }
     return (
-        <Ublock>
+        <Ublock {...block}>
             <div className='b-alertaside'>
                 <Alert {...aprops} />
             </div>
