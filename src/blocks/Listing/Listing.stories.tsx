@@ -278,7 +278,7 @@ export const EventsVariant = () => {
 export const EventsVariantLongTitle = () => {
     return (
         <ListingEvent
-            header='Listing Events with Long title and Description'
+            header='Listing Events with Long Title and Description'
             longTitle
             data={[
                 {
