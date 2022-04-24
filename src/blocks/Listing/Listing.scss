@@ -104,6 +104,16 @@
     }
 }
 
+.b-listing:not(.b-listing--accordion) .b-listing--long-title {
+    h3,
+    h4,
+    p {
+        width: fit-content;
+        max-width: 250px;
+        min-width: 100px;
+    }
+}
+
 // News variant
 //=============
 

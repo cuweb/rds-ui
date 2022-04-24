@@ -244,7 +244,7 @@ export const FilesListing = () => {
 export const EventsVariant = () => {
     return (
         <ListingEvent
-            header='Listing block with icons'
+            header='Listing Events'
             data={[
                 {
                     src: '#eventurl',
@@ -269,6 +269,35 @@ export const EventsVariant = () => {
                     date: '2018-04-21',
                     startTime: '2018-04-21 23:15',
                     endTime: '2018-04-21 23:15',
+                },
+            ]}
+        />
+    )
+}
+
+export const EventsVariantLongTitle = () => {
+    return (
+        <ListingEvent
+            header='Listing Events with long title and description'
+            longTitle
+            data={[
+                {
+                    src: '#eventurl',
+                    title: 'Long .............. Event Title',
+                    description: 'Long ..............Event location',
+                    date: '2018-04-19',
+                },
+                {
+                    src: '#eventurl',
+                    title: 'Long .............. Event Title',
+                    description: 'Long ..............Event location',
+                    date: '2018-04-20',
+                },
+                {
+                    src: '#eventurl',
+                    title: 'Long .............. Event Title',
+                    description: 'Long ..............Event location',
+                    date: '2018-04-21',
                 },
             ]}
         />
