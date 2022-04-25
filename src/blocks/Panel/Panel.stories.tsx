@@ -19,6 +19,17 @@ export const Base = () => (
     </Panel>
 )
 
+//White heading color
+export const WhiteHeadingColor = () => (
+    <Panel title='This is the title with white background color' whiteHeadingColor>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            convallis neque quis enim eleifend luctus. Aliquam erat volutpat.
+            Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.
+        </p>
+    </Panel>
+)
+
 // With Actions
 
 const actions = {

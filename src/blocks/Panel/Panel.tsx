@@ -11,14 +11,31 @@ export interface PanelProps {
     actions?: MenuPopupMenuProps
     icon?: string
     block?: UblockProps
+    whiteHeadingColor?: boolean
 }
 
 const Panel: React.FC<PanelProps> = (props): JSX.Element => {
-    const { title, children, titleWithHeading, icon, block, actions } = props
+    const {
+        title,
+        children,
+        titleWithHeading,
+        icon,
+        block,
+        actions,
+        whiteHeadingColor = false,
+    } = props
+    const whiteHeadingColorClass = whiteHeadingColor
+        ? 'b-sidebar__white-heading'
+        : ''
     return (
         <Ublock {...block}>
             <div className='b-sidebar'>
-                {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
+                {title && (
+                    <h2
+                        className={whiteHeadingColorClass}
+                        dangerouslySetInnerHTML={{ __html: title }}
+                    />
+                )}
                 {titleWithHeading && (
                     <h2 className='sidebar__heading'>
                         {icon && <Icon icon={icon} />} {titleWithHeading}
