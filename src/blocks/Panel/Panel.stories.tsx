@@ -163,6 +163,8 @@ export const WithShadow = () => (
             link='https://carleton.ca'
             icon='arrow-down'
             text='Download now'
+            grey
+            shadow={false}
         />
     </Panel>
 )
