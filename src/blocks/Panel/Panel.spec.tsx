@@ -1,6 +1,7 @@
 describe('Panel', () => {
     const types = [
         'base',
+        'white-heading-color',
         'with-link',
         'with-heading-and-button',
         'with-image',
