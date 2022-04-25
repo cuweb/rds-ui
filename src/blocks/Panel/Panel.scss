@@ -1,3 +1,6 @@
+// ==============================
+// TODO: RENAME CLASS TO b-panel
+// ==============================
 .b-sidebar {
     background-color: white;
     max-width: 768px;
@@ -6,84 +9,103 @@
     display: block;
     position: relative;
     overflow: hidden;
+    font-size: $pixel16;
 
-    > * {
-        padding-right: 20px;
-        padding-left: 20px;
-        font-size: $pixel16;
-    }
+    // p {
+    //     margin-top: -5px;
+    //     margin-bottom: 20px;
+    //     font-weight: 400;
 
-    p {
-        margin-top: -5px;
-        margin-bottom: 20px;
-        font-weight: 400;
+    //     a {
+    //         color: $link;
+    //         border-bottom: 1px solid #c8dae3;
 
-        a {
-            color: $link;
-            border-bottom: 1px solid #c8dae3;
+    //         &:hover {
+    //             border-bottom: 1px solid $red;
+    //             color: $red;
+    //         }
+    //     }
+    // }
 
-            &:hover {
-                border-bottom: 1px solid $red;
-                color: $red;
-            }
+    .b-listing:not(.b-listing--accordion) {
+        ul {
+            border: none;
+            margin-top: -1.25rem;
+            margin-bottom: -1.25rem;
         }
     }
 }
 
-a.b-sidebar {
+// a.b-sidebar {
+//     box-shadow: $ds-k;
+
+//     &:hover {
+//         box-shadow: $ds-l;
+//     }
+
+//     &:hover .c-buttoncta:not(.c-buttoncta--ghost) {
+//         background-color: $black;
+//     }
+
+//     &:hover .c-buttoncta--ghost {
+//         background-color: $red;
+//         color: white;
+//     }
+// }
+
+// .sidebar__heading,
+// .b-sidebar h2 {
+//     background-color: $grey;
+//     text-transform: uppercase;
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+//     margin-bottom: 20px;
+//     line-height: 1.25;
+
+//     + h3 {
+//         font-size: $pixel18;
+//     }
+// }
+
+// .b-sidebar > h2 {
+//     text-transform: none;
+// }
+
+// .b-sidebar > h2 + img {
+//     width: 100%;
+//     height: auto;
+//     margin-bottom: 20px;
+
+//     + p {
+//         padding-top: 0;
+//     }
+// }
+
+// .b-sidebar > .c-buttoncta {
+//     display: block;
+//     margin: 20px;
+// }
+
+// .b-sidebar--white {
+//     h2 {
+//         background-color: white;
+//         border-bottom: 1px solid $grey-yoda;
+//     }
+// }
+
+// Local Variables
+$panel-background-grey: $grey;
+$panel-background-white: white;
+$panel-background-border: $grey-yoda;
+
+.b-sidebar--shadow {
     box-shadow: $ds-k;
-
-    &:hover {
-        box-shadow: $ds-l;
-    }
-
-    &:hover .c-buttoncta:not(.c-buttoncta--ghost) {
-        background-color: $black;
-    }
-
-    &:hover .c-buttoncta--ghost {
-        background-color: $red;
-        color: white;
-    }
 }
 
-.sidebar__heading,
-.b-sidebar h2 {
-    background-color: $grey;
-    text-transform: uppercase;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    line-height: 1.25;
-
-    + h3 {
-        font-size: $pixel18;
-    }
-}
-
-.b-sidebar > h2 {
-    text-transform: none;
-}
-
-.b-sidebar > h2 + img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-
-    + p {
-        padding-top: 0;
-    }
-}
-
-.b-sidebar > .c-buttoncta {
-    display: block;
-    margin: 20px;
-}
-
-.b-sidebar .b-sidebar__actions {
+.b-sidebar__actions {
     position: absolute;
     top: 1.25rem;
-    right: 0;
+    right: 1.25rem;
     z-index: 99;
 
     .c-menupopup > button::after {
@@ -91,14 +113,48 @@ a.b-sidebar {
     }
 }
 
-.b-sidebar--white {
-    h2 {
-        background-color: white;
-        border-bottom: 1px solid #c8dae3;
+.b-sidebar__body {
+    padding: 1.25rem;
+    font-size: $pixel16;
+
+    &--grey {
+        background-color: $panel-background-grey;
+    }
+
+    & > .c-buttoncta,
+    & > img {
+        margin-bottom: 1.25rem;
     }
 }
-.b-sidebar--shadow {
-    box-shadow: $ds-k;
+
+.b-sidebar__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    padding: 1.25rem;
+    border-bottom: solid 1px $panel-background-border;
+
+    &--grey {
+        background-color: $panel-background-grey;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        border: none;
+        font-size: $pixel18;
+        font-weight: 500;
+    }
+}
+
+.b-sidebar__footer {
+    border-top: solid 1px $panel-background-border;
+    padding: 1.25rem;
+
+    &--grey {
+        background-color: $panel-background-grey;
+    }
 }
 
 .raven-mode .b-sidebar {
