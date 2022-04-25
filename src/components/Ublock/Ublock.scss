@@ -167,6 +167,12 @@ aside > .u-block--panel {
     }
 }
 
+.u-block--wide {
+    > * {
+        max-width: 1200px;
+    }
+}
+
 .raven-mode .u-block {
     &.u-block--white {
         background-color: $grey-anakin;

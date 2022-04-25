@@ -123,3 +123,46 @@ export const WithIcons = () => (
         />
     </Panel>
 )
+
+export const White = () => (
+    <Panel
+        icon='light-bulb'
+        titleWithHeading='Ideas@Carleton'
+        color='white'
+        actions={actions}
+    >
+        <h3>This is the title</h3>
+        <p>
+            Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis
+            neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent
+            malesuada dapibus turpis, a aliquam lacus mollis vel.
+        </p>
+        <ButtonCTA
+            link='https://carleton.ca'
+            icon='arrow-down'
+            text='Download now'
+        />
+    </Panel>
+)
+
+export const WithShadow = () => (
+    <Panel
+        icon='light-bulb'
+        titleWithHeading='Ideas@Carleton'
+        color='white'
+        actions={actions}
+        shadow
+    >
+        <h3>This is the title</h3>
+        <p>
+            Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis
+            neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent
+            malesuada dapibus turpis, a aliquam lacus mollis vel.
+        </p>
+        <ButtonCTA
+            link='https://carleton.ca'
+            icon='arrow-down'
+            text='Download now'
+        />
+    </Panel>
+)

@@ -5,6 +5,7 @@
     border: 1px solid $grey-yoda;
     display: block;
     position: relative;
+    overflow: hidden;
 
     > * {
         padding-right: 20px;
@@ -90,6 +91,16 @@ a.b-sidebar {
     }
 }
 
+.b-sidebar--white {
+    h2 {
+        background-color: white;
+        border-bottom: 1px solid #c8dae3;
+    }
+}
+.b-sidebar--shadow {
+    box-shadow: $ds-k;
+}
+
 .raven-mode .b-sidebar {
     background-color: $dark-background-hover;
     border-color: $dark-border-color;
@@ -105,6 +116,16 @@ a.b-sidebar {
         &:hover {
             color: $dark-link-hover;
             border-color: $dark-link-hover-border;
+        }
+    }
+    svg {
+        fill: white;
+    }
+
+    &--white {
+        h2 {
+            background-color: $dark-background-hard;
+            border-bottom-color: $dark-border-color;
         }
     }
 }

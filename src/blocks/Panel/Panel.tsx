@@ -11,13 +11,27 @@ export interface PanelProps {
     actions?: MenuPopupMenuProps
     icon?: string
     block?: UblockProps
+    color?: 'grey' | 'white'
+    shadow?: boolean
 }
 
 const Panel: React.FC<PanelProps> = (props): JSX.Element => {
-    const { title, children, titleWithHeading, icon, block, actions } = props
+    const {
+        title,
+        children,
+        titleWithHeading,
+        icon,
+        block,
+        actions,
+        color = 'grey',
+        shadow,
+    } = props
+
+    const shadowClassName = shadow ? `b-sidebar--shadow` : ``
+
     return (
         <Ublock {...block}>
-            <div className='b-sidebar'>
+            <div className={`b-sidebar b-sidebar--${color} ${shadowClassName}`}>
                 {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
                 {titleWithHeading && (
                     <h2 className='sidebar__heading'>
