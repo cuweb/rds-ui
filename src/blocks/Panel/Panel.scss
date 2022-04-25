@@ -152,6 +152,10 @@ $panel-background-border: $grey-yoda;
     border-top: solid 1px $panel-background-border;
     padding: 1.25rem;
 
+    &--no-spacing {
+        padding: 0;
+    }
+
     &--grey {
         background-color: $panel-background-grey;
     }
