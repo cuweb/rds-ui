@@ -2,6 +2,11 @@ import React from 'react'
 import { Meta } from '@storybook/react'
 import Panel from './Panel'
 import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
+import PanelFooter from './components/PanelFooter'
+import PanelBody from './components/PanelBody'
+import PanelHeader from './components/PanelHeader'
+import Listing from '@blocks/Listing/Listing'
+import Icon from '@components/Icon/Icon'
 
 export default {
     title: `Blocks/Panel`,
@@ -10,16 +15,32 @@ export default {
 
 // Base Panel
 export const Base = () => (
-    <Panel title='This is the title'>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-            convallis neque quis enim eleifend luctus. Aliquam erat volutpat.
-            Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.
-        </p>
+    <Panel>
+        <PanelHeader>Base Panel</PanelHeader>
+        <PanelBody>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                convallis neque quis enim eleifend luctus. Aliquam erat
+                volutpat. Praesent malesuada dapibus turpis, a aliquam lacus
+                mollis vel.
+            </p>
+        </PanelBody>
     </Panel>
 )
 
-// With Actions
+export const WithShadow = () => (
+    <Panel shadow>
+        <PanelHeader>Panel With Shadow</PanelHeader>
+        <PanelBody>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                convallis neque quis enim eleifend luctus. Aliquam erat
+                volutpat. Praesent malesuada dapibus turpis, a aliquam lacus
+                mollis vel.
+            </p>
+        </PanelBody>
+    </Panel>
+)
 
 const actions = {
     menu: [
@@ -43,128 +64,191 @@ const actions = {
         },
     ],
 }
+
 export const WithActions = () => (
-    <Panel title='This is the title' actions={actions}>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-            convallis neque quis enim eleifend luctus. Aliquam erat volutpat.
-            Praesent malesuada dapibus turpis, a aliquam lacus mollis vel.
-        </p>
-    </Panel>
-)
-// Base Panel with Link
-export const WithLink = () => (
-    <Panel title='This is the title'>
-        <p>
-            Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
-            consectetur adipiscing elit. Cras convallis neque quis enim eleifend
-            luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a
-            aliquam lacus mollis vel.
-        </p>
+    <Panel actions={actions}>
+        <PanelHeader>Panel With Actions</PanelHeader>
+        <PanelBody>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                convallis neque quis enim eleifend luctus. Aliquam erat
+                volutpat. Praesent malesuada dapibus turpis, a aliquam lacus
+                mollis vel.
+            </p>
+        </PanelBody>
     </Panel>
 )
 
-// Panel with Heading and Button
-export const WithHeadingAndButton = () => (
-    <Panel titleWithHeading='Ideas@Carleton'>
-        <h3>This is the title</h3>
-        <p>
-            Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis
-            neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent
-            malesuada dapibus turpis, a aliquam lacus mollis vel.
-        </p>
-        <ButtonCTA link='https://carleton.ca' text='Text' />
+export const WithIcon = () => (
+    <Panel>
+        <PanelHeader icon='light-bulb'>Panel With Icon</PanelHeader>
+        <PanelBody>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                convallis neque quis enim eleifend luctus. Aliquam erat
+                volutpat. Praesent malesuada dapibus turpis, a aliquam lacus
+                mollis vel.
+            </p>
+        </PanelBody>
     </Panel>
 )
 
-// Panel with Image
-export const WithImage = () => (
-    <Panel title='This is the title'>
-        <img src='https://via.placeholder.com/640x480' alt='image' />
-        <p>
-            Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
-            consectetur adipiscing elit. Cras convallis neque quis enim eleifend
-            luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a
-            aliquam lacus mollis vel.
-        </p>
+export const WithContent = () => (
+    <Panel>
+        <PanelHeader>Panel With Actions</PanelHeader>
+        <PanelBody>
+            <p>
+                Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
+                consectetur adipiscing elit. Cras convallis neque quis enim
+                eleifend luctus. Aliquam erat volutpat. Praesent malesuada
+                dapibus turpis, a aliquam lacus mollis vel.
+            </p>
+            <img src='https://via.placeholder.com/640x480' alt='image' />
+            <p>
+                Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
+                consectetur adipiscing elit. Cras convallis neque quis enim
+                eleifend luctus. Aliquam erat volutpat. Praesent malesuada
+                dapibus turpis, a aliquam lacus mollis vel.
+            </p>
+            <ButtonCTA
+                link='https://carleton.ca'
+                icon='arrow-down'
+                text='Download now'
+            />
+
+            <p>
+                Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
+                consectetur adipiscing elit. Cras convallis neque quis enim
+                eleifend luctus. Aliquam erat volutpat. Praesent malesuada
+                dapibus turpis, a aliquam lacus mollis vel.
+            </p>
+        </PanelBody>
     </Panel>
 )
 
-// Panel with CTA Button
-export const WithCTAButton = () => (
-    <Panel title='This is the title'>
-        <img src='https://via.placeholder.com/640x480' alt='image' />
-        <p>
-            Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
-            consectetur adipiscing elit. Cras convallis neque quis enim eleifend
-            luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a
-            aliquam lacus mollis vel.
-        </p>
-        <ButtonCTA
-            link='https://ravendesignsystem.github.io/rds//dev/components/buttons/cta-button/'
-            text='More about CTA buttons'
-        />
+export const WithFooter = () => (
+    <Panel shadow>
+        <PanelHeader icon='light-bulb'>With Footer</PanelHeader>
+        <PanelBody>
+            <p>
+                Lorem ipsum sit amet, consectetur adipiscing elit. Cras
+                convallis neque quis enim eleifend luctus. Aliquam erat
+                volutpat. Praesent malesuada dapibus turpis, a aliquam lacus
+                mollis vel.
+            </p>
+        </PanelBody>
+        <PanelFooter>
+            <ButtonCTA
+                link='https://carleton.ca'
+                icon='arrow-down'
+                text='Download now'
+                grey
+                shadow={false}
+                full
+            />
+        </PanelFooter>
     </Panel>
 )
 
-// Panel With Icons
-export const WithIcons = () => (
-    <Panel icon='light-bulb' titleWithHeading='Ideas@Carleton'>
-        <h3>This is the title</h3>
-        <p>
-            Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis
-            neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent
-            malesuada dapibus turpis, a aliquam lacus mollis vel.
-        </p>
-        <ButtonCTA
-            link='https://carleton.ca'
-            icon='arrow-down'
-            text='Download now'
-        />
+export const WhiteHeader = () => (
+    <Panel shadow>
+        <PanelHeader color='white'>White Header</PanelHeader>
+        <PanelBody>
+            <p>
+                Lorem ipsum sit amet, consectetur adipiscing elit. Cras
+                convallis neque quis enim eleifend luctus. Aliquam erat
+                volutpat. Praesent malesuada dapibus turpis, a aliquam lacus
+                mollis vel.
+            </p>
+        </PanelBody>
+        <PanelFooter>
+            <ButtonCTA
+                link='https://carleton.ca'
+                icon='arrow-down'
+                text='Download now'
+                grey
+                shadow={false}
+                full
+            />
+        </PanelFooter>
     </Panel>
 )
 
-export const White = () => (
-    <Panel
-        icon='light-bulb'
-        titleWithHeading='Ideas@Carleton'
-        color='white'
-        actions={actions}
-    >
-        <h3>This is the title</h3>
-        <p>
-            Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis
-            neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent
-            malesuada dapibus turpis, a aliquam lacus mollis vel.
-        </p>
-        <ButtonCTA
-            link='https://carleton.ca'
-            icon='arrow-down'
-            text='Download now'
-        />
+export const GreyFooter = () => (
+    <Panel shadow>
+        <PanelHeader>Grey Footer</PanelHeader>
+        <PanelBody>
+            <p>
+                Lorem ipsum sit amet, consectetur adipiscing elit. Cras
+                convallis neque quis enim eleifend luctus. Aliquam erat
+                volutpat. Praesent malesuada dapibus turpis, a aliquam lacus
+                mollis vel.
+            </p>
+        </PanelBody>
+        <PanelFooter color='grey'>This is a grey footer</PanelFooter>
+    </Panel>
+)
+export const GreyBody = () => (
+    <Panel shadow>
+        <PanelHeader color='white'>Grey Footer</PanelHeader>
+        <PanelBody color='grey'>
+            <p>
+                Lorem ipsum sit amet, consectetur adipiscing elit. Cras
+                convallis neque quis enim eleifend luctus. Aliquam erat
+                volutpat. Praesent malesuada dapibus turpis, a aliquam lacus
+                mollis vel.
+            </p>
+        </PanelBody>
+        <PanelFooter>
+            <ButtonCTA
+                link='https://carleton.ca'
+                icon='arrow-down'
+                text='Download now'
+                shadow={false}
+                full
+                grey
+            />
+        </PanelFooter>
     </Panel>
 )
 
-export const WithShadow = () => (
-    <Panel
-        icon='light-bulb'
-        titleWithHeading='Ideas@Carleton'
-        color='white'
-        actions={actions}
-        shadow
-    >
-        <h3>This is the title</h3>
-        <p>
-            Lorem ipsum sit amet, consectetur adipiscing elit. Cras convallis
-            neque quis enim eleifend luctus. Aliquam erat volutpat. Praesent
-            malesuada dapibus turpis, a aliquam lacus mollis vel.
-        </p>
-        <ButtonCTA
-            link='https://carleton.ca'
-            icon='arrow-down'
-            text='Download now'
-            grey
-            shadow={false}
-        />
+export const IntranetExample = () => (
+    <Panel actions={actions} shadow>
+        <PanelHeader icon='light-bulb' color='white'>
+            Ideas@Carleton
+        </PanelHeader>
+        <PanelBody>
+            <Listing
+                noUblock
+                data={[
+                    {
+                        src: '#',
+                        title: 'White-necked Raven',
+                    },
+                    {
+                        src: '#',
+                        title: 'Common raven',
+                    },
+                    {
+                        src: '#',
+                        title: 'Australian raven',
+                    },
+                    {
+                        src: '#',
+                        title: 'Thick-billed raven',
+                    },
+                ]}
+            />
+        </PanelBody>
+        <PanelFooter>
+            <ButtonCTA
+                link='https://carleton.ca'
+                icon='arrow-down'
+                text='Download now'
+                grey
+                shadow={false}
+                full
+            />
+        </PanelFooter>
     </Panel>
 )
