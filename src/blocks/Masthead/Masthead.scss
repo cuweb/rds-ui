@@ -312,6 +312,19 @@ body {
     }
 
     .masthead__actions {
+        .masthead__cta--white > a {
+            background-color: $dark-background;
+            svg {
+                fill: $dark-icon-fill;
+            }
+            &:hover {
+                background-color: $dark-background-hover;
+                color: $dark-font-color;
+            }
+            &:hover svg {
+                fill: $dark-icon-fill;
+            }
+        }
         li {
             border-color: $dark-border-color-light;
         }

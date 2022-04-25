@@ -51,6 +51,11 @@ const args = {
                 color: 'red',
                 icon: 'github',
             },
+            {
+                title: 'Button 3',
+                link: '/',
+                icon: 'github',
+            },
         ],
     },
     menu: [
