@@ -285,19 +285,19 @@ export const EventsVariantLongTitle = () => {
                     src: '#eventurl',
                     title: 'Long .............. Event Title',
                     description: 'Long ..............Event location',
-                    date: '2018-04-19',
+                    date: '2018-04-01',
                 },
                 {
                     src: '#eventurl',
                     title: 'Long .............. Event Title',
                     description: 'Long ..............Event location',
-                    date: '2018-04-20',
+                    date: '2018-04-2',
                 },
                 {
                     src: '#eventurl',
                     title: 'Long .............. Event Title',
                     description: 'Long ..............Event location',
-                    date: '2018-04-21',
+                    date: '2018-04-3',
                 },
             ]}
         />
