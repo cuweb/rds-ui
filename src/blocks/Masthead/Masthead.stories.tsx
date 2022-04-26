@@ -13,7 +13,7 @@ const avatarRender = (
         <Avatar
             alt='abc'
             imageUrl='https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg'
-            size={'50px'}
+            className='u-image-full'
         />
     </div>
 )
