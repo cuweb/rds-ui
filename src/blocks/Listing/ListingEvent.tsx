@@ -7,7 +7,6 @@ import ListingWrapper from './components/ListingWrapper'
 export interface ListingEventProps {
     data: EventListProps[]
     noUblock?: boolean
-    longTitle?: boolean
 }
 
 export interface EventListProps {
@@ -28,9 +27,7 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
     header,
     data,
     noUblock,
-    longTitle = false,
 }): JSX.Element => {
-    const longTitleClass = longTitle ? 'b-listing--long-title' : ''
     return (
         <ListingWrapper type='event' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/Event'>
@@ -42,7 +39,7 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
                                 <span>{convertDate(item.date, 'day')}</span>
                             </time>
                             {(item.startTime || item.endTime) && (
-                                <div>
+                                <div className='b-listing__hours'>
                                     {item.startTime && (
                                         <h3>{convertTime(item.startTime)}</h3>
                                     )}
@@ -51,7 +48,7 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
                                     )}
                                 </div>
                             )}
-                            <div className={longTitleClass} itemProp='name'>
+                            <div itemProp='name'>
                                 <h3
                                     itemProp='name'
                                     dangerouslySetInnerHTML={{

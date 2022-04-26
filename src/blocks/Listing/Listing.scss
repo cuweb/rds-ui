@@ -104,19 +104,19 @@
     }
 }
 
-.b-listing:not(.b-listing--accordion) .b-listing--long-title {
-    h3,
-    h4,
-    p {
-        width: fit-content;
-        max-width: 250px;
-        min-width: 100px;
-    }
+// .b-listing:not(.b-listing--accordion) .b-listing--long-title {
+//     h3,
+//     h4,
+//     p {
+//         width: fit-content;
+//         max-width: 250px;
+//         min-width: 100px;
+//     }
 
-    p {
-        color: black;
-    }
-}
+//     p {
+//         color: black;
+//     }
+// }
 
 // News variant
 //=============
@@ -201,7 +201,7 @@
     font-size: $pixel24;
 }
 
-.b-listing--event time + div {
+.b-listing__hours {
     display: none;
 
     @include media('>s') {

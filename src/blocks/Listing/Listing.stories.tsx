@@ -248,19 +248,25 @@ export const EventsVariant = () => {
             data={[
                 {
                     src: '#eventurl',
-                    title: 'Event Title',
-                    description: 'Event location',
+                    title: 'Nulla anim magna labore aliqua culpa. Aute proident et id adipisicing amet. Est minim ut exercitation sint nostrud occaecat laboris ut aliquip magna ut sit. Irure sint amet consectetur minim fugiat eiusmod excepteur proident ullamco ipsum. Ullamco sunt pariatur nostrud proident cupidatat exercitation aliquip nisi incididunt. Elit adipisicing anim officia mollit eu id irure. Adipisicing exercitation tempor eu elit.',
+                    description:
+                        'Reprehenderit id exercitation occaecat eu consequat sit in. Ad laboris magna tempor eiusmod pariatur. Laborum ut in nisi commodo magna laboris deserunt in excepteur dolor incididunt id. Proident est ad sint excepteur non.',
                     date: '2018-04-19',
                     startTime: '2018-04-21 23:15',
                     endTime: '2018-04-21 23:15',
                 },
                 {
                     src: '#eventurl',
+                    title: 'Nisi velit eiusmod velit eiusmod cillum esse. Occaecat in minim tempor minim. Excepteur mollit voluptate eiusmod anim irure veniam id. Ad enim officia irure mollit velit proident. Eiusmod ut labore sunt consectetur id. Proident et sint id dolore commodo elit nulla incididunt cupidatat dolore duis aliquip. Laboris anim sit labore in amet amet minim sit eu dolore sunt.',
+                    description:
+                        'Esse sint incididunt deserunt quis non. Cillum Lorem pariatur laborum ea elit. Irure nulla qui mollit sunt aliquip exercitation. Dolore ea anim voluptate nulla incididunt incididunt. Labore sunt do eu enim id eiusmod nulla ipsum. Consequat velit eu consequat deserunt tempor excepteur eu esse.',
+                    date: '2018-04-20',
+                },
+                {
+                    src: '#eventurl',
                     title: 'Event Title',
                     description: 'Event location',
                     date: '2018-04-20',
-                    startTime: '2018-04-21 23:15',
-                    endTime: '2018-04-21 23:15',
                 },
                 {
                     src: '#eventurl',
@@ -269,35 +275,6 @@ export const EventsVariant = () => {
                     date: '2018-04-21',
                     startTime: '2018-04-21 23:15',
                     endTime: '2018-04-21 23:15',
-                },
-            ]}
-        />
-    )
-}
-
-export const EventsVariantLongTitle = () => {
-    return (
-        <ListingEvent
-            header='Listing Events with Long Title and Description'
-            longTitle
-            data={[
-                {
-                    src: '#eventurl',
-                    title: 'Long .............. Event Title',
-                    description: 'Long ..............Event location',
-                    date: '2018-04-01',
-                },
-                {
-                    src: '#eventurl',
-                    title: 'Long .............. Event Title',
-                    description: 'Long ..............Event location',
-                    date: '2018-04-2',
-                },
-                {
-                    src: '#eventurl',
-                    title: 'Long .............. Event Title',
-                    description: 'Long ..............Event location',
-                    date: '2018-04-3',
                 },
             ]}
         />
