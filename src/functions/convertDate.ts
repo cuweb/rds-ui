@@ -12,7 +12,7 @@ const convertDate = (time: string, format?: convertDateTypes) => {
             month: 'short',
         },
         day: {
-            day: 'numeric',
+            day: '2-digit',
         },
     }
     return event.toLocaleDateString('en-US', {
