@@ -283,3 +283,28 @@ dialog .u-hide-dialog {
         opacity: 1;
     }
 }
+
+.text-center {
+    text-align: center;
+}
+
+.link {
+    &--blue {
+        color: $link;
+        border-color: $link;
+
+        &:hover {
+            color: $red;
+            border-color: $red;
+        }
+    }
+    &--red {
+        color: $red;
+        border-color: $red;
+
+        &:hover {
+            color: $link;
+            border-color: $link;
+        }
+    }
+}
