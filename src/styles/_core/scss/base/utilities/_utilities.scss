@@ -317,3 +317,21 @@ dialog .u-hide-dialog {
         }
     }
 }
+
+.u-spacing {
+    padding: 1rem;
+}
+.u-spacing-x {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.u-spacing-2x {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.u-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

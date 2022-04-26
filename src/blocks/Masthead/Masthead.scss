@@ -195,8 +195,7 @@ body {
 }
 
 .masthead__actions {
-    justify-content: flex-end;
-    margin-left: auto;
+    display: flex;
 
     li {
         border-left: 1px solid $grey-yoda;
@@ -272,6 +271,24 @@ body {
 
 .c-navmenu__icon {
     margin-right: 0.5rem;
+}
+
+.b-masthead__extra {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height: 100%;
+}
+
+.b-masthead__menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media('>s') {
+        border-left: solid 1px $grey-kenobi;
+    }
 }
 
 .raven-mode {

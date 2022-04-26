@@ -37,6 +37,9 @@ import Ublock from './components/Ublock/Ublock'
 import Ugrid from './components/Ugrid/Ugrid'
 import SearchForm from './components/SearchForm/SearchForm'
 import Panel from './blocks/Panel/Panel'
+import PanelBody from './blocks/Panel/components/PanelBody'
+import PanelFooter from './blocks/Panel/components/PanelFooter'
+import PanelHeader from './blocks/Panel/components/PanelHeader'
 import Video from './components/Video/Video'
 import Sidebar from './layouts/Layout/Sidebar'
 import Table from './components/Table/Table'
@@ -83,6 +86,9 @@ export {
     NavMenu,
     Overlay,
     Panel,
+    PanelBody,
+    PanelFooter,
+    PanelHeader,
     SearchForm,
     Sidebar,
     SidebarMenu,
