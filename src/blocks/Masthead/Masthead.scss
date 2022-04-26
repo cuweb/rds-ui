@@ -349,4 +349,8 @@ body {
             fill: $dark-icon-fill;
         }
     }
+
+    .b-masthead__menu-item {
+        border-color: $dark-border-color-light;
+    }
 }
