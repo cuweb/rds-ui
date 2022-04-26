@@ -165,8 +165,14 @@ $panel-background-border: $grey-yoda;
     background-color: $dark-background-hover;
     border-color: $dark-border-color;
 
-    h2 {
+    &__header,
+    &__footer {
         background-color: $dark-background;
+        border-color: $dark-border-color;
+    }
+
+    &__body--grey {
+        background-color: $dark-background-soft;
     }
 
     a:not(.c-buttoncta) {
@@ -180,12 +186,5 @@ $panel-background-border: $grey-yoda;
     }
     svg {
         fill: white;
-    }
-
-    &--white {
-        h2 {
-            background-color: $dark-background-hard;
-            border-bottom-color: $dark-border-color;
-        }
     }
 }

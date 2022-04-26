@@ -114,4 +114,18 @@ footer .c-buttoncta {
             background-color: $red;
         }
     }
+    .c-buttoncta--grey,
+    a.c-buttoncta--grey {
+        background-color: $dark-background-soft;
+        border-color: $dark-background-soft;
+        color: white !important;
+        svg path {
+            fill: white;
+        }
+
+        &:hover {
+            background-color: $black;
+            border-color: $black;
+        }
+    }
 }
