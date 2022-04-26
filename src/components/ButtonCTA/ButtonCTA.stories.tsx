@@ -51,3 +51,10 @@ Centered.args = {
     link: '#',
     center: true,
 }
+
+export const NoShadow = Template.bind({})
+NoShadow.args = {
+    text: 'No Shadow Button',
+    link: '#',
+    shadow: false,
+}

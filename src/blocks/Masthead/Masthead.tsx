@@ -27,13 +27,13 @@ const Masthead: React.FC<MastheadProps> = ({
     brand,
     actions,
     menu,
+    children,
 }): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
-    const isMobile = useWindowSize().width < theme.breakpoints.mobile
+    const isMobile = useWindowSize().width < theme.breakpoints.tablet
     const hasMenu = menu && !isMobile
     const hasMobileMenu = isMobile && isOpen && menu
     const hasMobileButton = isMobile && menu
-    const hasActions = actions || (isMobile && menu)
 
     return (
         <>
@@ -41,9 +41,14 @@ const Masthead: React.FC<MastheadProps> = ({
                 <div className='b-masthead'>
                     <MastheadTitle title={title} url={url} brand={brand} />
                     {hasMenu && <NavMenu type='top' menu={menu} />}
-                    {hasActions && (
+                    <div className='b-masthead__extra'>
                         <ul className='masthead__actions'>
-                            {actions && <MastheadActions items={actions} />}
+                            {actions && (
+                                <MastheadActions
+                                    items={actions}
+                                    isMobile={isMobile}
+                                />
+                            )}
                             {hasMobileButton && (
                                 <MastheadMobileButton
                                     isOpen={isOpen}
@@ -51,12 +56,18 @@ const Masthead: React.FC<MastheadProps> = ({
                                 />
                             )}
                         </ul>
-                    )}
+                        {!isMobile && (
+                            <div className='b-masthead__menu-item'>
+                                {children}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </Ublock>
             {hasMobileMenu && (
                 <Overlay type='menu'>
                     <NavMenu type='top' menu={menu} isMobile />
+                    <div className='b-masthead__menu-item'>{children}</div>
                 </Overlay>
             )}
         </>

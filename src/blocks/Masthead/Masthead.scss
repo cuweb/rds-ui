@@ -195,8 +195,7 @@ body {
 }
 
 .masthead__actions {
-    justify-content: flex-end;
-    margin-left: auto;
+    display: flex;
 
     li {
         border-left: 1px solid $grey-yoda;
@@ -274,6 +273,24 @@ body {
     margin-right: 0.5rem;
 }
 
+.b-masthead__extra {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height: 100%;
+}
+
+.b-masthead__menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media('>s') {
+        border-left: solid 1px $grey-kenobi;
+    }
+}
+
 .raven-mode {
     .b-masthead {
         background-color: $dark-background;
@@ -312,11 +329,28 @@ body {
     }
 
     .masthead__actions {
+        .masthead__cta--white > a {
+            background-color: $dark-background;
+            svg {
+                fill: $dark-icon-fill;
+            }
+            &:hover {
+                background-color: $dark-background-hover;
+                color: $dark-font-color;
+            }
+            &:hover svg {
+                fill: $dark-icon-fill;
+            }
+        }
         li {
             border-color: $dark-border-color-light;
         }
         svg {
             fill: $dark-icon-fill;
         }
+    }
+
+    .b-masthead__menu-item {
+        border-color: $dark-border-color-light;
     }
 }

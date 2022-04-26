@@ -149,6 +149,7 @@ const testParagraphItemProp = (type: string) => {
 const testTime = (type: string) => {
     const Time = [
         'event-variant',
+
         'news-variant',
         'news-image-variant',
     ].includes(type)
@@ -183,6 +184,7 @@ const types = [
     'with-icon',
     'files-listing',
     'events-variant',
+
     'news-variant',
     'news-variant-with-image',
     'people-variant',

@@ -13,6 +13,8 @@ export interface IAvatar {
     isRound?: boolean
     sideDetails?: boolean
     handleClick?: React.MouseEventHandler<HTMLButtonElement> | undefined
+    size?: string
+    className?: string
 }
 
 const Avatar: React.FC<IAvatar> = ({
@@ -24,6 +26,8 @@ const Avatar: React.FC<IAvatar> = ({
     caption,
     isRound = true,
     sideDetails = false,
+    size = '200px',
+    className = '',
     handleClick,
 }): JSX.Element => {
     const roundImage = isRound ? 'image__round' : ''
@@ -39,11 +43,23 @@ const Avatar: React.FC<IAvatar> = ({
                             type='button'
                             onClick={handleClick}
                         >
-                            <img src={imageUrl} alt={imageAlt} />
+                            <img
+                                src={imageUrl}
+                                alt={imageAlt}
+                                width={size}
+                                height={size}
+                                className={className}
+                            />
                         </button>
                     )}
                     {imageUrl && !handleClick && (
-                        <img src={imageUrl} alt={imageAlt} />
+                        <img
+                            src={imageUrl}
+                            alt={imageAlt}
+                            width={size}
+                            height={size}
+                            className={className}
+                        />
                     )}
                     {!imageUrl && firstName && lastName && (
                         <p>

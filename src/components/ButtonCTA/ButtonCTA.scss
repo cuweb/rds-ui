@@ -62,7 +62,7 @@ a.c-buttoncta--grey {
     }
 
     & path {
-        fill: $red;
+        fill: $black;
     }
 }
 
@@ -90,6 +90,10 @@ footer .c-buttoncta {
     font-size: $pixel14;
 }
 
+.c-buttoncta.c-buttoncta--no-shadow {
+    box-shadow: none;
+}
+
 .raven-mode {
     .c-buttoncta,
     a.c-buttoncta {
@@ -108,6 +112,20 @@ footer .c-buttoncta {
 
         &:hover {
             background-color: $red;
+        }
+    }
+    .c-buttoncta--grey,
+    a.c-buttoncta--grey {
+        background-color: $dark-background-soft;
+        border-color: $dark-background-soft;
+        color: white !important;
+        svg path {
+            fill: white;
+        }
+
+        &:hover {
+            background-color: $black;
+            border-color: $black;
         }
     }
 }

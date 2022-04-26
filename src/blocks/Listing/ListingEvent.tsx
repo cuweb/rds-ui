@@ -39,7 +39,7 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
                                 <span>{convertDate(item.date, 'day')}</span>
                             </time>
                             {(item.startTime || item.endTime) && (
-                                <div>
+                                <div className='b-listing__hours'>
                                     {item.startTime && (
                                         <h3>{convertTime(item.startTime)}</h3>
                                     )}

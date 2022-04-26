@@ -17,7 +17,9 @@
             }
         }
         img {
-            width: 75%;
+            // width: 75%;
+            min-width: 50px;
+            min-height: 50px;
             max-width: 200px;
             margin: 0 auto;
             border: 7px solid rgba($grey-yoda, 0.75);
