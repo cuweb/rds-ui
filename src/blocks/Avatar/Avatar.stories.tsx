@@ -2,6 +2,8 @@ import React from 'react'
 import Avatar from './Avatar'
 import Panel from '@blocks/Panel/Panel'
 import { Story } from '@storybook/react'
+import PanelHeader from '@blocks/Panel/components/PanelHeader'
+import PanelBody from '@blocks/Panel/components/PanelBody'
 
 export default {
     component: Avatar,
@@ -65,19 +67,22 @@ NotRound.args = {
 }
 
 const TemplateWithChildren: Story = (args: any) => (
-    <Panel title='Profile'>
-        <Avatar {...args}>
-            <>
-                <dt>Phone</dt>
-                <dd>000-000 00 00</dd>
-                <dt>Ext</dt>
-                <dd>514</dd>
-            </>
-            <>
-                <dt>Mobile</dt>
-                <dd>123-123 45 67</dd>
-            </>
-        </Avatar>
+    <Panel>
+        <PanelHeader>Profile</PanelHeader>
+        <PanelBody>
+            <Avatar {...args}>
+                <>
+                    <dt>Phone</dt>
+                    <dd>000-000 00 00</dd>
+                    <dt>Ext</dt>
+                    <dd>514</dd>
+                </>
+                <>
+                    <dt>Mobile</dt>
+                    <dd>123-123 45 67</dd>
+                </>
+            </Avatar>
+        </PanelBody>
     </Panel>
 )
 

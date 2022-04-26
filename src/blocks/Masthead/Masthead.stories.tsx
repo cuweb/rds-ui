@@ -1,11 +1,22 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
 import Masthead from '@blocks/Masthead/Masthead'
+import Avatar from '@blocks/Avatar/Avatar'
 
 export default {
     component: Masthead,
     title: `Blocks/Masthead`,
 } as Meta
+
+const avatarRender = (
+    <div className='u-spacing-x u-center'>
+        <Avatar
+            alt='abc'
+            imageUrl='https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg'
+            className='u-image-full'
+        />
+    </div>
+)
 
 const args = {
     title: 'Ravens Design System',
@@ -96,6 +107,7 @@ const args = {
             ],
         },
     ],
+    children: avatarRender,
 }
 
 export const Base = () => <Masthead title={args.title} url={args.url} />
@@ -113,6 +125,12 @@ export const WithMenu = () => (
 )
 export const WithActions = () => (
     <Masthead title={args.title} url={args.url} actions={args.actions} />
+)
+
+export const WithAvatar = () => (
+    <Masthead title={args.title} url={args.url}>
+        {args.children}
+    </Masthead>
 )
 
 export const KitchenSink = () => <Masthead {...args} />

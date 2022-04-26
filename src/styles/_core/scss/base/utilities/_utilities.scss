@@ -283,3 +283,63 @@ dialog .u-hide-dialog {
         opacity: 1;
     }
 }
+
+.text-center {
+    text-align: center;
+}
+
+.link {
+    &--black {
+        color: $black;
+        border-color: $black;
+
+        &:hover {
+            color: $red;
+            border-color: $red;
+        }
+    }
+    &--blue {
+        color: $link;
+        border-color: $link;
+
+        &:hover {
+            color: $red;
+            border-color: $red;
+        }
+    }
+    &--red {
+        color: $red;
+        border-color: $red;
+
+        &:hover {
+            color: $link;
+            border-color: $link;
+        }
+    }
+}
+
+.u-spacing {
+    padding: 1rem;
+}
+.u-spacing-x {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.u-spacing-2x {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.u-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.u-image-full {
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+    max-height: unset;
+    object-fit: cover;
+}

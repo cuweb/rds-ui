@@ -116,7 +116,6 @@ const testHeadingItemProp = (type: string) => {
         'with-image',
         'icon-and-subtitle',
         'event-variant',
-        'events-variant-long-title',
         'news-variant',
         'news-image-variant',
         'people-variant',
@@ -134,10 +133,9 @@ const testParagraphItemProp = (type: string) => {
         'icon-and-subtitle',
         'people-variant',
         'event-variant',
-        'events-variant-long-title',
     ].includes(type)
     if (!ParagraphItemProp) return false
-    if (type === 'event-variant' || type === 'events-variant-long-title') {
+    if (type === 'event-variant') {
         it(`Should render p itemProp`, () => {
             cy.get(`p[itemprop='location']`).should('exist')
         })
@@ -151,7 +149,7 @@ const testParagraphItemProp = (type: string) => {
 const testTime = (type: string) => {
     const Time = [
         'event-variant',
-        'events-variant-long-title',
+
         'news-variant',
         'news-image-variant',
     ].includes(type)
@@ -177,17 +175,6 @@ const testNoArrow = () => {
     })
 }
 
-const testLongTitle = () => {
-    it(`has the b-listing--long-title class`, () => {
-        cy.visit(
-            `${Cypress.env(
-                'baseUrl'
-            )}/iframe.html?id=blocks-listing--events-variant-long-title`
-        )
-        cy.get(`.b-listing--long-title`).should('exist')
-    })
-}
-
 const types = [
     'base-listing',
     'without-arrow',
@@ -197,7 +184,7 @@ const types = [
     'with-icon',
     'files-listing',
     'events-variant',
-    'events-variant-long-title',
+
     'news-variant',
     'news-variant-with-image',
     'people-variant',
@@ -222,6 +209,5 @@ types.map((type) => {
         testParagraphItemProp(type)
         testTime(type)
         testNoArrow()
-        testLongTitle()
     })
 })

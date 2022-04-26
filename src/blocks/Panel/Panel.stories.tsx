@@ -138,14 +138,14 @@ export const WithFooter = () => (
             </p>
         </PanelBody>
         <PanelFooter>
-            <ButtonCTA
-                link='https://carleton.ca'
-                icon='arrow-down'
-                text='Download now'
-                grey
-                shadow={false}
-                full
-            />
+            <div className='text-center'>
+                <p>
+                    This is a footer with centered text and a{' '}
+                    <a href='#' className='link--red'>
+                        red link
+                    </a>
+                </p>
+            </div>
         </PanelFooter>
     </Panel>
 )
