@@ -343,3 +343,7 @@ dialog .u-hide-dialog {
     max-height: unset;
     object-fit: cover;
 }
+
+.u-max-width-fit {
+    max-width: fit-content;
+}
