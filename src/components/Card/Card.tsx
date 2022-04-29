@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface CardBaseProps {
+export interface CardProps {
     link: string
     header: string
     description?: string
@@ -12,7 +12,7 @@ export interface CardImageProps {
     alt?: string
 }
 
-const Card: React.FC<CardBaseProps> = ({
+const Card: React.FC<CardProps> = ({
     link,
     header,
     description,
