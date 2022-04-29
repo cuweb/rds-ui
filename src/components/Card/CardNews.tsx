@@ -1,6 +1,5 @@
 import React from 'react'
 import convertDate from '@functions/convertDate'
-import { CardImageProps } from '../Card'
 
 export interface CardNewsProps {
     link: string
@@ -8,6 +7,11 @@ export interface CardNewsProps {
     header: string
     date: string
     description?: string
+}
+
+export interface CardImageProps {
+    src: string
+    alt?: string
 }
 
 const CardNews: React.FC<CardNewsProps> = ({
