@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardImageProps } from '../Card'
+import { CardImageProps } from './Card'
 
 export interface CardVideoProps {
     link: string
