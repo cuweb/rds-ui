@@ -1,4 +1,7 @@
 import Card from './Card'
+import CardFigure from './CardFigure'
+import CardNews from './CardNews'
+import CardVideo from './CardVideo'
 import data from './CardData.json'
 import getVariation from '../../functions/getVariation'
 import { Meta, Story } from '@storybook/react'
@@ -11,9 +14,12 @@ export default {
     title: `Components/${title}`,
 } as Meta
 
-const Template: Story = (args: any) => <Card {...args} />
+const TemplateCard: Story = (args: any) => <Card {...args} />
+const TemplateCardFigure: Story = (args: any) => <CardFigure {...args} />
+const TemplateCardNews: Story = (args: any) => <CardNews {...args} />
+const TemplateCardVideo: Story = (args: any) => <CardVideo {...args} />
 
-export const BaseCard = Template.bind({})
+export const BaseCard = TemplateCard.bind({})
 const baseCard = getVariation('base', variations)
 BaseCard.args = {
     type: baseCard.cardType,
@@ -22,7 +28,7 @@ BaseCard.args = {
     header: baseCard.header,
 }
 
-export const CardWithTitleAndDescription = Template.bind({})
+export const CardWithTitleAndDescription = TemplateCard.bind({})
 const cardWithTitleAndDescription = getVariation(
     'cardWithTitleAndDescription',
     variations
@@ -35,7 +41,7 @@ CardWithTitleAndDescription.args = {
     description: cardWithTitleAndDescription.description,
 }
 
-export const NewsVariantWithDate = Template.bind({})
+export const NewsVariantWithDate = TemplateCardNews.bind({})
 const newsVariantWithDate = getVariation('newsVariantWithDate', variations)
 NewsVariantWithDate.args = {
     type: newsVariantWithDate.cardType,
@@ -45,7 +51,7 @@ NewsVariantWithDate.args = {
     header: newsVariantWithDate.header,
 }
 
-export const NewsVariantWithDateAndDescription = Template.bind({})
+export const NewsVariantWithDateAndDescription = TemplateCardNews.bind({})
 const newsVariantWithDateAndDescription = getVariation(
     'newsVariantWithDateAndDescription',
     variations
@@ -59,7 +65,7 @@ NewsVariantWithDateAndDescription.args = {
     description: newsVariantWithDateAndDescription.description,
 }
 
-export const VideoVariant = Template.bind({})
+export const VideoVariant = TemplateCardVideo.bind({})
 const videoVariant = getVariation('videoVariant', variations)
 VideoVariant.args = {
     type: videoVariant.cardType,
@@ -68,7 +74,7 @@ VideoVariant.args = {
     header: videoVariant.header,
 }
 
-export const FigureVariant = Template.bind({})
+export const FigureVariant = TemplateCardFigure.bind({})
 const figureVariant = getVariation('figureVariant', variations)
 FigureVariant.args = {
     type: figureVariant.cardType,
@@ -76,7 +82,7 @@ FigureVariant.args = {
     description: figureVariant.description,
     caption: figureVariant.caption,
 }
-export const FigureVariantWithoutLink = Template.bind({})
+export const FigureVariantWithoutLink = TemplateCardFigure.bind({})
 const figureVariantWithoutLink = getVariation(
     'figureVariantWithoutLink',
     variations
@@ -87,7 +93,7 @@ FigureVariantWithoutLink.args = {
     caption: figureVariantWithoutLink.caption,
 }
 
-export const MaxWidthVariant = Template.bind({})
+export const MaxWidthVariant = TemplateCard.bind({})
 const maxWidthVariant = getVariation('maxWidthVariant', variations)
 MaxWidthVariant.args = {
     type: maxWidthVariant.cardType,
