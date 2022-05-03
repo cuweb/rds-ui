@@ -347,3 +347,18 @@ dialog .u-hide-dialog {
 .u-max-width-fit {
     max-width: fit-content;
 }
+
+.u-line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    &--2 {
+        -webkit-line-clamp: 2;
+    }
+
+    &--3 {
+        -webkit-line-clamp: 3;
+    }
+}

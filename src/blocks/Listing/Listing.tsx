@@ -7,6 +7,7 @@ export interface ListingProps {
     data: BaseListProps[]
     noUblock?: boolean
     noArrow?: boolean
+    lineClamp?: number
 }
 export interface BaseListProps {
     src: string
@@ -26,6 +27,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
     data,
     noUblock,
     noArrow,
+    lineClamp = 1,
 }): JSX.Element => {
     return (
         <ListingWrapper
@@ -54,6 +56,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
                             )}
                             <div itemProp='name'>
                                 <h3
+                                    className={`u-line-clamp u-line-clamp--${lineClamp}`}
                                     itemProp='name'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,

@@ -7,6 +7,7 @@ import ListingWrapper from './components/ListingWrapper'
 export interface ListingEventProps {
     data: EventListProps[]
     noUblock?: boolean
+    lineClamp?: number
 }
 
 export interface EventListProps {
@@ -27,6 +28,7 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
     header,
     data,
     noUblock,
+    lineClamp = 1,
 }): JSX.Element => {
     return (
         <ListingWrapper type='event' header={header} noUblock={noUblock}>
@@ -50,6 +52,7 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
                             )}
                             <div itemProp='name'>
                                 <h3
+                                    className={`u-line-clamp u-line-clamp--${lineClamp}`}
                                     itemProp='name'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,
