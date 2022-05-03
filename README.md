@@ -1,5 +1,3 @@
-![Cypress workflow](https://github.com/cuweb/rds-ui/actions/workflows/main.yml/badge.svg)
-
 # Raven Design System UI
 
 RDS, Carleton University’s design system, is a living digital organism uniting campus wide teams around a common visual language.
