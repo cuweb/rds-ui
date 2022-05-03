@@ -60,7 +60,7 @@
         font-size: $pixel16;
         line-height: 1.4em;
         margin: 3px 0;
-        white-space: nowrap;
+        // white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -141,7 +141,7 @@
 .b-listing--news h3 {
     display: block;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    // -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     white-space: normal !important;
@@ -166,7 +166,7 @@
     @include media('>s') {
         display: block;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        // -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
         white-space: normal !important;

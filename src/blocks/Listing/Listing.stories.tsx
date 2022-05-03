@@ -7,6 +7,9 @@ import ListingPeople from './ListingPeople'
 import ListingVideo from './ListingVideo'
 import Ublock from '@components/Ublock/Ublock'
 import Ugrid from '@components/Ugrid/Ugrid'
+import Panel from '@blocks/Panel/Panel'
+import PanelHeader from '@blocks/Panel/components/PanelHeader'
+import PanelBody from '@blocks/Panel/components/PanelBody'
 
 export default {
     component: Listing,
@@ -33,6 +36,10 @@ export const BaseListing = () => {
                 {
                     src: '#',
                     title: 'Thick-billed raven',
+                },
+                {
+                    src: '#',
+                    title: 'Sit ea quis qui aute officia sint non commodo excepteur fugiat commodo adipisicing aute. In do pariatur aute adipisicing fugiat ullamco veniam do esse reprehenderit ex. Aute officia minim consectetur incididunt et qui aute excepteur sint ad. Ullamco nulla laborum tempor pariatur do consectetur ea. Enim est eiusmod mollit aliquip adipisicing anim duis reprehenderit consequat minim aute voluptate aute amet. Proident cupidatat velit magna sint in veniam nulla sit quis velit quis dolor.',
                 },
             ]}
         />
@@ -471,6 +478,55 @@ export const TwoColumn = () => {
                         },
                     ]}
                 />{' '}
+            </Ugrid>
+        </Ublock>
+    )
+}
+
+export const InranetExample = () => {
+    const data = [
+        {
+            src: '#',
+            title: 'White-necked Raven',
+        },
+        {
+            src: '#',
+            title: 'Common raven',
+        },
+        {
+            src: '#',
+            title: 'Australian raven',
+        },
+        {
+            src: '#',
+            title: 'Thick-billed raven',
+        },
+        {
+            src: '#',
+            title: 'Sit ea quis qui aute officia sint non commodo excepteur fugiat commodo adipisicing aute. In do pariatur aute adipisicing fugiat ullamco veniam do esse reprehenderit ex. Aute officia minim consectetur incididunt et qui aute excepteur sint ad. Ullamco nulla laborum tempor pariatur do consectetur ea. Enim est eiusmod mollit aliquip adipisicing anim duis reprehenderit consequat minim aute voluptate aute amet. Proident cupidatat velit magna sint in veniam nulla sit quis velit quis dolor.',
+        },
+    ]
+    return (
+        <Ublock wide>
+            <Ugrid>
+                <Panel block={{ noBlock: true }}>
+                    <PanelHeader color='white'>Header</PanelHeader>
+                    <PanelBody>
+                        <Listing data={data} noUblock />
+                    </PanelBody>
+                </Panel>
+                <Panel block={{ noBlock: true }}>
+                    <PanelHeader color='white'>Header</PanelHeader>
+                    <PanelBody>
+                        <Listing data={data} noUblock />
+                    </PanelBody>
+                </Panel>
+                <Panel block={{ noBlock: true }}>
+                    <PanelHeader color='white'>Header</PanelHeader>
+                    <PanelBody>
+                        <Listing data={data} noUblock />
+                    </PanelBody>
+                </Panel>
             </Ugrid>
         </Ublock>
     )

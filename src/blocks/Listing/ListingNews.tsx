@@ -6,6 +6,7 @@ import ListingWrapper from './components/ListingWrapper'
 export interface ListingNewsProps {
     data: NewsListProps[]
     noUblock?: boolean
+    lineClamp?: number
 }
 
 export interface NewsListProps {
@@ -25,6 +26,7 @@ const ListingNews: React.FC<ListingNewsProps & ListingHeaderProps> = ({
     header,
     data,
     noUblock,
+    lineClamp = 2,
 }): JSX.Element => {
     return (
         <ListingWrapper type='news' header={header} noUblock={noUblock}>
@@ -52,6 +54,7 @@ const ListingNews: React.FC<ListingNewsProps & ListingHeaderProps> = ({
                                     {convertDate(item.datetime)}
                                 </time>
                                 <h3
+                                    className={`u-line-clamp u-line-clamp--${lineClamp}`}
                                     itemProp='name'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,
@@ -59,6 +62,7 @@ const ListingNews: React.FC<ListingNewsProps & ListingHeaderProps> = ({
                                 />
                                 {item.description && (
                                     <p
+                                        className={`u-line-clamp u-line-clamp--${lineClamp}`}
                                         itemProp='description'
                                         dangerouslySetInnerHTML={{
                                             __html: item.description,

@@ -6,6 +6,7 @@ import ListingWrapper from './components/ListingWrapper'
 export interface ListingVideoProps {
     data: VideoListProps[]
     noUblock?: boolean
+    lineClamp?: number
 }
 
 export interface VideoListProps {
@@ -23,6 +24,7 @@ const ListingVideo: React.FC<ListingVideoProps & ListingHeaderProps> = ({
     header,
     data,
     noUblock,
+    lineClamp = 1,
 }): JSX.Element => {
     return (
         <ListingWrapper type='video' header={header} noUblock={noUblock}>
@@ -42,6 +44,7 @@ const ListingVideo: React.FC<ListingVideoProps & ListingHeaderProps> = ({
                             )}
                             <div itemProp='name'>
                                 <h3
+                                    className={`u-line-clamp u-line-clamp--${lineClamp}`}
                                     itemProp='headline'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,
