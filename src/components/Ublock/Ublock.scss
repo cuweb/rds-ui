@@ -173,6 +173,10 @@ aside > .u-block--panel {
     }
 }
 
+.u-block--nopadding {
+    padding: 0;
+}
+
 .raven-mode .u-block {
     &.u-block--white {
         background-color: $grey-anakin;
