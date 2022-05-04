@@ -2,13 +2,16 @@ import React from 'react'
 import { Meta, Story } from '@storybook/react'
 import Card from '@components/Card/Card'
 import Ugrid from './Ugrid'
+import Panel from '@blocks/Panel/Panel'
+import PanelHeader from '@blocks/Panel/components/PanelHeader'
+import PanelBody from '@blocks/Panel/components/PanelBody'
 
 export default {
     component: Ugrid,
     title: `Components/U-Grid`,
 } as Meta
 
-const allCards = new Array(12).fill({
+const cardData = {
     type: 'news',
     link: 'https://bit.ly/2E6yTwZ',
     image: {
@@ -19,7 +22,8 @@ const allCards = new Array(12).fill({
     header: 'We knew ravens are smart. But not this smart',
     description:
         'Aute consequat minim culpa do minim id nulla anim sint do proident culpa et consectetur.',
-})
+}
+const allCards = new Array(12).fill(cardData)
 
 const Template: Story = (args: any) => {
     return (
@@ -50,4 +54,34 @@ export const FourColumns = Template.bind({})
 FourColumns.args = {
     columns: 4,
     className: 'b-custom',
+}
+
+const PanelExample = () => {
+    return (
+        <Panel block={{ full: true, noPadding: true }}>
+            <PanelHeader>Header</PanelHeader>
+            <PanelBody>Body</PanelBody>
+        </Panel>
+    )
+}
+
+export const MultipleGrids = () => {
+    return (
+        <Ugrid isLayout>
+            <Ugrid columns={1}>
+                <PanelExample />
+                <PanelExample />
+            </Ugrid>
+            <Ugrid columns={2}>
+                <PanelExample />
+                <PanelExample />
+                <PanelExample />
+                <PanelExample />
+                <PanelExample />
+                <PanelExample />
+                <PanelExample />
+                <PanelExample />
+            </Ugrid>
+        </Ugrid>
+    )
 }

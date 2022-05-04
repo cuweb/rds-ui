@@ -27,6 +27,7 @@
 .u-grid {
     display: grid;
     grid-gap: $grid-gutter;
+    align-items: flex-start;
 }
 
 .u-grid--gap-l {
@@ -35,6 +36,31 @@
     @include media('>=l') {
         grid-gap: 80px;
     }
+}
+
+.u-grid--layout {
+    grid-template-columns: 266px 1fr;
+    padding-bottom: 3rem;
+}
+
+.u-grid--gap-0 {
+    gap: 0;
+}
+.u-grid--gap-1 {
+    gap: 1rem;
+}
+.u-grid--gap-2 {
+    gap: $grid-gutter;
+}
+.u-grid--gap-3 {
+    gap: 3rem;
+}
+.u-grid--gap-4 {
+    gap: 4rem;
+}
+
+.u-grid--1 {
+    grid-template-columns: 1fr;
 }
 
 .u-grid--2 {
