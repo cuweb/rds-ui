@@ -1,26 +1,22 @@
 import React from 'react'
 import convertDate from '@functions/convertDate'
+import CardImage, { CardImageProps } from './components/CardImage'
+import CardTitle, { CardTitleProps } from './components/CardTitle'
+import CardDescription, {
+    CardDescriptionProps,
+} from './components/CardDescription'
 
 export interface CardNewsProps {
     link: string
     image: CardImageProps
-    header: string
+    header: CardTitleProps
     date: string
-    description?: string
+    description?: CardDescriptionProps
 }
 
-export interface CardImageProps {
-    src: string
-    alt?: string
-}
-
-const CardNews: React.FC<CardNewsProps> = ({
-    link,
-    image,
-    header,
-    date,
-    description,
-}): JSX.Element => {
+const CardNews: React.FC<
+    CardNewsProps & CardImageProps & CardTitleProps & CardDescriptionProps
+> = ({ link, image, header, date, description }): JSX.Element => {
     const longDate = convertDate(date)
     return (
         <article
@@ -29,22 +25,14 @@ const CardNews: React.FC<CardNewsProps> = ({
             itemType='http://schema.org/NewsArticle'
         >
             <a href={link} itemProp='url'>
-                <figure itemScope itemType='http://schema.org/ImageObject'>
-                    <img src={image.src} alt={image.alt} loading='lazy' />
-                </figure>
+                <CardImage image={image} />
                 <header>
                     <time dateTime={date} itemProp='datePublished'>
                         {longDate}
                     </time>
-                    <h3
-                        itemProp='name'
-                        dangerouslySetInnerHTML={{ __html: header }}
-                    />
+                    <CardTitle header={header} />
                     {description && (
-                        <p
-                            itemProp='description'
-                            dangerouslySetInnerHTML={{ __html: description }}
-                        />
+                        <CardDescription description={description} />
                     )}
                 </header>
             </a>

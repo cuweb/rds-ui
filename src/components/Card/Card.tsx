@@ -1,39 +1,26 @@
 import React from 'react'
+import CardImage, { CardImageProps } from './components/CardImage'
+import CardTitle, { CardTitleProps } from './components/CardTitle'
+import CardDescription, {
+    CardDescriptionProps,
+} from './components/CardDescription'
 
 export interface CardProps {
     link: string
-    header: string
-    description?: string
+    header: CardTitleProps
+    description?: CardDescriptionProps
     image: CardImageProps
 }
 
-export interface CardImageProps {
-    src: string
-    alt?: string
-}
-
-const Card: React.FC<CardProps> = ({
-    link,
-    header,
-    description,
-    image,
-}): JSX.Element => (
+const Card: React.FC<
+    CardProps & CardImageProps & CardTitleProps & CardDescriptionProps
+> = ({ link, header, description, image }): JSX.Element => (
     <article className='c-card' itemScope itemType='http://schema.org/Article'>
         <a href={link} itemProp='url'>
-            <figure itemScope itemType='http://schema.org/ImageObject'>
-                <img src={image.src} alt={image.alt} loading='lazy' />
-            </figure>
+            <CardImage image={image} />
             <header>
-                <h3
-                    itemProp='name'
-                    dangerouslySetInnerHTML={{ __html: header }}
-                />
-                {description && (
-                    <p
-                        itemProp='description'
-                        dangerouslySetInnerHTML={{ __html: description }}
-                    />
-                )}
+                <CardTitle header={header} />
+                {description && <CardDescription description={description} />}
             </header>
         </a>
     </article>

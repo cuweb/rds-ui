@@ -1,13 +1,15 @@
 import React from 'react'
-import { CardImageProps } from './Card'
+import Icon from '@components/Icon/Icon'
+import CardImage, { CardImageProps } from './components/CardImage'
+import CardTitle, { CardTitleProps } from './components/CardTitle'
 
 export interface CardVideoProps {
     link: string
     image: CardImageProps
-    header: string
+    header: CardTitleProps
 }
 
-const CardVideo: React.FC<CardVideoProps> = ({
+const CardVideo: React.FC<CardVideoProps & CardImageProps & CardTitleProps> = ({
     link,
     image,
     header,
@@ -18,23 +20,13 @@ const CardVideo: React.FC<CardVideoProps> = ({
         itemType='http://schema.org/VideoObject'
     >
         <a href={link} itemProp='url'>
-            <figure itemScope itemType='http://schema.org/ImageObject'>
-                <img src={image.src} alt={image.alt} loading='lazy' />
+            <CardImage image={image}>
                 <span className='u-icon u-icon--circle' aria-hidden='true'>
-                    <svg
-                        viewBox='0 0 24 24'
-                        xmlns='http://www.w3.org/2000/svg'
-                        aria-hidden='true'
-                    >
-                        <path d='M5.61 22.994h.001c-1.178.752-2.611.08-2.611-1.4v-1.197h.013V4.66H3V1.729C3 .251 4.433-.447 5.611.306l14.964 9.867c1.18.752 1.154 1.975-.011 2.714L5.61 22.996z' />
-                    </svg>
+                    <Icon icon='video-card' />
                 </span>
-            </figure>
+            </CardImage>
             <header>
-                <h3
-                    itemProp='name'
-                    dangerouslySetInnerHTML={{ __html: header }}
-                />
+                <CardTitle header={header} />
             </header>
         </a>
     </article>
