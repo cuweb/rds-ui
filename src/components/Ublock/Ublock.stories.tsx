@@ -67,3 +67,10 @@ export const NoBlock = Template.bind({})
 NoBlock.args = {
     noBlock: true,
 }
+//  No Padding
+export const NoPadding = Template.bind({})
+NoPadding.args = {
+    noPadding: true,
+    color: 'grey',
+    wide: true,
+}

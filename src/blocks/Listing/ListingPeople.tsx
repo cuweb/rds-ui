@@ -5,6 +5,7 @@ import ListingWrapper from './components/ListingWrapper'
 export interface ListingPeopleProps {
     data: ListProps[]
     noUblock?: boolean
+    lineClamp?: number
 }
 
 export interface ListProps {
@@ -23,6 +24,7 @@ const ListingPeople: React.FC<ListingPeopleProps & ListingHeaderProps> = ({
     header,
     data,
     noUblock,
+    lineClamp = 1,
 }): JSX.Element => {
     return (
         <ListingWrapper type='people' header={header} noUblock={noUblock}>
@@ -41,6 +43,7 @@ const ListingPeople: React.FC<ListingPeopleProps & ListingHeaderProps> = ({
                             )}
                             <div>
                                 <h3
+                                    className={`u-line-clamp u-line-clamp--${lineClamp}`}
                                     itemProp='name'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,
