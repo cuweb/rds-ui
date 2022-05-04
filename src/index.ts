@@ -9,6 +9,9 @@ import Banner from './blocks/Banner/Banner'
 import ButtonCTA from './components/ButtonCTA/ButtonCTA'
 import ButtonSocial from './components/ButtonSocial/ButtonSocial'
 import Card from './components/Card/Card'
+import CardFigure from './components/Card/CardFigure'
+import CardNews from './components/Card/CardNews'
+import CardVideo from './components/Card/CardVideo'
 import CardGrid from './blocks/CardGrid/CardGrid'
 import CardPeople from './components/CardPeople/CardPeople'
 import Filter from './blocks/Filter/Filter'
@@ -67,7 +70,10 @@ export {
     ButtonSocial,
     Card,
     CardGrid,
+    CardFigure,
     CardPeople,
+    CardNews,
+    CardVideo,
     Filter,
     Footer,
     FooterBrand,
