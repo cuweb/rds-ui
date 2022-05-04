@@ -30,9 +30,9 @@ const CardNews: React.FC<
                     <time dateTime={date} itemProp='datePublished'>
                         {longDate}
                     </time>
-                    <CardTitle header={header} />
+                    <CardTitle>{header}</CardTitle>
                     {description && (
-                        <CardDescription description={description} />
+                        <CardDescription>{description}</CardDescription>
                     )}
                 </header>
             </a>

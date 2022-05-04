@@ -26,7 +26,7 @@ const CardVideo: React.FC<CardVideoProps & CardImageProps & CardTitleProps> = ({
                 </span>
             </CardImage>
             <header>
-                <CardTitle header={header} />
+                <CardTitle>{header}</CardTitle>
             </header>
         </a>
     </article>

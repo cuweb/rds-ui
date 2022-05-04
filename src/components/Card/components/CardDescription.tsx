@@ -1,17 +1,13 @@
 import React, { FC } from 'react'
 
 export interface CardDescriptionProps {
-    description: string
+    itemProp?: string
 }
 
 const CardDescription: FC<CardDescriptionProps> = ({
-    description,
+    itemProp = 'description',
+    children,
 }): JSX.Element => {
-    return (
-        <p
-            itemProp='description'
-            dangerouslySetInnerHTML={{ __html: description }}
-        />
-    )
+    return <p itemProp={itemProp}>{children}</p>
 }
 export default CardDescription

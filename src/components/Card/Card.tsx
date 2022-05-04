@@ -19,8 +19,10 @@ const Card: React.FC<
         <a href={link} itemProp='url'>
             <CardImage image={image} />
             <header>
-                <CardTitle header={header} />
-                {description && <CardDescription description={description} />}
+                <CardTitle>{header}</CardTitle>
+                {description && (
+                    <CardDescription>{description}</CardDescription>
+                )}
             </header>
         </a>
     </article>

@@ -1,10 +1,13 @@
 import React, { FC } from 'react'
 
 export interface CardTitleProps {
-    header: string
+    itemProp?: string
 }
 
-const CardTitle: FC<CardTitleProps> = ({ header }): JSX.Element => {
-    return <h3 itemProp='name' dangerouslySetInnerHTML={{ __html: header }} />
+const CardTitle: FC<CardTitleProps> = ({
+    itemProp = 'name',
+    children,
+}): JSX.Element => {
+    return <h3 itemProp={itemProp}>{children}</h3>
 }
 export default CardTitle

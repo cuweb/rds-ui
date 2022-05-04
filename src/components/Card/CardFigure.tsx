@@ -23,7 +23,7 @@ const CardFigure: React.FC<CardFigureProps & CardDescriptionProps> = ({
         <LinkWrapper link={link}>
             <figure>
                 <figcaption dangerouslySetInnerHTML={{ __html: caption }} />
-                <CardDescription description={description} />
+                <CardDescription>{description}</CardDescription>
             </figure>
         </LinkWrapper>
     </article>
