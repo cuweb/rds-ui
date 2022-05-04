@@ -69,7 +69,7 @@
         font-size: $pixel14;
         font-weight: 300;
         word-wrap: break-word;
-        white-space: nowrap;
+        // white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -155,7 +155,7 @@
     // IE11 Fallback, line-clamp not supported
     @media screen and (-ms-high-contrast: active),
         screen and (-ms-high-contrast: none) {
-        white-space: nowrap !important;
+        // white-space: nowrap !important;
     }
 }
 
@@ -176,7 +176,7 @@
     // IE11 Fallback, line-clamp not supported
     @media screen and (-ms-high-contrast: active),
         screen and (-ms-high-contrast: none) {
-        white-space: nowrap !important;
+        // white-space: nowrap !important;
     }
 }
 
