@@ -16,6 +16,12 @@ import Footer from './blocks/Footer/Footer'
 import FooterBrand from './blocks/Footer/components/FooterBrand'
 import FooterSimple from './blocks/Footer/components/FooterSimple'
 import FooterSitemap from './blocks/Footer/components/FooterSitemap'
+import Form from './blocks/Form/Form'
+import FormField from './blocks/Form/components/FormField'
+import FormFieldWrapper from './blocks/Form/components/FormFieldWrapper'
+import FormFile from './blocks/Form/components/FormFile'
+import FormMultiple from './blocks/Form/components/FormMultiple'
+import FormSelect from './blocks/Form/components/FormSelect'
 import Heading from './components/Heading/Heading'
 import Icon from './components/Icon/Icon'
 import ImageTiles from './blocks/ImageTiles/ImageTiles'
@@ -67,6 +73,12 @@ export {
     FooterBrand,
     FooterSimple,
     FooterSitemap,
+    Form,
+    FormField,
+    FormFieldWrapper,
+    FormFile,
+    FormMultiple,
+    FormSelect,
     Heading,
     Icon,
     ImageTiles,
