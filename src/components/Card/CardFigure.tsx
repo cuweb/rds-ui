@@ -1,16 +1,14 @@
 import React from 'react'
 import LinkWrapper from '@components/LinkWrapper/LinkWrapper'
-import CardDescription, {
-    CardDescriptionProps,
-} from './components/CardDescription'
+import CardDescription from './components/CardDescription'
 
 export interface CardFigureProps {
     link?: string
-    description: CardDescriptionProps
+    description: string
     caption: string
 }
 
-const CardFigure: React.FC<CardFigureProps & CardDescriptionProps> = ({
+const CardFigure: React.FC<CardFigureProps> = ({
     link,
     description,
     caption,
