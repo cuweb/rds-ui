@@ -64,15 +64,20 @@ const FormField: FC<FieldType> = (props): JSX.Element => {
         none: null,
     }
 
+    const allowedAttributes = {
+        ...attributes,
+        value: attributes.value,
+    }
+
     return (
         <FormFieldWrapper {...fieldWrapperProps}>
             {formFieldTypes[attributes.type || 'empty'] || (
                 <Field
+                    {...allowedAttributes}
                     id={fieldId}
                     validate={
                         validate || validationTypes[attributes.type || 'none']
                     }
-                    {...attributes}
                 />
             )}
             {attributes.name && (
