@@ -594,6 +594,9 @@ Versions.args = { icon: 'versions' }
 export const Video = Template.bind({})
 Video.args = { icon: 'video' }
 
+export const VideoCard = Template.bind({})
+VideoCard.args = { icon: 'video-card' }
+
 export const VideoPlayer = Template.bind({})
 VideoPlayer.args = { icon: 'video-player' }
 
