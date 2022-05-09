@@ -4,7 +4,7 @@ import { UserInfoType } from 'types/UserInfo'
 
 export default {
     component: Avatar,
-    title: `Blocks/Avatar`,
+    title: `Components/Avatar`,
 }
 
 const user: UserInfoType = {

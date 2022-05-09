@@ -1,17 +1,16 @@
-import React, { ReactElement } from 'react'
+import React, { FC } from 'react'
 
 export interface LinkProps {
     link?: string
-    children: ReactElement
 }
 
-const LinkWrapper: React.FC<LinkProps> = ({ link, children }) => {
+const LinkWrapper: FC<LinkProps> = ({ link, children }): JSX.Element => {
     if (link)
         return (
             <a href={link} itemProp='url'>
                 {children}
             </a>
         )
-    return children
+    return <div>{children}</div>
 }
 export default LinkWrapper
