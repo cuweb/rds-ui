@@ -9,6 +9,7 @@ import MenuPopupMenu, { MenuPopupMenuProps } from './components/MenuPopupMenu'
 export interface MenuPopupProps {
     className?: string
     direction?: 'left' | 'right'
+    noArrow?: boolean
 }
 
 const MenuPopup: FC<
@@ -21,11 +22,14 @@ const MenuPopup: FC<
     menu,
     icon,
     direction = 'left',
+    noArrow = false,
 }): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const menuContainer = useRef(null)
     useOnClickOutside(menuContainer, () => setIsOpen(false))
     useEscToClose(menuContainer, () => setIsOpen(false))
+
+    const noArrowClassName = noArrow ? 'c-menupopup--noarrow' : ''
 
     const buttonProps = {
         isButton,
@@ -36,7 +40,7 @@ const MenuPopup: FC<
 
     return (
         <div
-            className={`c-menupopup c-menupopup--${direction}  ${className}`}
+            className={`c-menupopup c-menupopup--${direction} ${noArrowClassName}  ${className}`}
             ref={menuContainer}
         >
             <MenuPopupButton

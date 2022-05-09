@@ -57,7 +57,7 @@ const Masthead: React.FC<MastheadProps> = ({
                             )}
                         </ul>
                         {!isMobile && (
-                            <div className='b-masthead__menu-item'>
+                            <div className='b-masthead__content'>
                                 {children}
                             </div>
                         )}
@@ -67,7 +67,7 @@ const Masthead: React.FC<MastheadProps> = ({
             {hasMobileMenu && (
                 <Overlay type='menu'>
                     <NavMenu type='top' menu={menu} isMobile />
-                    <div className='b-masthead__menu-item'>{children}</div>
+                    <div className='b-masthead__children'>{children}</div>
                 </Overlay>
             )}
         </>

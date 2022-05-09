@@ -165,3 +165,8 @@
         fill: $dark-icon-fill;
     }
 }
+
+.b-masthead .c-menupopup--noarrow > a::after,
+.b-masthead .c-menupopup--noarrow > button::after {
+    display: none;
+}

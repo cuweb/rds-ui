@@ -3,7 +3,7 @@ import Alert from './components/Alert/Alert'
 import AlertAside from './components/AlertAside/AlertAside'
 import AlertHeader from './blocks/AlertHeader/AlertHeader'
 import Aside from './layouts/Layout/Aside'
-import Avatar from './blocks/Avatar/Avatar'
+import Avatar from './components/Avatar/Avatar'
 import Badge from './components/Badge/Badge'
 import Banner from './blocks/Banner/Banner'
 import ButtonCTA from './components/ButtonCTA/ButtonCTA'
@@ -56,6 +56,7 @@ import TextImage from './blocks/TextImage/TextImage'
 import Timeline from './blocks/Timeline/Timeline'
 import MenuPopup from './components/MenuPopup/MenuPopup'
 import NavMenu from './components/NavMenu/NavMenu'
+import NavUser from './components/NavUser/NavUser'
 
 export {
     Accordion,
@@ -102,6 +103,7 @@ export {
     Masthead,
     MenuPopup,
     NavMenu,
+    NavUser,
     Overlay,
     Panel,
     PanelBody,

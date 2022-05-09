@@ -1,0 +1,79 @@
+.c-avatar {
+    border: solid 4px $grey-yoda;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: $grey;
+
+    &--rounded {
+        border-radius: 100%;
+    }
+
+    &--no-border {
+        border: none;
+    }
+
+    &--xs {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.75rem;
+        letter-spacing: -2px;
+    }
+
+    &--sm {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1rem;
+        letter-spacing: -2px;
+    }
+
+    &--md {
+        width: 6rem;
+        height: 6rem;
+        font-size: 1.25rem;
+        letter-spacing: -3px;
+    }
+    &--lg {
+        width: 8rem;
+        height: 8rem;
+        font-size: 1.5rem;
+        letter-spacing: -3px;
+    }
+
+    &--xl {
+        width: 10rem;
+        height: 10rem;
+        font-size: 2rem;
+        letter-spacing: -4px;
+    }
+
+    &--2xl {
+        width: 12rem;
+        height: 12rem;
+        font-size: 2.5rem;
+        letter-spacing: -6px;
+    }
+
+    &--4xl {
+        width: 14rem;
+        height: 14rem;
+        font-size: 3.5rem;
+        letter-spacing: -8px;
+    }
+
+    &__image {
+        img {
+            object-fit: cover;
+            max-width: unset;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}
