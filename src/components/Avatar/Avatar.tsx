@@ -1,5 +1,5 @@
 import { UserInfoType } from 'types/UserInfo'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 export interface IAvatar {
     className?: string
@@ -7,6 +7,7 @@ export interface IAvatar {
     noBorder?: boolean
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '4xl'
     user: UserInfoType
+    caption?: ReactNode
 }
 
 const Avatar: React.FC<IAvatar> = ({
@@ -15,6 +16,7 @@ const Avatar: React.FC<IAvatar> = ({
     user,
     noBorder = false,
     rounded,
+    caption,
 }): JSX.Element => {
     const { firstName, lastName, image } = user
     const initials =
@@ -26,15 +28,21 @@ const Avatar: React.FC<IAvatar> = ({
         <div
             className={`c-avatar c-avatar--${size} ${roundedClassName} ${noBorderClassName} ${className}`}
         >
-            {image && (
-                <figure className='c-avatar__image'>
+            <figure className='c-avatar__figure'>
+                {image && (
                     <img
                         src={image.src}
                         alt={image.alt || `Avatar of ${firstName} ${lastName}`}
+                        className='c-avatar__image'
                     />
-                </figure>
-            )}
-            {initials && <div className='c-avatar__info'>{initials}</div>}
+                )}
+                {initials && <div className='c-avatar__info'>{initials}</div>}
+                {caption && (
+                    <figcaption className='c-avatar__caption'>
+                        {caption}
+                    </figcaption>
+                )}
+            </figure>
         </div>
     )
 }

@@ -1,18 +1,15 @@
 import React, { FC } from 'react'
 import Ublock, { UblockProps } from '@components/Ublock/Ublock'
-import LinkWrapper from '@components/LinkWrapper/LinkWrapper'
+import { UserInfoType } from 'types/UserInfo'
+import DetailsMeta, { DetailsItemProps } from './DetailsMeta'
+import DetailsAside from './DetailsAside'
 
 export interface IDetails {
     className?: string
     block?: UblockProps
     title?: string
-    details: IDetailsList[]
-}
-
-export interface IDetailsList {
-    title: string
-    description: string
-    url?: string
+    details: DetailsItemProps[]
+    user?: UserInfoType
 }
 
 const Details: FC<IDetails> = ({
@@ -20,25 +17,15 @@ const Details: FC<IDetails> = ({
     title,
     className = '',
     details,
+    user,
 }): JSX.Element => {
+    const detailsFigureClassName = user ? `b-details--figure` : ''
     return (
         <Ublock {...block}>
             {title && <h2>{title}</h2>}
-            <div className={`b-details ${className}`}>
-                <div className='details__meta'>
-                    <dl className='u-link'>
-                        {details.map((item, index) => (
-                            <React.Fragment key={index}>
-                                <dt>{item.title}</dt>
-                                <dd>
-                                    <LinkWrapper link={item?.url}>
-                                        {item.description}
-                                    </LinkWrapper>
-                                </dd>
-                            </React.Fragment>
-                        ))}
-                    </dl>
-                </div>
+            <div className={`b-details ${detailsFigureClassName} ${className}`}>
+                <DetailsMeta details={details} />
+                {user && <DetailsAside user={user} />}
             </div>
         </Ublock>
     )

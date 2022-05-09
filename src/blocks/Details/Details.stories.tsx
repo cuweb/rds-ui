@@ -1,6 +1,7 @@
 import React from 'react'
-import Details, { IDetails, IDetailsList } from './Details'
+import Details from './Details'
 import { UserInfoType } from 'types/UserInfo'
+import { DetailsItemProps } from './DetailsMeta'
 
 export default {
     component: Details,
@@ -13,9 +14,15 @@ const user: UserInfoType = {
     },
     firstName: 'Danny',
     lastName: 'Brown',
+    info: (
+        <>
+            <strong>Danny Brown</strong> <br />
+            Director, Enterprise Applications
+        </>
+    ),
 }
 
-const userDetails: IDetailsList[] = [
+const userDetails: DetailsItemProps[] = [
     {
         title: 'Position',
         description: 'IT Manager',
@@ -36,4 +43,9 @@ const userDetails: IDetailsList[] = [
     },
 ]
 
-export const Base = () => <Details details={userDetails} />
+export const Base = () => (
+    <Details title='Profile Example' details={userDetails} />
+)
+export const WithImage = () => (
+    <Details title='Profile With Image' details={userDetails} user={user} />
+)
