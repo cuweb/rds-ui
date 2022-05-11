@@ -5,6 +5,7 @@ import DetailsAside from './DetailsAside'
 import Alert from '@components/Alert/Alert'
 import Ublock from '@components/Ublock/Ublock'
 import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
+import Ugrid from '@components/Ugrid/Ugrid'
 
 export default {
     component: Details,
@@ -59,9 +60,9 @@ const userDetails: DetailsItemProps[] = [
 const events = {
     date: (
         <>
-            April
+            Aug
             <br />
-            14
+            21
         </>
     ),
     pastDate: (
@@ -124,13 +125,31 @@ export const FigureVariant = () => (
 )
 
 export const EventsVariant = () => (
-    <Ublock full>
-        <h2>Past Events</h2>
-        <Details variant='event' block={{ noPadding: true }}>
-            <DetailsAside caption={events.date} />
-            <DetailsMeta details={events.details} />
-        </Details>
-        <ButtonCTA text={'Register Now'} link={'#'} />
+    <Ublock>
+        <Ugrid columns={1}>
+            <Details
+                title='Events Variant'
+                variant='event'
+                block={{ noPadding: true }}
+            >
+                <DetailsAside caption={events.date} />
+                <DetailsMeta details={events.details} />
+            </Details>
+            <div>
+                <ButtonCTA
+                    text={'Register Now'}
+                    link={'#'}
+                    className='u-margin-r'
+                    icon='pencil'
+                />
+                <ButtonCTA
+                    text={'Add to calendar'}
+                    link={'#'}
+                    ghost
+                    icon='plus'
+                />
+            </div>
+        </Ugrid>
     </Ublock>
 )
 
