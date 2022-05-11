@@ -11,6 +11,7 @@ export default {
 const user: UserInfoType = {
     image: {
         src: 'https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg',
+        alt: '',
     },
     firstName: 'Dnny',
     lastName: 'Brown',
@@ -19,9 +20,7 @@ const caption = 'Director, Enterprise Application'
 
 export const Base = () => <Avatar user={user} />
 export const WithCaption = () => <Avatar user={user} caption={caption} />
-export const BaseNoBorder = () => (
-    <Avatar user={user} caption={caption} noBorder />
-)
+export const NoBorder = () => <Avatar user={user} caption={caption} noBorder />
 export const Rounded = () => <Avatar user={user} rounded />
 export const RoundedWithCaption = () => (
     <Avatar user={user} caption={caption} rounded />

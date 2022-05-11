@@ -1,64 +1,84 @@
-describe('Avatar', () => {
+describe('Avatar - Base', () => {
     it(`Should render b-avatar`, () => {
-        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-avatar--base`)
-        cy.get(`.b-avatar`).should('exist')
-    })
-
-    it(`Should render details__aside`, () => {
-        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-avatar--base`)
-        cy.get(`.details__aside`).should('exist')
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=components-avatar--base`
+        )
+        cy.get(`.c-avatar`).should('exist')
     })
 
     it(`Should render the image`, () => {
-        cy.visit(`${Cypress.env('baseUrl')}/iframe.html?id=blocks-avatar--base`)
-        cy.get(`img`).should('exist')
+        cy.get(`.c-avatar__figure`).should('exist')
+        cy.get(`.c-avatar__image`).should('exist')
     })
+})
 
-    it(`Should render the onClick`, () => {
+describe('Avatar - With Captions', () => {
+    it(`Should render captions`, () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-avatar--base-with-click`
+            )}/iframe.html?id=components-avatar--with-caption`
         )
-        cy.get(`.button__image`).click()
-        cy.on('window:alert', (txt) => {
-            expect(txt).to.contains('photo')
-        })
+        cy.get(`.c-avatar__caption`).should('exist').and('not.be.empty')
     })
+})
 
-    it(`Should render the caption`, () => {
+describe('Avatar - No Border', () => {
+    it(`Should render no border`, () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-avatar--with-caption`
+            )}/iframe.html?id=components-avatar--no-border`
         )
-        cy.get(`figcaption`).should('exist').should('not.be.empty')
+        cy.get(`.c-avatar--no-border`).should('exist')
     })
+})
 
-    it(`Should render initials`, () => {
+describe('Avatar - Rounded', () => {
+    it(`Should render rounded image`, () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-avatar--with-initials`
+            )}/iframe.html?id=components-avatar--rounded`
         )
-        cy.get(`p`).should('exist').should('not.be.empty')
+        cy.get(`.c-avatar--rounded`).should('exist')
     })
+})
 
-    it(`Should render details`, () => {
+describe('Avatar - Rounded with caption', () => {
+    it(`Should render rounded image wih caption`, () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-avatar--with-details`
+            )}/iframe.html?id=components-avatar--rounded-with-caption`
         )
-        cy.get(`dl.u-link`).should('exist').should('not.be.empty')
+        cy.get(`.c-avatar--rounded`).should('exist')
+        cy.get(`.c-avatar__caption`).should('exist').and('not.be.empty')
     })
+})
 
-    it(`Should render details on left side`, () => {
+describe('Avatar - Sizes', () => {
+    it(`Should render all the sizes`, () => {
+        cy.visit(
+            `${Cypress.env('baseUrl')}/iframe.html?id=components-avatar--sizes`
+        )
+        cy.get(`.c-avatar--xs`).should('exist')
+        cy.get(`.c-avatar--sm`).should('exist')
+        cy.get(`.c-avatar--md`).should('exist')
+        cy.get(`.c-avatar--lg`).should('exist')
+        cy.get(`.c-avatar--xl`).should('exist')
+        cy.get(`.c-avatar--2xl`).should('exist')
+        cy.get(`.c-avatar--4xl`).should('exist')
+    })
+})
+
+describe('Avatar - No Image', () => {
+    it(`Should render rounded image`, () => {
         cy.visit(
             `${Cypress.env(
                 'baseUrl'
-            )}/iframe.html?id=blocks-avatar--with-details-left`
+            )}/iframe.html?id=components-avatar--no-image`
         )
-        cy.get(`.details__leftside`).should('exist')
+        cy.get(`.c-avatar__info`).should('exist').and('not.be.empty')
     })
 })
