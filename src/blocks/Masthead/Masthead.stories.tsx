@@ -15,6 +15,7 @@ const avatarRender = (
             lastName: 'Brown',
             image: {
                 src: 'https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg',
+                alt: '',
             },
         }}
     />
@@ -129,7 +130,7 @@ export const WithActions = () => (
     <Masthead title={args.title} url={args.url} actions={args.actions} />
 )
 
-export const WithAvatar = () => (
+export const WithUserInfo = () => (
     <Masthead title={args.title} url={args.url}>
         {args.children}
     </Masthead>

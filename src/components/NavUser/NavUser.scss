@@ -2,9 +2,10 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 15px;
+    padding: 0 15px;
     position: relative;
     font-size: 14px;
+    height: 72px;
 
     &__image {
         display: flex;
@@ -31,4 +32,11 @@ button .c-navuser {
 
 .raven-mode .c-navuser {
     color: white;
+
+    .c-navuser:hover,
+    a:hover .c-navuser,
+    button:hover .c-navuser {
+        color: $black !important;
+        background-color: $dark-background-hover;
+    }
 }

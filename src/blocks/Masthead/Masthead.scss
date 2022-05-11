@@ -280,6 +280,11 @@ body {
     align-items: stretch;
     height: 100%;
 }
+.b-masthead__content {
+    @include media('>l') {
+        border-left: solid 1px $grey-kenobi;
+    }
+}
 
 .b-masthead__menu-item {
     display: flex;
@@ -353,10 +358,10 @@ body {
     .b-masthead__menu-item {
         border-color: $dark-border-color-light;
     }
-}
 
-.b-masthead__content {
-    @include media('>l') {
-        border-left: 1px solid $dark-border-color-light;
+    .b-masthead__content {
+        @include media('>l') {
+            border-left: 1px solid $dark-border-color-light;
+        }
     }
 }

@@ -15,6 +15,7 @@ const user: UserInfoType = {
     lastName: 'Maia de Freitas',
     image: {
         src: `https://cu-raven.s3.amazonaws.com/assets/img/photos/fill-murray.jpg`,
+        alt: 'Marcelo Freitas',
     },
 }
 
@@ -22,15 +23,6 @@ export const Base = () => {
     return (
         <Masthead title={'User Info'}>
             <NavUser user={user} />
-        </Masthead>
-    )
-}
-export const WithLink = () => {
-    return (
-        <Masthead title={'User Info'}>
-            <a href='/'>
-                <NavUser user={user} />
-            </a>
         </Masthead>
     )
 }
