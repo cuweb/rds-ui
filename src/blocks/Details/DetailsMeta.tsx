@@ -19,7 +19,7 @@ const DetailsMeta: FC<DetailsMetaProps> = ({ details }): JSX.Element => {
                     <React.Fragment key={index}>
                         <dt>{item.title}</dt>
                         <dd>
-                            <LinkWrapper link={item?.url}>
+                            <LinkWrapper link={item?.url} noBorder>
                                 {item.description}
                             </LinkWrapper>
                         </dd>

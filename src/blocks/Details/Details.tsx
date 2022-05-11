@@ -1,31 +1,29 @@
 import React, { FC } from 'react'
 import Ublock, { UblockProps } from '@components/Ublock/Ublock'
-import { UserInfoType } from 'types/UserInfo'
-import DetailsMeta, { DetailsItemProps } from './DetailsMeta'
-import DetailsAside from './DetailsAside'
 
 export interface IDetails {
     className?: string
     block?: UblockProps
     title?: string
-    details: DetailsItemProps[]
-    user?: UserInfoType
+    variant?: 'default' | 'figure' | 'event' | 'eventpast'
 }
 
 const Details: FC<IDetails> = ({
     block,
     title,
     className = '',
-    details,
-    user,
+    variant = 'default',
+    children,
 }): JSX.Element => {
-    const detailsFigureClassName = user ? `b-details--figure` : ''
+    const vatiantClassName =
+        variant === 'eventpast'
+            ? `b-details--event b-details--eventpast`
+            : `b-details--${variant}`
     return (
         <Ublock {...block}>
             {title && <h2>{title}</h2>}
-            <div className={`b-details ${detailsFigureClassName} ${className}`}>
-                <DetailsMeta details={details} />
-                {user && <DetailsAside user={user} />}
+            <div className={`b-details ${vatiantClassName} ${className}`}>
+                {children}
             </div>
         </Ublock>
     )

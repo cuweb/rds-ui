@@ -81,3 +81,15 @@
         }
     }
 }
+
+.raven-mode .c-avatar {
+    &__image,
+    &__info {
+        background-color: $grey-vader;
+        color: white;
+    }
+
+    &__caption {
+        color: white;
+    }
+}

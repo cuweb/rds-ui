@@ -356,5 +356,7 @@ body {
 }
 
 .b-masthead__content {
-    border-left: 1px solid $grey-yoda;
+    @include media('>l') {
+        border-left: 1px solid $dark-border-color-light;
+    }
 }
