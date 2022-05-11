@@ -1,10 +1,8 @@
 import React from 'react'
 import convertDate from '@functions/convertDate'
 import CardImage, { CardImageProps } from './components/CardImage'
-import CardTitle, { CardTitleProps } from './components/CardTitle'
-import CardDescription, {
-    CardDescriptionProps,
-} from './components/CardDescription'
+import CardTitle from './components/CardTitle'
+import CardDescription from './components/CardDescription'
 
 export interface CardNewsProps {
     link: string

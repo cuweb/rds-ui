@@ -14,6 +14,9 @@ import CardNews from './components/Card/CardNews'
 import CardVideo from './components/Card/CardVideo'
 import CardGrid from './blocks/CardGrid/CardGrid'
 import CardPeople from './components/CardPeople/CardPeople'
+import Details from './blocks/Details/Details'
+import DetailsAside from './blocks/Details/DetailsAside'
+import DetailsMeta from './blocks/Details/DetailsMeta'
 import Filter from './blocks/Filter/Filter'
 import Footer from './blocks/Footer/Footer'
 import FooterBrand from './blocks/Footer/components/FooterBrand'
@@ -57,6 +60,9 @@ import Timeline from './blocks/Timeline/Timeline'
 import MenuPopup from './components/MenuPopup/MenuPopup'
 import NavMenu from './components/NavMenu/NavMenu'
 import NavUser from './components/NavUser/NavUser'
+import NavUserWrapper from './components/NavUser/NavUserWrapper'
+import NavUserImage from './components/NavUser/NavUserImage'
+import NavUserInfo from './components/NavUser/NavUserInfo'
 
 export {
     Accordion,
@@ -75,6 +81,9 @@ export {
     CardPeople,
     CardNews,
     CardVideo,
+    Details,
+    DetailsAside,
+    DetailsMeta,
     Filter,
     Footer,
     FooterBrand,
@@ -104,6 +113,9 @@ export {
     MenuPopup,
     NavMenu,
     NavUser,
+    NavUserWrapper,
+    NavUserImage,
+    NavUserInfo,
     Overlay,
     Panel,
     PanelBody,
