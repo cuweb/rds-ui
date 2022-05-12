@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
 import Masthead from '@blocks/Masthead/Masthead'
-import Avatar from '@blocks/Avatar/Avatar'
+import NavUser from '@components/NavUser/NavUser'
 
 export default {
     component: Masthead,
@@ -9,13 +9,16 @@ export default {
 } as Meta
 
 const avatarRender = (
-    <div className='u-spacing-x u-center u-max-width-fit'>
-        <Avatar
-            alt='abc'
-            imageUrl='https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg'
-            className='u-image-full'
-        />
-    </div>
+    <NavUser
+        user={{
+            firstName: 'Danny',
+            lastName: 'Brown',
+            image: {
+                src: 'https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg',
+                alt: '',
+            },
+        }}
+    />
 )
 
 const args = {
@@ -127,7 +130,7 @@ export const WithActions = () => (
     <Masthead title={args.title} url={args.url} actions={args.actions} />
 )
 
-export const WithAvatar = () => (
+export const WithUserInfo = () => (
     <Masthead title={args.title} url={args.url}>
         {args.children}
     </Masthead>

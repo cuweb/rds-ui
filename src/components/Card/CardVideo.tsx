@@ -1,15 +1,15 @@
 import React from 'react'
 import Icon from '@components/Icon/Icon'
 import CardImage, { CardImageProps } from './components/CardImage'
-import CardTitle, { CardTitleProps } from './components/CardTitle'
+import CardTitle from './components/CardTitle'
 
 export interface CardVideoProps {
     link: string
     image: CardImageProps
-    header: CardTitleProps
+    header: string
 }
 
-const CardVideo: React.FC<CardVideoProps & CardImageProps & CardTitleProps> = ({
+const CardVideo: React.FC<CardVideoProps & CardImageProps> = ({
     link,
     image,
     header,

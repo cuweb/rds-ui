@@ -39,7 +39,7 @@ const Accordion: React.FC<AccordionProps> = ({
                 if (index === position && ariaState[index] === true) {
                     return false
                 }
-                return true
+                return item
             })
             setAriaState(updatedSingleAriaState)
         }
@@ -60,7 +60,7 @@ const Accordion: React.FC<AccordionProps> = ({
             setCheckedState(updatedCheckedState)
             const updatedDivState = divState.map((item, index) => {
                 if (index === position && checkedState[index] === false) {
-                    return true
+                    return item
                 }
                 return false
             })

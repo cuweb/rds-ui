@@ -1,22 +1,24 @@
 import React from 'react'
 import convertDate from '@functions/convertDate'
 import CardImage, { CardImageProps } from './components/CardImage'
-import CardTitle, { CardTitleProps } from './components/CardTitle'
-import CardDescription, {
-    CardDescriptionProps,
-} from './components/CardDescription'
+import CardTitle from './components/CardTitle'
+import CardDescription from './components/CardDescription'
 
 export interface CardNewsProps {
     link: string
     image: CardImageProps
-    header: CardTitleProps
+    header: string
     date: string
-    description?: CardDescriptionProps
+    description?: string
 }
 
-const CardNews: React.FC<
-    CardNewsProps & CardImageProps & CardTitleProps & CardDescriptionProps
-> = ({ link, image, header, date, description }): JSX.Element => {
+const CardNews: React.FC<CardNewsProps & CardImageProps> = ({
+    link,
+    image,
+    header,
+    date,
+    description,
+}): JSX.Element => {
     const longDate = convertDate(date)
     return (
         <article

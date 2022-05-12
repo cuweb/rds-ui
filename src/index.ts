@@ -3,7 +3,7 @@ import Alert from './components/Alert/Alert'
 import AlertAside from './components/AlertAside/AlertAside'
 import AlertHeader from './blocks/AlertHeader/AlertHeader'
 import Aside from './layouts/Layout/Aside'
-import Avatar from './blocks/Avatar/Avatar'
+import Avatar from './components/Avatar/Avatar'
 import Badge from './components/Badge/Badge'
 import Banner from './blocks/Banner/Banner'
 import ButtonCTA from './components/ButtonCTA/ButtonCTA'
@@ -14,6 +14,9 @@ import CardNews from './components/Card/CardNews'
 import CardVideo from './components/Card/CardVideo'
 import CardGrid from './blocks/CardGrid/CardGrid'
 import CardPeople from './components/CardPeople/CardPeople'
+import Details from './blocks/Details/Details'
+import DetailsAside from './blocks/Details/DetailsAside'
+import DetailsMeta from './blocks/Details/DetailsMeta'
 import Filter from './blocks/Filter/Filter'
 import Footer from './blocks/Footer/Footer'
 import FooterBrand from './blocks/Footer/components/FooterBrand'
@@ -56,6 +59,10 @@ import TextImage from './blocks/TextImage/TextImage'
 import Timeline from './blocks/Timeline/Timeline'
 import MenuPopup from './components/MenuPopup/MenuPopup'
 import NavMenu from './components/NavMenu/NavMenu'
+import NavUser from './components/NavUser/NavUser'
+import NavUserWrapper from './components/NavUser/NavUserWrapper'
+import NavUserImage from './components/NavUser/NavUserImage'
+import NavUserInfo from './components/NavUser/NavUserInfo'
 
 export {
     Accordion,
@@ -74,6 +81,9 @@ export {
     CardPeople,
     CardNews,
     CardVideo,
+    Details,
+    DetailsAside,
+    DetailsMeta,
     Filter,
     Footer,
     FooterBrand,
@@ -102,6 +112,10 @@ export {
     Masthead,
     MenuPopup,
     NavMenu,
+    NavUser,
+    NavUserWrapper,
+    NavUserImage,
+    NavUserInfo,
     Overlay,
     Panel,
     PanelBody,

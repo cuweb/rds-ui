@@ -9,17 +9,27 @@ export interface PanelProps {
     block?: UblockProps
     color?: PanelColorsTypes
     shadow?: boolean
+    className?: string
 }
 
 export type PanelColorsTypes = 'grey' | 'white'
 
 const Panel: React.FC<PanelProps> = (props): JSX.Element => {
-    const { children, block, actions, color = 'grey', shadow } = props
+    const {
+        children,
+        block,
+        actions,
+        color = 'grey',
+        shadow,
+        className,
+    } = props
     const shadowClassName = shadow ? `b-sidebar--shadow` : ``
 
     return (
         <Ublock {...block}>
-            <div className={`b-sidebar b-sidebar--${color} ${shadowClassName}`}>
+            <div
+                className={`b-sidebar b-sidebar--${color} ${shadowClassName} ${className}`}
+            >
                 {actions && <PanelActions actions={actions} />}
                 {children}
             </div>

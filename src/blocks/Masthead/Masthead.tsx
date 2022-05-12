@@ -32,8 +32,8 @@ const Masthead: React.FC<MastheadProps> = ({
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const isMobile = useWindowSize().width < theme.breakpoints.tablet
     const hasMenu = menu && !isMobile
-    const hasMobileMenu = isMobile && isOpen && menu
-    const hasMobileButton = isMobile && menu
+    const hasMobileMenu = isMobile && isOpen
+    const hasMobileButton = isMobile
 
     return (
         <>
@@ -57,7 +57,7 @@ const Masthead: React.FC<MastheadProps> = ({
                             )}
                         </ul>
                         {!isMobile && (
-                            <div className='b-masthead__menu-item'>
+                            <div className='b-masthead__content'>
                                 {children}
                             </div>
                         )}
@@ -66,8 +66,8 @@ const Masthead: React.FC<MastheadProps> = ({
             </Ublock>
             {hasMobileMenu && (
                 <Overlay type='menu'>
-                    <NavMenu type='top' menu={menu} isMobile />
-                    <div className='b-masthead__menu-item'>{children}</div>
+                    {menu && <NavMenu type='top' menu={menu} isMobile />}
+                    <div className='b-masthead__content'>{children}</div>
                 </Overlay>
             )}
         </>

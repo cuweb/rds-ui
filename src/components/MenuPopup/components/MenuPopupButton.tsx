@@ -3,7 +3,7 @@ import React, { FC, MouseEvent } from 'react'
 
 export interface MenuPopupButtonProps {
     isButton?: boolean
-    title?: string
+    title?: string | React.ReactNode
     link?: string
     icon?: string
     buttonClassName?: string

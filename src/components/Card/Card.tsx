@@ -1,20 +1,21 @@
 import React from 'react'
 import CardImage, { CardImageProps } from './components/CardImage'
-import CardTitle, { CardTitleProps } from './components/CardTitle'
-import CardDescription, {
-    CardDescriptionProps,
-} from './components/CardDescription'
+import CardTitle from './components/CardTitle'
+import CardDescription from './components/CardDescription'
 
 export interface CardProps {
     link: string
-    header: CardTitleProps
-    description?: CardDescriptionProps
+    header: string
+    description?: string
     image: CardImageProps
 }
 
-const Card: React.FC<
-    CardProps & CardImageProps & CardTitleProps & CardDescriptionProps
-> = ({ link, header, description, image }): JSX.Element => (
+const Card: React.FC<CardProps & CardImageProps> = ({
+    link,
+    header,
+    description,
+    image,
+}): JSX.Element => (
     <article className='c-card' itemScope itemType='http://schema.org/Article'>
         <a href={link} itemProp='url'>
             <CardImage image={image} />
