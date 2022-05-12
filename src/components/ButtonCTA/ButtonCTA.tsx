@@ -12,6 +12,7 @@ export interface ButtonProps {
     target?: string
     grey?: boolean
     shadow?: boolean
+    className?: string
 }
 
 const ButtonCTA: React.FC<ButtonProps> = ({
@@ -25,6 +26,7 @@ const ButtonCTA: React.FC<ButtonProps> = ({
     target,
     grey,
     shadow = true,
+    className = '',
 }): JSX.Element => {
     const isGhost = ghost ? 'c-buttoncta--ghost' : ''
     const isGrey = grey ? 'c-buttoncta--grey' : ''
@@ -36,7 +38,7 @@ const ButtonCTA: React.FC<ButtonProps> = ({
 
     return (
         <a
-            className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isGrey} ${isCenter} ${hasShadow}`}
+            className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isGrey} ${isCenter} ${hasShadow} ${className}`}
             target={buttonTarget}
             href={link}
         >

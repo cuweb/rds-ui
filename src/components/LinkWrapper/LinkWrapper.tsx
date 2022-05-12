@@ -1,17 +1,27 @@
-import React, { ReactElement } from 'react'
+import React, { FC } from 'react'
 
 export interface LinkProps {
     link?: string
-    children: ReactElement
+    color?: 'black' | 'blue' | 'red'
+    noBorder?: boolean
 }
 
-const LinkWrapper: React.FC<LinkProps> = ({ link, children }) => {
+const LinkWrapper: FC<LinkProps> = ({
+    link,
+    children,
+    color = 'blue',
+    noBorder,
+}): JSX.Element => {
     if (link)
         return (
-            <a href={link} itemProp='url'>
+            <a
+                href={link}
+                itemProp='url'
+                className={`link--${color} ${noBorder ? `link--noborder` : ``}`}
+            >
                 {children}
             </a>
         )
-    return children
+    return <div>{children}</div>
 }
 export default LinkWrapper
