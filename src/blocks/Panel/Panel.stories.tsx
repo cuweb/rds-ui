@@ -252,3 +252,44 @@ export const IntranetExample = () => (
         </PanelFooter>
     </Panel>
 )
+
+export const FullWidth = () => (
+    <Panel actions={actions} shadow block={{ wide: true }}>
+        <PanelHeader icon='light-bulb' color='white'>
+            Ideas@Carleton
+        </PanelHeader>
+        <PanelBody>
+            <Listing
+                noUblock
+                data={[
+                    {
+                        src: '#',
+                        title: 'White-necked Raven',
+                    },
+                    {
+                        src: '#',
+                        title: 'Common raven',
+                    },
+                    {
+                        src: '#',
+                        title: 'Australian raven',
+                    },
+                    {
+                        src: '#',
+                        title: 'Thick-billed raven',
+                    },
+                ]}
+            />
+        </PanelBody>
+        <PanelFooter>
+            <ButtonCTA
+                link='https://carleton.ca'
+                icon='arrow-down'
+                text='Download now'
+                grey
+                shadow={false}
+                full
+            />
+        </PanelFooter>
+    </Panel>
+)

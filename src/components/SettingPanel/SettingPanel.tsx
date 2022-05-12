@@ -7,7 +7,9 @@ import Ugrid from '@components/Ugrid/Ugrid'
 import Overlay from '@layouts/Overlay/Overlay'
 import React, { useEffect, useState } from 'react'
 import { UserInfoType } from 'types/UserInfo'
+import UserSetting from './components/UserSetting'
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface SettingPanelProps {}
 
 const SettingPanel: React.FC<SettingPanelProps> = (): JSX.Element => {
@@ -37,7 +39,7 @@ const SettingPanel: React.FC<SettingPanelProps> = (): JSX.Element => {
                     <Ugrid columns={1}>
                         <Panel>
                             <PanelBody>
-                                <div onClick={(e) => setIsHidden(!isHidden)}>
+                                <div onClick={() => setIsHidden(false)}>
                                     <Ugrid columns={1}>
                                         <Avatar
                                             user={user}
@@ -46,7 +48,7 @@ const SettingPanel: React.FC<SettingPanelProps> = (): JSX.Element => {
                                         />
                                     </Ugrid>
                                     <Overlay isHidden={isHidden}>
-                                        <p> hello from overlay</p>
+                                        <UserSetting />
                                     </Overlay>
                                 </div>
                             </PanelBody>
