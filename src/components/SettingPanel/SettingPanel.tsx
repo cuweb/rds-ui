@@ -34,7 +34,7 @@ const SettingPanel: React.FC<SettingPanelProps> = (): JSX.Element => {
     return (
         <>
             <Masthead title='Intranet' />
-            <Ublock color='grey' wide>
+            <Ublock color='grey' wide fullHeight>
                 <Ugrid isLayout>
                     <Ugrid columns={1}>
                         <Panel>

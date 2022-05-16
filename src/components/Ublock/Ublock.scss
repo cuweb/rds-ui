@@ -167,6 +167,10 @@ aside > .u-block--panel {
     }
 }
 
+.u-block--fullHeight {
+    height: 100vh;
+}
+
 .u-block--wide {
     > * {
         max-width: 1200px;

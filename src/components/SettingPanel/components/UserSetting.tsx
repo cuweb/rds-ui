@@ -1,11 +1,10 @@
 import Panel from '@blocks/Panel/Panel'
-import SidebarMenu from '@blocks/SidebarMenu/SidebarMenu'
+
 import Ublock from '@components/Ublock/Ublock'
 import Ugrid from '@components/Ugrid/Ugrid'
-import Aside from '@layouts/Layout/Aside'
-import Layout from '@layouts/Layout/Layout'
-import Main from '@layouts/Layout/Main'
+
 import React, { FC, useState } from 'react'
+import EditUser from './EditUser'
 
 export interface UserSettingProps {}
 
@@ -15,8 +14,8 @@ const UserSetting: FC<UserSettingProps> = ({}): JSX.Element => {
     const views: { [key: string]: any } = {
         personal: {
             title: 'Personal User Settings',
-            // content: <EditUser />,
-            content: <p> Hello from personal setting</p>,
+            content: <EditUser />,
+            // content: <p> Hello from personal setting</p>,
         },
         applications: {
             title: 'Applications',
@@ -29,32 +28,6 @@ const UserSetting: FC<UserSettingProps> = ({}): JSX.Element => {
             content: <p> Hello from Link Applications</p>,
         },
     }
-
-    const sideMenu = [
-        {
-            title: 'Personal User Settings',
-            link: '/',
-        },
-        {
-            title: 'Applications',
-            link: 'http://carleton.ca',
-            target: '_blank',
-        },
-        {
-            title: 'Resources',
-            link: 'http://carleton.ca',
-            subMenu: [
-                {
-                    title: 'HR Link',
-                    link: '/',
-                },
-                {
-                    title: 'Leave Info',
-                    link: '/',
-                },
-            ],
-        },
-    ]
 
     return (
         <Panel block={{ noPadding: true, wide: true }}>
@@ -80,8 +53,3 @@ const UserSetting: FC<UserSettingProps> = ({}): JSX.Element => {
     )
 }
 export default UserSetting
-function handleSettingClick(
-    arg0: string
-): React.MouseEventHandler<HTMLLIElement> | undefined {
-    throw new Error('Function not implemented.')
-}
