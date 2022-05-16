@@ -6,11 +6,13 @@ export interface TableProps {
 }
 
 const Table: React.FC<TableProps> = ({ columns, rows }): JSX.Element => {
-    const tableColumn = columns.map((column) => <th>{column}</th>)
-    const tableRow = rows.map((row) => (
-        <tr>
+    const tableColumn = columns.map((column, index) => (
+        <th key={index}>{column}</th>
+    ))
+    const tableRow = rows.map((row, index) => (
+        <tr key={index}>
             {row.map((r) => (
-                <td>{r}</td>
+                <td key={index + Math.random()}>{r}</td>
             ))}
         </tr>
     ))
