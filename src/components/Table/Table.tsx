@@ -11,8 +11,8 @@ const Table: React.FC<TableProps> = ({ columns, rows }): JSX.Element => {
     ))
     const tableRow = rows.map((row, index) => (
         <tr key={index}>
-            {row.map((r) => (
-                <td key={index + Math.random()}>{r}</td>
+            {row.map((eachRow, indexRow) => (
+                <td key={indexRow}>{eachRow}</td>
             ))}
         </tr>
     ))
