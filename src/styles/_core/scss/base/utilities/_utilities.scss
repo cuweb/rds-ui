@@ -442,3 +442,26 @@ a.link,
         font-size: 14px;
     }
 }
+
+//margin auto
+.margin-auto {
+    margin: auto;
+}
+
+//height full
+.h-full {
+    height: 100%;
+}
+
+//overflow scroll important
+.o-sroll {
+    overflow: scroll !important;
+}
+
+//height 786px
+
+.h-fix {
+    @include media('>s') {
+        height: 786px !important;
+    }
+}
