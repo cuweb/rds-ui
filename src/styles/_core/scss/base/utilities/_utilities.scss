@@ -450,7 +450,9 @@ a.link,
 
 //height full
 .h-full {
-    height: 100%;
+    @include media('>s') {
+        height: 100vh !important;
+    }
 }
 
 //overflow scroll important
