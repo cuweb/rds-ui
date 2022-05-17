@@ -8,6 +8,7 @@ export interface ListingEventProps {
     data: EventListProps[]
     noUblock?: boolean
     lineClamp?: number
+    blackDescription?: boolean
 }
 
 export interface EventListProps {
@@ -29,9 +30,15 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
     data,
     noUblock,
     lineClamp = 1,
+    blackDescription = false,
 }): JSX.Element => {
     return (
-        <ListingWrapper type='event' header={header} noUblock={noUblock}>
+        <ListingWrapper
+            type='event'
+            header={header}
+            noUblock={noUblock}
+            blackDescription={blackDescription}
+        >
             <ul itemScope itemType='http://schema.org/Event'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>

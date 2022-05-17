@@ -6,6 +6,7 @@ export interface ListingPeopleProps {
     data: ListProps[]
     noUblock?: boolean
     lineClamp?: number
+    blackDescription?: boolean
 }
 
 export interface ListProps {
@@ -25,9 +26,15 @@ const ListingPeople: React.FC<ListingPeopleProps & ListingHeaderProps> = ({
     data,
     noUblock,
     lineClamp = 1,
+    blackDescription = false,
 }): JSX.Element => {
     return (
-        <ListingWrapper type='people' header={header} noUblock={noUblock}>
+        <ListingWrapper
+            type='people'
+            header={header}
+            noUblock={noUblock}
+            blackDescription={blackDescription}
+        >
             <ul itemScope itemType='http://schema.org/Person'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>

@@ -7,6 +7,7 @@ export interface ListingProps {
     data: BaseListProps[]
     noUblock?: boolean
     noArrow?: boolean
+    blackDescription?: boolean
     lineClamp?: number
 }
 export interface BaseListProps {
@@ -27,6 +28,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
     data,
     noUblock,
     noArrow,
+    blackDescription = false,
     lineClamp = 1,
 }): JSX.Element => {
     return (
@@ -35,6 +37,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
             header={header}
             noUblock={noUblock}
             noArrow={noArrow}
+            blackDescription={blackDescription}
         >
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
