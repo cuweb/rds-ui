@@ -444,25 +444,25 @@ a.link,
 }
 
 //margin auto
-.margin-auto {
+.u-margin-auto {
     margin: auto;
 }
 
 //height full
-.h-full {
+.u-h-full {
     @include media('>s') {
         height: 100vh !important;
     }
 }
 
 //overflow scroll important
-.o-sroll {
+.u-o-sroll {
     overflow: scroll !important;
 }
 
-//height 786px
+//height fix 786px
 
-.h-fix {
+.u-h-fix {
     @include media('>s') {
         height: 786px !important;
     }
