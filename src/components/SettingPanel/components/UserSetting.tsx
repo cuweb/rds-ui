@@ -8,7 +8,7 @@ import EditUser from './EditUser'
 
 export interface UserSettingProps {}
 
-const UserSetting: FC<UserSettingProps> = ({}): JSX.Element => {
+const UserSetting: FC<UserSettingProps> = (): JSX.Element => {
     const [currentView, setCurrentView] = useState('personal')
 
     const views: { [key: string]: any } = {
@@ -30,13 +30,17 @@ const UserSetting: FC<UserSettingProps> = ({}): JSX.Element => {
     }
 
     return (
-        <Panel block={{ noPadding: true, wide: true }}>
+        <Panel
+            block={{ noPadding: true, wide: true }}
+            className='h-fix o-sroll u-margin-top-s'
+        >
             <Ugrid isLayout gap={1} className='u-no-padding'>
                 <Ublock
                     color='grey'
                     heading={{
                         title: 'Settings',
                     }}
+                    className='h-full'
                 >
                     <p onClick={() => setCurrentView('personal')}>
                         User Settings
