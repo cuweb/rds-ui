@@ -16,7 +16,7 @@ export interface UblockProps {
     noBlock?: boolean
     wide?: boolean
     noPadding?: boolean
-    className?: string | undefined
+    className?: string
 }
 
 const Ublock: React.FC<UblockProps> = ({
