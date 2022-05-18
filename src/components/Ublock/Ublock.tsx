@@ -31,7 +31,7 @@ const Ublock: React.FC<UblockProps> = ({
     noBlock,
     wide,
     noPadding = false,
-    className,
+    className = '',
 }): JSX.Element => {
     const width = full ? `u-block--full` : ''
     const wideClassName = wide ? `u-block--wide` : ''
