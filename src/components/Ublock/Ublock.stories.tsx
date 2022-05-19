@@ -74,3 +74,9 @@ NoPadding.args = {
     color: 'grey',
     wide: true,
 }
+
+//custom className
+export const CustomClass = Template.bind({})
+CustomClass.args = {
+    className: 'text-center',
+}

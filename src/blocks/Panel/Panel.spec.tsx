@@ -55,6 +55,14 @@ const panelTestFooter = (color?: string) => {
     })
 }
 
+const panelTestPanelModal = () => {
+    it(`Should render Panel with custom class`, () => {
+        cy.get(`.u-h-fix`).should('exist')
+        cy.get(`.u-o-sroll`).should('exist')
+        cy.get(`.u-margin-auto`).should('exist')
+    })
+}
+
 //  Tests
 // ================================================
 describe('Panel - Base', () => {
@@ -124,4 +132,9 @@ describe('Panel - Inranet Example', () => {
     panelTestBody()
     panelTestHeader('white')
     panelTestFooter()
+})
+
+describe('Panel - Modal Example with custom className', () => {
+    panelTestBaseUrl('panel-modal')
+    panelTestPanelModal()
 })
