@@ -34,7 +34,6 @@ const grey = getVariation('grey', variations)
 GreyBackground.args = {
     heading: grey.heading,
     color: grey.color,
-    classname: 'u-margin-auto',
 }
 
 //  Black Ublock
