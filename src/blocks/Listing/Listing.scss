@@ -39,6 +39,10 @@
             color: $link;
         }
 
+        p {
+            color: $black;
+        }
+
         &:hover {
             background-color: $grey;
             border: none;
