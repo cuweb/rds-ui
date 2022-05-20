@@ -207,7 +207,7 @@ describe('Masthead - Mobile', () => {
 
     it(`Should not render actions buttons`, () => {
         cy.viewport(viewport)
-        cy.get(`.masthead__cta`).should('not.be.visible')
+        cy.get(`.masthead__cta`).should('not.exist')
     })
 
     it(`Should not render login`, () => {
