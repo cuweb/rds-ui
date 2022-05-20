@@ -33,3 +33,10 @@
     padding-bottom: 100px;
     background-color: white;
 }
+
+.raven-mode {
+    .l-overlay-modal,
+    .modal__menu {
+        background-color: $dark-background;
+    }
+}

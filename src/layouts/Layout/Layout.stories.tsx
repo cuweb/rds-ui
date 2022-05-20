@@ -3,6 +3,7 @@ import Layout from './Layout'
 import Aside from './Aside'
 import Main from './Main'
 import Sidebar from './Sidebar'
+import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
 
 export default {
     component: Layout,
@@ -16,9 +17,47 @@ export const Single = (args: any) => (
             The single column layout only requires a {`<main>`} tag in between
             your {`<header>`} and {`<footer>`} tags.
             <br />
-            When using the single column layout, all Main section blocks can be
-            used within the {`<main>`} section, including all fixed and
-            full-width blocks.
+            When using the single column <a href='#'>layout</a>, all Main
+            section blocks can be used within the {`<main>`} section, including
+            all fixed and full-width blocks.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th colSpan={2}>The table header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The table body</td>
+                    <td>with two columns</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
+            consectetur adipiscing elit. Cras convallis neque quis enim eleifend
+            luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a
+            aliquam lacus mollis vel.
+        </p>
+        <img src='https://via.placeholder.com/640x480' alt='image' />
+        <p>
+            Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
+            consectetur adipiscing elit. Cras convallis neque quis enim eleifend
+            luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a
+            aliquam lacus mollis vel.
+        </p>
+        <ButtonCTA
+            link='https://carleton.ca'
+            icon='arrow-down'
+            text='Download now'
+        />
+
+        <p>
+            Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
+            consectetur adipiscing elit. Cras convallis neque quis enim eleifend
+            luctus. Aliquam erat volutpat. Praesent malesuada dapibus turpis, a
+            aliquam lacus mollis vel.
         </p>
     </Layout>
 )

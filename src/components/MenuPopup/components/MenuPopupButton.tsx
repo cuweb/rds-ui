@@ -1,8 +1,9 @@
+import Icon from '@components/Icon/Icon'
 import React, { FC, MouseEvent } from 'react'
 
 export interface MenuPopupButtonProps {
     isButton?: boolean
-    title: string
+    title?: string | React.ReactNode
     link?: string
     icon?: string
     buttonClassName?: string
@@ -13,12 +14,14 @@ const MenuPopupButton: FC<MenuPopupButtonProps> = ({
     isButton = true,
     title,
     link = '#',
+    icon,
     buttonClassName = '',
     onClick,
 }): JSX.Element => {
     if (!isButton)
         return (
             <a href={link} className={buttonClassName}>
+                {icon && <Icon icon={icon} />}
                 {title}
             </a>
         )
@@ -32,6 +35,7 @@ const MenuPopupButton: FC<MenuPopupButtonProps> = ({
                 event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>
             ) => onClick && onClick(event)}
         >
+            {icon && <Icon icon={icon} />}
             {title}
         </button>
     )

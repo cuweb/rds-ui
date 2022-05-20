@@ -48,6 +48,11 @@ body {
         'Segoe UI Symbol';
     font-style: normal;
     color: $black;
+
+    &.raven-mode {
+        color: white;
+        background-color: $black-soft;
+    }
 }
 
 // #content {
@@ -71,11 +76,26 @@ a {
     font-weight: 500;
     text-decoration: none;
     outline: none;
-    color: $black;
+    color: $link;
+    border-bottom: 1px solid $link-border;
     cursor: pointer;
 
     &:focus {
         outline: 0 none;
+    }
+    &:hover {
+        color: $red;
+        border-color: $red;
+    }
+}
+
+.raven-mode a {
+    color: $dark-link;
+    border-color: $dark-link-border;
+
+    &:hover {
+        color: $dark-link-hover;
+        border-color: $dark-link-hover-border;
     }
 }
 
@@ -254,99 +274,13 @@ video {
     background-color: $grey-kenobi;
 }
 
+.raven-mode svg {
+    fill: white;
+}
+
 // 5. Table styles
 // ---------------
-main table {
-    width: 100%;
-    font-size: $pixel14;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-    border-spacing: 0;
-    vertical-align: top;
-    display: block; // used to force responsive
-    overflow-x: auto; // used to force responsive
-
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul,
-    ol {
-        font-size: $pixel14;
-        border: none !important;
-        margin-top: 0;
-
-        &:not(:last-child) {
-            margin-bottom: 5px;
-        }
-    }
-
-    ul,
-    ol {
-        margin-left: $pixel18;
-    }
-}
-
-main table tr {
-    border-top: 1px solid $grey;
-    background-color: white;
-
-    td {
-        min-width: 145px;
-    }
-}
-
-main table tr:nth-child(2n) {
-    background-color: #fbfbfb;
-}
-
-main table tr th {
-    font-weight: 700;
-    border: 1px solid $grey;
-    text-align: left;
-    margin: 0;
-}
-
-main table tr td {
-    border: 1px solid $grey;
-    text-align: left;
-    margin: 0;
-}
-
-main table thead tr th,
-main table tr td {
-    padding: 15px;
-    vertical-align: top;
-
-    @include media('>s') {
-        padding: 20px;
-    }
-}
-
-main table thead tr th {
-    border: 1px solid $grey-emperor;
-    background-color: $grey-emperor;
-    color: white;
-}
-
-main table tfoot tr td {
-    border: 1px solid $grey-kenobi;
-    background-color: $grey-kenobi;
-    color: black;
-}
-
-main table + figcaption {
-    font-style: italic;
-    margin-bottom: 25px;
-}
-
-td,
-th {
-    padding: 0;
-    text-align: left;
-}
+//  @see table component
 
 // 6. Pre/Code
 // -----------

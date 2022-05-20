@@ -27,6 +27,7 @@
 .u-grid {
     display: grid;
     grid-gap: $grid-gutter;
+    align-items: flex-start;
 }
 
 .u-grid--gap-l {
@@ -35,6 +36,31 @@
     @include media('>=l') {
         grid-gap: 80px;
     }
+}
+
+.u-grid--layout {
+    grid-template-columns: 266px 1fr;
+    padding-bottom: 3rem;
+}
+
+.u-grid--gap-0 {
+    gap: 0;
+}
+.u-grid--gap-1 {
+    gap: 1rem;
+}
+.u-grid--gap-2 {
+    gap: $grid-gutter;
+}
+.u-grid--gap-3 {
+    gap: 3rem;
+}
+.u-grid--gap-4 {
+    gap: 4rem;
+}
+
+.u-grid--1 {
+    grid-template-columns: 1fr;
 }
 
 .u-grid--2 {
@@ -153,12 +179,19 @@
     padding-top: 20px !important;
 }
 
+.u-padding-r {
+    padding-right: 20px !important;
+}
+
 .u-margin-bottom-s {
     margin-bottom: 20px !important;
 }
 
 .u-margin-top-s {
     margin-top: 20px !important;
+}
+.u-margin-r {
+    margin-right: 20px !important;
 }
 
 // 6. Misc utils
@@ -281,5 +314,156 @@ dialog .u-hide-dialog {
     }
     0% {
         opacity: 1;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+a.link,
+.link {
+    &--black {
+        color: $black;
+        border-color: $black;
+
+        &:hover {
+            color: $red;
+            border-color: $red;
+        }
+    }
+    &--blue {
+        color: $link;
+        border-color: $link;
+
+        &:hover {
+            color: $red;
+            border-color: $red;
+        }
+    }
+    &--red {
+        color: $red;
+        border-color: $red;
+
+        &:hover {
+            color: $link;
+            border-color: $link;
+        }
+    }
+
+    &--noborder {
+        border: none;
+
+        &:hover {
+            border: none;
+        }
+    }
+}
+
+.u-spacing {
+    padding: 1rem;
+}
+.u-spacing-x {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.u-spacing-2x {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.u-spacing-y {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.u-spacing-2y {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.u-center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.u-max-width-fit {
+    max-width: fit-content;
+}
+
+.u-line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    &--2 {
+        -webkit-line-clamp: 2;
+    }
+
+    &--3 {
+        -webkit-line-clamp: 3;
+    }
+}
+
+.u-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    &--full {
+        width: 100%;
+        height: 100%;
+        max-width: unset;
+        max-height: unset;
+        object-fit: cover;
+    }
+
+    &--radius {
+        border-radius: 0.5rem;
+    }
+
+    &--rounded {
+        border-radius: 50%;
+    }
+
+    &--border {
+        border: solid 4px $grey-yoda;
+    }
+
+    &--border-2xl {
+        border-width: 8px;
+    }
+}
+
+.u-text {
+    font-size: 1rem;
+
+    &--xs {
+        font-size: 14px;
+    }
+}
+
+//margin auto
+.u-margin-auto {
+    margin: auto;
+}
+
+//height full
+.u-h-full {
+    @include media('>s') {
+        height: 100vh !important;
+    }
+}
+
+//overflow scroll important
+.u-o-sroll {
+    overflow: scroll !important;
+}
+
+//height fix 786px
+
+.u-h-fix {
+    @include media('>s') {
+        height: 786px !important;
     }
 }

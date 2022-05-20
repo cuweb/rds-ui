@@ -1,3 +1,9 @@
+a.c-buttonsocial {
+    border: none;
+    &:hover {
+        border: none;
+    }
+}
 .c-buttonsocial {
     display: flex;
     font-size: 2.5em;

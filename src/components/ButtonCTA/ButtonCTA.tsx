@@ -1,15 +1,18 @@
 import React from 'react'
 import Icon from '@components/Icon/Icon'
 
-interface ButtonProps {
+export interface ButtonProps {
     ghost?: boolean
     text: string
     link: string
     icon?: string
-    full?: string
+    full?: boolean
     center?: boolean
     children?: React.ReactNode
     target?: string
+    grey?: boolean
+    shadow?: boolean
+    className?: string
 }
 
 const ButtonCTA: React.FC<ButtonProps> = ({
@@ -21,16 +24,21 @@ const ButtonCTA: React.FC<ButtonProps> = ({
     full,
     children,
     target,
+    grey,
+    shadow = true,
+    className = '',
 }): JSX.Element => {
     const isGhost = ghost ? 'c-buttoncta--ghost' : ''
+    const isGrey = grey ? 'c-buttoncta--grey' : ''
     const isFull = full ? 'c-buttoncta--full' : ''
     const hasIcon = icon ? 'u-icon' : ''
     const isCenter = center ? 'c-buttoncta--center' : ''
     const buttonTarget = target ? `_${target}` : undefined
+    const hasShadow = shadow ? `` : `c-buttoncta--no-shadow`
 
     return (
         <a
-            className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isCenter}`}
+            className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isGrey} ${isCenter} ${hasShadow} ${className}`}
             target={buttonTarget}
             href={link}
         >

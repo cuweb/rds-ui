@@ -6,6 +6,8 @@ import ListingWrapper from './components/ListingWrapper'
 export interface ListingProps {
     data: BaseListProps[]
     noUblock?: boolean
+    noArrow?: boolean
+    lineClamp?: number
 }
 export interface BaseListProps {
     src: string
@@ -24,9 +26,16 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
     header,
     data,
     noUblock,
+    noArrow,
+    lineClamp = 1,
 }): JSX.Element => {
     return (
-        <ListingWrapper type='base' header={header} noUblock={noUblock}>
+        <ListingWrapper
+            type='base'
+            header={header}
+            noUblock={noUblock}
+            noArrow={noArrow}
+        >
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
@@ -47,6 +56,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
                             )}
                             <div itemProp='name'>
                                 <h3
+                                    className={`u-line-clamp u-line-clamp--${lineClamp}`}
                                     itemProp='name'
                                     dangerouslySetInnerHTML={{
                                         __html: item.title,

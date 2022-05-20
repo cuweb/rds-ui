@@ -7,6 +7,9 @@ import ListingPeople from './ListingPeople'
 import ListingVideo from './ListingVideo'
 import Ublock from '@components/Ublock/Ublock'
 import Ugrid from '@components/Ugrid/Ugrid'
+import Panel from '@blocks/Panel/Panel'
+import PanelHeader from '@blocks/Panel/components/PanelHeader'
+import PanelBody from '@blocks/Panel/components/PanelBody'
 
 export default {
     component: Listing,
@@ -17,6 +20,37 @@ export const BaseListing = () => {
     return (
         <Listing
             header='Base Example'
+            data={[
+                {
+                    src: '#',
+                    title: 'White-necked Raven',
+                },
+                {
+                    src: '#',
+                    title: 'Common raven',
+                },
+                {
+                    src: '#',
+                    title: 'Australian raven',
+                },
+                {
+                    src: '#',
+                    title: 'Thick-billed raven',
+                },
+                {
+                    src: '#',
+                    title: 'Sit ea quis qui aute officia sint non commodo excepteur fugiat commodo adipisicing aute. In do pariatur aute adipisicing fugiat ullamco veniam do esse reprehenderit ex. Aute officia minim consectetur incididunt et qui aute excepteur sint ad. Ullamco nulla laborum tempor pariatur do consectetur ea. Enim est eiusmod mollit aliquip adipisicing anim duis reprehenderit consequat minim aute voluptate aute amet. Proident cupidatat velit magna sint in veniam nulla sit quis velit quis dolor.',
+                },
+            ]}
+        />
+    )
+}
+
+export const WithoutArrow = () => {
+    return (
+        <Listing
+            header='Example Without Arrow'
+            noArrow
             data={[
                 {
                     src: '#',
@@ -153,22 +187,22 @@ export const WithIcon = () => {
                 {
                     src: '#',
                     title: 'White-necked Raven',
-                    icon: 'mark-ravens',
+                    icon: 'github',
                 },
                 {
                     src: '#',
                     title: 'Common raven',
-                    icon: 'mark-ravens',
+                    icon: 'twitter',
                 },
                 {
                     src: '#',
                     title: 'Australian raven',
-                    icon: 'mark-ravens',
+                    icon: 'facebook',
                 },
                 {
                     src: '#',
                     title: 'Thick-billed raven',
-                    icon: 'mark-ravens',
+                    icon: 'linkedin',
                 },
             ]}
         />
@@ -217,23 +251,29 @@ export const FilesListing = () => {
 export const EventsVariant = () => {
     return (
         <ListingEvent
-            header='Listing block with icons'
+            header='Listing Events'
             data={[
                 {
                     src: '#eventurl',
-                    title: 'Event Title',
-                    description: 'Event location',
+                    title: 'Nulla anim magna labore aliqua culpa. Aute proident et id adipisicing amet. Est minim ut exercitation sint nostrud occaecat laboris ut aliquip magna ut sit. Irure sint amet consectetur minim fugiat eiusmod excepteur proident ullamco ipsum. Ullamco sunt pariatur nostrud proident cupidatat exercitation aliquip nisi incididunt. Elit adipisicing anim officia mollit eu id irure. Adipisicing exercitation tempor eu elit.',
+                    description:
+                        'Reprehenderit id exercitation occaecat eu consequat sit in. Ad laboris magna tempor eiusmod pariatur. Laborum ut in nisi commodo magna laboris deserunt in excepteur dolor incididunt id. Proident est ad sint excepteur non.',
                     date: '2018-04-19',
                     startTime: '2018-04-21 23:15',
                     endTime: '2018-04-21 23:15',
                 },
                 {
                     src: '#eventurl',
+                    title: 'Nisi velit eiusmod velit eiusmod cillum esse. Occaecat in minim tempor minim. Excepteur mollit voluptate eiusmod anim irure veniam id. Ad enim officia irure mollit velit proident. Eiusmod ut labore sunt consectetur id. Proident et sint id dolore commodo elit nulla incididunt cupidatat dolore duis aliquip. Laboris anim sit labore in amet amet minim sit eu dolore sunt.',
+                    description:
+                        'Esse sint incididunt deserunt quis non. Cillum Lorem pariatur laborum ea elit. Irure nulla qui mollit sunt aliquip exercitation. Dolore ea anim voluptate nulla incididunt incididunt. Labore sunt do eu enim id eiusmod nulla ipsum. Consequat velit eu consequat deserunt tempor excepteur eu esse.',
+                    date: '2018-04-20',
+                },
+                {
+                    src: '#eventurl',
                     title: 'Event Title',
                     description: 'Event location',
                     date: '2018-04-20',
-                    startTime: '2018-04-21 23:15',
-                    endTime: '2018-04-21 23:15',
                 },
                 {
                     src: '#eventurl',
@@ -438,6 +478,55 @@ export const TwoColumn = () => {
                         },
                     ]}
                 />{' '}
+            </Ugrid>
+        </Ublock>
+    )
+}
+
+export const InranetExample = () => {
+    const data = [
+        {
+            src: '#',
+            title: 'White-necked Raven',
+        },
+        {
+            src: '#',
+            title: 'Common raven',
+        },
+        {
+            src: '#',
+            title: 'Australian raven',
+        },
+        {
+            src: '#',
+            title: 'Thick-billed raven',
+        },
+        {
+            src: '#',
+            title: 'Sit ea quis qui aute officia sint non commodo excepteur fugiat commodo adipisicing aute. In do pariatur aute adipisicing fugiat ullamco veniam do esse reprehenderit ex. Aute officia minim consectetur incididunt et qui aute excepteur sint ad. Ullamco nulla laborum tempor pariatur do consectetur ea. Enim est eiusmod mollit aliquip adipisicing anim duis reprehenderit consequat minim aute voluptate aute amet. Proident cupidatat velit magna sint in veniam nulla sit quis velit quis dolor.',
+        },
+    ]
+    return (
+        <Ublock wide>
+            <Ugrid>
+                <Panel block={{ noBlock: true }}>
+                    <PanelHeader color='white'>Header</PanelHeader>
+                    <PanelBody>
+                        <Listing data={data} noUblock />
+                    </PanelBody>
+                </Panel>
+                <Panel block={{ noBlock: true }}>
+                    <PanelHeader color='white'>Header</PanelHeader>
+                    <PanelBody>
+                        <Listing data={data} noUblock />
+                    </PanelBody>
+                </Panel>
+                <Panel block={{ noBlock: true }}>
+                    <PanelHeader color='white'>Header</PanelHeader>
+                    <PanelBody>
+                        <Listing data={data} noUblock />
+                    </PanelBody>
+                </Panel>
             </Ugrid>
         </Ublock>
     )

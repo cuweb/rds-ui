@@ -166,3 +166,23 @@ aside > .u-block--panel {
         max-width: none;
     }
 }
+
+.u-block--wide {
+    > * {
+        max-width: 1200px;
+    }
+}
+
+.u-block--nopadding {
+    padding: 0;
+}
+
+.raven-mode .u-block {
+    &.u-block--white {
+        background-color: $grey-anakin;
+    }
+
+    &.u-block--grey {
+        background-color: $grey-vader;
+    }
+}

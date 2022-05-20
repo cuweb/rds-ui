@@ -1,6 +1,8 @@
 import React from 'react'
 import convertDate from '@functions/convertDate'
-import { CardImageProps } from '../Card'
+import CardImage, { CardImageProps } from './components/CardImage'
+import CardTitle from './components/CardTitle'
+import CardDescription from './components/CardDescription'
 
 export interface CardNewsProps {
     link: string
@@ -10,11 +12,11 @@ export interface CardNewsProps {
     description?: string
 }
 
-const CardNews: React.FC<CardNewsProps> = ({
+const CardNews: React.FC<CardNewsProps & CardImageProps> = ({
     link,
     image,
     header,
-    date, // TODO: check TS content error
+    date,
     description,
 }): JSX.Element => {
     const longDate = convertDate(date)
@@ -25,22 +27,14 @@ const CardNews: React.FC<CardNewsProps> = ({
             itemType='http://schema.org/NewsArticle'
         >
             <a href={link} itemProp='url'>
-                <figure itemScope itemType='http://schema.org/ImageObject'>
-                    <img src={image.src} alt={image.alt} loading='lazy' />
-                </figure>
+                <CardImage image={image} />
                 <header>
                     <time dateTime={date} itemProp='datePublished'>
                         {longDate}
                     </time>
-                    <h3
-                        itemProp='name'
-                        dangerouslySetInnerHTML={{ __html: header }}
-                    />
+                    <CardTitle>{header}</CardTitle>
                     {description && (
-                        <p
-                            itemProp='description'
-                            dangerouslySetInnerHTML={{ __html: description }}
-                        />
+                        <CardDescription>{description}</CardDescription>
                     )}
                 </header>
             </a>

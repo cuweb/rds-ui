@@ -1,34 +1,31 @@
-import React, { ReactElement } from 'react'
-import CardBase, { CardBaseProps } from './components/CardBase'
-import CardFigure, { CardFigureProps } from './components/CardFigure'
-import CardNews, { CardNewsProps } from './components/CardNews'
-import CardVideo, { CardVideoProps } from './components/CardVideo'
+import React from 'react'
+import CardImage, { CardImageProps } from './components/CardImage'
+import CardTitle from './components/CardTitle'
+import CardDescription from './components/CardDescription'
 
 export interface CardProps {
-    type: 'base' | 'news' | 'video' | 'figure'
+    link: string
+    header: string
+    description?: string
+    image: CardImageProps
 }
 
-export interface CardImageProps {
-    src: string
-    alt?: string
-}
-
-export interface TypeProps {
-    [index: string]: ReactElement
-}
-
-const Card: React.FC<
-    CardProps & CardBaseProps & CardNewsProps & CardFigureProps & CardVideoProps
-> = (props): JSX.Element => {
-    const { type = 'base' } = props
-
-    const cardTypes: TypeProps = {
-        base: <CardBase {...props} />,
-        news: <CardNews {...props} />,
-        video: <CardVideo {...props} />,
-        figure: <CardFigure {...props} />,
-    }
-    return cardTypes[type || 'base']
-}
-
+const Card: React.FC<CardProps & CardImageProps> = ({
+    link,
+    header,
+    description,
+    image,
+}): JSX.Element => (
+    <article className='c-card' itemScope itemType='http://schema.org/Article'>
+        <a href={link} itemProp='url'>
+            <CardImage image={image} />
+            <header>
+                <CardTitle>{header}</CardTitle>
+                {description && (
+                    <CardDescription>{description}</CardDescription>
+                )}
+            </header>
+        </a>
+    </article>
+)
 export default Card

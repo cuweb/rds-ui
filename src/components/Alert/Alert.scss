@@ -6,6 +6,7 @@ div.c-alert {
     background-color: #e6f7ff;
     border: 1px solid #91d5ff;
     border-radius: 4px;
+    color: $black;
 
     svg {
         position: absolute;
@@ -37,9 +38,12 @@ div.c-alert {
     a {
         border-bottom: 1px solid $link !important; // !important to circumvent the specificity of b-content
         background-color: transparent !important;
+        color: $link;
+        border-color: $link-border;
 
         &:hover {
             border-bottom: 1px solid $red !important;
+            color: $red;
         }
     }
 

@@ -3,9 +3,10 @@
 
 // Core RDS Components
 // -------------------
-@import 'accordion/accordion';
+@import '../../components/Accordion/Accordion.scss';
 @import '../../components/Alert/Alert.scss';
 @import '../../components/AlertAside/AlertAside.scss';
+@import '../../components/Avatar/Avatar.scss';
 @import '../../components/Badge/Badge.scss';
 @import '../../components/ButtonCTA/ButtonCTA.scss';
 @import '../../components/ButtonSocial/ButtonSocial.scss';
@@ -14,8 +15,8 @@
 @import 'heading/heading';
 @import '../../components/ImageCaption/ImageCaption.scss';
 @import '../../components/MenuPopup/MenuPopup.scss';
-@import '../../blocks/SidebarMenu/SidebarMenu.scss';
-@import 'navicon/navicon';
+@import '../../components/NavMenu/NavMenu.scss';
 @import '../../components/SearchForm/SearchForm.scss';
 @import 'table/table';
 @import '../../components/Video/Video.scss';
+@import '../../components/NavUser/NavUser.scss';

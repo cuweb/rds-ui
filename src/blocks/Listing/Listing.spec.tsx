@@ -48,6 +48,7 @@ const testTitle = () => {
 const testSubtitle = (type: string) => {
     const noSubtitle = [
         'base-listing',
+        'without-arrow',
         'with-icon',
         'video-variant',
         'two-column',
@@ -97,6 +98,7 @@ const testListItemProp = () => {
 const testDivItemProp = (type: string) => {
     const withDivItemProp = [
         'base-listing',
+        'without-arrow',
         'with-badge',
         'with-icon',
         'video-variant',
@@ -110,6 +112,7 @@ const testDivItemProp = (type: string) => {
 const testHeadingItemProp = (type: string) => {
     const HeadingItemProp = [
         'with-subtitles',
+        'without-arrow',
         'with-image',
         'icon-and-subtitle',
         'event-variant',
@@ -146,6 +149,7 @@ const testParagraphItemProp = (type: string) => {
 const testTime = (type: string) => {
     const Time = [
         'event-variant',
+
         'news-variant',
         'news-image-variant',
     ].includes(type)
@@ -160,14 +164,27 @@ const testTime = (type: string) => {
     }
 }
 
+const testNoArrow = () => {
+    it(`has the b-listing--no-arrow class`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=blocks-listing--without-arrow`
+        )
+        cy.get(`.b-listing--no-arrow`).should('exist')
+    })
+}
+
 const types = [
     'base-listing',
+    'without-arrow',
     'with-subtitles',
     'with-image',
     'with-badge',
     'with-icon',
     'files-listing',
     'events-variant',
+
     'news-variant',
     'news-variant-with-image',
     'people-variant',
@@ -191,5 +208,6 @@ types.map((type) => {
         testHeadingItemProp(type)
         testParagraphItemProp(type)
         testTime(type)
+        testNoArrow()
     })
 })

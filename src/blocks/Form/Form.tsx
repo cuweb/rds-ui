@@ -5,18 +5,18 @@ import FormField, { FieldType } from './components/FormField'
 
 export interface FormProps {
     fields: FieldType[]
-    initialValues?: FormikValues
     block?: UblockProps
     onSubmit: (value: FormikValues) => void
     validationSchema?: FormikValues
+    enableReinitialize?: boolean
 }
 
 const Form: FC<FormProps> = ({
-    initialValues,
     fields,
     block,
     onSubmit,
     validationSchema,
+    enableReinitialize = true,
 }): JSX.Element => {
     const initialFieldsValues = fields.reduce((acc, cur) => {
         const { id, name = '', type = '', defaultValue, value } = cur.attributes
@@ -25,13 +25,13 @@ const Form: FC<FormProps> = ({
         const fieldKey: string = name || id || ''
         return { ...acc, [fieldKey]: defaultValue || value || '' }
     }, {})
-
     return (
         <Ublock {...block}>
             <Formik
-                initialValues={initialValues || initialFieldsValues}
+                initialValues={initialFieldsValues}
                 validationSchema={validationSchema}
                 onSubmit={(values) => onSubmit(values)}
+                enableReinitialize={enableReinitialize}
             >
                 <FormFormik className='b-form'>
                     {fields.map((field, index: number) => (

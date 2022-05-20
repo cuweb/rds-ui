@@ -1,11 +1,25 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
 import Masthead from '@blocks/Masthead/Masthead'
+import NavUser from '@components/NavUser/NavUser'
 
 export default {
     component: Masthead,
     title: `Blocks/Masthead`,
 } as Meta
+
+const avatarRender = (
+    <NavUser
+        user={{
+            firstName: 'Danny',
+            lastName: 'Brown',
+            image: {
+                src: 'https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg',
+                alt: '',
+            },
+        }}
+    />
+)
 
 const args = {
     title: 'Ravens Design System',
@@ -51,6 +65,11 @@ const args = {
                 color: 'red',
                 icon: 'github',
             },
+            {
+                title: 'Button 3',
+                link: '/',
+                icon: 'github',
+            },
         ],
     },
     menu: [
@@ -91,6 +110,7 @@ const args = {
             ],
         },
     ],
+    children: avatarRender,
 }
 
 export const Base = () => <Masthead title={args.title} url={args.url} />
@@ -108,6 +128,12 @@ export const WithMenu = () => (
 )
 export const WithActions = () => (
     <Masthead title={args.title} url={args.url} actions={args.actions} />
+)
+
+export const WithUserInfo = () => (
+    <Masthead title={args.title} url={args.url}>
+        {args.children}
+    </Masthead>
 )
 
 export const KitchenSink = () => <Masthead {...args} />

@@ -15,15 +15,18 @@ export type MastheadActionsTypes = {
 
 interface MastheadActionsProps {
     items: MastheadActionsTypes
+    isMobile?: boolean
 }
 
 const MastheadActions: React.FC<MastheadActionsProps> = ({
     items,
+    isMobile,
 }): JSX.Element => {
     const { search, login, buttons } = items
+    const showButtons = !isMobile && buttons
     return (
         <>
-            {buttons &&
+            {showButtons &&
                 buttons.map((item, index) => (
                     <NavMenuItem
                         type='top'

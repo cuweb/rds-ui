@@ -9,6 +9,11 @@
     display: grid;
     grid-gap: 1px;
 
+    a {
+        color: unset;
+        border: none;
+    }
+
     @include media('>l') {
         grid-template-columns: auto 50%;
     }

@@ -46,12 +46,14 @@ WithMultipleButtons.args = {
             <ButtonCTA
                 link='https://www.youtube.com/watch?v=lrYPm6DD44M'
                 text='Learn about Ravens'
+                ghost
             />
 
             <ButtonCTA
                 link='http://www.nooooooooooooooo.com/'
                 target='blank'
                 text='Join the Lightside'
+                ghost
             />
         </p>
     ),

@@ -420,6 +420,9 @@ Pencil.args = { icon: 'pencil' }
 export const Person = Template.bind({})
 Person.args = { icon: 'person' }
 
+export const Phone = Template.bind({})
+Phone.args = { icon: 'phone' }
+
 export const Pin = Template.bind({})
 Pin.args = { icon: 'pin' }
 
@@ -590,6 +593,9 @@ Versions.args = { icon: 'versions' }
 
 export const Video = Template.bind({})
 Video.args = { icon: 'video' }
+
+export const VideoCard = Template.bind({})
+VideoCard.args = { icon: 'video-card' }
 
 export const VideoPlayer = Template.bind({})
 VideoPlayer.args = { icon: 'video-player' }

@@ -4,17 +4,23 @@
     "variations": [
         {
             "type": "base",
-            "heading": "Base U-block",
+            "heading": {
+                "title": "Base U-block"
+            },
             "color": "white"
         },
         {
             "type": "grey",
-            "heading": "Grey Background",
+            "heading": {
+                "title": "Grey Background"
+            },
             "color": "grey"
         },
         {
             "type": "black",
-            "heading": "Black Background",
+            "heading": {
+                "title": "Black Background"
+            },
             "color": "black"
         }
     ]
