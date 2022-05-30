@@ -16,8 +16,7 @@ export interface UblockProps {
     noBlock?: boolean
     wide?: boolean
     noPadding?: boolean
-    fullHeight?: boolean
-    className?: string | undefined
+    className?: string
 }
 
 const Ublock: React.FC<UblockProps> = ({
@@ -33,7 +32,7 @@ const Ublock: React.FC<UblockProps> = ({
     noBlock,
     wide,
     noPadding = false,
-    className,
+    className = '',
 }): JSX.Element => {
     const height = fullHeight ? `u-block--fullHeight` : ''
     const width = full ? `u-block--full` : ''
@@ -48,7 +47,7 @@ const Ublock: React.FC<UblockProps> = ({
     return (
         <div
             id={id}
-            className={`${height} ${className} ${blockClassName} ${colorClassname}  ${wavesClassname} ${width} ${largeClassname} ${alertClassname} ${wideClassName} ${noPaddingClassname}`}
+            className={`${blockClassName} ${className} ${colorClassname}  ${wavesClassname} ${width} ${largeClassname} ${alertClassname} ${wideClassName} ${noPaddingClassname}`}
         >
             {heading && (
                 <Heading

@@ -23,4 +23,13 @@ describe(title, () => {
         cy.get(`.u-block`).should('exist')
         cy.get(`.c-heading`).should('not.exist')
     })
+
+    it(`Should have a custom class in Ublock`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=components-u-block--custom-class`
+        )
+        cy.get(`.text-center`).should('exist')
+    })
 })
