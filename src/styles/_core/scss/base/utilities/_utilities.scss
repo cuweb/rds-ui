@@ -451,7 +451,7 @@ a.link,
 //height full
 .h-full {
     @include media('>s') {
-        height: 100vh !important;
+        height: 100% !important;
     }
 }
 
