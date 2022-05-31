@@ -1,0 +1,132 @@
+.UserSettingsStyles {
+    width: 100%;
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
+
+.UserSettingsSideBar {
+    /* padding: 1.5rem; */
+    overflow: scroll;
+    background-color: $grey-yoda;
+    flex: 0 0 auto;
+    width: 250px;
+    height: 100%;
+    & h3 {
+        padding: 30px 0 0 20px;
+    }
+    & ul {
+        font-size: 16px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        & li {
+            //border-bottom: 1px solid #C0C0C0;
+            padding: 8px 0px 8px 15px;
+            color: #767676;
+            :hover {
+                color: #535353;
+            }
+            button {
+                position: relative;
+            }
+            & ul {
+                /* border-bottom: 1px solid #c0c0c0; */
+                border-top: 1px solid #c0c0c0;
+            }
+        }
+    }
+    span.icon-down-manager::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        top: 48%;
+        right: -20px;
+        color: #767676;
+        transition: transform 0.25s ease;
+        transform-origin: center center;
+    }
+    span.icon-down-hr::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        top: 48%;
+        right: -20px;
+        color: #767676;
+        transition: transform 0.25s ease;
+        transform-origin: center center;
+    }
+    span.icon-down-forms::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        top: 48%;
+        right: -20px;
+        color: #767676;
+        transition: transform 0.25s ease;
+        transform-origin: center center;
+    }
+    li.active {
+        color: #222;
+        background-color: white;
+    }
+}
+
+.UserSettingsContent {
+    width: 100%;
+    padding: 1.5rem;
+    max-height: 100%;
+    overflow: scroll;
+    div.b-details--figure {
+        display: block;
+    }
+    figure img {
+        max-width: 180px;
+    }
+    .details__meta dl {
+        display: block;
+    }
+    label {
+        height: unset;
+        font-size: var(--pixel16);
+        font-weight: 400;
+    }
+}
+
+.UserSettingsLayout {
+    display: flex;
+    width: calc(100vw - 80px);
+    height: calc(100vh - 280px);
+    max-width: 900px;
+    background: white;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    min-width: 500px;
+    margin: auto;
+    border: 1px solid $grey-yoda;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 600px) {
+        height: calc(100vh - 80px);
+        width: calc(100vw - 80px);
+    }
+}
+
+.UserSettingsStaticContent {
+    p {
+        color: var(--grey-vader);
+    }
+}
