@@ -16,6 +16,24 @@
     }
 }
 
+.l-overlay-modal-transparent {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 75px; //account for masthead
+    left: 0;
+    border: 0;
+    display: block;
+
+    &::backdrop {
+        background: transparent;
+    }
+}
+
 .extraMarginTop .l-overlay-modal {
     top: 147px;
 }

@@ -57,11 +57,11 @@ export const Default = () => {
                                 />
                             </div>
                             {modalIsOpen && (
-                                <Overlay>
-                                    <div ref={modalRef}>
+                                <div ref={modalRef}>
+                                    <Overlay trasparentBackground>
                                         <UserSettings />
-                                    </div>
-                                </Overlay>
+                                    </Overlay>
+                                </div>
                             )}
                         </PanelBody>
                         <PanelFooter>
