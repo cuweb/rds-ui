@@ -43,6 +43,11 @@
     padding-bottom: 3rem;
 }
 
+.u-grid--layout-right {
+    grid-template-columns: 2fr 1fr;
+    padding-bottom: 3rem;
+}
+
 .u-grid--gap-0 {
     gap: 0;
 }
@@ -469,4 +474,8 @@ a.link,
     @include media('>s') {
         height: 786px !important;
     }
+}
+
+.u-margin-left-10 {
+    margin-left: 10px;
 }

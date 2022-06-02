@@ -8,6 +8,7 @@
 import Avatar from '@components/Avatar/Avatar'
 import Ugrid from '@components/Ugrid/Ugrid'
 import React, { useState } from 'react'
+import ProfilePicture from './ProfilePicture/ProfilePicture'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IEditUser {}
@@ -145,7 +146,7 @@ const EditUser: React.FC<IEditUser> = (): JSX.Element => {
                     className='u-margin-auto'
                 />
             </div>
-            {editProfilePicture && <p> Profile Edit component</p>}
+            {editProfilePicture && <ProfilePicture />}
 
             {!editProfilePicture && (
                 <Ugrid columns={1}>
