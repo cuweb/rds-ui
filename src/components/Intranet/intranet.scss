@@ -89,20 +89,6 @@
     padding: 1.5rem;
     max-height: 100%;
     overflow: scroll;
-    div.b-details--figure {
-        display: block;
-    }
-    figure img {
-        max-width: 180px;
-    }
-    .details__meta dl {
-        display: block;
-    }
-    label {
-        height: unset;
-        font-size: var(--pixel16);
-        font-weight: 400;
-    }
 }
 
 .UserSettingsLayout {
