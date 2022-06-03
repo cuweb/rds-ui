@@ -10,7 +10,7 @@ import useEscToClose from '@hooks/useEscKey'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import Overlay from '@layouts/Overlay/Overlay'
 import React, { useRef, useState } from 'react'
-import UserSettings from './Component/UserSetting'
+import UserSettings from './IntranetModalExample/UserSetting'
 
 export default {
     component: Overlay,
@@ -76,6 +76,53 @@ export const IntranetSettingModal = () => {
                     </Panel>
                 </Ugrid>
                 <Ugrid columns={1}></Ugrid>
+            </Ugrid>
+        </>
+    )
+}
+
+export const Modal = () => {
+    const modalRef = useRef(null)
+
+    useOnClickOutside(modalRef, () => setModalIsOpen(false))
+    useEscToClose(modalRef, () => setModalIsOpen(false))
+
+    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
+
+    return (
+        <>
+            <Ugrid columns={1}>
+                <div>
+                    <button
+                        className='c-buttoncta'
+                        onClick={(e) => setModalIsOpen(!modalIsOpen)}
+                    >
+                        Open Modal
+                    </button>
+                </div>
+                {modalIsOpen && (
+                    <Overlay>
+                        <div ref={modalRef}>
+                            <Panel>
+                                <PanelHeader>Modal</PanelHeader>
+                                <PanelBody>
+                                    <p className='text-center'>Modal Content</p>
+
+                                    <div>
+                                        <button
+                                            className='c-buttoncta '
+                                            onClick={(e) =>
+                                                setModalIsOpen(!modalIsOpen)
+                                            }
+                                        >
+                                            Close Dialog
+                                        </button>
+                                    </div>
+                                </PanelBody>
+                            </Panel>
+                        </div>
+                    </Overlay>
+                )}
             </Ugrid>
         </>
     )
