@@ -17,6 +17,10 @@ const EditUser: React.FC<IEditUser> = (): JSX.Element => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [editProfilePicture, setEditProfilePicture] = useState(false)
 
+    const profilePictureSettingFalse = () => {
+        setEditProfilePicture(false)
+    }
+
     const user = {
         image: {
             src: 'https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg',
@@ -146,7 +150,9 @@ const EditUser: React.FC<IEditUser> = (): JSX.Element => {
                     className='u-margin-auto'
                 />
             </div>
-            {editProfilePicture && <ProfilePicture />}
+            {editProfilePicture && (
+                <ProfilePicture handleClick={profilePictureSettingFalse} />
+            )}
 
             {!editProfilePicture && (
                 <Ugrid columns={1}>

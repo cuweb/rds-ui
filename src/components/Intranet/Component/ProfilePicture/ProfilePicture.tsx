@@ -13,21 +13,30 @@ import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
 import Icon from '@components/Icon/Icon'
 import Ugrid from '@components/Ugrid/Ugrid'
 import React, { useState } from 'react'
+import { ActionsComponent } from './ActionComponent'
 import ProfileCropView from './ProfileCropView'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IProfilePicture {}
+interface IProfilePicture {
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    handleClick?: Function
+}
 
-const ProfilePicture: React.FC<IProfilePicture> = (): JSX.Element => {
+const ProfilePicture: React.FC<IProfilePicture> = (props): JSX.Element => {
+    const { handleClick } = props
     const [isCropClicked, setIsCropClicked] = useState<boolean>(false)
-    const [userHasImage, setuserHasImage] = useState<boolean>(false)
+    const [userHasImage, setuserHasImage] = useState<boolean>(true)
     const user = {
         firstName: 'Danny',
         lastName: 'Brown',
     }
 
     return (
-        <Panel>
+        <Panel
+            actionComponent={
+                <ActionsComponent handleInputClick={handleClick} />
+            }
+        >
             <PanelHeader color='white'>Add/Edit Profile Picture </PanelHeader>
             <PanelBody>
                 <Ugrid columns={1}>
