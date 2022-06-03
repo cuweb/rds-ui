@@ -9,6 +9,7 @@ import Listing from '@blocks/Listing/Listing'
 import Avatar from '@components/Avatar/Avatar'
 import Ublock from '@components/Ublock/Ublock'
 import { UserInfoType } from 'types/UserInfo'
+import { ActionsComponent } from './components/ActionComponentExample'
 
 export default {
     title: `Blocks/Panel`,
@@ -323,3 +324,44 @@ export const PanelModal = () => {
         </>
     )
 }
+
+export const ActionComponent = () => (
+    <Panel shadow actionComponent={<ActionsComponent />}>
+        <PanelHeader icon='light-bulb' color='white'>
+            Ideas@Carleton
+        </PanelHeader>
+        <PanelBody>
+            <Listing
+                noUblock
+                data={[
+                    {
+                        src: '#',
+                        title: 'White-necked Raven',
+                    },
+                    {
+                        src: '#',
+                        title: 'Common raven',
+                    },
+                    {
+                        src: '#',
+                        title: 'Australian raven',
+                    },
+                    {
+                        src: '#',
+                        title: 'Thick-billed raven',
+                    },
+                ]}
+            />
+        </PanelBody>
+        <PanelFooter>
+            <ButtonCTA
+                link='https://carleton.ca'
+                icon='arrow-down'
+                text='Download now'
+                grey
+                shadow={false}
+                full
+            />
+        </PanelFooter>
+    </Panel>
+)
