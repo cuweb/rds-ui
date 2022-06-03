@@ -30,6 +30,11 @@ const ProfilePicture: React.FC<IProfilePicture> = (props): JSX.Element => {
         firstName: 'Danny',
         lastName: 'Brown',
     }
+    const image = false
+
+    if (image) {
+        setuserHasImage(true)
+    }
 
     return (
         <Panel
@@ -96,6 +101,10 @@ const ProfilePicture: React.FC<IProfilePicture> = (props): JSX.Element => {
                         <Ugrid columns={2}>
                             <div
                                 onClick={() => setIsCropClicked(!isCropClicked)}
+                                onKeyDown={() =>
+                                    setIsCropClicked(!isCropClicked)
+                                }
+                                aria-hidden='true'
                             >
                                 <ButtonCTA
                                     link=''
@@ -111,6 +120,7 @@ const ProfilePicture: React.FC<IProfilePicture> = (props): JSX.Element => {
                                         setIsCropClicked(!isCropClicked)
                                     }
                                     className='alignright'
+                                    type='button'
                                 >
                                     Save
                                 </button>

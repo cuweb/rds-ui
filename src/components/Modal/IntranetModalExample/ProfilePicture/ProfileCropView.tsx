@@ -6,7 +6,7 @@
  */
 
 import Avatar from '@components/Avatar/Avatar'
-import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
+
 import Ugrid from '@components/Ugrid/Ugrid'
 import React from 'react'
 

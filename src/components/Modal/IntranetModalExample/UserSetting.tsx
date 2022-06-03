@@ -42,13 +42,24 @@ const UserSettings: React.FC<IUserSettings> = (): JSX.Element => {
             <div className='u-settings-sideBar'>
                 <h3> Settings</h3>
                 <ul>
-                    <li onClick={() => setCurrentView('personal')}>
+                    <li
+                        onClick={() => setCurrentView('personal')}
+                        aria-hidden='true'
+                    >
                         User Settings
                     </li>
-                    <li onClick={() => setCurrentView('applications')}>
+                    <li
+                        onClick={() => setCurrentView('applications')}
+                        aria-hidden='true'
+                    >
                         Applications
                     </li>
-                    <li onClick={() => setCurrentView('links')}>Links</li>
+                    <li
+                        onClick={() => setCurrentView('links')}
+                        aria-hidden='true'
+                    >
+                        Links
+                    </li>
                 </ul>
             </div>
             <div className='u-settings-content'>

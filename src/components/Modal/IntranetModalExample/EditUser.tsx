@@ -141,6 +141,8 @@ const EditUser: React.FC<IEditUser> = (): JSX.Element => {
             <div
                 className='u-margin-top-s'
                 onClick={() => setEditProfilePicture(!editProfilePicture)}
+                onKeyDown={() => setEditProfilePicture(!editProfilePicture)}
+                aria-hidden='true'
             >
                 <Avatar
                     user={user}
