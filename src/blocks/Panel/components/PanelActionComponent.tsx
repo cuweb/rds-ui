@@ -1,5 +1,3 @@
-import { MenuPopupMenuProps } from '@components/MenuPopup/components/MenuPopupMenu'
-import MenuPopup from '@components/MenuPopup/MenuPopup'
 import React, { FC, ReactNode } from 'react'
 
 export interface PanelActionComponentProps {

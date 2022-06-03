@@ -14,10 +14,10 @@ import UserSettings from './Component/UserSetting'
 
 export default {
     component: Overlay,
-    title: 'Components/Intranet',
+    title: 'Components/Modal',
 }
 
-export const Default = () => {
+export const IntranetSettingModal = () => {
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
 
     const user = {
@@ -57,11 +57,11 @@ export const Default = () => {
                                 />
                             </div>
                             {modalIsOpen && (
-                                <div ref={modalRef}>
-                                    <Overlay trasparentBackground>
+                                <Overlay trasparentBackground>
+                                    <div ref={modalRef}>
                                         <UserSettings />
-                                    </Overlay>
-                                </div>
+                                    </div>
+                                </Overlay>
                             )}
                         </PanelBody>
                         <PanelFooter>
