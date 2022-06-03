@@ -45,13 +45,13 @@ const ProfilePicture: React.FC<IProfilePicture> = (props): JSX.Element => {
                             <>
                                 <Avatar user={user} size='4xl' noBorder />
                                 <div>
-                                    <p className='i-font-12 i-margin-bottom-10'>
+                                    <p className='u-font-12  i-margin-bottom-10'>
                                         Upload your profile photo. Suggested
                                         dimensions are 500px by 500px.
                                     </p>
                                     {userHasImage && (
                                         <>
-                                            <p className='i-font-12 i-margin-bottom-10'>
+                                            <p className='u-font-12  i-margin-bottom-10'>
                                                 File Name
                                             </p>
                                             <div>
@@ -60,7 +60,7 @@ const ProfilePicture: React.FC<IProfilePicture> = (props): JSX.Element => {
                                                     text='Edit Photo'
                                                     grey
                                                     shadow={false}
-                                                    className='i-font-12'
+                                                    className='u-font-12 '
                                                 />
                                                 <span>
                                                     <Icon
@@ -73,7 +73,7 @@ const ProfilePicture: React.FC<IProfilePicture> = (props): JSX.Element => {
                                     )}
                                     {!userHasImage && (
                                         <>
-                                            <p className='i-font-12 i-margin-bottom-10'>
+                                            <p className='u-font-12  i-margin-bottom-10'>
                                                 1 MB Limit
                                             </p>
                                             <ButtonCTA
@@ -81,7 +81,7 @@ const ProfilePicture: React.FC<IProfilePicture> = (props): JSX.Element => {
                                                 text='Upload Photo'
                                                 grey
                                                 shadow={false}
-                                                className='i-font-12'
+                                                className='u-font-12 '
                                             />
                                         </>
                                     )}

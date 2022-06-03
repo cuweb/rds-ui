@@ -27,7 +27,7 @@ const ProfileCropView: React.FC<IProfileCropView> = (): JSX.Element => {
             <div>
                 <Ugrid isLayoutRight className='u-no-padding'>
                     <Avatar user={user} size='2xl' noBorder />
-                    <p className='i-font-12 i-margin-bottom-10'>
+                    <p className='u-font-12  u-margin-bottom-10'>
                         Click and drag a handle in the box to select the crop
                         area.
                     </p>

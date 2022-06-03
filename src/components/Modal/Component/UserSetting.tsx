@@ -38,8 +38,8 @@ const UserSettings: React.FC<IUserSettings> = (): JSX.Element => {
     }
 
     return (
-        <div className='UserSettingsLayout'>
-            <div className='UserSettingsSideBar'>
+        <div className='u-settings-layout'>
+            <div className='u-settings-sideBar'>
                 <h3> Settings</h3>
                 <ul>
                     <li onClick={() => setCurrentView('personal')}>
@@ -51,7 +51,7 @@ const UserSettings: React.FC<IUserSettings> = (): JSX.Element => {
                     <li onClick={() => setCurrentView('links')}>Links</li>
                 </ul>
             </div>
-            <div className='UserSettingsContent'>
+            <div className='u-settings-content'>
                 {views[currentView].content}
             </div>
         </div>

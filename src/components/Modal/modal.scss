@@ -1,11 +1,4 @@
-.UserSettingsStyles {
-    width: 100%;
-    display: flex;
-    flex: row;
-    justify-content: center;
-}
-
-.UserSettingsSideBar {
+.u-settings-sideBar {
     /* padding: 1.5rem; */
     overflow: scroll;
     background-color: $grey-yoda;
@@ -84,14 +77,14 @@
     }
 }
 
-.UserSettingsContent {
+.u-settings-content {
     width: 100%;
     padding: 1.5rem;
     max-height: 100%;
     overflow: scroll;
 }
 
-.UserSettingsLayout {
+.u-settings-layout {
     display: flex;
     width: calc(100vw - 80px);
     height: calc(100vh - 280px);
@@ -111,16 +104,10 @@
     }
 }
 
-.UserSettingsStaticContent {
-    p {
-        color: var(--grey-vader);
-    }
-}
-
-.i-font-12 {
+.u-font-12 {
     font-size: 0.75rem !important;
 }
 
-.i-margin-bottom-10 {
+.u-margin-bottom-10 {
     margin-bottom: 10px;
 }
