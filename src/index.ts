@@ -39,6 +39,7 @@ import ListingEvent from './blocks/Listing/ListingEvent'
 import ListingNews from './blocks/Listing/ListingNews'
 import ListingPeople from './blocks/Listing/ListingPeople'
 import ListingVideo from './blocks/Listing/ListingVideo'
+import Loading from './components/Loading/Loading'
 import Login from './blocks/Login/Login'
 import Logo from './components/Logo/Logo'
 import Main from './layouts/Layout/Main'
@@ -106,6 +107,7 @@ export {
     ListingNews,
     ListingPeople,
     ListingVideo,
+    Loading,
     Login,
     Logo,
     Main,
