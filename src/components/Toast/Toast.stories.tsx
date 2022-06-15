@@ -57,7 +57,7 @@ SuccessToastDefault.args = {
     content: 'Your <a href="#">document</a> was uploaded successfully.',
 }
 
-export const SuccessToastTopRight= Template.bind({})
+export const SuccessToastTopRight = Template.bind({})
 SuccessToastTopRight.args = {
     position: 'top-right',
     alertType: 'success',
@@ -65,7 +65,7 @@ SuccessToastTopRight.args = {
     content: 'Your <a href="#">document</a> was uploaded successfully.',
 }
 
-export const SuccessToastTopLeft= Template.bind({})
+export const SuccessToastTopLeft = Template.bind({})
 SuccessToastTopLeft.args = {
     position: 'top-left',
     alertType: 'success',
@@ -73,7 +73,7 @@ SuccessToastTopLeft.args = {
     content: 'Your <a href="#">document</a> was uploaded successfully.',
 }
 
-export const SuccessToastBottomRight= Template.bind({})
+export const SuccessToastBottomRight = Template.bind({})
 SuccessToastBottomRight.args = {
     position: 'bottom-right',
     alertType: 'success',
@@ -81,7 +81,7 @@ SuccessToastBottomRight.args = {
     content: 'Your <a href="#">document</a> was uploaded successfully.',
 }
 
-export const SuccessToastBottomLeft= Template.bind({})
+export const SuccessToastBottomLeft = Template.bind({})
 SuccessToastBottomLeft.args = {
     position: 'bottom-left',
     alertType: 'success',
