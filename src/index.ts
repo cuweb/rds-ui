@@ -57,6 +57,7 @@ import Sidebar from './layouts/Layout/Sidebar'
 import Table from './components/Table/Table'
 import TextImage from './blocks/TextImage/TextImage'
 import Timeline from './blocks/Timeline/Timeline'
+import Toast from './components/Toast/Toast'
 import MenuPopup from './components/MenuPopup/MenuPopup'
 import NavMenu from './components/NavMenu/NavMenu'
 import NavUser from './components/NavUser/NavUser'
@@ -127,6 +128,7 @@ export {
     Table,
     Timeline,
     TextImage,
+    Toast,
     Ublock,
     Ugrid,
     Video,
