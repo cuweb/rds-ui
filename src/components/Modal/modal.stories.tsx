@@ -95,33 +95,31 @@ export const Modal = () => {
                 <div>
                     <button
                         className='c-buttoncta'
-                        onClick={(e) => setModalIsOpen(!modalIsOpen)}
+                        onClick={() => setModalIsOpen(!modalIsOpen)}
                     >
                         Open Modal
                     </button>
                 </div>
                 {modalIsOpen && (
-                    <Overlay>
+                    <Panel>
                         <div ref={modalRef}>
-                            <Panel>
-                                <PanelHeader>Modal</PanelHeader>
-                                <PanelBody>
-                                    <p className='text-center'>Modal Content</p>
+                            <PanelHeader>Modal</PanelHeader>
+                            <PanelBody>
+                                <p className='text-center'>Modal Content</p>
 
-                                    <div>
-                                        <button
-                                            className='c-buttoncta '
-                                            onClick={(e) =>
-                                                setModalIsOpen(!modalIsOpen)
-                                            }
-                                        >
-                                            Close Dialog
-                                        </button>
-                                    </div>
-                                </PanelBody>
-                            </Panel>
+                                <div>
+                                    <button
+                                        className='c-buttoncta '
+                                        onClick={() =>
+                                            setModalIsOpen(!modalIsOpen)
+                                        }
+                                    >
+                                        Close Dialog
+                                    </button>
+                                </div>
+                            </PanelBody>
                         </div>
-                    </Overlay>
+                    </Panel>
                 )}
             </Ugrid>
         </>

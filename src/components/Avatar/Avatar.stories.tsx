@@ -28,6 +28,21 @@ export const RoundedWithCaption = () => (
 export const RoundedNoBorder = () => (
     <Avatar user={user} caption={caption} rounded noBorder />
 )
+
+function showAlert() {
+    alert("I'm an alert")
+}
+
+export const HandleClick = () => (
+    <Avatar
+        user={user}
+        caption={caption}
+        rounded
+        noBorder
+        handleClick={showAlert}
+    />
+)
+
 export const Sizes = () => (
     <Ugrid columns={1}>
         <Avatar user={user} rounded size='xs' caption='xs' />
