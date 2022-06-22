@@ -16,7 +16,9 @@
         & li {
             //border-bottom: 1px solid #C0C0C0;
             padding: 8px 0px 8px 15px;
+            cursor: pointer;
             color: #767676;
+
             :hover {
                 color: #535353;
             }

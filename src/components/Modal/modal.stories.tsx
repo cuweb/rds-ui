@@ -1,127 +1,55 @@
-import Masthead from '@blocks/Masthead/Masthead'
-import PanelBody from '@blocks/Panel/components/PanelBody'
-import PanelFooter from '@blocks/Panel/components/PanelFooter'
-import PanelHeader from '@blocks/Panel/components/PanelHeader'
-import Panel from '@blocks/Panel/Panel'
-import Avatar from '@components/Avatar/Avatar'
-import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
-import Ugrid from '@components/Ugrid/Ugrid'
-import useEscToClose from '@hooks/useEscKey'
-import useOnClickOutside from '@hooks/useOnClickOutside'
-import Overlay from '@layouts/Overlay/Overlay'
-import React, { useRef, useState } from 'react'
-import UserSettings from './IntranetModalExample/UserSetting'
+import React from 'react'
+import SettingModal from './SettingModal'
 
 export default {
-    component: Overlay,
+    component: SettingModal,
     title: 'Components/Modal',
 }
 
-export const IntranetSettingModal = () => {
-    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
+export const ModalSetting = () => {
+    const args = [
+        {
+            title: 'User Settings',
 
-    const user = {
-        image: {
-            src: 'https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg',
-            alt: '',
+            content: <p> user setting details </p>,
         },
-        firstName: 'Danny',
-        lastName: 'Brown',
-    }
+        {
+            title: 'Applications',
 
-    const modalRef = useRef(null)
+            content: <p className='u-margin-auto'> Hello from Applications</p>,
+            subMenu: [
+                {
+                    title: 'Resource',
+                    content: <p>hello resource </p>,
+                },
+                {
+                    title: 'Application1',
+                    content: <p> Application 1 </p>,
+                },
+            ],
+        },
+        {
+            title: 'Links',
 
-    useOnClickOutside(modalRef, () => setModalIsOpen(false))
-    useEscToClose(modalRef, () => setModalIsOpen(false))
-
-    return (
-        <>
-            <Masthead
-                title={'Ravens Design System'}
-                url={'https://github.com/cuweb/rds-ui'}
-            />
-            <Ugrid isLayout>
-                <Ugrid columns={1}>
-                    <Panel>
-                        <PanelHeader color='white'>Profile</PanelHeader>
-                        <PanelBody>
-                            <div
-                                onClick={() => {
-                                    setModalIsOpen(true)
-                                }}
-                            >
-                                <Avatar
-                                    user={user}
-                                    rounded
-                                    className='u-margin-auto'
-                                />
-                            </div>
-                            {modalIsOpen && (
-                                <Overlay trasparentBackground>
-                                    <div ref={modalRef}>
-                                        <UserSettings />
-                                    </div>
-                                </Overlay>
-                            )}
-                        </PanelBody>
-                        <PanelFooter>
-                            <ButtonCTA
-                                link=''
-                                text='View Profile'
-                                grey
-                                shadow={false}
-                                full
-                            />
-                        </PanelFooter>
-                    </Panel>
-                </Ugrid>
-                <Ugrid columns={1}></Ugrid>
-            </Ugrid>
-        </>
-    )
-}
-
-export const Modal = () => {
-    const modalRef = useRef(null)
-
-    useOnClickOutside(modalRef, () => setModalIsOpen(false))
-    useEscToClose(modalRef, () => setModalIsOpen(false))
-
-    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
+            content: (
+                <p className='u-margin-auto'> Hello from Link Applications</p>
+            ),
+            subMenu: [
+                {
+                    title: 'Resource',
+                    content: <p>hello resource </p>,
+                },
+                {
+                    title: 'Application1',
+                    content: <p> Application 1 </p>,
+                },
+            ],
+        },
+    ]
 
     return (
         <>
-            <Ugrid columns={1}>
-                <div>
-                    <button
-                        className='c-buttoncta'
-                        onClick={() => setModalIsOpen(!modalIsOpen)}
-                    >
-                        Open Modal
-                    </button>
-                </div>
-                {modalIsOpen && (
-                    <Panel>
-                        <div ref={modalRef}>
-                            <PanelHeader>Modal</PanelHeader>
-                            <PanelBody>
-                                <p className='text-center'>Modal Content</p>
-
-                                <div>
-                                    <button
-                                        className='c-buttoncta '
-                                        onClick={() =>
-                                            setModalIsOpen(!modalIsOpen)
-                                        }
-                                    >
-                                        Close Dialog
-                                    </button>
-                                </div>
-                            </PanelBody>
-                        </div>
-                    </Panel>
-                )}
-            </Ugrid>
+            <SettingModal title='setting' args={args} />
         </>
     )
 }
