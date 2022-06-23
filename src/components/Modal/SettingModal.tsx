@@ -11,9 +11,9 @@ const SettingModal: React.FC<ISettingModal> = ({
     title,
     args,
 }): JSX.Element => {
-    const [content, setContent] = useState(args[0].content)
+    const [content, setContent] = useState(args[0].handleClick)
 
-    const handleClick = (updatedContent: ReactNode) => {
+    const handleContent = (updatedContent: ReactNode) => {
         setContent(updatedContent)
     }
 
@@ -24,7 +24,7 @@ const SettingModal: React.FC<ISettingModal> = ({
                 <NavMenu
                     type='ModalMenu'
                     menu={args}
-                    handleClick={handleClick}
+                    handleContent={handleContent}
                 />
             </div>
             <div className='u-settings-content'>{content}</div>

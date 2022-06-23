@@ -10,10 +10,14 @@ export default {
     title: `Components/NavMenu`,
 } as Meta
 
+function sayHello() {
+    alert('Hello!')
+}
 const menu = [
     {
         title: 'Item 1',
         link: '/',
+        handleClick: sayHello,
     },
     {
         title: 'Item 2',
@@ -60,37 +64,39 @@ export const ModalMenu = () => {
         {
             title: 'User Settings',
 
-            content: <p> user setting details </p>,
+            handleClick: <p> user setting details </p>,
         },
         {
             title: 'Applications',
 
-            content: <p className='u-margin-auto'> Hello from Applications</p>,
+            handleClick: (
+                <p className='u-margin-auto'> Hello from Applications</p>
+            ),
             subMenu: [
                 {
                     title: 'Resource',
-                    content: <p>hello resource </p>,
+                    handleClick: <p>hello resource </p>,
                 },
                 {
                     title: 'Application1',
-                    content: <p> Application 1 </p>,
+                    handleClick: <p> Application 1 </p>,
                 },
             ],
         },
         {
             title: 'Links',
 
-            content: (
+            handleClick: (
                 <p className='u-margin-auto'> Hello from Link Applications</p>
             ),
             subMenu: [
                 {
                     title: 'Resource',
-                    content: <p>hello resource </p>,
+                    handleClick: <p>hello resource </p>,
                 },
                 {
                     title: 'Application1',
-                    content: <p> Application 1 </p>,
+                    handleClick: <p> Application 1 </p>,
                 },
             ],
         },
@@ -98,7 +104,7 @@ export const ModalMenu = () => {
 
     return (
         <>
-            <SettingModal title='setting' args={args} />
+            <SettingModal title='Setting' args={args} />
         </>
     )
 }

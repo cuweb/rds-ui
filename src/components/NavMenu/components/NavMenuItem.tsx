@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { FC, useState, useRef, ReactNode } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
@@ -13,7 +16,7 @@ export type NavMenuItemTypes = {
     color?: string
     icon?: string
     subMenu?: NavMenuItemTypes[]
-    content?: ReactNode
+    handleClick?: any
 }
 
 export interface NavMenuItemProps {
@@ -22,7 +25,7 @@ export interface NavMenuItemProps {
     isMobile?: boolean
     direction?: 'left' | 'right'
     icon?: string
-    handleClick?: (params: ReactNode) => void
+    handleContent?: (params: ReactNode) => void
 }
 
 const NavMenuItem: FC<NavMenuItemProps> = ({
@@ -31,9 +34,9 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     direction = 'left',
     isMobile,
     icon,
-    handleClick,
+    handleContent,
 }): JSX.Element => {
-    const { title, link = '#', subMenu, className = '', content } = item
+    const { title, link = '#', subMenu, className = '', handleClick } = item
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const isOpenClassName = isOpen ? 'open' : ''
     const subMenuClassName = {
@@ -49,11 +52,22 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     const subMenuHeading = useRef(null)
     useOnClickOutside(subMenuHeading, () => setIsOpen(false))
 
-    if (content) {
+    if (handleClick) {
+        if (!handleContent) {
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+            return (
+                <li
+                    className={` ${subMenuClassName[type]} ${className}`}
+                    onClick={handleClick}
+                >
+                    <a> {title} </a>
+                </li>
+            )
+        }
         if (!subMenu)
             return (
                 // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-                <li onClick={() => handleClick?.(content)}>{title}</li>
+                <li onClick={() => handleContent?.(handleClick)}>{title}</li>
             )
 
         return (
@@ -76,7 +90,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                             <NavMenuItem
                                 item={subItem}
                                 key={index}
-                                handleClick={handleClick}
+                                handleContent={handleContent}
                                 type='ModalMenu'
                             />
                         ))}

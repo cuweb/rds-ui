@@ -14,37 +14,39 @@ export const ModalSetting = () => {
         {
             title: 'User Settings',
 
-            content: <p> user setting details </p>,
+            handleClick: <p> user setting details </p>,
         },
         {
             title: 'Applications',
 
-            content: <p className='u-margin-auto'> Hello from Applications</p>,
+            handleClick: (
+                <p className='u-margin-auto'> Hello from Applications</p>
+            ),
             subMenu: [
                 {
                     title: 'Resource',
-                    content: <p>hello resource </p>,
+                    handleClick: <p>hello resource </p>,
                 },
                 {
                     title: 'Application1',
-                    content: <p> Application 1 </p>,
+                    handleClick: <p> Application 1 </p>,
                 },
             ],
         },
         {
             title: 'Links',
 
-            content: (
+            handleClick: (
                 <p className='u-margin-auto'> Hello from Link Applications</p>
             ),
             subMenu: [
                 {
                     title: 'Resource',
-                    content: <p>hello resource </p>,
+                    handleClick: <p>hello resource </p>,
                 },
                 {
                     title: 'Application1',
-                    content: <p> Application 1 </p>,
+                    handleClick: <p> Application 1 </p>,
                 },
             ],
         },
@@ -63,7 +65,7 @@ export const ModalSetting = () => {
                 >
                     Setting Modal
                 </button>
-                {isOpen && <SettingModal title='setting' args={args} />}
+                {isOpen && <SettingModal title='Setting' args={args} />}
             </div>
         </>
     )

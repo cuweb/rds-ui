@@ -7,14 +7,14 @@ export interface NavMenuProps {
     label?: string
     isMobile?: boolean
     menu: Array<NavMenuItemTypes>
-    handleClick?: (params: ReactNode) => void
+    handleContent?: (params: ReactNode) => void
 }
 const NavMenu: FC<NavMenuProps> = ({
     type,
     label = 'Main Navigation',
     menu,
     isMobile,
-    handleClick,
+    handleContent,
 }): JSX.Element => {
     return (
         <nav
@@ -29,7 +29,7 @@ const NavMenu: FC<NavMenuProps> = ({
                         type={type}
                         key={index}
                         isMobile={isMobile}
-                        handleClick={handleClick}
+                        handleContent={handleContent}
                     />
                 ))}
             </ul>
