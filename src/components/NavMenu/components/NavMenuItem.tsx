@@ -1,4 +1,5 @@
-import React, { FC, useState, useRef } from 'react'
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { FC, useState, useRef, ReactNode } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import useEscToClose from '@hooks/useEscKey'
 import Icon from '@components/Icon/Icon'
@@ -12,6 +13,7 @@ export type NavMenuItemTypes = {
     color?: string
     icon?: string
     subMenu?: NavMenuItemTypes[]
+    content?: ReactNode
 }
 
 export interface NavMenuItemProps {
@@ -20,6 +22,7 @@ export interface NavMenuItemProps {
     isMobile?: boolean
     direction?: 'left' | 'right'
     icon?: string
+    handleClick?: (params: ReactNode) => void
 }
 
 const NavMenuItem: FC<NavMenuItemProps> = ({
@@ -28,11 +31,13 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     direction = 'left',
     isMobile,
     icon,
+    handleClick,
 }): JSX.Element => {
-    const { title, link = '#', subMenu, className = '' } = item
+    const { title, link = '#', subMenu, className = '', content } = item
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const isOpenClassName = isOpen ? 'open' : ''
     const subMenuClassName = {
+        ModalMenu: 'nav__menu--ModalMenu',
         side: '',
         top: !isMobile ? `c-menupopup c-menupopup--${direction}` : '',
     }
@@ -40,6 +45,49 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     const subMenuContainer = useRef(null)
     useOnClickOutside(subMenuContainer, () => setIsOpen(false))
     useEscToClose(subMenuContainer, () => setIsOpen(false))
+
+    if (content) {
+        if (!subMenu)
+            return (
+                // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+                <li
+                    // eslint-disable-next-line no-console
+                    onClick={() => handleClick?.(content)}
+                >
+                    {title}
+                </li>
+            )
+
+        return (
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+            <li
+                className={`u-margin-right-10 ${subMenuClassName[type]} ${className}`}
+                onClick={() => setIsOpen(true)}
+                ref={subMenuContainer}
+            >
+                {title}
+                <button
+                    className='u-margin-left-10'
+                    type='button'
+                    aria-expanded={isOpen}
+                >
+                    +
+                </button>
+                {isOpen && (
+                    <ul>
+                        {subMenu.map((subItem, index) => (
+                            <NavMenuItem
+                                item={subItem}
+                                key={index}
+                                handleClick={handleClick}
+                                type='side'
+                            />
+                        ))}
+                    </ul>
+                )}
+            </li>
+        )
+    }
 
     if (!subMenu)
         return (

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import Smenu, { ISmenuTypes } from './Components/Smenu'
+import { NavMenuItemTypes } from '@components/NavMenu/components/NavMenuItem'
+import NavMenu from '@components/NavMenu/NavMenu'
+import React, { ReactNode, useState } from 'react'
 
 export interface ISettingModal {
     title: string
-    args: Array<ISmenuTypes>
+    args: Array<NavMenuItemTypes>
 }
 
 const SettingModal: React.FC<ISettingModal> = ({
@@ -12,7 +13,7 @@ const SettingModal: React.FC<ISettingModal> = ({
 }): JSX.Element => {
     const [content, setContent] = useState(args[0].content)
 
-    const handleClick = (updatedContent: any) => {
+    const handleClick = (updatedContent: ReactNode) => {
         setContent(updatedContent)
     }
 
@@ -20,17 +21,11 @@ const SettingModal: React.FC<ISettingModal> = ({
         <div className='u-settings-layout'>
             <div className='u-settings-sideBar'>
                 <h3> {title}</h3>
-                <ul>
-                    {args.map((item, index) => {
-                        return (
-                            <Smenu
-                                item={item}
-                                key={index}
-                                handleClick={handleClick}
-                            />
-                        )
-                    })}
-                </ul>
+                <NavMenu
+                    type='ModalMenu'
+                    menu={args}
+                    handleClick={handleClick}
+                />
             </div>
             <div className='u-settings-content'>{content}</div>
         </div>

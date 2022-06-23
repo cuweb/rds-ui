@@ -150,6 +150,15 @@
     }
 }
 
+//modal menu nav
+.c-nav--ModalMenunav {
+    & > ul {
+        & > li {
+            border-bottom: none !important;
+        }
+    }
+}
+
 // Styles needed for altering masthead nav in modal
 
 dialog {
