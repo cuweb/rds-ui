@@ -3,6 +3,8 @@ import { Meta } from '@storybook/react'
 import NavMenu from './NavMenu'
 import Overlay from '@layouts/Overlay/Overlay'
 
+import SettingModal from '@components/Modal/SettingModal'
+
 export default {
     component: NavMenu,
     title: `Components/NavMenu`,
@@ -52,3 +54,51 @@ export const MobileMenu = () => (
         <NavMenu type='top' menu={menu} isMobile />
     </Overlay>
 )
+
+export const ModalMenu = () => {
+    const args = [
+        {
+            title: 'User Settings',
+
+            content: <p> user setting details </p>,
+        },
+        {
+            title: 'Applications',
+
+            content: <p className='u-margin-auto'> Hello from Applications</p>,
+            subMenu: [
+                {
+                    title: 'Resource',
+                    content: <p>hello resource </p>,
+                },
+                {
+                    title: 'Application1',
+                    content: <p> Application 1 </p>,
+                },
+            ],
+        },
+        {
+            title: 'Links',
+
+            content: (
+                <p className='u-margin-auto'> Hello from Link Applications</p>
+            ),
+            subMenu: [
+                {
+                    title: 'Resource',
+                    content: <p>hello resource </p>,
+                },
+                {
+                    title: 'Application1',
+                    content: <p> Application 1 </p>,
+                },
+            ],
+        },
+    ]
+
+    return (
+        <>
+            <SettingModal title='setting' args={args} />
+        </>
+    )
+}

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import Icon from '@components/Icon/Icon'
 import React, { FC, MouseEvent } from 'react'
 import { NavMenuTypes } from '../NavMenu'
@@ -19,6 +20,7 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
     icon,
     onClick,
 }): JSX.Element => {
+    const buttonIcon = isOpen ? '-' : '+'
     const buttonTypes = {
         top: (
             <button
@@ -47,16 +49,17 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
             </>
         ),
         ModalMenu: (
-            <>
+            // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+            <div onClick={(e: never) => onClick(e)}>
                 {title}
                 <button
                     className='u-margin-left-10'
                     type='button'
                     aria-expanded={isOpen}
                 >
-                    +
+                    {buttonIcon}
                 </button>
-            </>
+            </div>
         ),
     }
     return buttonTypes[type]

@@ -46,24 +46,21 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     useOnClickOutside(subMenuContainer, () => setIsOpen(false))
     useEscToClose(subMenuContainer, () => setIsOpen(false))
 
+    const subMenuHeading = useRef(null)
+    useOnClickOutside(subMenuHeading, () => setIsOpen(false))
+
     if (content) {
         if (!subMenu)
             return (
                 // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-                <li
-                    // eslint-disable-next-line no-console
-                    onClick={() => handleClick?.(content)}
-                >
-                    {title}
-                </li>
+                <li onClick={() => handleClick?.(content)}>{title}</li>
             )
 
         return (
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
             <li
                 className={`u-margin-right-10 ${subMenuClassName[type]} ${className}`}
-                onClick={() => setIsOpen(true)}
-                ref={subMenuContainer}
+                ref={subMenuHeading}
             >
                 <NavMenuButton
                     type={type}
@@ -80,7 +77,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                                 item={subItem}
                                 key={index}
                                 handleClick={handleClick}
-                                type='side'
+                                type='ModalMenu'
                             />
                         ))}
                     </ul>
