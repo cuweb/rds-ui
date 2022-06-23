@@ -65,14 +65,14 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                 onClick={() => setIsOpen(true)}
                 ref={subMenuContainer}
             >
-                {title}
-                <button
-                    className='u-margin-left-10'
-                    type='button'
-                    aria-expanded={isOpen}
-                >
-                    +
-                </button>
+                <NavMenuButton
+                    type={type}
+                    title={title}
+                    link={link}
+                    isOpen={isOpen}
+                    onClick={() => setIsOpen(!isOpen)}
+                    icon={icon}
+                />
                 {isOpen && (
                     <ul>
                         {subMenu.map((subItem, index) => (
