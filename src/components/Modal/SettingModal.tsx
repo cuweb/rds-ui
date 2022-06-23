@@ -20,7 +20,7 @@ const SettingModal: React.FC<ISettingModal> = ({
         <div className='u-settings-layout'>
             <div className='u-settings-sideBar'>
                 <h3> {title}</h3>
-                <ul className=''>
+                <ul>
                     {args.map((item, index) => {
                         return (
                             <Smenu
