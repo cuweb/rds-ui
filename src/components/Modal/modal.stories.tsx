@@ -1,4 +1,6 @@
-import React from 'react'
+import useEscToClose from '@hooks/useEscKey'
+import useOnClickOutside from '@hooks/useOnClickOutside'
+import React, { useRef, useState } from 'react'
 import SettingModal from './SettingModal'
 
 export default {
@@ -7,6 +9,7 @@ export default {
 }
 
 export const ModalSetting = () => {
+    const [isOpen, setisOpen] = useState<boolean>(false)
     const args = [
         {
             title: 'User Settings',
@@ -47,9 +50,21 @@ export const ModalSetting = () => {
         },
     ]
 
+    const modelContainer = useRef(null)
+    useOnClickOutside(modelContainer, () => setisOpen(false))
+    useEscToClose(modelContainer, () => setisOpen(false))
+
     return (
         <>
-            <SettingModal title='setting' args={args} />
+            <div ref={modelContainer}>
+                <button
+                    className='c-buttoncta'
+                    onClick={() => setisOpen(!isOpen)}
+                >
+                    Setting Modal
+                </button>
+                {isOpen && <SettingModal title='setting' args={args} />}
+            </div>
         </>
     )
 }
