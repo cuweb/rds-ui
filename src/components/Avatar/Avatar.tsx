@@ -29,13 +29,8 @@ const Avatar: React.FC<IAvatar> = ({
 
     const roundedClassName = rounded ? 'c-avatar--rounded' : ''
     const noBorderClassName = noBorder ? 'c-avatar--no-border' : ''
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const hasHandleClick = handleClick ? 'c-avatar--pointer' : ''
-
-    // eslint-disable-next-line no-console
-
     return (
-        // eslint-disable-next-line jsx-a11y/click-events-have-key-events
         <div
             className={`c-avatar c-avatar--${size} ${hasHandleClick} ${roundedClassName} ${noBorderClassName} ${className}`}
         >

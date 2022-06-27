@@ -10,14 +10,13 @@ export default {
     title: `Components/NavMenu`,
 } as Meta
 
-function sayHello() {
-    alert('Hello!')
-}
 const menu = [
     {
         title: 'Item 1',
         link: '/',
-        handleClick: sayHello,
+        handleClick: () => {
+            alert('Hello')
+        },
     },
     {
         title: 'Item 2',

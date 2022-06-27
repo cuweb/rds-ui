@@ -1,5 +1,7 @@
+import Masthead from '@blocks/Masthead/Masthead'
 import useEscToClose from '@hooks/useEscKey'
 import useOnClickOutside from '@hooks/useOnClickOutside'
+import Overlay from '@layouts/Overlay/Overlay'
 import React, { useRef, useState } from 'react'
 import SettingModal from './SettingModal'
 
@@ -58,14 +60,20 @@ export const ModalSetting = () => {
 
     return (
         <>
+            <Masthead title={'Raven Design '} />
             <div ref={modelContainer}>
                 <button
                     className='c-buttoncta'
                     onClick={() => setisOpen(!isOpen)}
+                    style={{ marginTop: '100px' }}
                 >
                     Setting Modal
                 </button>
-                {isOpen && <SettingModal title='Setting' args={args} />}
+                {isOpen && (
+                    <Overlay trasparentBackground>
+                        <SettingModal title='Setting' args={args} />
+                    </Overlay>
+                )}
             </div>
         </>
     )
