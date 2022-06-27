@@ -12,6 +12,7 @@ export type NavMenuItemTypes = {
     color?: string
     icon?: string
     subMenu?: NavMenuItemTypes[]
+    handleClick?: any
 }
 
 export interface NavMenuItemProps {
@@ -29,7 +30,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     isMobile,
     icon,
 }): JSX.Element => {
-    const { title, link = '#', subMenu, className = '' } = item
+    const { title, link = '#', subMenu, className = '', handleClick } = item
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const isOpenClassName = isOpen ? 'open' : ''
     const subMenuClassName = {
@@ -40,6 +41,18 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     const subMenuContainer = useRef(null)
     useOnClickOutside(subMenuContainer, () => setIsOpen(false))
     useEscToClose(subMenuContainer, () => setIsOpen(false))
+
+    if (handleClick) {
+        return (
+            <li
+                className={` ${subMenuClassName[type]} ${className}`}
+                onClick={handleClick}
+                aria-hidden='true'
+            >
+                <a> {title} </a>
+            </li>
+        )
+    }
 
     if (!subMenu)
         return (
@@ -80,6 +93,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                                 link: subItem.link,
                                 subMenu: subItem.subMenu,
                                 icon: subItem.icon,
+                                handleClick: subItem.handleClick,
                             }}
                             key={index}
                         />
