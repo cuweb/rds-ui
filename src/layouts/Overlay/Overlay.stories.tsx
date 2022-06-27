@@ -6,6 +6,7 @@ import PanelBody from '@blocks/Panel/components/PanelBody'
 import Panel from '@blocks/Panel/Panel'
 import useEscToClose from '@hooks/useEscKey'
 import useOnClickOutside from '@hooks/useOnClickOutside'
+import Masthead from '@blocks/Masthead/Masthead'
 
 export default {
     component: Overlay,
@@ -48,28 +49,31 @@ export const TransparentBackground = () => {
     useEscToClose(modalRef, () => setIsHidden(true))
 
     return (
-        <div className='example'>
-            <button
-                className='c-buttoncta'
-                onClick={() => setIsHidden(!isHidden)}
-            >
-                Open Panel
-            </button>
-            <Overlay isHidden={isHidden} trasparentBackground>
-                <Panel>
-                    <div ref={modalRef}>
-                        <PanelHeader> Setting Panel</PanelHeader>
-                        <PanelBody>
-                            <button
-                                className='c-buttoncta'
-                                onClick={() => setIsHidden(!isHidden)}
-                            >
-                                Close Dialog
-                            </button>
-                        </PanelBody>
-                    </div>
-                </Panel>
-            </Overlay>
-        </div>
+        <>
+            <Masthead title={'raven design system '} />
+            <div className='example' style={{ marginTop: '100px' }}>
+                <button
+                    className='c-buttoncta'
+                    onClick={() => setIsHidden(!isHidden)}
+                >
+                    Open Panel
+                </button>
+                <Overlay isHidden={isHidden} trasparentBackground>
+                    <Panel>
+                        <div ref={modalRef}>
+                            <PanelHeader> Setting Panel</PanelHeader>
+                            <PanelBody>
+                                <button
+                                    className='c-buttoncta'
+                                    onClick={() => setIsHidden(!isHidden)}
+                                >
+                                    Close Dialog
+                                </button>
+                            </PanelBody>
+                        </div>
+                    </Panel>
+                </Overlay>
+            </div>
+        </>
     )
 }

@@ -82,3 +82,20 @@ describe('Avatar - No Image', () => {
         cy.get(`.c-avatar__info`).should('exist').and('not.be.empty')
     })
 })
+
+describe('Avatar - Handle on Click ', () => {
+    it(`Should render rounded image`, () => {
+        cy.visit(
+            `${Cypress.env(
+                'baseUrl'
+            )}/iframe.html?id=components-avatar--handle-click`
+        )
+        cy.get(`.c-avatar--rounded`).should('exist')
+    })
+    it(`Should render on button click`, () => {
+        cy.get('[alt="Avatar of Danny Brown"]').click()
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal(`I'm an alert`)
+        })
+    })
+})
