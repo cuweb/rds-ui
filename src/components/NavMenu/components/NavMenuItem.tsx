@@ -49,7 +49,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                 onClick={handleClick}
                 aria-hidden='true'
             >
-                <a> {title} </a>
+                <span className='similar-a-style '> {title} </span>
             </li>
         )
     }
