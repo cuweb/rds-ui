@@ -16,12 +16,14 @@ const Ugrid: React.FC<UgridProps> = ({
     isLayout,
     isLayoutRight,
 }): JSX.Element => {
-    // eslint-disable-next-line no-nested-ternary
-    const layoutClassName = isLayout
-        ? 'u-grid--layout'
-        : isLayoutRight
-        ? 'u-grid--layout-right'
-        : ''
+    let layoutClassName
+
+    if (isLayout) {
+        layoutClassName = 'u-grid--layout'
+    } else {
+        layoutClassName = isLayoutRight ? 'u-grid--layout-right' : ''
+    }
+
     const columnsClassName =
         isLayout || isLayoutRight ? '' : `u-grid--${columns}`
 

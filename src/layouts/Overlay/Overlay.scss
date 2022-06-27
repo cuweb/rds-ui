@@ -1,4 +1,5 @@
-.l-overlay-modal {
+.l-overlay-modal,
+.l-overlay-modal-transparent {
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -6,7 +7,7 @@
     background: white;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    top: 75px; //account for masthead
+    top: 0;
     left: 0;
     border: 0;
     display: block;
@@ -16,7 +17,11 @@
     }
 }
 
-.extraMarginTop .l-overlay-modal {
+.l-overlay-modal-transparent {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.extraMarginTop {
     top: 147px;
 }
 
