@@ -112,4 +112,134 @@ describe('Toast', () => {
             })
         }
     })
+
+    const toastTypesWithAutoClose = [
+        'information-toast-default-auto-close',
+        'information-toast-top-right-auto-close',
+        'information-toast-top-left-auto-close',
+        'information-toast-bottom-right-auto-close',
+        'information-toast-bottom-left-auto-close',
+        'success-toast-default-auto-close',
+        'success-toast-top-right-auto-close',
+        'success-toast-top-left-auto-close',
+        'success-toast-bottom-right-auto-close',
+        'success-toast-bottom-left-auto-close',
+        'warning-toast-default-auto-close',
+        'warning-toast-top-right-auto-close',
+        'warning-toast-top-left-auto-close',
+        'warning-toast-bottom-right-auto-close',
+        'warning-toast-bottom-left-auto-close',
+        'error-toast-default-auto-close',
+        'error-toast-top-right-auto-close',
+        'error-toast-top-left-auto-close',
+        'error-toast-bottom-right-auto-close',
+        'error-toast-bottom-left-auto-close',
+    ]
+
+    toastTypesWithAutoClose.map((type) => {
+        if (
+            type === 'information-toast-default-auto-close' ||
+            type === 'success-toast-default-auto-close' ||
+            type === 'warning-toast-default-auto-close' ||
+            type === 'error-toast-default-auto-close'
+        ) {
+            it(`${type.toUpperCase()}: Should render containert`, () => {
+                cy.visit(
+                    `${Cypress.env(
+                        'baseUrl'
+                    )}/iframe.html?id=components-toast--${type}`
+                )
+                cy.clearCookies()
+                cy.get(`.notification-container.default`).should('exist')
+                cy.wait(6000)
+                cy.get(`.fade-out`).should('exist')
+                cy.wait(2000)
+                cy.get(`.close`).should('exist')
+            })
+        }
+
+        if (
+            type === 'information-toast-top-right-auto-close' ||
+            type === 'success-toast-top-right-auto-close' ||
+            type === 'warning-toast-top-right-auto-close' ||
+            type === 'error-toast-top-right-auto-close'
+        ) {
+            it(`${type.toUpperCase()}: Should render containert`, () => {
+                cy.visit(
+                    `${Cypress.env(
+                        'baseUrl'
+                    )}/iframe.html?id=components-toast--${type}`
+                )
+                cy.clearCookies()
+                cy.get(`.notification-container.top-right`).should('exist')
+                cy.wait(6000)
+                cy.get(`.fade-out`).should('exist')
+                cy.wait(2000)
+                cy.get(`.close`).should('exist')
+            })
+        }
+
+        if (
+            type === 'information-toast-top-left-auto-close' ||
+            type === 'success-toast-top-left-auto-close' ||
+            type === 'warning-toast-top-left-auto-close' ||
+            type === 'error-toast-top-left-auto-close'
+        ) {
+            it(`${type.toUpperCase()}: Should render containert`, () => {
+                cy.visit(
+                    `${Cypress.env(
+                        'baseUrl'
+                    )}/iframe.html?id=components-toast--${type}`
+                )
+                cy.clearCookies()
+                cy.get(`.notification-container.top-left`).should('exist')
+                cy.wait(6000)
+                cy.get(`.fade-out`).should('exist')
+                cy.wait(2000)
+                cy.get(`.close`).should('exist')
+            })
+        }
+
+        if (
+            type === 'information-toast-bottom-right-auto-close' ||
+            type === 'success-toast-bottom-right-auto-close' ||
+            type === 'warning-toast-bottom-right-auto-close' ||
+            type === 'error-toast-bottom-right-auto-close'
+        ) {
+            it(`${type.toUpperCase()}: Should render containert`, () => {
+                cy.visit(
+                    `${Cypress.env(
+                        'baseUrl'
+                    )}/iframe.html?id=components-toast--${type}`
+                )
+                cy.clearCookies()
+                cy.get(`.notification-container.bottom-right`).should('exist')
+                cy.wait(6000)
+                cy.get(`.fade-out`).should('exist')
+                cy.wait(2000)
+                cy.get(`.close`).should('exist')
+            })
+        }
+
+        if (
+            type === 'information-toast-bottom-left-auto-close' ||
+            type === 'success-toast-bottom-left-auto-close' ||
+            type === 'warning-toast-bottom-left-auto-close' ||
+            type === 'error-toast-bottom-left-auto-close'
+        ) {
+            it(`${type.toUpperCase()}: Should render containert`, () => {
+                cy.visit(
+                    `${Cypress.env(
+                        'baseUrl'
+                    )}/iframe.html?id=components-toast--${type}`
+                )
+                cy.clearCookies()
+                cy.get(`.notification-container.bottom-left`).should('exist')
+                cy.wait(6000)
+                cy.get(`.fade-out`).should('exist')
+                cy.wait(2000)
+                cy.get(`.close`).should('exist')
+            })
+        }
+    })
 })
