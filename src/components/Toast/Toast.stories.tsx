@@ -398,4 +398,3 @@ ErrorToastBottomLeftAutoClose.args = {
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
     handleClose: (e: any) => alert('test'),
 }
-
