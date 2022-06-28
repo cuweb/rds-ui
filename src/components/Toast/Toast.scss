@@ -44,6 +44,15 @@
     animation: toast-in-left 0.7s;
 }
 
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.close {
+    display: none;
+}
+
 @keyframes toast-in-right {
     from {
         transform: translateX(100%);
