@@ -5,7 +5,7 @@ export interface ISettingModal {
 }
 
 const SettingModal: React.FC<ISettingModal> = ({ title }): JSX.Element => {
-    const [content, setContent] = useState()
+    const [content, setContent] = useState('sample content ')
     return (
         <div className='u-settings-layout'>
             <div className='u-settings-sideBar'>
