@@ -39,7 +39,9 @@ import ListingEvent from './blocks/Listing/ListingEvent'
 import ListingNews from './blocks/Listing/ListingNews'
 import ListingPeople from './blocks/Listing/ListingPeople'
 import ListingVideo from './blocks/Listing/ListingVideo'
+import LoadingCard from './components/Loading/LoadingCard'
 import Loading from './components/Loading/Loading'
+import LoadingSpinners from './components/Loading/LoadingSpinners'
 import Login from './blocks/Login/Login'
 import Logo from './components/Logo/Logo'
 import Main from './layouts/Layout/Main'
@@ -107,7 +109,9 @@ export {
     ListingNews,
     ListingPeople,
     ListingVideo,
+    LoadingCard,
     Loading,
+    LoadingSpinners,
     Login,
     Logo,
     Main,
