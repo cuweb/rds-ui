@@ -17,6 +17,11 @@
     }
 }
 
+.l-overlay-nav {
+    top: 0px !important;
+    z-index: 10000;
+}
+
 .l-overlay-modal-transparent {
     background: rgba(0, 0, 0, 0.3);
 }

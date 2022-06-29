@@ -77,3 +77,40 @@ export const TransparentBackground = () => {
         </>
     )
 }
+
+export const OverlayNav = () => {
+    const [isHidden, setIsHidden] = useState<boolean>(true)
+
+    const modalRef = useRef(null)
+    useOnClickOutside(modalRef, () => setIsHidden(true))
+    useEscToClose(modalRef, () => setIsHidden(true))
+
+    return (
+        <>
+            <Masthead title={'raven design system '} />
+            <div className='example' style={{ marginTop: '100px' }}>
+                <button
+                    className='c-buttoncta'
+                    onClick={() => setIsHidden(!isHidden)}
+                >
+                    Open Panel
+                </button>
+                <Overlay isHidden={isHidden} trasparentBackground overlayNav>
+                    <Panel>
+                        <div ref={modalRef}>
+                            <PanelHeader> Setting Panel</PanelHeader>
+                            <PanelBody>
+                                <button
+                                    className='c-buttoncta'
+                                    onClick={() => setIsHidden(!isHidden)}
+                                >
+                                    Close Dialog
+                                </button>
+                            </PanelBody>
+                        </div>
+                    </Panel>
+                </Overlay>
+            </div>
+        </>
+    )
+}
