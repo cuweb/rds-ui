@@ -37,6 +37,16 @@ const menu = [
     },
 ]
 
+const buttons= [
+        {
+            title: 'Login',
+            link: '#',
+            icon: 'lock',
+            handleAction: () => alert('Clicked Item 1'),
+            preventDefault: true
+        },
+    ]
+
 export const SideMenu = () => (
     <div style={{ maxWidth: '200px' }}>
         <NavMenu type='side' menu={menu} />
@@ -47,6 +57,13 @@ export const TopMenu = () => (
         <NavMenu type='top' menu={menu} />
     </div>
 )
+
+export const TopMenuWithActions = () => (
+    <div className='b-masthead'>
+        <NavMenu type='top' menu={buttons} />
+    </div>
+)
+
 export const MobileMenu = () => (
     <Overlay type='menu'>
         <NavMenu type='top' menu={menu} isMobile />
