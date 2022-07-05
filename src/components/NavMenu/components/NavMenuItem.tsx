@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-lone-blocks */
 import React, { FC, useState, useRef } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import useEscToClose from '@hooks/useEscKey'
@@ -12,6 +15,10 @@ export type NavMenuItemTypes = {
     color?: string
     icon?: string
     subMenu?: NavMenuItemTypes[]
+    handleAction?: (
+        event: React.MouseEvent<MouseEvent | HTMLAnchorElement>
+    ) => void
+    preventDefault?: boolean
 }
 
 export interface NavMenuItemProps {
@@ -44,7 +51,15 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     if (!subMenu)
         return (
             <li className={className}>
-                <a href={link}>
+                <a
+                    href={link}
+                    onClick={(e) => {
+                        {
+                            item.preventDefault && e.preventDefault()
+                        }
+                        item.handleAction && item.handleAction(e)
+                    }}
+                >
                     {icon && (
                         <Icon
                             className='c-navmenu__icon'

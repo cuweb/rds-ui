@@ -1,3 +1,5 @@
+/* eslint-disable no-lone-blocks */
+/* eslint-disable no-unused-expressions */
 import React, { FC } from 'react'
 import Icon from '@components/Icon/Icon'
 
@@ -8,6 +10,10 @@ export interface MenuPopupMenuProps {
         icon?: string
         className?: string
         separator?: boolean
+        handleAction?: (
+            event: React.MouseEvent<MouseEvent | HTMLAnchorElement>
+        ) => void
+        preventDefault?: boolean
     }[]
     className?: string
 }
@@ -20,7 +26,16 @@ const MenuPopupMenu: FC<MenuPopupMenuProps> = ({
         <ul className={`menupopup__menu ${className}`} aria-label='menupopup'>
             {menu.map((item, index) => (
                 <li key={index} className={item.separator ? 'popup__sep' : ''}>
-                    <a href={item.link} className={item.className}>
+                    <a
+                        href={item.link}
+                        className={item.className}
+                        onClick={(e) => {
+                            {
+                                item.preventDefault && e.preventDefault()
+                            }
+                            item.handleAction && item.handleAction(e)
+                        }}
+                    >
                         {item.icon && <Icon icon={item.icon} />} {item.title}
                     </a>
                 </li>
