@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import NavMenuItem, { NavMenuItemTypes } from './components/NavMenuItem'
 
 export type NavMenuTypes = 'side' | 'top'
@@ -7,12 +7,14 @@ export interface NavMenuProps {
     label?: string
     isMobile?: boolean
     menu: Array<NavMenuItemTypes>
+    handleContent?: ReactNode
 }
 const NavMenu: FC<NavMenuProps> = ({
     type,
     label = 'Main Navigation',
     menu,
     isMobile,
+    handleContent,
 }): JSX.Element => {
     return (
         <nav
@@ -27,6 +29,7 @@ const NavMenu: FC<NavMenuProps> = ({
                         type={type}
                         key={index}
                         isMobile={isMobile}
+                        handleContent={handleContent}
                     />
                 ))}
             </ul>

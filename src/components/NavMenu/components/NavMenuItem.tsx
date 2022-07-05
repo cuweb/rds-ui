@@ -1,4 +1,4 @@
-import React, { FC, useState, useRef } from 'react'
+import React, { FC, useState, useRef, ReactNode } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import useEscToClose from '@hooks/useEscKey'
 import Icon from '@components/Icon/Icon'
@@ -13,6 +13,8 @@ export type NavMenuItemTypes = {
     icon?: string
     subMenu?: NavMenuItemTypes[]
     handleClick?: any
+    content?: ReactNode
+    active?: boolean
 }
 
 export interface NavMenuItemProps {
@@ -21,6 +23,7 @@ export interface NavMenuItemProps {
     isMobile?: boolean
     direction?: 'left' | 'right'
     icon?: string
+    handleContent?: ReactNode
 }
 
 const NavMenuItem: FC<NavMenuItemProps> = ({
