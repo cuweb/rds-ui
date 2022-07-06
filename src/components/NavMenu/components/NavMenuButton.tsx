@@ -46,6 +46,18 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
                 </button>
             </>
         ),
+        modalMenu: (
+            <div onClick={(e: never) => onClick(e)}>
+                {title}
+                <button
+                    type='button'
+                    className='u-margin-right-10'
+                    aria-expanded={isOpen}
+                >
+                    +
+                </button>
+            </div>
+        ),
     }
     return buttonTypes[type]
 }

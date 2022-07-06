@@ -8,54 +8,60 @@ export interface ISettingModal {
 const SettingModal: React.FC<ISettingModal> = ({ title }): JSX.Element => {
     const [content, setContent] = useState('sample content ')
 
-    const handleContent = (updatedContent: React.SetStateAction<string>) => {
-        setContent(updatedContent)
-    }
-
-    const handleClickMenu = [
+    const args = [
         {
-            title: 'Item 1',
-            content: <p> Hello from Item 1</p>,
-            active: false,
+            title: 'User Settings',
+            handleAction: () => {
+                setContent(' user setting ')
+            },
+            preventDefault: true,
         },
         {
-            title: 'Item 2',
-            content: <p> Hello from Item 2</p>,
-            active: false,
+            title: 'Applications',
+            handleAction: () => setContent('Hello from Applications'),
+            preventDefault: true,
             subMenu: [
                 {
-                    title: 'Item 2.1',
-                    content: <p> Hello from Item 2.1</p>,
-                    active: false,
+                    title: 'Resource',
+                    handleAction: () =>
+                        setContent('hello Applications resource'),
+                    preventDefault: true,
                 },
                 {
-                    title: 'Item 2.2',
-                    content: <p> Hello from Item 2.2</p>,
-                    active: false,
+                    title: 'Application1',
+                    handleAction: () => setContent(' Application 1'),
+                    preventDefault: true,
                 },
             ],
         },
         {
-            title: 'Item 3',
-            content: <p> Hello from Item 3</p>,
-            active: false,
-        },
-        {
-            title: 'Item 4',
-            content: <p> Hello from Item 4</p>,
-            active: false,
+            title: 'Links',
+            handleAction: () => setContent('Hello from Link Applications'),
+            preventDefault: true,
+            subMenu: [
+                {
+                    title: 'Resource',
+                    handleAction: () => setContent('hello Link resource'),
+                    preventDefault: true,
+                },
+                {
+                    title: 'Application1',
+                    handleAction: () => setContent(' Link Application 1'),
+                    preventDefault: true,
+                },
+            ],
         },
     ]
+
+    // const handleContent = (updatedContent: React.SetStateAction<string>) => {
+    //     setContent(updatedContent)
+    // }
 
     return (
         <div className='u-settings-layout'>
             <div className='u-settings-sideBar'>
                 <h3> {title}</h3>
-                <NavMenu
-                    type='side'
-                    menu={handleClickMenu}
-                    handleContent={handleContent}
-                />
+                <NavMenu type='modalMenu' menu={args} />
             </div>
             <div className='u-settings-content'>{content}</div>
         </div>

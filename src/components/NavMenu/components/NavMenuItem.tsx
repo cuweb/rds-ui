@@ -39,6 +39,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     const subMenuClassName = {
         side: '',
         top: !isMobile ? `c-menupopup c-menupopup--${direction}` : '',
+        modalMenu: 'c-nav--modalMenunav',
     }
 
     const subMenuContainer = useRef(null)
@@ -95,6 +96,8 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                                 link: subItem.link,
                                 subMenu: subItem.subMenu,
                                 icon: subItem.icon,
+                                handleAction: subItem.handleAction,
+                                preventDefault: subItem.preventDefault,
                             }}
                             key={index}
                         />
