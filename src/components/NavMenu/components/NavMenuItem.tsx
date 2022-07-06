@@ -51,17 +51,19 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     // const activeClass = title === isActive ? 'c-nav-active' : ''
 
     useEffect(() => {
-        const navli = document.querySelectorAll('li a')
+        if (type === 'modalMenu') {
+            const navli = document.querySelectorAll('li a')
 
-        navli.forEach((li) => {
-            li.addEventListener('click', () => {
-                navli.forEach((e) => {
-                    e.classList.remove('c-nav-active')
+            navli.forEach((li) => {
+                li.addEventListener('click', () => {
+                    navli.forEach((e) => {
+                        e.classList.remove('c-nav-active')
+                    })
+
+                    li.classList.add('c-nav-active')
                 })
-
-                li.classList.add('c-nav-active')
             })
-        })
+        }
     }, [])
 
     if (!subMenu)
