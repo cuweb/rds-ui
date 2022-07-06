@@ -1,4 +1,4 @@
-import React, { FC, useState, useRef } from 'react'
+import React, { FC, useState, useRef, useEffect } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import useEscToClose from '@hooks/useEscKey'
 import Icon from '@components/Icon/Icon'
@@ -42,13 +42,31 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
         modalMenu: 'c-nav--modalMenunav',
     }
 
+    // const [isActive, setIsActive] = useState('')
+
     const subMenuContainer = useRef(null)
     useOnClickOutside(subMenuContainer, () => setIsOpen(false))
     useEscToClose(subMenuContainer, () => setIsOpen(false))
 
+    // const activeClass = title === isActive ? 'c-nav-active' : ''
+
+    useEffect(() => {
+        const navli = document.querySelectorAll('li a')
+
+        navli.forEach((li) => {
+            li.addEventListener('click', () => {
+                navli.forEach((e) => {
+                    e.classList.remove('c-nav-active')
+                })
+
+                li.classList.add('c-nav-active')
+            })
+        })
+    }, [])
+
     if (!subMenu)
         return (
-            <li className={className}>
+            <li className={`${className}`}>
                 <a
                     href={link}
                     onClick={(e) => {
