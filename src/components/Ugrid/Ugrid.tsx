@@ -5,6 +5,7 @@ export interface UgridProps {
     columns?: 1 | 2 | 3 | 4
     gap?: 1 | 2 | 3 | 4
     isLayout?: boolean
+    isLayoutRight?: boolean
 }
 
 const Ugrid: React.FC<UgridProps> = ({
@@ -13,9 +14,18 @@ const Ugrid: React.FC<UgridProps> = ({
     children,
     gap = 2,
     isLayout,
+    isLayoutRight,
 }): JSX.Element => {
-    const layoutClassName = isLayout ? 'u-grid--layout' : ''
-    const columnsClassName = isLayout ? '' : `u-grid--${columns}`
+    let layoutClassName
+
+    if (isLayout) {
+        layoutClassName = 'u-grid--layout'
+    } else {
+        layoutClassName = isLayoutRight ? 'u-grid--layout-right' : ''
+    }
+
+    const columnsClassName =
+        isLayout || isLayoutRight ? '' : `u-grid--${columns}`
 
     return (
         <div

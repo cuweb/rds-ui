@@ -80,6 +80,9 @@
             border: none;
         }
     }
+    &--pointer {
+        cursor: pointer;
+    }
 }
 
 .raven-mode .c-avatar {

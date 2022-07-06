@@ -37,38 +37,13 @@ const menu = [
     },
 ]
 
-const handleClickMenu = [
+const buttons = [
     {
-        title: 'Item 1',
-        link: '/',
-        handleClick: () => {
-            alert('its been click !')
-        },
-    },
-    {
-        title: 'Item 2',
-        link: '/',
-        subMenu: [
-            {
-                title: 'Item 2.1',
-                link: '/',
-                handleClick: () => {
-                    alert('its been click from sub menu !')
-                },
-            },
-            {
-                title: 'Item 2.2',
-                link: '/',
-            },
-        ],
-    },
-    {
-        title: 'Item 3',
-        link: '/',
-    },
-    {
-        title: 'Item 4',
-        link: '/',
+        title: 'Login',
+        link: '#',
+        icon: 'lock',
+        handleAction: () => alert('Clicked Item 1'),
+        preventDefault: true,
     },
 ]
 
@@ -84,7 +59,6 @@ export const TopMenu = () => (
 )
 export const MobileMenu = () => {
     const [isHidden, setIshHidden] = useState(true)
-    console.log(isHidden)
 
     return (
         <div style={{ maxWidth: '200px' }}>
@@ -104,8 +78,8 @@ export const MobileMenu = () => {
     )
 }
 
-export const HandleClickMenu = () => (
-    <div style={{ maxWidth: '200px' }}>
-        <NavMenu type='side' menu={handleClickMenu} />
+export const TopMenuWithActions = () => (
+    <div className='b-masthead'>
+        <NavMenu type='top' menu={buttons} />
     </div>
 )

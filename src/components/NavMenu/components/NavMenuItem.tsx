@@ -1,4 +1,4 @@
-import React, { FC, useState, useRef, ReactNode } from 'react'
+import React, { FC, useState, useRef } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import useEscToClose from '@hooks/useEscKey'
 import Icon from '@components/Icon/Icon'
@@ -12,9 +12,10 @@ export type NavMenuItemTypes = {
     color?: string
     icon?: string
     subMenu?: NavMenuItemTypes[]
-    handleClick?: any
-    content?: ReactNode
-    active?: boolean
+    handleAction?: (
+        event: React.MouseEvent<MouseEvent | HTMLAnchorElement>
+    ) => void
+    preventDefault?: boolean
 }
 
 export interface NavMenuItemProps {
@@ -23,7 +24,6 @@ export interface NavMenuItemProps {
     isMobile?: boolean
     direction?: 'left' | 'right'
     icon?: string
-    handleContent?: ReactNode
 }
 
 const NavMenuItem: FC<NavMenuItemProps> = ({
@@ -33,7 +33,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     isMobile,
     icon,
 }): JSX.Element => {
-    const { title, link = '#', subMenu, className = '', handleClick } = item
+    const { title, link = '#', subMenu, className = '' } = item
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const isOpenClassName = isOpen ? 'open' : ''
     const subMenuClassName = {
@@ -45,22 +45,21 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     useOnClickOutside(subMenuContainer, () => setIsOpen(false))
     useEscToClose(subMenuContainer, () => setIsOpen(false))
 
-    if (handleClick) {
-        return (
-            <li
-                className={` ${subMenuClassName[type]} ${className}`}
-                onClick={handleClick}
-                aria-hidden='true'
-            >
-                <span className='similar-a-style '> {title} </span>
-            </li>
-        )
-    }
-
     if (!subMenu)
         return (
             <li className={className}>
-                <a href={link}>
+                <a
+                    href={link}
+                    onClick={(e) => {
+                        // eslint-disable-next-line no-lone-blocks
+                        {
+                            // eslint-disable-next-line no-unused-expressions
+                            item.preventDefault && e.preventDefault()
+                        }
+                        // eslint-disable-next-line no-unused-expressions
+                        item.handleAction && item.handleAction(e)
+                    }}
+                >
                     {icon && (
                         <Icon
                             className='c-navmenu__icon'
@@ -96,7 +95,6 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                                 link: subItem.link,
                                 subMenu: subItem.subMenu,
                                 icon: subItem.icon,
-                                handleClick: subItem.handleClick,
                             }}
                             key={index}
                         />

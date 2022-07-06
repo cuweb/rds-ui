@@ -85,3 +85,21 @@ export const MultipleGrids = () => {
         </Ugrid>
     )
 }
+
+export const LayoutLeft = () => {
+    return (
+        <Ugrid isLayout>
+            <PanelExample />
+            <PanelExample />
+        </Ugrid>
+    )
+}
+
+export const LayoutRight = () => {
+    return (
+        <Ugrid isLayoutRight>
+            <PanelExample />
+            <PanelExample />
+        </Ugrid>
+    )
+}
