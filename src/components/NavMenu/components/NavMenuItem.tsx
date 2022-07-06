@@ -42,13 +42,9 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
         modalMenu: 'c-nav--modalMenunav',
     }
 
-    // const [isActive, setIsActive] = useState('')
-
     const subMenuContainer = useRef(null)
     useOnClickOutside(subMenuContainer, () => setIsOpen(false))
     useEscToClose(subMenuContainer, () => setIsOpen(false))
-
-    // const activeClass = title === isActive ? 'c-nav-active' : ''
 
     useEffect(() => {
         if (type === 'modalMenu') {
@@ -64,7 +60,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                 })
             })
         }
-    }, [])
+    }, [type])
 
     if (!subMenu)
         return (
@@ -72,12 +68,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                 <a
                     href={link}
                     onClick={(e) => {
-                        // eslint-disable-next-line no-lone-blocks
-                        {
-                            // eslint-disable-next-line no-unused-expressions
-                            item.preventDefault && e.preventDefault()
-                        }
-                        // eslint-disable-next-line no-unused-expressions
+                        item.preventDefault && e.preventDefault()
                         item.handleAction && item.handleAction(e)
                     }}
                 >
