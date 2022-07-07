@@ -68,7 +68,9 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                 <a
                     href={link}
                     onClick={(e) => {
+                        // eslint-disable-next-line no-unused-expressions
                         item.preventDefault && e.preventDefault()
+                        // eslint-disable-next-line no-unused-expressions
                         item.handleAction && item.handleAction(e)
                     }}
                 >
