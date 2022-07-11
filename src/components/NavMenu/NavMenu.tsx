@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import NavMenuItem, { NavMenuItemTypes } from './components/NavMenuItem'
 
-export type NavMenuTypes = 'side' | 'top'
+export type NavMenuTypes = 'side' | 'top' | 'modalMenu'
 export interface NavMenuProps {
     type: NavMenuTypes
     label?: string

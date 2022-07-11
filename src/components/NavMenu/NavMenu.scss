@@ -40,7 +40,8 @@
     li:not(.nav__expand) {
         position: relative;
 
-        a {
+        a,
+        .similar-a-style {
             display: block;
             font-size: 16px;
             padding: 12px 10px;
@@ -51,6 +52,13 @@
                 color: $red;
                 border: none;
             }
+        }
+        .similar-a-style {
+            font-weight: 500;
+            text-decoration: none;
+            outline: none;
+            color: #105f83;
+            cursor: pointer;
         }
 
         button {
@@ -150,6 +158,18 @@
     }
 }
 
+//modal menu nav
+.c-nav--modalMenunav {
+    & > ul {
+        & > li {
+            border-bottom: none !important;
+        }
+    }
+}
+
+.c-nav-active {
+    color: $red !important;
+}
 // Styles needed for altering masthead nav in modal
 
 dialog {

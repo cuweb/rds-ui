@@ -1,7 +1,4 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-lone-blocks */
-import React, { FC, useState, useRef } from 'react'
+import React, { FC, useState, useRef, useEffect } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import useEscToClose from '@hooks/useEscKey'
 import Icon from '@components/Icon/Icon'
@@ -42,21 +39,38 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     const subMenuClassName = {
         side: '',
         top: !isMobile ? `c-menupopup c-menupopup--${direction}` : '',
+        modalMenu: 'c-nav--modalMenunav',
     }
 
     const subMenuContainer = useRef(null)
     useOnClickOutside(subMenuContainer, () => setIsOpen(false))
     useEscToClose(subMenuContainer, () => setIsOpen(false))
 
+    useEffect(() => {
+        if (type === 'modalMenu') {
+            const navli = document.querySelectorAll('li a')
+
+            navli.forEach((li) => {
+                li.addEventListener('click', () => {
+                    navli.forEach((e) => {
+                        e.classList.remove('c-nav-active')
+                    })
+
+                    li.classList.add('c-nav-active')
+                })
+            })
+        }
+    }, [type])
+
     if (!subMenu)
         return (
-            <li className={className}>
+            <li className={`${className}`}>
                 <a
                     href={link}
                     onClick={(e) => {
-                        {
-                            item.preventDefault && e.preventDefault()
-                        }
+                        // eslint-disable-next-line no-unused-expressions
+                        item.preventDefault && e.preventDefault()
+                        // eslint-disable-next-line no-unused-expressions
                         item.handleAction && item.handleAction(e)
                     }}
                 >
@@ -95,6 +109,8 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                                 link: subItem.link,
                                 subMenu: subItem.subMenu,
                                 icon: subItem.icon,
+                                handleAction: subItem.handleAction,
+                                preventDefault: subItem.preventDefault,
                             }}
                             key={index}
                         />

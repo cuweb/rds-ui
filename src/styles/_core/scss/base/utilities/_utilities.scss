@@ -460,15 +460,10 @@ a.link,
     }
 }
 
-//overflow scroll important
-.u-o-sroll {
-    overflow: scroll !important;
+.u-margin-left-10 {
+    margin-left: 10px;
 }
 
-//height fix 786px
-
-.u-h-fix {
-    @include media('>s') {
-        height: 786px !important;
-    }
+.u-margin-right-10 {
+    margin-right: 10px;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Meta } from '@storybook/react'
 import NavMenu from './NavMenu'
 import Overlay from '@layouts/Overlay/Overlay'
@@ -37,15 +37,15 @@ const menu = [
     },
 ]
 
-const buttons= [
-        {
-            title: 'Login',
-            link: '#',
-            icon: 'lock',
-            handleAction: () => alert('Clicked Item 1'),
-            preventDefault: true
-        },
-    ]
+const buttons = [
+    {
+        title: 'Login',
+        link: '#',
+        icon: 'lock',
+        handleAction: () => alert('Clicked Item 1'),
+        preventDefault: true,
+    },
+]
 
 export const SideMenu = () => (
     <div style={{ maxWidth: '200px' }}>
@@ -57,15 +57,29 @@ export const TopMenu = () => (
         <NavMenu type='top' menu={menu} />
     </div>
 )
+export const MobileMenu = () => {
+    const [isHidden, setIshHidden] = useState(true)
+
+    return (
+        <div style={{ maxWidth: '200px' }}>
+            <button
+                className='c-navicon'
+                type='button'
+                onClick={() => setIshHidden(!isHidden)}
+            >
+                <span className='c-navicon__box'>
+                    <span className='c-navicon__inner'></span>
+                </span>
+            </button>
+            <Overlay isHidden={isHidden} type='menu'>
+                <NavMenu type='top' menu={menu} isMobile />
+            </Overlay>
+        </div>
+    )
+}
 
 export const TopMenuWithActions = () => (
     <div className='b-masthead'>
         <NavMenu type='top' menu={buttons} />
     </div>
-)
-
-export const MobileMenu = () => (
-    <Overlay type='menu'>
-        <NavMenu type='top' menu={menu} isMobile />
-    </Overlay>
 )
