@@ -13,15 +13,14 @@ const menuAction = [
         title: 'Item 1',
         link: '#',
         handleAction: () => alert('Clicked Item 1'),
-        preventDefault: true
-        
+        preventDefault: true,
     },
     {
         title: 'Item 2',
         link: '#',
         separator: true,
         handleAction: () => alert('Clicked Item 2'),
-        preventDefault: false
+        preventDefault: false,
     },
 ]
 
