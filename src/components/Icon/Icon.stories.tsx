@@ -369,6 +369,9 @@ Mark360.args = { icon: 'mark-360' }
 export const MarkCushield = Template.bind({})
 MarkCushield.args = { icon: 'mark-cushield' }
 
+export const MarkCushieldBlk = Template.bind({})
+MarkCushieldBlk.args = { icon: 'mark-cushield-blk' }
+
 export const MarkGithub = Template.bind({})
 MarkGithub.args = { icon: 'mark-github' }
 

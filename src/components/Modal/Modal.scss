@@ -1,0 +1,69 @@
+.u-settings-sideBar {
+    overflow: scroll;
+    background-color: $grey-yoda;
+    flex: 0 0 auto;
+    width: 250px;
+    height: 100%;
+    & a {
+        font-size: 16px !important;
+        font-weight: 400;
+        list-style: none;
+        margin: 0;
+        color: #767676;
+        padding: 0 !important;
+        cursor: pointer;
+    }
+    & h3 {
+        padding: 30px 0 0 20px;
+    }
+    & ul {
+        font-size: 16px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        & li {
+            //border-bottom: 1px solid #C0C0C0;
+            padding: 8px 0px 8px 15px;
+            cursor: pointer;
+            color: #767676;
+
+            :hover {
+                color: #535353;
+            }
+            button {
+                position: relative;
+            }
+        }
+    }
+
+    li.active {
+        color: $red !important;
+    }
+}
+
+.u-settings-content {
+    width: 100%;
+    padding: 1.5rem;
+    max-height: 100%;
+    overflow: scroll;
+}
+
+.u-settings-layout {
+    display: flex;
+    width: calc(100vw - 80px);
+    height: calc(100vh - 280px);
+    max-width: 900px;
+    background: white;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    min-width: 500px;
+    margin: auto;
+    border: 1px solid $grey-yoda;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 600px) {
+        height: calc(100vh - 80px);
+        width: calc(100vw - 80px);
+    }
+}

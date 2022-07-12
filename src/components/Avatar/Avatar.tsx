@@ -8,6 +8,7 @@ export interface IAvatar {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '4xl'
     user: UserInfoType
     caption?: ReactNode
+    handleClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void
 }
 
 const Avatar: React.FC<IAvatar> = ({
@@ -17,6 +18,7 @@ const Avatar: React.FC<IAvatar> = ({
     noBorder = false,
     rounded,
     caption,
+    handleClick,
 }): JSX.Element => {
     const { firstName, lastName, image } = user
     const initials =
@@ -24,9 +26,10 @@ const Avatar: React.FC<IAvatar> = ({
 
     const roundedClassName = rounded ? 'c-avatar--rounded' : ''
     const noBorderClassName = noBorder ? 'c-avatar--no-border' : ''
+    const hasHandleClick = handleClick ? 'c-avatar--pointer' : ''
     return (
         <div
-            className={`c-avatar c-avatar--${size} ${roundedClassName} ${noBorderClassName} ${className}`}
+            className={`c-avatar c-avatar--${size} ${hasHandleClick} ${roundedClassName} ${noBorderClassName} ${className}`}
         >
             <figure className='c-avatar__figure'>
                 {image && (
@@ -34,9 +37,19 @@ const Avatar: React.FC<IAvatar> = ({
                         src={image.src}
                         alt={image.alt || `Avatar of ${firstName} ${lastName}`}
                         className='c-avatar__image'
+                        onClick={handleClick}
+                        aria-hidden='true'
                     />
                 )}
-                {initials && <div className='c-avatar__info'>{initials}</div>}
+                {initials && (
+                    <div
+                        className='c-avatar__info'
+                        onClick={handleClick}
+                        aria-hidden='true'
+                    >
+                        {initials}
+                    </div>
+                )}
                 {caption && (
                     <figcaption className='c-avatar__caption'>
                         {caption}

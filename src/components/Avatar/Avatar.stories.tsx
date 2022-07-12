@@ -13,7 +13,7 @@ const user: UserInfoType = {
         src: 'https://i.carleton.ca/wp-content/uploads/2016/10/danny-brown-1-1-300x300.jpg',
         alt: '',
     },
-    firstName: 'Dnny',
+    firstName: 'Danny',
     lastName: 'Brown',
 }
 const caption = 'Director, Enterprise Application'
@@ -27,6 +27,18 @@ export const RoundedWithCaption = () => (
 )
 export const RoundedNoBorder = () => (
     <Avatar user={user} caption={caption} rounded noBorder />
+)
+
+export const HandleClick = () => (
+    <Avatar
+        user={user}
+        caption={caption}
+        rounded
+        noBorder
+        handleClick={() => {
+            alert("I'm an alert")
+        }}
+    />
 )
 export const Sizes = () => (
     <Ugrid columns={1}>
