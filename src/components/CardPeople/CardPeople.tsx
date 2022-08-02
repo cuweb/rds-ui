@@ -1,3 +1,4 @@
+import Link from '@components/Link/Link'
 import React from 'react'
 
 export interface CardPeopleProps {
@@ -27,7 +28,7 @@ const CardPeople: React.FC<CardPeopleProps> = ({
             itemScope
             itemType='http://schema.org/Person'
         >
-            <a href={link} itemProp='url'>
+            <Link href={link}>
                 {image.src.length > 0 ? (
                     <figure itemScope itemType='http://schema.org/ImageObject'>
                         <img src={image.src} alt={image.alt} loading='lazy' />
@@ -47,7 +48,7 @@ const CardPeople: React.FC<CardPeopleProps> = ({
                         dangerouslySetInnerHTML={{ __html: description }}
                     />
                 </header>
-            </a>
+            </Link>
         </article>
     )
 }

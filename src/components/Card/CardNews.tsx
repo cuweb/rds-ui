@@ -1,5 +1,6 @@
 import React from 'react'
 import convertDate from '@functions/convertDate'
+import Link from '@components/Link/Link'
 import CardImage, { CardImageProps } from './components/CardImage'
 import CardTitle from './components/CardTitle'
 import CardDescription from './components/CardDescription'
@@ -26,7 +27,7 @@ const CardNews: React.FC<CardNewsProps & CardImageProps> = ({
             itemScope
             itemType='http://schema.org/NewsArticle'
         >
-            <a href={link} itemProp='url'>
+            <Link href={link}>
                 <CardImage image={image} />
                 <header>
                     <time dateTime={date} itemProp='datePublished'>
@@ -37,7 +38,7 @@ const CardNews: React.FC<CardNewsProps & CardImageProps> = ({
                         <CardDescription>{description}</CardDescription>
                     )}
                 </header>
-            </a>
+            </Link>
         </article>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Ublock from '@components/Ublock/Ublock'
 import ButtonSocial from '@components/ButtonSocial/ButtonSocial'
+import Link from '@components/Link/Link'
 
 export interface FooterSimpleProps {
     name: string
@@ -72,28 +73,27 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                 <div itemScope itemType='http://schema.org/Organization'>
                     <address className='h-card'>
                         <p className='p-adr'>
-                            <a
+                            <Link
                                 className='p-name u-url'
                                 href='https://carleton.ca'
                             >
                                 {name}
-                            </a>
+                            </Link>
                             <br />
-                            <a
+                            <Link
                                 className='p-name u-url'
-                                itemProp='name'
                                 href='https://carleton.ca'
                             >
                                 Carleton University
-                            </a>
+                            </Link>
                             <br />
                             <span
                                 className='p-extended-address'
                                 itemProp='name'
                             >
-                                <a href='https://carleton.ca/campus/map/'>
+                                <Link href='https://carleton.ca/campus/map/'>
                                     {address}
-                                </a>
+                                </Link>
                             </span>
                             <br />
                             <span
@@ -123,7 +123,7 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                             <br />
                             {map && (
                                 <span className='u-map'>
-                                    <a href={map}>View Map</a>
+                                    <Link href={map}>View Map</Link>
                                 </span>
                             )}
                         </p>
@@ -131,7 +131,9 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                             {email && (
                                 <>
                                     <span className='u-email' itemProp='email'>
-                                        <a href={`mailto:${email}`}>{email}</a>
+                                        <Link href={`mailto:${email}`}>
+                                            {email}
+                                        </Link>
                                     </span>
                                     <br />
                                 </>
@@ -143,7 +145,9 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                                         itemProp='telephone'
                                     >
                                         Phone:{' '}
-                                        <a href={`tel:${phone}`}>{phone}</a>
+                                        <Link href={`tel:${phone}`}>
+                                            {phone}
+                                        </Link>
                                     </span>
                                     <br />
                                 </>
@@ -161,7 +165,7 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                             )}
                             {contact && (
                                 <span className='p-contact' itemProp='url'>
-                                    <a href={contact}>Contact page</a>
+                                    <Link href={contact}>Contact page</Link>
                                 </span>
                             )}
                             <br />
