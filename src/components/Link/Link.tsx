@@ -43,6 +43,7 @@ const Link = forwardRef(function Link(
     return React.createElement(
         wrapper || component,
         {
+            ref,
             href,
             as,
             replace,
