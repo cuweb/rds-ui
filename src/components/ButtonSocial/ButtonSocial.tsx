@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from '@components/Icon/Icon'
+import Link from '@components/Link/Link'
 
 export interface ButtonSocialProps {
     url: string
@@ -23,13 +24,13 @@ const ButtonSocial: React.FC<ButtonSocialProps> = ({
 }): JSX.Element => {
     return (
         <div className={className || ''}>
-            <a
+            <Link
                 className={`c-buttonsocial c-buttonsocial--${type} u-icon u-icon--circle`}
                 href={url}
             >
                 <Icon icon={type} />
                 <span className='u-visually-hidden'>{text}</span>
-            </a>
+            </Link>
         </div>
     )
 }

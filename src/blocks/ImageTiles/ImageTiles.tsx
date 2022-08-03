@@ -35,7 +35,7 @@ const ImageTiles: React.FC<ImageTilesProps> = ({ data }): JSX.Element => {
                 </div>
                 <div className='imagetile__container'>
                     {data.slice(1).map((tile, index) => (
-                        <a
+                        <Link
                             key={index}
                             href={tile.href}
                             className='imagetile__item'
@@ -49,7 +49,7 @@ const ImageTiles: React.FC<ImageTilesProps> = ({ data }): JSX.Element => {
                                 <h3>{tile.title}</h3>
                                 {tile.description && <p>{tile.description}</p>}
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>
