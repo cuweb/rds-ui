@@ -2,6 +2,7 @@ import React, { FC, useState, useRef, useEffect } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import useEscToClose from '@hooks/useEscKey'
 import Icon from '@components/Icon/Icon'
+import Link from '@components/Link/Link'
 import { NavMenuTypes } from '../NavMenu'
 import NavMenuButton from './NavMenuButton'
 
@@ -65,7 +66,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     if (!subMenu)
         return (
             <li className={`${className}`}>
-                <a
+                <Link
                     href={link}
                     onClick={(e) => {
                         // eslint-disable-next-line no-unused-expressions
@@ -82,7 +83,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                         />
                     )}
                     {title}
-                </a>
+                </Link>
             </li>
         )
 

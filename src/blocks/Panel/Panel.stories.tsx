@@ -9,6 +9,7 @@ import Listing from '@blocks/Listing/Listing'
 import Avatar from '@components/Avatar/Avatar'
 import Ublock from '@components/Ublock/Ublock'
 import { UserInfoType } from 'types/UserInfo'
+import Link from '@components/Link/Link'
 
 export default {
     title: `Blocks/Panel`,
@@ -100,16 +101,16 @@ export const WithContent = () => (
         <PanelHeader>Panel With Actions</PanelHeader>
         <PanelBody>
             <p>
-                Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
-                consectetur adipiscing elit. Cras convallis neque quis enim
-                eleifend luctus. Aliquam erat volutpat. Praesent malesuada
+                Lorem ipsum <Link href='https://carleton.ca/'>dolor</Link> sit
+                amet, consectetur adipiscing elit. Cras convallis neque quis
+                enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada
                 dapibus turpis, a aliquam lacus mollis vel.
             </p>
             <img src='https://via.placeholder.com/640x480' alt='image' />
             <p>
-                Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
-                consectetur adipiscing elit. Cras convallis neque quis enim
-                eleifend luctus. Aliquam erat volutpat. Praesent malesuada
+                Lorem ipsum <Link href='https://carleton.ca/'>dolor</Link> sit
+                amet, consectetur adipiscing elit. Cras convallis neque quis
+                enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada
                 dapibus turpis, a aliquam lacus mollis vel.
             </p>
             <ButtonCTA
@@ -119,9 +120,9 @@ export const WithContent = () => (
             />
 
             <p>
-                Lorem ipsum <a href='https://carleton.ca/'>dolor</a> sit amet,
-                consectetur adipiscing elit. Cras convallis neque quis enim
-                eleifend luctus. Aliquam erat volutpat. Praesent malesuada
+                Lorem ipsum <Link href='https://carleton.ca/'>dolor</Link> sit
+                amet, consectetur adipiscing elit. Cras convallis neque quis
+                enim eleifend luctus. Aliquam erat volutpat. Praesent malesuada
                 dapibus turpis, a aliquam lacus mollis vel.
             </p>
         </PanelBody>
@@ -143,9 +144,9 @@ export const WithFooter = () => (
             <div className='text-center'>
                 <p>
                     This is a footer with centered text and a{' '}
-                    <a href='#' className='link--red'>
+                    <Link href='#' className='link--red'>
                         red link
-                    </a>
+                    </Link>
                 </p>
             </div>
         </PanelFooter>

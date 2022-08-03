@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from '@components/Link/Link'
 import CardImage, { CardImageProps } from './components/CardImage'
 import CardTitle from './components/CardTitle'
 import CardDescription from './components/CardDescription'
@@ -17,7 +18,7 @@ const Card: React.FC<CardProps & CardImageProps> = ({
     image,
 }): JSX.Element => (
     <article className='c-card' itemScope itemType='http://schema.org/Article'>
-        <a href={link} itemProp='url'>
+        <Link href={link}>
             <CardImage image={image} />
             <header>
                 <CardTitle>{header}</CardTitle>
@@ -25,7 +26,7 @@ const Card: React.FC<CardProps & CardImageProps> = ({
                     <CardDescription>{description}</CardDescription>
                 )}
             </header>
-        </a>
+        </Link>
     </article>
 )
 export default Card

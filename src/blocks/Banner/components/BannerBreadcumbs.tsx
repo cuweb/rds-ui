@@ -1,3 +1,4 @@
+import Link from '@components/Link/Link'
 import React from 'react'
 
 interface BannerBreadcrumbsProps {
@@ -11,7 +12,7 @@ const BannerBreadcrumbs: React.FC<BannerBreadcrumbsProps> = ({
 }): JSX.Element => {
     const list = links.map((item) => (
         <li itemProp='breadcrumb' key={item.title}>
-            <a href={item.link}>{item.title}</a>
+            <Link href={item.link}>{item.title}</Link>
         </li>
     ))
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from '@components/Icon/Icon'
+import Link from '@components/Link/Link'
 import { ListingHeaderProps } from './components/ListingHeader'
 import ListingWrapper from './components/ListingWrapper'
 
@@ -39,7 +40,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
-                        <a href={item.src} itemProp='url'>
+                        <Link href={item.src}>
                             {item.image && (
                                 <figure>
                                     <img
@@ -74,7 +75,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
                             {item.badge && (
                                 <span className='c-badge'>{item.badge}</span>
                             )}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>

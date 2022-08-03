@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from '@components/Icon/Icon'
+import Link from '@components/Link/Link'
 import CardImage, { CardImageProps } from './components/CardImage'
 import CardTitle from './components/CardTitle'
 
@@ -19,7 +20,7 @@ const CardVideo: React.FC<CardVideoProps & CardImageProps> = ({
         itemScope
         itemType='http://schema.org/VideoObject'
     >
-        <a href={link} itemProp='url'>
+        <Link href={link}>
             <CardImage image={image}>
                 <span className='u-icon u-icon--circle' aria-hidden='true'>
                     <Icon icon='video-card' />
@@ -28,7 +29,7 @@ const CardVideo: React.FC<CardVideoProps & CardImageProps> = ({
             <header>
                 <CardTitle>{header}</CardTitle>
             </header>
-        </a>
+        </Link>
     </article>
 )
 export default CardVideo

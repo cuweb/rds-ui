@@ -1,3 +1,4 @@
+import Link from '@components/Link/Link'
 import convertDate from '@functions/convertDate'
 import convertTime from '@functions/convertTime'
 import React from 'react'
@@ -35,7 +36,7 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
             <ul itemScope itemType='http://schema.org/Event'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
-                        <a href={item.src} itemProp='url'>
+                        <Link href={item.src}>
                             <time itemProp='startDate' dateTime=''>
                                 {convertDate(item.date, 'month')}
                                 <span>{convertDate(item.date, 'day')}</span>
@@ -67,7 +68,7 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
                                     />
                                 )}
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>

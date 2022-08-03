@@ -1,3 +1,4 @@
+import Link from '@components/Link/Link'
 import React from 'react'
 import { ListingHeaderProps } from './components/ListingHeader'
 import ListingWrapper from './components/ListingWrapper'
@@ -31,7 +32,7 @@ const ListingPeople: React.FC<ListingPeopleProps & ListingHeaderProps> = ({
             <ul itemScope itemType='http://schema.org/Person'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
-                        <a href={item.src} itemProp='url'>
+                        <Link href={item.src}>
                             {item.image && (
                                 <figure>
                                     <img
@@ -58,7 +59,7 @@ const ListingPeople: React.FC<ListingPeopleProps & ListingHeaderProps> = ({
                                     />
                                 )}
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
