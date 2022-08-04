@@ -1,7 +1,4 @@
 describe('Alert Header', () => {
-    beforeEach(() => {
-        cy.global()
-    })
     const block = {
         url: 'blocks-alert-header--base',
         className: '.b-alertheader',
@@ -42,3 +39,4 @@ describe('Alert Header', () => {
         cy.get(block.className).should('not.exist')
     })
 })
+export {}

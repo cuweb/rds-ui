@@ -1,5 +1,3 @@
-import { first } from 'cypress/types/lodash'
-
 describe('Accordion', () => {
     const types = ['base', 'single']
 
@@ -129,3 +127,4 @@ describe('Accordion', () => {
         cy.get(`.accordion__input--single`).should('exist')
     })
 })
+export {}

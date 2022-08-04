@@ -10,6 +10,7 @@ export interface MenuPopupProps {
     className?: string
     direction?: 'left' | 'right'
     noArrow?: boolean
+    children?: React.ReactNode
 }
 
 const MenuPopup: FC<

@@ -1,11 +1,7 @@
 import data from './HeadingData.json'
 
 describe('Heading', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
-    data.variations.map((variation) => {
+    data.variations.map(() => {
         const header = 'h2'
         const subheader = 'h3'
         const className = '.c-heading'
@@ -66,3 +62,4 @@ describe('Heading', () => {
         })
     })
 })
+export {}

@@ -14,7 +14,9 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+// Cypress.Commands.add('global', () => {
+//     cy.log('hello from the global test run command')
+// })
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

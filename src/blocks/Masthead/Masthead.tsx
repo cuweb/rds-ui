@@ -19,6 +19,7 @@ export interface MastheadProps {
     brand?: MastHeadBrand
     actions?: MastheadActionsTypes
     menu?: NavMenuItemTypes[]
+    children?: React.ReactNode
 }
 
 const Masthead: React.FC<MastheadProps> = ({

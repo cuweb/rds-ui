@@ -1,10 +1,6 @@
 import data from './ButtonSocialData.json'
 
 describe('Button Social', () => {
-    beforeEach(() => {
-        cy.global() // running the global state test commands before each test
-    })
-
     data.variations.map((variation) => {
         const { type, url, text } = variation
         it(`${type.toUpperCase()}: Should render the container`, () => {
@@ -38,3 +34,4 @@ describe('Button Social', () => {
         })
     })
 })
+export {}

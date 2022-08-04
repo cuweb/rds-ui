@@ -7,6 +7,7 @@ export interface FormFieldWrapperProps {
     description?: string
     type?: InputAttributesTypes
     required?: boolean
+    children?: React.ReactNode
 }
 const FormFieldWrapper: FC<FormFieldWrapperProps> = ({
     type = 'text',

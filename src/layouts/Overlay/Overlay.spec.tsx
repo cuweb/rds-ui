@@ -1,8 +1,4 @@
 describe('Overlay', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     const overlayContainer = `.l-overlay-modal`
 
     it(`Should NOT render on load`, () => {
@@ -73,3 +69,4 @@ describe('Overlay Transparent Background ', () => {
         cy.get(`l-overlay-modal-transparent div`).should('not.be.empty')
     })
 })
+export {}

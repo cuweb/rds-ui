@@ -1,8 +1,4 @@
 describe('Card Grid', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     const variations = [
         { type: 'one', columns: '1' },
         { type: 'two', columns: '2' },
@@ -52,3 +48,4 @@ describe('Card Grid', () => {
             .contains('Load more')
     })
 })
+export {}

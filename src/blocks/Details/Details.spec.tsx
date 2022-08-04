@@ -73,3 +73,4 @@ describe('Details - PAst Events Variant', () => {
         cy.get(`.details__aside`).should('exist').and('not.be.empty')
     })
 })
+export {}

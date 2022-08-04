@@ -26,25 +26,40 @@ export const Sticky = () => (
 )
 
 // Only for stories matters
-const StoryLayout: React.FC = ({ children }) => {
-    return (
-        <Layout type='am'>
-            <Aside>{children}</Aside>
-            <Main>
-                <h2>Sidebar Menu</h2>
-                {[...Array(10)].map((x, i) => (
-                    <p key={i}>
-                        Dolor cupidatat et id magna. Deserunt dolor non sint
-                        laboris mollit minim aliqua velit aliqua occaecat
-                        pariatur sunt laboris. Ut ullamco dolor ut excepteur
-                        aliqua exercitation veniam excepteur proident consequat
-                        commodo. Consequat nulla tempor proident velit aliquip
-                        ullamco officia adipisicing. Aliqua excepteur consequat
-                        tempor cupidatat consectetur do irure aliqua id culpa.
-                        Anim pariatur pariatur sint sit sunt labore quis.
-                    </p>
-                ))}
-            </Main>
-        </Layout>
-    )
-}
+export const StoryLayout = (args: any) => (
+    <Layout type='am'>
+        <Aside>{args.children}</Aside>
+        <Main>
+            <h2>Sidebar Menu</h2>
+            {[...Array(10)].map((i) => (
+                <p key={i}>
+                    Dolor cupidatat et id magna. Deserunt dolor non sint laboris
+                    mollit minim aliqua velit aliqua occaecat
+                </p>
+            ))}
+        </Main>
+    </Layout>
+)
+
+// const StoryLayout: Story = ({ children }): StoryLayoutProps => {
+//     return (
+//         <Layout type='am'>
+//             <Aside>{children}</Aside>
+//             <Main>
+//                 <h2>Sidebar Menu</h2>
+//                 {[...Array(10)].map((i) => (
+//                     <p key={i}>
+//                         Dolor cupidatat et id magna. Deserunt dolor non sint
+//                         laboris mollit minim aliqua velit aliqua occaecat
+//                         pariatur sunt laboris. Ut ullamco dolor ut excepteur
+//                         aliqua exercitation veniam excepteur proident consequat
+//                         commodo. Consequat nulla tempor proident velit aliquip
+//                         ullamco officia adipisicing. Aliqua excepteur consequat
+//                         tempor cupidatat consectetur do irure aliqua id culpa.
+//                         Anim pariatur pariatur sint sit sunt labore quis.
+//                     </p>
+//                 ))}
+//             </Main>
+//         </Layout>
+//     )
+// }

@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 
 export interface CardTitleProps {
     itemProp?: string
+    children?: React.ReactNode
 }
 
 const CardTitle: FC<CardTitleProps> = ({

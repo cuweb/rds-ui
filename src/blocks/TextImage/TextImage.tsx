@@ -11,6 +11,7 @@ export interface TextImageProps {
     heading?: string
     subheading?: string
     centered?: boolean
+    children?: React.ReactNode
 }
 const TextImage: React.FC<TextImageProps> = ({
     direction,

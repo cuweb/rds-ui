@@ -110,3 +110,4 @@ describe('Search Form', () => {
         })
     })
 })
+export {}

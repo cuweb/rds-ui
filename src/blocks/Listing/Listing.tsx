@@ -9,6 +9,7 @@ export interface ListingProps {
     noUblock?: boolean
     noArrow?: boolean
     lineClamp?: number
+    children?: React.ReactNode
 }
 export interface BaseListProps {
     src: string
@@ -17,6 +18,7 @@ export interface BaseListProps {
     image?: ImageProps
     badge?: string
     icon?: string
+    children?: React.ReactNode
 }
 export interface ImageProps {
     src: string

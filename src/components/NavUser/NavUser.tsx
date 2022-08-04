@@ -8,6 +8,7 @@ export interface NavUserProps {
     user: UserInfoType
     className?: string
     href?: string
+    children?: React.ReactNode
 }
 
 const NavUser: FC<NavUserProps> = ({

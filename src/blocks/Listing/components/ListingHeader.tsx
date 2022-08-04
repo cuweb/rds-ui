@@ -4,6 +4,7 @@ import React, { FC } from 'react'
 export interface ListingHeaderProps {
     header?: string
     noborder?: boolean
+    children?: React.ReactNode
 }
 
 const ListingHeader: FC<ListingHeaderProps> = ({

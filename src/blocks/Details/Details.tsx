@@ -6,6 +6,7 @@ export interface IDetails {
     block?: UblockProps
     title?: string
     variant?: 'default' | 'figure' | 'event' | 'eventpast'
+    children?: React.ReactNode
 }
 
 const Details: FC<IDetails> = ({

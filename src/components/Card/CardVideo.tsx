@@ -8,6 +8,7 @@ export interface CardVideoProps {
     link: string
     image: CardImageProps
     header: string
+    children?: React.ReactNode
 }
 
 const CardVideo: React.FC<CardVideoProps & CardImageProps> = ({

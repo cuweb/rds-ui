@@ -34,7 +34,7 @@ Error.args = {
     type: 'error',
     title: 'Error Alert Aside block example ',
     content: `This is an example of an Alert Aside block. This block can use any variant of the Alert component.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const Information = Template.bind({})

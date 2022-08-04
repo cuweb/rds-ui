@@ -15,7 +15,7 @@ InformationToastDefault.args = {
     alertType: 'info',
     title: 'Information alert',
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const InformationToastTopRight = Template.bind({})
@@ -24,7 +24,7 @@ InformationToastTopRight.args = {
     alertType: 'info',
     title: 'Information alert',
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const InformationToastTopLeft = Template.bind({})
@@ -33,7 +33,7 @@ InformationToastTopLeft.args = {
     alertType: 'info',
     title: 'Information alert',
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const InformationToastBottomRight = Template.bind({})
@@ -42,7 +42,7 @@ InformationToastBottomRight.args = {
     alertType: 'info',
     title: 'Information alert',
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const InformationToastBottomLeft = Template.bind({})
@@ -51,7 +51,7 @@ InformationToastBottomLeft.args = {
     alertType: 'info',
     title: 'Information alert',
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastDefault = Template.bind({})
@@ -60,7 +60,7 @@ SuccessToastDefault.args = {
     alertType: 'success',
     title: 'Upload success',
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastTopRight = Template.bind({})
@@ -69,7 +69,7 @@ SuccessToastTopRight.args = {
     alertType: 'success',
     title: 'Upload success',
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastTopLeft = Template.bind({})
@@ -78,7 +78,7 @@ SuccessToastTopLeft.args = {
     alertType: 'success',
     title: 'Upload success',
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastBottomRight = Template.bind({})
@@ -87,7 +87,7 @@ SuccessToastBottomRight.args = {
     alertType: 'success',
     title: 'Upload success',
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastBottomLeft = Template.bind({})
@@ -96,7 +96,7 @@ SuccessToastBottomLeft.args = {
     alertType: 'success',
     title: 'Upload success',
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastDefault = Template.bind({})
@@ -106,7 +106,7 @@ WarningToastDefault.args = {
     title: 'Outdoor event',
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastTopRight = Template.bind({})
@@ -116,7 +116,7 @@ WarningToastTopRight.args = {
     title: 'Outdoor event',
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastTopLeft = Template.bind({})
@@ -126,7 +126,7 @@ WarningToastTopLeft.args = {
     title: 'Outdoor event',
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastBottomRight = Template.bind({})
@@ -136,7 +136,7 @@ WarningToastBottomRight.args = {
     title: 'Outdoor event',
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastBottomLeft = Template.bind({})
@@ -146,7 +146,7 @@ WarningToastBottomLeft.args = {
     title: 'Outdoor event',
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastDefault = Template.bind({})
@@ -155,7 +155,7 @@ ErrorToastDefault.args = {
     alertType: 'error',
     title: 'Error Alert',
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastTopRight = Template.bind({})
@@ -164,7 +164,7 @@ ErrorToastTopRight.args = {
     alertType: 'error',
     title: 'Error Alert',
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastTopLeft = Template.bind({})
@@ -173,7 +173,7 @@ ErrorToastTopLeft.args = {
     alertType: 'error',
     title: 'Error Alert',
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastBottomRight = Template.bind({})
@@ -182,7 +182,7 @@ ErrorToastBottomRight.args = {
     alertType: 'error',
     title: 'Error Alert',
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastBottomLeft = Template.bind({})
@@ -191,7 +191,7 @@ ErrorToastBottomLeft.args = {
     alertType: 'error',
     title: 'Error Alert',
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const InformationToastDefaultAutoClose = Template.bind({})
@@ -201,7 +201,7 @@ InformationToastDefaultAutoClose.args = {
     title: 'Information alert',
     autoCloseTimeInterval: 5000,
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const InformationToastTopRightAutoClose = Template.bind({})
@@ -211,7 +211,7 @@ InformationToastTopRightAutoClose.args = {
     title: 'Information alert',
     autoCloseTimeInterval: 5000,
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const InformationToastTopLeftAutoClose = Template.bind({})
@@ -221,7 +221,7 @@ InformationToastTopLeftAutoClose.args = {
     title: 'Information alert',
     autoCloseTimeInterval: 5000,
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const InformationToastBottomRightAutoClose = Template.bind({})
@@ -231,7 +231,7 @@ InformationToastBottomRightAutoClose.args = {
     title: 'Information alert',
     autoCloseTimeInterval: 5000,
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const InformationToastBottomLeftAutoClose = Template.bind({})
@@ -241,7 +241,7 @@ InformationToastBottomLeftAutoClose.args = {
     title: 'Information alert',
     autoCloseTimeInterval: 5000,
     content: 'Used to highlight <a href="#">informational content</a>.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastDefaultAutoClose = Template.bind({})
@@ -251,7 +251,7 @@ SuccessToastDefaultAutoClose.args = {
     title: 'Upload success',
     autoCloseTimeInterval: 5000,
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastTopRightAutoClose = Template.bind({})
@@ -261,7 +261,7 @@ SuccessToastTopRightAutoClose.args = {
     title: 'Upload success',
     autoCloseTimeInterval: 5000,
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastTopLeftAutoClose = Template.bind({})
@@ -271,7 +271,7 @@ SuccessToastTopLeftAutoClose.args = {
     title: 'Upload success',
     autoCloseTimeInterval: 5000,
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastBottomRightAutoClose = Template.bind({})
@@ -281,7 +281,7 @@ SuccessToastBottomRightAutoClose.args = {
     title: 'Upload success',
     autoCloseTimeInterval: 5000,
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const SuccessToastBottomLeftAutoClose = Template.bind({})
@@ -291,7 +291,7 @@ SuccessToastBottomLeftAutoClose.args = {
     title: 'Upload success',
     autoCloseTimeInterval: 5000,
     content: 'Your <a href="#">document</a> was uploaded successfully.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastDefaultAutoClose = Template.bind({})
@@ -302,7 +302,7 @@ WarningToastDefaultAutoClose.args = {
     autoCloseTimeInterval: 5000,
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastTopRightAutoClose = Template.bind({})
@@ -313,7 +313,7 @@ WarningToastTopRightAutoClose.args = {
     autoCloseTimeInterval: 5000,
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastTopLeftAutoClose = Template.bind({})
@@ -324,7 +324,7 @@ WarningToastTopLeftAutoClose.args = {
     autoCloseTimeInterval: 5000,
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastBottomRightAutoClose = Template.bind({})
@@ -335,7 +335,7 @@ WarningToastBottomRightAutoClose.args = {
     autoCloseTimeInterval: 5000,
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const WarningToastBottomLeftAutoClose = Template.bind({})
@@ -346,7 +346,7 @@ WarningToastBottomLeftAutoClose.args = {
     autoCloseTimeInterval: 5000,
     content:
         'Regardless of <a href="#">weather</a>, this event will be held outdoors. Please dress appropriately.',
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastDefaultAutoClose = Template.bind({})
@@ -356,7 +356,7 @@ ErrorToastDefaultAutoClose.args = {
     title: 'Error Alert',
     autoCloseTimeInterval: 5000,
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastTopRightAutoClose = Template.bind({})
@@ -366,7 +366,7 @@ ErrorToastTopRightAutoClose.args = {
     title: 'Error Alert',
     autoCloseTimeInterval: 5000,
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastTopLeftAutoClose = Template.bind({})
@@ -376,7 +376,7 @@ ErrorToastTopLeftAutoClose.args = {
     title: 'Error Alert',
     autoCloseTimeInterval: 5000,
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastBottomRightAutoClose = Template.bind({})
@@ -386,7 +386,7 @@ ErrorToastBottomRightAutoClose.args = {
     title: 'Error Alert',
     autoCloseTimeInterval: 5000,
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
 
 export const ErrorToastBottomLeftAutoClose = Template.bind({})
@@ -396,5 +396,5 @@ ErrorToastBottomLeftAutoClose.args = {
     title: 'Error Alert',
     autoCloseTimeInterval: 5000,
     content: `An error alert is reserved <a href="#">for errors, malfunctions</a>, as well as critical issues campus safety issues.`,
-    handleClose: (e: any) => alert('test'),
+    handleClose: () => alert('test'),
 }
