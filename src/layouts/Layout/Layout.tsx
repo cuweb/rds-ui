@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 
 interface LayoutProps {
     type?: 'am' | 'ma' | 'ama' | undefined
+    children?: React.ReactNode
 }
 
 const Layout: FC<LayoutProps> = (props): JSX.Element => {

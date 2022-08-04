@@ -14,3 +14,4 @@ describe('NavUser - Base', () => {
         cy.get(`.c-navuser__info`).should('exist')
     })
 })
+export {}

@@ -88,3 +88,4 @@ describe('Banner', () => {
         cy.get(`p .c-buttoncta`).should('exist')
     })
 })
+export {}

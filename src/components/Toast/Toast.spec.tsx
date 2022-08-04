@@ -1,8 +1,4 @@
 describe('Toast', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     const toastTypes = [
         'information-toast-default',
         'information-toast-top-right',
@@ -243,3 +239,4 @@ describe('Toast', () => {
         }
     })
 })
+export {}

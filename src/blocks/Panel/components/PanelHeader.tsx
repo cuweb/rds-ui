@@ -6,6 +6,7 @@ export interface PanelHeaderProps {
     className?: string
     icon?: string
     color?: PanelColorsTypes
+    children?: React.ReactNode
 }
 
 const PanelHeader: FC<PanelHeaderProps> = ({

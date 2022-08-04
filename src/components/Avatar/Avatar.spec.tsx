@@ -99,3 +99,4 @@ describe('Avatar - Handle on Click ', () => {
         })
     })
 })
+export {}

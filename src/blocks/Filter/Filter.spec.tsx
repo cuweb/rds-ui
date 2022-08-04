@@ -54,3 +54,4 @@ describe('Filter', () => {
         cy.get('.form__input--checkbox').should('not.be.checked')
     })
 })
+export {}

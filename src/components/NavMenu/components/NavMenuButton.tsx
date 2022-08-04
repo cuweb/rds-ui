@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import Icon from '@components/Icon/Icon'
+import Link from '@components/Link/Link'
 import React, { FC, MouseEvent } from 'react'
 import { NavMenuTypes } from '../NavMenu'
 
@@ -37,7 +38,7 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
         ),
         side: (
             <>
-                <a href={link}>{title}</a>
+                <Link href={link}>{title}</Link>
                 <button
                     type='button'
                     aria-expanded={isOpen}

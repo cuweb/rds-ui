@@ -1,4 +1,5 @@
 import Icon from '@components/Icon/Icon'
+import Link from '@components/Link/Link'
 import React from 'react'
 
 export type MastHeadBrand = string | undefined
@@ -22,10 +23,10 @@ const MastheadTitle: React.FC<MastheadTitleProps> = ({
 
     return (
         <h1>
-            <a href={url}>
+            <Link href={url}>
                 {brandLogo}
                 {!brand && title}
-            </a>
+            </Link>
         </h1>
     )
 }

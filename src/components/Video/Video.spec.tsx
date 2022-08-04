@@ -17,3 +17,4 @@ describe('Video', () => {
         cy.get(`iframe`).should('exist')
     })
 })
+export {}

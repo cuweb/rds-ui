@@ -1,10 +1,6 @@
 import icons from '../../lib/icons'
 
 describe('Icon', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     icons.map((variation) => {
         const { title, type, path } = variation
         it(`${title}: Should render the icon`, () => {
@@ -20,3 +16,4 @@ describe('Icon', () => {
         })
     })
 })
+export {}

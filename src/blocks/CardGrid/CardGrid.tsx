@@ -8,6 +8,7 @@ export interface CardGridProps {
     columns?: 1 | 2 | 3 | 4 | undefined
     button?: ButtonProps
     color?: 'grey' | 'white' | 'black' | undefined
+    children?: React.ReactNode
     handleLoad?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
 }
 

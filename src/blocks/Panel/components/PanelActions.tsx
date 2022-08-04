@@ -5,6 +5,7 @@ import React, { FC } from 'react'
 export interface PanelActionsProps {
     className?: string
     actions: MenuPopupMenuProps
+    children?: React.ReactNode
 }
 
 const PanelActions: FC<PanelActionsProps> = ({
