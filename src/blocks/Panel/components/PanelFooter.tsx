@@ -5,6 +5,7 @@ export interface PanelFooterProps {
     className?: string
     spacing?: boolean
     color?: PanelColorsTypes
+    children?: React.ReactNode
 }
 
 const PanelFooter: FC<PanelFooterProps> = ({

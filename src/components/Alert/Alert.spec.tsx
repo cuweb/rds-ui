@@ -1,8 +1,4 @@
 describe('Alert', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     const types = ['error', 'info', 'success', 'warning']
     const title = 'h2'
     const content = 'p'
@@ -45,3 +41,4 @@ describe('Alert', () => {
         }
     })
 })
+export {}

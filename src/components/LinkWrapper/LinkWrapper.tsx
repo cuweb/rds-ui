@@ -4,6 +4,7 @@ export interface LinkProps {
     link?: string
     color?: 'black' | 'blue' | 'red'
     noBorder?: boolean
+    children?: React.ReactNode
 }
 
 const LinkWrapper: FC<LinkProps> = ({

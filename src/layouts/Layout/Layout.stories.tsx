@@ -10,7 +10,7 @@ export default {
     title: 'Main Concepts/Layouts',
 }
 
-export const Single = (args: any) => (
+export const Single = () => (
     <Layout>
         <h2>Single column layout</h2>
         <p>
@@ -62,7 +62,7 @@ export const Single = (args: any) => (
     </Layout>
 )
 
-export const MulticolAM = (args: any) => {
+export const MulticolAM = () => {
     return (
         <Layout type='am'>
             <Aside>
@@ -87,7 +87,7 @@ export const MulticolAM = (args: any) => {
         </Layout>
     )
 }
-export const MulticolMA = (args: any) => (
+export const MulticolMA = () => (
     <Layout type='ma'>
         <Main>
             <h2>Multicol MA (Main + Aside)</h2>
@@ -110,7 +110,7 @@ export const MulticolMA = (args: any) => (
     </Layout>
 )
 
-export const MulticolAMA = (args: any) => (
+export const MulticolAMA = () => (
     <Layout type='ama'>
         <Aside>
             <h3>Left Aside</h3>

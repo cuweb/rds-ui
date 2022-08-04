@@ -2,6 +2,7 @@ import React from 'react'
 import Ublock from '@components/Ublock/Ublock'
 import Icon from '@components/Icon/Icon'
 import ButtonSocial from '@components/ButtonSocial/ButtonSocial'
+import Link from '@components/Link/Link'
 
 export interface SocialButtonsProps {
     url: string
@@ -51,44 +52,44 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Admissions</h2>
                             <ul>
                                 <li>
-                                    <a href='https://admissions.carleton.ca/programs/'>
+                                    <Link href='https://admissions.carleton.ca/programs/'>
                                         Programs
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://admissions.carleton.ca/'>
+                                    <Link href='https://admissions.carleton.ca/'>
                                         Undergraduate
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://graduate.carleton.ca/'>
+                                    <Link href='https://graduate.carleton.ca/'>
                                         Graduate
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://admissions.carleton.ca/applicant-type/international-applicants/'>
+                                    <Link href='https://admissions.carleton.ca/applicant-type/international-applicants/'>
                                         International
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/prospective/#anchor3'>
+                                    <Link href='https://carleton.ca/prospective/#anchor3'>
                                         Professional Development
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://admissions.carleton.ca/campustours/'>
+                                    <Link href='https://admissions.carleton.ca/campustours/'>
                                         Campus Tours
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/awards/'>
+                                    <Link href='https://carleton.ca/awards/'>
                                         Financial Aid
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/cie/'>
+                                    <Link href='https://carleton.ca/cie/'>
                                         Initiatives In Education
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -96,84 +97,84 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Students / Academics</h2>
                             <ul className='footersitemap__list--two'>
                                 <li>
-                                    <a href='https://students.carleton.ca/'>
+                                    <Link href='https://students.carleton.ca/'>
                                         Undergrad Homepage
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://gradstudents.carleton.ca/'>
+                                    <Link href='https://gradstudents.carleton.ca/'>
                                         Grad Homepage
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://calendar.carleton.ca/'>
+                                    <Link href='https://calendar.carleton.ca/'>
                                         Calendars
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/cuol/'>
+                                    <Link href='https://carleton.ca/cuol/'>
                                         Carleton Online
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/cc/'>
+                                    <Link href='https://carleton.ca/cc/'>
                                         CO-OP &amp; Career Services
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/culearn/'>
+                                    <Link href='https://carleton.ca/culearn/'>
                                         cuLearn
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/academics/'>
+                                    <Link href='https://carleton.ca/academics/'>
                                         Departments &amp; Faculties
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/discoverycentre/'>
+                                    <Link href='https://carleton.ca/discoverycentre/'>
                                         Discovery Centre
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/ccs/all-services/email/carleton-student-email/'>
+                                    <Link href='https://carleton.ca/ccs/all-services/email/carleton-student-email/'>
                                         Email
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://library.carleton.ca/'>
+                                    <Link href='https://library.carleton.ca/'>
                                         Library
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://housing.carleton.ca/'>
+                                    <Link href='https://housing.carleton.ca/'>
                                         Housing
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/provost/'>
+                                    <Link href='https://carleton.ca/provost/'>
                                         Provost`s Office
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/registrar/'>
+                                    <Link href='https://carleton.ca/registrar/'>
                                         Registrar`s Office
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/registrar/registration/'>
+                                    <Link href='https://carleton.ca/registrar/registration/'>
                                         Registration
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/academics/schedules-dates/'>
+                                    <Link href='https://carleton.ca/academics/schedules-dates/'>
                                         Schedules &amp; Dates
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/academics/support/'>
+                                    <Link href='https://carleton.ca/academics/support/'>
                                         Support Services
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -181,39 +182,39 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Campus</h2>
                             <ul className='footersitemap__list'>
                                 <li>
-                                    <a href='https://carleton.ca/campus/'>
+                                    <Link href='https://carleton.ca/campus/'>
                                         Campus Map
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/campus/directions/'>
+                                    <Link href='https://carleton.ca/campus/directions/'>
                                         Directions
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://events.carleton.ca/'>
+                                    <Link href='https://events.carleton.ca/'>
                                         Events
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/parking/'>
+                                    <Link href='https://carleton.ca/parking/'>
                                         Parking
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://carleton.ca/safety/'>
+                                    <Link href='https://carleton.ca/safety/'>
                                         Safety
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://dining.carleton.ca/'>
+                                    <Link href='https://dining.carleton.ca/'>
                                         Dining Services
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://cusaonline.ca/clubs/'>
+                                    <Link href='https://cusaonline.ca/clubs/'>
                                         Clubs &amp; Societies
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -221,22 +222,22 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Ravens for life</h2>
                             <ul className='footersitemap__list'>
                                 <li>
-                                    <a href='https://futurefunder.carleton.ca'>
+                                    <Link href='https://futurefunder.carleton.ca'>
                                         Giving to Carleton
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://athletics.carleton.ca/'>
+                                    <Link href='https://athletics.carleton.ca/'>
                                         Athletics &amp; Recreation
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://goravens.ca/'>
+                                    <Link href='https://goravens.ca/'>
                                         Go Ravens - Varsity
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='https://goravens.ca/'>
+                                    <Link href='https://goravens.ca/'>
                                         <Icon
                                             icon='mark-ravens-white'
                                             size={76}
@@ -244,7 +245,7 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                                         <span className='u-visually-hidden'>
                                             Visit GoRavens.ca
                                         </span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -258,12 +259,14 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                         </div>
                         <span className='p-tel'>
                             Phone:{' '}
-                            <a href='tel:+1-613-520-2600'>1-613-520-2600</a>
+                            <Link href='tel:+1-613-520-2600'>
+                                1-613-520-2600
+                            </Link>
                         </span>
                         <div>
-                            <a href='https://carleton.ca/about/contact/'>
+                            <Link href='https://carleton.ca/about/contact/'>
                                 Contact Info
-                            </a>
+                            </Link>
                         </div>
                         <ul>
                             {socialButtons.map((item, index) => (

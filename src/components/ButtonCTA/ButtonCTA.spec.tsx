@@ -1,14 +1,10 @@
 describe('Button CTA', () => {
-    beforeEach(() => {
-        cy.global() // running the global state test commands before each test
-    })
-
-    const button = {
-        default: `.c-buttoncta`,
-        ghost: `.c-buttoncta--ghost`,
-        full: `.c-buttoncta--full`,
-        centered: `.c-buttoncta--center`,
-    }
+    // const button = {
+    //     default: `.c-buttoncta`,
+    //     ghost: `.c-buttoncta--ghost`,
+    //     full: `.c-buttoncta--full`,
+    //     centered: `.c-buttoncta--center`,
+    // }
 
     const types = [
         {
@@ -45,3 +41,4 @@ describe('Button CTA', () => {
         })
     })
 })
+export {}

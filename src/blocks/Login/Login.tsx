@@ -1,3 +1,4 @@
+import Link from '@components/Link/Link'
 import Ublock, { UblockProps } from '@components/Ublock/Ublock'
 import React from 'react'
 
@@ -42,9 +43,9 @@ const Login: React.FC<LoginProps> = ({
                     <label htmlFor='user_pass' className='user_pass'>
                         Password
                         {forgetLink && (
-                            <a className='login__link' href={forgetLink}>
+                            <Link className='login__link' href={forgetLink}>
                                 Forgot password?
-                            </a>
+                            </Link>
                         )}
                     </label>
                     <input
@@ -68,9 +69,9 @@ const Login: React.FC<LoginProps> = ({
             {registerLink && (
                 <p className='login__account'>
                     Not registered?
-                    <a className='u-link' href='/register/'>
+                    <Link className='u-link' href='/register/'>
                         Create an account
-                    </a>
+                    </Link>
                 </p>
             )}
         </div>

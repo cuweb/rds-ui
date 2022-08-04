@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Meta, Story } from '@storybook/react'
 import Filter from './Filter'
 import data from './FData.json'

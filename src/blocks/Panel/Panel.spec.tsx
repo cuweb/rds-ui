@@ -138,3 +138,4 @@ describe('Panel - Modal Example with custom className', () => {
     panelTestBaseUrl('panel-modal')
     panelTestPanelModal()
 })
+export {}

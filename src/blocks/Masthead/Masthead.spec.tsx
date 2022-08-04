@@ -1,8 +1,4 @@
 describe('Masthead - Base', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     it(`Should render U-Block`, () => {
         cy.visit(
             `${Cypress.env('baseUrl')}/iframe.html?id=blocks-masthead--base`
@@ -233,3 +229,4 @@ describe('Masthead - Mobile', () => {
         cy.get(`.modal__menu`).should('not.exist')
     })
 })
+export {}

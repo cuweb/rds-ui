@@ -93,3 +93,4 @@ describe('TextImage', () => {
         cy.get(`.u-block--white`).should('exist')
     })
 })
+export {}

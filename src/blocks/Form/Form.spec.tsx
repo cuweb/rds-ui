@@ -111,9 +111,6 @@ const testSubmit = () => {
 // =========================================
 
 describe('Form - Kitchen Sink', () => {
-    beforeEach(() => {
-        cy.global()
-    })
     testBaseUrl()
     testFormContainers()
 })
@@ -260,3 +257,4 @@ describe('Form - Disabled Field', () => {
 describe('Form - Submit', () => {
     testSubmit()
 })
+export {}

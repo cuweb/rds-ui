@@ -408,3 +408,4 @@ describe('Card', () => {
         cy.get(`p`).should('exist')
     })
 })
+export {}

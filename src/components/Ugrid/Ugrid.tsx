@@ -6,6 +6,7 @@ export interface UgridProps {
     gap?: 1 | 2 | 3 | 4
     isLayout?: boolean
     isLayoutRight?: boolean
+    children?: React.ReactNode
 }
 
 const Ugrid: React.FC<UgridProps> = ({

@@ -1,8 +1,4 @@
 describe('Sidebar Menu', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     const container = '.b-menu'
     const nav = '.c-nav'
     const navVariant = '.c-nav--sidenav'
@@ -83,3 +79,4 @@ describe('Sidebar Menu', () => {
         cy.get('.u-sticky').should('exist')
     })
 })
+export {}

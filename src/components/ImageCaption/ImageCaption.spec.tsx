@@ -35,3 +35,4 @@ describe('Image Caption', () => {
         cy.get(`figcaption`).should('exist')
     })
 })
+export {}

@@ -2,10 +2,6 @@ import data from './FooterData.json'
 const { variations } = data
 
 describe('Footer', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     variations.map((variation) => {
         it(`${variation.type.toUpperCase()}: Should render U-Block`, () => {
             cy.visit(
@@ -94,3 +90,4 @@ describe('Footer', () => {
         cy.get(`.p-hours time`).should('exist').should('not.be.empty')
     })
 })
+export {}

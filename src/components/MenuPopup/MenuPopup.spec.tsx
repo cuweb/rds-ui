@@ -1,8 +1,4 @@
 describe('Menu Popup  - Base', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     it(`Should render container`, () => {
         cy.visit(
             `${Cypress.env(
@@ -32,10 +28,6 @@ describe('Menu Popup  - Base', () => {
 })
 
 describe('Menu Popup  - Base with Action', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     it(`Should render container`, () => {
         cy.visit(
             `${Cypress.env(
@@ -117,10 +109,6 @@ describe('Menu Popup  - With Icons', () => {
 })
 
 describe('Menu Popup  - Without Title', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     it(`Should render container`, () => {
         cy.visit(
             `${Cypress.env(
@@ -152,3 +140,4 @@ describe('Menu Popup  - Without Title', () => {
         cy.get(`.menupopup__menu`).should('exist')
     })
 })
+export {}

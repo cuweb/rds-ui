@@ -97,3 +97,4 @@ describe('Loading - Page', () => {
     loadingTestBaseUrl('page')
     loadingTestPage()
 })
+export {}

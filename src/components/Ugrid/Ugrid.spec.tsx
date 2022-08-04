@@ -1,8 +1,4 @@
 describe('U-Grid', () => {
-    beforeEach(() => {
-        cy.global()
-    })
-
     const variations = [
         { type: 'one', columns: '1' },
         { type: 'two', columns: '2' },
@@ -33,3 +29,4 @@ describe('U-Grid', () => {
         }
     })
 })
+export {}

@@ -1,5 +1,6 @@
 import Icon from '@components/Icon/Icon'
 import React, { FC, MouseEvent } from 'react'
+import Link from '@components/Link/Link'
 
 export interface MenuPopupButtonProps {
     isButton?: boolean
@@ -20,10 +21,10 @@ const MenuPopupButton: FC<MenuPopupButtonProps> = ({
 }): JSX.Element => {
     if (!isButton)
         return (
-            <a href={link} className={buttonClassName}>
+            <Link href={link} className={buttonClassName}>
                 {icon && <Icon icon={icon} />}
                 {title}
-            </a>
+            </Link>
         )
 
     return (

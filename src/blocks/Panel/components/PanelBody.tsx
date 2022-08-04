@@ -5,6 +5,7 @@ export interface PanelBodyProps {
     className?: string
     spacing?: boolean
     color?: PanelColorsTypes
+    children?: React.ReactNode
 }
 
 const PanelBody: FC<PanelBodyProps> = ({

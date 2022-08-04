@@ -69,3 +69,4 @@ describe('Image Tiles', () => {
         cy.get(`p`).should('exist')
     })
 })
+export {}

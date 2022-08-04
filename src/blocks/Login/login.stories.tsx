@@ -18,7 +18,7 @@ const DialogTemplate: Story = (args: any) => {
         <div className='example'>
             <button
                 className='c-buttoncta'
-                onClick={(e) => setIsHidden(!isHidden)}
+                onClick={() => setIsHidden(!isHidden)}
             >
                 Open Dialog
             </button>
