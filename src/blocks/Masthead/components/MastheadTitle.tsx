@@ -8,12 +8,14 @@ export interface MastheadTitleProps {
     title: string
     url: string
     brand?: MastHeadBrand
+    wrapLink?: any
 }
 
 const MastheadTitle: React.FC<MastheadTitleProps> = ({
     title,
     url,
     brand,
+    wrapLink,
 }): JSX.Element => {
     const brandLogo = brand ? (
         <img className='masthead__brand' src={brand} alt='Site Logo' />
@@ -23,7 +25,7 @@ const MastheadTitle: React.FC<MastheadTitleProps> = ({
 
     return (
         <h1>
-            <Link href={url}>
+            <Link wrapper={wrapLink} href={url}>
                 {brandLogo}
                 {!brand && title}
             </Link>

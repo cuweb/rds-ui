@@ -11,6 +11,7 @@ export interface CardNewsProps {
     header: string
     date: string
     description?: string
+    wrapLink?: any
 }
 
 const CardNews: React.FC<CardNewsProps & CardImageProps> = ({
@@ -19,6 +20,7 @@ const CardNews: React.FC<CardNewsProps & CardImageProps> = ({
     header,
     date,
     description,
+    wrapLink,
 }): JSX.Element => {
     const longDate = convertDate(date)
     return (
@@ -27,7 +29,7 @@ const CardNews: React.FC<CardNewsProps & CardImageProps> = ({
             itemScope
             itemType='http://schema.org/NewsArticle'
         >
-            <Link href={link}>
+            <Link wrapper={wrapLink} href={link}>
                 <CardImage image={image} />
                 <header>
                     <time dateTime={date} itemProp='datePublished'>

@@ -43,17 +43,17 @@ const userDetails: DetailsItemProps[] = [
     {
         title: 'E-mail',
         description: 'email@email.com',
-        url: 'mailto:email@email.com',
+        link: 'mailto:email@email.com',
     },
     {
         title: 'Phone',
         description: '613-520-2600x8998',
-        url: 'tel:6135202600x8998',
+        link: 'tel:6135202600x8998',
     },
     {
         title: 'Reports to',
         description: 'Tim Lott, Chief Information Officer',
-        url: '#',
+        link: '#',
     },
 ]
 

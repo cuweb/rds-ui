@@ -14,6 +14,7 @@ export interface ButtonSocialProps {
         | 'pinterest'
         | string
     className?: string
+    wrapLink?: any
 }
 
 const ButtonSocial: React.FC<ButtonSocialProps> = ({
@@ -21,10 +22,12 @@ const ButtonSocial: React.FC<ButtonSocialProps> = ({
     url,
     text,
     className,
+    wrapLink,
 }): JSX.Element => {
     return (
         <div className={className || ''}>
             <Link
+                wrapper={wrapLink}
                 className={`c-buttonsocial c-buttonsocial--${type} u-icon u-icon--circle`}
                 href={url}
             >

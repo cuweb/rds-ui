@@ -8,6 +8,7 @@ export interface LoginProps {
     registerLink?: string
     onSubmit?: React.FormEventHandler
     block?: UblockProps
+    wrapLink?: any
 }
 
 const Login: React.FC<LoginProps> = ({
@@ -15,6 +16,7 @@ const Login: React.FC<LoginProps> = ({
     forgetLink,
     registerLink,
     onSubmit,
+    wrapLink,
     block = {
         color: 'grey',
     },
@@ -43,7 +45,11 @@ const Login: React.FC<LoginProps> = ({
                     <label htmlFor='user_pass' className='user_pass'>
                         Password
                         {forgetLink && (
-                            <Link className='login__link' href={forgetLink}>
+                            <Link
+                                wrapper={wrapLink}
+                                className='login__link'
+                                href={forgetLink}
+                            >
                                 Forgot password?
                             </Link>
                         )}
@@ -69,7 +75,11 @@ const Login: React.FC<LoginProps> = ({
             {registerLink && (
                 <p className='login__account'>
                     Not registered?
-                    <Link className='u-link' href='/register/'>
+                    <Link
+                        wrapper={wrapLink}
+                        className='u-link'
+                        href='/register/'
+                    >
                         Create an account
                     </Link>
                 </p>

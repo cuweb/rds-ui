@@ -8,6 +8,7 @@ export interface MenuPopupButtonProps {
     link?: string
     icon?: string
     buttonClassName?: string
+    wrapLink?: any
     onClick?: (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void
 }
 
@@ -17,11 +18,12 @@ const MenuPopupButton: FC<MenuPopupButtonProps> = ({
     link = '#',
     icon,
     buttonClassName = '',
+    wrapLink,
     onClick,
 }): JSX.Element => {
     if (!isButton)
         return (
-            <Link href={link} className={buttonClassName}>
+            <Link wrapper={wrapLink} href={link} className={buttonClassName}>
                 {icon && <Icon icon={icon} />}
                 {title}
             </Link>

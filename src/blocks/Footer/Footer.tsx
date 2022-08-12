@@ -7,6 +7,7 @@ export interface FooterProps {
     type?: 'brand' | 'simple' | 'sitemap'
     name: string
     address: string
+    wrapLink?: any
 }
 
 export interface FooterTypes {
@@ -15,9 +16,9 @@ export interface FooterTypes {
 
 const Footer: React.FC<FooterProps> = (props): JSX.Element => {
     const footerTypes: FooterTypes = {
-        brand: <FooterBrand />,
+        brand: <FooterBrand {...props} />,
         simple: <FooterSimple {...props} />,
-        sitemap: <FooterSitemap />,
+        sitemap: <FooterSitemap {...props} />,
     }
 
     return footerTypes[props.type || 'brand']

@@ -25,6 +25,7 @@ export interface NavMenuItemProps {
     isMobile?: boolean
     direction?: 'left' | 'right'
     icon?: string
+    wrapLink?: any
 }
 
 const NavMenuItem: FC<NavMenuItemProps> = ({
@@ -33,6 +34,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     direction = 'left',
     isMobile,
     icon,
+    wrapLink,
 }): JSX.Element => {
     const { title, link = '#', subMenu, className = '' } = item
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -67,6 +69,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
         return (
             <li className={`${className}`}>
                 <Link
+                    wrapper={wrapLink}
                     href={link}
                     onClick={(e) => {
                         // eslint-disable-next-line no-unused-expressions
