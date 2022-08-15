@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from '@components/Icon/Icon'
+import Link from '@components/Link/Link'
 
 export interface ButtonProps {
     ghost?: boolean
@@ -13,6 +14,7 @@ export interface ButtonProps {
     grey?: boolean
     shadow?: boolean
     className?: string
+    wrapLink?: any
 }
 
 const ButtonCTA: React.FC<ButtonProps> = ({
@@ -27,6 +29,7 @@ const ButtonCTA: React.FC<ButtonProps> = ({
     grey,
     shadow = true,
     className = '',
+    wrapLink,
 }): JSX.Element => {
     const isGhost = ghost ? 'c-buttoncta--ghost' : ''
     const isGrey = grey ? 'c-buttoncta--grey' : ''
@@ -37,15 +40,17 @@ const ButtonCTA: React.FC<ButtonProps> = ({
     const hasShadow = shadow ? `` : `c-buttoncta--no-shadow`
 
     return (
-        <a
+        <Link
+            wrapper={wrapLink}
             className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isGrey} ${isCenter} ${hasShadow} ${className}`}
             target={buttonTarget}
+            component='button'
             href={link}
         >
             {icon && <Icon icon={icon} />}
             {children}
             {text}
-        </a>
+        </Link>
     )
 }
 export default ButtonCTA

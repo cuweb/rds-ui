@@ -7,6 +7,7 @@ export interface CardGridProps {
     title?: string
     columns?: 1 | 2 | 3 | 4 | undefined
     button?: ButtonProps
+    wrapLink?: any
     color?: 'grey' | 'white' | 'black' | undefined
     children?: React.ReactNode
     handleLoad?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void
@@ -22,6 +23,7 @@ const CardGrid: React.FC<CardGridProps> = ({
     button,
     columns = 3,
     color,
+    wrapLink,
     children,
     handleLoad,
 }): JSX.Element => {
@@ -32,7 +34,12 @@ const CardGrid: React.FC<CardGridProps> = ({
                 {children}
             </Ugrid>
             {button && (
-                <ButtonCTA text={button.text} link={button.url} center />
+                <ButtonCTA
+                    wrapLink={wrapLink}
+                    text={button.text}
+                    link={button.url}
+                    center
+                />
             )}
             {handleLoad && (
                 <button

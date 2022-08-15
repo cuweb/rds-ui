@@ -16,6 +16,7 @@ export interface LinkProps {
     passHref?: boolean
     prefetch?: boolean
     locale?: string | false
+    target?: string
     children: any
     onMouseEnter?: (e: any) => void
     onClick?: (e: any) => void
@@ -35,6 +36,7 @@ const Link = forwardRef(function Link(
         passHref = false,
         prefetch,
         locale,
+        target,
         children,
         onClick,
         onMouseEnter,
@@ -55,6 +57,7 @@ const Link = forwardRef(function Link(
             passHref,
             prefetch,
             locale,
+            target,
             onClick,
             onMouseEnter,
         },
