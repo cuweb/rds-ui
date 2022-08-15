@@ -9,6 +9,7 @@ export interface ListingProps {
     noUblock?: boolean
     noArrow?: boolean
     lineClamp?: number
+    wrapLink?: any
     children?: React.ReactNode
 }
 export interface BaseListProps {
@@ -31,6 +32,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
     noUblock,
     noArrow,
     lineClamp = 1,
+    wrapLink,
 }): JSX.Element => {
     return (
         <ListingWrapper
@@ -42,7 +44,7 @@ const Listing: React.FC<ListingProps & ListingHeaderProps> = ({
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
-                        <Link href={item.src}>
+                        <Link wrapper={wrapLink} href={item.src}>
                             {item.image && (
                                 <figure>
                                     <img

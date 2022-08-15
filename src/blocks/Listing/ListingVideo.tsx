@@ -8,6 +8,7 @@ export interface ListingVideoProps {
     data: VideoListProps[]
     noUblock?: boolean
     lineClamp?: number
+    wrapLink?: any
 }
 
 export interface VideoListProps {
@@ -26,13 +27,14 @@ const ListingVideo: React.FC<ListingVideoProps & ListingHeaderProps> = ({
     data,
     noUblock,
     lineClamp = 1,
+    wrapLink,
 }): JSX.Element => {
     return (
         <ListingWrapper type='video' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/ItemList'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
-                        <Link href={item.src}>
+                        <Link wrapper={wrapLink} href={item.src}>
                             {item.image && (
                                 <figure>
                                     <img

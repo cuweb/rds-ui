@@ -8,6 +8,7 @@ export interface CardPeopleProps {
     description: string
     firstName: string
     lastName: string
+    wrapLink?: any
 }
 
 export interface ImageProps {
@@ -21,6 +22,7 @@ const CardPeople: React.FC<CardPeopleProps> = ({
     firstName,
     lastName,
     description,
+    wrapLink,
 }): JSX.Element => {
     return (
         <article
@@ -28,7 +30,7 @@ const CardPeople: React.FC<CardPeopleProps> = ({
             itemScope
             itemType='http://schema.org/Person'
         >
-            <Link href={link}>
+            <Link wrapper={wrapLink} href={link}>
                 {image.src.length > 0 ? (
                     <figure itemScope itemType='http://schema.org/ImageObject'>
                         <img src={image.src} alt={image.alt} loading='lazy' />

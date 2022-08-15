@@ -1,17 +1,21 @@
 import React, { FC, ReactNode } from 'react'
-import LinkWrapper from '@components/LinkWrapper/LinkWrapper'
+import Link from '@components/Link/Link'
 
 export interface DetailsMetaProps {
     details: DetailsItemProps[]
+    wrapLink?: any
 }
 
 export type DetailsItemProps = {
     title: string
     description: ReactNode
-    url?: string
+    link?: string
 }
 
-const DetailsMeta: FC<DetailsMetaProps> = ({ details }): JSX.Element => {
+const DetailsMeta: FC<DetailsMetaProps> = ({
+    details,
+    wrapLink,
+}): JSX.Element => {
     return (
         <div className='details__meta'>
             <dl className='u-link'>
@@ -19,9 +23,12 @@ const DetailsMeta: FC<DetailsMetaProps> = ({ details }): JSX.Element => {
                     <React.Fragment key={index}>
                         <dt>{item.title}</dt>
                         <dd>
-                            <LinkWrapper link={item?.url} noBorder>
+                            <Link
+                                wrapper={wrapLink}
+                                href={item.link ? item.link : ''}
+                            >
                                 {item.description}
-                            </LinkWrapper>
+                            </Link>
                         </dd>
                     </React.Fragment>
                 ))}

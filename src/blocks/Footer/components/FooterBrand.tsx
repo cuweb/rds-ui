@@ -4,27 +4,40 @@ import Logo from '@components/Logo/Logo'
 import Link from '@components/Link/Link'
 import FooterDarkModeSwitch from './FooterDarkModeSwitch'
 
-const FooterBrand: React.FC = (): JSX.Element => {
+export interface FooterBrandProps {
+    wrapLink?: any
+}
+
+const FooterBrand: React.FC<FooterBrandProps> = ({ wrapLink }): JSX.Element => {
     return (
         <Ublock color='black' waves>
             <div className='b-footerbrand'>
-                <Link href='https://carleton.ca'>
+                <Link wrapper={wrapLink} href='https://carleton.ca'>
                     <Logo />
                 </Link>
                 <nav>
                     <ul>
                         <li>
-                            <Link href='https://carleton.ca/privacy/policies/'>
+                            <Link
+                                wrapper={wrapLink}
+                                href='https://carleton.ca/privacy/policies/'
+                            >
                                 Privacy
                             </Link>
                         </li>
                         <li>
-                            <Link href='https://carleton.ca/accessibility/'>
+                            <Link
+                                wrapper={wrapLink}
+                                href='https://carleton.ca/accessibility/'
+                            >
                                 Accessibility
                             </Link>
                         </li>
                         <li>
-                            <Link href='https://library.carleton.ca/content/copyright-carleton'>
+                            <Link
+                                wrapper={wrapLink}
+                                href='https://library.carleton.ca/content/copyright-carleton'
+                            >
                                 ©&nbsp;Copyright
                             </Link>
                         </li>

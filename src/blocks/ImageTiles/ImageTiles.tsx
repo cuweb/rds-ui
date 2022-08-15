@@ -4,6 +4,7 @@ import Link from '@components/Link/Link'
 
 export interface ImageTilesProps {
     data: ImageTilesDataProps[]
+    wrapLink?: any
 }
 
 export interface ImageTilesDataProps {
@@ -16,12 +17,19 @@ export interface ImageTilesDataProps {
     href: string
 }
 
-const ImageTiles: React.FC<ImageTilesProps> = ({ data }): JSX.Element => {
+const ImageTiles: React.FC<ImageTilesProps> = ({
+    data,
+    wrapLink,
+}): JSX.Element => {
     return (
         <Ublock full>
             <div className='b-imagetile'>
                 <div className='imagetile__container'>
-                    <Link href={data[0].href} className='imagetile__item'>
+                    <Link
+                        wrapper={wrapLink}
+                        href={data[0].href}
+                        className='imagetile__item'
+                    >
                         <img
                             src={data[0].image.src}
                             alt={data[0].image.alt}
@@ -36,6 +44,7 @@ const ImageTiles: React.FC<ImageTilesProps> = ({ data }): JSX.Element => {
                 <div className='imagetile__container'>
                     {data.slice(1).map((tile, index) => (
                         <Link
+                            wrapper={wrapLink}
                             key={index}
                             href={tile.href}
                             className='imagetile__item'
