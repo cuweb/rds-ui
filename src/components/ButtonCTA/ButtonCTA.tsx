@@ -15,6 +15,7 @@ export interface ButtonProps {
     shadow?: boolean
     className?: string
     wrapLink?: any
+    handleClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void
 }
 
 const ButtonCTA: React.FC<ButtonProps> = ({
@@ -30,6 +31,7 @@ const ButtonCTA: React.FC<ButtonProps> = ({
     shadow = true,
     className = '',
     wrapLink,
+    handleClick,
 }): JSX.Element => {
     const isGhost = ghost ? 'c-buttoncta--ghost' : ''
     const isGrey = grey ? 'c-buttoncta--grey' : ''
@@ -45,6 +47,7 @@ const ButtonCTA: React.FC<ButtonProps> = ({
             className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isGrey} ${isCenter} ${hasShadow} ${className}`}
             target={buttonTarget}
             href={link}
+            onClick={handleClick}
         >
             {icon && <Icon icon={icon} />}
             {children}
