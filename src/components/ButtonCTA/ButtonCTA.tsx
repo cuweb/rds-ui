@@ -44,7 +44,6 @@ const ButtonCTA: React.FC<ButtonProps> = ({
             wrapper={wrapLink}
             className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isGrey} ${isCenter} ${hasShadow} ${className}`}
             target={buttonTarget}
-            component='button'
             href={link}
         >
             {icon && <Icon icon={icon} />}
