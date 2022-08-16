@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.7] - 2022-08-16
+
+### Changed
+
+-   Added the new link wrapper component
+-   added handle click to button CTA
+
 ## [1.4.6] - 2022-07-12
 
 ### Changed
