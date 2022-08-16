@@ -9,6 +9,7 @@ export interface ListingEventProps {
     data: EventListProps[]
     noUblock?: boolean
     lineClamp?: number
+    wrapLink?: any
 }
 
 export interface EventListProps {
@@ -30,13 +31,14 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
     data,
     noUblock,
     lineClamp = 1,
+    wrapLink,
 }): JSX.Element => {
     return (
         <ListingWrapper type='event' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/Event'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
-                        <Link href={item.src}>
+                        <Link wrapper={wrapLink} href={item.src}>
                             <time itemProp='startDate' dateTime=''>
                                 {convertDate(item.date, 'month')}
                                 <span>{convertDate(item.date, 'day')}</span>

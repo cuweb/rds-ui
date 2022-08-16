@@ -4,13 +4,18 @@ import Icon from '@components/Icon/Icon'
 import ButtonSocial from '@components/ButtonSocial/ButtonSocial'
 import Link from '@components/Link/Link'
 
+export interface FooterSitemapProps {
+    wrapLink?: any
+}
 export interface SocialButtonsProps {
     url: string
     text: string
     type: string
 }
 
-const FooterSitemap: React.FC = (): JSX.Element => {
+const FooterSitemap: React.FC<FooterSitemapProps> = ({
+    wrapLink,
+}): JSX.Element => {
     const socialButtons: SocialButtonsProps[] = [
         {
             type: 'facebook',
@@ -52,42 +57,66 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Admissions</h2>
                             <ul>
                                 <li>
-                                    <Link href='https://admissions.carleton.ca/programs/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://admissions.carleton.ca/programs/'
+                                    >
                                         Programs
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://admissions.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://admissions.carleton.ca/'
+                                    >
                                         Undergraduate
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://graduate.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://graduate.carleton.ca/'
+                                    >
                                         Graduate
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://admissions.carleton.ca/applicant-type/international-applicants/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://admissions.carleton.ca/applicant-type/international-applicants/'
+                                    >
                                         International
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/prospective/#anchor3'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/prospective/#anchor3'
+                                    >
                                         Professional Development
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://admissions.carleton.ca/campustours/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://admissions.carleton.ca/campustours/'
+                                    >
                                         Campus Tours
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/awards/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/awards/'
+                                    >
                                         Financial Aid
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/cie/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/cie/'
+                                    >
                                         Initiatives In Education
                                     </Link>
                                 </li>
@@ -97,82 +126,130 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Students / Academics</h2>
                             <ul className='footersitemap__list--two'>
                                 <li>
-                                    <Link href='https://students.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://students.carleton.ca/'
+                                    >
                                         Undergrad Homepage
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://gradstudents.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://gradstudents.carleton.ca/'
+                                    >
                                         Grad Homepage
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://calendar.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://calendar.carleton.ca/'
+                                    >
                                         Calendars
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/cuol/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/cuol/'
+                                    >
                                         Carleton Online
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/cc/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/cc/'
+                                    >
                                         CO-OP &amp; Career Services
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/culearn/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/culearn/'
+                                    >
                                         cuLearn
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/academics/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/academics/'
+                                    >
                                         Departments &amp; Faculties
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/discoverycentre/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/discoverycentre/'
+                                    >
                                         Discovery Centre
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/ccs/all-services/email/carleton-student-email/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/ccs/all-services/email/carleton-student-email/'
+                                    >
                                         Email
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://library.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://library.carleton.ca/'
+                                    >
                                         Library
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://housing.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://housing.carleton.ca/'
+                                    >
                                         Housing
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/provost/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/provost/'
+                                    >
                                         Provost`s Office
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/registrar/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/registrar/'
+                                    >
                                         Registrar`s Office
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/registrar/registration/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/registrar/registration/'
+                                    >
                                         Registration
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/academics/schedules-dates/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/academics/schedules-dates/'
+                                    >
                                         Schedules &amp; Dates
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/academics/support/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/academics/support/'
+                                    >
                                         Support Services
                                     </Link>
                                 </li>
@@ -182,37 +259,58 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Campus</h2>
                             <ul className='footersitemap__list'>
                                 <li>
-                                    <Link href='https://carleton.ca/campus/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/campus/'
+                                    >
                                         Campus Map
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/campus/directions/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/campus/directions/'
+                                    >
                                         Directions
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://events.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://events.carleton.ca/'
+                                    >
                                         Events
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/parking/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/parking/'
+                                    >
                                         Parking
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://carleton.ca/safety/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://carleton.ca/safety/'
+                                    >
                                         Safety
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://dining.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://dining.carleton.ca/'
+                                    >
                                         Dining Services
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://cusaonline.ca/clubs/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://cusaonline.ca/clubs/'
+                                    >
                                         Clubs &amp; Societies
                                     </Link>
                                 </li>
@@ -222,22 +320,34 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                             <h2>Ravens for life</h2>
                             <ul className='footersitemap__list'>
                                 <li>
-                                    <Link href='https://futurefunder.carleton.ca'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://futurefunder.carleton.ca'
+                                    >
                                         Giving to Carleton
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://athletics.carleton.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://athletics.carleton.ca/'
+                                    >
                                         Athletics &amp; Recreation
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://goravens.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://goravens.ca/'
+                                    >
                                         Go Ravens - Varsity
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href='https://goravens.ca/'>
+                                    <Link
+                                        wrapper={wrapLink}
+                                        href='https://goravens.ca/'
+                                    >
                                         <Icon
                                             icon='mark-ravens-white'
                                             size={76}
@@ -259,12 +369,15 @@ const FooterSitemap: React.FC = (): JSX.Element => {
                         </div>
                         <span className='p-tel'>
                             Phone:{' '}
-                            <Link href='tel:+1-613-520-2600'>
+                            <Link wrapper={wrapLink} href='tel:+1-613-520-2600'>
                                 1-613-520-2600
                             </Link>
                         </span>
                         <div>
-                            <Link href='https://carleton.ca/about/contact/'>
+                            <Link
+                                wrapper={wrapLink}
+                                href='https://carleton.ca/about/contact/'
+                            >
                                 Contact Info
                             </Link>
                         </div>

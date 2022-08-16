@@ -8,9 +8,10 @@ export interface NavMenuButtonProps {
     type: NavMenuTypes
     title: string
     link: string
-    onClick: (event: MouseEvent) => void
     isOpen: boolean
     icon?: string
+    wrapLink?: any
+    onClick: (event: MouseEvent) => void
 }
 
 const NavMenuButton: FC<NavMenuButtonProps> = ({
@@ -19,6 +20,7 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
     link,
     isOpen,
     icon,
+    wrapLink,
     onClick,
 }): JSX.Element => {
     const buttonTypes = {
@@ -38,7 +40,9 @@ const NavMenuButton: FC<NavMenuButtonProps> = ({
         ),
         side: (
             <>
-                <Link href={link}>{title}</Link>
+                <Link wrapper={wrapLink} href={link}>
+                    {title}
+                </Link>
                 <button
                     type='button'
                     aria-expanded={isOpen}

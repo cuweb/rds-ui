@@ -58,3 +58,14 @@ NoShadow.args = {
     link: '#',
     shadow: false,
 }
+
+export const handleClick = Template.bind({})
+handleClick.args = {
+    text: 'Handle Click ',
+    wrapLink: 'div',
+    shadow: false,
+    handleClick: () => {
+        alert('handle click with Button CTA  has been clicked')
+    },
+    grey: true,
+}

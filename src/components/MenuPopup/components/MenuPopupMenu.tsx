@@ -17,17 +17,20 @@ export interface MenuPopupMenuProps {
         preventDefault?: boolean
     }[]
     className?: string
+    wrapLink?: any
 }
 
 const MenuPopupMenu: FC<MenuPopupMenuProps> = ({
     className = '',
     menu,
+    wrapLink,
 }): JSX.Element => {
     return (
         <ul className={`menupopup__menu ${className}`} aria-label='menupopup'>
             {menu.map((item, index) => (
                 <li key={index} className={item.separator ? 'popup__sep' : ''}>
                     <Link
+                        wrapper={wrapLink}
                         href={item.link}
                         className={item.className}
                         onClick={(e) => {

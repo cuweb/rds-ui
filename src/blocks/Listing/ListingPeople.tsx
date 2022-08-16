@@ -7,6 +7,7 @@ export interface ListingPeopleProps {
     data: ListProps[]
     noUblock?: boolean
     lineClamp?: number
+    wrapLink?: any
 }
 
 export interface ListProps {
@@ -26,13 +27,14 @@ const ListingPeople: React.FC<ListingPeopleProps & ListingHeaderProps> = ({
     data,
     noUblock,
     lineClamp = 1,
+    wrapLink,
 }): JSX.Element => {
     return (
         <ListingWrapper type='people' header={header} noUblock={noUblock}>
             <ul itemScope itemType='http://schema.org/Person'>
                 {data.map((item, index) => (
                     <li itemProp='item' key={index}>
-                        <Link href={item.src}>
+                        <Link wrapper={wrapLink} href={item.src}>
                             {item.image && (
                                 <figure>
                                     <img

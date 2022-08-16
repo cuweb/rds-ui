@@ -8,8 +8,8 @@ import PanelHeader from './components/PanelHeader'
 import Listing from '@blocks/Listing/Listing'
 import Avatar from '@components/Avatar/Avatar'
 import Ublock from '@components/Ublock/Ublock'
-import { UserInfoType } from 'types/UserInfo'
 import Link from '@components/Link/Link'
+import { UserInfoType } from 'types/UserInfo'
 
 export default {
     title: `Blocks/Panel`,

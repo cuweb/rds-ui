@@ -9,6 +9,7 @@ export interface CardProps {
     header: string
     description?: string
     image: CardImageProps
+    wrapLink?: any
 }
 
 const Card: React.FC<CardProps & CardImageProps> = ({
@@ -16,9 +17,10 @@ const Card: React.FC<CardProps & CardImageProps> = ({
     header,
     description,
     image,
+    wrapLink,
 }): JSX.Element => (
     <article className='c-card' itemScope itemType='http://schema.org/Article'>
-        <Link href={link}>
+        <Link wrapper={wrapLink} href={link}>
             <CardImage image={image} />
             <header>
                 <CardTitle>{header}</CardTitle>

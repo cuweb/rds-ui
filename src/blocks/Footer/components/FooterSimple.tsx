@@ -14,6 +14,7 @@ export interface FooterSimpleProps {
     end?: string
     phone?: string
     fax?: string
+    wrapLink?: any
 }
 
 export interface SocialButtonsProps {
@@ -33,6 +34,7 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
     end,
     phone,
     fax,
+    wrapLink,
 }): JSX.Element => {
     const socialButtons: SocialButtonsProps[] = [
         {
@@ -91,7 +93,10 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                                 className='p-extended-address'
                                 itemProp='name'
                             >
-                                <Link href='https://carleton.ca/campus/map/'>
+                                <Link
+                                    wrapper={wrapLink}
+                                    href='https://carleton.ca/campus/map/'
+                                >
                                     {address}
                                 </Link>
                             </span>
@@ -123,7 +128,9 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                             <br />
                             {map && (
                                 <span className='u-map'>
-                                    <Link href={map}>View Map</Link>
+                                    <Link wrapper={wrapLink} href={map}>
+                                        View Map
+                                    </Link>
                                 </span>
                             )}
                         </p>
@@ -131,7 +138,10 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                             {email && (
                                 <>
                                     <span className='u-email' itemProp='email'>
-                                        <Link href={`mailto:${email}`}>
+                                        <Link
+                                            wrapper={wrapLink}
+                                            href={`mailto:${email}`}
+                                        >
                                             {email}
                                         </Link>
                                     </span>
@@ -145,7 +155,10 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                                         itemProp='telephone'
                                     >
                                         Phone:{' '}
-                                        <Link href={`tel:${phone}`}>
+                                        <Link
+                                            wrapper={wrapLink}
+                                            href={`tel:${phone}`}
+                                        >
                                             {phone}
                                         </Link>
                                     </span>
@@ -165,7 +178,9 @@ const FooterSimple: React.FC<FooterSimpleProps> = ({
                             )}
                             {contact && (
                                 <span className='p-contact' itemProp='url'>
-                                    <Link href={contact}>Contact page</Link>
+                                    <Link wrapper={wrapLink} href={contact}>
+                                        Contact page
+                                    </Link>
                                 </span>
                             )}
                             <br />
