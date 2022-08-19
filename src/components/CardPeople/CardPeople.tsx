@@ -4,7 +4,6 @@ import React from 'react'
 export interface CardPeopleProps {
     link: string
     image: ImageProps
-    header: string
     description: string
     firstName: string
     lastName: string

@@ -10,7 +10,6 @@ export interface ListingProps {
     noArrow?: boolean
     lineClamp?: number
     wrapLink?: any
-    children?: React.ReactNode
 }
 export interface BaseListProps {
     src: string

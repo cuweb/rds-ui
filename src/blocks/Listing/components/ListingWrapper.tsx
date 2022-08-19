@@ -9,6 +9,7 @@ export interface ListingWrapperProps {
     type: ListingTypes
     uBlockProps?: UblockProps
     noArrow?: boolean
+    children: React.ReactNode
 }
 
 const ListingWrapper: FC<ListingWrapperProps & ListingHeaderProps> = ({

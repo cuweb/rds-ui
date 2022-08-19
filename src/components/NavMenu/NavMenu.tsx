@@ -6,12 +6,14 @@ export interface NavMenuProps {
     type: NavMenuTypes
     label?: string
     isMobile?: boolean
+    wrapLink?: any
     menu: Array<NavMenuItemTypes>
 }
 const NavMenu: FC<NavMenuProps> = ({
     type,
     label = 'Main Navigation',
     menu,
+    wrapLink,
     isMobile,
 }): JSX.Element => {
     return (
@@ -26,6 +28,7 @@ const NavMenu: FC<NavMenuProps> = ({
                         item={item}
                         type={type}
                         key={index}
+                        wrapLink={wrapLink}
                         isMobile={isMobile}
                     />
                 ))}
