@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 
 export interface NavUserWrapper {
     className?: string
-    href?: string
     children?: React.ReactNode
 }
 

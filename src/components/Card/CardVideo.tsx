@@ -9,7 +9,6 @@ export interface CardVideoProps {
     image: CardImageProps
     header: string
     wrapLink?: any
-    children?: React.ReactNode
 }
 
 const CardVideo: React.FC<CardVideoProps & CardImageProps> = ({
