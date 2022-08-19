@@ -36,7 +36,7 @@ export default [
         },
         plugins: [
             scss({
-                watch: 'src/**/*.scss',
+                watch: 'src/',
                 output: 'dist/rds.css',
                 outputStyle: 'compressed',
                 processor: () => postcss([autoprefixer()]),
