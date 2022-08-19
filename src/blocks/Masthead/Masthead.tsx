@@ -50,6 +50,7 @@ const Masthead: React.FC<MastheadProps> = ({
                                 <MastheadActions
                                     items={actions}
                                     isMobile={isMobile}
+                                    wrapLink={wrapLink}
                                 />
                             )}
                             {hasMobileButton && (
