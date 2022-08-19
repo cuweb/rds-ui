@@ -18,7 +18,7 @@
         "build:docs": "rm -rf docs && build-storybook --quiet -o ./docs/storybook",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.tsx",
-        "test": "rm -rf dist && rollup -c && concurrently \"yarn watch\" \"yarn start-storybook --quiet -p 6006\" \"cypress open\"",
+        "test": "rm -rf dist && rollup -c && concurrently \"yarn watch\" \"yarn start-storybook --quiet -p 6006\" \"cypress open --config-file=cypress.config.ts\"",
         "test:ci": "rm -rf dist && rollup -c && concurrently \"yarn watch\" \"yarn start-storybook --quiet --ci -p 6006\" \"cypress run --headless\"",
         "test:release": "rm -rf dist && rm -rf docs && yarn build && yarn build:docs && yarn test:ci"
     },
