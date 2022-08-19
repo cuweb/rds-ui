@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0] - 2022-08-19
+
+### Changed
+
+-   Updating the toast component
+-   Major package update and small bug fix on rds -ui
+
 ## [1.4.7] - 2022-08-16
 
 ### Changed
