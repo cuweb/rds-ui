@@ -16,11 +16,13 @@ export type MastheadActionsTypes = {
 interface MastheadActionsProps {
     items: MastheadActionsTypes
     isMobile?: boolean
+    wrapLink?: any
 }
 
 const MastheadActions: React.FC<MastheadActionsProps> = ({
     items,
     isMobile,
+    wrapLink,
 }): JSX.Element => {
     const { search, login, buttons } = items
     const showButtons = !isMobile && buttons
@@ -29,6 +31,7 @@ const MastheadActions: React.FC<MastheadActionsProps> = ({
             {showButtons &&
                 buttons.map((item, index) => (
                     <NavMenuItem
+                        wrapLink={wrapLink}
                         type='top'
                         direction='right'
                         item={{

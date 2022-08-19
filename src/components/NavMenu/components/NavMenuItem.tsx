@@ -99,6 +99,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                 type={type}
                 title={title}
                 link={link}
+                wrapLink={wrapLink}
                 isOpen={isOpen}
                 onClick={() => setIsOpen(!isOpen)}
                 icon={icon}
@@ -116,6 +117,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                                 handleAction: subItem.handleAction,
                                 preventDefault: subItem.preventDefault,
                             }}
+                            wrapLink={wrapLink}
                             key={index}
                         />
                     ))}

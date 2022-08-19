@@ -7,17 +7,12 @@ import NavUserWrapper from './NavUserWrapper'
 export interface NavUserProps {
     user: UserInfoType
     className?: string
-    href?: string
     children?: React.ReactNode
 }
 
-const NavUser: FC<NavUserProps> = ({
-    user,
-    className = '',
-    href,
-}): JSX.Element => {
+const NavUser: FC<NavUserProps> = ({ user, className = '' }): JSX.Element => {
     return (
-        <NavUserWrapper className={className} href={href}>
+        <NavUserWrapper className={className}>
             <NavUserImage user={user} />
             <NavUserInfo {...user} />
         </NavUserWrapper>

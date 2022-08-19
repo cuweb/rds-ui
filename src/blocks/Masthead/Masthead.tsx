@@ -16,6 +16,7 @@ import theme from 'config/theme'
 export interface MastheadProps {
     title: string
     url?: string
+    wrapLink?: any
     brand?: MastHeadBrand
     actions?: MastheadActionsTypes
     menu?: NavMenuItemTypes[]
@@ -25,6 +26,7 @@ export interface MastheadProps {
 const Masthead: React.FC<MastheadProps> = ({
     title,
     url = '/',
+    wrapLink,
     brand,
     actions,
     menu,
@@ -67,7 +69,14 @@ const Masthead: React.FC<MastheadProps> = ({
             </Ublock>
             {hasMobileMenu && (
                 <Overlay type='menu'>
-                    {menu && <NavMenu type='top' menu={menu} isMobile />}
+                    {menu && (
+                        <NavMenu
+                            type='top'
+                            menu={menu}
+                            wrapLink={wrapLink}
+                            isMobile
+                        />
+                    )}
                     <div className='b-masthead__content'>{children}</div>
                 </Overlay>
             )}
