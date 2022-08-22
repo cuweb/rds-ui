@@ -8054,14 +8054,7 @@ var NavMenuItem = function (_a) {
     }, [type]);
     if (!subMenu)
         return (React__default["default"].createElement("li", { className: "".concat(className) },
-            React__default["default"].createElement(Link, { wrapper: wrapLink, href: link, onClick: function (e) {
-                    // eslint-disable-next-line no-unused-expressions
-                    item.preventDefault && e.preventDefault();
-                    // eslint-disable-next-line no-unused-expressions
-                    item.handleAction && item.handleAction(e);
-                } },
-                icon && (React__default["default"].createElement(Icon, { className: 'c-navmenu__icon', icon: icon, size: 16 })),
-                title)));
+            React__default["default"].createElement(Link, { wrapper: wrapLink, href: link }, title)));
     return (React__default["default"].createElement("li", { className: "has-submenu ".concat(subMenuClassName[type], " ").concat(isOpenClassName, " ").concat(className), ref: subMenuContainer },
         React__default["default"].createElement(NavMenuButton, { type: type, title: title, link: link, wrapLink: wrapLink, isOpen: isOpen, onClick: function () { return setIsOpen(!isOpen); }, icon: icon }),
         React__default["default"].createElement("ul", { className: "is-submenu ".concat(isOpenClassName) },
