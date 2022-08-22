@@ -8131,14 +8131,12 @@ var Masthead = function (_a) {
     var title = _a.title, _b = _a.url, url = _b === void 0 ? '/' : _b, wrapLink = _a.wrapLink, brand = _a.brand, actions = _a.actions, menu = _a.menu, children = _a.children;
     var _c = React.useState(false), isOpen = _c[0], setIsOpen = _c[1];
     var isMobile = useWindowSize().width < theme.breakpoints.tablet;
-    var hasMenu = menu && !isMobile;
     var hasMobileMenu = isMobile && isOpen;
     var hasMobileButton = isMobile;
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement(Ublock, { id: 'id-masthead', full: true },
             React__default["default"].createElement("div", { className: 'b-masthead' },
                 React__default["default"].createElement(MastheadTitle, { title: title, url: url, brand: brand }),
-                hasMenu && React__default["default"].createElement(NavMenu, { type: 'top', menu: menu }),
                 React__default["default"].createElement("div", { className: 'b-masthead__extra' },
                     React__default["default"].createElement("ul", { className: 'masthead__actions' },
                         actions && (React__default["default"].createElement(MastheadActions, { items: actions, isMobile: isMobile, wrapLink: wrapLink })),

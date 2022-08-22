@@ -8123,14 +8123,12 @@ var Masthead = function (_a) {
     var title = _a.title, _b = _a.url, url = _b === void 0 ? '/' : _b, wrapLink = _a.wrapLink, brand = _a.brand, actions = _a.actions, menu = _a.menu, children = _a.children;
     var _c = useState(false), isOpen = _c[0], setIsOpen = _c[1];
     var isMobile = useWindowSize().width < theme.breakpoints.tablet;
-    var hasMenu = menu && !isMobile;
     var hasMobileMenu = isMobile && isOpen;
     var hasMobileButton = isMobile;
     return (React.createElement(React.Fragment, null,
         React.createElement(Ublock, { id: 'id-masthead', full: true },
             React.createElement("div", { className: 'b-masthead' },
                 React.createElement(MastheadTitle, { title: title, url: url, brand: brand }),
-                hasMenu && React.createElement(NavMenu, { type: 'top', menu: menu }),
                 React.createElement("div", { className: 'b-masthead__extra' },
                     React.createElement("ul", { className: 'masthead__actions' },
                         actions && (React.createElement(MastheadActions, { items: actions, isMobile: isMobile, wrapLink: wrapLink })),
