@@ -8112,6 +8112,13 @@ var MastheadMobileButton = function (_a) {
             React__default["default"].createElement(Icon, { icon: 'X' }))));
 };
 
+var NavMenu = function (_a) {
+    var type = _a.type, _b = _a.label, label = _b === void 0 ? 'Main Navigation' : _b, menu = _a.menu, wrapLink = _a.wrapLink, isMobile = _a.isMobile;
+    console.log(menu);
+    return (React__default["default"].createElement("nav", { className: "c-nav c-nav--".concat(type, "nav"), role: 'presentation', "aria-label": label },
+        React__default["default"].createElement("ul", { className: "nav__menu nav__menu--".concat(type) }, menu.map(function (item, index) { return (React__default["default"].createElement(NavMenuItem, { item: item, type: type, key: index, wrapLink: wrapLink, isMobile: isMobile })); }))));
+};
+
 var theme = {
     breakpoints: {
         mobile: 450,
@@ -8121,29 +8128,25 @@ var theme = {
 };
 
 var Masthead = function (_a) {
-    var title = _a.title, _b = _a.url, url = _b === void 0 ? '/' : _b, brand = _a.brand, actions = _a.actions, children = _a.children;
+    var title = _a.title, _b = _a.url, url = _b === void 0 ? '/' : _b, wrapLink = _a.wrapLink, brand = _a.brand, actions = _a.actions, menu = _a.menu, children = _a.children;
     var _c = React.useState(false), isOpen = _c[0], setIsOpen = _c[1];
     var isMobile = useWindowSize().width < theme.breakpoints.tablet;
+    var hasMenu = menu && !isMobile;
     var hasMobileMenu = isMobile && isOpen;
     var hasMobileButton = isMobile;
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement(Ublock, { id: 'id-masthead', full: true },
             React__default["default"].createElement("div", { className: 'b-masthead' },
                 React__default["default"].createElement(MastheadTitle, { title: title, url: url, brand: brand }),
+                hasMenu && React__default["default"].createElement(NavMenu, { type: 'top', menu: menu }),
                 React__default["default"].createElement("div", { className: 'b-masthead__extra' },
                     React__default["default"].createElement("ul", { className: 'masthead__actions' },
                         actions && (React__default["default"].createElement(MastheadActions, { items: actions, isMobile: isMobile })),
                         hasMobileButton && (React__default["default"].createElement(MastheadMobileButton, { isOpen: isOpen, setIsOpen: setIsOpen }))),
                     !isMobile && (React__default["default"].createElement("div", { className: 'b-masthead__content' }, children))))),
         hasMobileMenu && (React__default["default"].createElement(Overlay, { type: 'menu' },
+            menu && (React__default["default"].createElement(NavMenu, { type: 'top', menu: menu, wrapLink: wrapLink, isMobile: true })),
             React__default["default"].createElement("div", { className: 'b-masthead__content' }, children)))));
-};
-
-var NavMenu = function (_a) {
-    var type = _a.type, _b = _a.label, label = _b === void 0 ? 'Main Navigation' : _b, menu = _a.menu, wrapLink = _a.wrapLink, isMobile = _a.isMobile;
-    console.log(menu);
-    return (React__default["default"].createElement("nav", { className: "c-nav c-nav--".concat(type, "nav"), role: 'presentation', "aria-label": label },
-        React__default["default"].createElement("ul", { className: "nav__menu nav__menu--".concat(type) }, menu.map(function (item, index) { return (React__default["default"].createElement(NavMenuItem, { item: item, type: type, key: index, wrapLink: wrapLink, isMobile: isMobile })); }))));
 };
 
 var SidebarMenu = function (_a) {
