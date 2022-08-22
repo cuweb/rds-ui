@@ -43,28 +43,6 @@ const Masthead: React.FC<MastheadProps> = ({
             <Ublock id='id-masthead' full>
                 <div className='b-masthead'>
                     <MastheadTitle title={title} url={url} brand={brand} />
-                    <div className='b-masthead__extra'>
-                        <ul className='masthead__actions'>
-                            {actions && (
-                                <MastheadActions
-                                    items={actions}
-                                    isMobile={isMobile}
-                                    wrapLink={wrapLink}
-                                />
-                            )}
-                            {hasMobileButton && (
-                                <MastheadMobileButton
-                                    isOpen={isOpen}
-                                    setIsOpen={setIsOpen}
-                                />
-                            )}
-                        </ul>
-                        {!isMobile && (
-                            <div className='b-masthead__content'>
-                                {children}
-                            </div>
-                        )}
-                    </div>
                 </div>
             </Ublock>
             {hasMobileMenu && (
