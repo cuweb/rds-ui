@@ -33,7 +33,7 @@ import Icon from './components/Icon/Icon'
 import ImageTiles from './blocks/ImageTiles/ImageTiles'
 import ImageCaption from './components/ImageCaption/ImageCaption'
 import Layout from './layouts/Layout/Layout'
-import LinkWrapper from './components/LinkWrapper/LinkWrapper'
+import Link from './components/Link/Link'
 import Listing from './blocks/Listing/Listing'
 import ListingEvent from './blocks/Listing/ListingEvent'
 import ListingNews from './blocks/Listing/ListingNews'
@@ -104,7 +104,7 @@ export {
     ImageTiles,
     ImageCaption,
     Layout,
-    LinkWrapper,
+    Link,
     Listing,
     ListingEvent,
     ListingNews,
