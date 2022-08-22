@@ -52,6 +52,7 @@ const Masthead: React.FC<MastheadProps> = ({
                                 <MastheadActions
                                     items={actions}
                                     isMobile={isMobile}
+                                    wrapLink={wrapLink}
                                 />
                             )}
                             {hasMobileButton && (
@@ -71,6 +72,14 @@ const Masthead: React.FC<MastheadProps> = ({
             </Ublock>
             {hasMobileMenu && (
                 <Overlay type='menu'>
+                    {menu && (
+                        <NavMenu
+                            type='top'
+                            menu={menu}
+                            wrapLink={wrapLink}
+                            isMobile
+                        />
+                    )}
                     <div className='b-masthead__content'>{children}</div>
                 </Overlay>
             )}
