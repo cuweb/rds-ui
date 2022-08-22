@@ -67,7 +67,16 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
     if (!subMenu)
         return (
             <li className={`${className}`}>
-                <Link wrapper={wrapLink} href={link}>
+                <Link
+                    wrapper={wrapLink}
+                    href={link}
+                    onClick={(e) => {
+                        // eslint-disable-next-line no-unused-expressions
+                        item.preventDefault && e.preventDefault()
+                        // eslint-disable-next-line no-unused-expressions
+                        item.handleAction && item.handleAction(e)
+                    }}
+                >
                     {title}
                 </Link>
             </li>
