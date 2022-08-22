@@ -1,0 +1,12 @@
+import { Meta, Story } from '@storybook/react';
+declare const _default: Meta<import("@storybook/react").Args>;
+export default _default;
+export declare const Base: Story<import("@storybook/react").Args>;
+export declare const GreyBackground: Story<import("@storybook/react").Args>;
+export declare const BlackBackground: Story<import("@storybook/react").Args>;
+export declare const NoHeading: Story<import("@storybook/react").Args>;
+export declare const FullWidth: Story<import("@storybook/react").Args>;
+export declare const Wide: Story<import("@storybook/react").Args>;
+export declare const NoBlock: Story<import("@storybook/react").Args>;
+export declare const NoPadding: Story<import("@storybook/react").Args>;
+export declare const CustomClass: Story<import("@storybook/react").Args>;

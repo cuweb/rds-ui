@@ -1,0 +1,12 @@
+import { Meta, Story } from '@storybook/react';
+import { ButtonProps } from './ButtonCTA';
+declare const _default: Meta<import("@storybook/react").Args>;
+export default _default;
+export declare const Default: Story<ButtonProps>;
+export declare const Ghost: Story<ButtonProps>;
+export declare const Grey: Story<ButtonProps>;
+export declare const WithIcon: Story<ButtonProps>;
+export declare const FullWidth: Story<ButtonProps>;
+export declare const Centered: Story<ButtonProps>;
+export declare const NoShadow: Story<ButtonProps>;
+export declare const handleClick: Story<ButtonProps>;

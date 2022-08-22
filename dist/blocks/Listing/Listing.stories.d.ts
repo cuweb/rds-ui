@@ -1,0 +1,17 @@
+import { Meta } from '@storybook/react';
+declare const _default: Meta<import("@storybook/react").Args>;
+export default _default;
+export declare const BaseListing: () => JSX.Element;
+export declare const WithoutArrow: () => JSX.Element;
+export declare const WithSubtitles: () => JSX.Element;
+export declare const WithImage: () => JSX.Element;
+export declare const WithBadge: () => JSX.Element;
+export declare const WithIcon: () => JSX.Element;
+export declare const FilesListing: () => JSX.Element;
+export declare const EventsVariant: () => JSX.Element;
+export declare const NewsVariant: () => JSX.Element;
+export declare const NewsVariantWithImage: () => JSX.Element;
+export declare const PeopleVariant: () => JSX.Element;
+export declare const VideoVariant: () => JSX.Element;
+export declare const TwoColumn: () => JSX.Element;
+export declare const InranetExample: () => JSX.Element;

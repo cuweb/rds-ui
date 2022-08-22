@@ -1,0 +1,10 @@
+import { Meta, Story } from '@storybook/react';
+declare const _default: Meta<import("@storybook/react").Args>;
+export default _default;
+export declare const ImageToTheRight: Story<import("@storybook/react").Args>;
+export declare const ImageToTheLeft: Story<import("@storybook/react").Args>;
+export declare const GreyBackground: Story<import("@storybook/react").Args>;
+export declare const DefaultHeadings: Story<import("@storybook/react").Args>;
+export declare const CenteredHeadings: Story<import("@storybook/react").Args>;
+export declare const LargeWidthBlocks: Story<import("@storybook/react").Args>;
+export declare const GroupingBlocks: Story<import("@storybook/react").Args>;
