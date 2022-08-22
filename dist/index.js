@@ -8059,7 +8059,10 @@ var NavMenuItem = function (_a) {
                     item.preventDefault && e.preventDefault();
                     // eslint-disable-next-line no-unused-expressions
                     item.handleAction && item.handleAction(e);
-                } }, title)));
+                } },
+                React__default["default"].createElement(React__default["default"].Fragment, null,
+                    icon && (React__default["default"].createElement(Icon, { className: 'c-navmenu__icon', icon: icon, size: 16 })),
+                    title))));
     return (React__default["default"].createElement("li", { className: "has-submenu ".concat(subMenuClassName[type], " ").concat(isOpenClassName, " ").concat(className), ref: subMenuContainer },
         React__default["default"].createElement(NavMenuButton, { type: type, title: title, link: link, wrapLink: wrapLink, isOpen: isOpen, onClick: function () { return setIsOpen(!isOpen); }, icon: icon }),
         React__default["default"].createElement("ul", { className: "is-submenu ".concat(isOpenClassName) },
@@ -8094,8 +8097,9 @@ var MastheadTitle = function (_a) {
     var brandLogo = brand ? (React__default["default"].createElement("img", { className: 'masthead__brand', src: brand, alt: 'Site Logo' })) : (React__default["default"].createElement(Icon, { icon: 'cushield', size: 24 }));
     return (React__default["default"].createElement("h1", null,
         React__default["default"].createElement(Link, { wrapper: wrapLink, href: url },
-            brandLogo,
-            !brand && title)));
+            React__default["default"].createElement(React__default["default"].Fragment, null,
+                brandLogo,
+                !brand && title))));
 };
 
 var MastheadMobileButton = function (_a) {
@@ -8134,7 +8138,7 @@ var Masthead = function (_a) {
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
         React__default["default"].createElement(Ublock, { id: 'id-masthead', full: true },
             React__default["default"].createElement("div", { className: 'b-masthead' },
-                React__default["default"].createElement(MastheadTitle, { title: title, url: url, brand: brand }),
+                React__default["default"].createElement(MastheadTitle, { title: title, url: url, brand: brand, wrapLink: wrapLink }),
                 hasMenu && (React__default["default"].createElement(NavMenu, { type: 'top', menu: menu, wrapLink: wrapLink })),
                 React__default["default"].createElement("div", { className: 'b-masthead__extra' },
                     React__default["default"].createElement("ul", { className: 'masthead__actions' },

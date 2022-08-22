@@ -26,8 +26,10 @@ const MastheadTitle: React.FC<MastheadTitleProps> = ({
     return (
         <h1>
             <Link wrapper={wrapLink} href={url}>
-                {brandLogo}
-                {!brand && title}
+                <>
+                    {brandLogo}
+                    {!brand && title}
+                </>
             </Link>
         </h1>
     )

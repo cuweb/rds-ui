@@ -1,6 +1,7 @@
 import React, { FC, useState, useRef, useEffect } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import useEscToClose from '@hooks/useEscKey'
+import Icon from '@components/Icon/Icon'
 import Link from '@components/Link/Link'
 import { NavMenuTypes } from '../NavMenu'
 import NavMenuButton from './NavMenuButton'
@@ -77,7 +78,16 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                         item.handleAction && item.handleAction(e)
                     }}
                 >
-                    {title}
+                    <>
+                        {icon && (
+                            <Icon
+                                className='c-navmenu__icon'
+                                icon={icon}
+                                size={16}
+                            />
+                        )}
+                        {title}
+                    </>
                 </Link>
             </li>
         )

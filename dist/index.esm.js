@@ -8051,7 +8051,10 @@ var NavMenuItem = function (_a) {
                     item.preventDefault && e.preventDefault();
                     // eslint-disable-next-line no-unused-expressions
                     item.handleAction && item.handleAction(e);
-                } }, title)));
+                } },
+                React.createElement(React.Fragment, null,
+                    icon && (React.createElement(Icon, { className: 'c-navmenu__icon', icon: icon, size: 16 })),
+                    title))));
     return (React.createElement("li", { className: "has-submenu ".concat(subMenuClassName[type], " ").concat(isOpenClassName, " ").concat(className), ref: subMenuContainer },
         React.createElement(NavMenuButton, { type: type, title: title, link: link, wrapLink: wrapLink, isOpen: isOpen, onClick: function () { return setIsOpen(!isOpen); }, icon: icon }),
         React.createElement("ul", { className: "is-submenu ".concat(isOpenClassName) },
@@ -8086,8 +8089,9 @@ var MastheadTitle = function (_a) {
     var brandLogo = brand ? (React.createElement("img", { className: 'masthead__brand', src: brand, alt: 'Site Logo' })) : (React.createElement(Icon, { icon: 'cushield', size: 24 }));
     return (React.createElement("h1", null,
         React.createElement(Link, { wrapper: wrapLink, href: url },
-            brandLogo,
-            !brand && title)));
+            React.createElement(React.Fragment, null,
+                brandLogo,
+                !brand && title))));
 };
 
 var MastheadMobileButton = function (_a) {
@@ -8126,7 +8130,7 @@ var Masthead = function (_a) {
     return (React.createElement(React.Fragment, null,
         React.createElement(Ublock, { id: 'id-masthead', full: true },
             React.createElement("div", { className: 'b-masthead' },
-                React.createElement(MastheadTitle, { title: title, url: url, brand: brand }),
+                React.createElement(MastheadTitle, { title: title, url: url, brand: brand, wrapLink: wrapLink }),
                 hasMenu && (React.createElement(NavMenu, { type: 'top', menu: menu, wrapLink: wrapLink })),
                 React.createElement("div", { className: 'b-masthead__extra' },
                     React.createElement("ul", { className: 'masthead__actions' },
