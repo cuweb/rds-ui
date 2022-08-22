@@ -34,7 +34,6 @@ const Masthead: React.FC<MastheadProps> = ({
 }): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const isMobile = useWindowSize().width < theme.breakpoints.tablet
-    // const hasMenu = menu && !isMobile
     const hasMobileMenu = isMobile && isOpen
     const hasMobileButton = isMobile
 

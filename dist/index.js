@@ -8130,7 +8130,6 @@ var Masthead = function (_a) {
     var title = _a.title, _b = _a.url, url = _b === void 0 ? '/' : _b, wrapLink = _a.wrapLink, brand = _a.brand, actions = _a.actions, menu = _a.menu, children = _a.children;
     var _c = React.useState(false), isOpen = _c[0], setIsOpen = _c[1];
     var isMobile = useWindowSize().width < theme.breakpoints.tablet;
-    // const hasMenu = menu && !isMobile
     var hasMobileMenu = isMobile && isOpen;
     var hasMobileButton = isMobile;
     return (React__default["default"].createElement(React__default["default"].Fragment, null,
