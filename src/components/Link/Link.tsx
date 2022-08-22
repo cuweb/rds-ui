@@ -43,26 +43,30 @@ const Link = forwardRef(function Link(
     }: LinkProps,
     ref
 ) {
-    return React.createElement(
-        wrapper || component,
-        {
-            ref,
-            href,
-            as,
-            className,
-            replace,
-            soft,
-            scroll,
-            shallow,
-            passHref,
-            prefetch,
-            locale,
-            target,
-            onClick,
-            onMouseEnter,
-        },
-        children
-    )
+    const nodeProps = {
+        ref,
+        href,
+        as,
+        className,
+        replace,
+        soft,
+        scroll,
+        shallow,
+        passHref,
+        prefetch,
+        locale,
+        target,
+        onClick,
+        onMouseEnter,
+    }
+
+    return wrapper
+        ? React.createElement(component, nodeProps, children)
+        : React.createElement(
+              wrapper,
+              nodeProps,
+              React.createElement(component, {}, children)
+          )
 })
 
 export default Link
