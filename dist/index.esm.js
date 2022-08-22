@@ -1529,7 +1529,7 @@ var Badge = function (_a) {
 
 var Link = forwardRef(function Link(_a, ref) {
     var href = _a.href, as = _a.as, wrapper = _a.wrapper, _b = _a.component, component = _b === void 0 ? 'a' : _b, className = _a.className, replace = _a.replace, soft = _a.soft, scroll = _a.scroll, shallow = _a.shallow, _c = _a.passHref, passHref = _c === void 0 ? false : _c, prefetch = _a.prefetch, locale = _a.locale, target = _a.target, children = _a.children, onClick = _a.onClick, onMouseEnter = _a.onMouseEnter;
-    return React.createElement(wrapper || component, {
+    var nodeProps = {
         ref: ref,
         href: href,
         as: as,
@@ -1544,7 +1544,10 @@ var Link = forwardRef(function Link(_a, ref) {
         target: target,
         onClick: onClick,
         onMouseEnter: onMouseEnter,
-    }, React.createElement("span", null, children));
+    };
+    var linkNode = React.createElement(component, nodeProps, children);
+    var wrapNode = React.createElement(wrapper, nodeProps, React.createElement(component, {}, children));
+    return wrapper ? wrapNode : linkNode;
 });
 
 var BannerBreadcrumbs = function (_a) {
