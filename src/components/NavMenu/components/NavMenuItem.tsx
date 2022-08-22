@@ -77,6 +77,7 @@ const NavMenuItem: FC<NavMenuItemProps> = ({
                         item.handleAction && item.handleAction(e)
                     }}
                 >
+                    <div>hello</div>
                     {title}
                 </Link>
             </li>
