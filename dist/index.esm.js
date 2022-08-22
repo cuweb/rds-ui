@@ -1544,7 +1544,7 @@ var Link = forwardRef(function Link(_a, ref) {
         target: target,
         onClick: onClick,
         onMouseEnter: onMouseEnter,
-    }, children);
+    }, React.createElement("span", null, children));
 });
 
 var BannerBreadcrumbs = function (_a) {

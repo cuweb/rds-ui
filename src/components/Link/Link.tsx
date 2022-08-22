@@ -61,7 +61,7 @@ const Link = forwardRef(function Link(
             onClick,
             onMouseEnter,
         },
-        children
+        <span>{children}</span>
     )
 })
 

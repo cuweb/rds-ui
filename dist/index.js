@@ -1552,7 +1552,7 @@ var Link = React.forwardRef(function Link(_a, ref) {
         target: target,
         onClick: onClick,
         onMouseEnter: onMouseEnter,
-    }, children);
+    }, React__default["default"].createElement("span", null, children));
 });
 
 var BannerBreadcrumbs = function (_a) {
