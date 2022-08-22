@@ -9,8 +9,7 @@ import MastheadTitle, {
     MastHeadBrand,
 } from '@blocks/Masthead/components/MastheadTitle'
 import MastheadMobileButton from '@blocks/Masthead/components/MastheadMobileButton'
-import NavMenu from '@components/NavMenu/NavMenu'
-import { NavMenuItemTypes } from '@components/NavMenu/components/NavMenuItem'
+
 import theme from 'config/theme'
 
 export interface MastheadProps {
@@ -19,7 +18,6 @@ export interface MastheadProps {
     wrapLink?: any
     brand?: MastHeadBrand
     actions?: MastheadActionsTypes
-    menu?: NavMenuItemTypes[]
     children?: React.ReactNode
 }
 
@@ -29,7 +27,6 @@ const Masthead: React.FC<MastheadProps> = ({
     wrapLink,
     brand,
     actions,
-    menu,
     children,
 }): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -68,14 +65,6 @@ const Masthead: React.FC<MastheadProps> = ({
             </Ublock>
             {hasMobileMenu && (
                 <Overlay type='menu'>
-                    {menu && (
-                        <NavMenu
-                            type='top'
-                            menu={menu}
-                            wrapLink={wrapLink}
-                            isMobile
-                        />
-                    )}
                     <div className='b-masthead__content'>{children}</div>
                 </Overlay>
             )}
