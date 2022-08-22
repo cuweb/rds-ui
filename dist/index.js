@@ -8145,7 +8145,6 @@ var Masthead = function (_a) {
                         hasMobileButton && (React__default["default"].createElement(MastheadMobileButton, { isOpen: isOpen, setIsOpen: setIsOpen }))),
                     !isMobile && (React__default["default"].createElement("div", { className: 'b-masthead__content' }, children))))),
         hasMobileMenu && (React__default["default"].createElement(Overlay, { type: 'menu' },
-            menu && (React__default["default"].createElement(NavMenu, { type: 'top', menu: menu, wrapLink: wrapLink, isMobile: true })),
             React__default["default"].createElement("div", { className: 'b-masthead__content' }, children)))));
 };
 
