@@ -16,6 +16,7 @@ const NavMenu: FC<NavMenuProps> = ({
     wrapLink,
     isMobile,
 }): JSX.Element => {
+    console.log(menu)
     return (
         <nav
             className={`c-nav c-nav--${type}nav`}

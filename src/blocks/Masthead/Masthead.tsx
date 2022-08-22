@@ -34,6 +34,7 @@ const Masthead: React.FC<MastheadProps> = ({
 }): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const isMobile = useWindowSize().width < theme.breakpoints.tablet
+    const hasMenu = menu && !isMobile
     const hasMobileMenu = isMobile && isOpen
     const hasMobileButton = isMobile
 
@@ -42,6 +43,7 @@ const Masthead: React.FC<MastheadProps> = ({
             <Ublock id='id-masthead' full>
                 <div className='b-masthead'>
                     <MastheadTitle title={title} url={url} brand={brand} />
+                    {hasMenu && <NavMenu type='top' menu={menu} />}
                     <div className='b-masthead__extra'>
                         <ul className='masthead__actions'>
                             {actions && (

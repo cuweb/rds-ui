@@ -8106,6 +8106,7 @@ var MastheadMobileButton = function (_a) {
 
 var NavMenu = function (_a) {
     var type = _a.type, _b = _a.label, label = _b === void 0 ? 'Main Navigation' : _b, menu = _a.menu, wrapLink = _a.wrapLink, isMobile = _a.isMobile;
+    console.log(menu);
     return (React.createElement("nav", { className: "c-nav c-nav--".concat(type, "nav"), role: 'presentation', "aria-label": label },
         React.createElement("ul", { className: "nav__menu nav__menu--".concat(type) }, menu.map(function (item, index) { return (React.createElement(NavMenuItem, { item: item, type: type, key: index, wrapLink: wrapLink, isMobile: isMobile })); }))));
 };
@@ -8122,12 +8123,14 @@ var Masthead = function (_a) {
     var title = _a.title, _b = _a.url, url = _b === void 0 ? '/' : _b, wrapLink = _a.wrapLink, brand = _a.brand, actions = _a.actions, menu = _a.menu, children = _a.children;
     var _c = useState(false), isOpen = _c[0], setIsOpen = _c[1];
     var isMobile = useWindowSize().width < theme.breakpoints.tablet;
+    var hasMenu = menu && !isMobile;
     var hasMobileMenu = isMobile && isOpen;
     var hasMobileButton = isMobile;
     return (React.createElement(React.Fragment, null,
         React.createElement(Ublock, { id: 'id-masthead', full: true },
             React.createElement("div", { className: 'b-masthead' },
                 React.createElement(MastheadTitle, { title: title, url: url, brand: brand }),
+                hasMenu && React.createElement(NavMenu, { type: 'top', menu: menu }),
                 React.createElement("div", { className: 'b-masthead__extra' },
                     React.createElement("ul", { className: 'masthead__actions' },
                         actions && (React.createElement(MastheadActions, { items: actions, isMobile: isMobile, wrapLink: wrapLink })),
