@@ -39,18 +39,9 @@ const Masthead: React.FC<MastheadProps> = ({
     const hasMobileButton = isMobile
 
     return (
-        <>
-            <Ublock id='id-masthead' full>
-                <div className='b-masthead'>
-                    <MastheadTitle title={title} url={url} brand={brand} />
-                </div>
-            </Ublock>
-            {hasMobileMenu && (
-                <Overlay type='menu'>
-                    <div className='b-masthead__content'>{children}</div>
-                </Overlay>
-            )}
-        </>
+        <Ublock id='id-masthead' full>
+            <div className='b-masthead'>HI</div>
+        </Ublock>
     )
 }
 export default Masthead
