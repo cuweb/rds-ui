@@ -43,7 +43,6 @@ const Masthead: React.FC<MastheadProps> = ({
             <Ublock id='id-masthead' full>
                 <div className='b-masthead'>
                     <MastheadTitle title={title} url={url} brand={brand} />
-
                     <div className='b-masthead__extra'>
                         <ul className='masthead__actions'>
                             {actions && (
@@ -70,14 +69,6 @@ const Masthead: React.FC<MastheadProps> = ({
             </Ublock>
             {hasMobileMenu && (
                 <Overlay type='menu'>
-                    {menu && (
-                        <NavMenu
-                            type='top'
-                            menu={menu}
-                            wrapLink={wrapLink}
-                            isMobile
-                        />
-                    )}
                     <div className='b-masthead__content'>{children}</div>
                 </Overlay>
             )}
