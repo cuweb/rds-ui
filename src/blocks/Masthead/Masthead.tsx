@@ -24,7 +24,6 @@ export interface MastheadProps {
 const Masthead: React.FC<MastheadProps> = ({
     title,
     url = '/',
-    wrapLink,
     brand,
     actions,
     children,
@@ -45,7 +44,6 @@ const Masthead: React.FC<MastheadProps> = ({
                                 <MastheadActions
                                     items={actions}
                                     isMobile={isMobile}
-                                    wrapLink={wrapLink}
                                 />
                             )}
                             {hasMobileButton && (

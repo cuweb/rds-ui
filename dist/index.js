@@ -8121,7 +8121,7 @@ var theme = {
 };
 
 var Masthead = function (_a) {
-    var title = _a.title, _b = _a.url, url = _b === void 0 ? '/' : _b, wrapLink = _a.wrapLink, brand = _a.brand, actions = _a.actions, children = _a.children;
+    var title = _a.title, _b = _a.url, url = _b === void 0 ? '/' : _b, brand = _a.brand, actions = _a.actions, children = _a.children;
     var _c = React.useState(false), isOpen = _c[0], setIsOpen = _c[1];
     var isMobile = useWindowSize().width < theme.breakpoints.tablet;
     var hasMobileMenu = isMobile && isOpen;
@@ -8132,7 +8132,7 @@ var Masthead = function (_a) {
                 React__default["default"].createElement(MastheadTitle, { title: title, url: url, brand: brand }),
                 React__default["default"].createElement("div", { className: 'b-masthead__extra' },
                     React__default["default"].createElement("ul", { className: 'masthead__actions' },
-                        actions && (React__default["default"].createElement(MastheadActions, { items: actions, isMobile: isMobile, wrapLink: wrapLink })),
+                        actions && (React__default["default"].createElement(MastheadActions, { items: actions, isMobile: isMobile })),
                         hasMobileButton && (React__default["default"].createElement(MastheadMobileButton, { isOpen: isOpen, setIsOpen: setIsOpen }))),
                     !isMobile && (React__default["default"].createElement("div", { className: 'b-masthead__content' }, children))))),
         hasMobileMenu && (React__default["default"].createElement(Overlay, { type: 'menu' },
