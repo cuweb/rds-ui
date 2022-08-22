@@ -8130,7 +8130,7 @@ var Masthead = function (_a) {
         React.createElement(Ublock, { id: 'id-masthead', full: true },
             React.createElement("div", { className: 'b-masthead' },
                 React.createElement(MastheadTitle, { title: title, url: url, brand: brand }),
-                hasMenu && React.createElement(NavMenu, { type: 'top', menu: menu }),
+                hasMenu && (React.createElement(NavMenu, { type: 'top', menu: menu, wrapLink: wrapLink })),
                 React.createElement("div", { className: 'b-masthead__extra' },
                     React.createElement("ul", { className: 'masthead__actions' },
                         actions && (React.createElement(MastheadActions, { items: actions, isMobile: isMobile })),

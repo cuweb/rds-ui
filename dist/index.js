@@ -8138,7 +8138,7 @@ var Masthead = function (_a) {
         React__default["default"].createElement(Ublock, { id: 'id-masthead', full: true },
             React__default["default"].createElement("div", { className: 'b-masthead' },
                 React__default["default"].createElement(MastheadTitle, { title: title, url: url, brand: brand }),
-                hasMenu && React__default["default"].createElement(NavMenu, { type: 'top', menu: menu }),
+                hasMenu && (React__default["default"].createElement(NavMenu, { type: 'top', menu: menu, wrapLink: wrapLink })),
                 React__default["default"].createElement("div", { className: 'b-masthead__extra' },
                     React__default["default"].createElement("ul", { className: 'masthead__actions' },
                         actions && (React__default["default"].createElement(MastheadActions, { items: actions, isMobile: isMobile })),
