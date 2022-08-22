@@ -8051,10 +8051,7 @@ var NavMenuItem = function (_a) {
                     item.preventDefault && e.preventDefault();
                     // eslint-disable-next-line no-unused-expressions
                     item.handleAction && item.handleAction(e);
-                } },
-                React.createElement(React.Fragment, null,
-                    icon && (React.createElement(Icon, { className: 'c-navmenu__icon', icon: icon, size: 16 })),
-                    title))));
+                } }, title)));
     return (React.createElement("li", { className: "has-submenu ".concat(subMenuClassName[type], " ").concat(isOpenClassName, " ").concat(className), ref: subMenuContainer },
         React.createElement(NavMenuButton, { type: type, title: title, link: link, wrapLink: wrapLink, isOpen: isOpen, onClick: function () { return setIsOpen(!isOpen); }, icon: icon }),
         React.createElement("ul", { className: "is-submenu ".concat(isOpenClassName) },
@@ -8089,9 +8086,8 @@ var MastheadTitle = function (_a) {
     var brandLogo = brand ? (React.createElement("img", { className: 'masthead__brand', src: brand, alt: 'Site Logo' })) : (React.createElement(Icon, { icon: 'cushield', size: 24 }));
     return (React.createElement("h1", null,
         React.createElement(Link, { wrapper: wrapLink, href: url },
-            React.createElement(React.Fragment, null,
-                brandLogo,
-                !brand && title))));
+            brandLogo,
+            !brand && title)));
 };
 
 var MastheadMobileButton = function (_a) {
