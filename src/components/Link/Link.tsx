@@ -13,7 +13,7 @@ export interface LinkProps {
     soft?: boolean
     scroll?: boolean
     shallow?: boolean
-    passHref?: boolean
+    // passHref?: boolean
     prefetch?: boolean
     locale?: string | false
     target?: string
@@ -33,7 +33,7 @@ const Link = forwardRef(function Link(
         soft,
         scroll,
         shallow,
-        passHref = false,
+        // passHref = false,
         prefetch,
         locale,
         target,
@@ -52,7 +52,7 @@ const Link = forwardRef(function Link(
         soft,
         scroll,
         shallow,
-        passHref,
+        // passHref,
         prefetch,
         locale,
         target,
