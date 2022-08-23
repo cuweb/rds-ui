@@ -61,12 +61,12 @@ const Link = forwardRef(function Link(
     }
 
     return wrapper
-        ? React.createElement(component, nodeProps, children)
-        : React.createElement(
+        ? React.createElement(
               wrapper,
               nodeProps,
               React.createElement(component, {}, children)
           )
+        : React.createElement(component, nodeProps, children)
 })
 
 export default Link
