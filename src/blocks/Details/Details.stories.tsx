@@ -126,6 +126,18 @@ export const FigureVariant = () => (
                 alt: user.image.alt,
             }}
             caption={user.info}
+            variant='figure'
+        />
+        <DetailsMeta details={userDetails} />
+    </Details>
+)
+export const NoImageUrl = () => (
+    <Details title='Profile Example' variant='figure'>
+        <DetailsAside
+            caption={user.info}
+            variant='figure'
+            firstName='Danny'
+            lastName='Brown'
         />
         <DetailsMeta details={userDetails} />
     </Details>
@@ -139,7 +151,7 @@ export const EventsVariant = () => (
                 variant='event'
                 block={{ noPadding: true }}
             >
-                <DetailsAside caption={events.date} />
+                <DetailsAside caption={events.date} variant='event' />
                 <DetailsMeta details={events.details} />
             </Details>
             <div>
@@ -171,7 +183,7 @@ export const EventsPastVariant = () => (
             }
         />
         <Details variant='eventpast' block={{ noPadding: true }}>
-            <DetailsAside caption={events.pastDate} />
+            <DetailsAside caption={events.pastDate} variant='eventpast' />
             <DetailsMeta details={events.details} />
         </Details>
     </Ublock>
