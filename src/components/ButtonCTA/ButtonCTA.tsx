@@ -12,6 +12,7 @@ export interface ButtonProps {
     children?: React.ReactNode
     target?: string
     grey?: boolean
+    white?: boolean
     shadow?: boolean
     className?: string
     wrapLink?: any
@@ -28,6 +29,7 @@ const ButtonCTA: React.FC<ButtonProps> = ({
     children,
     target,
     grey,
+    white,
     shadow = true,
     className = '',
     wrapLink,
@@ -35,6 +37,7 @@ const ButtonCTA: React.FC<ButtonProps> = ({
 }): JSX.Element => {
     const isGhost = ghost ? 'c-buttoncta--ghost' : ''
     const isGrey = grey ? 'c-buttoncta--grey' : ''
+    const isWhite = white ? 'c-buttoncta--white' : ''
     const isFull = full ? 'c-buttoncta--full' : ''
     const hasIcon = icon ? 'u-icon' : ''
     const isCenter = center ? 'c-buttoncta--center' : ''
@@ -44,7 +47,7 @@ const ButtonCTA: React.FC<ButtonProps> = ({
     return (
         <Link
             wrapper={wrapLink}
-            className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isGrey} ${isCenter} ${hasShadow} ${className}`}
+            className={`c-buttoncta ${hasIcon} ${isFull} ${isGhost} ${isGrey} ${isWhite} ${isCenter} ${hasShadow} ${className}`}
             target={buttonTarget}
             href={link}
             onClick={handleClick}

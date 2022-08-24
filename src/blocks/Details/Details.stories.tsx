@@ -111,6 +111,13 @@ export const Base = () => (
         <DetailsMeta details={userDetails} />
     </Details>
 )
+
+export const BaseNoPadding = () => (
+    <Details title='Base Example with no padding'>
+        <DetailsMeta details={userDetails} noPadding />
+    </Details>
+)
+
 export const FigureVariant = () => (
     <Details title='Profile Example' variant='figure'>
         <DetailsAside
