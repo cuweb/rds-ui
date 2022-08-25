@@ -4,6 +4,7 @@ import Link from '@components/Link/Link'
 export interface DetailsMetaProps {
     details: DetailsItemProps[]
     wrapLink?: any
+    noPadding?: boolean
 }
 
 export type DetailsItemProps = {
@@ -15,9 +16,11 @@ export type DetailsItemProps = {
 const DetailsMeta: FC<DetailsMetaProps> = ({
     details,
     wrapLink,
+    noPadding,
 }): JSX.Element => {
+    const noPaddingClassname = noPadding ? `details__meta--nopadding` : ''
     return (
-        <div className='details__meta'>
+        <div className={`details__meta ${noPaddingClassname}`}>
             <dl className='u-link'>
                 {details.map((item, index) => (
                     <React.Fragment key={index}>

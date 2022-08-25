@@ -354,4 +354,14 @@ aside .b-listing--people {
     a svg {
         fill: $dark-icon-fill;
     }
+
+    a p {
+        color: $dark-font-color;
+    }
+}
+
+.raven-mode .b-listing--news {
+    h3 {
+        color: $dark-font-color;
+    }
 }
