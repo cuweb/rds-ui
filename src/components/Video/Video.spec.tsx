@@ -1,4 +1,4 @@
-describe('Video', () => {
+gidescribe('Video', () => {
     it(`Base Video: Should render c-video`, () => {
         cy.visit(
             `${Cypress.env(

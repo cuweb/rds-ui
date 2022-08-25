@@ -3,9 +3,14 @@ import React from 'react'
 export interface TableProps {
     columns: string[]
     rows: string[][]
+    center?: boolean
 }
 
-const Table: React.FC<TableProps> = ({ columns, rows }): JSX.Element => {
+const Table: React.FC<TableProps> = ({
+    columns,
+    rows,
+    center = false,
+}): JSX.Element => {
     const tableColumn = columns.map((column, index) => (
         <th key={index}>{column}</th>
     ))
@@ -16,8 +21,9 @@ const Table: React.FC<TableProps> = ({ columns, rows }): JSX.Element => {
             ))}
         </tr>
     ))
+    const isCenter = center ? 'table--center' : ''
     return (
-        <table>
+        <table className={`${isCenter}`}>
             <thead>
                 <tr>{tableColumn}</tr>
             </thead>
