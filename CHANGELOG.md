@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.1] - 2022-08-19
+
+### Changed
+
+-   Updating the toast component z-index
+-   fix issue with next link
+-   extended table to have center option
+-   extended details block to use avatar for user details image
+-   extended button to have white
+
 ## [1.5.0] - 2022-08-19
 
 ### Changed
