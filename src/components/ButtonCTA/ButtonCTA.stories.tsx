@@ -30,6 +30,13 @@ Grey.args = {
     grey: true,
 }
 
+export const White = Template.bind({})
+White.args = {
+    text: 'Meet Qui-Gon Jinn',
+    link: 'https://starwars.fandom.com/wiki/Gray_Jedi',
+    white: true,
+}
+
 export const WithIcon = Template.bind({})
 WithIcon.args = {
     text: 'Download our free ebook',

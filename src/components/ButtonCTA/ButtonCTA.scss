@@ -85,6 +85,45 @@ a.c-buttoncta--grey {
         fill: $black;
     }
 }
+
+a.c-buttoncta--white {
+    background-color: white;
+    color: $black !important;
+    border: 1px solid $grey-yoda;
+    box-shadow: 0 4px 9px rgba(black, 0.05);
+    font-weight: 500;
+
+    &:hover,
+    &:hover path {
+        background-color: $black;
+        color: white !important;
+        fill: white;
+    }
+
+    & path {
+        fill: $black;
+    }
+}
+
+.c-buttoncta--white {
+    background-color: white;
+    color: $black !important;
+    border: 1px solid $grey-yoda;
+    box-shadow: 0 4px 9px rgba(black, 0.05);
+    font-weight: 500;
+
+    &:hover,
+    &:hover path {
+        background-color: $black;
+        color: white !important;
+        fill: white;
+    }
+
+    & path {
+        fill: $black;
+    }
+}
+
 .c-buttoncta--center {
     position: relative;
     left: 50%;

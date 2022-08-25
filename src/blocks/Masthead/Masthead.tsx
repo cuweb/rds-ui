@@ -42,8 +42,15 @@ const Masthead: React.FC<MastheadProps> = ({
         <>
             <Ublock id='id-masthead' full>
                 <div className='b-masthead'>
-                    <MastheadTitle title={title} url={url} brand={brand} />
-                    {hasMenu && <NavMenu type='top' menu={menu} />}
+                    <MastheadTitle
+                        title={title}
+                        url={url}
+                        brand={brand}
+                        wrapLink={wrapLink}
+                    />
+                    {hasMenu && (
+                        <NavMenu type='top' menu={menu} wrapLink={wrapLink} />
+                    )}
                     <div className='b-masthead__extra'>
                         <ul className='masthead__actions'>
                             {actions && (

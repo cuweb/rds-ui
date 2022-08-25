@@ -62,6 +62,21 @@
     }
 }
 
+//no padding and left margin for panel
+.details__meta.details__meta--nopadding {
+    dt {
+        @include media('>s') {
+            padding-right: 0;
+        }
+    }
+
+    dd {
+        @include media('>s') {
+            margin-left: 0;
+        }
+    }
+}
+
 // Details Aside Styles
 // ----------------------
 
