@@ -63,16 +63,16 @@
 }
 
 //no padding and left margin for panel
-.details__meta.details__meta--nopadding {
+.details__meta.details__meta--p-10 {
     dt {
         @include media('>s') {
-            padding-right: 0;
+            padding-right: 10px;
         }
     }
 
     dd {
         @include media('>s') {
-            margin-left: 0;
+            margin-left: 10px;
         }
     }
 }

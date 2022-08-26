@@ -18,7 +18,7 @@ const DetailsMeta: FC<DetailsMetaProps> = ({
     wrapLink,
     noPadding,
 }): JSX.Element => {
-    const noPaddingClassname = noPadding ? `details__meta--nopadding` : ''
+    const noPaddingClassname = noPadding ? `details__meta--p-10` : ''
     return (
         <div className={`details__meta ${noPaddingClassname}`}>
             <dl className='u-link'>

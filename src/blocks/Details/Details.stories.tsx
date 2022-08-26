@@ -6,6 +6,9 @@ import Alert from '@components/Alert/Alert'
 import Ublock from '@components/Ublock/Ublock'
 import ButtonCTA from '@components/ButtonCTA/ButtonCTA'
 import Ugrid from '@components/Ugrid/Ugrid'
+import Panel from '@blocks/Panel/Panel'
+import PanelBody from '@blocks/Panel/components/PanelBody'
+import PanelHeader from '@blocks/Panel/components/PanelHeader'
 
 export default {
     component: Details,
@@ -26,6 +29,8 @@ const user = {
         </>
     ),
 }
+
+const userProfile = false
 
 const userDetails: DetailsItemProps[] = [
     {
@@ -113,9 +118,19 @@ export const Base = () => (
 )
 
 export const BaseNoPadding = () => (
-    <Details title='Base Example with no padding'>
-        <DetailsMeta details={userDetails} noPadding />
-    </Details>
+    <Ugrid isLayout>
+        <Panel>
+            <PanelHeader>Base No padding details</PanelHeader>
+            <PanelBody>
+                <Details block={{ noBlock: true, noPadding: true }}>
+                    <DetailsMeta details={userDetails} noPadding />
+                </Details>
+            </PanelBody>
+        </Panel>
+        <Panel>
+            <PanelBody> sample content </PanelBody>
+        </Panel>
+    </Ugrid>
 )
 
 export const FigureVariant = () => (
@@ -134,6 +149,11 @@ export const FigureVariant = () => (
 export const NoImageUrl = () => (
     <Details title='Profile Example' variant='figure'>
         <DetailsAside
+            image={
+                userProfile
+                    ? { src: user.image.src, alt: 'Ishdeep singh' }
+                    : undefined
+            }
             caption={user.info}
             variant='figure'
             firstName='Danny'

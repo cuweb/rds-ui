@@ -56,6 +56,7 @@
     &__image {
         object-fit: cover;
         max-width: unset;
+        color: transparent; // for firfox it was showing alt text
     }
 
     &__caption {
