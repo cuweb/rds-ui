@@ -25,7 +25,7 @@ const TemplateTableInCenter: Story = (args: any) => (
         <Panel>
             <PanelHeader>Table</PanelHeader>
             <PanelBody>
-                <Table {...args} center />
+                <Table {...args} center maxwidth />
             </PanelBody>
         </Panel>
     </main>

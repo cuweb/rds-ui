@@ -4,26 +4,40 @@ export interface TableProps {
     columns: string[]
     rows: string[][]
     center?: boolean
+    maxwidth?: boolean
 }
 
 const Table: React.FC<TableProps> = ({
     columns,
     rows,
     center = false,
+    maxwidth = false,
 }): JSX.Element => {
+    const isCenter = center ? 'table--center' : ''
+    const isMaxWidth = maxwidth ? 'table--maxwidth' : ''
+    const isCellCenter = center ? 'table--cellCenter' : ''
+    const isCellMaxWidth = maxwidth ? 'table--cell' : ''
+
     const tableColumn = columns.map((column, index) => (
-        <th key={index}>{column}</th>
+        <th key={index} className={` ${isCellCenter} ${isCellMaxWidth}`}>
+            {column}
+        </th>
     ))
     const tableRow = rows.map((row, index) => (
         <tr key={index}>
             {row.map((eachRow, indexRow) => (
-                <td key={indexRow}>{eachRow}</td>
+                <td
+                    key={indexRow}
+                    className={` ${isCellCenter} ${isCellMaxWidth} `}
+                >
+                    {eachRow}
+                </td>
             ))}
         </tr>
     ))
-    const isCenter = center ? 'table--center' : ''
+
     return (
-        <table className={`${isCenter}`}>
+        <table className={`${isCenter} ${isMaxWidth}`}>
             <thead>
                 <tr>{tableColumn}</tr>
             </thead>
