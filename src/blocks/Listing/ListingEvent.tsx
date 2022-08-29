@@ -2,6 +2,7 @@ import Link from '@components/Link/Link'
 import convertDate from '@functions/convertDate'
 import convertTime from '@functions/convertTime'
 import React from 'react'
+import Icon from '@components/Icon/Icon'
 import { ListingHeaderProps } from './components/ListingHeader'
 import ListingWrapper from './components/ListingWrapper'
 
@@ -19,6 +20,7 @@ export interface EventListProps {
     date: string
     startTime?: string
     endTime?: string
+    icon?: string
 }
 
 export interface ImageProps {
@@ -61,14 +63,17 @@ const ListingEvent: React.FC<ListingEventProps & ListingHeaderProps> = ({
                                         __html: item.title,
                                     }}
                                 />
-                                {item.description && (
-                                    <p
-                                        itemProp='location'
-                                        dangerouslySetInnerHTML={{
-                                            __html: item.description,
-                                        }}
-                                    />
-                                )}
+                                <div className='withIcon'>
+                                    {item.icon && <Icon icon={item.icon} />}
+                                    {item.description && (
+                                        <p
+                                            itemProp='location'
+                                            dangerouslySetInnerHTML={{
+                                                __html: item.description,
+                                            }}
+                                        />
+                                    )}
+                                </div>
                             </div>
                         </Link>
                     </li>

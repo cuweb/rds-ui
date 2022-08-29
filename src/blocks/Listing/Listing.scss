@@ -216,6 +216,15 @@
     }
 }
 
+.withIcon {
+    display: flex;
+}
+
+.withIcon .c-icon {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
 // People variant
 //===============
 .b-listing--people img {

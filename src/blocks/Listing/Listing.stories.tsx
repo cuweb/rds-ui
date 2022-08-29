@@ -283,6 +283,24 @@ export const EventsVariant = () => {
                     startTime: '2018-04-21 23:15',
                     endTime: '2018-04-21 23:15',
                 },
+                {
+                    src: '#eventurl',
+                    title: 'Event Title',
+                    description: 'Event location',
+                    date: '2018-04-21',
+                    startTime: '2018-04-21 23:15',
+                    endTime: '2018-04-21 23:15',
+                    icon: 'physical-location',
+                },
+                {
+                    src: '#eventurl',
+                    title: 'Event Title',
+                    description: 'Event location',
+                    date: '2018-04-21',
+                    startTime: '2018-04-21 23:15',
+                    endTime: '2018-04-21 23:15',
+                    icon: 'virtual-location',
+                },
             ]}
         />
     )
