@@ -13,7 +13,6 @@ export interface LinkProps {
     soft?: boolean
     scroll?: boolean
     shallow?: boolean
-    // passHref?: boolean
     prefetch?: boolean
     locale?: string | false
     target?: string
@@ -33,7 +32,6 @@ const Link = forwardRef(function Link(
         soft,
         scroll,
         shallow,
-        // passHref = false,
         prefetch,
         locale,
         target,
@@ -52,7 +50,6 @@ const Link = forwardRef(function Link(
         soft,
         scroll,
         shallow,
-        // passHref,
         prefetch,
         locale,
         target,
@@ -63,8 +60,28 @@ const Link = forwardRef(function Link(
     return wrapper
         ? React.createElement(
               wrapper,
-              nodeProps,
-              React.createElement(component, {}, children)
+              {
+                  ref,
+                  href,
+                  as,
+                  replace,
+                  soft,
+                  scroll,
+                  shallow,
+                  target,
+                  prefetch,
+                  locale,
+              },
+              React.createElement(
+                  component,
+                  {
+                      href,
+                      className,
+                      onClick,
+                      onMouseEnter,
+                  },
+                  children
+              )
           )
         : React.createElement(component, nodeProps, children)
 })
