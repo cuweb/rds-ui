@@ -199,3 +199,9 @@
         color: $black;
     }
 }
+
+.c-card .CardButton {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-column-gap: 10px;
+}
