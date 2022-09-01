@@ -555,6 +555,9 @@ TextSize.args = { icon: 'text-size' }
 export const Theatre = Template.bind({})
 Theatre.args = { icon: 'theatre' }
 
+export const ThreeDots = Template.bind({})
+ThreeDots.args = { icon: 'three-dots' }
+
 export const Thumbsdown = Template.bind({})
 Thumbsdown.args = { icon: 'thumbsdown' }
 

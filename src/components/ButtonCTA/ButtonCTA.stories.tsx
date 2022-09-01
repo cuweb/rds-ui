@@ -44,6 +44,13 @@ WithIcon.args = {
     icon: 'arrow-down',
 }
 
+export const ThreeDotIconGrey = Template.bind({})
+ThreeDotIconGrey.args = {
+    link: '#',
+    icon: 'three-dots',
+    grey: true,
+}
+
 export const FullWidth = Template.bind({})
 FullWidth.args = {
     text: 'Add to Calendar',

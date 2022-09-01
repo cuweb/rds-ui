@@ -4,7 +4,7 @@ import Link from '@components/Link/Link'
 
 export interface ButtonProps {
     ghost?: boolean
-    text: string
+    text?: string
     link: string
     icon?: string
     full?: boolean
@@ -22,7 +22,7 @@ export interface ButtonProps {
 const ButtonCTA: React.FC<ButtonProps> = ({
     ghost,
     center,
-    text = 'Click',
+    text = '',
     link = '#',
     icon,
     full,

@@ -24,6 +24,31 @@
             "description": "The white-necked raven is smaller than the common raven, the thick-billed raven."
         },
         {
+            "type": "cardFeaturedRegister",
+            "cardType": "base",
+            "link": "https://bit.ly/2kaI1Ll",
+            "image": {
+                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
+                "alt": "Read more about White-necked Raven"
+            },
+            "header": "White-necked Raven",
+            "description": "The white-necked raven is smaller than the common raven, the thick-billed raven.",
+            "button": "register"
+        },
+        {
+            "type": "cardFeaturedJoin",
+            "cardType": "base",
+            "link": "https://bit.ly/2kaI1Ll",
+            "image": {
+                "src": "https://cu-raven.s3.amazonaws.com/assets/img/raven/img-2.jpg",
+                "alt": "Read more about White-necked Raven"
+            },
+            "header": "White-necked Raven",
+            "description": "The white-necked raven is smaller than the common raven, the thick-billed raven.",
+            "button": "join"
+        },
+        
+        {
             "type": "newsVariantWithDate",
             "cardType": "news",
             "link": "https://bit.ly/2E6yTwZ",

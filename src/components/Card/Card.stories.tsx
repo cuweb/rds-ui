@@ -41,6 +41,28 @@ CardWithTitleAndDescription.args = {
     description: cardWithTitleAndDescription.description,
 }
 
+export const CardFeaturedRegister = TemplateCard.bind({})
+const cardfeaturedRegister = getVariation('cardFeaturedRegister', variations)
+CardFeaturedRegister.args = {
+    type: cardfeaturedRegister.cardType,
+    link: cardfeaturedRegister.link,
+    image: cardfeaturedRegister.image,
+    header: cardfeaturedRegister.header,
+    description: cardfeaturedRegister.description,
+    button: cardfeaturedRegister.button,
+}
+
+export const CardFeaturedJoin = TemplateCard.bind({})
+const cardfeaturedJoin = getVariation('cardFeaturedJoin', variations)
+CardFeaturedJoin.args = {
+    type: cardfeaturedJoin.cardType,
+    link: cardfeaturedJoin.link,
+    image: cardfeaturedJoin.image,
+    header: cardfeaturedJoin.header,
+    description: cardfeaturedJoin.description,
+    button: cardfeaturedJoin.button,
+}
+
 export const NewsVariantWithDate = TemplateCardNews.bind({})
 const newsVariantWithDate = getVariation('newsVariantWithDate', variations)
 NewsVariantWithDate.args = {
