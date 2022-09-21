@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.5.2] - 2022-09-21
 
--change the red color to #E91C24
+-   change the red color to #E91C24
 
 ## [1.5.1] - 2022-08-19
 
