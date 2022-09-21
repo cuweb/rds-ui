@@ -426,6 +426,9 @@ Person.args = { icon: 'person' }
 export const Phone = Template.bind({})
 Phone.args = { icon: 'phone' }
 
+export const PhysicalLocation = Template.bind({})
+PhysicalLocation.args = { icon: 'physical-location' }
+
 export const Pin = Template.bind({})
 Pin.args = { icon: 'pin' }
 
@@ -552,6 +555,9 @@ TextSize.args = { icon: 'text-size' }
 export const Theatre = Template.bind({})
 Theatre.args = { icon: 'theatre' }
 
+export const ThreeDots = Template.bind({})
+ThreeDots.args = { icon: 'three-dots' }
+
 export const Thumbsdown = Template.bind({})
 Thumbsdown.args = { icon: 'thumbsdown' }
 
@@ -602,6 +608,9 @@ VideoCard.args = { icon: 'video-card' }
 
 export const VideoPlayer = Template.bind({})
 VideoPlayer.args = { icon: 'video-player' }
+
+export const VirtualLocation = Template.bind({})
+VirtualLocation.args = { icon: 'virtual-location' }
 
 export const Warning = Template.bind({})
 Warning.args = { icon: 'warning' }

@@ -21,7 +21,7 @@
     padding: 1rem 1rem;
     display: flex;
     align-items: center;
-    border-bottom: solid 1px #bf112b;
+    border-bottom: solid 1px #e91c24;
 
     @media (min-width: 760px) {
         display: none;
@@ -213,7 +213,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            background-color: #bf112b;
+            background-color: #e91c24;
             padding: 0.5rem 1rem;
             color: #fff;
 
@@ -265,7 +265,7 @@
         }
 
         .content-filter__icon svg {
-            fill: #bf112b;
+            fill: #e91c24;
         }
     }
 }
